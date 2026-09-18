@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { Card } from '../components/Card';
 import { Sheet } from '../components/Sheet';
 import { useExportBackup } from '../backup/useExportBackup';
@@ -8,13 +8,34 @@ import { SESSION_LENGTH_OPTIONS, type SessionLength } from '../settings/settings
 import { updateSettings, useSettings } from '../settings/settingsStore';
 
 const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
+// sessionStorage (not component state) so the dismissal survives navigating
+// away and back — this screen remounts on every tab switch.
+const BANNER_DISMISSED_KEY = 'langtrainer:backupBannerDismissed';
+
+function readBannerDismissed(): boolean {
+  try {
+    return sessionStorage.getItem(BANNER_DISMISSED_KEY) === 'true';
+  } catch {
+    return false;
+  }
+}
 
 export function LearnScreen() {
   const t = useT();
   const settings = useSettings();
   const runExport = useExportBackup();
+  const comingSoonTitleId = useId();
   const [sheetOpen, setSheetOpen] = useState(false);
-  const [bannerDismissed, setBannerDismissed] = useState(false);
+  const [bannerDismissed, setBannerDismissed] = useState(readBannerDismissed);
+
+  function dismissBannerForToday() {
+    setBannerDismissed(true);
+    try {
+      sessionStorage.setItem(BANNER_DISMISSED_KEY, 'true');
+    } catch {
+      // storage disabled — dismissal just won't survive a remount, which is acceptable
+    }
+  }
 
   const program = getProgram(settings.activeProgramId);
   const topicsCount = program?.modules.reduce((sum, m) => sum + m.topics.length, 0) ?? 0;
@@ -45,7 +66,7 @@ export function LearnScreen() {
             </button>
             <button
               type="button"
-              onClick={() => setBannerDismissed(true)}
+              onClick={dismissBannerForToday}
               className="min-h-9 rounded-lg px-3 text-sm font-medium text-accent-700 dark:text-accent-200"
             >
               {t('backup.dismiss')}
@@ -104,8 +125,8 @@ export function LearnScreen() {
         {t('learn.startSession')}
       </button>
 
-      <Sheet open={sheetOpen} onClose={() => setSheetOpen(false)}>
-        <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+      <Sheet open={sheetOpen} onClose={() => setSheetOpen(false)} titleId={comingSoonTitleId}>
+        <h2 id={comingSoonTitleId} className="text-lg font-semibold text-slate-900 dark:text-slate-50">
           {t('learn.comingSoonTitle')}
         </h2>
         <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{t('learn.comingSoonBody')}</p>

@@ -1,4 +1,4 @@
-import { useRef, useState, type ChangeEvent } from 'react';
+import { useEffect, useId, useRef, useState, type ChangeEvent } from 'react';
 import pkg from '../../package.json';
 import { importBackup } from '../backup/backup';
 import { useExportBackup } from '../backup/useExportBackup';
@@ -11,6 +11,7 @@ import { useT, type TranslationKey } from '../i18n';
 import {
   INPUT_PRESETS,
   SESSION_LENGTH_OPTIONS,
+  normalizeInputShares,
   type InputPreset,
   type InputShares,
   type SessionLength,
@@ -38,8 +39,8 @@ const SHARE_FIELDS: { key: keyof InputShares; labelKey: TranslationKey }[] = [
   { key: 'typing', labelKey: 'settings.inputShares.typing' },
 ];
 
-function formatDate(ms: number): string {
-  return new Date(ms).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+function formatDate(ms: number, locale: string): string {
+  return new Date(ms).toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
 export function SettingsScreen() {
@@ -48,10 +49,44 @@ export function SettingsScreen() {
   const showToast = useToast();
   const runExport = useExportBackup();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const uiLanguageSelectId = useId();
+  const apiKeyInputId = useId();
 
   const [showApiKey, setShowApiKey] = useState(false);
   const [pendingImportFile, setPendingImportFile] = useState<File | null>(null);
   const [resetConfirmOpen, setResetConfirmOpen] = useState(false);
+
+  // Local draft + persist-on-blur so the API key doesn't round-trip through
+  // IndexedDB on every keystroke; a ref tracks "dirty" so an edit is still
+  // saved if the user navigates away without blurring the field first.
+  const [apiKeyDraft, setApiKeyDraft] = useState(settings.geminiApiKey);
+  const apiKeyDraftRef = useRef(apiKeyDraft);
+  const apiKeyDirtyRef = useRef(false);
+
+  useEffect(() => {
+    if (apiKeyDirtyRef.current) return;
+    setApiKeyDraft(settings.geminiApiKey);
+    apiKeyDraftRef.current = settings.geminiApiKey;
+  }, [settings.geminiApiKey]);
+
+  useEffect(
+    () => () => {
+      if (apiKeyDirtyRef.current) void updateSettings({ geminiApiKey: apiKeyDraftRef.current });
+    },
+    []
+  );
+
+  function handleApiKeyChange(value: string) {
+    apiKeyDirtyRef.current = true;
+    apiKeyDraftRef.current = value;
+    setApiKeyDraft(value);
+  }
+
+  function persistApiKeyIfDirty() {
+    if (!apiKeyDirtyRef.current) return;
+    apiKeyDirtyRef.current = false;
+    void updateSettings({ geminiApiKey: apiKeyDraftRef.current });
+  }
 
   function handlePresetChange(preset: InputPreset) {
     if (preset === 'custom') {
@@ -62,19 +97,8 @@ export function SettingsScreen() {
   }
 
   function handleShareChange(field: keyof InputShares, value: number) {
-    const current = settings.inputShares;
-    const others = SHARE_FIELDS.map((f) => f.key).filter((k) => k !== field) as [
-      keyof InputShares,
-      keyof InputShares,
-    ];
-    const remaining = 100 - value;
-    const otherSum = current[others[0]] + current[others[1]];
-    const firstShare =
-      otherSum === 0 ? Math.round(remaining / 2) : Math.round((current[others[0]] / otherSum) * remaining);
-    const secondShare = remaining - firstShare;
-    void updateSettings({
-      inputShares: { ...current, [field]: value, [others[0]]: firstShare, [others[1]]: secondShare },
-    });
+    const next = normalizeInputShares({ ...settings.inputShares, [field]: value });
+    void updateSettings({ inputShares: next });
   }
 
   function handleFileChosen(event: ChangeEvent<HTMLInputElement>) {
@@ -103,7 +127,7 @@ export function SettingsScreen() {
   async function handleResetConfirm() {
     setResetConfirmOpen(false);
     await resetAllData();
-    showToast(t('settings.resetAll'));
+    showToast(t('settings.resetDone'));
   }
 
   return (
@@ -112,10 +136,14 @@ export function SettingsScreen() {
 
       <SettingsGroup title={t('settings.language')}>
         <div className="flex items-center justify-between gap-3 px-4 py-3">
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
+          <label
+            htmlFor={uiLanguageSelectId}
+            className="text-sm font-medium text-slate-700 dark:text-slate-200"
+          >
             {t('settings.uiLanguage')}
-          </span>
+          </label>
           <select
+            id={uiLanguageSelectId}
             value={settings.uiLanguage}
             onChange={(e) => void updateSettings({ uiLanguage: e.target.value as UiLanguage })}
             className="min-h-11 rounded-lg border border-slate-200 bg-white px-3 text-sm dark:border-slate-700 dark:bg-slate-800"
@@ -227,14 +255,19 @@ export function SettingsScreen() {
 
       <SettingsGroup title={t('settings.ai')}>
         <div className="flex flex-col gap-2 px-4 py-3">
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
+          <label
+            htmlFor={apiKeyInputId}
+            className="text-sm font-medium text-slate-700 dark:text-slate-200"
+          >
             {t('settings.geminiApiKey')}
-          </span>
+          </label>
           <div className="flex gap-2">
             <input
+              id={apiKeyInputId}
               type={showApiKey ? 'text' : 'password'}
-              value={settings.geminiApiKey}
-              onChange={(e) => void updateSettings({ geminiApiKey: e.target.value })}
+              value={apiKeyDraft}
+              onChange={(e) => handleApiKeyChange(e.target.value)}
+              onBlur={persistApiKeyIfDirty}
               placeholder="AIza…"
               autoComplete="off"
               className="min-h-11 flex-1 rounded-lg border border-slate-200 bg-white px-3 text-sm dark:border-slate-700 dark:bg-slate-800"
@@ -247,7 +280,7 @@ export function SettingsScreen() {
               {showApiKey ? t('settings.geminiApiKeyHide') : t('settings.geminiApiKeyShow')}
             </button>
           </div>
-          <p className="text-xs text-slate-400 dark:text-slate-500">{t('settings.geminiApiKeyHelp')}</p>
+          <p className="text-xs text-slate-500 dark:text-slate-400">{t('settings.geminiApiKeyHelp')}</p>
         </div>
         <div className="flex items-center justify-between gap-3 px-4 py-3">
           <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
@@ -297,7 +330,9 @@ export function SettingsScreen() {
           <p className="text-sm text-slate-500 dark:text-slate-400">
             {settings.lastBackupAt === null
               ? t('settings.backupLastNever')
-              : t('settings.backupLast', { date: formatDate(settings.lastBackupAt) })}
+              : t('settings.backupLast', {
+                  date: formatDate(settings.lastBackupAt, settings.uiLanguage),
+                })}
           </p>
         </div>
       </SettingsGroup>

@@ -15,7 +15,8 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'prompt',
-      includeAssets: ['icons/icon.svg'],
+      // No includeAssets needed: icons/icon.svg already matches the workbox
+      // globPatterns below (**/*.svg), so it's precached automatically.
       manifest: {
         name: 'LangTrainer',
         short_name: 'LangTrainer',
@@ -25,6 +26,7 @@ export default defineConfig({
         background_color: '#0b1120',
         theme_color: '#6366f1',
         icons: [
+          { src: 'icons/icon.svg', sizes: 'any', type: 'image/svg+xml' },
           { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png' },
           {

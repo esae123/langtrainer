@@ -1,5 +1,4 @@
 {
-  "app.title": "LangTrainer",
   "nav.learn": "Learn",
   "nav.progress": "Progress",
   "nav.settings": "Settings",
@@ -8,7 +7,6 @@
   "learn.subtitle": "Ready for today's session?",
   "learn.topicsCount": "{count} topics",
   "learn.sessionLength": "Session length",
-  "learn.sessionLengthOpen": "No limit",
   "learn.startSession": "Start session",
   "learn.comingSoonTitle": "Coming in Stage 3",
   "learn.comingSoonBody": "Guided exercises are on their way. For now, explore Settings and try a backup.",
@@ -65,6 +63,7 @@
   "settings.backupImportError": "Import failed: invalid backup file",
   "settings.danger": "Danger zone",
   "settings.resetAll": "Reset all data",
+  "settings.resetDone": "All data reset",
   "settings.resetConfirmTitle": "Reset all data?",
   "settings.resetConfirmBody": "This deletes every stored program, session and setting on this device. This can't be undone.",
   "settings.resetConfirmOk": "Reset",
@@ -73,10 +72,6 @@
   "settings.version": "Version",
   "settings.buildDate": "Build date",
 
-  "common.cancel": "Cancel",
-  "common.close": "Close",
-
   "update.available": "New version available",
-  "update.update": "Update",
-  "update.dismiss": "Later"
+  "update.update": "Update"
 }

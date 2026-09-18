@@ -1,5 +1,4 @@
 {
-  "app.title": "LangTrainer",
   "nav.learn": "Учёба",
   "nav.progress": "Прогресс",
   "nav.settings": "Настройки",
@@ -8,7 +7,6 @@
   "learn.subtitle": "Готовы к сегодняшней сессии?",
   "learn.topicsCount": "{count} тем",
   "learn.sessionLength": "Длительность сессии",
-  "learn.sessionLengthOpen": "Без ограничения",
   "learn.startSession": "Начать сессию",
   "learn.comingSoonTitle": "Скоро, на этапе 3",
   "learn.comingSoonBody": "Упражнения появятся совсем скоро. А пока изучите настройки и попробуйте резервное копирование.",
@@ -65,6 +63,7 @@
   "settings.backupImportError": "Не удалось импортировать: файл повреждён",
   "settings.danger": "Опасная зона",
   "settings.resetAll": "Сбросить все данные",
+  "settings.resetDone": "Все данные сброшены",
   "settings.resetConfirmTitle": "Сбросить все данные?",
   "settings.resetConfirmBody": "Это удалит все сохранённые программы, сессии и настройки на этом устройстве. Действие нельзя отменить.",
   "settings.resetConfirmOk": "Сбросить",
@@ -73,10 +72,6 @@
   "settings.version": "Версия",
   "settings.buildDate": "Дата сборки",
 
-  "common.cancel": "Отмена",
-  "common.close": "Закрыть",
-
   "update.available": "Доступна новая версия",
-  "update.update": "Обновить",
-  "update.dismiss": "Позже"
+  "update.update": "Обновить"
 }

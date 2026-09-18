@@ -1,3 +1,4 @@
+import { useId } from 'react';
 import { Sheet } from './Sheet';
 
 interface ConfirmDialogProps {
@@ -21,9 +22,12 @@ export function ConfirmDialog({
   onConfirm,
   onCancel,
 }: ConfirmDialogProps) {
+  const titleId = useId();
   return (
-    <Sheet open={open} onClose={onCancel}>
-      <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-50">{title}</h2>
+    <Sheet open={open} onClose={onCancel} titleId={titleId}>
+      <h2 id={titleId} className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+        {title}
+      </h2>
       <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{body}</p>
       <div className="mt-5 flex gap-3">
         <button

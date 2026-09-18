@@ -43,18 +43,17 @@ function stripApiKey(value: unknown): unknown {
 }
 
 export async function buildBackup(): Promise<BackupFile> {
-  const [settings, profile, topicProgress, sessions, attempts, customTopics, generatedExercises] =
-    await Promise.all([
-      db.settings.toArray(),
-      db.profile.toArray(),
-      db.topicProgress.toArray(),
-      db.sessions.toArray(),
-      db.attempts.toArray(),
-      db.customTopics.toArray(),
-      db.generatedExercises.toArray(),
-    ]);
+  // Iterate db.tables (one shared source of truth) instead of a hand-written
+  // list, so a table added/removed from the schema can't silently drift out
+  // of sync with the backup.
+  const data = {} as Record<string, unknown[]>;
+  await Promise.all(
+    db.tables.map(async (table) => {
+      data[table.name] = await table.toArray();
+    })
+  );
 
-  const sanitizedSettings = settings.map((row) =>
+  const sanitizedSettings = (data.settings as SettingsRow[]).map((row) =>
     row.key === SETTINGS_ROW_KEY ? { ...row, value: stripApiKey(row.value) } : row
   );
 
@@ -62,15 +61,7 @@ export async function buildBackup(): Promise<BackupFile> {
     app: BACKUP_APP_ID,
     schemaVersion: BACKUP_SCHEMA_VERSION,
     exportedAt: new Date().toISOString(),
-    data: {
-      settings: sanitizedSettings,
-      profile,
-      topicProgress,
-      sessions,
-      attempts,
-      customTopics,
-      generatedExercises,
-    },
+    data: { ...(data as unknown as BackupData), settings: sanitizedSettings },
   };
 }
 
@@ -105,16 +96,15 @@ export async function exportBackup(): Promise<ExportOutcome> {
   }
 
   const url = URL.createObjectURL(file);
-  try {
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-  } finally {
-    URL.revokeObjectURL(url);
-  }
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  // Some browsers (notably older Safari) need the URL to stay valid slightly
+  // past the synchronous click; revoking on the next tick is safe everywhere.
+  setTimeout(() => URL.revokeObjectURL(url), 0);
   await updateSettings({ lastBackupAt: Date.now() });
   return 'downloaded';
 }
@@ -150,37 +140,18 @@ export async function importBackup(file: File): Promise<void> {
   }
   const backup = parseBackup(json);
   const currentSettings = await loadSettings();
+  const backupData = backup.data as unknown as Record<string, unknown[]>;
 
-  await db.transaction(
-    'rw',
-    [db.settings, db.profile, db.topicProgress, db.sessions, db.attempts, db.customTopics, db.generatedExercises],
-    async () => {
-      await Promise.all([
-        db.settings.clear(),
-        db.profile.clear(),
-        db.topicProgress.clear(),
-        db.sessions.clear(),
-        db.attempts.clear(),
-        db.customTopics.clear(),
-        db.generatedExercises.clear(),
-      ]);
-      await Promise.all([
-        db.settings.bulkPut(backup.data.settings),
-        db.profile.bulkPut(backup.data.profile),
-        db.topicProgress.bulkPut(backup.data.topicProgress),
-        db.sessions.bulkPut(backup.data.sessions),
-        db.attempts.bulkPut(backup.data.attempts),
-        db.customTopics.bulkPut(backup.data.customTopics),
-        db.generatedExercises.bulkPut(backup.data.generatedExercises),
-      ]);
+  await db.transaction('rw', db.tables, async () => {
+    await Promise.all(db.tables.map((table) => table.clear()));
+    await Promise.all(db.tables.map((table) => table.bulkPut(backupData[table.name])));
 
-      const importedSettingsRow = backup.data.settings.find((row) => row.key === SETTINGS_ROW_KEY);
-      const merged: Settings = {
-        ...DEFAULT_SETTINGS,
-        ...(isRecord(importedSettingsRow?.value) ? importedSettingsRow.value : {}),
-        geminiApiKey: currentSettings.geminiApiKey,
-      };
-      await db.settings.put({ key: SETTINGS_ROW_KEY, value: merged });
-    }
-  );
+    const importedSettingsRow = backup.data.settings.find((row) => row.key === SETTINGS_ROW_KEY);
+    const merged: Settings = {
+      ...DEFAULT_SETTINGS,
+      ...(isRecord(importedSettingsRow?.value) ? importedSettingsRow.value : {}),
+      geminiApiKey: currentSettings.geminiApiKey,
+    };
+    await db.settings.put({ key: SETTINGS_ROW_KEY, value: merged });
+  });
 }

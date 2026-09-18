@@ -39,10 +39,15 @@ body {
   min-height: 100%;
 }
 
-/* Safe-area insets so content clears the notch / home indicator in standalone mode. */
-.safe-top {
-  padding-top: env(safe-area-inset-top);
-}
-.safe-bottom {
+/* Safe-area inset so the bottom tab bar clears the home indicator in standalone
+   mode. A real Tailwind utility (via @utility, inside the utilities layer) so it
+   composes correctly with other utilities instead of silently overriding them —
+   unlike a plain unlayered class, which would always win regardless of source
+   order and could make later padding utilities on the same element dead code.
+   Composite cases (safe inset *plus* a normal padding value, e.g. Layout's
+   pt-6 or Sheet's p-5) use Tailwind's arbitrary-value calc() directly at the
+   call site instead, since a single shared utility can't bake in two different
+   base spacings. */
+@utility safe-bottom {
   padding-bottom: env(safe-area-inset-bottom);
 }
