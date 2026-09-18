@@ -1,0 +1,137 @@
+import { describe, expect, it } from 'vitest';
+import { validateProgram } from '../validateProgram';
+import ptPtA1 from '../programs/pt-PT-A1.json';
+
+describe('validateProgram', () => {
+  it('accepts the placeholder pt-PT-A1 program', () => {
+    const program = validateProgram(ptPtA1);
+    expect(program.id).toBe('pt-PT-A1');
+    expect(program.modules).toEqual([]);
+    expect(program.phraseSets).toEqual([]);
+  });
+
+  it('accepts a program with a fully populated exercise of every type', () => {
+    const program = {
+      id: 'x',
+      title: 'X',
+      targetLanguage: 'pt-PT',
+      supportLanguage: 'en',
+      level: 'A1',
+      phraseSets: [],
+      modules: [
+        {
+          id: 'm1',
+          title: 'M1',
+          description: 'd',
+          topics: [
+            {
+              id: 't1',
+              moduleId: 'm1',
+              title: 'T1',
+              kind: 'grammar',
+              context: 'c',
+              keyItems: [{ target: 'ola', support: 'hi' }],
+              exercises: [
+                {
+                  id: 'e1',
+                  type: 'build_phrase',
+                  topicId: 't1',
+                  difficulty: 1,
+                  allowedModes: ['tiles'],
+                  prompt: 'p',
+                  explanation: 'e',
+                  answer: ['a', 'b'],
+                  distractors: ['c'],
+                },
+                {
+                  id: 'e2',
+                  type: 'match_pairs',
+                  topicId: 't1',
+                  difficulty: 2,
+                  allowedModes: ['tiles', 'letters'],
+                  prompt: 'p',
+                  explanation: 'e',
+                  pairs: [{ target: 'ola', support: 'hi' }],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const result = validateProgram(program);
+    expect(result.modules[0].topics[0].exercises).toHaveLength(2);
+  });
+
+  it('rejects a non-object value', () => {
+    expect(() => validateProgram('not a program')).toThrow(/expected an object/);
+  });
+
+  it('rejects a missing required field', () => {
+    const { title: _title, ...missingTitle } = ptPtA1;
+    expect(() => validateProgram(missingTitle)).toThrow(/title/);
+  });
+
+  it('rejects an exercise with an unknown type', () => {
+    const bad = {
+      ...ptPtA1,
+      modules: [
+        {
+          id: 'm1',
+          title: 'M1',
+          description: 'd',
+          topics: [
+            {
+              id: 't1',
+              moduleId: 'm1',
+              title: 'T1',
+              kind: 'grammar',
+              context: 'c',
+              keyItems: [],
+              exercises: [{ id: 'e1', type: 'not_a_real_type', topicId: 't1' }],
+            },
+          ],
+        },
+      ],
+    };
+    expect(() => validateProgram(bad)).toThrow();
+  });
+
+  it('rejects an out-of-range difficulty', () => {
+    const bad = {
+      ...ptPtA1,
+      modules: [
+        {
+          id: 'm1',
+          title: 'M1',
+          description: 'd',
+          topics: [
+            {
+              id: 't1',
+              moduleId: 'm1',
+              title: 'T1',
+              kind: 'grammar',
+              context: 'c',
+              keyItems: [],
+              exercises: [
+                {
+                  id: 'e1',
+                  type: 'build_phrase',
+                  topicId: 't1',
+                  difficulty: 9,
+                  allowedModes: ['tiles'],
+                  prompt: 'p',
+                  explanation: 'e',
+                  answer: ['a'],
+                  distractors: [],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+    expect(() => validateProgram(bad)).toThrow(/difficulty/);
+  });
+});
