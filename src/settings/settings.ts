@@ -16,6 +16,8 @@ export interface Settings {
   sessionLength: SessionLength;
   inputPreset: InputPreset;
   inputShares: InputShares;
+  /** Show "first letter + length" under the prompt in typing mode. */
+  typingHint: boolean;
   /** Stored locally only. Never included in backup export; masked in the UI. */
   geminiApiKey: string;
   generateOnlyOnWifi: boolean;
@@ -35,6 +37,7 @@ export const DEFAULT_SETTINGS: Settings = {
   sessionLength: 10,
   inputPreset: 'normal',
   inputShares: INPUT_PRESETS.normal,
+  typingHint: true,
   geminiApiKey: '',
   generateOnlyOnWifi: true,
   lastBackupAt: null,

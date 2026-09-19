@@ -160,23 +160,46 @@ describe('answering through the views', () => {
     expect(checkAnswer(findError, 'tiles', lastResponse(onChange)!).correct).toBe(true);
   });
 
-  it('match_pairs locks correct pairs, counts wrong ones and completes itself', () => {
+  it('match_pairs links any two items and reports only when everything is paired', () => {
     const onChange = renderView(matchPairs, 'tiles');
-    // A wrong pairing first.
+    // A wrong pairing connects just like a right one — mis-taps are not errors.
     fireEvent.click(screen.getByRole('button', { name: 'falo' }));
     fireEvent.click(screen.getByRole('button', { name: 'you speak' }));
     expect(lastResponse(onChange)).toBeNull();
+    expect(screen.getByRole('button', { name: 'Unlink falo, pair 1' })).toBeEnabled();
 
-    fireEvent.click(screen.getByRole('button', { name: 'falo' }));
+    fireEvent.click(screen.getByRole('button', { name: 'falas' }));
     fireEvent.click(screen.getByRole('button', { name: 'I speak' }));
-    expect(screen.getByRole('button', { name: 'falo' })).toBeDisabled();
 
+    // Every item paired -> the response is reported, and it is graded as wrong.
+    const wrong = lastResponse(onChange);
+    expect(wrong).toEqual({
+      kind: 'pairs',
+      pairs: [
+        { target: 'falo', support: 'you speak' },
+        { target: 'falas', support: 'I speak' },
+      ],
+    });
+    expect(checkAnswer(matchPairs, 'tiles', wrong!).correct).toBe(false);
+  });
+
+  it('match_pairs disconnects a linked pair and grades a complete correct set', () => {
+    const onChange = renderView(matchPairs, 'tiles');
+    fireEvent.click(screen.getByRole('button', { name: 'falo' }));
+    fireEvent.click(screen.getByRole('button', { name: 'you speak' }));
+    // Tapping either half of a linked pair returns both items to the pool.
+    fireEvent.click(screen.getByRole('button', { name: 'Unlink you speak, pair 1' }));
+    expect(screen.getByRole('button', { name: 'falo' })).toBeEnabled();
+    expect(screen.getByRole('button', { name: 'you speak' })).toBeEnabled();
+
+    // Right-then-left works as well as left-then-right.
+    fireEvent.click(screen.getByRole('button', { name: 'I speak' }));
+    fireEvent.click(screen.getByRole('button', { name: 'falo' }));
+    expect(lastResponse(onChange)).toBeNull();
     fireEvent.click(screen.getByRole('button', { name: 'falas' }));
     fireEvent.click(screen.getByRole('button', { name: 'you speak' }));
 
-    const response = lastResponse(onChange);
-    expect(response).toMatchObject({ kind: 'pairs', wrongPairings: 1 });
-    expect(checkAnswer(matchPairs, 'tiles', response!).correct).toBe(false);
+    expect(checkAnswer(matchPairs, 'tiles', lastResponse(onChange)!).correct).toBe(true);
   });
 
   it('order_dialogue places and takes back lines', () => {

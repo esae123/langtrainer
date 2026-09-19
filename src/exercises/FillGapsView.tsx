@@ -7,6 +7,7 @@ import { AccentBar } from './widgets/AccentBar';
 import { insertAtCaret } from './widgets/accents';
 import { LetterBoard } from './widgets/LetterBoard';
 import { TileButton } from './widgets/TileButton';
+import { TypingHint } from './widgets/TypingHint';
 import { composeLetters, isLettersComplete } from './widgets/letters';
 import type { ExerciseViewProps } from './types';
 
@@ -142,6 +143,8 @@ export function FillGapsView({
 
   return (
     <div className="flex flex-col gap-4">
+      {/* The hint follows the active gap (docs/stage-3b-spec.md §3). */}
+      {mode === 'typing' && <TypingHint expected={exercise.gaps[active]?.answer ?? null} />}
       <p className="rounded-2xl bg-slate-100 px-4 py-3 text-[17px] leading-loose text-slate-900 dark:bg-slate-800/60 dark:text-slate-50">
         {segments.map((segment, i) => (
           <span key={i}>

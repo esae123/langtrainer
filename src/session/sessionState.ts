@@ -1,6 +1,6 @@
 // Session state machine (docs/stage-3-spec.md §5). Pure reducer: no React, no Dexie.
 import type { InputMode } from '../content/types';
-import type { CheckResult } from '../engine/check';
+import type { CheckResult, ExerciseResponse } from '../engine/check';
 import type { BlockKind, PlannedItem, SessionPlan } from '../engine/plan';
 
 export type SessionPhase = 'context' | 'exercise' | 'feedback' | 'summary';
@@ -23,6 +23,8 @@ export interface FeedbackState {
   result: CheckResult;
   /** The learner's answer, as text. */
   answer: string;
+  /** The structured answer, so the sheet can grade it per part (match_pairs). */
+  response?: ExerciseResponse;
   /** about_me: the sheet shows the sample answer and waits for a self-grade. */
   awaitingSelfGrade: boolean;
 }
@@ -43,7 +45,7 @@ export interface SessionState {
 export type SessionAction =
   | { type: 'init'; state: SessionState }
   | { type: 'showExercise' }
-  | { type: 'submit'; draft: AttemptDraft; result: CheckResult }
+  | { type: 'submit'; draft: AttemptDraft; result: CheckResult; response?: ExerciseResponse }
   | { type: 'awaitSelfGrade'; result: CheckResult; answer: string }
   | { type: 'appendItems'; items: PlannedItem[] }
   | { type: 'next'; now: number }
@@ -95,6 +97,7 @@ export function sessionReducer(
         feedback: {
           result: action.result,
           answer: action.draft.answer,
+          ...(action.response ? { response: action.response } : {}),
           awaitingSelfGrade: false,
         },
       };

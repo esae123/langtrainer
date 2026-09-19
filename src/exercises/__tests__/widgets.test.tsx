@@ -3,6 +3,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { LetterBoard } from '../widgets/LetterBoard';
 import { TileBank } from '../widgets/TileBank';
+import { TypingHint } from '../widgets/TypingHint';
 import { TypingInput } from '../widgets/TypingInput';
 import { composeLetters, fillableCount, letterKeys, letterRows } from '../widgets/letters';
 import { toTiles } from '../widgets/tiles';
@@ -134,5 +135,32 @@ describe('TypingInput', () => {
     render(<TypingHarness />);
     fireEvent.click(screen.getByRole('button', { name: 'Insert ç' }));
     expect(screen.getByTestId('value')).toHaveTextContent('ç');
+  });
+
+  it('labels the accent bar and lays it out as a grid that always fits', () => {
+    render(<TypingHarness />);
+    expect(screen.getByText('Accents — tap to insert')).toBeInTheDocument();
+    const bar = screen.getByRole('group', { name: 'Accented characters' });
+    // Six columns on a narrow screen, twelve from 480px up — never a scrolling row.
+    expect(bar).toHaveClass('grid', 'grid-cols-6', 'min-[480px]:grid-cols-12');
+    expect(bar.className).not.toContain('overflow-x-auto');
+  });
+});
+
+describe('TypingHint', () => {
+  it('shows the first letter, blanks and the length', () => {
+    render(<TypingHint expected="sopa" />);
+    expect(screen.getByText('s _ _ _')).toBeInTheDocument();
+    expect(screen.getByText('(4 letters)')).toBeInTheDocument();
+  });
+
+  it('shows nothing for a long answer or no answer', () => {
+    const { container } = render(
+      <>
+        <TypingHint expected="eu falo inglês" />
+        <TypingHint expected={null} />
+      </>
+    );
+    expect(container).toBeEmptyDOMElement();
   });
 });

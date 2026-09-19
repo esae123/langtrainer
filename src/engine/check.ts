@@ -1,5 +1,5 @@
 // Answer checking (docs/stage-3-spec.md §3). Pure: no React, no Dexie, no clock.
-import type { Exercise, InputMode } from '../content/types';
+import type { Exercise, InputMode, MatchPairsExercise } from '../content/types';
 import { levenshtein, normalize, normalizeStripped } from './text';
 
 /** Minimum expected length before the typing mode forgives one typo. */
@@ -15,7 +15,8 @@ export type ExerciseResponse =
   /** fill_gaps: one value per gap, in template order. */
   | { kind: 'gaps'; values: string[] }
   | { kind: 'findError'; index: number | null; replacement: string }
-  | { kind: 'pairs'; pairs: { target: string; support: string }[]; wrongPairings: number }
+  /** match_pairs: the pairs the learner linked, graded only once everything is paired. */
+  | { kind: 'pairs'; pairs: { target: string; support: string }[] }
   /** order_dialogue: original line indices in the order the learner placed them. */
   | { kind: 'order'; order: number[] }
   /** about_me: free text plus the learner's own verdict. */
@@ -136,6 +137,33 @@ export function expectedAnswerText(exercise: Exercise): string {
   }
 }
 
+export interface PairGrade {
+  target: string;
+  /** What the learner linked to this target, or `undefined` if it stayed unpaired. */
+  chosen?: string;
+  expected: string;
+  correct: boolean;
+}
+
+/**
+ * Grades the pairs a learner linked, in the exercise's own order: used by the feedback
+ * sheet to mark correct pairs and show the right partner for the wrong ones (§1).
+ */
+export function gradePairs(
+  exercise: MatchPairsExercise,
+  chosen: readonly { target: string; support: string }[]
+): PairGrade[] {
+  return exercise.pairs.map((pair) => {
+    const link = chosen.find((entry) => entry.target === pair.target);
+    return {
+      target: pair.target,
+      ...(link ? { chosen: link.support } : {}),
+      expected: pair.support,
+      correct: link?.support === pair.support,
+    };
+  });
+}
+
 function joined(match: TextMatch, expected: string): CheckResult {
   return {
     correct: match.correct,
@@ -200,6 +228,8 @@ export function checkAnswer(
     }
 
     case 'match_pairs': {
+      // Free pairing (docs/stage-3b-spec.md §1): mis-taps are not errors, the learner
+      // links everything first and the whole set is graded in one go.
       if (response.kind !== 'pairs') return { correct: false, diacriticsOk: null, expected };
       const allRight = exercise.pairs.every((pair) =>
         response.pairs.some(
@@ -207,10 +237,7 @@ export function checkAnswer(
         )
       );
       return {
-        correct:
-          allRight &&
-          response.pairs.length === exercise.pairs.length &&
-          response.wrongPairings === 0,
+        correct: allRight && response.pairs.length === exercise.pairs.length,
         diacriticsOk: null,
         expected,
       };

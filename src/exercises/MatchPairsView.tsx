@@ -6,16 +6,19 @@ import { hapticTap } from '../lib/haptics';
 import { TileButton } from './widgets/TileButton';
 import type { ExerciseViewProps } from './types';
 
+interface Link {
+  target: string;
+  support: string;
+}
+
 /**
- * match_pairs: two shuffled columns. Tap a target, then its translation; correct pairs
- * lock, wrong ones shake and are counted. The exercise completes itself once every pair
- * is matched, so the primary button turns into "Continue".
+ * match_pairs: two shuffled columns with free pairing (docs/stage-3b-spec.md §1). Any
+ * target can be linked to any translation — mis-taps cost nothing. Linked items carry
+ * the same number badge on both sides; tapping either one breaks the link again. The
+ * answer is only reported once every item is paired, so Check stays disabled until then
+ * and the whole set is graded in one go.
  */
-export function MatchPairsView({
-  exercise,
-  seed,
-  onChange,
-}: ExerciseViewProps<MatchPairsExercise>) {
+export function MatchPairsView({ exercise, seed, onChange }: ExerciseViewProps<MatchPairsExercise>) {
   const t = useT();
   const rng = useMemo(() => mulberry32(seed), [seed]);
   const targets = useMemo(
@@ -36,82 +39,103 @@ export function MatchPairsView({
   );
 
   const [selectedTarget, setSelectedTarget] = useState<string | null>(null);
-  const [matched, setMatched] = useState<string[]>([]);
-  const [wrongPairings, setWrongPairings] = useState(0);
-  const [shaking, setShaking] = useState<string | null>(null);
+  const [selectedSupport, setSelectedSupport] = useState<string | null>(null);
+  const [links, setLinks] = useState<Link[]>([]);
 
-  const done = matched.length === exercise.pairs.length;
+  const done = links.length === exercise.pairs.length;
   useEffect(() => {
-    onChange(
-      done
-        ? {
-            kind: 'pairs',
-            pairs: exercise.pairs.filter((pair) => matched.includes(pair.target)),
-            wrongPairings,
-          }
-        : null
-    );
-  }, [done, matched, wrongPairings, exercise.pairs, onChange]);
+    onChange(done ? { kind: 'pairs', pairs: links } : null);
+  }, [done, links, onChange]);
 
-  useEffect(() => {
-    if (!shaking) return;
-    const timer = window.setTimeout(() => setShaking(null), 400);
-    return () => window.clearTimeout(timer);
-  }, [shaking]);
+  const linkOfTarget = (target: string) => links.findIndex((link) => link.target === target);
+  const linkOfSupport = (support: string) => links.findIndex((link) => link.support === support);
 
-  const supportOf = (target: string) => exercise.pairs.find((p) => p.target === target)?.support;
-  const isMatchedSupport = (support: string) =>
-    matched.some((target) => supportOf(target) === support);
+  function connect(target: string, support: string) {
+    setLinks([...links, { target, support }]);
+    setSelectedTarget(null);
+    setSelectedSupport(null);
+  }
 
-  function chooseSupport(support: string) {
-    if (!selectedTarget) return;
-    if (supportOf(selectedTarget) === support) {
-      setMatched([...matched, selectedTarget]);
-      setSelectedTarget(null);
+  function disconnect(index: number) {
+    setLinks(links.filter((_, i) => i !== index));
+    setSelectedTarget(null);
+    setSelectedSupport(null);
+  }
+
+  function tapTarget(target: string) {
+    hapticTap();
+    const linked = linkOfTarget(target);
+    if (linked !== -1) {
+      disconnect(linked);
       return;
     }
-    setWrongPairings(wrongPairings + 1);
-    setShaking(support);
-    setSelectedTarget(null);
+    if (selectedSupport !== null) {
+      connect(target, selectedSupport);
+      return;
+    }
+    setSelectedTarget(selectedTarget === target ? null : target);
+  }
+
+  function tapSupport(support: string) {
+    hapticTap();
+    const linked = linkOfSupport(support);
+    if (linked !== -1) {
+      disconnect(linked);
+      return;
+    }
+    if (selectedTarget !== null) {
+      connect(selectedTarget, support);
+      return;
+    }
+    setSelectedSupport(selectedSupport === support ? null : support);
   }
 
   return (
     <div className="flex flex-col gap-3">
-      <p className="text-xs text-slate-500 dark:text-slate-400">
-        {done ? t('session.matchDone') : t('session.matchHint')}
-      </p>
+      <p className="text-xs text-muted">{done ? t('session.matchDone') : t('session.matchHint')}</p>
       <div className="grid grid-cols-2 gap-3">
         <div className="flex flex-col gap-2" aria-label={t('session.matchTargets')} role="group">
           {targets.map((target) => {
-            const locked = matched.includes(target);
+            const linked = linkOfTarget(target);
             return (
               <TileButton
                 key={target}
                 label={target}
-                variant={locked ? 'locked' : selectedTarget === target ? 'selected' : 'bank'}
-                ariaPressed={selectedTarget === target}
-                disabled={locked}
+                variant={
+                  linked !== -1 ? 'placed' : selectedTarget === target ? 'selected' : 'bank'
+                }
+                ariaLabel={
+                  linked !== -1
+                    ? t('session.matchUnlink', { item: target, number: linked + 1 })
+                    : target
+                }
+                ariaPressed={selectedTarget === target || linked !== -1}
+                badge={linked === -1 ? undefined : linked + 1}
                 className="w-full"
-                onClick={() => {
-                  hapticTap();
-                  setSelectedTarget(target);
-                }}
+                onClick={() => tapTarget(target)}
               />
             );
           })}
         </div>
         <div className="flex flex-col gap-2" aria-label={t('session.matchSupports')} role="group">
           {supports.map((support) => {
-            const locked = isMatchedSupport(support);
+            const linked = linkOfSupport(support);
             return (
               <TileButton
                 key={support}
                 label={support}
-                variant={locked ? 'locked' : 'bank'}
-                disabled={locked}
-                shake={shaking === support}
+                variant={
+                  linked !== -1 ? 'placed' : selectedSupport === support ? 'selected' : 'bank'
+                }
+                ariaLabel={
+                  linked !== -1
+                    ? t('session.matchUnlink', { item: support, number: linked + 1 })
+                    : support
+                }
+                ariaPressed={selectedSupport === support || linked !== -1}
+                badge={linked === -1 ? undefined : linked + 1}
                 className="w-full"
-                onClick={() => chooseSupport(support)}
+                onClick={() => tapSupport(support)}
               />
             );
           })}

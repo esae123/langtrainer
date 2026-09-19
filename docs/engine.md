@@ -11,6 +11,7 @@ deterministic given its inputs — `now` and an `rng` (`Rng = () => number`, see
 | `check.ts`    | is the answer right, per exercise type and input mode                 |
 | `progress.ts` | topic progress, topic completion, spaced repetition                   |
 | `text.ts`     | normalisation, diacritics stripping, Levenshtein distance             |
+| `hint.ts`     | "first letter + length" hint for typed answers                        |
 | `rng.ts`      | seeded PRNG, shuffling, weighted picks, string hashing                |
 | `types.ts`    | `TopicProgress` (re-exported by `src/db/db.ts` as `TopicProgressRow`) |
 
@@ -79,9 +80,20 @@ Per type:
 | `translate_word`                      | `answer`                                                                                                                         |
 | `number_sequence`                     | `answerWords[0]`, the rest are accepted variants                                                                                 |
 | `find_error`                          | `index === wrongIndex` **and** the replacement matches `correction` under the mode's rules                                       |
-| `match_pairs`                         | every pair matched **and** `wrongPairings === 0`                                                                                 |
+| `match_pairs`                         | free pairing: the response is the links the learner made, correct iff every item is paired **and** every pair is right          |
 | `order_dialogue`                      | the placed order equals the natural order                                                                                        |
 | `about_me`                            | not graded automatically: the learner's self-grade (Yes/Mostly = correct) and `selfGraded: true` on the attempt                  |
+
+## Typing hints (`hint.ts`)
+
+With `settings.typingHint` on (the default), typing mode shows a skeleton of the expected
+answer under the prompt: the first letter of each word, one `_` per remaining letter, and
+the total letter count — `s _ _ _ _  (5 letters)`. Hyphens and apostrophes are printed as
+themselves and not counted; trailing punctuation is dropped. Answers longer than two words
+get no hint. `hintExpectedFor(exercise, mode)` picks the field to hint per type
+(`translate_word.answer`, `number_sequence.answerWords[0]`, `find_error.correction`,
+`build_phrase`/`question_for_answer` joined answer); `fill_gaps` hints the active gap from
+its own view.
 
 ## Progress and spaced repetition
 

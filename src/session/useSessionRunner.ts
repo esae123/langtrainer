@@ -211,7 +211,7 @@ export function useSessionRunner(
         answer,
         at: Date.now(),
       };
-      dispatch({ type: 'submit', draft, result });
+      dispatch({ type: 'submit', draft, result, response });
       void record(draft, state.sessionId, state.programId);
     },
     [state, record]

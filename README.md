@@ -117,9 +117,14 @@ route ultimately loads the same `index.html`.
    **everyday phrases**. Open-ended sessions are planned in cycles of six. Each
    exercise gets an input mode — tiles, letters or typing — drawn from the shares
    in Settings → Input and restricted to what the exercise supports.
-3. Answer, then tap **Check**. A feedback sheet slides up with ✅/❌, the correct
-   answer, a note if only the accents were off, and a one-line explanation.
-   `about_me` exercises show a sample answer and ask you to grade yourself.
+3. Answer, then tap **Check**. A feedback sheet slides up with a tick/cross, the
+   correct answer, a note if only the accents were off, and a one-line
+   explanation. `about_me` exercises show a sample answer and ask you to grade
+   yourself. In typing mode an optional hint under the prompt gives the first
+   letter and the length of the answer (Settings → Input), and an accent strip
+   under the field inserts `á ã ç …` at the caret. **Match the pairs** lets you
+   link any two items freely — connect everything, then tap **Check** to see
+   which pairs were right.
 4. **×** stops the session at any point: everything already answered is saved,
    the rest is simply skipped.
 5. The **summary** shows your percentage, a breakdown per block and what changed

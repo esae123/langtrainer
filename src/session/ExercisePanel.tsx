@@ -1,8 +1,10 @@
 import { useCallback, useState } from 'react';
 import type { ExerciseResponse, SelfGrade } from '../engine/check';
 import type { PlannedItem } from '../engine/plan';
+import { hintExpectedFor } from '../engine/hint';
 import { hashString } from '../engine/rng';
 import { ExerciseArea } from '../exercises/ExerciseArea';
+import { TypingHint } from '../exercises/widgets/TypingHint';
 import { useT } from '../i18n';
 import { FeedbackSheet } from './FeedbackSheet';
 import type { FeedbackState } from './sessionState';
@@ -51,9 +53,6 @@ export function ExercisePanel({
   const progressLabel = open
     ? t('session.progressLabelOpen', { index: index + 1 })
     : t('session.progressLabel', { index: index + 1, total });
-  // match_pairs finishes itself once every pair is matched.
-  const primaryLabel =
-    item.exercise.type === 'match_pairs' && response ? t('session.continue') : t('session.check');
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
@@ -98,9 +97,10 @@ export function ExercisePanel({
             {banner}
           </p>
         )}
-        <p className="mb-4 text-[15px] font-medium text-slate-600 dark:text-slate-300">
+        <p className="mb-2 text-[15px] font-medium text-slate-600 dark:text-slate-300">
           {item.exercise.prompt}
         </p>
+        <TypingHint expected={hintExpectedFor(item.exercise, item.mode)} className="mb-4" />
         <ExerciseArea
           key={item.exercise.id}
           exercise={item.exercise}
@@ -118,7 +118,7 @@ export function ExercisePanel({
           onClick={submit}
           className="min-h-12 w-full rounded-2xl bg-accent-600 text-base font-semibold text-white shadow-sm transition-opacity active:opacity-90 disabled:bg-slate-200 disabled:text-slate-400 dark:disabled:bg-slate-800 dark:disabled:text-slate-600"
         >
-          {primaryLabel}
+          {t('session.check')}
         </button>
       </div>
 

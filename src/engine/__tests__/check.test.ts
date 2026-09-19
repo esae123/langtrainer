@@ -9,7 +9,7 @@ import type {
   QuestionForAnswerExercise,
 } from '../../content/types';
 import { makeBuildPhrase, makeTranslateWord } from '../../test/fixtures';
-import { checkAnswer, expectedAnswerText, responseToText } from '../check';
+import { checkAnswer, expectedAnswerText, gradePairs, responseToText } from '../check';
 import { levenshtein, normalize, stripDiacritics } from '../text';
 
 describe('normalize', () => {
@@ -287,22 +287,43 @@ describe('checkAnswer — match_pairs', () => {
     ],
   };
 
-  it('is correct only with every pair right and no wrong pairings', () => {
+  it('is correct when every pair is right, however many taps it took', () => {
     expect(
-      checkAnswer(exercise, 'tiles', { kind: 'pairs', pairs: exercise.pairs, wrongPairings: 0 })
-        .correct
+      checkAnswer(exercise, 'tiles', { kind: 'pairs', pairs: exercise.pairs }).correct
     ).toBe(true);
-    expect(
-      checkAnswer(exercise, 'tiles', { kind: 'pairs', pairs: exercise.pairs, wrongPairings: 2 })
-        .correct
-    ).toBe(false);
+  });
+
+  it('is wrong when a pair is crossed over or missing', () => {
     expect(
       checkAnswer(exercise, 'tiles', {
         kind: 'pairs',
-        pairs: [exercise.pairs[0]],
-        wrongPairings: 0,
+        pairs: [
+          { target: 'falo', support: 'you speak' },
+          { target: 'falas', support: 'I speak' },
+        ],
       }).correct
     ).toBe(false);
+    expect(
+      checkAnswer(exercise, 'tiles', { kind: 'pairs', pairs: [exercise.pairs[0]] }).correct
+    ).toBe(false);
+  });
+
+  it('grades each pair for the feedback sheet', () => {
+    expect(
+      gradePairs(exercise, [
+        { target: 'falo', support: 'you speak' },
+        { target: 'falas', support: 'you speak' },
+      ])
+    ).toEqual([
+      { target: 'falo', chosen: 'you speak', expected: 'I speak', correct: false },
+      { target: 'falas', chosen: 'you speak', expected: 'you speak', correct: true },
+    ]);
+    // An item left unpaired has no chosen partner and is wrong.
+    expect(gradePairs(exercise, [])[0]).toEqual({
+      target: 'falo',
+      expected: 'I speak',
+      correct: false,
+    });
   });
 });
 
@@ -370,7 +391,7 @@ describe('responseToText', () => {
     expect(responseToText({ kind: 'findError', index: 1, replacement: 'falo' })).toBe('#2 → falo');
     expect(responseToText({ kind: 'order', order: [1, 0] })).toBe('2 1');
     expect(
-      responseToText({ kind: 'pairs', pairs: [{ target: 'a', support: 'b' }], wrongPairings: 1 })
+      responseToText({ kind: 'pairs', pairs: [{ target: 'a', support: 'b' }] })
     ).toBe('a = b');
     expect(responseToText({ kind: 'selfGrade', text: 'Moro aqui.', grade: 'yes' })).toBe(
       'Moro aqui.'

@@ -1,6 +1,6 @@
 import { useId } from 'react';
 import type { Exercise } from '../content/types';
-import type { SelfGrade } from '../engine/check';
+import { gradePairs, type SelfGrade } from '../engine/check';
 import { useT, type TranslationKey } from '../i18n';
 import { renderCorrectAnswer } from '../lib/renderExercise';
 import type { FeedbackState } from './sessionState';
@@ -18,12 +18,48 @@ const SELF_GRADES: { grade: SelfGrade; labelKey: TranslationKey }[] = [
   { grade: 'no', labelKey: 'session.selfGrade.no' },
 ];
 
+/** match_pairs: every pair marked right or wrong, with the correct partner (§1). */
+function PairGrades({
+  exercise,
+  chosen,
+}: {
+  exercise: Extract<Exercise, { type: 'match_pairs' }>;
+  chosen: { target: string; support: string }[];
+}) {
+  const t = useT();
+  return (
+    <ul className="flex flex-col gap-1">
+      {gradePairs(exercise, chosen).map((grade) => (
+        <li
+          key={grade.target}
+          className={`rounded-lg px-2 py-1 text-[15px] ${
+            grade.correct
+              ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-200'
+              : 'bg-rose-50 text-rose-800 dark:bg-rose-900/30 dark:text-rose-200'
+          }`}
+        >
+          <span className="font-medium">{grade.target}</span> = {grade.chosen ?? '—'}
+          {!grade.correct && (
+            <span className="block text-xs">
+              {t('session.correctPartner', { answer: grade.expected })}
+            </span>
+          )}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 /** Bottom sheet that slides in over the exercise after every answer. */
 export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: FeedbackSheetProps) {
   const t = useT();
   const titleId = useId();
   const { result, awaitingSelfGrade } = feedback;
   const accentsOnly = result.correct && result.diacriticsOk === false;
+  // match_pairs is graded pair by pair instead of as one answer string.
+  const matchPairs = exercise.type === 'match_pairs' ? exercise : null;
+  const pairs =
+    matchPairs && feedback.response?.kind === 'pairs' ? feedback.response.pairs : null;
 
   const tone = awaitingSelfGrade
     ? 'neutral'
@@ -65,7 +101,18 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
         </div>
 
         <div className="mt-3 flex max-h-[45vh] flex-col gap-3 overflow-y-auto">
-          {!result.correct && !awaitingSelfGrade && feedback.answer !== '' && (
+          {matchPairs && pairs && (
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">
+                {t('session.matchResults')}
+              </p>
+              <div className="mt-1">
+                <PairGrades exercise={matchPairs} chosen={pairs} />
+              </div>
+            </div>
+          )}
+
+          {!pairs && !result.correct && !awaitingSelfGrade && feedback.answer !== '' && (
             <div>
               <p className="text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">
                 {t('session.yourAnswer')}
@@ -76,19 +123,21 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
             </div>
           )}
 
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">
-              {awaitingSelfGrade ? t('session.sampleAnswer') : t('session.correctAnswer')}
-            </p>
-            <p className="text-[15px] font-medium text-slate-900 dark:text-slate-50">
-              {renderCorrectAnswer(exercise)}
-            </p>
-            {result.correct && result.matchedAccepted && (
-              <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">
-                {t('session.alsoAccepted', { answer: result.matchedAccepted })}
+          {!pairs && (
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">
+                {awaitingSelfGrade ? t('session.sampleAnswer') : t('session.correctAnswer')}
               </p>
-            )}
-          </div>
+              <p className="text-[15px] font-medium text-slate-900 dark:text-slate-50">
+                {renderCorrectAnswer(exercise)}
+              </p>
+              {result.correct && result.matchedAccepted && (
+                <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">
+                  {t('session.alsoAccepted', { answer: result.matchedAccepted })}
+                </p>
+              )}
+            </div>
+          )}
 
           {awaitingSelfGrade && exercise.type === 'about_me' && exercise.hints.length > 0 && (
             <div>

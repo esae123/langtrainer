@@ -253,6 +253,16 @@ export function SettingsScreen() {
             </div>
           )}
         </div>
+        <div className="flex items-center justify-between gap-3 px-4 py-3">
+          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
+            {t('settings.typingHint')}
+          </span>
+          <Toggle
+            checked={settings.typingHint}
+            onChange={(checked) => void updateSettings({ typingHint: checked })}
+            label={t('settings.typingHint')}
+          />
+        </div>
       </SettingsGroup>
 
       <SettingsGroup title={t('settings.ai')}>
