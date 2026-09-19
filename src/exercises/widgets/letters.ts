@@ -2,8 +2,27 @@
 // typed letters compose back into the answer, and which keys the board offers.
 import { shuffle, type Rng } from '../../engine/rng';
 
-/** Characters shown pre-filled in the boxes (the learner never types them). */
-export const PREFILLED_CHARS = new Set([' ', '-', "'", '’']);
+/**
+ * Characters shown pre-filled in the boxes: separators and punctuation, so the learner
+ * only ever produces letters (an answer like "Eu falo inglês." would otherwise need a
+ * full-stop key). Terminal punctuation is dropped from a partially composed answer,
+ * which is harmless because normalize() ignores it when checking.
+ */
+export const PREFILLED_CHARS = new Set([
+  ' ',
+  '-',
+  "'",
+  '’',
+  '.',
+  ',',
+  '!',
+  '?',
+  ':',
+  ';',
+  '«',
+  '»',
+  '"',
+]);
 
 /** Accent families used to pick "twin" distractor letters first. */
 export const LETTER_TWINS: string[][] = [

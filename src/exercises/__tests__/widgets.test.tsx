@@ -106,6 +106,14 @@ describe('LetterBoard', () => {
     expect(composeLetters('chamo-me ana', 'chamomeana')).toBe('chamo-me ana');
     expect(composeLetters('chamo-me ana', 'cha')).toBe('cha');
   });
+
+  it('pre-fills punctuation so only letters have to be typed', () => {
+    expect(fillableCount('Eu falo inglês.')).toBe(12);
+    expect(composeLetters('Eu falo inglês.', 'eufaloingles')).toBe('eu falo ingles');
+    // Terminal punctuation is not typed and is not needed for the check either.
+    expect(composeLetters('Eu falo inglês.', 'eufaloinglês')).toBe('eu falo inglês');
+    expect(letterKeys('Moras aqui?', mulberry32(2))).not.toContain('?');
+  });
 });
 
 describe('TypingInput', () => {
