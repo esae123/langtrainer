@@ -1,0 +1,24 @@
+// Progress shapes used by the engine. Declared here (not in src/db) so the engine
+// stays free of Dexie; src/db/db.ts re-exports these as its row types.
+
+export type TopicStatus = 'new' | 'learning' | 'review' | 'mastered' | 'maintenance';
+
+export interface TopicHistoryEntry {
+  at: number;
+  correct: number;
+  total: number;
+}
+
+export interface TopicProgress {
+  topicId: string;
+  programId: string;
+  status: TopicStatus;
+  firstCompletedAt?: number;
+  lastReviewedAt?: number;
+  nextReviewAt?: number;
+  reviewStage: 0 | 1 | 2 | 3;
+  /** Consecutive reviews finished below 100%; drives the stage-3 → maintenance rule. */
+  failedReviewsInARow: number;
+  history: TopicHistoryEntry[];
+  seenExerciseIds: string[];
+}

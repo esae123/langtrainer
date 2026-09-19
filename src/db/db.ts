@@ -1,5 +1,6 @@
 import Dexie, { type EntityTable } from 'dexie';
 import type { Exercise, InputMode, Topic } from '../content/types';
+import type { TopicProgress, TopicStatus } from '../engine/types';
 
 export interface SettingsRow {
   key: string;
@@ -12,19 +13,9 @@ export interface ProfileRow {
   updatedAt: number;
 }
 
-export type TopicStatus = 'new' | 'learning' | 'review' | 'mastered' | 'maintenance';
-
-export interface TopicProgressRow {
-  topicId: string;
-  programId: string;
-  status: TopicStatus;
-  firstCompletedAt?: number;
-  lastReviewedAt?: number;
-  nextReviewAt?: number;
-  reviewStage: 0 | 1 | 2 | 3;
-  history: { at: number; correct: number; total: number }[];
-  seenExerciseIds: string[];
-}
+// The shape itself lives in src/engine/types.ts so the engine needs no Dexie import.
+export type { TopicStatus };
+export type TopicProgressRow = TopicProgress;
 
 export interface SessionRow {
   id: string;
@@ -47,6 +38,8 @@ export interface AttemptRow {
   diacriticsOk?: boolean;
   answer: string;
   at: number;
+  /** about_me exercises are graded by the learner in Stage 3 (no automatic check). */
+  selfGraded?: boolean;
 }
 
 export interface CustomTopicRow {
@@ -83,6 +76,28 @@ export class LangTrainerDB extends Dexie {
       customTopics: 'id',
       generatedExercises: 'id, topicId',
     });
+
+    // Stage 3 added TopicProgressRow.failedReviewsInARow (and the optional
+    // AttemptRow.selfGraded, which needs no migration). Indexes are unchanged; the
+    // stores() call is repeated so the version's schema is explicit.
+    this.version(2)
+      .stores({
+        settings: 'key',
+        profile: 'id',
+        topicProgress: 'topicId, programId, nextReviewAt',
+        sessions: 'id, startedAt',
+        attempts: 'id, sessionId, topicId, exerciseId',
+        customTopics: 'id',
+        generatedExercises: 'id, topicId',
+      })
+      .upgrade((tx) =>
+        tx
+          .table<TopicProgressRow>('topicProgress')
+          .toCollection()
+          .modify((row) => {
+            row.failedReviewsInARow ??= 0;
+          })
+      );
   }
 }
 

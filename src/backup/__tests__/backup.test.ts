@@ -15,6 +15,7 @@ async function seedFixtureData(geminiApiKey: string) {
     programId: 'pt-PT-A1',
     status: 'learning',
     reviewStage: 1,
+    failedReviewsInARow: 0,
     history: [{ at: 1, correct: 3, total: 4 }],
     seenExerciseIds: ['e1'],
   });
@@ -171,7 +172,14 @@ describe('parseBackup / importBackup rejects malformed input', () => {
         app: 'langtrainer',
         schemaVersion: 1,
         exportedAt: '',
-        data: { settings: [], profile: [], topicProgress: [], sessions: [], attempts: [], customTopics: [] },
+        data: {
+          settings: [],
+          profile: [],
+          topicProgress: [],
+          sessions: [],
+          attempts: [],
+          customTopics: [],
+        },
       })
     ).toThrow(/generatedExercises/);
   });

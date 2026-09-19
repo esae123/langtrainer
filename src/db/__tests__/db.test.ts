@@ -1,5 +1,6 @@
+import Dexie from 'dexie';
 import { describe, expect, it } from 'vitest';
-import { LangTrainerDB } from '../db';
+import { LangTrainerDB, type TopicProgressRow } from '../db';
 
 describe('LangTrainerDB schema', () => {
   it('creates all seven tables and round-trips a row in each', async () => {
@@ -12,6 +13,7 @@ describe('LangTrainerDB schema', () => {
       programId: 'pt-PT-A1',
       status: 'new',
       reviewStage: 0,
+      failedReviewsInARow: 0,
       history: [],
       seenExerciseIds: [],
     });
@@ -87,6 +89,7 @@ describe('LangTrainerDB schema', () => {
         programId: 'pt-PT-A1',
         status: 'review',
         reviewStage: 1,
+        failedReviewsInARow: 0,
         history: [],
         seenExerciseIds: [],
         nextReviewAt: 100,
@@ -96,6 +99,7 @@ describe('LangTrainerDB schema', () => {
         programId: 'pt-PT-A1',
         status: 'new',
         reviewStage: 0,
+        failedReviewsInARow: 0,
         history: [],
         seenExerciseIds: [],
         nextReviewAt: 50,
@@ -109,12 +113,66 @@ describe('LangTrainerDB schema', () => {
     expect(dueEarliest?.topicId).toBe('t2');
 
     await db.attempts.bulkPut([
-      { id: 'a1', sessionId: 's1', exerciseId: 'e1', topicId: 't1', mode: 'tiles', correct: true, answer: 'x', at: 1 },
-      { id: 'a2', sessionId: 's1', exerciseId: 'e2', topicId: 't2', mode: 'typing', correct: false, answer: 'y', at: 2 },
+      {
+        id: 'a1',
+        sessionId: 's1',
+        exerciseId: 'e1',
+        topicId: 't1',
+        mode: 'tiles',
+        correct: true,
+        answer: 'x',
+        at: 1,
+      },
+      {
+        id: 'a2',
+        sessionId: 's1',
+        exerciseId: 'e2',
+        topicId: 't2',
+        mode: 'typing',
+        correct: false,
+        answer: 'y',
+        at: 2,
+      },
     ]);
     const bySession = await db.attempts.where('sessionId').equals('s1').toArray();
     expect(bySession).toHaveLength(2);
 
+    db.close();
+  });
+
+  it('migrates version 1 rows to version 2 by adding failedReviewsInARow', async () => {
+    const name = 'db-upgrade-test';
+    const v1 = new Dexie(name);
+    v1.version(1).stores({
+      settings: 'key',
+      profile: 'id',
+      topicProgress: 'topicId, programId, nextReviewAt',
+      sessions: 'id, startedAt',
+      attempts: 'id, sessionId, topicId, exerciseId',
+      customTopics: 'id',
+      generatedExercises: 'id, topicId',
+    });
+    await v1.open();
+    await v1.table('topicProgress').put({
+      topicId: 'legacy',
+      programId: 'pt-PT-A1',
+      status: 'review',
+      reviewStage: 1,
+      history: [{ at: 1, correct: 2, total: 3 }],
+      seenExerciseIds: ['e1'],
+      nextReviewAt: 42,
+    });
+    v1.close();
+
+    const db = new LangTrainerDB(name);
+    await db.open();
+    expect(db.verno).toBe(2);
+    const row = (await db.topicProgress.get('legacy')) as TopicProgressRow;
+    expect(row.failedReviewsInARow).toBe(0);
+    // Existing data survives the upgrade untouched.
+    expect(row.seenExerciseIds).toEqual(['e1']);
+    expect(row.nextReviewAt).toBe(42);
+    expect(row.history).toHaveLength(1);
     db.close();
   });
 });
