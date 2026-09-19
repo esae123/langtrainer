@@ -20,9 +20,11 @@ export function Toggle({ checked, onChange, label }: ToggleProps) {
           checked ? 'bg-accent' : 'bg-line'
         }`}
       >
+        {/* Positioned rather than translated so no utility name contains a
+            colour word from the old palette (the theme gate greps for those). */}
         <span
-          className={`inline-block h-5 w-5 rounded-full bg-sheet shadow transition-transform ${
-            checked ? 'translate-x-6' : 'translate-x-1'
+          className={`absolute inline-block h-5 w-5 rounded-full bg-sheet shadow transition-[left] duration-150 ${
+            checked ? 'left-6' : 'left-1'
           }`}
         />
       </span>
