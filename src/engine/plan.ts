@@ -297,7 +297,9 @@ export function planSession(input: PlanInput): SessionPlan {
   return {
     id: input.id ?? `s${input.now.toString(36)}-${Math.floor(input.rng() * 0xffffff).toString(36)}`,
     programId: input.program.id,
-    plannedLength: open ? 0 : counts.new + counts.review + counts.phrases,
+    // 0 marks an open session; otherwise the real length, which can be below the target
+    // when the program runs out of exercises (so the UI never promises "1/10" of 3).
+    plannedLength: open ? 0 : items.length,
     open,
     items,
   };

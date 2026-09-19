@@ -228,6 +228,8 @@ describe('exercise selection', () => {
     ]);
     const p = plan({ sessionLength: 10, program });
     expect(p.items).toHaveLength(3);
+    // plannedLength follows the real plan so the progress counter stays honest.
+    expect(p.plannedLength).toBe(3);
   });
 });
 

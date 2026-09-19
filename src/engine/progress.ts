@@ -59,6 +59,8 @@ export interface TopicSnapshot {
   status: TopicStatus;
   reviewStage: 0 | 1 | 2 | 3;
   nextReviewAt?: number;
+  /** Lets the summary tell a first completion (applied per attempt) from a review. */
+  firstCompletedAt?: number;
 }
 
 export interface TopicOutcome {
@@ -79,7 +81,12 @@ export interface FinishSessionResult {
 }
 
 function snapshot(row: TopicProgress): TopicSnapshot {
-  return { status: row.status, reviewStage: row.reviewStage, nextReviewAt: row.nextReviewAt };
+  return {
+    status: row.status,
+    reviewStage: row.reviewStage,
+    nextReviewAt: row.nextReviewAt,
+    firstCompletedAt: row.firstCompletedAt,
+  };
 }
 
 function applySrs(row: TopicProgress, perfect: boolean, now: number): void {

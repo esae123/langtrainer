@@ -1,10 +1,10 @@
 # LangTrainer
 
 An installable, offline-first PWA for daily language-learning sessions on Android
-(Chrome). This is **Stage 1**: a professional-looking app skeleton with working
-local storage, settings, and backup/restore. There are no exercises yet — the
-domain model and database schema are already in place so later stages can build
-on top of them without migrations.
+(Chrome). It ships an app skeleton with local storage, settings and
+backup/restore (Stage 1), an authored European Portuguese A1 program with a
+content library (Stage 2), and complete training sessions with three input
+modes, feedback and spaced repetition (Stage 3).
 
 ## Stack
 
@@ -44,9 +44,16 @@ src/
   i18n/              # minimal en/ru dictionaries + useT()
   theme/             # system/light/dark handling
   components/        # shared UI (Card, Sheet, ConfirmDialog, Toggle, tab bar, toast)
-  routes/            # Learn / Progress / Settings screens
+  engine/            # pure session logic: planning, answer checking, SRS (no React, no Dexie)
+  session/           # session state machine, persistence and the /session screens
+  exercises/         # one renderer per exercise type + shared input widgets
+  routes/            # Learn / Progress / Settings / Library screens
   pwa/                # update-available toast
 ```
+
+`content/` holds the authored program sources (see `docs/content-authoring.md`);
+`npm run content:build` compiles them into `src/content/programs/`. The rules the
+engine follows are documented in `docs/engine.md`.
 
 ## Environment variables
 
@@ -97,6 +104,28 @@ route ultimately loads the same `index.html`.
 3. In DevTools → **Network**, tick **Offline** (or **Application → Service
    Workers → Offline**).
 4. Reload the page — it should still load fully from the cache.
+
+## How a session works
+
+1. **Learn** shows the current topic (first topic that is still `new` or
+   `learning`), how many of its 20 exercises you have answered, the next review
+   date, and a **Resume session** card if you left one unfinished in the last 24
+   hours. Pick a session length (5/10/15/20/30 or ∞) and tap **Start session**.
+2. The session is planned up front: a **new** block from the current topic
+   (easiest first, preceded by a context screen with the topic's rule text and
+   key words), a **review** block from topics whose review is due, and a block of
+   **everyday phrases**. Open-ended sessions are planned in cycles of six. Each
+   exercise gets an input mode — tiles, letters or typing — drawn from the shares
+   in Settings → Input and restricted to what the exercise supports.
+3. Answer, then tap **Check**. A feedback sheet slides up with ✅/❌, the correct
+   answer, a note if only the accents were off, and a one-line explanation.
+   `about_me` exercises show a sample answer and ask you to grade yourself.
+4. **×** stops the session at any point: everything already answered is saved,
+   the rest is simply skipped.
+5. The **summary** shows your percentage, a breakdown per block and what changed
+   per topic ("→ ready for review in 30 days", "→ mastered!"). Each answer is
+   stored in `attempts`; topic progress and the spaced-repetition schedule are
+   updated at the end of the session.
 
 ## How backups work
 

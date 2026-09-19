@@ -1,0 +1,65 @@
+import { useCallback, useEffect, useMemo, useState } from 'react';
+import type { BuildPhraseExercise, QuestionForAnswerExercise } from '../content/types';
+import { mulberry32, shuffle } from '../engine/rng';
+import { TextAnswerInput } from './widgets/TextAnswerInput';
+import { TileBank } from './widgets/TileBank';
+import { toTiles } from './widgets/tiles';
+import type { ExerciseViewProps } from './types';
+
+type PhraseExercise = BuildPhraseExercise | QuestionForAnswerExercise;
+
+/** build_phrase and question_for_answer: assemble a whole sentence. */
+export function PhraseExerciseView({
+  exercise,
+  mode,
+  seed,
+  onChange,
+  onSubmit,
+}: ExerciseViewProps<PhraseExercise>) {
+  const answerText = exercise.answer.join(' ');
+  const tiles = useMemo(
+    () => toTiles(shuffle([...exercise.answer, ...exercise.distractors], mulberry32(seed))),
+    [exercise.answer, exercise.distractors, seed]
+  );
+  const [placedIds, setPlacedIds] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (mode !== 'tiles') return;
+    const byId = new Map(tiles.map((tile) => [tile.id, tile.label]));
+    const tokens = placedIds.map((id) => byId.get(id) ?? '');
+    onChange(tokens.length > 0 ? { kind: 'tokens', tokens } : null);
+  }, [mode, placedIds, tiles, onChange]);
+
+  const handleText = useCallback(
+    (text: string | null) => onChange(text === null ? null : { kind: 'text', text }),
+    [onChange]
+  );
+
+  return (
+    <div className="flex flex-col gap-4">
+      {exercise.type === 'question_for_answer' && (
+        <blockquote className="max-w-[90%] self-end rounded-2xl rounded-br-sm bg-slate-100 px-4 py-3 text-[17px] text-slate-800 dark:bg-slate-800/60 dark:text-slate-100">
+          {exercise.givenAnswer}
+        </blockquote>
+      )}
+
+      {mode === 'tiles' ? (
+        <TileBank
+          tiles={tiles}
+          placedIds={placedIds}
+          onChange={setPlacedIds}
+          slots={exercise.answer.length}
+        />
+      ) : (
+        <TextAnswerInput
+          answer={answerText}
+          mode={mode}
+          seed={seed}
+          onText={handleText}
+          onSubmit={onSubmit}
+          multiline={mode === 'typing'}
+        />
+      )}
+    </div>
+  );
+}

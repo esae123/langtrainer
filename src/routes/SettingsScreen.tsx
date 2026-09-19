@@ -6,6 +6,7 @@ import { useExportBackup } from '../backup/useExportBackup';
 import { ConfirmDialog } from '../components/ConfirmDialog';
 import { SettingsGroup } from '../components/SettingsGroup';
 import { Toggle } from '../components/Toggle';
+import { formatDate } from '../lib/formatDate';
 import { useToast } from '../components/toastStore';
 import { resetAllData } from '../db/reset';
 import { useT, type TranslationKey } from '../i18n';
@@ -39,10 +40,6 @@ const SHARE_FIELDS: { key: keyof InputShares; labelKey: TranslationKey }[] = [
   { key: 'letters', labelKey: 'settings.inputShares.letters' },
   { key: 'typing', labelKey: 'settings.inputShares.typing' },
 ];
-
-function formatDate(ms: number, locale: string): string {
-  return new Date(ms).toLocaleDateString(locale, { year: 'numeric', month: 'short', day: 'numeric' });
-}
 
 export function SettingsScreen() {
   const t = useT();
@@ -133,7 +130,9 @@ export function SettingsScreen() {
 
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">{t('nav.settings')}</h1>
+      <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">
+        {t('nav.settings')}
+      </h1>
 
       <SettingsGroup title={t('settings.language')}>
         <div className="flex items-center justify-between gap-3 px-4 py-3">
@@ -157,7 +156,9 @@ export function SettingsScreen() {
 
       <SettingsGroup title={t('settings.appearance')}>
         <div className="flex items-center justify-between gap-3 px-4 py-3">
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">{t('settings.theme')}</span>
+          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
+            {t('settings.theme')}
+          </span>
           <div className="flex overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700">
             {(['system', 'light', 'dark'] as Theme[]).map((theme) => (
               <button
@@ -281,7 +282,9 @@ export function SettingsScreen() {
               {showApiKey ? t('settings.geminiApiKeyHide') : t('settings.geminiApiKeyShow')}
             </button>
           </div>
-          <p className="text-xs text-slate-500 dark:text-slate-400">{t('settings.geminiApiKeyHelp')}</p>
+          <p className="text-xs text-slate-500 dark:text-slate-400">
+            {t('settings.geminiApiKeyHelp')}
+          </p>
         </div>
         <div className="flex items-center justify-between gap-3 px-4 py-3">
           <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
@@ -367,12 +370,20 @@ export function SettingsScreen() {
 
       <SettingsGroup title={t('settings.about')}>
         <div className="flex items-center justify-between px-4 py-3">
-          <span className="text-sm text-slate-500 dark:text-slate-400">{t('settings.version')}</span>
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">{pkg.version}</span>
+          <span className="text-sm text-slate-500 dark:text-slate-400">
+            {t('settings.version')}
+          </span>
+          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
+            {pkg.version}
+          </span>
         </div>
         <div className="flex items-center justify-between px-4 py-3">
-          <span className="text-sm text-slate-500 dark:text-slate-400">{t('settings.buildDate')}</span>
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">{__BUILD_DATE__}</span>
+          <span className="text-sm text-slate-500 dark:text-slate-400">
+            {t('settings.buildDate')}
+          </span>
+          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
+            {__BUILD_DATE__}
+          </span>
         </div>
       </SettingsGroup>
 
