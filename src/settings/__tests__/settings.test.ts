@@ -23,6 +23,10 @@ describe('input share presets', () => {
     expect(DEFAULT_SETTINGS.inputPreset).toBe('normal');
     expect(DEFAULT_SETTINGS.inputShares).toEqual(INPUT_PRESETS.normal);
   });
+
+  it('the typing hint is on by default', () => {
+    expect(DEFAULT_SETTINGS.typingHint).toBe(true);
+  });
 });
 
 describe('normalizeInputShares', () => {

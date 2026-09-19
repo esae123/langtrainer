@@ -110,6 +110,9 @@ describe('/session happy path', () => {
     expect(screen.getByText('3 of 3 correct')).toBeInTheDocument();
     expect(screen.getByText('New material')).toBeInTheDocument();
     expect(screen.queryByText('Interrupted')).not.toBeInTheDocument();
+    // Nothing was wrong, so only "Repeat session" is offered as practice.
+    expect(screen.queryByRole('button', { name: 'Retry mistakes' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Repeat session' })).toBeInTheDocument();
 
     await waitFor(async () => expect(await db.attempts.count()).toBe(3));
     const attempts = await db.attempts.toArray();
@@ -215,6 +218,7 @@ describe('/session happy path', () => {
     expect(before?.wrongExerciseIds).toEqual(['t1-e1']);
 
     // Retry mistakes -> a practice session with only the wrong exercise, no context.
+    expect(screen.getByRole('button', { name: 'Repeat session' })).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Retry mistakes' }));
     expect(await screen.findByText('Practice')).toBeInTheDocument();
     expect(screen.getByText('1/1')).toBeInTheDocument();
