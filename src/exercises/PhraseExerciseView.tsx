@@ -38,7 +38,7 @@ export function PhraseExerciseView({
   return (
     <div className="flex flex-col gap-4">
       {exercise.type === 'question_for_answer' && (
-        <blockquote className="max-w-[90%] self-end rounded-2xl rounded-br-sm bg-slate-100 px-4 py-3 text-[17px] text-slate-800 dark:bg-slate-800/60 dark:text-slate-100">
+        <blockquote className="max-w-[90%] self-end rounded-2xl rounded-br-sm border border-line bg-sheet px-4 py-3 text-[17px] text-text">
           {exercise.givenAnswer}
         </blockquote>
       )}

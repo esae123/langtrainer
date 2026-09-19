@@ -19,9 +19,7 @@ export function TypingHint({
   if (!words) return null;
 
   return (
-    <p
-      className={`text-[15px] font-medium tracking-[0.12em] text-slate-500 dark:text-slate-400 ${className}`}
-    >
+    <p className={`text-[15px] font-medium tracking-[0.12em] text-muted ${className}`}>
       <span>{words.map((word) => word.skeleton).join('   ')}</span>{' '}
       <span className="text-xs tracking-normal">
         {t('session.hintLetters', { count: hintLetterCount(words) })}

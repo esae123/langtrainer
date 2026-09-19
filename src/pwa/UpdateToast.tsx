@@ -33,16 +33,13 @@ export function UpdateToast() {
   return (
     // Sits above the bottom-20 ToastContext toast (rather than on top of it),
     // in case both are visible at the same time.
-    <div
-      aria-live="polite"
-      className="fixed inset-x-0 bottom-36 z-50 flex justify-center px-4"
-    >
-      <div className="flex items-center gap-3 rounded-xl bg-accent-600 px-4 py-3 text-sm text-white shadow-lg">
+    <div aria-live="polite" className="fixed inset-x-0 bottom-36 z-50 flex justify-center px-4">
+      <div className="flex items-center gap-3 rounded-xl bg-accent px-4 py-3 text-sm text-accent-ink shadow-lg">
         <span>{t('update.available')}</span>
         <button
           type="button"
           onClick={() => updateServiceWorker(true)}
-          className="min-h-9 rounded-lg bg-white/20 px-3 font-semibold"
+          className="min-h-9 rounded-lg bg-accent-ink/20 px-3 font-semibold"
         >
           {t('update.update')}
         </button>

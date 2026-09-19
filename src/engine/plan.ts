@@ -132,9 +132,7 @@ function orderedPool(
   const wrongBefore = available.filter(
     (exercise) => seen.has(exercise.id) && wrong.has(exercise.id)
   );
-  const rest = available.filter(
-    (exercise) => seen.has(exercise.id) && !wrong.has(exercise.id)
-  );
+  const rest = available.filter((exercise) => seen.has(exercise.id) && !wrong.has(exercise.id));
   const arrange = (list: Exercise[]) =>
     sortByDifficulty
       ? [...list].sort((a, b) => a.difficulty - b.difficulty)

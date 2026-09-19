@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { Delete } from 'lucide-react';
 import { mulberry32 } from '../../engine/rng';
 import { useT } from '../../i18n';
 import { hapticTap } from '../../lib/haptics';
@@ -39,10 +40,10 @@ export function LetterBoard({ answer, typed, onChange, seed }: LetterBoardProps)
                 key={i}
                 className={`flex h-11 min-w-8 items-center justify-center rounded-lg border px-1 text-[17px] font-semibold ${
                   box.fixed
-                    ? 'border-transparent text-slate-400 dark:text-slate-500'
+                    ? 'border-transparent text-muted'
                     : box.value
-                      ? 'border-accent-300 bg-accent-50 text-accent-800 dark:border-accent-700/60 dark:bg-accent-700/20 dark:text-accent-100'
-                      : 'border-slate-300 bg-white dark:border-slate-700 dark:bg-slate-900'
+                      ? 'border-accent bg-accent-soft text-text'
+                      : 'border-line bg-sheet'
                 }`}
               >
                 {box.value || ' '}
@@ -61,7 +62,7 @@ export function LetterBoard({ answer, typed, onChange, seed }: LetterBoardProps)
               hapticTap();
               if (typed.length < total) onChange(typed + key);
             }}
-            className="min-h-11 min-w-11 rounded-xl border border-slate-200 bg-white text-[17px] font-semibold text-slate-800 shadow-sm transition-transform active:scale-[0.97] dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100"
+            className="min-h-11 min-w-11 rounded-xl border border-line bg-sheet text-[17px] font-semibold text-text shadow-sm transition-transform active:scale-[0.97]"
           >
             {key}
           </button>
@@ -73,9 +74,9 @@ export function LetterBoard({ answer, typed, onChange, seed }: LetterBoardProps)
             hapticTap();
             onChange(typed.slice(0, -1));
           }}
-          className="min-h-11 min-w-11 rounded-xl border border-slate-200 bg-slate-100 px-3 text-[17px] text-slate-600 shadow-sm transition-transform active:scale-[0.97] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+          className="flex min-h-11 min-w-11 items-center justify-center rounded-xl border border-line bg-paper px-3 text-muted shadow-sm transition-transform active:scale-[0.97]"
         >
-          ⌫
+          <Delete size={20} strokeWidth={2} aria-hidden />
         </button>
       </div>
     </div>

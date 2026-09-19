@@ -30,7 +30,7 @@ export function Sheet({ open, onClose, titleId, children }: SheetProps) {
         // p-5 plus the bottom safe-area inset on top, so the sheet's own
         // padding-bottom isn't just replaced by the inset (which is 0 on most
         // non-notched devices).
-        className="w-full max-w-[480px] rounded-t-2xl bg-white p-5 pb-[calc(var(--spacing)*5+env(safe-area-inset-bottom))] shadow-xl dark:bg-slate-900"
+        className="w-full max-w-[480px] rounded-t-2xl bg-sheet p-5 pb-[calc(var(--spacing)*5+env(safe-area-inset-bottom))] shadow-xl"
         onClick={(event) => event.stopPropagation()}
         role="dialog"
         aria-modal="true"

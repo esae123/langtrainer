@@ -288,9 +288,9 @@ describe('checkAnswer — match_pairs', () => {
   };
 
   it('is correct when every pair is right, however many taps it took', () => {
-    expect(
-      checkAnswer(exercise, 'tiles', { kind: 'pairs', pairs: exercise.pairs }).correct
-    ).toBe(true);
+    expect(checkAnswer(exercise, 'tiles', { kind: 'pairs', pairs: exercise.pairs }).correct).toBe(
+      true
+    );
   });
 
   it('is wrong when a pair is crossed over or missing', () => {
@@ -390,9 +390,7 @@ describe('responseToText', () => {
     expect(responseToText({ kind: 'gaps', values: ['falo', 'moro'] })).toBe('falo | moro');
     expect(responseToText({ kind: 'findError', index: 1, replacement: 'falo' })).toBe('#2 → falo');
     expect(responseToText({ kind: 'order', order: [1, 0] })).toBe('2 1');
-    expect(
-      responseToText({ kind: 'pairs', pairs: [{ target: 'a', support: 'b' }] })
-    ).toBe('a = b');
+    expect(responseToText({ kind: 'pairs', pairs: [{ target: 'a', support: 'b' }] })).toBe('a = b');
     expect(responseToText({ kind: 'selfGrade', text: 'Moro aqui.', grade: 'yes' })).toBe(
       'Moro aqui.'
     );

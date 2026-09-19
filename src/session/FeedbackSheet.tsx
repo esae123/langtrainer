@@ -1,4 +1,5 @@
 import { useId } from 'react';
+import { Check, NotebookPen, X } from 'lucide-react';
 import type { Exercise } from '../content/types';
 import { gradePairs, type SelfGrade } from '../engine/check';
 import { useT, type TranslationKey } from '../i18n';
@@ -33,9 +34,7 @@ function PairGrades({
         <li
           key={grade.target}
           className={`rounded-lg px-2 py-1 text-[15px] ${
-            grade.correct
-              ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-200'
-              : 'bg-rose-50 text-rose-800 dark:bg-rose-900/30 dark:text-rose-200'
+            grade.correct ? 'bg-ok-bg text-ok' : 'bg-bad-bg text-bad'
           }`}
         >
           <span className="font-medium">{grade.target}</span> = {grade.chosen ?? '—'}
@@ -58,8 +57,7 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
   const accentsOnly = result.correct && result.diacriticsOk === false;
   // match_pairs is graded pair by pair instead of as one answer string.
   const matchPairs = exercise.type === 'match_pairs' ? exercise : null;
-  const pairs =
-    matchPairs && feedback.response?.kind === 'pairs' ? feedback.response.pairs : null;
+  const pairs = matchPairs && feedback.response?.kind === 'pairs' ? feedback.response.pairs : null;
 
   const tone = awaitingSelfGrade
     ? 'neutral'
@@ -75,13 +73,8 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
       : tone === 'accents'
         ? t('session.feedbackAccents')
         : t('session.feedbackCorrect');
-  const icon = awaitingSelfGrade ? '📝' : result.correct ? '✅' : '❌';
-  const titleColor =
-    tone === 'wrong'
-      ? 'text-rose-700 dark:text-rose-300'
-      : tone === 'neutral'
-        ? 'text-slate-900 dark:text-slate-50'
-        : 'text-emerald-700 dark:text-emerald-300';
+  const Icon = awaitingSelfGrade ? NotebookPen : result.correct ? Check : X;
+  const titleColor = tone === 'wrong' ? 'text-bad' : tone === 'neutral' ? 'text-text' : 'text-ok';
 
   return (
     <div className="fixed inset-0 z-40 flex items-end justify-center bg-black/25">
@@ -89,12 +82,10 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
-        className="w-full max-w-[480px] rounded-t-2xl border-t border-slate-200 bg-white px-4 pb-[calc(var(--spacing)*4+env(safe-area-inset-bottom))] pt-4 shadow-xl motion-safe:animate-sheet-up dark:border-slate-800 dark:bg-slate-900"
+        className="w-full max-w-[480px] rounded-t-2xl border-t border-line bg-sheet px-4 pb-[calc(var(--spacing)*4+env(safe-area-inset-bottom))] pt-4 shadow-xl motion-safe:animate-sheet-up"
       >
-        <div aria-live="polite" className="flex items-center gap-2">
-          <span aria-hidden className="text-xl">
-            {icon}
-          </span>
+        <div aria-live="polite" className={`flex items-center gap-2 ${titleColor}`}>
+          <Icon size={22} strokeWidth={2} aria-hidden />
           <h2 id={titleId} className={`text-lg font-semibold ${titleColor}`}>
             {title}
           </h2>
@@ -103,7 +94,7 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
         <div className="mt-3 flex max-h-[45vh] flex-col gap-3 overflow-y-auto">
           {matchPairs && pairs && (
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted">
                 {t('session.matchResults')}
               </p>
               <div className="mt-1">
@@ -114,25 +105,21 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
 
           {!pairs && !result.correct && !awaitingSelfGrade && feedback.answer !== '' && (
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted">
                 {t('session.yourAnswer')}
               </p>
-              <p className="text-[15px] text-slate-500 line-through dark:text-slate-400">
-                {feedback.answer}
-              </p>
+              <p className="text-[15px] text-muted line-through">{feedback.answer}</p>
             </div>
           )}
 
           {!pairs && (
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted">
                 {awaitingSelfGrade ? t('session.sampleAnswer') : t('session.correctAnswer')}
               </p>
-              <p className="text-[15px] font-medium text-slate-900 dark:text-slate-50">
-                {renderCorrectAnswer(exercise)}
-              </p>
+              <p className="text-[15px] font-medium text-text">{renderCorrectAnswer(exercise)}</p>
               {result.correct && result.matchedAccepted && (
-                <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">
+                <p className="mt-0.5 text-xs text-muted">
                   {t('session.alsoAccepted', { answer: result.matchedAccepted })}
                 </p>
               )}
@@ -141,25 +128,19 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
 
           {awaitingSelfGrade && exercise.type === 'about_me' && exercise.hints.length > 0 && (
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted">
                 {t('session.hints')}
               </p>
-              <p className="text-[15px] text-slate-700 dark:text-slate-200">
-                {exercise.hints.join(' · ')}
-              </p>
+              <p className="text-[15px] text-text">{exercise.hints.join(' · ')}</p>
             </div>
           )}
 
-          <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
-            {exercise.explanation}
-          </p>
+          <p className="text-sm leading-relaxed text-muted">{exercise.explanation}</p>
         </div>
 
         {awaitingSelfGrade ? (
           <div className="mt-4">
-            <p className="mb-2 text-sm font-medium text-slate-700 dark:text-slate-200">
-              {t('session.selfGradeQuestion')}
-            </p>
+            <p className="mb-2 text-sm font-medium text-text">{t('session.selfGradeQuestion')}</p>
             <div className="flex gap-2">
               {SELF_GRADES.map(({ grade, labelKey }) => (
                 <button
@@ -167,9 +148,7 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
                   type="button"
                   onClick={() => onSelfGrade(grade)}
                   className={`min-h-12 flex-1 rounded-xl text-sm font-semibold ${
-                    grade === 'no'
-                      ? 'border border-slate-300 text-slate-700 dark:border-slate-700 dark:text-slate-200'
-                      : 'bg-accent-600 text-white'
+                    grade === 'no' ? 'border border-line text-text' : 'bg-accent text-accent-ink'
                   }`}
                 >
                   {t(labelKey)}
@@ -182,7 +161,7 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
             type="button"
             autoFocus
             onClick={onContinue}
-            className="mt-4 min-h-12 w-full rounded-2xl bg-accent-600 text-base font-semibold text-white shadow-sm active:opacity-90"
+            className="mt-4 min-h-12 w-full rounded-2xl bg-accent text-base font-semibold text-accent-ink shadow-sm active:opacity-90"
           >
             {t('session.continue')}
           </button>

@@ -9,6 +9,6 @@ import { SettingsContext as Context, useLiveSettings } from './settingsStore';
  */
 export function SettingsProvider({ children }: { children: ReactNode }) {
   const settings = useLiveSettings();
-  if (!settings) return <div className="min-h-screen bg-slate-50 dark:bg-slate-950" />;
+  if (!settings) return <div className="min-h-screen bg-paper" />;
   return <Context.Provider value={settings}>{children}</Context.Provider>;
 }

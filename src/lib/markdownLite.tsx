@@ -31,7 +31,7 @@ export function MiniMarkdown({ text }: { text: string }) {
     .filter(Boolean);
 
   return (
-    <div className="flex flex-col gap-3 text-sm leading-relaxed text-slate-700 dark:text-slate-200">
+    <div className="flex flex-col gap-3 text-sm leading-relaxed text-text">
       {blocks.map((block, blockIndex) => {
         const lines = block
           .split('\n')
@@ -62,7 +62,7 @@ export function MiniMarkdown({ text }: { text: string }) {
         if (lines.length === 1 && /^#{1,6}\s+/.test(lines[0])) {
           const headingText = lines[0].replace(/^#{1,6}\s+/, '');
           return (
-            <p key={key} className="text-base font-semibold text-slate-900 dark:text-slate-50">
+            <p key={key} className="text-base font-semibold text-text">
               {renderInline(headingText, `${key}-h`)}
             </p>
           );

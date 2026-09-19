@@ -1,3 +1,4 @@
+import { ArrowLeft } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router';
 import { Card } from '../components/Card';
 import type { Exercise, Program, Topic } from '../content/types';
@@ -20,27 +21,32 @@ function ExerciseCard({ exercise }: { exercise: Exercise }) {
   return (
     <Card className="flex flex-col gap-2">
       <div className="flex items-center justify-between gap-2">
-        <span className="rounded-full bg-accent-50 px-2 py-0.5 text-xs font-semibold text-accent-700 dark:bg-accent-700/20 dark:text-accent-200">
+        <span className="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-semibold text-accent">
           {t(`library.type.${exercise.type}` as TranslationKey)}
         </span>
-        <span aria-label={`${t('library.difficulty')}: ${exercise.difficulty}`} className="text-xs text-accent-600 dark:text-accent-300">
+        <span
+          aria-label={`${t('library.difficulty')}: ${exercise.difficulty}`}
+          className="text-xs text-accent"
+        >
           {difficultyDots(exercise.difficulty)}
         </span>
       </div>
-      <p className="text-xs text-slate-500 dark:text-slate-400">
+      <p className="text-xs text-muted">
         {t('library.allowedModes')}:{' '}
-        {exercise.allowedModes.map((mode) => t(`library.mode.${mode}` as TranslationKey)).join(', ')}
+        {exercise.allowedModes
+          .map((mode) => t(`library.mode.${mode}` as TranslationKey))
+          .join(', ')}
       </p>
-      <p className="text-sm text-slate-800 dark:text-slate-100">{exercise.prompt}</p>
+      <p className="text-sm text-text">{exercise.prompt}</p>
       {exercise.type === 'question_for_answer' && (
-        <p className="text-xs text-slate-500 dark:text-slate-400">
+        <p className="text-xs text-muted">
           {t('library.given')}: {exercise.givenAnswer}
         </p>
       )}
-      <p className="text-sm font-medium text-slate-900 dark:text-slate-50">
+      <p className="text-sm font-medium text-text">
         {t('library.answer')}: {renderCorrectAnswer(exercise)}
       </p>
-      <p className="text-xs text-slate-500 dark:text-slate-400">{exercise.explanation}</p>
+      <p className="text-xs text-muted">{exercise.explanation}</p>
     </Card>
   );
 }
@@ -53,7 +59,8 @@ export function LibraryDetailScreen() {
   const program = getProgram(settings.activeProgramId);
 
   const topic = program && itemId ? findTopic(program, itemId) : undefined;
-  const phraseSet = program && itemId && !topic ? program.phraseSets.find((p) => p.id === itemId) : undefined;
+  const phraseSet =
+    program && itemId && !topic ? program.phraseSets.find((p) => p.id === itemId) : undefined;
 
   return (
     <div className="flex flex-col gap-6">
@@ -62,18 +69,18 @@ export function LibraryDetailScreen() {
           type="button"
           onClick={() => navigate(-1)}
           aria-label={t('library.back')}
-          className="flex min-h-11 min-w-11 items-center justify-center rounded-lg text-xl text-slate-500 dark:text-slate-400"
+          className="flex min-h-11 min-w-11 items-center justify-center rounded-lg text-muted"
         >
-          ←
+          <ArrowLeft size={22} strokeWidth={2} aria-hidden />
         </button>
-        <h1 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+        <h1 className="text-lg font-semibold text-text">
           {topic?.title ?? phraseSet?.title ?? t('library.notFoundTitle')}
         </h1>
       </div>
 
       {!topic && !phraseSet && (
         <Card>
-          <p className="text-sm text-slate-500 dark:text-slate-400">{t('library.notFoundBody')}</p>
+          <p className="text-sm text-muted">{t('library.notFoundBody')}</p>
         </Card>
       )}
 
@@ -84,21 +91,21 @@ export function LibraryDetailScreen() {
           </Card>
 
           <section>
-            <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted">
               {t('library.keyItems')}
             </h2>
             <Card className="!p-0">
-              <div className="grid grid-cols-3 gap-x-2 border-b border-slate-100 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:border-slate-800 dark:text-slate-400">
+              <div className="grid grid-cols-3 gap-x-2 border-b border-line px-4 py-2 text-xs font-semibold uppercase tracking-wide text-muted">
                 <span>{t('library.target')}</span>
                 <span>{t('library.support')}</span>
                 <span>{t('library.note')}</span>
               </div>
-              <div className="divide-y divide-slate-100 dark:divide-slate-800">
+              <div className="divide-y divide-line">
                 {topic.keyItems.map((item, i) => (
                   <div key={i} className="grid grid-cols-3 gap-x-2 px-4 py-2 text-sm">
-                    <span className="font-medium text-slate-900 dark:text-slate-50">{item.target}</span>
-                    <span className="text-slate-600 dark:text-slate-300">{item.support}</span>
-                    <span className="text-xs text-slate-400 dark:text-slate-500">{item.note ?? '—'}</span>
+                    <span className="font-medium text-text">{item.target}</span>
+                    <span className="text-muted">{item.support}</span>
+                    <span className="text-xs text-muted">{item.note ?? '—'}</span>
                   </div>
                 ))}
               </div>
@@ -106,7 +113,7 @@ export function LibraryDetailScreen() {
           </section>
 
           <section className="flex flex-col gap-3">
-            <h2 className="px-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            <h2 className="px-1 text-xs font-semibold uppercase tracking-wide text-muted">
               {t('library.exercisesHeading')} ({topic.exercises.length})
             </h2>
             {topic.exercises.map((exercise) => (
@@ -119,24 +126,26 @@ export function LibraryDetailScreen() {
       {phraseSet && (
         <>
           <section>
-            <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted">
               {t('library.phrasesHeading')}
             </h2>
             <Card className="!p-0">
-              <div className="grid grid-cols-2 gap-x-2 border-b border-slate-100 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:border-slate-800 dark:text-slate-400">
+              <div className="grid grid-cols-2 gap-x-2 border-b border-line px-4 py-2 text-xs font-semibold uppercase tracking-wide text-muted">
                 <span>{t('library.target')}</span>
                 <span>{t('library.support')}</span>
               </div>
-              <div className="divide-y divide-slate-100 dark:divide-slate-800">
+              <div className="divide-y divide-line">
                 {phraseSet.phrases.map((phrase, i) => (
                   <div key={i} className="px-4 py-2">
                     <div className="grid grid-cols-2 gap-x-2 text-sm">
-                      <span className="font-medium text-slate-900 dark:text-slate-50">{phrase.target}</span>
-                      <span className="text-slate-600 dark:text-slate-300">{phrase.support}</span>
+                      <span className="font-medium text-text">{phrase.target}</span>
+                      <span className="text-muted">{phrase.support}</span>
                     </div>
                     {(phrase.register || phrase.situation) && (
-                      <p className="mt-0.5 text-xs text-slate-400 dark:text-slate-500">
-                        {phrase.register ? t(`library.registerValue.${phrase.register}` as TranslationKey) : null}
+                      <p className="mt-0.5 text-xs text-muted">
+                        {phrase.register
+                          ? t(`library.registerValue.${phrase.register}` as TranslationKey)
+                          : null}
                         {phrase.register && phrase.situation ? ' · ' : null}
                         {phrase.situation ?? null}
                       </p>
@@ -148,7 +157,7 @@ export function LibraryDetailScreen() {
           </section>
 
           <section className="flex flex-col gap-3">
-            <h2 className="px-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            <h2 className="px-1 text-xs font-semibold uppercase tracking-wide text-muted">
               {t('library.exercisesHeading')} ({phraseSet.exercises.length})
             </h2>
             {phraseSet.exercises.map((exercise) => (

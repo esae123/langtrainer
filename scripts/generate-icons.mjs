@@ -10,9 +10,9 @@ const iconsDir = path.join(__dirname, '..', 'public', 'icons');
 const svgPath = path.join(iconsDir, 'icon.svg');
 const svg = readFileSync(svgPath);
 
-// Solid fallback matching the SVG's gradient, used as the maskable icon's
+// Solid fallback matching the SVG's paper gradient, used as the maskable icon's
 // full-bleed background (must not be transparent).
-const MASKABLE_BACKGROUND = '#6366f1';
+const MASKABLE_BACKGROUND = '#f4f1ea';
 // Maskable icons get cropped to arbitrary shapes (circle, squircle, ...) by the
 // OS, so content must stay inside a centered ~80% "safe zone". We render the
 // artwork smaller and pad it onto a full-size canvas, rather than reusing the

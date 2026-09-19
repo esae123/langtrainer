@@ -74,14 +74,13 @@ function SessionRun({
   const [stopOpen, setStopOpen] = useState(false);
   const { state } = runner;
 
-  const shell =
-    'mx-auto flex min-h-screen w-full max-w-[480px] flex-col bg-slate-50 dark:bg-slate-950';
+  const shell = 'mx-auto flex min-h-screen w-full max-w-[480px] flex-col bg-paper';
 
   if (!state) {
     return (
       <div className={shell}>
         <div className="flex flex-1 items-center justify-center px-4">
-          <p className="text-sm text-slate-500 dark:text-slate-400">{t('session.loading')}</p>
+          <p className="text-sm text-muted">{t('session.loading')}</p>
         </div>
       </div>
     );
@@ -92,17 +91,13 @@ function SessionRun({
       <div className={shell}>
         <div className="flex flex-1 flex-col items-center justify-center gap-4 px-4 text-center">
           <Card>
-            <h1 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
-              {t('session.emptyTitle')}
-            </h1>
-            <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
-              {t('session.emptyBody')}
-            </p>
+            <h1 className="text-lg font-semibold text-text">{t('session.emptyTitle')}</h1>
+            <p className="mt-2 text-sm text-muted">{t('session.emptyBody')}</p>
           </Card>
           <button
             type="button"
             onClick={() => navigate('/')}
-            className="min-h-12 rounded-2xl bg-accent-600 px-6 text-base font-semibold text-white"
+            className="min-h-12 rounded-2xl bg-accent px-6 text-base font-semibold text-accent-ink"
           >
             {t('session.back')}
           </button>

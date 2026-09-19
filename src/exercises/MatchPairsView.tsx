@@ -18,7 +18,11 @@ interface Link {
  * answer is only reported once every item is paired, so Check stays disabled until then
  * and the whole set is graded in one go.
  */
-export function MatchPairsView({ exercise, seed, onChange }: ExerciseViewProps<MatchPairsExercise>) {
+export function MatchPairsView({
+  exercise,
+  seed,
+  onChange,
+}: ExerciseViewProps<MatchPairsExercise>) {
   const t = useT();
   const rng = useMemo(() => mulberry32(seed), [seed]);
   const targets = useMemo(
@@ -101,9 +105,7 @@ export function MatchPairsView({ exercise, seed, onChange }: ExerciseViewProps<M
               <TileButton
                 key={target}
                 label={target}
-                variant={
-                  linked !== -1 ? 'placed' : selectedTarget === target ? 'selected' : 'bank'
-                }
+                variant={linked !== -1 ? 'placed' : selectedTarget === target ? 'selected' : 'bank'}
                 ariaLabel={
                   linked !== -1
                     ? t('session.matchUnlink', { item: target, number: linked + 1 })

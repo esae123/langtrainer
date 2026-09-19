@@ -1,4 +1,5 @@
 import { useCallback, useState } from 'react';
+import { Check, X } from 'lucide-react';
 import type { ExerciseResponse, SelfGrade } from '../engine/check';
 import type { PlannedItem } from '../engine/plan';
 import { hintExpectedFor } from '../engine/hint';
@@ -56,16 +57,13 @@ export function ExercisePanel({
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/95 px-4 pb-2 pt-[calc(var(--spacing)*3+env(safe-area-inset-top))] backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
+      <header className="sticky top-0 z-10 border-b border-line bg-sheet/95 px-4 pb-2 pt-[calc(var(--spacing)*3+env(safe-area-inset-top))] backdrop-blur">
         <div className="flex items-center gap-3">
           <div className="min-w-0 flex-1">
-            <p className="truncate text-xs font-semibold uppercase tracking-wide text-accent-600 dark:text-accent-300">
+            <p className="truncate text-xs font-semibold uppercase tracking-wide text-accent">
               {blockLabel}
             </p>
-            <p
-              aria-label={progressLabel}
-              className="text-sm font-medium text-slate-500 dark:text-slate-400"
-            >
+            <p aria-label={progressLabel} className="text-sm font-medium text-muted">
               {progressText}
             </p>
           </div>
@@ -73,18 +71,15 @@ export function ExercisePanel({
             type="button"
             aria-label={t('session.stop')}
             onClick={onStop}
-            className="-mr-2 flex min-h-11 min-w-11 items-center justify-center rounded-full text-2xl leading-none text-slate-400 dark:text-slate-500"
+            className="-mr-2 flex min-h-11 min-w-11 items-center justify-center rounded-full text-muted"
           >
-            ×
+            <X size={24} strokeWidth={2} aria-hidden />
           </button>
         </div>
         {!open && (
-          <div
-            aria-hidden
-            className="mt-2 h-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"
-          >
+          <div aria-hidden className="mt-2 h-1 overflow-hidden rounded-full bg-line">
             <div
-              className="h-full rounded-full bg-accent-600 transition-[width] duration-300"
+              className="h-full rounded-full bg-accent transition-[width] duration-300"
               style={{ width: `${Math.round((index / Math.max(total, 1)) * 100)}%` }}
             />
           </div>
@@ -93,13 +88,11 @@ export function ExercisePanel({
 
       <div className="flex-1 overflow-y-auto px-4 pb-6 pt-4">
         {banner && (
-          <p className="mb-3 rounded-xl bg-accent-50 px-3 py-2 text-xs font-semibold text-accent-700 dark:bg-accent-700/20 dark:text-accent-200">
+          <p className="mb-3 rounded-xl bg-accent-soft px-3 py-2 text-xs font-semibold text-accent">
             {banner}
           </p>
         )}
-        <p className="mb-2 text-[15px] font-medium text-slate-600 dark:text-slate-300">
-          {item.exercise.prompt}
-        </p>
+        <p className="mb-2 text-[15px] font-medium text-muted">{item.exercise.prompt}</p>
         <TypingHint expected={hintExpectedFor(item.exercise, item.mode)} className="mb-4" />
         <ExerciseArea
           key={item.exercise.id}
@@ -111,13 +104,14 @@ export function ExercisePanel({
         />
       </div>
 
-      <div className="safe-bottom sticky bottom-0 border-t border-slate-200 bg-white/95 px-4 py-3 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
+      <div className="safe-bottom sticky bottom-0 border-t border-line bg-sheet/95 px-4 py-3 backdrop-blur">
         <button
           type="button"
           disabled={!response}
           onClick={submit}
-          className="min-h-12 w-full rounded-2xl bg-accent-600 text-base font-semibold text-white shadow-sm transition-opacity active:opacity-90 disabled:bg-slate-200 disabled:text-slate-400 dark:disabled:bg-slate-800 dark:disabled:text-slate-600"
+          className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-accent text-base font-semibold text-accent-ink shadow-sm transition-opacity active:opacity-90 disabled:bg-line disabled:text-muted"
         >
+          <Check size={20} strokeWidth={2} aria-hidden />
           {t('session.check')}
         </button>
       </div>

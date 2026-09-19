@@ -161,5 +161,11 @@ route ultimately loads the same `index.html`.
 - Mobile-first, single column, max width 480px, centered on larger screens.
 - Bottom tab bar (Learn / Progress / Settings), rounded cards, one accent
   color, ≥44px touch targets, safe-area insets for notches/home indicators.
+- Warm "paper" palette: every colour comes from a CSS variable in
+  `src/index.css` (`--paper`, `--sheet`, `--text`, `--muted`, `--line`,
+  `--accent`, `--ok`, `--bad`, `--highlight`), exposed to Tailwind as
+  `bg-paper`, `text-muted`, `border-line`, … . Dark mode swaps the variables on
+  `.dark`, so components carry no `dark:` colour variants. Icons are Lucide
+  outlines (stroke 2, 18–24px) coloured with `currentColor`.
 - Theme follows the system by default; can be overridden to light/dark in
   Settings → Appearance.

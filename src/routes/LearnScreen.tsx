@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Download, Play } from 'lucide-react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router';
 import { Card } from '../components/Card';
@@ -81,25 +82,22 @@ export function LearnScreen() {
   return (
     <div className="flex flex-col gap-5">
       {needsBackup && (
-        <Card className="border-accent-200 bg-accent-50 dark:border-accent-700/50 dark:bg-accent-700/10">
-          <p className="font-medium text-accent-800 dark:text-accent-200">
-            {t('backup.reminderTitle')}
-          </p>
-          <p className="mt-1 text-sm text-accent-700/80 dark:text-accent-200/70">
-            {t('backup.reminderBody')}
-          </p>
+        <Card className="border-accent bg-accent-soft">
+          <p className="font-medium text-accent">{t('backup.reminderTitle')}</p>
+          <p className="mt-1 text-sm text-muted">{t('backup.reminderBody')}</p>
           <div className="mt-3 flex gap-3">
             <button
               type="button"
               onClick={() => void runExport()}
-              className="min-h-9 rounded-lg bg-accent-600 px-3 text-sm font-semibold text-white"
+              className="flex min-h-9 items-center gap-2 rounded-lg bg-accent px-3 text-sm font-semibold text-accent-ink"
             >
+              <Download size={18} strokeWidth={2} aria-hidden />
               {t('backup.backupNow')}
             </button>
             <button
               type="button"
               onClick={dismissBannerForToday}
-              className="min-h-9 rounded-lg px-3 text-sm font-medium text-accent-700 dark:text-accent-200"
+              className="min-h-9 rounded-lg px-3 text-sm font-medium text-accent"
             >
               {t('backup.dismiss')}
             </button>
@@ -108,24 +106,23 @@ export function LearnScreen() {
       )}
 
       <div>
-        <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">
-          {t('learn.greeting')}
-        </h1>
-        <p className="text-slate-500 dark:text-slate-400">{t('learn.subtitle')}</p>
+        <h1 className="text-2xl font-semibold text-text">{t('learn.greeting')}</h1>
+        <p className="text-muted">{t('learn.subtitle')}</p>
       </div>
 
       {activeSession && (
-        <Card className="border-accent-300 dark:border-accent-700/60">
-          <p className="font-medium text-slate-900 dark:text-slate-50">{t('learn.resumeTitle')}</p>
-          <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+        <Card className="border-accent">
+          <p className="font-medium text-text">{t('learn.resumeTitle')}</p>
+          <p className="mt-1 text-sm text-muted">
             {t('learn.resumeBody', { done: activeSession.state.responses.length })}
           </p>
           <div className="mt-3 flex gap-3">
             <button
               type="button"
               onClick={() => navigate('/session?resume=1')}
-              className="min-h-11 flex-1 rounded-xl bg-accent-600 text-sm font-semibold text-white"
+              className="flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-accent text-sm font-semibold text-accent-ink"
             >
+              <Play size={18} strokeWidth={2} aria-hidden />
               {t('learn.resume')}
             </button>
             <button
@@ -133,7 +130,7 @@ export function LearnScreen() {
               onClick={() => {
                 void clearActiveSession().then(() => showToast(t('learn.discarded')));
               }}
-              className="min-h-11 rounded-xl border border-slate-300 px-4 text-sm font-medium text-slate-700 dark:border-slate-700 dark:text-slate-200"
+              className="min-h-11 rounded-xl border border-line px-4 text-sm font-medium text-text"
             >
               {t('learn.discard')}
             </button>
@@ -142,13 +139,13 @@ export function LearnScreen() {
       )}
 
       <Card>
-        <p className="text-xs font-semibold uppercase tracking-wide text-accent-600 dark:text-accent-300">
+        <p className="text-xs font-semibold uppercase tracking-wide text-accent">
           {program?.level ?? '—'}
         </p>
-        <h2 className="mt-1 text-lg font-semibold text-slate-900 dark:text-slate-50">
+        <h2 className="mt-1 text-lg font-semibold text-text">
           {program?.title ?? settings.activeProgramId}
         </h2>
-        <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+        <p className="mt-1 text-sm text-muted">
           {t('learn.programSummary', {
             modules: modulesCount,
             topics: topicsCount,
@@ -158,34 +155,27 @@ export function LearnScreen() {
       </Card>
 
       <Card>
-        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+        <p className="text-xs font-semibold uppercase tracking-wide text-muted">
           {t('learn.currentTopic')}
         </p>
         {currentTopic ? (
           <>
-            <h2 className="mt-1 text-lg font-semibold text-slate-900 dark:text-slate-50">
-              {currentTopic.title}
-            </h2>
-            {currentModule && (
-              <p className="text-sm text-slate-500 dark:text-slate-400">{currentModule.title}</p>
-            )}
+            <h2 className="mt-1 text-lg font-semibold text-text">{currentTopic.title}</h2>
+            {currentModule && <p className="text-sm text-muted">{currentModule.title}</p>}
             <div className="mt-3 flex items-center gap-3">
-              <div
-                aria-hidden
-                className="h-1.5 flex-1 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-800"
-              >
+              <div aria-hidden className="h-1.5 flex-1 overflow-hidden rounded-full bg-line">
                 <div
-                  className="h-full rounded-full bg-accent-600"
+                  className="h-full rounded-full bg-accent"
                   style={{
                     width: `${Math.min(100, Math.round((seenCount / COMPLETION_THRESHOLD) * 100))}%`,
                   }}
                 />
               </div>
-              <span className="text-sm font-medium tabular-nums text-slate-600 dark:text-slate-300">
+              <span className="text-sm font-medium tabular-nums text-muted">
                 {seenCount}/{COMPLETION_THRESHOLD}
               </span>
             </div>
-            <p className="mt-1 text-xs text-slate-400 dark:text-slate-500">
+            <p className="mt-1 text-xs text-muted">
               {t('learn.currentTopicMeta', {
                 seen: seenCount,
                 threshold: COMPLETION_THRESHOLD,
@@ -194,15 +184,11 @@ export function LearnScreen() {
           </>
         ) : (
           <>
-            <h2 className="mt-1 text-lg font-semibold text-slate-900 dark:text-slate-50">
-              {t('learn.currentTopicNone')}
-            </h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400">
-              {t('learn.currentTopicNoneBody')}
-            </p>
+            <h2 className="mt-1 text-lg font-semibold text-text">{t('learn.currentTopicNone')}</h2>
+            <p className="text-sm text-muted">{t('learn.currentTopicNoneBody')}</p>
           </>
         )}
-        <p className="mt-3 border-t border-slate-100 pt-3 text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
+        <p className="mt-3 border-t border-line pt-3 text-sm text-muted">
           {nextReviewAt === undefined
             ? t('learn.nextReviewNone')
             : nextReviewAt <= Date.now()
@@ -212,9 +198,7 @@ export function LearnScreen() {
       </Card>
 
       <div>
-        <p className="mb-2 text-sm font-medium text-slate-600 dark:text-slate-300">
-          {t('learn.sessionLength')}
-        </p>
+        <p className="mb-2 text-sm font-medium text-muted">{t('learn.sessionLength')}</p>
         <div className="flex flex-wrap gap-2">
           {SESSION_LENGTH_OPTIONS.map((length) => (
             <button
@@ -224,8 +208,8 @@ export function LearnScreen() {
               aria-pressed={settings.sessionLength === length}
               className={`min-h-11 min-w-11 rounded-full px-4 text-sm font-semibold ${
                 settings.sessionLength === length
-                  ? 'bg-accent-600 text-white'
-                  : 'border border-slate-200 bg-white text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300'
+                  ? 'bg-accent text-accent-ink'
+                  : 'border border-line bg-sheet text-muted'
               }`}
             >
               {chipLabel(length)}
@@ -237,8 +221,9 @@ export function LearnScreen() {
       <button
         type="button"
         onClick={() => navigate('/session')}
-        className="min-h-12 rounded-2xl bg-accent-600 text-base font-semibold text-white shadow-sm active:opacity-90"
+        className="flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-accent text-base font-semibold text-accent-ink shadow-sm active:opacity-90"
       >
+        <Play size={20} strokeWidth={2} aria-hidden />
         {t('learn.startSession')}
       </button>
     </div>

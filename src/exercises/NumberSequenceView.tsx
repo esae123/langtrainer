@@ -29,8 +29,8 @@ export function NumberSequenceView({
             key={i}
             className={`flex h-12 min-w-12 items-center justify-center rounded-xl border px-3 text-lg font-semibold ${
               value === null
-                ? 'border-accent-400 bg-accent-50 text-accent-700 dark:border-accent-600 dark:bg-accent-700/20 dark:text-accent-200'
-                : 'border-slate-200 bg-white text-slate-800 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100'
+                ? 'border-accent bg-accent-soft text-text'
+                : 'border-line bg-sheet text-text'
             }`}
           >
             {value === null ? '?' : value}

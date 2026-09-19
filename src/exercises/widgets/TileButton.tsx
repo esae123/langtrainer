@@ -3,10 +3,10 @@ import { hapticTap } from '../../lib/haptics';
 export type TileVariant = 'bank' | 'placed' | 'selected';
 
 const VARIANTS: Record<TileVariant, string> = {
-  bank: 'border-slate-200 bg-white text-slate-800 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100',
-  placed:
-    'border-accent-300 bg-accent-50 text-accent-800 dark:border-accent-700/60 dark:bg-accent-700/20 dark:text-accent-100',
-  selected: 'border-accent-600 bg-accent-600 text-white dark:border-accent-500 dark:bg-accent-600',
+  bank: 'border-line bg-sheet text-text',
+  placed: 'border-line bg-accent-soft text-text',
+  // Selected: accent border over a faint accent wash (docs/stage-3b-spec.md §6).
+  selected: 'border-accent bg-accent-soft text-text ring-1 ring-accent',
 };
 
 interface TileButtonProps {
@@ -53,7 +53,7 @@ export function TileButton({
       {badge !== undefined && (
         <span
           aria-hidden
-          className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent-600 text-[11px] font-bold tabular-nums text-white"
+          className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-[11px] font-bold tabular-nums text-accent-ink"
         >
           {badge}
         </span>

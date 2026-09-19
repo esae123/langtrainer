@@ -23,8 +23,9 @@ export default defineConfig({
         description: 'Daily language-learning sessions, offline-first.',
         start_url: '.',
         display: 'standalone',
-        background_color: '#0b1120',
-        theme_color: '#6366f1',
+        // Warm paper background with the terracotta accent (docs/stage-3b-spec.md §6).
+        background_color: '#f4f1ea',
+        theme_color: '#d9552b',
         icons: [
           { src: 'icons/icon.svg', sizes: 'any', type: 'image/svg+xml' },
           { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },

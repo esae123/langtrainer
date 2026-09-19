@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#6366f1" />
+    <meta name="theme-color" content="#d9552b" />
     <script>
       // Apply the cached theme before first paint to avoid a flash of the wrong
       // theme; src/theme/useThemeEffect.ts keeps this key in sync going forward.
+      // The colours must match the warm palette in src/index.css.
       (function () {
         try {
           var theme = localStorage.getItem('langtrainer:theme') || 'system';
@@ -14,12 +15,18 @@
             theme === 'dark' ||
             (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
           if (dark) document.documentElement.classList.add('dark');
+          document.documentElement.style.backgroundColor = dark ? '#1b1917' : '#f4f1ea';
+          var meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', dark ? '#1b1917' : '#d9552b');
         } catch (_e) {
           /* ignore (e.g. storage disabled) */
         }
       })();
     </script>
-    <meta name="description" content="LangTrainer — daily language-learning sessions, offline-first." />
+    <meta
+      name="description"
+      content="LangTrainer — daily language-learning sessions, offline-first."
+    />
     <link rel="icon" type="image/svg+xml" href="icons/icon.svg" />
     <link rel="apple-touch-icon" href="icons/icon-192.png" />
     <title>LangTrainer</title>

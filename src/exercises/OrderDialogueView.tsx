@@ -10,9 +10,7 @@ function SpeakerBadge({ speaker }: { speaker: 'A' | 'B' }) {
     <span
       aria-hidden
       className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
-        speaker === 'A'
-          ? 'bg-accent-100 text-accent-700 dark:bg-accent-700/30 dark:text-accent-200'
-          : 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-200'
+        speaker === 'A' ? 'bg-accent-soft text-accent' : 'bg-ok-bg text-ok'
       }`}
     >
       {speaker}
@@ -49,7 +47,7 @@ export function OrderDialogueView({
           const line = lineIndex === undefined ? undefined : exercise.lines[lineIndex];
           return (
             <li key={slot} className="flex items-stretch gap-2">
-              <span className="flex w-6 shrink-0 items-center justify-center text-xs font-semibold text-slate-400 dark:text-slate-500">
+              <span className="flex w-6 shrink-0 items-center justify-center text-xs font-semibold text-muted">
                 {slot + 1}
               </span>
               {line ? (
@@ -60,7 +58,7 @@ export function OrderDialogueView({
                     hapticTap();
                     setPlaced(placed.filter((_, i) => i !== slot));
                   }}
-                  className="flex min-h-11 flex-1 items-center gap-2 rounded-xl border border-accent-300 bg-accent-50 px-3 py-2 text-left text-[15px] text-accent-900 transition-transform active:scale-[0.99] dark:border-accent-700/60 dark:bg-accent-700/20 dark:text-accent-100"
+                  className="flex min-h-11 flex-1 items-center gap-2 rounded-xl border border-accent bg-accent-soft px-3 py-2 text-left text-[15px] text-text transition-transform active:scale-[0.99]"
                 >
                   <SpeakerBadge speaker={line.speaker} />
                   <span className="flex-1">{line.text}</span>
@@ -68,7 +66,7 @@ export function OrderDialogueView({
               ) : (
                 <span
                   aria-label={t('session.dialogueSlot', { index: slot + 1 })}
-                  className="min-h-11 flex-1 rounded-xl border border-dashed border-slate-300 dark:border-slate-700"
+                  className="min-h-11 flex-1 rounded-xl border border-dashed border-line"
                 />
               )}
             </li>
@@ -91,7 +89,7 @@ export function OrderDialogueView({
                 hapticTap();
                 setPlaced([...placed, lineIndex]);
               }}
-              className={`flex min-h-11 items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2 text-left text-[15px] text-slate-800 shadow-sm transition-transform active:scale-[0.99] dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 ${
+              className={`flex min-h-11 items-center gap-2 rounded-xl border border-line bg-sheet px-3 py-2 text-left text-[15px] text-text shadow-sm transition-transform active:scale-[0.99] ${
                 used ? 'pointer-events-none invisible' : ''
               }`}
             >

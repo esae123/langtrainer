@@ -44,13 +44,13 @@ export function AboutMeView({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="max-w-[90%] self-start rounded-2xl rounded-bl-sm bg-accent-50 px-4 py-3 text-[17px] text-accent-900 dark:bg-accent-700/20 dark:text-accent-100">
+      <div className="max-w-[90%] self-start rounded-2xl rounded-bl-sm bg-accent-soft px-4 py-3 text-[17px] text-text">
         {exercise.question}
       </div>
 
       {mode === 'tiles' ? (
         <>
-          <p className="text-xs text-slate-500 dark:text-slate-400">{t('session.aboutMeHint')}</p>
+          <p className="text-xs text-muted">{t('session.aboutMeHint')}</p>
           <TileBank tiles={tiles} placedIds={placedIds} onChange={setPlacedIds} />
         </>
       ) : (

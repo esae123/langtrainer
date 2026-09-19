@@ -210,9 +210,7 @@ describe('/session happy path', () => {
     fireEvent.click(await screen.findByRole('button', { name: 'Yes' }));
 
     expect(await screen.findByText(/session complete/i)).toBeInTheDocument();
-    await waitFor(async () =>
-      expect((await db.topicProgress.get('t1'))?.history).toHaveLength(1)
-    );
+    await waitFor(async () => expect((await db.topicProgress.get('t1'))?.history).toHaveLength(1));
     const before = await db.topicProgress.get('t1');
     expect(before?.wrongExerciseIds).toEqual(['t1-e1']);
 

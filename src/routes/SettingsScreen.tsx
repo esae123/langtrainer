@@ -1,4 +1,18 @@
 import { useEffect, useId, useRef, useState, type ChangeEvent } from 'react';
+import {
+  ChevronRight,
+  Download,
+  Info,
+  Keyboard,
+  Languages,
+  Library,
+  Palette,
+  Sparkles,
+  Timer,
+  Trash2,
+  TriangleAlert,
+  Upload,
+} from 'lucide-react';
 import { Link } from 'react-router';
 import pkg from '../../package.json';
 import { importBackup } from '../backup/backup';
@@ -130,23 +144,21 @@ export function SettingsScreen() {
 
   return (
     <div className="flex flex-col gap-6">
-      <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">
-        {t('nav.settings')}
-      </h1>
+      <h1 className="text-2xl font-semibold text-text">{t('nav.settings')}</h1>
 
-      <SettingsGroup title={t('settings.language')}>
+      <SettingsGroup
+        title={t('settings.language')}
+        icon={<Languages size={14} strokeWidth={2} aria-hidden />}
+      >
         <div className="flex items-center justify-between gap-3 px-4 py-3">
-          <label
-            htmlFor={uiLanguageSelectId}
-            className="text-sm font-medium text-slate-700 dark:text-slate-200"
-          >
+          <label htmlFor={uiLanguageSelectId} className="text-sm font-medium text-text">
             {t('settings.uiLanguage')}
           </label>
           <select
             id={uiLanguageSelectId}
             value={settings.uiLanguage}
             onChange={(e) => void updateSettings({ uiLanguage: e.target.value as UiLanguage })}
-            className="min-h-11 rounded-lg border border-slate-200 bg-white px-3 text-sm dark:border-slate-700 dark:bg-slate-800"
+            className="min-h-11 rounded-lg border border-line bg-sheet px-3 text-sm text-text"
           >
             <option value="en">English</option>
             <option value="ru">Русский</option>
@@ -154,12 +166,13 @@ export function SettingsScreen() {
         </div>
       </SettingsGroup>
 
-      <SettingsGroup title={t('settings.appearance')}>
+      <SettingsGroup
+        title={t('settings.appearance')}
+        icon={<Palette size={14} strokeWidth={2} aria-hidden />}
+      >
         <div className="flex items-center justify-between gap-3 px-4 py-3">
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-            {t('settings.theme')}
-          </span>
-          <div className="flex overflow-hidden rounded-lg border border-slate-200 dark:border-slate-700">
+          <span className="text-sm font-medium text-text">{t('settings.theme')}</span>
+          <div className="flex overflow-hidden rounded-lg border border-line">
             {(['system', 'light', 'dark'] as Theme[]).map((theme) => (
               <button
                 key={theme}
@@ -167,9 +180,7 @@ export function SettingsScreen() {
                 aria-pressed={settings.theme === theme}
                 onClick={() => void updateSettings({ theme })}
                 className={`min-h-11 px-3 text-sm font-medium ${
-                  settings.theme === theme
-                    ? 'bg-accent-600 text-white'
-                    : 'bg-white text-slate-600 dark:bg-slate-900 dark:text-slate-300'
+                  settings.theme === theme ? 'bg-accent text-accent-ink' : 'bg-sheet text-muted'
                 }`}
               >
                 {t(`settings.theme.${theme}` as TranslationKey)}
@@ -179,11 +190,12 @@ export function SettingsScreen() {
         </div>
       </SettingsGroup>
 
-      <SettingsGroup title={t('settings.session')}>
+      <SettingsGroup
+        title={t('settings.session')}
+        icon={<Timer size={14} strokeWidth={2} aria-hidden />}
+      >
         <div className="flex flex-col gap-2 px-4 py-3">
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-            {t('settings.sessionLength')}
-          </span>
+          <span className="text-sm font-medium text-text">{t('settings.sessionLength')}</span>
           <div className="flex flex-wrap gap-2">
             {SESSION_LENGTH_OPTIONS.map((length: SessionLength) => (
               <button
@@ -193,8 +205,8 @@ export function SettingsScreen() {
                 onClick={() => void updateSettings({ sessionLength: length })}
                 className={`min-h-11 min-w-11 rounded-full px-4 text-sm font-semibold ${
                   settings.sessionLength === length
-                    ? 'bg-accent-600 text-white'
-                    : 'border border-slate-200 bg-white text-slate-600 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300'
+                    ? 'bg-accent text-accent-ink'
+                    : 'border border-line bg-sheet text-muted'
                 }`}
               >
                 {length === 'open' ? '∞' : length}
@@ -204,11 +216,12 @@ export function SettingsScreen() {
         </div>
       </SettingsGroup>
 
-      <SettingsGroup title={t('settings.input')}>
+      <SettingsGroup
+        title={t('settings.input')}
+        icon={<Keyboard size={14} strokeWidth={2} aria-hidden />}
+      >
         <div className="flex flex-col gap-2 px-4 py-3">
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-            {t('settings.inputPreset')}
-          </span>
+          <span className="text-sm font-medium text-text">{t('settings.inputPreset')}</span>
           <div className="flex flex-col gap-2">
             {INPUT_PRESET_ORDER.map((preset) => (
               <button
@@ -217,17 +230,13 @@ export function SettingsScreen() {
                 onClick={() => handlePresetChange(preset)}
                 aria-pressed={settings.inputPreset === preset}
                 className={`min-h-11 rounded-xl border px-3 py-2 text-left ${
-                  settings.inputPreset === preset
-                    ? 'border-accent-500 bg-accent-50 dark:border-accent-400 dark:bg-accent-700/20'
-                    : 'border-slate-200 dark:border-slate-800'
+                  settings.inputPreset === preset ? 'border-accent bg-accent-soft' : 'border-line'
                 }`}
               >
-                <span className="block text-sm font-semibold text-slate-800 dark:text-slate-100">
+                <span className="block text-sm font-semibold text-text">
                   {t(PRESET_LABEL_KEY[preset])}
                 </span>
-                <span className="block text-xs text-slate-500 dark:text-slate-400">
-                  {t(PRESET_DESC_KEY[preset])}
-                </span>
+                <span className="block text-xs text-muted">{t(PRESET_DESC_KEY[preset])}</span>
               </button>
             ))}
           </div>
@@ -236,7 +245,7 @@ export function SettingsScreen() {
             <div className="mt-2 flex flex-col gap-4">
               {SHARE_FIELDS.map(({ key, labelKey }) => (
                 <label key={key} className="flex flex-col gap-1">
-                  <span className="flex justify-between text-xs font-medium text-slate-600 dark:text-slate-300">
+                  <span className="flex justify-between text-xs font-medium text-muted">
                     <span>{t(labelKey)}</span>
                     <span>{settings.inputShares[key]}%</span>
                   </span>
@@ -246,7 +255,7 @@ export function SettingsScreen() {
                     max={100}
                     value={settings.inputShares[key]}
                     onChange={(e) => handleShareChange(key, Number(e.target.value))}
-                    className="h-11 accent-accent-600"
+                    className="h-11 accent-accent"
                   />
                 </label>
               ))}
@@ -254,9 +263,7 @@ export function SettingsScreen() {
           )}
         </div>
         <div className="flex items-center justify-between gap-3 px-4 py-3">
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-            {t('settings.typingHint')}
-          </span>
+          <span className="text-sm font-medium text-text">{t('settings.typingHint')}</span>
           <Toggle
             checked={settings.typingHint}
             onChange={(checked) => void updateSettings({ typingHint: checked })}
@@ -265,12 +272,12 @@ export function SettingsScreen() {
         </div>
       </SettingsGroup>
 
-      <SettingsGroup title={t('settings.ai')}>
+      <SettingsGroup
+        title={t('settings.ai')}
+        icon={<Sparkles size={14} strokeWidth={2} aria-hidden />}
+      >
         <div className="flex flex-col gap-2 px-4 py-3">
-          <label
-            htmlFor={apiKeyInputId}
-            className="text-sm font-medium text-slate-700 dark:text-slate-200"
-          >
+          <label htmlFor={apiKeyInputId} className="text-sm font-medium text-text">
             {t('settings.geminiApiKey')}
           </label>
           <div className="flex gap-2">
@@ -282,24 +289,20 @@ export function SettingsScreen() {
               onBlur={persistApiKeyIfDirty}
               placeholder="AIza…"
               autoComplete="off"
-              className="min-h-11 flex-1 rounded-lg border border-slate-200 bg-white px-3 text-sm dark:border-slate-700 dark:bg-slate-800"
+              className="min-h-11 flex-1 rounded-lg border border-line bg-sheet px-3 text-sm text-text"
             />
             <button
               type="button"
               onClick={() => setShowApiKey((v) => !v)}
-              className="min-h-11 rounded-lg border border-slate-200 px-3 text-sm font-medium text-slate-600 dark:border-slate-700 dark:text-slate-300"
+              className="min-h-11 rounded-lg border border-line px-3 text-sm font-medium text-muted"
             >
               {showApiKey ? t('settings.geminiApiKeyHide') : t('settings.geminiApiKeyShow')}
             </button>
           </div>
-          <p className="text-xs text-slate-500 dark:text-slate-400">
-            {t('settings.geminiApiKeyHelp')}
-          </p>
+          <p className="text-xs text-muted">{t('settings.geminiApiKeyHelp')}</p>
         </div>
         <div className="flex items-center justify-between gap-3 px-4 py-3">
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-            {t('settings.wifiOnly')}
-          </span>
+          <span className="text-sm font-medium text-text">{t('settings.wifiOnly')}</span>
           <Toggle
             checked={settings.generateOnlyOnWifi}
             onChange={(checked) => void updateSettings({ generateOnlyOnWifi: checked })}
@@ -308,28 +311,29 @@ export function SettingsScreen() {
         </div>
       </SettingsGroup>
 
-      <SettingsGroup title={t('settings.backup')}>
+      <SettingsGroup
+        title={t('settings.backup')}
+        icon={<Download size={14} strokeWidth={2} aria-hidden />}
+      >
         <div className="flex items-center justify-between gap-3 px-4 py-3">
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-            {t('settings.backupExport')}
-          </span>
+          <span className="text-sm font-medium text-text">{t('settings.backupExport')}</span>
           <button
             type="button"
             onClick={() => void runExport()}
-            className="min-h-11 rounded-lg bg-accent-600 px-4 text-sm font-semibold text-white"
+            className="flex min-h-11 items-center gap-2 rounded-lg bg-accent px-4 text-sm font-semibold text-accent-ink"
           >
+            <Download size={18} strokeWidth={2} aria-hidden />
             {t('settings.backupExport')}
           </button>
         </div>
         <div className="flex items-center justify-between gap-3 px-4 py-3">
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-            {t('settings.backupImport')}
-          </span>
+          <span className="text-sm font-medium text-text">{t('settings.backupImport')}</span>
           <button
             type="button"
             onClick={() => fileInputRef.current?.click()}
-            className="min-h-11 rounded-lg border border-slate-200 px-4 text-sm font-semibold text-slate-700 dark:border-slate-700 dark:text-slate-200"
+            className="flex min-h-11 items-center gap-2 rounded-lg border border-line px-4 text-sm font-semibold text-text"
           >
+            <Upload size={18} strokeWidth={2} aria-hidden />
             {t('settings.backupImport')}
           </button>
           <input
@@ -341,7 +345,7 @@ export function SettingsScreen() {
           />
         </div>
         <div className="px-4 py-3">
-          <p className="text-sm text-slate-500 dark:text-slate-400">
+          <p className="text-sm text-muted">
             {settings.lastBackupAt === null
               ? t('settings.backupLastNever')
               : t('settings.backupLast', {
@@ -351,49 +355,47 @@ export function SettingsScreen() {
         </div>
       </SettingsGroup>
 
-      <SettingsGroup title={t('settings.danger')}>
+      <SettingsGroup
+        title={t('settings.danger')}
+        icon={<TriangleAlert size={14} strokeWidth={2} aria-hidden />}
+      >
         <div className="flex items-center justify-between gap-3 px-4 py-3">
-          <span className="text-sm font-medium text-red-600 dark:text-red-400">
-            {t('settings.resetAll')}
-          </span>
+          <span className="text-sm font-medium text-bad">{t('settings.resetAll')}</span>
           <button
             type="button"
             onClick={() => setResetConfirmOpen(true)}
-            className="min-h-11 rounded-lg bg-red-600 px-4 text-sm font-semibold text-white"
+            className="flex min-h-11 items-center gap-2 rounded-lg bg-bad px-4 text-sm font-semibold text-paper"
           >
+            <Trash2 size={18} strokeWidth={2} aria-hidden />
             {t('settings.resetAll')}
           </button>
         </div>
       </SettingsGroup>
 
-      <SettingsGroup title={t('settings.library')}>
+      <SettingsGroup
+        title={t('settings.library')}
+        icon={<Library size={14} strokeWidth={2} aria-hidden />}
+      >
         <Link
           to="/library"
-          className="flex min-h-11 items-center justify-between gap-3 px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-200"
+          className="flex min-h-11 items-center justify-between gap-3 px-4 py-3 text-sm font-medium text-text"
         >
           <span>{t('library.title')}</span>
-          <span aria-hidden className="text-slate-400">
-            ›
-          </span>
+          <ChevronRight size={20} strokeWidth={2} aria-hidden className="text-muted" />
         </Link>
       </SettingsGroup>
 
-      <SettingsGroup title={t('settings.about')}>
+      <SettingsGroup
+        title={t('settings.about')}
+        icon={<Info size={14} strokeWidth={2} aria-hidden />}
+      >
         <div className="flex items-center justify-between px-4 py-3">
-          <span className="text-sm text-slate-500 dark:text-slate-400">
-            {t('settings.version')}
-          </span>
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-            {pkg.version}
-          </span>
+          <span className="text-sm text-muted">{t('settings.version')}</span>
+          <span className="text-sm font-medium text-text">{pkg.version}</span>
         </div>
         <div className="flex items-center justify-between px-4 py-3">
-          <span className="text-sm text-slate-500 dark:text-slate-400">
-            {t('settings.buildDate')}
-          </span>
-          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">
-            {__BUILD_DATE__}
-          </span>
+          <span className="text-sm text-muted">{t('settings.buildDate')}</span>
+          <span className="text-sm font-medium text-text">{__BUILD_DATE__}</span>
         </div>
       </SettingsGroup>
 

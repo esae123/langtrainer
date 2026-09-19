@@ -11,9 +11,7 @@ export function AccentBar({ onInsert }: { onInsert: (char: string) => void }) {
   const t = useT();
   return (
     <div className="flex flex-col gap-1">
-      <p className="text-[11px] font-medium text-slate-400 dark:text-slate-500">
-        {t('session.accentBarCaption')}
-      </p>
+      <p className="text-[11px] font-medium text-muted">{t('session.accentBarCaption')}</p>
       <div
         role="group"
         aria-label={t('session.accentBar')}
@@ -30,7 +28,7 @@ export function AccentBar({ onInsert }: { onInsert: (char: string) => void }) {
               hapticTap();
               onInsert(char);
             }}
-            className="min-h-10 rounded-lg border border-slate-200 bg-slate-100 text-[15px] font-medium text-slate-600 transition-transform active:scale-[0.97] dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
+            className="min-h-10 rounded-lg border border-line bg-sheet text-[15px] font-medium text-muted transition-transform active:scale-[0.97]"
           >
             {char}
           </button>

@@ -59,7 +59,7 @@ export function TypingInput({
     placeholder,
     'aria-label': label,
     onChange: (event: { target: { value: string } }) => onChange(event.target.value),
-    className: `w-full rounded-xl border border-slate-300 bg-white px-3 text-[17px] text-slate-900 shadow-sm outline-none placeholder:text-slate-400 focus:border-accent-500 focus:ring-2 focus:ring-accent-200 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-50 dark:focus:ring-accent-700/40 ${
+    className: `w-full rounded-xl border border-line bg-sheet px-3 text-[17px] text-text shadow-sm outline-none placeholder:text-muted focus:border-accent focus:ring-2 focus:ring-accent/30 ${
       compact ? 'min-h-11 py-2' : 'min-h-12 py-3'
     }`,
   };

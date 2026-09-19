@@ -1,3 +1,4 @@
+import { Check, Play, Repeat, RotateCcw } from 'lucide-react';
 import { Card } from '../components/Card';
 import type { Program } from '../content/types';
 import type { BlockKind } from '../engine/plan';
@@ -99,24 +100,22 @@ export function SummaryPanel({
       <div className="flex-1 overflow-y-auto px-4 pb-6 pt-[calc(var(--spacing)*6+env(safe-area-inset-top))]">
         <div className="flex flex-col items-center gap-1 text-center">
           {state.interrupted && (
-            <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-semibold text-amber-800 dark:bg-amber-500/20 dark:text-amber-200">
+            <span className="rounded-full bg-highlight/30 px-2.5 py-0.5 text-xs font-semibold text-text">
               {t('session.summaryInterrupted')}
             </span>
           )}
           <p
             aria-label={t('session.summaryScore', { correct, total })}
-            className="text-5xl font-semibold tabular-nums text-accent-600 dark:text-accent-300"
+            className="text-5xl font-semibold tabular-nums text-accent"
           >
             {percentage}%
           </p>
-          <h1 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+          <h1 className="text-lg font-semibold text-text">
             {practice ? t('session.practiceTitle') : t('session.summaryTitle')}
           </h1>
-          <p className="text-sm text-slate-500 dark:text-slate-400">
-            {t('session.summaryScore', { correct, total })}
-          </p>
+          <p className="text-sm text-muted">{t('session.summaryScore', { correct, total })}</p>
           {practice && state.plan.fromMistakes && (
-            <p className="text-sm font-medium text-accent-700 dark:text-accent-300">
+            <p className="text-sm font-medium text-accent">
               {t('session.practiceFixed', { fixed: correct, of: state.plan.items.length })}
             </p>
           )}
@@ -124,27 +123,23 @@ export function SummaryPanel({
 
         {total === 0 ? (
           <Card className="mt-6">
-            <p className="text-sm text-slate-500 dark:text-slate-400">
-              {t('session.summaryEmpty')}
-            </p>
+            <p className="text-sm text-muted">{t('session.summaryEmpty')}</p>
           </Card>
         ) : (
           <>
             <section className="mt-6">
-              <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+              <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted">
                 {t('session.summaryBlocks')}
               </h2>
               <Card className="!p-0">
-                <ul className="divide-y divide-slate-100 dark:divide-slate-800">
+                <ul className="divide-y divide-line">
                   {blocks.map((row) => (
                     <li
                       key={row.block}
                       className="flex items-center justify-between gap-3 px-4 py-2.5"
                     >
-                      <span className="text-sm text-slate-700 dark:text-slate-200">
-                        {t(BLOCK_LABELS[row.block])}
-                      </span>
-                      <span className="text-sm font-medium tabular-nums text-slate-900 dark:text-slate-50">
+                      <span className="text-sm text-text">{t(BLOCK_LABELS[row.block])}</span>
+                      <span className="text-sm font-medium tabular-nums text-text">
                         {row.correct}/{row.total}
                       </span>
                     </li>
@@ -155,53 +150,52 @@ export function SummaryPanel({
 
             {/* Practice changes no topic status, so there is nothing to report. */}
             {!practice && (
-            <section className="mt-5">
-              <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-                {t('session.summaryTopics')}
-              </h2>
-              <Card className="!p-0">
-                <ul className="divide-y divide-slate-100 dark:divide-slate-800">
-                  {topicRows.map(({ outcome, info }) => {
-                    const change = changeFor(outcome);
-                    return (
-                      <li key={outcome.topicId} className="px-4 py-2.5">
-                        <div className="flex items-baseline justify-between gap-3">
-                          <p className="text-sm font-medium text-slate-900 dark:text-slate-50">
-                            {info.title}
-                          </p>
-                          <span className="shrink-0 text-sm tabular-nums text-slate-500 dark:text-slate-400">
-                            {outcome.correct}/{outcome.total}
-                          </span>
-                        </div>
-                        {change && (
-                          <p className="mt-0.5 text-xs font-medium text-accent-700 dark:text-accent-300">
-                            →{' '}
-                            {t(
-                              change.key,
-                              change.days === undefined ? undefined : { days: change.days }
-                            )}
-                          </p>
-                        )}
-                      </li>
-                    );
-                  })}
-                </ul>
-              </Card>
-            </section>
+              <section className="mt-5">
+                <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted">
+                  {t('session.summaryTopics')}
+                </h2>
+                <Card className="!p-0">
+                  <ul className="divide-y divide-line">
+                    {topicRows.map(({ outcome, info }) => {
+                      const change = changeFor(outcome);
+                      return (
+                        <li key={outcome.topicId} className="px-4 py-2.5">
+                          <div className="flex items-baseline justify-between gap-3">
+                            <p className="text-sm font-medium text-text">{info.title}</p>
+                            <span className="shrink-0 text-sm tabular-nums text-muted">
+                              {outcome.correct}/{outcome.total}
+                            </span>
+                          </div>
+                          {change && (
+                            <p className="mt-0.5 text-xs font-medium text-accent">
+                              →{' '}
+                              {t(
+                                change.key,
+                                change.days === undefined ? undefined : { days: change.days }
+                              )}
+                            </p>
+                          )}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </Card>
+              </section>
             )}
           </>
         )}
       </div>
 
-      <div className="safe-bottom sticky bottom-0 flex flex-col gap-2 border-t border-slate-200 bg-white/95 px-4 py-3 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
+      <div className="safe-bottom sticky bottom-0 flex flex-col gap-2 border-t border-line bg-sheet/95 px-4 py-3 backdrop-blur">
         {(wrong > 0 || !practice) && (
           <div className="flex gap-3">
             {wrong > 0 && (
               <button
                 type="button"
                 onClick={onRetryMistakes}
-                className="min-h-11 flex-1 rounded-xl border border-accent-300 text-sm font-semibold text-accent-700 dark:border-accent-700/60 dark:text-accent-300"
+                className="flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-accent text-sm font-semibold text-accent"
               >
+                <RotateCcw size={18} strokeWidth={2} aria-hidden />
                 {practice ? t('session.retryAgain') : t('session.retryMistakes')}
               </button>
             )}
@@ -209,8 +203,9 @@ export function SummaryPanel({
               <button
                 type="button"
                 onClick={onRepeat}
-                className="min-h-11 flex-1 rounded-xl border border-slate-300 text-sm font-semibold text-slate-700 dark:border-slate-700 dark:text-slate-200"
+                className="flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border border-line text-sm font-semibold text-text"
               >
+                <Repeat size={18} strokeWidth={2} aria-hidden />
                 {t('session.repeatSession')}
               </button>
             )}
@@ -220,16 +215,18 @@ export function SummaryPanel({
           <button
             type="button"
             onClick={onDone}
-            className="min-h-12 flex-1 rounded-2xl border border-slate-300 text-base font-semibold text-slate-700 dark:border-slate-700 dark:text-slate-200"
+            className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-2xl border border-line text-base font-semibold text-text"
           >
+            <Check size={20} strokeWidth={2} aria-hidden />
             {t('session.done')}
           </button>
           {!practice && (
             <button
               type="button"
               onClick={onAnother}
-              className="min-h-12 flex-1 rounded-2xl bg-accent-600 text-base font-semibold text-white shadow-sm active:opacity-90"
+              className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-accent text-base font-semibold text-accent-ink shadow-sm active:opacity-90"
             >
+              <Play size={20} strokeWidth={2} aria-hidden />
               {t('session.another')}
             </button>
           )}

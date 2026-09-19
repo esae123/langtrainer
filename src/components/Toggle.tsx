@@ -17,11 +17,11 @@ export function Toggle({ checked, onChange, label }: ToggleProps) {
     >
       <span
         className={`relative inline-flex h-7 w-12 items-center rounded-full transition-colors ${
-          checked ? 'bg-accent-600' : 'bg-slate-300 dark:bg-slate-700'
+          checked ? 'bg-accent' : 'bg-line'
         }`}
       >
         <span
-          className={`inline-block h-5 w-5 rounded-full bg-white shadow transition-transform ${
+          className={`inline-block h-5 w-5 rounded-full bg-sheet shadow transition-transform ${
             checked ? 'translate-x-6' : 'translate-x-1'
           }`}
         />

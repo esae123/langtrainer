@@ -25,7 +25,7 @@ export function TileBank({ tiles, placedIds, onChange, slots }: TileBankProps) {
     <div className="flex flex-col gap-4">
       <div
         aria-label={t('session.answerLine')}
-        className="flex min-h-[4.25rem] flex-wrap content-start items-start gap-2 rounded-2xl border border-dashed border-slate-300 bg-white/60 p-2 dark:border-slate-700 dark:bg-slate-900/40"
+        className="flex min-h-[4.25rem] flex-wrap content-start items-start gap-2 rounded-2xl border border-dashed border-line bg-sheet/60 p-2"
       >
         {placed.map((tile) => (
           <TileButton
@@ -40,7 +40,7 @@ export function TileBank({ tiles, placedIds, onChange, slots }: TileBankProps) {
           <span
             key={`slot-${i}`}
             aria-hidden
-            className="min-h-11 w-12 rounded-xl border border-dashed border-slate-300 dark:border-slate-700"
+            className="min-h-11 w-12 rounded-xl border border-dashed border-line"
           />
         ))}
       </div>

@@ -105,7 +105,7 @@ export function FillGapsView({
               onSubmit();
             }
           }}
-          className="mx-1 inline-block min-h-11 max-w-full rounded-lg border border-slate-300 bg-white px-2 text-center align-middle text-[17px] text-slate-900 outline-none focus:border-accent-500 focus:ring-2 focus:ring-accent-200 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-50 dark:focus:ring-accent-700/40"
+          className="mx-1 inline-block min-h-11 max-w-full rounded-lg border border-line bg-sheet px-2 text-center align-middle text-[17px] text-text outline-none focus:border-accent focus:ring-2 focus:ring-accent/30"
         />
       );
     }
@@ -130,10 +130,10 @@ export function FillGapsView({
         }}
         className={`mx-1 inline-flex min-h-11 min-w-20 items-center justify-center rounded-lg border px-2 align-middle text-[17px] font-medium ${
           value
-            ? 'border-accent-300 bg-accent-50 text-accent-800 dark:border-accent-700/60 dark:bg-accent-700/20 dark:text-accent-100'
+            ? 'border-accent bg-accent-soft text-text'
             : isActiveGap
-              ? 'border-accent-500 bg-white text-slate-400 dark:bg-slate-900'
-              : 'border-dashed border-slate-400 bg-white text-slate-400 dark:border-slate-600 dark:bg-slate-900'
+              ? 'border-accent bg-sheet text-muted'
+              : 'border-dashed border-line bg-sheet text-muted'
         }`}
       >
         {value || GAP}
@@ -145,7 +145,7 @@ export function FillGapsView({
     <div className="flex flex-col gap-4">
       {/* The hint follows the active gap (docs/stage-3b-spec.md §3). */}
       {mode === 'typing' && <TypingHint expected={exercise.gaps[active]?.answer ?? null} />}
-      <p className="rounded-2xl bg-slate-100 px-4 py-3 text-[17px] leading-loose text-slate-900 dark:bg-slate-800/60 dark:text-slate-50">
+      <p className="rounded-2xl border border-line bg-sheet px-4 py-3 text-[17px] leading-loose text-text">
         {segments.map((segment, i) => (
           <span key={i}>
             {segment}
@@ -156,7 +156,7 @@ export function FillGapsView({
 
       {mode === 'tiles' && (
         <>
-          <p className="text-xs text-slate-500 dark:text-slate-400">{t('session.gapTilesHint')}</p>
+          <p className="text-xs text-muted">{t('session.gapTilesHint')}</p>
           <div className="flex flex-wrap gap-2" aria-label={t('session.tileBank')}>
             {tiles.map((tile) => (
               <TileButton
@@ -173,11 +173,7 @@ export function FillGapsView({
 
       {mode === 'letters' && (
         <>
-          {gapCount > 1 && (
-            <p className="text-xs text-slate-500 dark:text-slate-400">
-              {t('session.gapLettersHint')}
-            </p>
-          )}
+          {gapCount > 1 && <p className="text-xs text-muted">{t('session.gapLettersHint')}</p>}
           <LetterBoard
             key={active}
             answer={exercise.gaps[active].answer}

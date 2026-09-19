@@ -1,3 +1,4 @@
+import { ArrowLeft, ChevronRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router';
 import { Card } from '../components/Card';
 import { getProgram } from '../content/programs';
@@ -17,35 +18,35 @@ export function LibraryScreen() {
           type="button"
           onClick={() => navigate(-1)}
           aria-label={t('library.back')}
-          className="flex min-h-11 min-w-11 items-center justify-center rounded-lg text-xl text-slate-500 dark:text-slate-400"
+          className="flex min-h-11 min-w-11 items-center justify-center rounded-lg text-muted"
         >
-          ←
+          <ArrowLeft size={22} strokeWidth={2} aria-hidden />
         </button>
-        <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">{t('library.title')}</h1>
+        <h1 className="text-2xl font-semibold text-text">{t('library.title')}</h1>
       </div>
 
       {!program && (
         <Card>
-          <p className="text-sm text-slate-500 dark:text-slate-400">{t('library.notFoundBody')}</p>
+          <p className="text-sm text-muted">{t('library.notFoundBody')}</p>
         </Card>
       )}
 
       {program && (
         <>
           <section>
-            <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted">
               {t('library.modulesHeading')}
             </h2>
             <div className="flex flex-col gap-4">
               {program.modules.map((module) => (
                 <Card key={module.id} className="!p-0">
                   <div className="px-4 py-3">
-                    <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-50">{module.title}</h3>
-                    <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">
+                    <h3 className="text-sm font-semibold text-text">{module.title}</h3>
+                    <p className="mt-0.5 text-xs text-muted">
                       {t('library.moduleTopics', { count: module.topics.length })}
                     </p>
                   </div>
-                  <div className="divide-y divide-slate-100 dark:divide-slate-800">
+                  <div className="divide-y divide-line">
                     {module.topics.map((topic) => (
                       <Link
                         key={topic.id}
@@ -53,17 +54,18 @@ export function LibraryScreen() {
                         className="flex min-h-11 items-center justify-between gap-3 px-4 py-3"
                       >
                         <span className="flex flex-col">
-                          <span className="text-sm font-medium text-slate-800 dark:text-slate-100">
-                            {topic.title}
-                          </span>
-                          <span className="text-xs text-slate-500 dark:text-slate-400">
+                          <span className="text-sm font-medium text-text">{topic.title}</span>
+                          <span className="text-xs text-muted">
                             {t(`library.kind.${topic.kind}` as TranslationKey)} ·{' '}
                             {t('library.exercisesCount', { count: topic.exercises.length })}
                           </span>
                         </span>
-                        <span aria-hidden className="text-slate-400">
-                          ›
-                        </span>
+                        <ChevronRight
+                          size={20}
+                          strokeWidth={2}
+                          aria-hidden
+                          className="text-muted"
+                        />
                       </Link>
                     ))}
                   </div>
@@ -73,10 +75,10 @@ export function LibraryScreen() {
           </section>
 
           <section>
-            <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+            <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted">
               {t('library.phraseSetsHeading')}
             </h2>
-            <Card className="divide-y divide-slate-100 !p-0 dark:divide-slate-800">
+            <Card className="divide-y divide-line !p-0">
               {program.phraseSets.map((phraseSet) => (
                 <Link
                   key={phraseSet.id}
@@ -84,16 +86,12 @@ export function LibraryScreen() {
                   className="flex min-h-11 items-center justify-between gap-3 px-4 py-3"
                 >
                   <span className="flex flex-col">
-                    <span className="text-sm font-medium text-slate-800 dark:text-slate-100">
-                      {phraseSet.title}
-                    </span>
-                    <span className="text-xs text-slate-500 dark:text-slate-400">
+                    <span className="text-sm font-medium text-text">{phraseSet.title}</span>
+                    <span className="text-xs text-muted">
                       {t('library.exercisesCount', { count: phraseSet.exercises.length })}
                     </span>
                   </span>
-                  <span aria-hidden className="text-slate-400">
-                    ›
-                  </span>
+                  <ChevronRight size={20} strokeWidth={2} aria-hidden className="text-muted" />
                 </Link>
               ))}
             </Card>
