@@ -1,0 +1,15 @@
+{
+  "id": "m1",
+  "title": "Module 1 — Basics: meeting people and personal information",
+  "description": "Greet people, introduce yourself, and share basic personal information — name, nationality, age, profession and languages — using the core grammar (ser, estar, ter, -ar verbs, articles) an absolute beginner needs first.",
+  "topicOrder": [
+    "m1-greetings",
+    "m1-who-am-i",
+    "m1-pronouns-ser-estar-ter",
+    "m1-ar-verbs",
+    "m1-articles-de-em",
+    "m1-professions-languages",
+    "m1-numbers",
+    "m1-question-words"
+  ]
+}

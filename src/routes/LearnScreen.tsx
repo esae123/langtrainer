@@ -38,7 +38,12 @@ export function LearnScreen() {
   }
 
   const program = getProgram(settings.activeProgramId);
+  const modulesCount = program?.modules.length ?? 0;
   const topicsCount = program?.modules.reduce((sum, m) => sum + m.topics.length, 0) ?? 0;
+  const exercisesCount = program
+    ? program.modules.reduce((sum, m) => sum + m.topics.reduce((s, t) => s + t.exercises.length, 0), 0) +
+      program.phraseSets.reduce((sum, ps) => sum + ps.exercises.length, 0)
+    : 0;
 
   const needsBackup =
     !bannerDismissed &&
@@ -90,7 +95,7 @@ export function LearnScreen() {
           {program?.title ?? settings.activeProgramId}
         </h2>
         <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-          {t('learn.topicsCount', { count: topicsCount })}
+          {t('learn.programSummary', { modules: modulesCount, topics: topicsCount, exercises: exercisesCount })}
         </p>
       </Card>
 

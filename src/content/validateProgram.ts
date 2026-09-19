@@ -17,7 +17,10 @@ import type {
   Topic,
   TranslateWordExercise,
 } from './types';
-import { isRecord } from '../lib/isRecord';
+// Explicit ".ts" extension: scripts/content-check.ts and scripts/content-build.ts run this
+// module directly via `node` (native TypeScript stripping), which requires fully specified
+// ESM import paths for value imports (unlike Vite/tsc's "bundler" resolution).
+import { isRecord } from '../lib/isRecord.ts';
 
 class ValidationError extends Error {}
 
@@ -284,7 +287,11 @@ function validatePhraseSet(v: unknown, path: string): PhraseSet {
   };
 }
 
-/** Validates an arbitrary JSON value as a Program, throwing a descriptive Error if invalid. */
+/**
+ * Validates an arbitrary JSON value as a Program, throwing a descriptive Error if invalid.
+ * Only known fields are read, so unknown keys (e.g. the generated file's leading
+ * "$generated" marker) are silently ignored rather than rejected.
+ */
 export function validateProgram(json: unknown): Program {
   if (!isRecord(json)) fail('$', 'expected an object');
   return {

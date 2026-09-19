@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState, type ChangeEvent } from 'react';
+import { Link } from 'react-router';
 import pkg from '../../package.json';
 import { importBackup } from '../backup/backup';
 import { useExportBackup } from '../backup/useExportBackup';
@@ -350,6 +351,18 @@ export function SettingsScreen() {
             {t('settings.resetAll')}
           </button>
         </div>
+      </SettingsGroup>
+
+      <SettingsGroup title={t('settings.library')}>
+        <Link
+          to="/library"
+          className="flex min-h-11 items-center justify-between gap-3 px-4 py-3 text-sm font-medium text-slate-700 dark:text-slate-200"
+        >
+          <span>{t('library.title')}</span>
+          <span aria-hidden className="text-slate-400">
+            ›
+          </span>
+        </Link>
       </SettingsGroup>
 
       <SettingsGroup title={t('settings.about')}>

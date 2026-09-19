@@ -30,6 +30,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Content check
+        run: node scripts/content-check.ts --allow-missing
+
       - name: Test
         run: npm run test
 

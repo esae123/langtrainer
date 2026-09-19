@@ -1,0 +1,9 @@
+{
+  "id": "pt-PT-A1",
+  "title": "Português europeu A1",
+  "targetLanguage": "pt-PT",
+  "supportLanguage": "en",
+  "level": "A1",
+  "moduleOrder": ["m1"],
+  "phraseSetOrder": ["everyday-1"]
+}
