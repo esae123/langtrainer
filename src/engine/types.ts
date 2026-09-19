@@ -21,4 +21,10 @@ export interface TopicProgress {
   failedReviewsInARow: number;
   history: TopicHistoryEntry[];
   seenExerciseIds: string[];
+  /**
+   * Exercises whose last attempt was wrong; planning offers them again before the
+   * rest (docs/stage-3b-spec.md §5). Cleared as soon as one is answered correctly,
+   * in a practice session too.
+   */
+  wrongExerciseIds: string[];
 }

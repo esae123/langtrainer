@@ -7,6 +7,12 @@ import type { TopicProgress } from './types';
 
 export type BlockKind = 'new' | 'review' | 'phrases';
 
+/**
+ * Regular sessions drive progress and the SRS; practice sessions (retry mistakes /
+ * repeat session, docs/stage-3b-spec.md §4) are pure drill and change neither.
+ */
+export type SessionKind = 'regular' | 'practice';
+
 export interface PlannedItem {
   exercise: Exercise;
   mode: InputMode;
@@ -23,6 +29,9 @@ export interface SessionPlan {
   plannedLength: number;
   open: boolean;
   items: PlannedItem[];
+  kind: SessionKind;
+  /** Practice plans built from the wrong answers only, so the summary can say "Fixed". */
+  fromMistakes?: boolean;
 }
 
 export interface BlockCounts {
@@ -105,23 +114,33 @@ export function pickMode(allowed: InputMode[], shares: InputShares, rng: Rng): I
   )[0];
 }
 
-/** Unseen exercises first, then the rest; new-block order is difficulty ascending. */
+/**
+ * Selection order inside a topic (docs/stage-3b-spec.md §5): unseen exercises first,
+ * then the ones whose last regular attempt was wrong, then the rest. The new block is
+ * sorted by difficulty ascending inside each group, elsewhere each group is shuffled.
+ */
 function orderedPool(
   exercises: readonly Exercise[],
   seen: ReadonlySet<string>,
+  wrong: ReadonlySet<string>,
   used: ReadonlySet<string>,
   rng: Rng,
   sortByDifficulty: boolean
 ): Exercise[] {
   const available = exercises.filter((exercise) => !used.has(exercise.id));
   const unseen = available.filter((exercise) => !seen.has(exercise.id));
-  const rest = available.filter((exercise) => seen.has(exercise.id));
+  const wrongBefore = available.filter(
+    (exercise) => seen.has(exercise.id) && wrong.has(exercise.id)
+  );
+  const rest = available.filter(
+    (exercise) => seen.has(exercise.id) && !wrong.has(exercise.id)
+  );
   const arrange = (list: Exercise[]) =>
     sortByDifficulty
       ? [...list].sort((a, b) => a.difficulty - b.difficulty)
       : // No per-exercise timestamps are kept, so "least recently seen" is random.
         shuffle(list, rng);
-  return [...arrange(unseen), ...arrange(rest)];
+  return [...arrange(unseen), ...arrange(wrongBefore), ...arrange(rest)];
 }
 
 interface Candidate {
@@ -151,6 +170,11 @@ function seenSetFor(progress: TopicProgress[], topicId: string): Set<string> {
   return new Set(row?.seenExerciseIds ?? []);
 }
 
+function wrongSetFor(progress: TopicProgress[], topicId: string): Set<string> {
+  const row = progress.find((entry) => entry.topicId === topicId);
+  return new Set(row?.wrongExerciseIds ?? []);
+}
+
 interface BuildResult {
   items: PlannedItem[];
 }
@@ -169,6 +193,7 @@ function buildItems(
     orderedPool(
       byTopic.get(topicId) ?? [],
       seenSetFor(progress, topicId),
+      wrongSetFor(progress, topicId),
       used,
       rng,
       sortByDifficulty
@@ -221,22 +246,16 @@ function buildItems(
   const phraseCandidates: Candidate[] = [];
   const phrasePool: Candidate[] = [];
   for (const set of program.phraseSets) {
-    const seen = seenSetFor(progress, set.id);
-    const available = set.exercises.filter((exercise) => !used.has(exercise.id));
-    const unseen = shuffle(
-      available.filter((exercise) => !seen.has(exercise.id)),
-      rng
-    );
-    const rest = shuffle(
-      available.filter((exercise) => seen.has(exercise.id)),
-      rng
-    );
-    for (const exercise of [...unseen, ...rest]) phrasePool.push({ exercise, topicId: set.id });
+    for (const exercise of poolFor(set.id, false)) {
+      phrasePool.push({ exercise, topicId: set.id });
+    }
   }
-  // Unseen first across sets, keeping phraseSet order inside each group.
-  const seenAcrossSets = (candidate: Candidate) =>
-    seenSetFor(progress, candidate.topicId).has(candidate.exercise.id) ? 1 : 0;
-  phrasePool.sort((a, b) => seenAcrossSets(a) - seenAcrossSets(b));
+  // Unseen first across sets, then past mistakes, keeping phraseSet order inside a group.
+  const phraseRank = (candidate: Candidate) => {
+    if (!seenSetFor(progress, candidate.topicId).has(candidate.exercise.id)) return 0;
+    return wrongSetFor(progress, candidate.topicId).has(candidate.exercise.id) ? 1 : 2;
+  };
+  phrasePool.sort((a, b) => phraseRank(a) - phraseRank(b));
   for (const candidate of phrasePool.slice(0, counts.phrases)) {
     phraseCandidates.push(candidate);
     used.add(candidate.exercise.id);
@@ -302,6 +321,27 @@ export function planSession(input: PlanInput): SessionPlan {
     plannedLength: open ? 0 : items.length,
     open,
     items,
+    kind: 'regular',
+  };
+}
+
+/**
+ * A practice run over exercises the learner has just answered (docs/stage-3b-spec.md §4):
+ * same exercises, same input modes, no context screens, and no effect on topic progress
+ * or the SRS — the runner records the attempts with `practice: true` instead.
+ */
+export function planPractice(
+  items: readonly PlannedItem[],
+  options: { id: string; programId: string; fromMistakes?: boolean }
+): SessionPlan {
+  return {
+    id: options.id,
+    programId: options.programId,
+    plannedLength: items.length,
+    open: false,
+    kind: 'practice',
+    ...(options.fromMistakes ? { fromMistakes: true } : {}),
+    items: items.map(({ showContextBefore: _skip, ...item }) => ({ ...item })),
   };
 }
 

@@ -26,6 +26,8 @@ export interface SessionRow {
   completed: number;
   correct: number;
   interrupted: boolean;
+  /** Practice runs (retry mistakes / repeat session) never touch topic progress. */
+  kind?: 'regular' | 'practice';
 }
 
 export interface AttemptRow {
@@ -40,6 +42,8 @@ export interface AttemptRow {
   at: number;
   /** about_me exercises are graded by the learner in Stage 3 (no automatic check). */
   selfGraded?: boolean;
+  /** Answered in a practice session, so it is excluded from progress and SRS. */
+  practice?: boolean;
 }
 
 export interface CustomTopicRow {
@@ -96,6 +100,28 @@ export class LangTrainerDB extends Dexie {
           .toCollection()
           .modify((row) => {
             row.failedReviewsInARow ??= 0;
+          })
+      );
+
+    // Stage 3b added TopicProgressRow.wrongExerciseIds (plus the optional
+    // SessionRow.kind and AttemptRow.practice, which need no migration). Again no
+    // index changes, so only the backfill is interesting.
+    this.version(3)
+      .stores({
+        settings: 'key',
+        profile: 'id',
+        topicProgress: 'topicId, programId, nextReviewAt',
+        sessions: 'id, startedAt',
+        attempts: 'id, sessionId, topicId, exerciseId',
+        customTopics: 'id',
+        generatedExercises: 'id, topicId',
+      })
+      .upgrade((tx) =>
+        tx
+          .table<TopicProgressRow>('topicProgress')
+          .toCollection()
+          .modify((row) => {
+            row.wrongExerciseIds ??= [];
           })
       );
   }

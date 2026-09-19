@@ -195,6 +195,63 @@ describe('/session happy path', () => {
     second.unmount();
   });
 
+  it('retries the mistakes in a practice session without touching progress', async () => {
+    render(<App />);
+    await startSession();
+
+    // First exercise wrong, the other two right.
+    fireEvent.click(await screen.findByRole('radio', { name: 'trabalhas' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Check' }));
+    expect(await screen.findByText(/not quite/i)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Continue' }));
+    await answerCurrent('tiles', ['Eu', 'falo', 'inglês.']);
+    fireEvent.click(await screen.findByRole('button', { name: 'Add Moro' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Check' }));
+    fireEvent.click(await screen.findByRole('button', { name: 'Yes' }));
+
+    expect(await screen.findByText(/session complete/i)).toBeInTheDocument();
+    await waitFor(async () =>
+      expect((await db.topicProgress.get('t1'))?.history).toHaveLength(1)
+    );
+    const before = await db.topicProgress.get('t1');
+    expect(before?.wrongExerciseIds).toEqual(['t1-e1']);
+
+    // Retry mistakes -> a practice session with only the wrong exercise, no context.
+    fireEvent.click(screen.getByRole('button', { name: 'Retry mistakes' }));
+    expect(await screen.findByText('Practice')).toBeInTheDocument();
+    expect(screen.getByText('1/1')).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: /start exercises/i })).not.toBeInTheDocument();
+    await answerCurrent('option', ['trabalho']);
+
+    expect(await screen.findByText(/practice complete/i)).toBeInTheDocument();
+    expect(screen.getByText('Fixed: 1 of 1')).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Another session' })).not.toBeInTheDocument();
+
+    await waitFor(async () => expect(await db.sessions.count()).toBe(2));
+    const sessions = await db.sessions.toArray();
+    expect(sessions.map((row) => row.kind).sort()).toEqual(['practice', 'regular']);
+    const practiceSession = sessions.find((row) => row.kind === 'practice')!;
+    const practiceAttempts = await db.attempts
+      .where('sessionId')
+      .equals(practiceSession.id)
+      .toArray();
+    expect(practiceAttempts).toHaveLength(1);
+    expect(practiceAttempts[0]).toMatchObject({ exerciseId: 't1-e1', practice: true });
+
+    // Progress is untouched, except that the fixed mistake is no longer prioritised.
+    await waitFor(async () =>
+      expect((await db.topicProgress.get('t1'))?.wrongExerciseIds).toEqual([])
+    );
+    const after = await db.topicProgress.get('t1');
+    expect(after).toMatchObject({
+      status: before!.status,
+      reviewStage: before!.reviewStage,
+      seenExerciseIds: before!.seenExerciseIds,
+      history: before!.history,
+    });
+    expect(after?.nextReviewAt).toBe(before?.nextReviewAt);
+  });
+
   it('offers to discard an unfinished session', async () => {
     render(<App />);
     await startSession();

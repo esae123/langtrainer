@@ -18,6 +18,7 @@ async function seedFixtureData(geminiApiKey: string) {
     failedReviewsInARow: 0,
     history: [{ at: 1, correct: 3, total: 4 }],
     seenExerciseIds: ['e1'],
+    wrongExerciseIds: [],
   });
   await db.sessions.put({
     id: 's1',

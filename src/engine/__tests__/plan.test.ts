@@ -205,6 +205,31 @@ describe('exercise selection', () => {
     expect(phraseIds.every((id) => !seen.includes(id))).toBe(true);
   });
 
+  it('offers exercises answered wrong before the other seen ones', () => {
+    const program = makeStandardProgram();
+    const all = program.modules[0].topics[0].exercises.map((e) => e.id);
+    // Only two unseen exercises are left, so the plan has to reach into the seen pool.
+    const seen = all.slice(0, 38);
+    const wrong = [seen[20], seen[7]];
+    const p = plan({
+      sessionLength: 10,
+      seed: 4,
+      progress: [
+        makeProgress('t1', {
+          status: 'learning',
+          seenExerciseIds: seen,
+          wrongExerciseIds: wrong,
+        }),
+        // Nothing completed, so the review block also comes from t1 — and after the
+        // ten unseen exercises it has to reach into the seen pool.
+      ],
+    });
+    const ids = p.items.filter((i) => i.topicId === 't1').map((i) => i.exercise.id);
+    const seenPicked = ids.filter((id) => seen.includes(id));
+    // Whatever the seed, past mistakes come before the other already-seen exercises.
+    expect(seenPicked.slice(0, wrong.length).sort()).toEqual([...wrong].sort());
+  });
+
   it('never repeats an exercise inside one session', () => {
     for (const seed of [1, 2, 3, 4, 5]) {
       const p = plan({ sessionLength: 30, seed });

@@ -3,35 +3,74 @@ import { useNavigate, useSearchParams } from 'react-router';
 import { Card } from '../components/Card';
 import { ConfirmDialog } from '../components/ConfirmDialog';
 import { getProgram } from '../content/programs';
+import { planPractice, type SessionPlan } from '../engine/plan';
 import { useT } from '../i18n';
 import { useSettings } from '../settings/settingsStore';
 import { ContextPanel } from './ContextPanel';
 import { ExercisePanel } from './ExercisePanel';
 import { SummaryPanel } from './SummaryPanel';
-import { currentItem } from './sessionState';
+import { currentItem, type SessionState } from './sessionState';
 import { topicInfo } from './topicLookup';
 import { useSessionRunner } from './useSessionRunner';
+
+/**
+ * A practice plan over the exercises of the session just finished: the wrong ones
+ * (`fromMistakes`) or all of them (docs/stage-3b-spec.md §4).
+ */
+function practicePlanFrom(state: SessionState, fromMistakes: boolean): SessionPlan | null {
+  const wrongIds = new Set(
+    state.responses.filter((draft) => !draft.correct).map((draft) => draft.exerciseId)
+  );
+  const items = fromMistakes
+    ? state.plan.items.filter((item) => wrongIds.has(item.exercise.id))
+    : state.plan.items;
+  if (items.length === 0) return null;
+  return planPractice(items, {
+    id: `${state.sessionId}-p${Date.now().toString(36)}`,
+    programId: state.programId,
+    fromMistakes,
+  });
+}
 
 /** `/session` — full-screen flow with no bottom tab bar. */
 export function SessionScreen() {
   // Remounting with a new key is how "Another session" plans a fresh session.
   const [runKey, setRunKey] = useState(0);
+  const [practicePlan, setPracticePlan] = useState<SessionPlan | null>(null);
   const [searchParams] = useSearchParams();
   return (
     <SessionRun
       key={runKey}
       resume={runKey === 0 && searchParams.get('resume') === '1'}
-      onRestart={() => setRunKey((key) => key + 1)}
+      practicePlan={practicePlan}
+      onRestart={() => {
+        setPracticePlan(null);
+        setRunKey((key) => key + 1);
+      }}
+      onPractice={(plan) => {
+        setPracticePlan(plan);
+        setRunKey((key) => key + 1);
+      }}
     />
   );
 }
 
-function SessionRun({ resume, onRestart }: { resume: boolean; onRestart: () => void }) {
+function SessionRun({
+  resume,
+  practicePlan,
+  onRestart,
+  onPractice,
+}: {
+  resume: boolean;
+  practicePlan: SessionPlan | null;
+  onRestart: () => void;
+  onPractice: (plan: SessionPlan) => void;
+}) {
   const t = useT();
   const navigate = useNavigate();
   const settings = useSettings();
   const program = getProgram(settings.activeProgramId);
-  const runner = useSessionRunner(program, settings, resume);
+  const runner = useSessionRunner(program, settings, resume, practicePlan ?? undefined);
   const [stopOpen, setStopOpen] = useState(false);
   const { state } = runner;
 
@@ -81,6 +120,14 @@ function SessionRun({ resume, onRestart }: { resume: boolean; onRestart: () => v
           program={program}
           onDone={() => navigate('/')}
           onAnother={onRestart}
+          onRetryMistakes={() => {
+            const plan = practicePlanFrom(state, true);
+            if (plan) onPractice(plan);
+          }}
+          onRepeat={() => {
+            const plan = practicePlanFrom(state, false);
+            if (plan) onPractice(plan);
+          }}
         />
       </div>
     );
@@ -99,9 +146,11 @@ function SessionRun({ resume, onRestart }: { resume: boolean; onRestart: () => v
   }
 
   const previous = state.plan.items[state.index - 1];
+  const practice = state.plan.kind === 'practice';
   const firstOfBlock = !previous || previous.block !== item.block;
-  const blockLabel =
-    item.block === 'review'
+  const blockLabel = practice
+    ? t('session.block.practice')
+    : item.block === 'review'
       ? t('session.block.review', { topic: info.title })
       : item.block === 'phrases'
         ? t('session.block.phrases')
@@ -115,7 +164,7 @@ function SessionRun({ resume, onRestart }: { resume: boolean; onRestart: () => v
         index={state.index}
         total={state.plan.plannedLength}
         blockLabel={blockLabel}
-        banner={firstOfBlock && item.block !== 'new' ? blockLabel : null}
+        banner={!practice && firstOfBlock && item.block !== 'new' ? blockLabel : null}
         feedback={state.feedback}
         onSubmit={runner.submit}
         onContinue={runner.next}

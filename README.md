@@ -131,6 +131,11 @@ route ultimately loads the same `index.html`.
    per topic ("→ ready for review in 30 days", "→ mastered!"). Each answer is
    stored in `attempts`; topic progress and the spaced-repetition schedule are
    updated at the end of the session.
+6. From the summary, **Retry mistakes** and **Repeat session** start a *practice*
+   run over the same exercises. Practice is drill only: the attempts are recorded
+   (flagged `practice`), but topic status, the review schedule and the 20-exercise
+   completion count never move. Exercises you got wrong are offered first in later
+   regular sessions until you answer them correctly.
 
 ## How backups work
 

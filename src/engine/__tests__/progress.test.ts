@@ -28,6 +28,45 @@ describe('applyAttempt', () => {
     expect(row.seenExerciseIds).toEqual(['e1']);
   });
 
+  it('remembers wrong exercises and forgets them once answered right', () => {
+    let row = applyAttempt(emptyTopicProgress('t1', 'p'), 'e1', false, NOW);
+    expect(row.wrongExerciseIds).toEqual(['e1']);
+    // Wrong twice stays a single entry.
+    row = applyAttempt(row, 'e1', false, NOW + 1);
+    expect(row.wrongExerciseIds).toEqual(['e1']);
+    row = applyAttempt(row, 'e2', false, NOW + 2);
+    expect(row.wrongExerciseIds).toEqual(['e1', 'e2']);
+    row = applyAttempt(row, 'e1', true, NOW + 3);
+    expect(row.wrongExerciseIds).toEqual(['e2']);
+  });
+
+  it('changes nothing in a practice session except clearing a fixed mistake', () => {
+    const row = makeProgress('t1', {
+      status: 'learning',
+      seenExerciseIds: ['e1'],
+      wrongExerciseIds: ['e1'],
+    });
+
+    // A wrong practice answer is inert, even for an unseen exercise.
+    expect(applyAttempt(row, 'e9', false, NOW, true)).toBe(row);
+    // A correct practice answer only drops the exercise from the wrong list.
+    const fixed = applyAttempt(row, 'e1', true, NOW, true);
+    expect(fixed).toMatchObject({
+      status: 'learning',
+      seenExerciseIds: ['e1'],
+      wrongExerciseIds: [],
+    });
+    expect(fixed.history).toEqual(row.history);
+
+    // A practice answer never completes a topic or marks anything seen.
+    const almostDone = makeProgress('t2', {
+      status: 'learning',
+      seenExerciseIds: Array.from({ length: COMPLETION_THRESHOLD - 1 }, (_, i) => `e${i}`),
+    });
+    const after = applyAttempt(almostDone, 'new-one', true, NOW, true);
+    expect(after).toBe(almostDone);
+  });
+
   it('completes the topic at 20 distinct exercises', () => {
     let row = emptyTopicProgress('t1', 'p');
     for (let i = 1; i < COMPLETION_THRESHOLD; i += 1) {

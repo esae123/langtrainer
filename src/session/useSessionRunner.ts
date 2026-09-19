@@ -41,7 +41,7 @@ export interface SessionRunner {
   stop: () => void;
 }
 
-function toAttemptRow(draft: AttemptDraft, sessionId: string): AttemptRow {
+function toAttemptRow(draft: AttemptDraft, sessionId: string, practice: boolean): AttemptRow {
   return {
     id: draft.id,
     sessionId,
@@ -51,15 +51,21 @@ function toAttemptRow(draft: AttemptDraft, sessionId: string): AttemptRow {
     correct: draft.correct,
     ...(draft.diacriticsOk !== null ? { diacriticsOk: draft.diacriticsOk } : {}),
     ...(draft.selfGraded ? { selfGraded: true } : {}),
+    ...(practice ? { practice: true } : {}),
     answer: draft.answer,
     at: draft.at,
   };
 }
 
+/**
+ * @param practicePlan when given, this exact plan is run as a practice session instead
+ *        of planning (or resuming) a regular one.
+ */
 export function useSessionRunner(
   program: Program | undefined,
   settings: Settings,
-  resume: boolean
+  resume: boolean,
+  practicePlan?: SessionPlan
 ): SessionRunner {
   const [state, dispatch] = useReducer(sessionReducer, null);
   const [outcomes, setOutcomes] = useState<TopicOutcome[] | null>(null);
@@ -96,6 +102,11 @@ export function useSessionRunner(
       progressRef.current = rows;
       if (cancelled) return;
 
+      if (practicePlan) {
+        dispatch({ type: 'init', state: initSessionState(practicePlan, now) });
+        return;
+      }
+
       if (resume) {
         const stored = await readActiveSession(now);
         if (stored && !cancelled) {
@@ -111,7 +122,7 @@ export function useSessionRunner(
     return () => {
       cancelled = true;
     };
-  }, [program, resume, planInput]);
+  }, [program, resume, planInput, practicePlan]);
 
   // Persist on every transition; drop the snapshot once the summary is reached.
   useEffect(() => {
@@ -130,6 +141,7 @@ export function useSessionRunner(
     finalizedRef.current = state.sessionId;
     const { sessionId, programId, plan, responses, startedAt, interrupted } = state;
     const now = state.endedAt ?? Date.now();
+    const practice = plan.kind === 'practice';
 
     void (async () => {
       await db.sessions.put({
@@ -141,7 +153,15 @@ export function useSessionRunner(
         completed: responses.length,
         correct: responses.filter((draft) => draft.correct).length,
         interrupted,
+        kind: practice ? 'practice' : 'regular',
       });
+
+      // Practice runs are drill only: no history entry, no SRS transition, no status
+      // change (docs/stage-3b-spec.md §4).
+      if (practice) {
+        setOutcomes([]);
+        return;
+      }
 
       const topicIds = [...new Set(responses.map((draft) => draft.topicId))];
       const summaries: SessionAttemptSummary[] = responses.map((draft) => ({
@@ -162,20 +182,28 @@ export function useSessionRunner(
     })();
   }, [state]);
 
-  const record = useCallback(async (draft: AttemptDraft, sessionId: string, programId: string) => {
-    await db.attempts.put(toAttemptRow(draft, sessionId));
-    const updated = await db.transaction('rw', db.topicProgress, async () => {
-      const existing =
-        (await db.topicProgress.get(draft.topicId)) ?? emptyTopicProgress(draft.topicId, programId);
-      const next = applyAttempt(existing, draft.exerciseId, draft.correct, draft.at);
-      await db.topicProgress.put(next);
-      return next;
-    });
-    progressRef.current = [
-      ...progressRef.current.filter((row) => row.topicId !== updated.topicId),
-      updated,
-    ];
-  }, []);
+  const record = useCallback(
+    async (draft: AttemptDraft, sessionId: string, programId: string, practice: boolean) => {
+      await db.attempts.put(toAttemptRow(draft, sessionId, practice));
+      const updated = await db.transaction('rw', db.topicProgress, async () => {
+        const existing = await db.topicProgress.get(draft.topicId);
+        // A practice answer never creates a progress row and only ever clears a past
+        // mistake; everything else stays exactly as it was.
+        if (practice && !existing) return undefined;
+        const row = existing ?? emptyTopicProgress(draft.topicId, programId);
+        const next = applyAttempt(row, draft.exerciseId, draft.correct, draft.at, practice);
+        if (next === row && existing) return existing;
+        await db.topicProgress.put(next);
+        return next;
+      });
+      if (!updated) return;
+      progressRef.current = [
+        ...progressRef.current.filter((row) => row.topicId !== updated.topicId),
+        updated,
+      ];
+    },
+    []
+  );
 
   const startExercises = useCallback(() => dispatch({ type: 'showExercise' }), []);
 
@@ -212,7 +240,7 @@ export function useSessionRunner(
         at: Date.now(),
       };
       dispatch({ type: 'submit', draft, result, response });
-      void record(draft, state.sessionId, state.programId);
+      void record(draft, state.sessionId, state.programId, state.plan.kind === 'practice');
     },
     [state, record]
   );
@@ -255,7 +283,7 @@ export function useSessionRunner(
         selfGraded: true,
       };
       dispatch({ type: 'submit', draft, result });
-      void record(draft, state.sessionId, state.programId);
+      void record(draft, state.sessionId, state.programId, state.plan.kind === 'practice');
       // The sample answer has already been shown, so grading also continues.
       next();
     },

@@ -16,6 +16,7 @@ describe('LangTrainerDB schema', () => {
       failedReviewsInARow: 0,
       history: [],
       seenExerciseIds: [],
+      wrongExerciseIds: [],
     });
     await db.sessions.put({
       id: 's1',
@@ -92,6 +93,7 @@ describe('LangTrainerDB schema', () => {
         failedReviewsInARow: 0,
         history: [],
         seenExerciseIds: [],
+        wrongExerciseIds: [],
         nextReviewAt: 100,
       },
       {
@@ -102,6 +104,7 @@ describe('LangTrainerDB schema', () => {
         failedReviewsInARow: 0,
         history: [],
         seenExerciseIds: [],
+        wrongExerciseIds: [],
         nextReviewAt: 50,
       },
     ]);
@@ -140,7 +143,7 @@ describe('LangTrainerDB schema', () => {
     db.close();
   });
 
-  it('migrates version 1 rows to version 2 by adding failedReviewsInARow', async () => {
+  it('migrates version 1 rows through to version 3', async () => {
     const name = 'db-upgrade-test';
     const v1 = new Dexie(name);
     v1.version(1).stores({
@@ -166,13 +169,50 @@ describe('LangTrainerDB schema', () => {
 
     const db = new LangTrainerDB(name);
     await db.open();
-    expect(db.verno).toBe(2);
+    expect(db.verno).toBe(3);
     const row = (await db.topicProgress.get('legacy')) as TopicProgressRow;
     expect(row.failedReviewsInARow).toBe(0);
+    expect(row.wrongExerciseIds).toEqual([]);
     // Existing data survives the upgrade untouched.
     expect(row.seenExerciseIds).toEqual(['e1']);
     expect(row.nextReviewAt).toBe(42);
     expect(row.history).toHaveLength(1);
+    db.close();
+  });
+
+  it('migrates version 2 rows to version 3 by adding wrongExerciseIds', async () => {
+    const name = 'db-upgrade-v2-test';
+    const v2 = new Dexie(name);
+    const stores = {
+      settings: 'key',
+      profile: 'id',
+      topicProgress: 'topicId, programId, nextReviewAt',
+      sessions: 'id, startedAt',
+      attempts: 'id, sessionId, topicId, exerciseId',
+      customTopics: 'id',
+      generatedExercises: 'id, topicId',
+    };
+    v2.version(1).stores(stores);
+    v2.version(2).stores(stores);
+    await v2.open();
+    await v2.table('topicProgress').put({
+      topicId: 'legacy2',
+      programId: 'pt-PT-A1',
+      status: 'learning',
+      reviewStage: 0,
+      failedReviewsInARow: 1,
+      history: [],
+      seenExerciseIds: ['e1', 'e2'],
+    });
+    v2.close();
+
+    const db = new LangTrainerDB(name);
+    await db.open();
+    expect(db.verno).toBe(3);
+    const row = (await db.topicProgress.get('legacy2')) as TopicProgressRow;
+    expect(row.wrongExerciseIds).toEqual([]);
+    expect(row.failedReviewsInARow).toBe(1);
+    expect(row.seenExerciseIds).toEqual(['e1', 'e2']);
     db.close();
   });
 });

@@ -13,6 +13,10 @@ interface SummaryPanelProps {
   program: Program | undefined;
   onDone: () => void;
   onAnother: () => void;
+  /** Practice run over the wrong answers of this session (docs/stage-3b-spec.md §4). */
+  onRetryMistakes: () => void;
+  /** Practice run over every exercise of this session. */
+  onRepeat: () => void;
 }
 
 const BLOCK_LABELS: Record<BlockKind, TranslationKey> = {
@@ -25,12 +29,22 @@ function days(from: number, to: number): number {
   return Math.max(1, Math.round((to - from) / DAY_MS));
 }
 
-export function SummaryPanel({ state, outcomes, program, onDone, onAnother }: SummaryPanelProps) {
+export function SummaryPanel({
+  state,
+  outcomes,
+  program,
+  onDone,
+  onAnother,
+  onRetryMistakes,
+  onRepeat,
+}: SummaryPanelProps) {
   const t = useT();
   const total = state.responses.length;
   const correct = state.responses.filter((draft) => draft.correct).length;
   const percentage = total === 0 ? 0 : Math.round((correct / total) * 100);
   const endedAt = state.endedAt ?? Date.now();
+  const practice = state.plan.kind === 'practice';
+  const wrong = total - correct;
 
   const blocks = (['new', 'review', 'phrases'] as BlockKind[])
     .map((block) => {
@@ -96,11 +110,16 @@ export function SummaryPanel({ state, outcomes, program, onDone, onAnother }: Su
             {percentage}%
           </p>
           <h1 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
-            {t('session.summaryTitle')}
+            {practice ? t('session.practiceTitle') : t('session.summaryTitle')}
           </h1>
           <p className="text-sm text-slate-500 dark:text-slate-400">
             {t('session.summaryScore', { correct, total })}
           </p>
+          {practice && state.plan.fromMistakes && (
+            <p className="text-sm font-medium text-accent-700 dark:text-accent-300">
+              {t('session.practiceFixed', { fixed: correct, of: state.plan.items.length })}
+            </p>
+          )}
         </div>
 
         {total === 0 ? (
@@ -134,6 +153,8 @@ export function SummaryPanel({ state, outcomes, program, onDone, onAnother }: Su
               </Card>
             </section>
 
+            {/* Practice changes no topic status, so there is nothing to report. */}
+            {!practice && (
             <section className="mt-5">
               <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
                 {t('session.summaryTopics')}
@@ -167,25 +188,52 @@ export function SummaryPanel({ state, outcomes, program, onDone, onAnother }: Su
                 </ul>
               </Card>
             </section>
+            )}
           </>
         )}
       </div>
 
-      <div className="safe-bottom sticky bottom-0 flex gap-3 border-t border-slate-200 bg-white/95 px-4 py-3 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
-        <button
-          type="button"
-          onClick={onDone}
-          className="min-h-12 flex-1 rounded-2xl border border-slate-300 text-base font-semibold text-slate-700 dark:border-slate-700 dark:text-slate-200"
-        >
-          {t('session.done')}
-        </button>
-        <button
-          type="button"
-          onClick={onAnother}
-          className="min-h-12 flex-1 rounded-2xl bg-accent-600 text-base font-semibold text-white shadow-sm active:opacity-90"
-        >
-          {t('session.another')}
-        </button>
+      <div className="safe-bottom sticky bottom-0 flex flex-col gap-2 border-t border-slate-200 bg-white/95 px-4 py-3 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
+        {(wrong > 0 || !practice) && (
+          <div className="flex gap-3">
+            {wrong > 0 && (
+              <button
+                type="button"
+                onClick={onRetryMistakes}
+                className="min-h-11 flex-1 rounded-xl border border-accent-300 text-sm font-semibold text-accent-700 dark:border-accent-700/60 dark:text-accent-300"
+              >
+                {practice ? t('session.retryAgain') : t('session.retryMistakes')}
+              </button>
+            )}
+            {!practice && total > 0 && (
+              <button
+                type="button"
+                onClick={onRepeat}
+                className="min-h-11 flex-1 rounded-xl border border-slate-300 text-sm font-semibold text-slate-700 dark:border-slate-700 dark:text-slate-200"
+              >
+                {t('session.repeatSession')}
+              </button>
+            )}
+          </div>
+        )}
+        <div className="flex gap-3">
+          <button
+            type="button"
+            onClick={onDone}
+            className="min-h-12 flex-1 rounded-2xl border border-slate-300 text-base font-semibold text-slate-700 dark:border-slate-700 dark:text-slate-200"
+          >
+            {t('session.done')}
+          </button>
+          {!practice && (
+            <button
+              type="button"
+              onClick={onAnother}
+              className="min-h-12 flex-1 rounded-2xl bg-accent-600 text-base font-semibold text-white shadow-sm active:opacity-90"
+            >
+              {t('session.another')}
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

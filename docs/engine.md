@@ -37,8 +37,9 @@ Block composition per session length (each row sums to the length):
   earliest first, spread round-robin over at most two topics. If nothing is due, one
   random completed topic; if nothing is completed, more current-topic exercises.
 - **Phrases block**: exercises from the phrase sets in program order, unseen first.
-- **Exercise selection**: unseen exercises (not in `seenExerciseIds`) before seen ones; the
-  new block is sorted by difficulty ascending, elsewhere the order is shuffled (no
+- **Exercise selection**: three groups, in order — (1) unseen (not in `seenExerciseIds`),
+  (2) seen but in `wrongExerciseIds` (last regular attempt was wrong), (3) the rest. The
+  new block sorts each group by difficulty ascending, elsewhere each group is shuffled (no
   per-exercise timestamps are stored, so "least recently seen" is random). An exercise is
   never repeated inside one session. If a block runs short, the plan tops up from the
   topics it already uses, so `plannedLength` always matches the real item count (`0` marks
@@ -48,6 +49,22 @@ Block composition per session length (each row sums to the length):
   types therefore always get tiles.
 - **Context screen**: `showContextBefore` is set on the first new-block item of each topic
   the plan introduces.
+
+## Practice sessions (`planPractice`)
+
+The summary offers **Retry mistakes** and **Repeat session**; both build a
+`SessionPlan` with `kind: 'practice'` from the exercises just answered (the wrong ones
+only — `fromMistakes: true` — or all of them), keeping each exercise's input mode and
+dropping the context screens. A practice run is drill, not progress:
+
+- attempts are stored with `practice: true`, the `sessions` row with `kind: 'practice'`;
+- `finishSession` is never called, so no `history` entry, `lastReviewedAt` or SRS move;
+- `applyAttempt(row, id, correct, now, true)` only removes a fixed exercise from
+  `wrongExerciseIds` — status, `seenExerciseIds`, `reviewStage`, `nextReviewAt` and
+  `failedReviewsInARow` stay exactly as they were, and no progress row is created.
+
+The practice summary shows the score, "Fixed: n of m" after a retry, and offers
+**Done** / **Retry again** (over the mistakes of that practice run).
 
 ## Checking (`checkAnswer`)
 
@@ -98,7 +115,8 @@ its own view.
 ## Progress and spaced repetition
 
 `applyAttempt(row, exerciseId, correct, now)` runs after every answer: it adds the
-exercise to `seenExerciseIds` (set semantics) and moves `new → learning`. A topic is
+exercise to `seenExerciseIds` (set semantics), keeps `wrongExerciseIds` current (added on
+a wrong answer, removed on a right one) and moves `new → learning`. A topic is
 **completed** the moment it has **20 distinct answered exercises** — status `review`,
 `reviewStage: 1`, `firstCompletedAt = now`, `nextReviewAt = now + 7 days`.
 

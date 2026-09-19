@@ -19,25 +19,48 @@ export function emptyTopicProgress(topicId: string, programId: string): TopicPro
     failedReviewsInARow: 0,
     history: [],
     seenExerciseIds: [],
+    wrongExerciseIds: [],
   };
 }
 
+function withoutWrong(row: TopicProgress, exerciseId: string): string[] {
+  return (row.wrongExerciseIds ?? []).filter((id) => id !== exerciseId);
+}
+
 /**
- * Records one answered exercise: marks it seen, moves `new → learning`, and applies the
- * completion rule (≥ 20 distinct exercises → `review`, stage 1, next review in 7 days).
- * Correctness is not part of the completion rule in Stage 3, so `_correct` is unused; it
- * stays in the signature because the spec defines it there (and Stage 4 may use it).
+ * Records one answered exercise: marks it seen, moves `new → learning`, applies the
+ * completion rule (≥ 20 distinct exercises → `review`, stage 1, next review in 7 days)
+ * and keeps `wrongExerciseIds` up to date (added on a wrong answer, removed on a right
+ * one) so planning can offer past mistakes first.
+ *
+ * `practice: true` (docs/stage-3b-spec.md §4) makes the attempt inert: nothing is marked
+ * seen, no status or SRS field moves. The only effect is that answering a past mistake
+ * correctly drops it from `wrongExerciseIds`.
  */
 export function applyAttempt(
   row: TopicProgress,
   exerciseId: string,
-  _correct: boolean,
-  now: number
+  correct: boolean,
+  now: number,
+  practice = false
 ): TopicProgress {
+  if (practice) {
+    if (!correct) return row;
+    const wrong = withoutWrong(row, exerciseId);
+    return wrong.length === (row.wrongExerciseIds?.length ?? 0)
+      ? row
+      : { ...row, wrongExerciseIds: wrong };
+  }
+
   const seen = row.seenExerciseIds.includes(exerciseId)
     ? row.seenExerciseIds
     : [...row.seenExerciseIds, exerciseId];
-  const next: TopicProgress = { ...row, seenExerciseIds: seen };
+  const wrongIds = withoutWrong(row, exerciseId);
+  const next: TopicProgress = {
+    ...row,
+    seenExerciseIds: seen,
+    wrongExerciseIds: correct ? wrongIds : [...wrongIds, exerciseId],
+  };
 
   if (next.status === 'new') next.status = 'learning';
   if (next.status === 'learning' && seen.length >= COMPLETION_THRESHOLD) {
