@@ -348,7 +348,7 @@
                 "letters",
                 "typing"
               ],
-              "prompt": "The answer is formal. Ask the question (two words).",
+              "prompt": "You are speaking to an older man you call «o senhor». Ask how he is (two words).",
               "explanation": "To a stranger or an older person you use the formal «Como está?»; «Como estás?» is the tu form, for friends.",
               "tags": [
                 "register",
@@ -1120,6 +1120,9 @@
                 "dizes",
                 "dizer",
                 "fala"
+              ],
+              "acceptedAnswers": [
+                "Como é que se diz isto em português?"
               ]
             },
             {
@@ -1234,6 +1237,9 @@
                 "está,",
                 "estão,",
                 "estou,"
+              ],
+              "acceptedAnswers": [
+                "Como é que estás, Rita?"
               ]
             },
             {
@@ -1273,7 +1279,7 @@
                 "letters",
                 "typing"
               ],
-              "prompt": "It is 11 p.m. and you are leaving a friend's house. Say goodbye.",
+              "prompt": "It is 11 p.m. and you are leaving a friend's house. Say goodbye and tell her you will see her tomorrow.",
               "explanation": "After dark «boa noite» is also a goodbye, and «até amanhã» tells your friend when you meet again.",
               "tags": [
                 "goodbyes"
@@ -1537,6 +1543,9 @@
                 "se",
                 "chamas-te?",
                 "Quem"
+              ],
+              "acceptedAnswers": [
+                "Como é que te chamas?"
               ]
             },
             {
@@ -1710,6 +1719,9 @@
                 "tem?",
                 "Quanto",
                 "Quantas"
+              ],
+              "acceptedAnswers": [
+                "Quantos anos é que tens?"
               ]
             },
             {
@@ -2017,8 +2029,8 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Ask Mrs Silva her name, formally.",
-              "explanation": "Someone you address as «a senhora» takes the third person: «Como se chama?».",
+              "prompt": "You work at a hotel desk. A woman you do not know comes in. Ask her name formally and politely.",
+              "explanation": "Someone you address formally (o senhor / a senhora) takes the third person: «Como se chama?». «Como te chamas?» is only for friends.",
               "tags": [
                 "chamar-se",
                 "register",
@@ -2029,8 +2041,8 @@
                 "Como",
                 "se",
                 "chama,",
-                "senhora",
-                "Silva?"
+                "por",
+                "favor?"
               ],
               "distractors": [
                 "te",
@@ -2078,7 +2090,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Fill the two gaps.",
+              "prompt": "Inês is Portuguese, but she lives in London. Fill the two gaps.",
               "explanation": "Nationality is permanent, so «ser»; where you live uses «morar em». «Está» would only say where she is right now.",
               "tags": [
                 "ser",
@@ -2129,6 +2141,9 @@
                 "fala?",
                 "Quem",
                 "língua"
+              ],
+              "acceptedAnswers": [
+                "Que línguas é que falas?"
               ]
             },
             {
@@ -2634,7 +2649,7 @@
             {
               "target": "você",
               "support": "you (formal, singular)",
-              "note": "Polite; takes the same verb form as ele/ela."
+              "note": "Takes the same verb form as ele/ela. In Portugal it can sound abrupt with strangers or older people: there you say o senhor / a senhora."
             },
             {
               "target": "ele",
@@ -2651,7 +2666,7 @@
             {
               "target": "vocês",
               "support": "you (plural)",
-              "note": "The only plural 'you' used in Portugal, formal or informal."
+              "note": "The normal plural 'you' in Portugal, formal or informal."
             },
             {
               "target": "eles / elas",
@@ -5462,7 +5477,7 @@
                 "typing"
               ],
               "prompt": "Build the sentence: \"I live in Braga.\"",
-              "explanation": "Braga has no article, so em stays alone: moro em Braga. No/na would need an article.",
+              "explanation": "Braga has no article, so em stays alone: moro em Braga. No and na already contain the article o/a, so they do not fit here.",
               "tags": [
                 "em",
                 "cities"
@@ -5564,6 +5579,9 @@
                 "do",
                 "moras?",
                 "Como"
+              ],
+              "acceptedAnswers": [
+                "De onde é que és?"
               ]
             },
             {
@@ -6030,7 +6048,7 @@
                 "letters",
                 "typing"
               ],
-              "prompt": "Fill both gaps.",
+              "prompt": "Fill both gaps: \"I like the beaches of the Algarve.\"",
               "explanation": "Praias is feminine plural (as praias), so de + as = das; the region is o Algarve, so de + o = do.",
               "tags": [
                 "de",
@@ -6235,6 +6253,9 @@
                 "no",
                 "na",
                 "estão"
+              ],
+              "acceptedAnswers": [
+                "Onde é que está o livro?"
               ]
             },
             {
@@ -6545,7 +6566,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Someone gives you this answer. Ask what she likes, using \"é que\".",
+              "prompt": "Someone gives you this answer. Ask your friend what she likes, using \"é que\" (informal).",
               "explanation": "Gostar needs de, so the question starts with De que: De que é que gostas?",
               "tags": [
                 "questions",
@@ -6951,7 +6972,7 @@
                 "letters",
                 "typing"
               ],
-              "prompt": "Tiago works with the doctors, but he is not one. Fill the gap.",
+              "prompt": "Tiago is a nurse at the hospital in Braga. Fill the gap.",
               "explanation": "Tiago is a man, so the nurse word is enfermeiro; enfermeira is only for a woman.",
               "tags": [
                 "professions",
@@ -7034,7 +7055,7 @@
                 "letters",
                 "typing"
               ],
-              "prompt": "Someone answers \"No, I'm a student.\" Ask the yes/no question (informal).",
+              "prompt": "Someone answers \"No, I'm a student.\" Ask \"Are you a teacher?\" (informal, to a friend).",
               "explanation": "With tu the verb ser is és, so the question is Tu és professor? The rising voice makes it a question.",
               "tags": [
                 "professions",
@@ -7052,6 +7073,9 @@
                 "é",
                 "Você",
                 "sou"
+              ],
+              "acceptedAnswers": [
+                "És professor?"
               ]
             },
             {
@@ -7090,7 +7114,7 @@
                 "letters",
                 "typing"
               ],
-              "prompt": "A woman is talking about her job. Fill the gap.",
+              "prompt": "A woman says: \"I'm a doctor and I work at the hospital in Faro.\" Fill the gap.",
               "explanation": "Sou has no article after it, and a woman uses médica; médico would be a man.",
               "tags": [
                 "professions",
@@ -7320,6 +7344,9 @@
                 "Qual",
                 "Onde",
                 "faz"
+              ],
+              "acceptedAnswers": [
+                "O que fazes?"
               ]
             },
             {
@@ -7568,7 +7595,7 @@
                 "letters",
                 "typing"
               ],
-              "prompt": "Talk about your parents' jobs. Fill both gaps.",
+              "prompt": "Fill both gaps: \"My father is a cook and my mother is a teacher.\"",
               "explanation": "Pai is a man, so cozinheiro; mãe is a woman, so professora. Each job follows its own person.",
               "tags": [
                 "professions",
@@ -7632,7 +7659,7 @@
                 "letters",
                 "typing"
               ],
-              "prompt": "Fill the three gaps.",
+              "prompt": "Fill the three gaps: \"Sofia is a lawyer and she speaks English and German.\"",
               "explanation": "Sofia is a woman, so advogada; the two languages keep their fixed forms inglês and alemão, not the feminine inglesa and alemã.",
               "tags": [
                 "professions",
@@ -8218,7 +8245,7 @@
                 "typing"
               ],
               "prompt": "Which number word is missing?",
-              "explanation": "catorze, quinze, dezasseis, dezassete. The Portuguese teens from 16 on are built as dez + a + unit.",
+              "explanation": "catorze, quinze, dezasseis, dezassete. In Portugal 16, 17 and 19 add an a after dez, but 18 is simply dezoito.",
               "tags": [
                 "numbers",
                 "teens",
@@ -8249,7 +8276,7 @@
                 "tiles"
               ],
               "prompt": "Match the Portuguese teens with the English numbers.",
-              "explanation": "These are the forms used in Portugal: catorze, dezasseis, dezassete, dezanove — the teens from 16 on keep an a after dez.",
+              "explanation": "These are the forms used in Portugal: catorze (14), and dezasseis, dezassete and dezanove, which keep an a after dez (18 is the exception: dezoito).",
               "tags": [
                 "numbers",
                 "teens",
@@ -9404,6 +9431,9 @@
                 "Quem",
                 "Onde",
                 "chama?"
+              ],
+              "acceptedAnswers": [
+                "Como é que te chamas?"
               ]
             },
             {
@@ -9519,6 +9549,9 @@
                 "Para",
                 "Quem",
                 "é?"
+              ],
+              "acceptedAnswers": [
+                "De onde é que és?"
               ]
             },
             {
@@ -9790,6 +9823,9 @@
                 "Quantas",
                 "Quanto",
                 "tem?"
+              ],
+              "acceptedAnswers": [
+                "Quantos anos é que tens?"
               ]
             },
             {
@@ -9908,6 +9944,9 @@
                 "Quantos",
                 "Quanto",
                 "tem?"
+              ],
+              "acceptedAnswers": [
+                "Quantas irmãs é que tens?"
               ]
             },
             {
@@ -9996,6 +10035,9 @@
                 "Quantos",
                 "Quanta",
                 "custam"
+              ],
+              "acceptedAnswers": [
+                "Quanto é que custa o café?"
               ]
             },
             {
@@ -10300,6 +10342,9 @@
                 "Porquê",
                 "Como",
                 "queres?"
+              ],
+              "acceptedAnswers": [
+                "Porque é que não vais?"
               ]
             },
             {
@@ -10503,6 +10548,9 @@
                 "Sou",
                 "estudantes?",
                 "Quem"
+              ],
+              "acceptedAnswers": [
+                "Tu és estudante?"
               ]
             },
             {
@@ -11501,7 +11549,7 @@
             },
             {
               "speaker": "B",
-              "text": "Já vem. Bom apetite!"
+              "text": "Aqui tem. Bom apetite!"
             },
             {
               "speaker": "A",

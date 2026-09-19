@@ -1,0 +1,906 @@
+{
+  "id": "everyday-1",
+  "title": "Everyday phrases 1",
+  "phrases": [
+    {
+      "target": "Bom dia!",
+      "support": "Good morning!",
+      "register": "neutral",
+      "situation": "entering the bakery at eight"
+    },
+    {
+      "target": "Boa tarde!",
+      "support": "Good afternoon!",
+      "register": "neutral",
+      "situation": "going into a shop after lunch"
+    },
+    {
+      "target": "Boa noite!",
+      "support": "Good evening! / Good night!",
+      "register": "neutral",
+      "situation": "arriving at a restaurant at nine"
+    },
+    {
+      "target": "Olá! Tudo bem?",
+      "support": "Hi! How's it going?",
+      "register": "informal",
+      "situation": "meeting a colleague in the corridor"
+    },
+    {
+      "target": "Tudo bem, e tu?",
+      "support": "I'm fine, and you?",
+      "register": "informal",
+      "situation": "replying to a friend's greeting"
+    },
+    {
+      "target": "Está tudo bem.",
+      "support": "Everything's fine.",
+      "register": "neutral",
+      "situation": "answering how things are going"
+    },
+    {
+      "target": "Há quanto tempo!",
+      "support": "Long time no see!",
+      "register": "informal",
+      "situation": "bumping into an old friend"
+    },
+    {
+      "target": "Bem-vindo!",
+      "support": "Welcome!",
+      "register": "neutral",
+      "situation": "opening the door to a guest"
+    },
+    {
+      "target": "Por favor.",
+      "support": "Please.",
+      "register": "neutral",
+      "situation": "ordering a coffee"
+    },
+    {
+      "target": "Muito obrigado!",
+      "support": "Thanks a lot!",
+      "register": "neutral",
+      "situation": "a man thanking someone who held the door"
+    },
+    {
+      "target": "Obrigada!",
+      "support": "Thank you!",
+      "register": "neutral",
+      "situation": "a woman thanking the waiter"
+    },
+    {
+      "target": "De nada.",
+      "support": "You're welcome.",
+      "register": "neutral",
+      "situation": "someone has just thanked you"
+    },
+    {
+      "target": "Não tem de quê.",
+      "support": "Don't mention it.",
+      "register": "neutral",
+      "situation": "replying to a big thank-you"
+    },
+    {
+      "target": "Com licença.",
+      "support": "Excuse me. (may I pass?)",
+      "register": "neutral",
+      "situation": "squeezing past people on the metro"
+    },
+    {
+      "target": "Desculpe.",
+      "support": "Sorry. / Excuse me.",
+      "register": "formal",
+      "situation": "you bump into a stranger"
+    },
+    {
+      "target": "Desculpa!",
+      "support": "Sorry!",
+      "register": "informal",
+      "situation": "you step on a friend's foot"
+    },
+    {
+      "target": "Peço desculpa.",
+      "support": "I do apologise.",
+      "register": "formal",
+      "situation": "you made a mistake at work"
+    },
+    {
+      "target": "Desculpe o atraso.",
+      "support": "Sorry I'm late.",
+      "register": "formal",
+      "situation": "arriving late for a meeting"
+    },
+    {
+      "target": "Não faz mal.",
+      "support": "Never mind. / No harm done.",
+      "register": "neutral",
+      "situation": "someone apologises for being late"
+    },
+    {
+      "target": "Bom apetite!",
+      "support": "Enjoy your meal!",
+      "register": "neutral",
+      "situation": "the food arrives at the table"
+    },
+    {
+      "target": "Saúde!",
+      "support": "Cheers!",
+      "register": "neutral",
+      "situation": "raising glasses at dinner"
+    },
+    {
+      "target": "Faz favor!",
+      "support": "Excuse me! (calling someone over)",
+      "register": "neutral",
+      "situation": "calling the waiter in a café"
+    },
+    {
+      "target": "Parabéns!",
+      "support": "Congratulations! / Happy birthday!",
+      "register": "neutral",
+      "situation": "a friend has got a new job"
+    },
+    {
+      "target": "Feliz aniversário!",
+      "support": "Happy birthday!",
+      "register": "neutral",
+      "situation": "at a birthday party"
+    },
+    {
+      "target": "Boa viagem!",
+      "support": "Have a good trip!",
+      "register": "neutral",
+      "situation": "a friend flies tomorrow"
+    },
+    {
+      "target": "Boa sorte!",
+      "support": "Good luck!",
+      "register": "neutral",
+      "situation": "before an exam"
+    },
+    {
+      "target": "Boas férias!",
+      "support": "Have a good holiday!",
+      "register": "neutral",
+      "situation": "a colleague leaves on holiday"
+    },
+    {
+      "target": "Bom fim de semana!",
+      "support": "Have a good weekend!",
+      "register": "neutral",
+      "situation": "leaving work on Friday"
+    },
+    {
+      "target": "Igualmente!",
+      "support": "You too!",
+      "register": "neutral",
+      "situation": "replying to a good wish"
+    },
+    {
+      "target": "As melhoras!",
+      "support": "Get well soon!",
+      "register": "neutral",
+      "situation": "a colleague is off sick"
+    },
+    {
+      "target": "Santinho!",
+      "support": "Bless you!",
+      "register": "informal",
+      "situation": "someone sneezes"
+    },
+    {
+      "target": "Que pena!",
+      "support": "What a shame!",
+      "register": "neutral",
+      "situation": "a friend can't come"
+    },
+    {
+      "target": "Que chatice!",
+      "support": "What a pain!",
+      "register": "informal",
+      "situation": "the train is cancelled"
+    },
+    {
+      "target": "Fixe!",
+      "support": "Cool!",
+      "register": "informal",
+      "situation": "a friend tells you good news"
+    },
+    {
+      "target": "A sério?",
+      "support": "Really?",
+      "register": "informal",
+      "situation": "hearing surprising news"
+    },
+    {
+      "target": "Está bem.",
+      "support": "All right. / OK.",
+      "register": "neutral",
+      "situation": "agreeing to a plan"
+    },
+    {
+      "target": "Claro!",
+      "support": "Of course!",
+      "register": "neutral",
+      "situation": "a friend asks for a small favour"
+    },
+    {
+      "target": "Pois é.",
+      "support": "Yeah, exactly.",
+      "register": "informal",
+      "situation": "agreeing with a complaint"
+    },
+    {
+      "target": "Acho que não.",
+      "support": "I don't think so.",
+      "register": "neutral",
+      "situation": "you doubt what you have been told"
+    },
+    {
+      "target": "Estou?",
+      "support": "Hello?",
+      "register": "neutral",
+      "situation": "answering the phone"
+    },
+    {
+      "target": "Um momento, por favor.",
+      "support": "One moment, please.",
+      "register": "neutral",
+      "situation": "on the phone, going to fetch someone"
+    },
+    {
+      "target": "Não percebo.",
+      "support": "I don't understand.",
+      "register": "neutral",
+      "situation": "the shop assistant speaks fast"
+    },
+    {
+      "target": "Pode repetir, por favor?",
+      "support": "Could you say that again, please?",
+      "register": "formal",
+      "situation": "you missed what was said"
+    },
+    {
+      "target": "Pode falar mais devagar, por favor?",
+      "support": "Could you speak more slowly, please?",
+      "register": "formal",
+      "situation": "the receptionist talks fast"
+    },
+    {
+      "target": "Fala inglês?",
+      "support": "Do you speak English?",
+      "register": "formal",
+      "situation": "asking for help at the station"
+    },
+    {
+      "target": "Como se diz isto em português?",
+      "support": "How do you say this in Portuguese?",
+      "register": "neutral",
+      "situation": "you don't know the word"
+    },
+    {
+      "target": "Até já.",
+      "support": "See you in a minute.",
+      "register": "informal",
+      "situation": "popping out for five minutes"
+    },
+    {
+      "target": "Até logo.",
+      "support": "See you later.",
+      "register": "neutral",
+      "situation": "leaving in the morning, back the same day"
+    },
+    {
+      "target": "Até amanhã.",
+      "support": "See you tomorrow.",
+      "register": "neutral",
+      "situation": "leaving the office"
+    },
+    {
+      "target": "Adeus.",
+      "support": "Goodbye.",
+      "register": "neutral",
+      "situation": "leaving a shop"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "everyday-1-01",
+      "type": "match_pairs",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese greeting with what it means in English.",
+      "explanation": "Bom dia is used until lunch, Boa tarde from lunch until dark, Boa noite from dark onwards; Tudo bem? is the everyday informal 'how are you?'.",
+      "tags": ["greetings"],
+      "pairs": [
+        { "target": "Bom dia!", "support": "Good morning!" },
+        { "target": "Boa tarde!", "support": "Good afternoon!" },
+        { "target": "Boa noite!", "support": "Good evening!" },
+        { "target": "Tudo bem?", "support": "How's it going?" }
+      ]
+    },
+    {
+      "id": "everyday-1-02",
+      "type": "build_phrase",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend Rita arrives at your door. Welcome her and invite her in.",
+      "explanation": "Bem-vinda! agrees with a woman (Bem-vindo! to a man); Entra is the tu form, the one you use with a friend.",
+      "tags": ["welcome", "at the door"],
+      "answer": ["Bem-vinda!", "Entra,", "por", "favor."],
+      "distractors": ["Bem-vindo!", "Entre,", "faz"]
+    },
+    {
+      "id": "everyday-1-03",
+      "type": "order_dialogue",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Early morning in a Lisbon bakery: a customer buys bread. Put the lines in the right order.",
+      "explanation": "Bom dia is the greeting until lunchtime, and 'Faz favor?' is how shop staff in Portugal invite you to order.",
+      "tags": ["greetings", "shop"],
+      "lines": [
+        { "speaker": "A", "text": "Bom dia!" },
+        { "speaker": "B", "text": "Bom dia! Faz favor?" },
+        { "speaker": "A", "text": "Dois pães, por favor." },
+        { "speaker": "B", "text": "Aqui tem. São setenta cêntimos." },
+        { "speaker": "A", "text": "Obrigado. Até amanhã!" }
+      ]
+    },
+    {
+      "id": "everyday-1-04",
+      "type": "translate_word",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Sofia is thanking a colleague as she leaves the office. What does the highlighted word mean?",
+      "explanation": "Obrigada is used by a woman and obrigado by a man, but both simply mean 'thank you'.",
+      "tags": ["thanks"],
+      "direction": "toSupport",
+      "sentence": "**Obrigada**, até amanhã!",
+      "word": "Obrigada",
+      "answer": "thank you",
+      "options": ["thank you", "please", "sorry", "goodbye"]
+    },
+    {
+      "id": "everyday-1-05",
+      "type": "match_pairs",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each polite formula with its English meaning.",
+      "explanation": "De nada and Não tem de quê both answer a thank-you; Com licença asks permission to pass or to leave the table.",
+      "tags": ["politeness", "thanks"],
+      "pairs": [
+        { "target": "Por favor.", "support": "Please." },
+        { "target": "Obrigada!", "support": "Thank you! (said by a woman)" },
+        { "target": "De nada.", "support": "You're welcome." },
+        { "target": "Não tem de quê.", "support": "Don't mention it." },
+        { "target": "Com licença.", "support": "Excuse me, may I pass?" }
+      ]
+    },
+    {
+      "id": "everyday-1-06",
+      "type": "build_phrase",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The waiter puts the plates on the table. Wish the others at the table a good meal.",
+      "explanation": "Anyone at the table says Bom apetite! as the food arrives; apetite is masculine, so it is Bom, not Boa.",
+      "tags": ["at the table", "wishes"],
+      "answer": ["Bom", "apetite!"],
+      "distractors": ["Boa", "Boas", "apetites"]
+    },
+    {
+      "id": "everyday-1-07",
+      "type": "fill_gaps",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You walk into a café at half past eight and order a coffee.",
+      "explanation": "Bom dia is the greeting until lunchtime; por favor is the standard 'please' when you order.",
+      "tags": ["greetings", "politeness"],
+      "template": "___ dia! Um café, ___ favor.",
+      "gaps": [{ "answer": "Bom" }, { "answer": "por" }],
+      "wordBank": ["Bom", "por", "Boa", "Boas", "para", "de"]
+    },
+    {
+      "id": "everyday-1-08",
+      "type": "order_dialogue",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Rita sneezes at her desk in the open-plan office. Put the short exchange in order.",
+      "explanation": "In Portugal you say Santinho! (Santinha! to a woman) when someone sneezes; the person who sneezed just says obrigado/obrigada.",
+      "tags": ["reactions"],
+      "lines": [
+        { "speaker": "A", "text": "Atchim!" },
+        { "speaker": "B", "text": "Santinha!" },
+        { "speaker": "A", "text": "Obrigada!" },
+        { "speaker": "B", "text": "De nada." }
+      ]
+    },
+    {
+      "id": "everyday-1-09",
+      "type": "match_pairs",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each good wish with the English equivalent.",
+      "explanation": "Portuguese builds most wishes with Bom/Boa + noun, and the adjective agrees with the noun: bom fim de semana, boa viagem, boas férias.",
+      "tags": ["wishes"],
+      "pairs": [
+        { "target": "Boa sorte!", "support": "Good luck!" },
+        { "target": "Boa viagem!", "support": "Have a good trip!" },
+        { "target": "Boas férias!", "support": "Have a good holiday!" },
+        { "target": "Bom apetite!", "support": "Enjoy your meal!" },
+        { "target": "Bom fim de semana!", "support": "Have a good weekend!" }
+      ]
+    },
+    {
+      "id": "everyday-1-10",
+      "type": "build_phrase",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The metro brakes and you step on a stranger's foot. Apologise and say you didn't mean to.",
+      "explanation": "Desculpe is the polite form you use with a stranger; foi sem querer means 'it was an accident, I didn't mean to'.",
+      "tags": ["apologies", "formal"],
+      "answer": ["Desculpe,", "foi", "sem", "querer."],
+      "distractors": ["Desculpa,", "com", "fazer"]
+    },
+    {
+      "id": "everyday-1-11",
+      "type": "translate_word",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The person next to you sneezes. Choose the Portuguese reaction.",
+      "explanation": "In Portugal you say Santinho! (Santinha! to a woman) after a sneeze; Saúde! is kept for toasts, when you raise a glass.",
+      "tags": ["reactions"],
+      "direction": "toTarget",
+      "sentence": "Someone sneezes next to you and you say **bless you**.",
+      "word": "bless you",
+      "answer": "Santinho",
+      "options": ["Santinho", "Igualmente", "Parabéns", "Coitado"]
+    },
+    {
+      "id": "everyday-1-12",
+      "type": "order_dialogue",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Someone phones the Silva family and asks for Sofia. Put the call in order.",
+      "explanation": "The Portuguese answer the phone with Estou? (never Olá?); Um momento, por favor buys you time while you fetch the person.",
+      "tags": ["phone"],
+      "lines": [
+        { "speaker": "A", "text": "Estou?" },
+        { "speaker": "B", "text": "Boa tarde. A Sofia está?" },
+        { "speaker": "A", "text": "Um momento, por favor." },
+        { "speaker": "B", "text": "Obrigado." }
+      ]
+    },
+    {
+      "id": "everyday-1-13",
+      "type": "fill_gaps",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The waiter brings your coffee; you thank him warmly and he replies.",
+      "explanation": "Muito makes the thank-you stronger: obrigado if you are a man, obrigada if you are a woman. De nada is the usual reply.",
+      "tags": ["thanks", "politeness"],
+      "template": "Muito ___! — ___ nada.",
+      "gaps": [{ "answer": "obrigado", "accepted": ["obrigada"] }, { "answer": "De" }],
+      "wordBank": ["obrigado", "obrigada", "De", "Por", "Com", "Não"]
+    },
+    {
+      "id": "everyday-1-14",
+      "type": "match_pairs",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each way of saying goodbye with when you use it.",
+      "explanation": "Até + a time word tells the other person when you expect to meet again; Adeus is a plain goodbye with no time attached.",
+      "tags": ["goodbyes"],
+      "pairs": [
+        { "target": "Até já.", "support": "See you in a few minutes." },
+        { "target": "Até logo.", "support": "See you later today." },
+        { "target": "Até amanhã.", "support": "See you tomorrow." },
+        { "target": "Adeus.", "support": "Goodbye." }
+      ]
+    },
+    {
+      "id": "everyday-1-15",
+      "type": "build_phrase",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You did not catch what the hotel receptionist said. Ask her politely to say it again.",
+      "explanation": "Pode + infinitive is the polite (você) way to ask someone to do something; with a friend you would say Podes repetir?",
+      "tags": ["asking to repeat", "formal"],
+      "answer": ["Pode", "repetir,", "por", "favor?"],
+      "distractors": ["Podes", "repetes", "outra"]
+    },
+    {
+      "id": "everyday-1-16",
+      "type": "order_dialogue",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Two colleagues say goodbye as they leave the office on Friday evening.",
+      "explanation": "Bom fim de semana! is the standard Friday goodbye in Portugal, and Igualmente! ('you too') returns any good wish.",
+      "tags": ["wishes", "goodbyes"],
+      "lines": [
+        { "speaker": "A", "text": "Já vou embora. Bom fim de semana, Inês!" },
+        { "speaker": "B", "text": "Obrigada, igualmente!" },
+        { "speaker": "A", "text": "Até segunda-feira." },
+        { "speaker": "B", "text": "Até segunda. Bom descanso!" }
+      ]
+    },
+    {
+      "id": "everyday-1-17",
+      "type": "translate_word",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You say this when the other person speaks too fast. What does the highlighted verb mean?",
+      "explanation": "In Portugal 'to understand' is normally perceber, so não percebo = 'I don't understand'.",
+      "tags": ["asking to repeat"],
+      "direction": "toSupport",
+      "sentence": "Desculpe, não **percebo**.",
+      "word": "percebo",
+      "answer": "I understand",
+      "options": ["I understand", "I speak", "I hear", "I know"]
+    },
+    {
+      "id": "everyday-1-18",
+      "type": "match_pairs",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each short reaction with its English equivalent.",
+      "explanation": "These are the little reactions you hear all day in Portugal; Fixe! and Que chatice! are informal, for friends and colleagues.",
+      "tags": ["reactions", "informal"],
+      "pairs": [
+        { "target": "Que pena!", "support": "What a shame!" },
+        { "target": "Que chatice!", "support": "What a pain!" },
+        { "target": "Fixe!", "support": "Cool!" },
+        { "target": "A sério?", "support": "Really?" },
+        { "target": "Santinho!", "support": "Bless you!" }
+      ]
+    },
+    {
+      "id": "everyday-1-19",
+      "type": "build_phrase",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You held the lift door and the neighbour thanks you a lot. Reply that there is nothing to thank you for.",
+      "explanation": "Não tem de quê is a slightly warmer answer to a thank-you than De nada; it is a fixed phrase and never changes.",
+      "tags": ["thanks", "politeness"],
+      "answer": ["Não", "tem", "de", "quê."],
+      "distractors": ["tens", "que", "nada"]
+    },
+    {
+      "id": "everyday-1-20",
+      "type": "fill_gaps",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The metro is full and you have to get to the door. Ask the people in front of you to let you past.",
+      "explanation": "Com licença asks permission to get past; Desculpe would be for apologising after you had already bumped into someone.",
+      "tags": ["politeness", "transport"],
+      "template": "___ licença, posso ___?",
+      "gaps": [{ "answer": "Com" }, { "answer": "passar" }],
+      "wordBank": ["Com", "passar", "Sem", "Por", "passo", "entrar"]
+    },
+    {
+      "id": "everyday-1-21",
+      "type": "order_dialogue",
+      "topicId": "everyday-1",
+      "difficulty": 3,
+      "allowedModes": ["tiles"],
+      "prompt": "Ordering lunch in a small café in Lisbon. Put the exchange in order.",
+      "explanation": "Faz favor! is how you call a waiter in Portugal; Diga means 'go ahead, tell me', and Bom apetite! is said as the food is served.",
+      "tags": ["at the table", "restaurant"],
+      "lines": [
+        { "speaker": "A", "text": "Faz favor!" },
+        { "speaker": "B", "text": "Boa tarde. Diga." },
+        { "speaker": "A", "text": "Uma sopa e um sumo de laranja, por favor." },
+        { "speaker": "B", "text": "Aqui tem. Bom apetite!" },
+        { "speaker": "A", "text": "Obrigada!" }
+      ]
+    },
+    {
+      "id": "everyday-1-22",
+      "type": "match_pairs",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each apology (or answer to one) with its meaning.",
+      "explanation": "Desculpe is the formal form (você) and Desculpa the informal one (tu); Não faz mal is how you accept an apology.",
+      "tags": ["apologies"],
+      "pairs": [
+        { "target": "Desculpe.", "support": "Sorry. (to a stranger)" },
+        { "target": "Desculpa!", "support": "Sorry! (to a friend)" },
+        { "target": "Peço desculpa.", "support": "I do apologise." },
+        { "target": "Não faz mal.", "support": "Never mind." }
+      ]
+    },
+    {
+      "id": "everyday-1-23",
+      "type": "build_phrase",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend has an exam in ten minutes. Wish her good luck in the exam.",
+      "explanation": "Sorte is feminine, so it is Boa sorte; no exame is em + o exame ('in the exam').",
+      "tags": ["wishes"],
+      "answer": ["Boa", "sorte", "no", "exame!"],
+      "distractors": ["Bom", "sortes", "na"]
+    },
+    {
+      "id": "everyday-1-24",
+      "type": "translate_word",
+      "topicId": "everyday-1",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "It is Friday evening at the office. Choose the Portuguese for the highlighted word.",
+      "explanation": "Fim de semana is 'weekend'; férias means a holiday of several days and feriado a public holiday.",
+      "tags": ["wishes", "vocabulary"],
+      "direction": "toTarget",
+      "sentence": "You tell your colleague: have a good **weekend**!",
+      "word": "weekend",
+      "answer": "fim de semana",
+      "options": ["fim de semana", "feriado", "férias", "fim do dia"]
+    },
+    {
+      "id": "everyday-1-25",
+      "type": "order_dialogue",
+      "topicId": "everyday-1",
+      "difficulty": 3,
+      "allowedModes": ["tiles"],
+      "prompt": "Ana arrives ten minutes late for a job interview. Put the exchange in order.",
+      "explanation": "Desculpe o atraso is the set formula for arriving late in a formal situation, and Não faz mal is the standard 'never mind' reply.",
+      "tags": ["apologies", "formal"],
+      "lines": [
+        { "speaker": "A", "text": "Desculpe o atraso. O comboio parou." },
+        { "speaker": "B", "text": "Não faz mal. Entre, por favor." },
+        { "speaker": "A", "text": "Muito obrigada." },
+        { "speaker": "B", "text": "Sente-se aqui. Já vamos começar." }
+      ]
+    },
+    {
+      "id": "everyday-1-26",
+      "type": "match_pairs",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each phrase with the situation in which you would say it.",
+      "explanation": "Portuguese social formulas belong to a moment, not to a translation: choose them by the situation you are in.",
+      "tags": ["wishes", "reactions"],
+      "pairs": [
+        { "target": "Santinho!", "support": "The person next to you sneezes." },
+        { "target": "As melhoras!", "support": "A colleague is off sick." },
+        { "target": "Parabéns!", "support": "Your friend has just passed her exams." },
+        { "target": "Bom fim de semana!", "support": "You leave the office on Friday." },
+        { "target": "Boa sorte!", "support": "Your friend is about to take her driving test." }
+      ]
+    },
+    {
+      "id": "everyday-1-27",
+      "type": "build_phrase",
+      "topicId": "everyday-1",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You come into a meeting with your boss ten minutes late. Apologise formally for the delay.",
+      "explanation": "Peço desculpa pelo atraso is the formal apology for being late; pelo is por + o, and atraso is masculine.",
+      "tags": ["apologies", "formal"],
+      "answer": ["Peço", "desculpa", "pelo", "atraso."],
+      "distractors": ["pede", "por", "atrasado"]
+    },
+    {
+      "id": "everyday-1-28",
+      "type": "fill_gaps",
+      "topicId": "everyday-1",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "A colleague is flying to Faro tomorrow for two weeks off. Wish her a good trip and a good holiday.",
+      "explanation": "Bom/boa agrees with the noun: viagem is feminine, and férias is feminine and always plural, so boas férias.",
+      "tags": ["wishes", "agreement"],
+      "template": "Tenha uma ___ viagem e ___ férias!",
+      "gaps": [{ "answer": "boa" }, { "answer": "boas" }],
+      "wordBank": ["boa", "boas", "bom", "bons", "bem", "melhor"]
+    },
+    {
+      "id": "everyday-1-29",
+      "type": "order_dialogue",
+      "topicId": "everyday-1",
+      "difficulty": 3,
+      "allowedModes": ["tiles"],
+      "prompt": "Miguel opens the door to a guest arriving at his birthday party. Put the lines in order.",
+      "explanation": "Bem-vindo/Bem-vinda agrees with the person you are welcoming; Parabéns! is what you say to the person whose birthday it is.",
+      "tags": ["at the door", "wishes"],
+      "lines": [
+        { "speaker": "A", "text": "Boa noite! Bem-vinda! Entra." },
+        { "speaker": "B", "text": "Boa noite! Parabéns, Miguel!" },
+        { "speaker": "A", "text": "Obrigado!" },
+        { "speaker": "B", "text": "Este presente é para ti." },
+        { "speaker": "A", "text": "Que simpática! Muito obrigado." }
+      ]
+    },
+    {
+      "id": "everyday-1-30",
+      "type": "match_pairs",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each way of agreeing or answering with its English equivalent.",
+      "explanation": "Pois é agrees with what the other person has just said; Igualmente! sends a good wish back.",
+      "tags": ["agreeing"],
+      "pairs": [
+        { "target": "Está bem.", "support": "All right." },
+        { "target": "Claro!", "support": "Of course!" },
+        { "target": "Pois é.", "support": "Yeah, exactly." },
+        { "target": "Acho que não.", "support": "I don't think so." },
+        { "target": "Igualmente!", "support": "You too!" }
+      ]
+    },
+    {
+      "id": "everyday-1-31",
+      "type": "build_phrase",
+      "topicId": "everyday-1",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "On the phone: the caller asks for your colleague and you have to go and fetch her. Ask the caller to hold on.",
+      "explanation": "Um momento, por favor is the fixed phone formula for 'hold on'; momento is masculine, so um.",
+      "tags": ["phone", "politeness"],
+      "answer": ["Um", "momento,", "por", "favor."],
+      "distractors": ["Uma", "momentos", "favores"]
+    },
+    {
+      "id": "everyday-1-32",
+      "type": "fill_gaps",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At Santa Apolónia station: tell the man you don't speak Portuguese and ask whether he speaks English.",
+      "explanation": "With eu the -ar ending is -o (falo); o senhor takes the third-person form fala, the same form as você.",
+      "tags": ["asking for help", "formal"],
+      "template": "Desculpe, eu não ___ português. O senhor ___ inglês?",
+      "gaps": [{ "answer": "falo" }, { "answer": "fala" }],
+      "wordBank": ["falo", "fala", "falas", "falamos", "falam", "percebo"]
+    },
+    {
+      "id": "everyday-1-33",
+      "type": "order_dialogue",
+      "topicId": "everyday-1",
+      "difficulty": 3,
+      "allowedModes": ["tiles"],
+      "prompt": "At a council office counter: the clerk speaks very fast and the visitor is lost. Put the exchange in order.",
+      "explanation": "Perceber is the usual verb for 'understand' in Portugal, so não percebo; Pode repetir mais devagar? asks for the same words again, but slower.",
+      "tags": ["asking to repeat", "formal"],
+      "lines": [
+        { "speaker": "A", "text": "Tem de preencher este papel e assinar aqui." },
+        { "speaker": "B", "text": "Desculpe, não percebo. Pode repetir mais devagar?" },
+        { "speaker": "A", "text": "Claro. Escreva o nome aqui... e assine aqui." },
+        { "speaker": "B", "text": "Ah, agora percebi. Muito obrigado." }
+      ]
+    },
+    {
+      "id": "everyday-1-34",
+      "type": "match_pairs",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each phrase for asking for help with the language to its English meaning.",
+      "explanation": "These phrases keep a conversation alive when you are lost; they all use the polite form (pode, fala), which is what you need with strangers.",
+      "tags": ["asking for help", "asking to repeat"],
+      "pairs": [
+        { "target": "Não percebo.", "support": "I don't understand." },
+        { "target": "Pode repetir, por favor?", "support": "Could you say that again, please?" },
+        {
+          "target": "Pode falar mais devagar, por favor?",
+          "support": "Could you speak more slowly, please?"
+        },
+        {
+          "target": "Como se diz isto em português?",
+          "support": "How do you say this in Portuguese?"
+        },
+        { "target": "Fala inglês?", "support": "Do you speak English?" }
+      ]
+    },
+    {
+      "id": "everyday-1-35",
+      "type": "build_phrase",
+      "topicId": "everyday-1",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You are pointing at something in a shop and you don't know its Portuguese name. Ask how to say it in Portuguese.",
+      "explanation": "Como se diz ...? uses the impersonal se ('how does one say'); watch out for em português, never 'no português'.",
+      "tags": ["asking for help"],
+      "answer": ["Como", "se", "diz", "isto", "em", "português?"],
+      "distractors": ["te", "dizes", "no"]
+    },
+    {
+      "id": "everyday-1-36",
+      "type": "fill_gaps",
+      "topicId": "everyday-1",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Two friends hear that Inês is not coming to dinner: one reacts, the other agrees.",
+      "explanation": "Que + noun makes an exclamation (Que pena!), and Pois é is the very Portuguese way of agreeing with what has just been said.",
+      "tags": ["reactions", "agreeing"],
+      "template": "— A Inês não vem. — ___ pena! — ___ é, ela está doente.",
+      "gaps": [{ "answer": "Que" }, { "answer": "Pois" }],
+      "wordBank": ["Que", "Pois", "Qual", "Quê", "Então", "Já"]
+    },
+    {
+      "id": "everyday-1-37",
+      "type": "order_dialogue",
+      "topicId": "everyday-1",
+      "difficulty": 3,
+      "allowedModes": ["tiles"],
+      "prompt": "Two friends find out that Inês will not be at dinner because she is ill.",
+      "explanation": "Que pena! reacts to disappointing news and Que chatice! to something annoying; As melhoras! is the wish you send to someone who is ill.",
+      "tags": ["reactions", "informal"],
+      "lines": [
+        { "speaker": "A", "text": "Já sabes? A Inês não vem ao jantar." },
+        { "speaker": "B", "text": "Que pena! Porquê?" },
+        { "speaker": "A", "text": "Está doente, com febre." },
+        { "speaker": "B", "text": "Que chatice! Dá-lhe as melhoras." }
+      ]
+    },
+    {
+      "id": "everyday-1-38",
+      "type": "match_pairs",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each phrase with the situation: on the phone, at the door, or in a café.",
+      "explanation": "Estou? is the normal way to answer the phone in Portugal; Faz favor! is how you call a waiter or a shop assistant over.",
+      "tags": ["phone", "at the door"],
+      "pairs": [
+        { "target": "Estou?", "support": "You pick up the phone." },
+        { "target": "Um momento, por favor.", "support": "You ask the caller to hold on." },
+        { "target": "Bem-vindo!", "support": "You open the door to a male guest." },
+        { "target": "Faz favor!", "support": "You call the waiter over in a café." },
+        {
+          "target": "Há quanto tempo!",
+          "support": "You meet a friend you have not seen for a year."
+        }
+      ]
+    },
+    {
+      "id": "everyday-1-39",
+      "type": "build_phrase",
+      "topicId": "everyday-1",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The clerk at the counter is speaking very fast. Ask her politely to speak more slowly.",
+      "explanation": "Mais devagar means 'more slowly'; pode + infinitive is the polite request form you use with people you address as você.",
+      "tags": ["asking to repeat", "formal"],
+      "answer": ["Pode", "falar", "mais", "devagar,", "por", "favor?"],
+      "distractors": ["Podes", "falas", "devagarinho"]
+    },
+    {
+      "id": "everyday-1-40",
+      "type": "order_dialogue",
+      "topicId": "everyday-1",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Two neighbours meet in the street, but one of them is in a hurry.",
+      "explanation": "Tudo bem? is the everyday informal 'how are you?'; Até logo! means you expect to see the person again later the same day.",
+      "tags": ["small talk", "goodbyes"],
+      "lines": [
+        { "speaker": "A", "text": "Olá, Pedro! Há quanto tempo!" },
+        { "speaker": "B", "text": "Olá! Tudo bem?" },
+        { "speaker": "A", "text": "Está tudo bem, e tu?" },
+        { "speaker": "B", "text": "Tudo. Estou com pressa, desculpa." },
+        { "speaker": "A", "text": "Não faz mal. Até logo!" }
+      ]
+    }
+  ]
+}
