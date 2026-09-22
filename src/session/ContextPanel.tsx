@@ -62,7 +62,7 @@ export function ContextPanel({ info, onStart }: ContextPanelProps) {
         )}
       </div>
 
-      <div className="safe-bottom sticky bottom-0 border-t border-line bg-sheet/95 px-4 py-3 backdrop-blur">
+      <div className="sticky bottom-0 border-t border-line bg-sheet/95 px-4 pt-3 pb-[calc(var(--spacing)*3+env(safe-area-inset-bottom))] backdrop-blur">
         <button
           type="button"
           onClick={onStart}

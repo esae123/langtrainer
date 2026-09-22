@@ -68,9 +68,11 @@ export function SummaryPanel({
       return { key: 'session.change.maintenance' };
     }
     if (after.firstCompletedAt !== undefined && after.firstCompletedAt >= state.startedAt) {
+      // The first review is scheduled relative to the moment the topic was completed
+      // (mid-session), so measure the interval from there rather than from the summary.
       return {
         key: 'session.change.firstCompleted',
-        days: after.nextReviewAt ? days(endedAt, after.nextReviewAt) : 7,
+        days: after.nextReviewAt ? days(after.firstCompletedAt, after.nextReviewAt) : 7,
       };
     }
     if (!outcome.srsApplied || after.nextReviewAt === undefined) return null;
@@ -186,7 +188,7 @@ export function SummaryPanel({
         )}
       </div>
 
-      <div className="safe-bottom sticky bottom-0 flex flex-col gap-2 border-t border-line bg-sheet/95 px-4 py-3 backdrop-blur">
+      <div className="sticky bottom-0 flex flex-col gap-2 border-t border-line bg-sheet/95 px-4 pt-3 pb-[calc(var(--spacing)*3+env(safe-area-inset-bottom))] backdrop-blur">
         {(wrong > 0 || !practice) && (
           <div className="flex gap-3">
             {wrong > 0 && (

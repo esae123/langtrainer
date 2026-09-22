@@ -89,18 +89,22 @@ export function useSessionRunner(
     [program, settings.sessionLength, settings.inputShares]
   );
 
-  // Plan a new session, or pick up the persisted one. Runs once per mount.
+  // Plan a new session, or pick up the persisted one. `bootstrappedRef` keeps this to
+  // exactly one plan per mount (it survives StrictMode's mount → cleanup → mount, and
+  // stops a new `planInput` identity from re-planning mid-session). Because of that the
+  // async body deliberately has no "cancelled" guard: under StrictMode the only run is
+  // the one started before the simulated unmount, so bailing out of its dispatch would
+  // leave the screen stuck on "Preparing your session…" forever. Dispatching into an
+  // unmounted reducer is a no-op in React 19, so letting it through is safe.
   useEffect(() => {
     if (!program || bootstrappedRef.current) return;
     bootstrappedRef.current = true;
-    let cancelled = false;
 
     void (async () => {
       const now = Date.now();
       rngRef.current = mulberry32(now >>> 0);
       const rows = await db.topicProgress.where('programId').equals(program.id).toArray();
       progressRef.current = rows;
-      if (cancelled) return;
 
       if (practicePlan) {
         dispatch({ type: 'init', state: initSessionState(practicePlan, now) });
@@ -109,19 +113,15 @@ export function useSessionRunner(
 
       if (resume) {
         const stored = await readActiveSession(now);
-        if (stored && !cancelled) {
+        if (stored) {
           dispatch({ type: 'init', state: stored.state });
           return;
         }
       }
       const input = planInput(now);
-      if (!input || cancelled) return;
+      if (!input) return;
       dispatch({ type: 'init', state: initSessionState(planSession(input), now) });
     })();
-
-    return () => {
-      cancelled = true;
-    };
   }, [program, resume, planInput, practicePlan]);
 
   // Persist on every transition; drop the snapshot once the summary is reached.
@@ -173,7 +173,7 @@ export function useSessionRunner(
       const result = await db.transaction('rw', db.topicProgress, async () => {
         const rows = await Promise.all(topicIds.map((id) => db.topicProgress.get(id)));
         const present = rows.filter((row): row is TopicProgress => row !== undefined);
-        const finished = finishSession(present, summaries, now);
+        const finished = finishSession(present, summaries, now, startedAt);
         await db.topicProgress.bulkPut(finished.rows);
         return finished;
       });

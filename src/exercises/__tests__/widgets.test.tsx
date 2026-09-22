@@ -141,8 +141,9 @@ describe('TypingInput', () => {
     render(<TypingHarness />);
     expect(screen.getByText('Accents — tap to insert')).toBeInTheDocument();
     const bar = screen.getByRole('group', { name: 'Accented characters' });
-    // Six columns on a narrow screen, twelve from 480px up — never a scrolling row.
-    expect(bar).toHaveClass('grid', 'grid-cols-6', 'min-[480px]:grid-cols-12');
+    // Six columns on a narrow screen, twelve from 560px up (keeping keys ≥ 40px wide)
+    // — never a scrolling row.
+    expect(bar).toHaveClass('grid', 'grid-cols-6', 'min-[560px]:grid-cols-12');
     expect(bar.className).not.toContain('overflow-x-auto');
   });
 });

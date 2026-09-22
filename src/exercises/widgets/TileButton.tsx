@@ -58,7 +58,7 @@ export function TileButton({
           {badge}
         </span>
       )}
-      <span className="min-w-0">{label}</span>
+      <span className="min-w-0 break-words">{label}</span>
     </button>
   );
 }

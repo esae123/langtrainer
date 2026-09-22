@@ -1,3 +1,4 @@
+import { StrictMode } from 'react';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import App from '../../App';
@@ -56,6 +57,19 @@ afterEach(async () => {
   await Promise.all(db.tables.map((table) => table.clear()));
 });
 
+/**
+ * Every flow runs under StrictMode, which double-invokes effects (mount → cleanup →
+ * mount) exactly like `npm run dev`: the session bootstrap has to survive that instead
+ * of leaving the screen on "Preparing your session…".
+ */
+function renderApp() {
+  return render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+}
+
 async function startSession() {
   fireEvent.click(await screen.findByRole('button', { name: /start exercises/i }));
 }
@@ -76,7 +90,7 @@ async function answerCurrent(kind: 'option' | 'tiles', labels: string[], keepFee
 
 describe('/session happy path', () => {
   it('runs context → three exercises → summary and records everything', async () => {
-    render(<App />);
+    renderApp();
 
     // Context screen first, because the topic is new.
     expect(await screen.findByText('Regular -ar verbs')).toBeInTheDocument();
@@ -143,7 +157,7 @@ describe('/session happy path', () => {
   });
 
   it('records only answered items when the learner stops mid-session', async () => {
-    render(<App />);
+    renderApp();
     await startSession();
     await answerCurrent('option', ['trabalho']);
     await waitFor(async () => expect(await db.topicProgress.get('t1')).toBeTruthy());
@@ -160,7 +174,7 @@ describe('/session happy path', () => {
   });
 
   it('shows a wrong answer with the correct one', async () => {
-    render(<App />);
+    renderApp();
     await startSession();
     fireEvent.click(await screen.findByRole('radio', { name: 'trabalhas' }));
     fireEvent.click(screen.getByRole('button', { name: 'Check' }));
@@ -179,7 +193,7 @@ describe('/session happy path', () => {
   });
 
   it('resumes a persisted session from the Learn screen', async () => {
-    const first = render(<App />);
+    const first = renderApp();
     await startSession();
     await answerCurrent('option', ['trabalho']);
     expect(await screen.findByText('2/3')).toBeInTheDocument();
@@ -188,7 +202,7 @@ describe('/session happy path', () => {
     first.unmount();
 
     window.location.hash = '#/';
-    const second = render(<App />);
+    const second = renderApp();
     fireEvent.click(await screen.findByRole('button', { name: 'Resume' }));
     // Straight back to the second exercise, with the first answer still counted.
     expect(await screen.findByText('2/3')).toBeInTheDocument();
@@ -199,7 +213,7 @@ describe('/session happy path', () => {
   });
 
   it('retries the mistakes in a practice session without touching progress', async () => {
-    render(<App />);
+    renderApp();
     await startSession();
 
     // First exercise wrong, the other two right.
@@ -255,7 +269,7 @@ describe('/session happy path', () => {
   });
 
   it('offers to discard an unfinished session', async () => {
-    render(<App />);
+    renderApp();
     await startSession();
     await answerCurrent('option', ['trabalho']);
     await waitFor(async () => expect(await readActiveSession()).not.toBeNull());

@@ -10,6 +10,7 @@ import {
   type TopicProgressRow,
 } from '../db/db';
 import { isRecord } from '../lib/isRecord';
+import { ACTIVE_SESSION_KEY } from '../session/activeSession';
 import { DEFAULT_SETTINGS, type Settings } from '../settings/settings';
 import { loadSettings, updateSettings } from '../settings/settingsStore';
 
@@ -53,9 +54,11 @@ export async function buildBackup(): Promise<BackupFile> {
     })
   );
 
-  const sanitizedSettings = (data.settings as SettingsRow[]).map((row) =>
-    row.key === SETTINGS_ROW_KEY ? { ...row, value: stripApiKey(row.value) } : row
-  );
+  // The in-progress session snapshot is device- and moment-specific (it points at a
+  // plan built from the current program), so it never travels in a backup.
+  const sanitizedSettings = (data.settings as SettingsRow[])
+    .filter((row) => row.key !== ACTIVE_SESSION_KEY)
+    .map((row) => (row.key === SETTINGS_ROW_KEY ? { ...row, value: stripApiKey(row.value) } : row));
 
   return {
     app: BACKUP_APP_ID,
@@ -144,7 +147,18 @@ export async function importBackup(file: File): Promise<void> {
 
   await db.transaction('rw', db.tables, async () => {
     await Promise.all(db.tables.map((table) => table.clear()));
-    await Promise.all(db.tables.map((table) => table.bulkPut(backupData[table.name])));
+    await Promise.all(
+      db.tables.map((table) => {
+        const rows = backupData[table.name];
+        // Older backups may still carry an activeSession row; never restore it.
+        if (table.name === 'settings') {
+          return table.bulkPut(
+            (rows as SettingsRow[]).filter((row) => row?.key !== ACTIVE_SESSION_KEY)
+          );
+        }
+        return table.bulkPut(rows);
+      })
+    );
 
     const importedSettingsRow = backup.data.settings.find((row) => row.key === SETTINGS_ROW_KEY);
     const merged: Settings = {

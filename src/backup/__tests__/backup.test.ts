@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { db } from '../../db/db';
+import { ACTIVE_SESSION_KEY } from '../../session/activeSession';
 import { loadSettings, updateSettings } from '../../settings/settingsStore';
 import { buildBackup, importBackup, parseBackup } from '../backup';
 
@@ -86,6 +87,30 @@ describe('buildBackup', () => {
     expect(settingsRow).toBeDefined();
     expect(settingsRow?.value).not.toHaveProperty('geminiApiKey');
     expect(JSON.stringify(backup)).not.toContain('super-secret-key');
+  });
+
+  it('leaves the in-progress session snapshot out of the export', async () => {
+    await seedFixtureData('key');
+    await db.settings.put({
+      key: ACTIVE_SESSION_KEY,
+      value: { savedAt: 1, state: { sessionId: 's-live' } },
+    });
+
+    const backup = await buildBackup();
+    expect(backup.data.settings.map((row) => row.key)).not.toContain(ACTIVE_SESSION_KEY);
+    expect(JSON.stringify(backup)).not.toContain('s-live');
+  });
+
+  it('ignores an activeSession row coming from an older backup', async () => {
+    const backup = await buildBackup();
+    backup.data.settings.push({
+      key: ACTIVE_SESSION_KEY,
+      value: { savedAt: 1, state: { sessionId: 's-stale' } },
+    });
+
+    const file = new File([JSON.stringify(backup)], 'backup.json', { type: 'application/json' });
+    await importBackup(file);
+    expect(await db.settings.get(ACTIVE_SESSION_KEY)).toBeUndefined();
   });
 
   it('tags the export with the app id and schema version', async () => {

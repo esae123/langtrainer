@@ -4,7 +4,8 @@ import { ACCENT_KEYS } from './accents';
 
 /**
  * Accent keys as a helper strip under the answer field (docs/stage-3b-spec.md §2):
- * two rows of six on a narrow phone, one row of twelve from 480px up, so it always
+ * two rows of six on a narrow phone, one row of twelve from 560px up (below that a
+ * single row would make the keys narrower than 40px), so it always
  * fits the viewport without horizontal scrolling. Deliberately subdued.
  */
 export function AccentBar({ onInsert }: { onInsert: (char: string) => void }) {
@@ -15,7 +16,7 @@ export function AccentBar({ onInsert }: { onInsert: (char: string) => void }) {
       <div
         role="group"
         aria-label={t('session.accentBar')}
-        className="grid grid-cols-6 gap-1 min-[480px]:grid-cols-12"
+        className="grid grid-cols-6 gap-1 min-[560px]:grid-cols-12"
       >
         {ACCENT_KEYS.map((char) => (
           <button

@@ -221,6 +221,71 @@ describe('finishSession', () => {
       NOW
     );
     expect(bad.rows[0]).toMatchObject({ status: 'maintenance', nextReviewAt: NOW + 60 * DAY_MS });
+    // A topic in maintenance has nowhere further to drop, so the counter stays put.
+    expect(bad.rows[0].failedReviewsInARow).toBe(0);
+  });
+
+  it('does not review a topic that this very session completed', () => {
+    // plan.ts fills the review block from the current topic when nothing is due, so a
+    // topic can cross 20 distinct exercises and then get review-block attempts.
+    const startedAt = NOW - 10 * 60 * 1000;
+    const completed = applyAttempt(
+      makeProgress('t1', {
+        status: 'learning',
+        seenExerciseIds: Array.from({ length: COMPLETION_THRESHOLD - 1 }, (_, i) => `e${i}`),
+      }),
+      'e-last',
+      true,
+      NOW - 60 * 1000
+    );
+    expect(completed).toMatchObject({ status: 'review', reviewStage: 1 });
+
+    const { rows: updated, outcomes } = finishSession(
+      [completed],
+      reviewAttempts('t1', perfect),
+      NOW,
+      startedAt
+    );
+    // Still the first review in 7 days from the completion, not stage 2 in 30 days.
+    expect(updated[0]).toMatchObject({
+      status: 'review',
+      reviewStage: 1,
+      nextReviewAt: completed.firstCompletedAt! + 7 * DAY_MS,
+    });
+    expect(updated[0].lastReviewedAt).toBeUndefined();
+    expect(outcomes[0].srsApplied).toBe(false);
+  });
+
+  it('does not treat review-block fallback items as a review of a learning topic', () => {
+    const rows = [makeProgress('t1', { status: 'learning' })];
+    const { rows: updated, outcomes } = finishSession(
+      rows,
+      reviewAttempts('t1', perfect),
+      NOW,
+      NOW - 1000
+    );
+    expect(updated[0].lastReviewedAt).toBeUndefined();
+    expect(updated[0]).toMatchObject({ status: 'learning', reviewStage: 0 });
+    expect(outcomes[0]).toMatchObject({ reviewed: true, srsApplied: false });
+  });
+
+  it('still reviews a topic completed in an earlier session', () => {
+    const rows = [
+      makeProgress('t1', {
+        status: 'review',
+        reviewStage: 1,
+        firstCompletedAt: NOW - 30 * DAY_MS,
+        nextReviewAt: NOW - DAY_MS,
+      }),
+    ];
+    const { rows: updated } = finishSession(
+      rows,
+      reviewAttempts('t1', perfect),
+      NOW,
+      NOW - 10 * 60 * 1000
+    );
+    expect(updated[0]).toMatchObject({ reviewStage: 2, nextReviewAt: NOW + 30 * DAY_MS });
+    expect(updated[0].lastReviewedAt).toBe(NOW);
   });
 
   it('leaves untouched rows alone and never mutates its input', () => {

@@ -9,6 +9,8 @@ export const COMPLETION_THRESHOLD = 20;
 export const MIN_REVIEW_ATTEMPTS = 3;
 /** Failed reviews in a row at stage 3 before a topic drops to maintenance. */
 export const MAINTENANCE_AFTER_FAILURES = 3;
+/** Statuses a topic can only have after it has been completed once. */
+const COMPLETED_STATUSES = new Set<TopicStatus>(['review', 'mastered', 'maintenance']);
 
 export function emptyTopicProgress(topicId: string, programId: string): TopicProgress {
   return {
@@ -143,7 +145,8 @@ function applySrs(row: TopicProgress, perfect: boolean, now: number): void {
       row.nextReviewAt = undefined;
       row.failedReviewsInARow = 0;
     } else {
-      row.failedReviewsInARow += 1;
+      // `failedReviewsInARow` only drives the stage-3 → maintenance rule, and a topic
+      // already in maintenance has nowhere further to drop, so it is left alone.
       row.nextReviewAt = now + 60 * DAY_MS;
     }
   }
@@ -151,13 +154,19 @@ function applySrs(row: TopicProgress, perfect: boolean, now: number): void {
 
 /**
  * End-of-session bookkeeping: one history entry per touched topic, `lastReviewedAt` for
- * topics that appeared in the review block, and SRS transitions for reviewed topics with
- * at least three attempts in this session.
+ * topics that were already completed and appeared in the review block, and SRS
+ * transitions for those topics when they got at least three review-block attempts.
+ *
+ * Topics completed *during* this session, and topics still `learning`, are skipped:
+ * when nothing is due, `plan.ts` fills the review block from the current topic, so a
+ * brand-new stage 1 / +7d schedule (just set by `applyAttempt`) must not immediately
+ * jump to stage 2 / +30d. `sessionStartedAt` is what tells the two apart.
  */
 export function finishSession(
   rows: TopicProgress[],
   sessionAttempts: SessionAttemptSummary[],
-  now: number
+  now: number,
+  sessionStartedAt = now
 ): FinishSessionResult {
   const byId = new Map(rows.map((row) => [row.topicId, row]));
   const touchedOrder: string[] = [];
@@ -180,9 +189,16 @@ export function finishSession(
 
     const reviewAttempts = all.filter((a) => a.block === 'review');
     const reviewed = reviewAttempts.length > 0;
-    if (reviewed) row.lastReviewedAt = now;
+    // Only a topic that was already completed when the session started can be reviewed.
+    // `applyAttempt` may have completed this one a moment ago (its brand-new stage 1 /
+    // +7d must stand), and a `learning` topic only ever gets review-block items because
+    // planning falls back to the current topic when nothing is due.
+    const completedThisSession =
+      existing.firstCompletedAt !== undefined && existing.firstCompletedAt >= sessionStartedAt;
+    const wasCompleted = !completedThisSession && COMPLETED_STATUSES.has(existing.status);
+    if (reviewed && wasCompleted) row.lastReviewedAt = now;
 
-    const srsApplied = reviewAttempts.length >= MIN_REVIEW_ATTEMPTS;
+    const srsApplied = wasCompleted && reviewAttempts.length >= MIN_REVIEW_ATTEMPTS;
     if (srsApplied) {
       applySrs(
         row,

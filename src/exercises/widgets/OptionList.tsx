@@ -33,7 +33,7 @@ export function OptionList({ options, value, onChange, label, columns }: OptionL
               hapticTap();
               onChange(option);
             }}
-            className={`flex min-h-12 items-center justify-center rounded-xl border px-3 py-2 text-center text-[15px] font-medium shadow-sm transition-transform active:scale-[0.98] ${
+            className={`flex min-h-12 items-center justify-center break-words rounded-xl border px-3 py-2 text-center text-[15px] font-medium shadow-sm transition-transform active:scale-[0.98] ${
               selected
                 ? 'border-accent bg-accent-soft text-text ring-1 ring-accent'
                 : 'border-line bg-sheet text-text'

@@ -1,4 +1,4 @@
-import { useId } from 'react';
+import { useEffect, useId, useRef } from 'react';
 import { Check, NotebookPen, X } from 'lucide-react';
 import type { Exercise } from '../content/types';
 import { gradePairs, type SelfGrade } from '../engine/check';
@@ -55,6 +55,29 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
   const titleId = useId();
   const { result, awaitingSelfGrade } = feedback;
   const accentsOnly = result.correct && result.diacriticsOk === false;
+
+  // Escape continues, just like Escape closes the shared Sheet. While the learner still
+  // has to self-grade there is nothing to dismiss to, so Escape is ignored then.
+  useEffect(() => {
+    if (awaitingSelfGrade) return;
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') onContinue();
+    }
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [awaitingSelfGrade, onContinue]);
+
+  // Hand focus back to whatever had it (the exercise area) when the sheet goes away,
+  // so keyboard users don't land back at the top of the document.
+  const restoreFocusRef = useRef<HTMLElement | null>(
+    document.activeElement instanceof HTMLElement ? document.activeElement : null
+  );
+  useEffect(() => {
+    const previous = restoreFocusRef.current;
+    return () => {
+      if (previous && document.contains(previous)) previous.focus();
+    };
+  }, []);
   // match_pairs is graded pair by pair instead of as one answer string.
   const matchPairs = exercise.type === 'match_pairs' ? exercise : null;
   const pairs = matchPairs && feedback.response?.kind === 'pairs' ? feedback.response.pairs : null;
@@ -142,10 +165,12 @@ export function FeedbackSheet({ exercise, feedback, onContinue, onSelfGrade }: F
           <div className="mt-4">
             <p className="mb-2 text-sm font-medium text-text">{t('session.selfGradeQuestion')}</p>
             <div className="flex gap-2">
-              {SELF_GRADES.map(({ grade, labelKey }) => (
+              {SELF_GRADES.map(({ grade, labelKey }, i) => (
                 <button
                   key={grade}
                   type="button"
+                  // Focus starts on the first option so the sheet is reachable by keyboard.
+                  autoFocus={i === 0}
                   onClick={() => onSelfGrade(grade)}
                   className={`min-h-12 flex-1 rounded-xl text-sm font-semibold ${
                     grade === 'no' ? 'border border-line text-text' : 'bg-accent text-accent-ink'

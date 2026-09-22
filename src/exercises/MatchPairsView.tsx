@@ -6,17 +6,23 @@ import { hapticTap } from '../lib/haptics';
 import { TileButton } from './widgets/TileButton';
 import type { ExerciseViewProps } from './types';
 
+/**
+ * One link, by column position rather than by text: two pairs may well share the same
+ * translation ("you speak" for both `falas` and `fala`), so positions are what make an
+ * item unique.
+ */
 interface Link {
-  target: string;
-  support: string;
+  target: number;
+  support: number;
 }
 
 /**
  * match_pairs: two shuffled columns with free pairing (docs/stage-3b-spec.md §1). Any
  * target can be linked to any translation — mis-taps cost nothing. Linked items carry
- * the same number badge on both sides; tapping either one breaks the link again. The
- * answer is only reported once every item is paired, so Check stays disabled until then
- * and the whole set is graded in one go.
+ * the same number badge on both sides; tapping either one breaks the link again, and
+ * the freed slot keeps its number so the other badges never renumber. The answer is
+ * only reported once every item is paired, so Check stays disabled until then and the
+ * whole set is graded in one go.
  */
 export function MatchPairsView({
   exercise,
@@ -42,56 +48,72 @@ export function MatchPairsView({
     [exercise.pairs, rng]
   );
 
-  const [selectedTarget, setSelectedTarget] = useState<string | null>(null);
-  const [selectedSupport, setSelectedSupport] = useState<string | null>(null);
-  const [links, setLinks] = useState<Link[]>([]);
+  const [selectedTarget, setSelectedTarget] = useState<number | null>(null);
+  const [selectedSupport, setSelectedSupport] = useState<number | null>(null);
+  /** One slot per pair; `null` once its link has been undone. */
+  const [slots, setSlots] = useState<(Link | null)[]>(() => exercise.pairs.map(() => null));
 
-  const done = links.length === exercise.pairs.length;
+  const done = slots.every((slot) => slot !== null);
+
   useEffect(() => {
-    onChange(done ? { kind: 'pairs', pairs: links } : null);
-  }, [done, links, onChange]);
+    const linked = slots.filter((slot): slot is Link => slot !== null);
+    onChange(
+      linked.length === slots.length
+        ? {
+            kind: 'pairs',
+            pairs: linked.map((slot) => ({
+              target: targets[slot.target],
+              support: supports[slot.support],
+            })),
+          }
+        : null
+    );
+  }, [slots, targets, supports, onChange]);
 
-  const linkOfTarget = (target: string) => links.findIndex((link) => link.target === target);
-  const linkOfSupport = (support: string) => links.findIndex((link) => link.support === support);
+  const slotOfTarget = (index: number) => slots.findIndex((slot) => slot?.target === index);
+  const slotOfSupport = (index: number) => slots.findIndex((slot) => slot?.support === index);
 
-  function connect(target: string, support: string) {
-    setLinks([...links, { target, support }]);
+  function connect(target: number, support: number) {
+    const free = slots.findIndex((slot) => slot === null);
+    if (free === -1) return;
+    setSlots(slots.map((slot, i) => (i === free ? { target, support } : slot)));
     setSelectedTarget(null);
     setSelectedSupport(null);
   }
 
-  function disconnect(index: number) {
-    setLinks(links.filter((_, i) => i !== index));
+  /** Frees the slot in place, so the remaining badge numbers stay put. */
+  function disconnect(slotIndex: number) {
+    setSlots(slots.map((slot, i) => (i === slotIndex ? null : slot)));
     setSelectedTarget(null);
     setSelectedSupport(null);
   }
 
-  function tapTarget(target: string) {
+  function tapTarget(index: number) {
     hapticTap();
-    const linked = linkOfTarget(target);
-    if (linked !== -1) {
-      disconnect(linked);
+    const slot = slotOfTarget(index);
+    if (slot !== -1) {
+      disconnect(slot);
       return;
     }
     if (selectedSupport !== null) {
-      connect(target, selectedSupport);
+      connect(index, selectedSupport);
       return;
     }
-    setSelectedTarget(selectedTarget === target ? null : target);
+    setSelectedTarget(selectedTarget === index ? null : index);
   }
 
-  function tapSupport(support: string) {
+  function tapSupport(index: number) {
     hapticTap();
-    const linked = linkOfSupport(support);
-    if (linked !== -1) {
-      disconnect(linked);
+    const slot = slotOfSupport(index);
+    if (slot !== -1) {
+      disconnect(slot);
       return;
     }
     if (selectedTarget !== null) {
-      connect(selectedTarget, support);
+      connect(selectedTarget, index);
       return;
     }
-    setSelectedSupport(selectedSupport === support ? null : support);
+    setSelectedSupport(selectedSupport === index ? null : index);
   }
 
   return (
@@ -99,45 +121,43 @@ export function MatchPairsView({
       <p className="text-xs text-muted">{done ? t('session.matchDone') : t('session.matchHint')}</p>
       <div className="grid grid-cols-2 gap-3">
         <div className="flex flex-col gap-2" aria-label={t('session.matchTargets')} role="group">
-          {targets.map((target) => {
-            const linked = linkOfTarget(target);
+          {targets.map((target, index) => {
+            const slot = slotOfTarget(index);
             return (
               <TileButton
-                key={target}
+                key={index}
                 label={target}
-                variant={linked !== -1 ? 'placed' : selectedTarget === target ? 'selected' : 'bank'}
+                variant={slot !== -1 ? 'placed' : selectedTarget === index ? 'selected' : 'bank'}
                 ariaLabel={
-                  linked !== -1
-                    ? t('session.matchUnlink', { item: target, number: linked + 1 })
+                  slot !== -1
+                    ? t('session.matchUnlink', { item: target, number: slot + 1 })
                     : target
                 }
-                ariaPressed={selectedTarget === target || linked !== -1}
-                badge={linked === -1 ? undefined : linked + 1}
+                ariaPressed={selectedTarget === index || slot !== -1}
+                badge={slot === -1 ? undefined : slot + 1}
                 className="w-full"
-                onClick={() => tapTarget(target)}
+                onClick={() => tapTarget(index)}
               />
             );
           })}
         </div>
         <div className="flex flex-col gap-2" aria-label={t('session.matchSupports')} role="group">
-          {supports.map((support) => {
-            const linked = linkOfSupport(support);
+          {supports.map((support, index) => {
+            const slot = slotOfSupport(index);
             return (
               <TileButton
-                key={support}
+                key={index}
                 label={support}
-                variant={
-                  linked !== -1 ? 'placed' : selectedSupport === support ? 'selected' : 'bank'
-                }
+                variant={slot !== -1 ? 'placed' : selectedSupport === index ? 'selected' : 'bank'}
                 ariaLabel={
-                  linked !== -1
-                    ? t('session.matchUnlink', { item: support, number: linked + 1 })
+                  slot !== -1
+                    ? t('session.matchUnlink', { item: support, number: slot + 1 })
                     : support
                 }
-                ariaPressed={selectedSupport === support || linked !== -1}
-                badge={linked === -1 ? undefined : linked + 1}
+                ariaPressed={selectedSupport === index || slot !== -1}
+                badge={slot === -1 ? undefined : slot + 1}
                 className="w-full"
-                onClick={() => tapSupport(support)}
+                onClick={() => tapSupport(index)}
               />
             );
           })}

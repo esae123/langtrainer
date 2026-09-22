@@ -97,7 +97,7 @@ Per type:
 | `translate_word`                      | `answer`                                                                                                                         |
 | `number_sequence`                     | `answerWords[0]`, the rest are accepted variants                                                                                 |
 | `find_error`                          | `index === wrongIndex` **and** the replacement matches `correction` under the mode's rules                                       |
-| `match_pairs`                         | free pairing: the response is the links the learner made, correct iff every item is paired **and** every pair is right          |
+| `match_pairs`                         | free pairing: the response is the links the learner made, correct iff every item is paired **and** every pair is right           |
 | `order_dialogue`                      | the placed order equals the natural order                                                                                        |
 | `about_me`                            | not graded automatically: the learner's self-grade (Yes/Mostly = correct) and `selfGraded: true` on the attempt                  |
 
@@ -120,10 +120,14 @@ a wrong answer, removed on a right one) and moves `new → learning`. A topic is
 **completed** the moment it has **20 distinct answered exercises** — status `review`,
 `reviewStage: 1`, `firstCompletedAt = now`, `nextReviewAt = now + 7 days`.
 
-`finishSession(rows, attempts, now)` runs once at the summary. For every topic touched it
-appends a `history` entry `{ at, correct, total }`, and for topics that appeared in the
-**review block** it sets `lastReviewedAt = now`. If such a topic had **at least 3 attempts
-in the review block** this session, its SRS state moves (100% = every one of those attempts
+`finishSession(rows, attempts, now, sessionStartedAt)` runs once at the summary. For every
+topic touched it appends a `history` entry `{ at, correct, total }`. A topic only counts as
+**reviewed** when it was already completed **before this session** (`firstCompletedAt <
+sessionStartedAt` and a completed status) — planning falls back to the current topic when
+nothing is due, so review-block items on a `learning` topic, or on one completed minutes
+ago, are just extra practice: they set neither `lastReviewedAt` nor an SRS transition, and
+a fresh stage 1 / +7d schedule stays intact. For a genuinely reviewed topic with **at least
+3 attempts in the review block**, the SRS state moves (100% = every one of those attempts
 correct):
 
 | current           | result | next                                                                                                                                |
@@ -133,7 +137,7 @@ correct):
 | review, stage 3   | 100%   | `mastered`, no `nextReviewAt`                                                                                                       |
 | review, any stage | < 100% | same stage, `nextReviewAt = now + 7d`, `failedReviewsInARow += 1`; at stage 3 the 3rd failure in a row → `maintenance`, `now + 60d` |
 | maintenance       | 100%   | `mastered`, no `nextReviewAt`                                                                                                       |
-| maintenance       | < 100% | `nextReviewAt = now + 60d`                                                                                                          |
+| maintenance       | < 100% | `nextReviewAt = now + 60d` (the counter stays put — maintenance is already the floor)                                               |
 
 A perfect review resets `failedReviewsInARow` to 0. `finishSession` also returns per-topic
 outcomes (before/after snapshots and counts), which the summary screen turns into lines

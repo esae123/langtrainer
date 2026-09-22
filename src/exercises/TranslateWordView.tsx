@@ -19,8 +19,13 @@ export function TranslateWordView({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="rounded-2xl border border-line bg-sheet px-4 py-3 text-[17px] leading-relaxed text-text">
-        <MiniMarkdown text={exercise.sentence} />
+      <div className="rounded-2xl border border-line bg-sheet px-4 py-3">
+        {/* Same 17px body type as the other exercises, with the target word marked. */}
+        <MiniMarkdown
+          text={exercise.sentence}
+          className="flex flex-col gap-3 text-[17px] leading-relaxed text-text"
+          strongClassName="rounded bg-highlight/30 px-1 font-semibold"
+        />
       </div>
       <TextAnswerInput
         answer={exercise.answer}
