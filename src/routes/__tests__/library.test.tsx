@@ -56,10 +56,7 @@ vi.mock('../../content/programs', () => {
     ],
   };
 
-  return {
-    getProgram: (id: string) => (id === 'pt-PT-A1' ? fixtureProgram : undefined),
-    programs: [fixtureProgram],
-  };
+  return { programs: [fixtureProgram] };
 });
 
 afterEach(async () => {

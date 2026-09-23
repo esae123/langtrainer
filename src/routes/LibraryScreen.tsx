@@ -1,18 +1,111 @@
-import { ArrowLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Check, ChevronRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router';
 import { Card } from '../components/Card';
-import { getProgram } from '../content/programs';
+import { useAllPrograms, type ProgramEntry } from '../content/programRegistry';
+import { CourseActions } from '../courses/CourseActions';
+import { CourseCountsLine, CourseSourceBadge } from '../courses/CourseMeta';
 import { useT, type TranslationKey } from '../i18n';
 import { useSettings } from '../settings/settingsStore';
 
+/** One installed course: header with its badge and actions, then modules → topics. */
+function CourseSection({ entry, active }: { entry: ProgramEntry; active: boolean }) {
+  const t = useT();
+  const { program } = entry;
+
+  return (
+    <section className="flex flex-col gap-4">
+      <Card>
+        <div className="flex items-center gap-2">
+          <h2 className="text-base font-semibold text-text">{program.title}</h2>
+          {active && (
+            <span className="flex items-center gap-1 text-xs font-semibold text-accent">
+              <Check size={14} strokeWidth={2.5} aria-hidden />
+              {t('courses.active')}
+            </span>
+          )}
+          <span className="ml-auto">
+            <CourseSourceBadge entry={entry} />
+          </span>
+        </div>
+        <p className="mt-1">
+          <CourseCountsLine entry={entry} />
+        </p>
+        {entry.source === 'imported' && <CourseActions entry={entry} />}
+      </Card>
+
+      <div>
+        <h3 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted">
+          {t('library.modulesHeading')}
+        </h3>
+        <div className="flex flex-col gap-4">
+          {program.modules.map((module) => (
+            <Card key={module.id} className="!p-0">
+              <div className="px-4 py-3">
+                <h4 className="text-sm font-semibold text-text">{module.title}</h4>
+                <p className="mt-0.5 text-xs text-muted">
+                  {t('library.moduleTopics', { count: module.topics.length })}
+                </p>
+              </div>
+              <div className="divide-y divide-line">
+                {module.topics.map((topic) => (
+                  <Link
+                    key={topic.id}
+                    to={`/library/${topic.id}`}
+                    className="flex min-h-11 items-center justify-between gap-3 px-4 py-3"
+                  >
+                    <span className="flex flex-col">
+                      <span className="text-sm font-medium text-text">{topic.title}</span>
+                      <span className="text-xs text-muted">
+                        {t(`library.kind.${topic.kind}` as TranslationKey)} ·{' '}
+                        {t('library.exercisesCount', { count: topic.exercises.length })}
+                      </span>
+                    </span>
+                    <ChevronRight size={20} strokeWidth={2} aria-hidden className="text-muted" />
+                  </Link>
+                ))}
+              </div>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      {program.phraseSets.length > 0 && (
+        <div>
+          <h3 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted">
+            {t('library.phraseSetsHeading')}
+          </h3>
+          <Card className="divide-y divide-line !p-0">
+            {program.phraseSets.map((phraseSet) => (
+              <Link
+                key={phraseSet.id}
+                to={`/library/${phraseSet.id}`}
+                className="flex min-h-11 items-center justify-between gap-3 px-4 py-3"
+              >
+                <span className="flex flex-col">
+                  <span className="text-sm font-medium text-text">{phraseSet.title}</span>
+                  <span className="text-xs text-muted">
+                    {t('library.exercisesCount', { count: phraseSet.exercises.length })}
+                  </span>
+                </span>
+                <ChevronRight size={20} strokeWidth={2} aria-hidden className="text-muted" />
+              </Link>
+            ))}
+          </Card>
+        </div>
+      )}
+    </section>
+  );
+}
+
+/** Every installed course, bundled ones first (docs/stage-4a-spec.md §4). */
 export function LibraryScreen() {
   const t = useT();
   const navigate = useNavigate();
   const settings = useSettings();
-  const program = getProgram(settings.activeProgramId);
+  const entries = useAllPrograms();
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-8">
       <div className="flex items-center gap-1">
         <button
           type="button"
@@ -25,79 +118,19 @@ export function LibraryScreen() {
         <h1 className="text-2xl font-semibold text-text">{t('library.title')}</h1>
       </div>
 
-      {!program && (
+      {entries.length === 0 && (
         <Card>
-          <p className="text-sm text-muted">{t('library.notFoundBody')}</p>
+          <p className="text-sm text-muted">{t('library.coursesEmpty')}</p>
         </Card>
       )}
 
-      {program && (
-        <>
-          <section>
-            <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted">
-              {t('library.modulesHeading')}
-            </h2>
-            <div className="flex flex-col gap-4">
-              {program.modules.map((module) => (
-                <Card key={module.id} className="!p-0">
-                  <div className="px-4 py-3">
-                    <h3 className="text-sm font-semibold text-text">{module.title}</h3>
-                    <p className="mt-0.5 text-xs text-muted">
-                      {t('library.moduleTopics', { count: module.topics.length })}
-                    </p>
-                  </div>
-                  <div className="divide-y divide-line">
-                    {module.topics.map((topic) => (
-                      <Link
-                        key={topic.id}
-                        to={`/library/${topic.id}`}
-                        className="flex min-h-11 items-center justify-between gap-3 px-4 py-3"
-                      >
-                        <span className="flex flex-col">
-                          <span className="text-sm font-medium text-text">{topic.title}</span>
-                          <span className="text-xs text-muted">
-                            {t(`library.kind.${topic.kind}` as TranslationKey)} ·{' '}
-                            {t('library.exercisesCount', { count: topic.exercises.length })}
-                          </span>
-                        </span>
-                        <ChevronRight
-                          size={20}
-                          strokeWidth={2}
-                          aria-hidden
-                          className="text-muted"
-                        />
-                      </Link>
-                    ))}
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <h2 className="mb-2 px-1 text-xs font-semibold uppercase tracking-wide text-muted">
-              {t('library.phraseSetsHeading')}
-            </h2>
-            <Card className="divide-y divide-line !p-0">
-              {program.phraseSets.map((phraseSet) => (
-                <Link
-                  key={phraseSet.id}
-                  to={`/library/${phraseSet.id}`}
-                  className="flex min-h-11 items-center justify-between gap-3 px-4 py-3"
-                >
-                  <span className="flex flex-col">
-                    <span className="text-sm font-medium text-text">{phraseSet.title}</span>
-                    <span className="text-xs text-muted">
-                      {t('library.exercisesCount', { count: phraseSet.exercises.length })}
-                    </span>
-                  </span>
-                  <ChevronRight size={20} strokeWidth={2} aria-hidden className="text-muted" />
-                </Link>
-              ))}
-            </Card>
-          </section>
-        </>
-      )}
+      {entries.map((entry) => (
+        <CourseSection
+          key={entry.program.id}
+          entry={entry}
+          active={entry.program.id === settings.activeProgramId}
+        />
+      ))}
     </div>
   );
 }

@@ -39,7 +39,7 @@ vi.mock('../../content/programs', async () => {
       ],
     },
   ]);
-  return { programs: [program], getProgram: () => program };
+  return { programs: [program] };
 });
 
 beforeEach(async () => {

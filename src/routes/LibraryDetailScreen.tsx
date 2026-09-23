@@ -1,19 +1,29 @@
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router';
 import { Card } from '../components/Card';
-import type { Exercise, Program, Topic } from '../content/types';
-import { getProgram } from '../content/programs';
+import type { Exercise, PhraseSet, Topic } from '../content/types';
+import { useAllPrograms, type ProgramEntry } from '../content/programRegistry';
 import { useT, type TranslationKey } from '../i18n';
 import { MiniMarkdown } from '../lib/markdownLite';
 import { difficultyDots, renderCorrectAnswer } from '../lib/renderExercise';
-import { useSettings } from '../settings/settingsStore';
 
-function findTopic(program: Program, topicId: string): Topic | undefined {
-  for (const module of program.modules) {
-    const topic = module.topics.find((t) => t.id === topicId);
-    if (topic) return topic;
+/**
+ * Topic and phrase-set ids are unique across every installed course (import rejects
+ * collisions), so the item can be looked up without knowing which course it is in.
+ */
+function findItem(
+  entries: readonly ProgramEntry[],
+  itemId: string
+): { topic?: Topic; phraseSet?: PhraseSet } {
+  for (const { program } of entries) {
+    for (const module of program.modules) {
+      const topic = module.topics.find((candidate) => candidate.id === itemId);
+      if (topic) return { topic };
+    }
+    const phraseSet = program.phraseSets.find((candidate) => candidate.id === itemId);
+    if (phraseSet) return { phraseSet };
   }
-  return undefined;
+  return {};
 }
 
 function ExerciseCard({ exercise }: { exercise: Exercise }) {
@@ -55,12 +65,8 @@ export function LibraryDetailScreen() {
   const t = useT();
   const navigate = useNavigate();
   const { itemId } = useParams<{ itemId: string }>();
-  const settings = useSettings();
-  const program = getProgram(settings.activeProgramId);
-
-  const topic = program && itemId ? findTopic(program, itemId) : undefined;
-  const phraseSet =
-    program && itemId && !topic ? program.phraseSets.find((p) => p.id === itemId) : undefined;
+  const entries = useAllPrograms();
+  const { topic, phraseSet } = itemId ? findItem(entries, itemId) : {};
 
   return (
     <div className="flex flex-col gap-6">

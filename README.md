@@ -37,7 +37,8 @@ npm run format       # Prettier --write
 
 ```
 src/
-  content/          # domain types (Program/Module/Topic/Exercise), JSON program data, validator
+  content/          # domain types (Program/Module/Topic/Exercise), JSON program data, validator,
+                     # the registry of installed courses and the course-import checks
   db/                # Dexie schema (db.ts), reset helper
   settings/          # typed Settings, context/hook, Dexie-backed store
   backup/            # export/import to a single JSON file
@@ -47,13 +48,15 @@ src/
   engine/            # pure session logic: planning, answer checking, SRS (no React, no Dexie)
   session/           # session state machine, persistence and the /session screens
   exercises/         # one renderer per exercise type + shared input widgets
+  courses/           # course switcher, import/export/remove of courses
   routes/            # Learn / Progress / Settings / Library screens
   pwa/                # update-available toast
 ```
 
 `content/` holds the authored program sources (see `docs/content-authoring.md`);
 `npm run content:build` compiles them into `src/content/programs/`. The rules the
-engine follows are documented in `docs/engine.md`.
+engine follows are documented in `docs/engine.md`. How courses are added — bundled
+in the repo or imported from a file on the phone — is documented in `docs/courses.md`.
 
 ## Environment variables
 

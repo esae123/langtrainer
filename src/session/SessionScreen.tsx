@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router';
 import { Card } from '../components/Card';
 import { ConfirmDialog } from '../components/ConfirmDialog';
-import { getProgram } from '../content/programs';
+import { useActiveProgram, useAllPrograms } from '../content/programRegistry';
 import { planPractice, type SessionPlan } from '../engine/plan';
 import { useT } from '../i18n';
 import { useSettings } from '../settings/settingsStore';
+import { useActiveSession } from './activeSession';
 import { ContextPanel } from './ContextPanel';
 import { ExercisePanel } from './ExercisePanel';
 import { SummaryPanel } from './SummaryPanel';
@@ -69,7 +70,20 @@ function SessionRun({
   const t = useT();
   const navigate = useNavigate();
   const settings = useSettings();
-  const program = getProgram(settings.activeProgramId);
+  const activeProgram = useActiveProgram();
+  const entries = useAllPrograms();
+  const stored = useActiveSession();
+
+  // A new session always uses the active course; a *resumed* one keeps running the
+  // course it was planned from, even after the learner switched courses
+  // (docs/stage-4a-spec.md §2). `undefined` while the snapshot is still loading, so
+  // the runner doesn't plan a fresh session from the wrong course first.
+  const resumedProgram =
+    resume && stored
+      ? entries.find((entry) => entry.program.id === stored.state.programId)?.program
+      : undefined;
+  const program = resume && stored === undefined ? undefined : (resumedProgram ?? activeProgram);
+
   const runner = useSessionRunner(program, settings, resume, practicePlan ?? undefined);
   const [stopOpen, setStopOpen] = useState(false);
   const { state } = runner;

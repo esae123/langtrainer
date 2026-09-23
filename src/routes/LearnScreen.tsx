@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { Download, Play } from 'lucide-react';
+import { ChevronRight, Download, Play } from 'lucide-react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router';
 import { Card } from '../components/Card';
 import { useToast } from '../components/toastStore';
 import { useExportBackup } from '../backup/useExportBackup';
-import { getProgram } from '../content/programs';
+import { useActiveProgramEntry, useAllPrograms } from '../content/programRegistry';
+import { CoursesSheet } from '../courses/CoursesSheet';
+import { CourseSourceBadge } from '../courses/CourseMeta';
 import { db } from '../db/db';
 import { currentTopicOf } from '../engine/plan';
 import { COMPLETION_THRESHOLD } from '../engine/progress';
@@ -35,14 +37,26 @@ export function LearnScreen() {
   const showToast = useToast();
   const runExport = useExportBackup();
   const [bannerDismissed, setBannerDismissed] = useState(readBannerDismissed);
+  const [coursesOpen, setCoursesOpen] = useState(false);
 
-  const program = getProgram(settings.activeProgramId);
+  const entries = useAllPrograms();
+  const activeEntry = useActiveProgramEntry();
+  const program = activeEntry?.program;
+  // The *resolved* id, so a settings value pointing at a removed course still shows
+  // the progress of the course that is actually active.
+  const programId = program?.id ?? settings.activeProgramId;
   const progress = useLiveQuery(
-    () => db.topicProgress.where('programId').equals(settings.activeProgramId).toArray(),
-    [settings.activeProgramId],
+    () => db.topicProgress.where('programId').equals(programId).toArray(),
+    [programId],
     []
   );
   const activeSession = useActiveSession();
+  // A saved session can belong to a course that is no longer the active one.
+  const sessionProgramTitle =
+    activeSession && activeSession.state.programId !== programId
+      ? (entries.find((entry) => entry.program.id === activeSession.state.programId)?.program
+          .title ?? activeSession.state.programId)
+      : null;
 
   function dismissBannerForToday() {
     setBannerDismissed(true);
@@ -116,6 +130,11 @@ export function LearnScreen() {
           <p className="mt-1 text-sm text-muted">
             {t('learn.resumeBody', { done: activeSession.state.responses.length })}
           </p>
+          {sessionProgramTitle && (
+            <p className="mt-1 text-sm text-muted">
+              {t('learn.resumeCourse', { title: sessionProgramTitle })}
+            </p>
+          )}
           <div className="mt-3 flex gap-3">
             <button
               type="button"
@@ -138,20 +157,34 @@ export function LearnScreen() {
         </Card>
       )}
 
-      <Card>
-        <p className="text-xs font-semibold uppercase tracking-wide text-accent">
-          {program?.level ?? '—'}
-        </p>
-        <h2 className="mt-1 text-lg font-semibold text-text">
-          {program?.title ?? settings.activeProgramId}
-        </h2>
-        <p className="mt-1 text-sm text-muted">
-          {t('learn.programSummary', {
-            modules: modulesCount,
-            topics: topicsCount,
-            exercises: exercisesCount,
-          })}
-        </p>
+      <Card className="!p-0">
+        <button
+          type="button"
+          onClick={() => setCoursesOpen(true)}
+          aria-label={t('learn.openCourses')}
+          className="flex min-h-11 w-full items-center gap-3 p-4 text-left"
+        >
+          <span className="flex-1">
+            <span className="flex items-center gap-2">
+              <span className="text-xs font-semibold uppercase tracking-wide text-accent">
+                {program?.level ?? '—'}
+              </span>
+              {activeEntry && <CourseSourceBadge entry={activeEntry} />}
+            </span>
+            <span className="mt-1 block text-lg font-semibold text-text">
+              {program?.title ?? settings.activeProgramId}
+            </span>
+            <span className="mt-1 block text-sm text-muted">
+              {t('learn.programSummary', {
+                modules: modulesCount,
+                topics: topicsCount,
+                exercises: exercisesCount,
+              })}
+            </span>
+            <span className="mt-1 block text-xs text-muted">{t('learn.courseCardHint')}</span>
+          </span>
+          <ChevronRight size={20} strokeWidth={2} aria-hidden className="shrink-0 text-muted" />
+        </button>
       </Card>
 
       <Card>
@@ -226,6 +259,8 @@ export function LearnScreen() {
         <Play size={20} strokeWidth={2} aria-hidden />
         {t('learn.startSession')}
       </button>
+
+      <CoursesSheet open={coursesOpen} onClose={() => setCoursesOpen(false)} />
     </div>
   );
 }
