@@ -16,18 +16,13 @@ content/pt-PT-A1/
 `npm run content:build` assembles these into `src/content/programs/pt-PT-A1.json` (generated, committed).
 Never edit the generated file by hand.
 
-## 2. Language rules — EUROPEAN Portuguese only
+## 2. Language rules — see `content/pt-PT-A1/RULES.md`
 
-- Informal singular is **tu** with 2nd-person verb forms (`tu falas`, `tu és`, `chamas-te`). Formal singular is **você / o senhor / a senhora** with 3rd-person forms. Plural: **vocês**. Never use `você` as the default informal form (that is Brazilian usage).
-- Progressive: **estar a + infinitivo** (`estou a falar`). Never the gerund (`estou falando`).
-- Clitic pronouns after the verb in affirmative main clauses: **Chamo-me Ana**, never `Me chamo Ana`.
-- Vocabulary: comboio (not trem), autocarro (not ônibus), pequeno-almoço (not café da manhã), telemóvel (not celular), casa de banho (not banheiro), sumo (not suco), rapariga (girl), miúdo/a, fixe (cool, informal), giro/a (cute/nice), talho, bica (espresso, Lisbon), passadeira.
-- Spelling per Acordo Ortográfico 1990 as used in Portugal: `ação`, `ótimo`, `direto`, but keep `facto` (PT) not `fato`.
-- Numbers: **catorze** and **dezasseis, dezassete, dezanove** (PT), not `quatorze`, `dezesseis`.
-- Greetings: `Bom dia` (until lunch), `Boa tarde`, `Boa noite`. `Olá`, `Tudo bem?`, `Até logo`, `Até amanhã`, `Adeus`.
-- `Obrigado` if the speaker is male, `Obrigada` if female. Exercises must not force one; accept both where relevant.
-- Questions: `Como te chamas?` / `Como se chama?`; the emphatic `é que` is very common: `Onde é que moras?`, `De onde é que és?`. Use both plain and `é que` forms in content.
-- Keep sentences short and natural, the way people actually speak in Portugal.
+Per-program language rules moved to `content/<programId>/RULES.md` (stage 4b), so
+`scripts/content-generate.ts` can load one rules file per program. For pt-PT-A1 that file is
+`content/pt-PT-A1/RULES.md` (EUROPEAN Portuguese only: tu vs você, estar a + infinitivo, clitics,
+PT vocabulary/spelling/numbers, greetings, é que questions). Other programs (e.g. `en-b2`) have
+their own `RULES.md` alongside their `program.json`.
 
 ## 3. Pedagogical rules
 

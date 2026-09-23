@@ -1,0 +1,52 @@
+{
+  "id": "m3",
+  "title": "Module 3 — Daily routine, time, food and leisure",
+  "description": "Tell the time, describe a daily routine, order food and drinks, and accept or decline invitations, using -ir verbs, reflexive verbs and the everyday irregular verbs (ir, ver, ler, sair, ouvir).",
+  "topics": [
+    {
+      "id": "m3-time-dates",
+      "title": "Time, days, months and dates",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Telling the time (São três horas, É meio-dia, e um quarto, e meia, menos um quarto); parts of the day (de manhã, à tarde, à noite); days of the week, months and dates (Hoje é dia … de …).",
+      "known": "Module 1 — numbers 0–50, ser/estar.",
+      "avoid": "past tenses, ordinals beyond sexto."
+    },
+    {
+      "id": "m3-daily-routine",
+      "title": "Daily routine and habits",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Presente do Indicativo of regular -ir verbs (vestir, abrir, decidir, partir); reflexive verbs in the present (levantar-se, deitar-se, vestir-se, lavar-se); irregular verbs ir, ver, ler, sair, ouvir; habitual actions with costumar + infinitivo.",
+      "known": "Module 1 and 2 grammar (ar/er verbs, pronouns); m3-time-dates.",
+      "avoid": "past tenses, subjunctive, object pronouns other than reflexive se."
+    },
+    {
+      "id": "m3-food-restaurant",
+      "title": "Food, drinks and eating out",
+      "kind": "situation",
+      "count": 40,
+      "brief": "Food, drinks and dishes vocabulary; reading a menu and ordering at a restaurant or café; polite requests with Queria… (Queria um café, Queria a conta, por favor).",
+      "known": "Module 1 — articles, numbers; m2-numbers-160.",
+      "avoid": "past tenses, comparatives, conditional."
+    },
+    {
+      "id": "m3-leisure-invitations",
+      "title": "Leisure and invitations",
+      "kind": "situation",
+      "count": 40,
+      "brief": "Talking about free time and leisure activities; accepting an invitation (Sim, com certeza! Adoraria.) and declining politely (Não posso, tenho de…; Talvez noutro dia.).",
+      "known": "Module 1 and 2 grammar; m3-daily-routine (gostar de + infinitivo).",
+      "avoid": "past tenses, subjunctive, conditional."
+    },
+    {
+      "id": "m3-frequency-time",
+      "title": "Prepositions of time and frequency",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Prepositions of time a, de, em (às três horas, de manhã, em janeiro); frequency adverbs (sempre, nunca, às vezes, habitualmente, geralmente); expressing frequency with por (por dia, por semana, três vezes por mês).",
+      "known": "m3-time-dates, m3-daily-routine.",
+      "avoid": "past tenses, comparatives."
+    }
+  ]
+}

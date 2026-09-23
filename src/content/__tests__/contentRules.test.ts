@@ -109,7 +109,10 @@ const validAboutMe: AboutMeExercise = {
   explanation: 'Introduce yourself.',
   question: 'Como te chamas?',
   sampleAnswer: 'Chamo-me Ana e sou portuguesa.',
-  hints: ['Chamo-me', 'sou', 'portuguesa', 'Ana'],
+  // Deliberately disjoint from sampleAnswer's own words: hints duplicating a sampleAnswer word
+  // now raise a warning (see "about_me — hint/sampleAnswer duplicate" below), which would break
+  // the "no problems" happy-path test below if this fixture overlapped.
+  hints: ['tenho', 'anos', 'moro', 'trabalho'],
 };
 
 const validFindError: FindErrorExercise = {
@@ -315,6 +318,30 @@ describe('checkContent — common invariants', () => {
   });
 });
 
+describe('checkContent — problem metadata (stage 4b report)', () => {
+  it('stamps a problem with the exercise id, 1-based number and total count', () => {
+    const bad = { ...validBuildPhrase, difficulty: 4 } as unknown as Exercise;
+    const { problems } = checkContent(programWithTopic([bad, validFillGaps]));
+    const hit = problems.find((p) => p.message.includes('difficulty must be 1, 2 or 3'));
+    expect(hit).toMatchObject({ exerciseId: bad.id, exerciseNumber: 1, exerciseCount: 2 });
+  });
+
+  it('includes the earlier exercise number/id in the duplicate target sentence message', () => {
+    const dup: BuildPhraseExercise = { ...validBuildPhrase, id: `${TOPIC_ID}-99`, answer: [...validBuildPhrase.answer] };
+    const { problems } = checkContent(programWithTopic([validBuildPhrase, dup]));
+    const hit = problems.find((p) => p.message.includes('duplicate target sentence'));
+    expect(hit?.message).toContain(`exercise 1, id "${validBuildPhrase.id}"`);
+    expect(hit).toMatchObject({ exerciseId: dup.id, exerciseNumber: 2, exerciseCount: 2 });
+  });
+
+  it('stamps a duplicate exercise id problem with its own number/count', () => {
+    const dup = { ...validQuestionForAnswer, id: validBuildPhrase.id, topicId: TOPIC_ID };
+    const { problems } = checkContent(programWithTopic([validBuildPhrase, dup]));
+    const hit = problems.find((p) => p.message.includes('duplicate exercise id'));
+    expect(hit).toMatchObject({ exerciseId: dup.id, exerciseNumber: 2, exerciseCount: 2 });
+  });
+});
+
 describe('checkContent — build_phrase invariants', () => {
   it('rejects an answer with fewer than 2 words (negative)', () => {
     const bad: BuildPhraseExercise = { ...validBuildPhrase, answer: ['Olá.'] };
@@ -328,6 +355,16 @@ describe('checkContent — build_phrase invariants', () => {
 
   it('rejects a distractor equal to an answer word (negative)', () => {
     const bad: BuildPhraseExercise = { ...validBuildPhrase, distractors: ['sou'] };
+    expect(has(checkContent(programWithTopic([bad])).problems, 'duplicates an answer word')).toBe(true);
+  });
+
+  it('rejects a distractor equal to an answer word after case/punctuation normalisation (negative)', () => {
+    // answer ["Tens","um","gato?"], distractor "tens" — same word, different case, no "?".
+    const bad: BuildPhraseExercise = {
+      ...validBuildPhrase,
+      answer: ['Tens', 'um', 'gato?'],
+      distractors: ['tens'],
+    };
     expect(has(checkContent(programWithTopic([bad])).problems, 'duplicates an answer word')).toBe(true);
   });
 });
@@ -369,6 +406,16 @@ describe('checkContent — question_for_answer invariants', () => {
     const bad: QuestionForAnswerExercise = { ...validQuestionForAnswer, distractors: [] };
     expect(has(checkContent(programWithTopic([bad])).problems, 'distractors must have 1-4 items')).toBe(true);
   });
+
+  it('rejects a distractor equal to an answer word after case/punctuation normalisation (negative)', () => {
+    // answer [...,"tens?"], distractor "tens" — same word, missing the "?".
+    const bad: QuestionForAnswerExercise = {
+      ...validQuestionForAnswer,
+      answer: ['Quantos', 'gatos', 'tens?'],
+      distractors: ['tens'],
+    };
+    expect(has(checkContent(programWithTopic([bad])).problems, 'duplicates an answer word')).toBe(true);
+  });
 });
 
 describe('checkContent — about_me invariants', () => {
@@ -385,6 +432,23 @@ describe('checkContent — about_me invariants', () => {
   it('rejects hints outside the 3-8 range (negative)', () => {
     const bad: AboutMeExercise = { ...validAboutMe, hints: ['a', 'b'] };
     expect(has(checkContent(programWithTopic([bad])).problems, 'hints must have 3-8 items')).toBe(true);
+  });
+
+  it('warns (does not error) when a hint duplicates a sampleAnswer word (negative, warning)', () => {
+    const bad: AboutMeExercise = {
+      ...validAboutMe,
+      sampleAnswer: 'Chamo-me Ana e sou portuguesa.',
+      hints: ['sou', 'anos', 'moro'],
+    };
+    const { problems } = checkContent(programWithTopic([bad]));
+    const hit = problems.find((p) => p.message.includes('duplicates a sampleAnswer word'));
+    expect(hit).toBeDefined();
+    expect(hit?.severity).toBe('warning');
+  });
+
+  it('does not warn when hints are disjoint from sampleAnswer words (positive)', () => {
+    const { problems } = checkContent(programWithTopic([validAboutMe]));
+    expect(has(problems, 'duplicates a sampleAnswer word')).toBe(false);
   });
 });
 

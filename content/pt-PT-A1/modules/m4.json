@@ -1,0 +1,61 @@
+{
+  "id": "m4",
+  "title": "Module 4 — City, transport, housing, shopping and services",
+  "description": "Find your way around a city, talk about transport and housing, and shop for clothes and everyday services, using more irregular verbs, comparatives and the prepositions of movement.",
+  "topics": [
+    {
+      "id": "m4-city-directions",
+      "title": "In the city and giving directions",
+      "kind": "situation",
+      "count": 40,
+      "brief": "Orienting yourself in a city and asking for/giving directions (Onde fica…?, Vá em frente, Vire à direita/esquerda, Siga direto, É perto/longe); places in a city (praça, esquina, semáforo).",
+      "known": "Module 1 and 2 grammar; m2-spatial-prepositions.",
+      "avoid": "past tenses, comparatives, imperative for strangers beyond polite forms."
+    },
+    {
+      "id": "m4-transport",
+      "title": "Transport",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Means of transport (de carro, de avião, de comboio, de metro, de autocarro, a pé) and transport prepositions; buying a ticket, asking about schedules and platforms.",
+      "known": "Module 1 and 2 grammar; m4-city-directions.",
+      "avoid": "past tenses, comparatives."
+    },
+    {
+      "id": "m4-irregular-verbs-2",
+      "title": "More irregular verbs and necessity",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Presente do Indicativo of vir, poder, querer, dizer, saber; the progressive estar a + infinitivo in context; necessity and obligation with ter de / precisar de + infinitivo.",
+      "known": "Module 1 — ser/estar/ter; m3-daily-routine irregular verbs.",
+      "avoid": "past tenses, subjunctive, conditional."
+    },
+    {
+      "id": "m4-housing",
+      "title": "Housing",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Describing a house: rooms (sala, quarto, cozinha, casa de banho), furniture and appliances (cama, sofá, frigorífico, máquina de lavar); reading a short rental ad (apartamento, T2, mobilado).",
+      "known": "Module 1 and 2 grammar; m2-spatial-prepositions, m2-demonstratives.",
+      "avoid": "past tenses, comparatives (introduced next in this module)."
+    },
+    {
+      "id": "m4-shopping-services",
+      "title": "Shopping, money and services",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Clothes and shoes vocabulary, sizes and colors; money, prices and simple banking phrases; the post office; numbers up to 1000 and simple percentages (cinquenta por cento).",
+      "known": "Module 1 and 2 numbers; m2-colors-antonyms.",
+      "avoid": "past tenses, comparatives."
+    },
+    {
+      "id": "m4-comparatives-prepositions",
+      "title": "Comparatives and prepositions of movement",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Comparatives (mais … do que, menos … do que, melhor, pior, maior, menor); prepositions of movement a, para, por; personal pronouns with com (comigo, contigo, connosco, convosco); contractions pelo/pela and num/numa.",
+      "known": "Module 1 and 2 grammar; m4-shopping-services, m4-transport.",
+      "avoid": "past tenses, superlatives (later module)."
+    }
+  ]
+}

@@ -287,7 +287,7 @@
       "tags": ["origin", "questions", "é que"],
       "givenAnswer": "Sou de Faro.",
       "answer": ["De", "onde", "é", "que", "és?"],
-      "distractors": ["é?", "sou", "Onde"]
+      "distractors": ["sou", "estás", "aonde"]
     },
     {
       "id": "m1-who-am-i-18",

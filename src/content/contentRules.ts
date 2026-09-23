@@ -21,6 +21,14 @@ import type {
 export interface ContentProblem {
   path: string;
   message: string;
+  /** 'error' (default when absent) blocks content:check/build; 'warning' is informational only. */
+  severity?: 'error' | 'warning';
+  /** The id of the exercise this problem belongs to, e.g. "m2-family-pets-24" (stage 4b report). */
+  exerciseId?: string;
+  /** 1-based position of the exercise within its topic/phrase-set (exercises[i] is number i+1). */
+  exerciseNumber?: number;
+  /** Total number of exercises in the containing topic/phrase-set. */
+  exerciseCount?: number;
 }
 
 export interface ContentStats {
@@ -61,6 +69,20 @@ function wordCount(s: string): number {
 
 function hasDuplicates(items: string[]): boolean {
   return new Set(items).size !== items.length;
+}
+
+/**
+ * Normalises a token for "same word" comparisons that should ignore case, trailing sentence
+ * punctuation and guillemets: "Tens" / "tens?" / "«tens»" all normalise to "tens". Used to catch
+ * distractors that are really the answer in disguise (docs/stage-4b-spec.md follow-up).
+ */
+function normalizeToken(s: string): string {
+  return s
+    .trim()
+    .replace(/^[«»]+/, '')
+    .replace(/[«»]+$/, '')
+    .replace(/[.!?]+$/, '')
+    .toLowerCase();
 }
 
 /** Common invariants shared by every exercise type (docs/content-authoring.md §4, "Common"). */
@@ -125,9 +147,13 @@ function checkBuildPhrase(e: BuildPhraseExercise, path: string, problems: Conten
       message: `distractors must have 1-4 items (has ${e.distractors.length})`,
     });
   }
+  const answerNorm = e.answer.map(normalizeToken);
   for (const d of e.distractors) {
-    if (e.answer.includes(d)) {
-      problems.push({ path: `${path}.distractors`, message: `distractor "${d}" duplicates an answer word` });
+    if (answerNorm.includes(normalizeToken(d))) {
+      problems.push({
+        path: `${path}.distractors`,
+        message: `distractor "${d}" duplicates an answer word (case/punctuation-insensitive)`,
+      });
     }
   }
 }
@@ -185,6 +211,15 @@ function checkQuestionForAnswer(e: QuestionForAnswerExercise, path: string, prob
       message: `distractors must have 1-4 items (has ${e.distractors.length})`,
     });
   }
+  const answerNorm = e.answer.map(normalizeToken);
+  for (const d of e.distractors) {
+    if (answerNorm.includes(normalizeToken(d))) {
+      problems.push({
+        path: `${path}.distractors`,
+        message: `distractor "${d}" duplicates an answer word (case/punctuation-insensitive)`,
+      });
+    }
+  }
 }
 
 function checkAboutMe(e: AboutMeExercise, path: string, problems: ContentProblem[]): void {
@@ -197,6 +232,16 @@ function checkAboutMe(e: AboutMeExercise, path: string, problems: ContentProblem
   }
   if (e.hints.length < 3 || e.hints.length > 8) {
     problems.push({ path: `${path}.hints`, message: `hints must have 3-8 items (has ${e.hints.length})` });
+  }
+  const sampleNorm = words(e.sampleAnswer).map(normalizeToken);
+  for (const h of e.hints) {
+    if (sampleNorm.includes(normalizeToken(h))) {
+      problems.push({
+        path: `${path}.hints`,
+        message: `hint "${h}" duplicates a sampleAnswer word (case/punctuation-insensitive) — the tile bank would show it twice`,
+        severity: 'warning',
+      });
+    }
   }
 }
 
@@ -361,8 +406,10 @@ function checkExerciseList(
   problems: ContentProblem[]
 ): void {
   const seenSentences = new Map<string, number>();
+  const total = exercises.length;
   exercises.forEach((exercise, i) => {
     const path = `${basePath}.exercises[${i}]`;
+    const before = problems.length;
     checkCommon(exercise, containerId, path, problems);
     checkByType(exercise, path, problems);
 
@@ -370,13 +417,23 @@ function checkExerciseList(
     if (key !== undefined) {
       const firstIndex = seenSentences.get(key);
       if (firstIndex !== undefined) {
+        const firstId = exercises[firstIndex].id;
         problems.push({
           path,
-          message: `duplicate target sentence "${key}" (already used by exercises[${firstIndex}])`,
+          message: `duplicate target sentence "${key}" (already used by exercise ${firstIndex + 1}, id "${firstId}")`,
         });
       } else {
         seenSentences.set(key, i);
       }
+    }
+
+    // Stamp every problem raised for this exercise with its id and 1-based position, so
+    // reports (scripts/content-report.ts) can lead with "<id> (exercise N of total): …" instead
+    // of a raw "exercises[i]" array index (stage 4b report follow-up).
+    for (let j = before; j < problems.length; j++) {
+      problems[j].exerciseId = exercise.id;
+      problems[j].exerciseNumber = i + 1;
+      problems[j].exerciseCount = total;
     }
   });
 }
@@ -388,6 +445,7 @@ export function checkContent(program: Program): ContentCheckResult {
   const idFirstSeenAt = new Map<string, string>();
 
   function recordIds(exercises: Exercise[], basePath: string): void {
+    const total = exercises.length;
     exercises.forEach((exercise, i) => {
       const path = `${basePath}.exercises[${i}].id`;
       const firstPath = idFirstSeenAt.get(exercise.id);
@@ -395,6 +453,9 @@ export function checkContent(program: Program): ContentCheckResult {
         problems.push({
           path,
           message: `duplicate exercise id "${exercise.id}" (first used at ${firstPath})`,
+          exerciseId: exercise.id,
+          exerciseNumber: i + 1,
+          exerciseCount: total,
         });
       } else {
         idFirstSeenAt.set(exercise.id, path);

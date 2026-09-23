@@ -1,0 +1,52 @@
+{
+  "id": "m5",
+  "title": "Module 5 — Weather, plans, health, instructions and recommendations",
+  "description": "Talk about the weather and future plans, describe how you feel and visit a doctor, follow instructions and give advice, using ir + infinitivo, the imperative and indirect object pronouns.",
+  "topics": [
+    {
+      "id": "m5-weather-plans",
+      "title": "Weather and future plans",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Weather, climate and the four seasons (Está a chover, Está frio, no verão); planning a holiday with the near future ir + infinitivo (Vou viajar, Vamos visitar Faro).",
+      "known": "Module 1 to 4 grammar; m4-city-directions vocabulary.",
+      "avoid": "past tenses, conditional, subjunctive."
+    },
+    {
+      "id": "m5-health-body",
+      "title": "Health and the body",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Body parts, symptoms and a visit to the doctor or pharmacy; the impersonal verb doer (Dói-me a cabeça) and health expressions with estar com / ter + noun (estar com febre, ter tosse).",
+      "known": "Module 1 — ser/estar/ter; m2-appearance-character.",
+      "avoid": "past tenses, subjunctive, object pronouns beyond me/te on doer."
+    },
+    {
+      "id": "m5-imperative-advice",
+      "title": "Instructions, recipes and advice",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Imperativo for instructions and advice: informal tu forms and formal você/vocês forms; recommendations and obligation with dever + infinitivo; simple recipe/instruction sequencing (Primeiro…, Depois…, Por fim…).",
+      "known": "Module 1 to 4 grammar; m5-health-body.",
+      "avoid": "past tenses, subjunctive, conditional."
+    },
+    {
+      "id": "m5-irregular-verbs-3",
+      "title": "More irregular verbs",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Presente do Indicativo of dar, fazer, trazer, pôr, pedir, perder, dormir, contrasted with the regular -ar/-er/-ir patterns and the irregular verbs already known.",
+      "known": "Module 1 to 4 irregular verbs (ir, ver, ler, sair, ouvir, vir, poder, querer, dizer, saber).",
+      "avoid": "past tenses, subjunctive, conditional."
+    },
+    {
+      "id": "m5-comparison-pronouns",
+      "title": "Equal comparisons and object pronouns",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Comparison of equality tão … como, tanto … como; indirect object pronouns me, te, lhe, nos, vos, lhes; indefinite pronouns algum/nenhum, alguém/ninguém, tudo/nada.",
+      "known": "Module 4 comparatives; m5-irregular-verbs-3.",
+      "avoid": "past tenses, subjunctive, direct object pronouns (o/a/os/as)."
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "m6",
+  "title": "Module 6 — Past tense, tourism, holidays and personal experience",
+  "description": "Talk about trips, holidays and past experiences using the Pretérito Perfeito Simples, both regular and the key irregular verbs, plus the adverbs and superlatives that colour a story.",
+  "topics": [
+    {
+      "id": "m6-travel-tourism",
+      "title": "Travel and tourism",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Vacation and travel vocabulary: hotels, reservations, sightseeing and tourist attractions (monumento, praia, castelo, visita guiada).",
+      "known": "Module 1 to 5 grammar; m5-weather-plans.",
+      "avoid": "past tenses (introduced later in this module), subjunctive."
+    },
+    {
+      "id": "m6-holidays-traditions",
+      "title": "Holidays and traditions",
+      "kind": "situation",
+      "count": 40,
+      "brief": "Holidays, festivals and traditions in Portugal; greetings and giving gifts for occasions (Feliz Natal!, Boas Festas!, Parabéns!, Um presente para ti).",
+      "known": "Module 1 to 5 grammar; everyday-1 phrase set.",
+      "avoid": "past tenses (introduced later in this module), subjunctive."
+    },
+    {
+      "id": "m6-pps-regular",
+      "title": "Simple past — regular verbs",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Pretérito Perfeito Simples of regular -ar, -er and -ir verbs (falei, comi, parti); past time markers (ontem, na semana passada, há um ano, no ano passado).",
+      "known": "Module 1 to 5 present-tense grammar.",
+      "avoid": "subjunctive, conditional, irregular PPS verbs (next topic)."
+    },
+    {
+      "id": "m6-pps-irregular",
+      "title": "Simple past — irregular verbs",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Pretérito Perfeito Simples of the key irregular verbs (ir, ser, estar, ter, fazer, ver, dar, saber, poder); life-experience constructions já / ainda não / nunca + PPS; the recent-past construction acabar de + infinitivo.",
+      "known": "m6-pps-regular.",
+      "avoid": "subjunctive, conditional, pluperfect."
+    },
+    {
+      "id": "m6-biography-experience",
+      "title": "Biography and life experience",
+      "kind": "situation",
+      "count": 40,
+      "brief": "Talking about biographical facts and past events (Nasci em…, Mudei-me para…, Trabalhei como…) and personal life experience, combining the regular and irregular PPS.",
+      "known": "m6-pps-regular, m6-pps-irregular.",
+      "avoid": "subjunctive, conditional."
+    },
+    {
+      "id": "m6-adverbs-superlatives",
+      "title": "Manner adverbs and the absolute superlative",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Manner adverbs formed with -mente (rapidamente, felizmente, facilmente); the absolute superlative (quentíssimo, lindíssimo, baratíssimo) for emphasis in a story.",
+      "known": "Module 1 to 6 adjectives; m6-biography-experience.",
+      "avoid": "subjunctive, conditional, relative superlative comparisons."
+    }
+  ]
+}

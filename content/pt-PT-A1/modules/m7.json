@@ -1,0 +1,52 @@
+{
+  "id": "m7",
+  "title": "Module 7 — Professional context, culture and systematization",
+  "description": "Read job ads and go through a job interview, get to know the Portuguese-speaking world and its sayings, and consolidate the present and simple-past verb systems from every earlier module.",
+  "topics": [
+    {
+      "id": "m7-work-cv-interview",
+      "title": "Job ads, CV and interview",
+      "kind": "situation",
+      "count": 40,
+      "brief": "Reading job ads and a short CV; a job interview (Fale-me um pouco sobre si, Quais são as suas qualidades?); formal versus informal register at work.",
+      "known": "Module 1 to 6 grammar; m1-professions-languages.",
+      "avoid": "subjunctive, conditional, passive voice."
+    },
+    {
+      "id": "m7-lusophone-world",
+      "title": "The Portuguese-speaking world",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Geography and culture of the CPLP countries (Portugal, Brasil, Angola, Cabo Verde, Moçambique…); basic facts and a few culture-specific vocabulary differences between European and Brazilian Portuguese.",
+      "known": "Module 1 to 6 grammar; m1-who-am-i nationalities.",
+      "avoid": "subjunctive, conditional."
+    },
+    {
+      "id": "m7-proverbs-sayings",
+      "title": "Proverbs and sayings",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Common Portuguese proverbs and sayings (Quem não arrisca, não petisca; Mais vale tarde do que nunca) with their English equivalents and everyday usage.",
+      "known": "Module 1 to 6 grammar and vocabulary.",
+      "avoid": "subjunctive, conditional."
+    },
+    {
+      "id": "m7-verb-systematization",
+      "title": "Present and past tense systematization",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Review and contrast of regular and irregular verb conjugations across Presente do Indicativo and Pretérito Perfeito Simples, drawing on every verb group introduced in Modules 1–6.",
+      "known": "Module 1 to 6 verb grammar (all topics).",
+      "avoid": "subjunctive, conditional, future tense."
+    },
+    {
+      "id": "m7-near-synonyms-suffix",
+      "title": "Near-synonyms and the -ção suffix",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Distinguishing close verb pairs (conhecer vs saber, olhar vs ver, escutar vs ouvir); the word-forming suffix -ção (informação, conversação, educação) and how it turns verbs into nouns.",
+      "known": "Module 1 to 6 grammar and vocabulary.",
+      "avoid": "subjunctive, conditional."
+    }
+  ]
+}

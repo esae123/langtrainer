@@ -1,0 +1,61 @@
+{
+  "id": "m1",
+  "title": "Module 1 — Everyday collocations, phrasal verbs and register",
+  "description": "Richer B2 vocabulary for work, study and everyday speech: collocations, phrasal verbs of communication, ways of describing people, idioms of time and money, linking words and hedging, and the register gap between formal and casual English.",
+  "topics": [
+    {
+      "id": "en-b2-m1-collocations-work",
+      "title": "Collocations for work and study",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Verb+noun and adjective+noun collocations for work and study: meet a deadline, tackle a problem, make progress, raise an issue, take notes, do research, reach a conclusion, have an impact. Wrong pairings (do a decision, make research) are the near-miss distractors.",
+      "known": "General B1 vocabulary and grammar.",
+      "avoid": "Highly technical/academic jargon; idioms (covered in a later topic)."
+    },
+    {
+      "id": "en-b2-m1-phrasal-verbs-communication",
+      "title": "Phrasal verbs of communication",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Phrasal verbs used to talk about communicating: bring up, point out, get across, back up, go over, run by, speak up, cut in, dwell on. Distinguishing near-synonyms (bring up vs point out) and separable vs inseparable placement of the object.",
+      "known": "en-b2-m1-collocations-work.",
+      "avoid": "Idioms unrelated to communication; formal register markers (later topic)."
+    },
+    {
+      "id": "en-b2-m1-describing-people",
+      "title": "Describing people and behaviour",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Precise adjectives and paraphrases for describing people and behaviour: outspoken, easy-going, meticulous, condescending, assertive, evasive, dodge a question, avoid giving a direct answer. Nuance between near-synonyms (assertive vs aggressive, confident vs arrogant).",
+      "known": "en-b2-m1-phrasal-verbs-communication.",
+      "avoid": "Slang; idioms of time and money (later topic)."
+    },
+    {
+      "id": "en-b2-m1-idioms-time-money",
+      "title": "Idioms of time and money",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Common idioms about time and money: against the clock, in the nick of time, once in a blue moon, break even, cut corners, out of pocket, foot the bill, tighten your belt. Meaning distinguished from a literal near-miss reading.",
+      "known": "en-b2-m1-describing-people.",
+      "avoid": "Regional/very informal slang; grammar of linking words (later topic)."
+    },
+    {
+      "id": "en-b2-m1-linking-hedging",
+      "title": "Linking words and hedging",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Linking words for contrast, cause and addition at B2 (whereas, given that, on top of that, as opposed to) and hedging language for softening claims (tend to, seem to, it could be argued that, arguably). Contrast with the blunter B1 equivalents (but, because, also).",
+      "known": "Topics en-b2-m1-collocations-work through en-b2-m1-idioms-time-money.",
+      "avoid": "Formal register vocabulary specific to letters/emails (next topic)."
+    },
+    {
+      "id": "en-b2-m1-register-formal-casual",
+      "title": "Register: formal vs casual",
+      "kind": "situation",
+      "count": 40,
+      "brief": "Rewriting the same message in formal and casual register: I would be grateful if you could… vs Could you possibly…?/Can you…?; get in touch vs contact; a bit vs somewhat; kids vs children. Explicitly flags which situation (email to a manager vs text to a friend) calls for which register.",
+      "known": "All earlier en-b2 m1 topics.",
+      "avoid": "New idioms or phrasal verbs not already introduced."
+    }
+  ]
+}
