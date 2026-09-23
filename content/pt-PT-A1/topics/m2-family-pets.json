@@ -1,0 +1,708 @@
+{
+  "id": "m2-family-pets",
+  "moduleId": "m2",
+  "title": "Family and pets",
+  "kind": "vocabulary",
+  "context": "## Family and pets\n\nTo talk about your family, use **ter** (to have) and a possessive: *Tenho um irmão.* (I have a brother.)\n\nIn Portugal the possessive comes **with the article**, and it agrees with the person or animal you talk about, not with you:\n\n- **o meu** pai / **a minha** mãe (my father / my mother)\n- **os meus** irmãos / **as minhas** irmãs (my brothers / my sisters)\n- **o teu** cão / **a tua** gata (your dog / your cat, to a friend)\n\nExamples:\n\n- *O meu pai chama-se Miguel.* (My father is called Miguel.)\n- *A minha mãe tem quarenta anos.* (My mother is forty.)\n- *Tenho dois irmãos e uma irmã.* (I have two brothers and a sister.)\n- *O namorado da Ana é do Porto.* (Ana's boyfriend is from Porto.)\n- *A minha gata chama-se Rita.* (My cat, a female, is called Rita.)\n\n**Watch out!**\n\n- The accent changes the word: **avô** is grandfather, **avó** is grandmother, **avós** are grandparents.\n- **Irmãos** can mean brothers or brothers and sisters; **pais** means parents.\n- Age always takes **ter**: *tem vinte anos*, never *é vinte anos*.\n- A dog is **cão** (a female dog is **cadela**); *cachorro* means a puppy in Portugal.",
+  "keyItems": [
+    {
+      "target": "o pai / a mãe",
+      "support": "the father / the mother"
+    },
+    {
+      "target": "os pais",
+      "support": "the parents"
+    },
+    {
+      "target": "o filho / a filha",
+      "support": "the son / the daughter",
+      "note": "os filhos also means children"
+    },
+    {
+      "target": "o irmão / a irmã",
+      "support": "the brother / the sister",
+      "note": "os irmãos also means siblings"
+    },
+    {
+      "target": "o avô / a avó",
+      "support": "the grandfather / the grandmother",
+      "note": "the accent changes the meaning; os avós = grandparents"
+    },
+    {
+      "target": "o tio / a tia",
+      "support": "the uncle / the aunt"
+    },
+    {
+      "target": "o primo / a prima",
+      "support": "the cousin (male / female)"
+    },
+    {
+      "target": "o marido",
+      "support": "the husband"
+    },
+    {
+      "target": "a mulher",
+      "support": "the wife",
+      "note": "also means woman"
+    },
+    {
+      "target": "o namorado / a namorada",
+      "support": "the boyfriend / the girlfriend"
+    },
+    {
+      "target": "o cão / a cadela",
+      "support": "the dog / the female dog",
+      "note": "plural cães; cachorro = puppy"
+    },
+    {
+      "target": "o gato / a gata",
+      "support": "the cat (male / female)"
+    },
+    {
+      "target": "o meu / a minha",
+      "support": "my (with a singular noun)",
+      "note": "agrees with the thing owned"
+    },
+    {
+      "target": "os meus / as minhas",
+      "support": "my (with a plural noun)"
+    },
+    {
+      "target": "o teu / a tua",
+      "support": "your (to a friend)",
+      "note": "os teus / as tuas in the plural"
+    },
+    {
+      "target": "ter",
+      "support": "to have",
+      "note": "tenho, tens, tem, temos, têm"
+    },
+    {
+      "target": "ter … anos",
+      "support": "to be … years old",
+      "note": "never ser for age"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m2-family-pets-01",
+      "type": "translate_word",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Pai» is father and «mãe» is mother. The plural «pais» means parents.",
+      "direction": "toTarget",
+      "sentence": "My **father** lives in Lisbon.",
+      "word": "father",
+      "answer": "pai",
+      "options": ["pai", "mãe", "tio", "avô"]
+    },
+    {
+      "id": "m2-family-pets-02",
+      "type": "translate_word",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Cão» is the everyday word for dog in Portugal (plural «cães»). A female dog is «cadela».",
+      "direction": "toTarget",
+      "sentence": "Pedro has a **dog**.",
+      "word": "dog",
+      "answer": "cão",
+      "options": ["cão", "cães", "gato", "gata"]
+    },
+    {
+      "id": "m2-family-pets-03",
+      "type": "translate_word",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The accent carries the meaning: «avó» (open ó) is grandmother, «avô» (closed ô) is grandfather.",
+      "direction": "toTarget",
+      "sentence": "My **grandmother** lives in Braga.",
+      "word": "grandmother",
+      "answer": "avó",
+      "options": ["avó", "avô", "avós", "tia"]
+    },
+    {
+      "id": "m2-family-pets-04",
+      "type": "translate_word",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Marido» is husband. «Mulher» means wife, and also woman.",
+      "direction": "toTarget",
+      "sentence": "Her **husband** is called Tiago.",
+      "word": "husband",
+      "answer": "marido",
+      "options": ["marido", "mulher", "namorado", "filho"]
+    },
+    {
+      "id": "m2-family-pets-05",
+      "type": "translate_word",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "What does the word in bold mean?",
+      "explanation": "«Pais» is the plural of «pai», and it normally means parents: father and mother together.",
+      "direction": "toSupport",
+      "sentence": "Os meus **pais** moram no Porto.",
+      "word": "pais",
+      "answer": "parents",
+      "options": ["parents", "grandparents", "uncles", "cousins"]
+    },
+    {
+      "id": "m2-family-pets-06",
+      "type": "match_pairs",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each family word with its meaning.",
+      "explanation": "Most family words have a masculine -o form and a feminine -a form: filho / filha.",
+      "pairs": [
+        {
+          "target": "a mãe",
+          "support": "the mother"
+        },
+        {
+          "target": "o pai",
+          "support": "the father"
+        },
+        {
+          "target": "o filho",
+          "support": "the son"
+        },
+        {
+          "target": "a filha",
+          "support": "the daughter"
+        }
+      ]
+    },
+    {
+      "id": "m2-family-pets-07",
+      "type": "match_pairs",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each family word with its meaning.",
+      "explanation": "Watch the accent: «avô» is grandfather, «avó» is grandmother. «Tio / tia» follow the -o / -a pattern.",
+      "pairs": [
+        {
+          "target": "o avô",
+          "support": "the grandfather"
+        },
+        {
+          "target": "a avó",
+          "support": "the grandmother"
+        },
+        {
+          "target": "o tio",
+          "support": "the uncle"
+        },
+        {
+          "target": "a tia",
+          "support": "the aunt"
+        }
+      ]
+    },
+    {
+      "id": "m2-family-pets-08",
+      "type": "match_pairs",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each word with its meaning.",
+      "explanation": "«Primo» is a male cousin and «prima» a female one. «Mulher» is wife here, but it also means woman.",
+      "pairs": [
+        {
+          "target": "o primo",
+          "support": "the cousin (male)"
+        },
+        {
+          "target": "a prima",
+          "support": "the cousin (female)"
+        },
+        {
+          "target": "o marido",
+          "support": "the husband"
+        },
+        {
+          "target": "a mulher",
+          "support": "the wife"
+        }
+      ]
+    },
+    {
+      "id": "m2-family-pets-09",
+      "type": "match_pairs",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each possessive with the kind of noun it goes with.",
+      "explanation": "The possessive agrees with the thing owned, not with the owner: a man says «a minha mãe», a woman says «o meu pai».",
+      "pairs": [
+        {
+          "target": "o meu",
+          "support": "my + masculine singular noun"
+        },
+        {
+          "target": "a minha",
+          "support": "my + feminine singular noun"
+        },
+        {
+          "target": "os meus",
+          "support": "my + masculine plural noun"
+        },
+        {
+          "target": "as minhas",
+          "support": "my + feminine plural noun"
+        }
+      ]
+    },
+    {
+      "id": "m2-family-pets-10",
+      "type": "fill_gaps",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gap with the correct possessive.",
+      "explanation": "«Pai» is masculine singular, so «o meu». In Portugal the article «o» comes before the possessive.",
+      "template": "___ pai chama-se João.",
+      "gaps": [
+        {
+          "answer": "O meu"
+        }
+      ],
+      "wordBank": ["O meu", "A minha", "Os meus", "As minhas"]
+    },
+    {
+      "id": "m2-family-pets-11",
+      "type": "fill_gaps",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gap with the word for \"grandmother\".",
+      "explanation": "«A minha» needs a feminine noun: «avó». «Avô» is grandfather and «avós» are grandparents.",
+      "template": "A minha ___ tem setenta anos.",
+      "gaps": [
+        {
+          "answer": "avó"
+        }
+      ],
+      "wordBank": ["avó", "avô", "avós", "tio"]
+    },
+    {
+      "id": "m2-family-pets-12",
+      "type": "fill_gaps",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gap: \"My (female) cousins live in Coimbra.\"",
+      "explanation": "«Primas» is feminine plural, so the possessive is «as minhas».",
+      "template": "___ primas moram em Coimbra.",
+      "gaps": [
+        {
+          "answer": "As minhas"
+        }
+      ],
+      "wordBank": ["As minhas", "Os meus", "A minha", "O meu"]
+    },
+    {
+      "id": "m2-family-pets-13",
+      "type": "fill_gaps",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I have two brothers and one sister.\"",
+      "explanation": "With «eu», «ter» is «tenho». «Dois» needs the plural «irmãos».",
+      "template": "Eu ___ dois ___ e uma irmã.",
+      "gaps": [
+        {
+          "answer": "tenho"
+        },
+        {
+          "answer": "irmãos"
+        }
+      ],
+      "wordBank": ["tenho", "irmãos", "tem", "irmão", "tens"]
+    },
+    {
+      "id": "m2-family-pets-14",
+      "type": "fill_gaps",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Inês has a small (female) cat.\"",
+      "explanation": "«A Inês» takes the third-person form «tem». «Uma» and «pequena» are feminine, so the noun is «gata».",
+      "template": "A Inês ___ uma ___ pequena.",
+      "gaps": [
+        {
+          "answer": "tem"
+        },
+        {
+          "answer": "gata"
+        }
+      ],
+      "wordBank": ["tem", "gata", "tenho", "gato", "é"]
+    },
+    {
+      "id": "m2-family-pets-15",
+      "type": "fill_gaps",
+      "topicId": "m2-family-pets",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"My uncle and my aunt live in Faro.\"",
+      "explanation": "«O meu» needs a masculine noun (tio) and «a minha» a feminine one (tia).",
+      "template": "O meu ___ e a minha ___ moram em Faro.",
+      "gaps": [
+        {
+          "answer": "tio"
+        },
+        {
+          "answer": "tia"
+        }
+      ],
+      "wordBank": ["tio", "tia", "primo", "prima", "avô"]
+    },
+    {
+      "id": "m2-family-pets-16",
+      "type": "fill_gaps",
+      "topicId": "m2-family-pets",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Sofia's husband is called Tiago. They have two sons.\"",
+      "explanation": "«O … da Sofia» needs a masculine noun: «marido». «Dois» needs a masculine plural: «filhos», which can also mean children.",
+      "template": "O ___ da Sofia chama-se Tiago. Eles têm dois ___.",
+      "gaps": [
+        {
+          "answer": "marido"
+        },
+        {
+          "answer": "filhos"
+        }
+      ],
+      "wordBank": ["marido", "filhos", "mulher", "filhas", "filho"]
+    },
+    {
+      "id": "m2-family-pets-17",
+      "type": "fill_gaps",
+      "topicId": "m2-family-pets",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Tiago's girlfriend is twenty-four.\"",
+      "explanation": "«A» before the gap signals the feminine «namorada». Age always uses «ter»: «tem vinte e quatro anos».",
+      "template": "A ___ do Tiago ___ vinte e quatro anos.",
+      "gaps": [
+        {
+          "answer": "namorada"
+        },
+        {
+          "answer": "tem"
+        }
+      ],
+      "wordBank": ["namorada", "tem", "namorado", "é", "está"]
+    },
+    {
+      "id": "m2-family-pets-18",
+      "type": "build_phrase",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"My dog.\"",
+      "explanation": "«Cão» is masculine, so «o meu». European Portuguese keeps the article before the possessive.",
+      "answer": ["O", "meu", "cão."],
+      "distractors": ["A", "minha", "gata."]
+    },
+    {
+      "id": "m2-family-pets-19",
+      "type": "build_phrase",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"My mother.\"",
+      "explanation": "«Mãe» is feminine singular, so «a minha mãe».",
+      "answer": ["A", "minha", "mãe."],
+      "distractors": ["O", "meu", "mães."]
+    },
+    {
+      "id": "m2-family-pets-20",
+      "type": "build_phrase",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"I have one brother and two sisters.\"",
+      "explanation": "«Tenho» already means \"I have\", so «eu» is optional. «Duas» is the feminine form of «dois».",
+      "answer": ["Tenho", "um", "irmão", "e", "duas", "irmãs."],
+      "distractors": ["tem", "irmã", "dois"],
+      "acceptedAnswers": ["Eu tenho um irmão e duas irmãs."]
+    },
+    {
+      "id": "m2-family-pets-21",
+      "type": "build_phrase",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"My grandfather is seventy.\"",
+      "explanation": "Age uses «ter», never «ser»: «tem setenta anos». «Avô» with ô is grandfather.",
+      "answer": ["O", "meu", "avô", "tem", "setenta", "anos."],
+      "distractors": ["avó", "é", "minha"]
+    },
+    {
+      "id": "m2-family-pets-22",
+      "type": "build_phrase",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"Ana's boyfriend is Portuguese.\"",
+      "explanation": "In Portugal first names take an article: «a Ana». So «de + a Ana» becomes «da Ana».",
+      "answer": ["O", "namorado", "da", "Ana", "é", "português."],
+      "distractors": ["namorada", "de", "do"]
+    },
+    {
+      "id": "m2-family-pets-23",
+      "type": "build_phrase",
+      "topicId": "m2-family-pets",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"My (female) cousins have two cats.\"",
+      "explanation": "«Primas» is feminine plural, so «as minhas». A plural subject takes «têm», with the circumflex.",
+      "answer": ["As", "minhas", "primas", "têm", "dois", "gatos."],
+      "distractors": ["Os", "meus", "tem", "gatas."]
+    },
+    {
+      "id": "m2-family-pets-24",
+      "type": "build_phrase",
+      "topicId": "m2-family-pets",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"Pedro's wife lives in Porto.\"",
+      "explanation": "«Do Pedro» is «de + o Pedro», and «no Porto» is «em + o Porto».",
+      "answer": ["A", "mulher", "do", "Pedro", "mora", "no", "Porto."],
+      "distractors": ["marido", "da", "em"],
+      "acceptedAnswers": ["A mulher do Pedro vive no Porto."]
+    },
+    {
+      "id": "m2-family-pets-25",
+      "type": "build_phrase",
+      "topicId": "m2-family-pets",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"My (female) cat is called Rita and she is small.\"",
+      "explanation": "«Gata» is feminine, so everything agrees with it: «a minha gata … pequena».",
+      "answer": ["A", "minha", "gata", "chama-se", "Rita", "e", "é", "pequena."],
+      "distractors": ["O", "meu", "pequeno."]
+    },
+    {
+      "id": "m2-family-pets-26",
+      "type": "question_for_answer",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Tenho dois irmãos.» What did you ask? (informal)",
+      "explanation": "«Irmãos» is masculine plural, so «quantos», not «quantas». «Tens» is the tu form of «ter».",
+      "givenAnswer": "Tenho dois irmãos.",
+      "answer": ["Quantos", "irmãos", "tens?"],
+      "distractors": ["Quantas", "tem?", "irmãs"],
+      "acceptedAnswers": ["Quantos irmãos é que tens?"]
+    },
+    {
+      "id": "m2-family-pets-27",
+      "type": "question_for_answer",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «O meu cão chama-se Bobi.» What did you ask? (informal)",
+      "explanation": "Ask a name with «Como se chama …?». To a friend, the dog is «o teu cão».",
+      "givenAnswer": "O meu cão chama-se Bobi.",
+      "answer": ["Como", "se", "chama", "o", "teu", "cão?"],
+      "distractors": ["te", "chamas", "tua"],
+      "acceptedAnswers": ["Como é que se chama o teu cão?"]
+    },
+    {
+      "id": "m2-family-pets-28",
+      "type": "question_for_answer",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «A minha mãe tem cinquenta anos.» What did you ask? (informal)",
+      "explanation": "The age question is «Quantos anos tem …?». «Mãe» is feminine, so «a tua mãe».",
+      "givenAnswer": "A minha mãe tem cinquenta anos.",
+      "answer": ["Quantos", "anos", "tem", "a", "tua", "mãe?"],
+      "distractors": ["Quantas", "teu", "é"],
+      "acceptedAnswers": ["Quantos anos é que a tua mãe tem?"]
+    },
+    {
+      "id": "m2-family-pets-29",
+      "type": "question_for_answer",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Sim, tenho uma gata.» What did you ask? (informal)",
+      "explanation": "A yes/no question keeps the word order of a statement; only the intonation rises. «Tens» is the tu form.",
+      "givenAnswer": "Sim, tenho uma gata.",
+      "answer": ["Tens", "animais", "em", "casa?"],
+      "distractors": ["Tem", "animal", "na"]
+    },
+    {
+      "id": "m2-family-pets-30",
+      "type": "question_for_answer",
+      "topicId": "m2-family-pets",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Os meus avós moram em Braga.» What did you ask? (informal)",
+      "explanation": "«Avós» is plural, so the verb is «moram» and the possessive «os teus».",
+      "givenAnswer": "Os meus avós moram em Braga.",
+      "answer": ["Onde", "moram", "os", "teus", "avós?"],
+      "distractors": ["mora", "as", "tuas"],
+      "acceptedAnswers": ["Onde é que moram os teus avós?"]
+    },
+    {
+      "id": "m2-family-pets-31",
+      "type": "question_for_answer",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «A minha irmã mora em Londres.» What did you ask? (informal)",
+      "explanation": "You ask about a third person, so «mora», not «moras». «Irmã» is feminine: «a tua irmã».",
+      "givenAnswer": "A minha irmã mora em Londres.",
+      "answer": ["Onde", "mora", "a", "tua", "irmã?"],
+      "distractors": ["moras", "o", "teu"],
+      "acceptedAnswers": ["Onde é que mora a tua irmã?"]
+    },
+    {
+      "id": "m2-family-pets-32",
+      "type": "find_error",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In Portugal a dog is «cão». «Cachorro» means a puppy.",
+      "sentence": ["O", "meu", "cachorro", "é", "muito", "bonito."],
+      "wrongIndex": 2,
+      "correction": "cão",
+      "options": ["cão", "gato", "cadela"]
+    },
+    {
+      "id": "m2-family-pets-33",
+      "type": "find_error",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Mãe» is feminine, so the article before «minha» must be «a».",
+      "sentence": ["O", "minha", "mãe", "chama-se", "Sofia."],
+      "wrongIndex": 0,
+      "correction": "A",
+      "options": ["A", "Os", "As"]
+    },
+    {
+      "id": "m2-family-pets-34",
+      "type": "find_error",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Age uses «ter», not «ser»: «O meu pai tem cinquenta anos».",
+      "sentence": ["O", "meu", "pai", "é", "cinquenta", "anos."],
+      "wrongIndex": 3,
+      "correction": "tem",
+      "options": ["tem", "está", "tens"]
+    },
+    {
+      "id": "m2-family-pets-35",
+      "type": "find_error",
+      "topicId": "m2-family-pets",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Irmãs» is feminine plural, so the full possessive is «as minhas».",
+      "sentence": ["As", "meus", "irmãs", "moram", "em", "Lisboa."],
+      "wrongIndex": 1,
+      "correction": "minhas",
+      "options": ["minhas", "minha", "meu"]
+    },
+    {
+      "id": "m2-family-pets-36",
+      "type": "find_error",
+      "topicId": "m2-family-pets",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«O meu» and «simpático» are masculine, so the word is «avô» (grandfather), with the circumflex.",
+      "sentence": ["O", "meu", "avó", "é", "muito", "simpático."],
+      "wrongIndex": 2,
+      "correction": "avô",
+      "options": ["avô", "avós", "tio"]
+    },
+    {
+      "id": "m2-family-pets-37",
+      "type": "about_me",
+      "topicId": "m2-family-pets",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Answer with «Tenho …» or «Não tenho irmãos.». «Irmãos» can mean brothers or siblings.",
+      "question": "Tens irmãos?",
+      "sampleAnswer": "Tenho um irmão e uma irmã.",
+      "hints": ["Não", "irmãos", "irmãs", "dois", "duas"]
+    },
+    {
+      "id": "m2-family-pets-38",
+      "type": "about_me",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Name each pet with its article: «um cão», «uma gata». If you have none: «Não tenho animais.»",
+      "question": "Tens animais em casa?",
+      "sampleAnswer": "Tenho um cão e uma gata.",
+      "hints": ["Não", "animais", "gato", "cadela", "dois", "gatos"]
+    },
+    {
+      "id": "m2-family-pets-39",
+      "type": "about_me",
+      "topicId": "m2-family-pets",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Repeat the person with the right possessive and use «ter» for the age: «A minha mãe tem … anos.»",
+      "question": "Quantos anos tem a tua mãe?",
+      "sampleAnswer": "A minha mãe tem cinquenta anos.",
+      "hints": ["O", "meu", "pai", "quarenta", "sessenta"]
+    },
+    {
+      "id": "m2-family-pets-40",
+      "type": "order_dialogue",
+      "topicId": "m2-family-pets",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Two friends talk about their families. Put the lines in order.",
+      "explanation": "Each question is answered straight away; «E tu?» turns the same question back to the other person.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Tens irmãos, Rita?"
+        },
+        {
+          "speaker": "B",
+          "text": "Tenho uma irmã. Chama-se Inês."
+        },
+        {
+          "speaker": "A",
+          "text": "Quantos anos tem a tua irmã?"
+        },
+        {
+          "speaker": "B",
+          "text": "Tem vinte anos. E tu, tens irmãos?"
+        },
+        {
+          "speaker": "A",
+          "text": "Não, não tenho. Mas tenho um cão!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "m2",
+  "title": "Module 2 — Basics: environment, family, objects, and spatial relationships",
+  "description": "Environment, family, objects, and spatial relationships",
+  "topics": [
+    {
+      "id": "m2-family-pets",
+      "title": "Family and pets",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Family members (pai, mãe, filho/filha, irmão/irmã, avô/avó, tio/tia, primo/prima, marido, mulher, namorado/a) and pets (cão, gato); possessives o meu / a minha / os meus / as minhas; \"ter\" for having family members; ages of family members.",
+      "known": "Module 1 — ser/estar/ter, -ar verbs, articles, de/em contractions, numbers to 50, question words.",
+      "avoid": "past tenses, subjunctive, object pronouns, comparatives."
+    },
+    {
+      "id": "m2-classroom-objects",
+      "title": "Classroom objects and class communication",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Classroom objects (livro, caderno, lápis, borracha, quadro, mesa, cadeira, mochila) and phrases used in class (Posso…?, Não percebo, Pode repetir?, Como se diz … em português?); singular/plural of nouns; polite classroom requests.",
+      "known": "Module 1 grammar; m2-family-pets possessives.",
+      "avoid": "past tenses, subjunctive, object pronouns, comparatives."
+    },
+    {
+      "id": "m2-er-verbs",
+      "title": "Regular -er verbs",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Presente do Indicativo of regular -er verbs (viver, comer, escrever, beber, aprender, vender); endings -o/-es/-e/-emos/-em; contrast with the -ar endings from Module 1; negation with não.",
+      "known": "Module 1 — -ar verbs, pronouns, ser/estar/ter.",
+      "avoid": "past tenses, subjunctive, -ir verbs, object pronouns."
+    },
+    {
+      "id": "m2-demonstratives",
+      "title": "Demonstratives and de/em contractions",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Invariable demonstratives isto/isso/aquilo and variable este/esta, esse/essa, aquele/aquela with gender/number agreement; contractions of de and em with demonstratives (disto, nisso, daqui, deste, neste); pointing things out (Isto é um livro. / Este livro é meu.).",
+      "known": "Module 1 — articles, de/em contractions; m2-classroom-objects vocabulary.",
+      "avoid": "past tenses, subjunctive, comparatives, spatial prepositions (later topic)."
+    },
+    {
+      "id": "m2-appearance-character",
+      "title": "Appearance, character and physical states",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Describing appearance (alto/baixo, gordo/magro, cabelo, olhos azuis, barba) and character (simpático/a, tímido/a, engraçado/a); physiological states with estar/ter (estar cansado, ter fome, ter frio, ter sede, ter sono).",
+      "known": "Module 1 — ser vs estar, ter, adjective agreement.",
+      "avoid": "past tenses, comparatives, object pronouns."
+    },
+    {
+      "id": "m2-colors-antonyms",
+      "title": "Colors and antonym pairs",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Colors (vermelho, azul, verde, amarelo, preto, branco, cor-de-rosa) with gender/number agreement; common antonym pairs (grande/pequeno, alto/baixo, quente/frio, novo/velho, caro/barato); describing objects and people.",
+      "known": "Module 1 — ser, adjective agreement; m2-appearance-character.",
+      "avoid": "past tenses, comparatives, superlatives."
+    },
+    {
+      "id": "m2-spatial-prepositions",
+      "title": "Spatial prepositions",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "Prepositions and phrases of place: dentro de, debaixo de, em cima de, ao lado de, em frente de, atrás de, entre; contraction with articles (dentro do, em cima da); describing where objects or people are in a room or classroom.",
+      "known": "Module 1 — articles, de/em contractions; m2-classroom-objects, m2-demonstratives.",
+      "avoid": "past tenses, comparatives, prepositions of movement (a, para, por — later module)."
+    },
+    {
+      "id": "m2-numbers-160",
+      "title": "Numbers 51–160",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "Numbers 51–160: cinquenta e um … cento e sessenta; hundred forms (cem vs cento e); prices, quantities and ages beyond 50, building on Module 1 numbers 0–50.",
+      "known": "Module 1 — numbers 0–50, um/uma and dois/duas agreement.",
+      "avoid": "past tenses, ordinals beyond sexto, percentages (later module)."
+    }
+  ]
+}

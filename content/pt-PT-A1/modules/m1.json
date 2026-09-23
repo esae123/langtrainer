@@ -2,14 +2,62 @@
   "id": "m1",
   "title": "Module 1 — Basics: meeting people and personal information",
   "description": "Greet people, introduce yourself, and share basic personal information — name, nationality, age, profession and languages — using the core grammar (ser, estar, ter, -ar verbs, articles) an absolute beginner needs first.",
-  "topicOrder": [
-    "m1-greetings",
-    "m1-who-am-i",
-    "m1-pronouns-ser-estar-ter",
-    "m1-ar-verbs",
-    "m1-articles-de-em",
-    "m1-professions-languages",
-    "m1-numbers",
-    "m1-question-words"
+  "topics": [
+    {
+      "id": "m1-greetings",
+      "title": "Greetings and politeness",
+      "kind": "situation",
+      "count": 40,
+      "brief": "Olá, Bom dia/tarde/noite, Tudo bem?, Por favor, Obrigado/a, De nada, Desculpe, Com licença, Até logo/amanhã, Adeus; tu vs você register."
+    },
+    {
+      "id": "m1-who-am-i",
+      "title": "Introducing yourself",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "chamar-se, ser + nationality (português/portuguesa, russo/russa, inglês/inglesa, espanhol/espanhola…), ser de + city, ter … anos, falar + language; agreement of nationality adjectives."
+    },
+    {
+      "id": "m1-pronouns-ser-estar-ter",
+      "title": "Pronouns, ser, estar, ter",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "eu/tu/você/ele/ela/nós/vocês/eles/elas; full present of ser, estar, ter; ser vs estar (permanent vs temporary; location with estar)."
+    },
+    {
+      "id": "m1-ar-verbs",
+      "title": "Regular -ar verbs",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "falar, morar, trabalhar, estudar, gostar de; endings -o/-as/-a/-amos/-am; negation with não."
+    },
+    {
+      "id": "m1-articles-de-em",
+      "title": "Articles and de/em contractions",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "o/a/os/as, um/uma/uns/umas; gender & number cues; de+o=do, de+a=da, em+o=no, em+a=na, plurals dos/das/nos/nas; \"sou do Porto\", \"moro na Rua…\"."
+    },
+    {
+      "id": "m1-professions-languages",
+      "title": "Professions and languages",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "professor/a, jornalista, médico/a, engenheiro/a, estudante, advogado/a, cozinheiro/a, enfermeiro/a, empresário/a, reformado/a; \"sou professor\" (no article); languages: português, inglês, russo, espanhol, francês, alemão."
+    },
+    {
+      "id": "m1-numbers",
+      "title": "Numbers 0–50 and ordinals",
+      "kind": "vocabulary",
+      "count": 40,
+      "brief": "zero…cinquenta, um/uma & dois/duas agreement, vinte e um, ordinals primeiro…sexto; age, phone numbers, floor numbers (andar), prices in euros."
+    },
+    {
+      "id": "m1-question-words",
+      "title": "Question words and word order",
+      "kind": "grammar",
+      "count": 40,
+      "brief": "como, quem, onde, de onde, o que, qual, quanto/a, quantos/as, porquê/porque; plain vs \"é que\"; answering yes/no questions (Sim, sou. / Não, não sou.)."
+    }
   ]
 }
