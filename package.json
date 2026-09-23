@@ -12,7 +12,8 @@
     "test": "vitest run",
     "icons": "node scripts/generate-icons.mjs",
     "content:check": "node scripts/content-check.ts",
-    "content:build": "node scripts/content-build.ts"
+    "content:build": "node scripts/content-build.ts",
+    "content:generate": "node scripts/content-generate.ts"
   },
   "dependencies": {
     "dexie": "^4.4.6",

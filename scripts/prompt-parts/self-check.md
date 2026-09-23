@@ -1,0 +1,2 @@
+SELF-CHECK BEFORE ANSWERING
+Count '___' vs gaps; wordBank contains every gap answer; options include the correction/answer and exclude the wrong token; exactly one null in sequences; ids sequential and unique; allowedModes compatible with the type; no distractor equals an answer token (case/punctuation-insensitive); no about_me hint equals a sampleAnswer word (case/punctuation-insensitive); JSON is valid; exactly the requested number of exercises; no forms that violate the language rules above.

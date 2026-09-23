@@ -3,14 +3,21 @@
 Use this when you want to generate a topic yourself in Gemini, DeepSeek, Qwen, Kimi or Claude chat.
 Workflow:
 
-1. Paste **Block A** (system rules) as the first message.
+1. Paste **Block A** (system rules) as the first message — replace the LANGUAGE RULES section with
+   the contents of `content/<programId>/RULES.md` for the program you're writing for (pt-PT-A1's
+   rules are pasted below by default; swap them for `content/en-b2/RULES.md` etc. as needed).
 2. Paste **Block B** (topic brief) filled in for your topic.
 3. Save the model's JSON answer to `content/pt-PT-A1/topics/<topicId>.json` (or `content/<programId>/topics/...`).
 4. Run `npm run content:check`. If it prints problems, paste them back to the model with "Fix these problems and return the full JSON again."
-5. Add the topicId to `content/<programId>/modules/<moduleId>.json` → `topicOrder`.
+5. Add the topicId to `content/<programId>/modules/<moduleId>.json` → `topics[]` (or `topicOrder`).
 6. A language review (Claude) is still recommended before shipping.
 
-The same Block A is used by the automated generator script (`scripts/content-generate.ts`).
+Block A's PEDAGOGY, SCHEMA, EXAMPLES and SELF-CHECK sections below are program-independent and are
+kept as the single source of truth in `scripts/prompt-parts/*.md` (`pedagogy.md`, `schema.md`,
+`examples.md`, `self-check.md`); `scripts/content-generate.ts` assembles its Gemini prompt from
+those same files plus each program's `RULES.md`, so this pack and the generator never drift apart.
+This pack inlines their current contents below so it stays copy-pasteable without touching the
+repo. If you edit the language rules or pedagogy, edit the source files, not this copy.
 
 ---
 
@@ -39,6 +46,8 @@ PEDAGOGY
 - The learner PRODUCES language: prefer build_phrase, fill_gaps, question_for_answer, find_error, about_me. Use translate_word / match_pairs mainly for vocabulary.
 - difficulty: 1 = recognise / short form; 2 = full sentence with one decision; 3 = two decisions or longer sentence. Spread ≈ 30% / 45% / 25%.
 - Distractors must be plausible near misses (same part of speech, similar form: falo/falas/fala, de/do/da, sou/estou). Never random unrelated words. Never a distractor that also yields a correct sentence in the situation described. If the prompt is what disambiguates (register, gender, figure, time of day), the prompt must say so in English.
+- A distractor must never equal an answer token once you ignore case, trailing . ! ? and guillemets («») — e.g. answer ["Tens","um","gato?"] must not use "tens" or "Tens?" as a distractor.
+- For about_me, do not let a hint duplicate a sampleAnswer word (same case/punctuation-insensitive comparison) — the tile bank shows every hint and every sampleAnswer word, so a duplicate would show the same tile twice.
 - No two exercises in a topic with the same target sentence.
 
 SCHEMA (TypeScript)
@@ -47,10 +56,10 @@ Topic = { id: string; moduleId: string; title: string; kind: 'grammar'|'vocabula
 Common exercise fields: { id: '<topicId>-NN' (zero-padded, sequential from 01); type; topicId; difficulty: 1|2|3;
           allowedModes: ('tiles'|'letters'|'typing')[]; prompt: string; explanation: string; tags?: string[] }
 Types and their extra fields + invariants:
-- build_phrase: answer: string[] (2–10 tokens, punctuation attached to the last token e.g. "Lisboa."), distractors: string[] (1–4, none equal to an answer token), acceptedAnswers?: string[] (full alternative sentences). Modes: tiles, typing; letters only if answer ≤ 4 tokens.
+- build_phrase: answer: string[] (2–10 tokens, punctuation attached to the last token e.g. "Lisboa."), distractors: string[] (1–4, none equal to an answer token, case/punctuation-insensitive), acceptedAnswers?: string[] (full alternative sentences). Modes: tiles, typing; letters only if answer ≤ 4 tokens.
 - fill_gaps: template: string with one '___' per gap (1–3 gaps), gaps: { answer: string; accepted?: string[] }[], wordBank: string[] (all gap answers + 2–4 distractors, no duplicates). Modes: tiles, letters, typing.
-- question_for_answer: givenAnswer: string, answer: string[] (2–8 tokens, last token ends with '?'), distractors: string[] (1–4), acceptedAnswers?: string[]. Modes: tiles, typing; letters only if ≤ 4 tokens.
-- about_me: question: string (in Portuguese), sampleAnswer: string (2–12 words), hints: string[] (3–8 useful words/chunks). Modes: tiles, typing.
+- question_for_answer: givenAnswer: string, answer: string[] (2–8 tokens, last token ends with '?'), distractors: string[] (1–4, none equal to an answer token, case/punctuation-insensitive), acceptedAnswers?: string[]. Modes: tiles, typing; letters only if ≤ 4 tokens.
+- about_me: question: string (in Portuguese), sampleAnswer: string (2–12 words), hints: string[] (3–8 useful words/chunks, none duplicating a sampleAnswer word case/punctuation-insensitively). Modes: tiles, typing.
 - find_error: sentence: string[] (3–10 tokens), wrongIndex: number, correction: string (≠ sentence[wrongIndex]), options: string[] (3–4, includes correction, excludes the wrong token). Modes: tiles, letters.
 - number_sequence: sequence: (number|null)[] (4–6 items, exactly one null), answerWords: string[] (1–2 spellings), options: string[] (4–6 number words incl. answerWords[0]). Modes: tiles, letters, typing.
 - match_pairs: pairs: { target: string; support: string }[] (4–6, all targets unique, all supports unique). Modes: ['tiles'] only.
@@ -69,7 +78,7 @@ EXAMPLES (one per type, European Portuguese, correct shape)
 {"id":"m1-who-am-i-34","type":"translate_word","topicId":"m1-who-am-i","difficulty":1,"allowedModes":["tiles","letters","typing"],"prompt":"Choose the Portuguese for the word in bold.","explanation":"«Ela fala» — the ending «-a» is the form for ele, ela and o senhor / a senhora.","direction":"toTarget","sentence":"She **speaks** Portuguese and German.","word":"speaks","answer":"fala","options":["fala","falo","falas","falam"]}
 
 SELF-CHECK BEFORE ANSWERING
-Count '___' vs gaps; wordBank contains every gap answer; options include the correction/answer and exclude the wrong token; exactly one null in sequences; ids sequential and unique; allowedModes compatible with the type; JSON is valid; exactly the requested number of exercises; no Brazilian forms.
+Count '___' vs gaps; wordBank contains every gap answer; options include the correction/answer and exclude the wrong token; exactly one null in sequences; ids sequential and unique; allowedModes compatible with the type; no distractor equals an answer token (case/punctuation-insensitive); no about_me hint equals a sampleAnswer word (case/punctuation-insensitive); JSON is valid; exactly the requested number of exercises; no Brazilian forms.
 ```
 
 ---

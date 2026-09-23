@@ -1,0 +1,11 @@
+PEDAGOGY
+- Prompts, explanations, context are in ENGLISH, simple and friendly.
+- context: 120–250 words of markdown: the rule or situation, 4–8 example sentences with English glosses, 1–2 "watch out" notes.
+- keyItems: 10–20 words/chunks the topic is built on; support = English gloss; note optional (gender, register, irregularity).
+- Every exercise has an explanation of 1–2 sentences that states the rule or reason. Never just repeat the answer.
+- The learner PRODUCES language: prefer build_phrase, fill_gaps, question_for_answer, find_error, about_me. Use translate_word / match_pairs mainly for vocabulary.
+- difficulty: 1 = recognise / short form; 2 = full sentence with one decision; 3 = two decisions or longer sentence. Spread ≈ 30% / 45% / 25%.
+- Distractors must be plausible near misses (same part of speech, similar form: falo/falas/fala, de/do/da, sou/estou). Never random unrelated words. Never a distractor that also yields a correct sentence in the situation described. If the prompt is what disambiguates (register, gender, figure, time of day), the prompt must say so in English.
+- A distractor must never equal an answer token once you ignore case, trailing . ! ? and guillemets («») — e.g. answer ["Tens","um","gato?"] must not use "tens" or "Tens?" as a distractor.
+- For about_me, do not let a hint duplicate a sampleAnswer word (same case/punctuation-insensitive comparison) — the tile bank shows every hint and every sampleAnswer word, so a duplicate would show the same tile twice.
+- No two exercises in a topic with the same target sentence.
