@@ -104,3 +104,28 @@ Tips:
 - For big topics, ask for 20 exercises twice (ids 01–20, then 21–40 "continue from id 21, do not repeat sentences") and merge the arrays.
 - If the model drifts into Brazilian forms, reply: "Rewrite in European Portuguese: tu forms, estar a + infinitive, clitics after the verb, catorze/dezasseis." and re-run the check.
 - Phrase sets use the `PhraseSet` shape instead: `{ id, title, phrases: [{ target, support, register?, situation? }], exercises }` with 50 phrases and 40 exercises (order_dialogue, match_pairs, build_phrase, fill_gaps, translate_word).
+
+---
+
+## Block C — phrase set brief (paste after Block A instead of Block B)
+
+```
+Write one PhraseSet JSON (not a Topic).
+programId: pt-PT-A1
+phraseSetId: everyday-2
+title: Everyday phrases 2 — shops, services and getting around
+Situations and phrases to cover: <list situations and any phrases you want included>
+Shape: { "id": "<phraseSetId>", "title": "...", "phrases": [ { "target": "...", "support": "natural English equivalent, not literal", "register": "formal" | "informal" | "neutral", "situation": "short, e.g. 'someone sneezes'" } ], "exercises": [ ... ] }
+Phrases: exactly 50, all different from each other, all phrases people actually say in Portugal.
+Exercises: exactly 40, ids <phraseSetId>-01 … -40, every exercise has "topicId": "<phraseSetId>".
+Mix: ≈10 order_dialogue (3–6 lines, A/B alternating, realistic mini-exchanges), ≈10 match_pairs (4–6 pairs), ≈10 build_phrase (situation in the prompt → build the phrase, 1–3 near-miss distractors), ≈6 fill_gaps, ≈4 translate_word.
+Every prompt describes the situation in English; every explanation says when/why the phrase is used and any register note.
+Exercises may only use phrases from the list plus short natural glue words.
+Return only the JSON.
+```
+
+To **add phrases to an existing set** by hand: append objects to `phrases`, then append exercises that use them with
+the next free ids (`everyday-1-41`, `-42` …; ids must stay unique and sequential in style). A phrase that appears only in
+`phrases` is shown in the Library but is never practised: sessions use `exercises` only.
+To **create a new set**: save the file as `content/pt-PT-A1/phrases/<id>.json` and add the id to `phraseSetOrder` in
+`content/pt-PT-A1/program.json`, then run `npm run content:check`.
