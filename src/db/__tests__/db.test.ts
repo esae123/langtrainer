@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { LangTrainerDB, type TopicProgressRow } from '../db';
 
 describe('LangTrainerDB schema', () => {
-  it('creates all seven tables and round-trips a row in each', async () => {
+  it('creates all eight tables and round-trips a row in each', async () => {
     const db = new LangTrainerDB('db-schema-test');
 
     await db.settings.put({ key: 'settings', value: { uiLanguage: 'en' } });
@@ -70,6 +70,21 @@ describe('LangTrainerDB schema', () => {
       },
       createdAt: 1,
     });
+    await db.programs.put({
+      id: 'en-b2',
+      source: 'imported',
+      importedAt: 5,
+      fileName: 'en-b2.json',
+      program: {
+        id: 'en-b2',
+        title: 'English B2',
+        targetLanguage: 'en',
+        supportLanguage: 'en',
+        level: 'B2',
+        modules: [],
+        phraseSets: [],
+      },
+    });
 
     expect(await db.settings.count()).toBe(1);
     expect(await db.profile.count()).toBe(1);
@@ -78,6 +93,7 @@ describe('LangTrainerDB schema', () => {
     expect(await db.attempts.count()).toBe(1);
     expect(await db.customTopics.count()).toBe(1);
     expect(await db.generatedExercises.count()).toBe(1);
+    expect(await db.programs.get('en-b2')).toMatchObject({ source: 'imported', importedAt: 5 });
 
     db.close();
   });
@@ -143,7 +159,7 @@ describe('LangTrainerDB schema', () => {
     db.close();
   });
 
-  it('migrates version 1 rows through to version 3', async () => {
+  it('migrates version 1 rows through to version 4', async () => {
     const name = 'db-upgrade-test';
     const v1 = new Dexie(name);
     v1.version(1).stores({
@@ -169,7 +185,7 @@ describe('LangTrainerDB schema', () => {
 
     const db = new LangTrainerDB(name);
     await db.open();
-    expect(db.verno).toBe(3);
+    expect(db.verno).toBe(4);
     const row = (await db.topicProgress.get('legacy')) as TopicProgressRow;
     expect(row.failedReviewsInARow).toBe(0);
     expect(row.wrongExerciseIds).toEqual([]);
@@ -177,10 +193,12 @@ describe('LangTrainerDB schema', () => {
     expect(row.seenExerciseIds).toEqual(['e1']);
     expect(row.nextReviewAt).toBe(42);
     expect(row.history).toHaveLength(1);
+    // Version 4 only adds the (initially empty) programs store.
+    expect(await db.programs.count()).toBe(0);
     db.close();
   });
 
-  it('migrates version 2 rows to version 3 by adding wrongExerciseIds', async () => {
+  it('migrates version 2 rows to version 4 by adding wrongExerciseIds', async () => {
     const name = 'db-upgrade-v2-test';
     const v2 = new Dexie(name);
     const stores = {
@@ -208,11 +226,56 @@ describe('LangTrainerDB schema', () => {
 
     const db = new LangTrainerDB(name);
     await db.open();
-    expect(db.verno).toBe(3);
+    expect(db.verno).toBe(4);
     const row = (await db.topicProgress.get('legacy2')) as TopicProgressRow;
     expect(row.wrongExerciseIds).toEqual([]);
     expect(row.failedReviewsInARow).toBe(1);
     expect(row.seenExerciseIds).toEqual(['e1', 'e2']);
+    db.close();
+  });
+
+  it('adds the programs store on the version 3 → 4 upgrade without touching data', async () => {
+    const name = 'db-upgrade-v3-test';
+    const stores = {
+      settings: 'key',
+      profile: 'id',
+      topicProgress: 'topicId, programId, nextReviewAt',
+      sessions: 'id, startedAt',
+      attempts: 'id, sessionId, topicId, exerciseId',
+      customTopics: 'id',
+      generatedExercises: 'id, topicId',
+    };
+    const v3 = new Dexie(name);
+    v3.version(1).stores(stores);
+    v3.version(2).stores(stores);
+    v3.version(3).stores(stores);
+    await v3.open();
+    await v3.table('topicProgress').put({
+      topicId: 'legacy3',
+      programId: 'pt-PT-A1',
+      status: 'review',
+      reviewStage: 2,
+      failedReviewsInARow: 0,
+      history: [{ at: 1, correct: 2, total: 3 }],
+      seenExerciseIds: ['e1'],
+      wrongExerciseIds: ['e2'],
+      nextReviewAt: 77,
+    });
+    await v3.table('settings').put({ key: 'settings', value: { uiLanguage: 'ru' } });
+    v3.close();
+
+    const db = new LangTrainerDB(name);
+    await db.open();
+    expect(db.verno).toBe(4);
+    expect(await db.programs.count()).toBe(0);
+    const row = (await db.topicProgress.get('legacy3')) as TopicProgressRow;
+    expect(row).toMatchObject({
+      status: 'review',
+      reviewStage: 2,
+      wrongExerciseIds: ['e2'],
+      nextReviewAt: 77,
+    });
+    expect(await db.settings.get('settings')).toMatchObject({ value: { uiLanguage: 'ru' } });
     db.close();
   });
 });

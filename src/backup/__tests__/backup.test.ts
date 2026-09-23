@@ -54,6 +54,38 @@ async function seedFixtureData(geminiApiKey: string) {
     },
     createdAt: 1,
   });
+  await db.programs.put({
+    id: 'en-b2',
+    source: 'imported',
+    importedAt: 20,
+    fileName: 'en-b2.json',
+    program: {
+      id: 'en-b2',
+      title: 'English B2',
+      targetLanguage: 'en',
+      supportLanguage: 'en',
+      level: 'B2',
+      modules: [
+        {
+          id: 'en-b2-m1',
+          title: 'Module 1',
+          description: 'Words',
+          topics: [
+            {
+              id: 'en-b2-m1-work',
+              moduleId: 'en-b2-m1',
+              title: 'Work',
+              kind: 'vocabulary',
+              context: 'Context.',
+              keyItems: [],
+              exercises: [],
+            },
+          ],
+        },
+      ],
+      phraseSets: [],
+    },
+  });
   await db.generatedExercises.put({
     id: 'g1',
     topicId: 't1',
@@ -144,6 +176,34 @@ describe('export -> import round trip', () => {
     expect(await db.attempts.get('a1')).toMatchObject({ correct: true, answer: 'ola' });
     expect(await db.customTopics.get('c1')).toMatchObject({ programId: 'pt-PT-A1' });
     expect(await db.generatedExercises.get('g1')).toMatchObject({ topicId: 't1' });
+  });
+
+  it('carries imported courses, so they travel with the backup', async () => {
+    await seedFixtureData('key');
+    const backup = await buildBackup();
+    expect(backup.data.programs).toHaveLength(1);
+    expect(backup.data.programs[0].program.modules[0].topics[0].id).toBe('en-b2-m1-work');
+
+    await clearAllTables();
+    const file = new File([JSON.stringify(backup)], 'backup.json', { type: 'application/json' });
+    await importBackup(file);
+
+    const restored = await db.programs.get('en-b2');
+    expect(restored).toMatchObject({ source: 'imported', fileName: 'en-b2.json' });
+    expect(restored?.program.title).toBe('English B2');
+  });
+
+  it('accepts an older backup that has no programs table', async () => {
+    await seedFixtureData('key');
+    const backup = await buildBackup();
+    const older = { ...backup, data: { ...backup.data } } as unknown as Record<string, unknown>;
+    delete (older.data as Record<string, unknown>).programs;
+
+    const file = new File([JSON.stringify(older)], 'backup.json', { type: 'application/json' });
+    await importBackup(file);
+
+    expect(await db.programs.count()).toBe(0);
+    expect(await db.topicProgress.get('t1')).toBeDefined();
   });
 
   it('replaces existing data rather than merging it', async () => {

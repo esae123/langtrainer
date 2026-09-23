@@ -33,6 +33,9 @@ export const INPUT_PRESETS: Record<Exclude<InputPreset, 'custom'>, InputShares> 
 export const DEFAULT_SETTINGS: Settings = {
   uiLanguage: 'en',
   theme: 'system',
+  // The first bundled course. Kept as a literal so this module (which the engine
+  // imports) stays independent of the content bundle; if the id ever points at a
+  // course that isn't installed, programRegistry falls back to the first bundled one.
   activeProgramId: 'pt-PT-A1',
   sessionLength: 10,
   inputPreset: 'normal',

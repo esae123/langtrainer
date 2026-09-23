@@ -10,7 +10,7 @@ export const MIN_REVIEW_ATTEMPTS = 3;
 /** Failed reviews in a row at stage 3 before a topic drops to maintenance. */
 export const MAINTENANCE_AFTER_FAILURES = 3;
 /** Statuses a topic can only have after it has been completed once. */
-const COMPLETED_STATUSES = new Set<TopicStatus>(['review', 'mastered', 'maintenance']);
+export const COMPLETED_STATUSES = new Set<TopicStatus>(['review', 'mastered', 'maintenance']);
 
 export function emptyTopicProgress(topicId: string, programId: string): TopicProgress {
   return {
