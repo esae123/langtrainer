@@ -113,7 +113,12 @@ describe('course switcher', () => {
     await seedImported();
     render(<App />);
 
-    fireEvent.click(await screen.findByRole('button', { name: /change course/i }));
+    // The course title is both the card's heading and its button (docs/stage-4a-spec.md §2).
+    expect(
+      await screen.findByRole('heading', { name: 'Português europeu A1' })
+    ).toBeInTheDocument();
+    expect(screen.getByText('Tap to switch course')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Português europeu A1' }));
 
     expect(await screen.findByRole('heading', { name: 'Courses' })).toBeInTheDocument();
     const row = await screen.findByRole('button', { name: /English B2 — vocabulary/ });
@@ -127,6 +132,35 @@ describe('course switcher', () => {
     // The sheet closes and the Learn card shows the newly active course.
     await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument());
     expect(await screen.findByText('English B2 — vocabulary')).toBeInTheDocument();
+  });
+});
+
+describe('session in an imported course', () => {
+  // Regression: the imported courses load asynchronously; the runner plans exactly once,
+  // so it used to plan the bundled fallback course before the imported one appeared.
+  it('plans a new session from the active imported course', async () => {
+    await seedImported();
+    await updateSettings({ activeProgramId: 'en-b2' });
+    window.location.hash = '#/session';
+    render(<App />);
+
+    expect(await screen.findByRole('heading', { name: 'Topic en-b2-m1-work' })).toBeInTheDocument();
+    expect(screen.queryByText('Nothing to practise yet')).not.toBeInTheDocument();
+    await waitFor(async () => {
+      const row = await db.settings.get('activeSession');
+      expect((row?.value as { state: { programId: string } }).state.programId).toBe('en-b2');
+    });
+  });
+
+  it('shows the imported active course on Learn without the bundled one first', async () => {
+    await seedImported();
+    await updateSettings({ activeProgramId: 'en-b2' });
+    render(<App />);
+
+    expect(
+      await screen.findByRole('heading', { name: 'English B2 — vocabulary' })
+    ).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Português europeu A1' })).not.toBeInTheDocument();
   });
 });
 

@@ -1,4 +1,5 @@
 import { useEffect, type ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 
 interface SheetProps {
   open: boolean;
@@ -8,19 +9,35 @@ interface SheetProps {
   children: ReactNode;
 }
 
-/** Bottom sheet used for the "coming soon" notice and confirm dialogs. */
+/**
+ * Open sheets, oldest first. A sheet can open another one (the course switcher opens the
+ * import problems sheet), and Escape must close only the topmost layer.
+ */
+const openStack: object[] = [];
+
+/**
+ * Bottom sheet used for the "coming soon" notice and confirm dialogs. Rendered into
+ * `document.body` so a sheet opened from inside another one is a sibling layer, not a
+ * dialog nested in a dialog.
+ */
 export function Sheet({ open, onClose, titleId, children }: SheetProps) {
   useEffect(() => {
     if (!open) return;
+    const token = {};
+    openStack.push(token);
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === 'Escape') onClose();
+      if (event.key === 'Escape' && openStack[openStack.length - 1] === token) onClose();
     }
     document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      const index = openStack.indexOf(token);
+      if (index !== -1) openStack.splice(index, 1);
+    };
   }, [open, onClose]);
 
   if (!open) return null;
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-50 flex items-end justify-center bg-black/40 backdrop-blur-sm"
       onClick={onClose}
@@ -38,6 +55,7 @@ export function Sheet({ open, onClose, titleId, children }: SheetProps) {
       >
         {children}
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

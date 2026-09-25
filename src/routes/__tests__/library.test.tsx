@@ -70,7 +70,7 @@ describe('Content library — list', () => {
     render(<App />);
 
     expect(await screen.findByRole('heading', { name: /content library/i })).toBeInTheDocument();
-    expect(screen.getByText('Module 1 — Basics')).toBeInTheDocument();
+    expect(await screen.findByText('Module 1 — Basics')).toBeInTheDocument();
     expect(screen.getByText('Greetings and politeness')).toBeInTheDocument();
     expect(screen.getByText('Situation · 1 exercises')).toBeInTheDocument();
     expect(screen.getByText('Everyday phrases 1')).toBeInTheDocument();
@@ -83,7 +83,9 @@ describe('Content library — topic detail', () => {
     window.location.hash = '#/library/m1-greetings';
     render(<App />);
 
-    expect(await screen.findByRole('heading', { name: /greetings and politeness/i })).toBeInTheDocument();
+    expect(
+      await screen.findByRole('heading', { name: /greetings and politeness/i })
+    ).toBeInTheDocument();
     // markdown: bold text and a bullet list item, both rendered from the topic context
     expect(screen.getAllByText('Bom dia').length).toBe(2); // once bold in context, once in the key-items table
     expect(screen.getByText('Olá — hello')).toBeInTheDocument();

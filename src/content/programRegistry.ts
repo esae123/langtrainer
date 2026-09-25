@@ -9,6 +9,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { useMemo } from 'react';
 import { db, type ProgramRow } from '../db/db';
 import { isRecord } from '../lib/isRecord';
+import { clearActiveSession, readActiveSession } from '../session/activeSession';
 import { loadSettings, updateSettings, useSettings } from '../settings/settingsStore';
 import { programs as bundledPrograms } from './programs';
 import type { Program } from './types';
@@ -74,17 +75,20 @@ export async function loadAllEntries(): Promise<ProgramEntry[]> {
 }
 
 /**
- * Every installed course, live. Bundled entries are present on the very first render
- * (they need no Dexie read), imported ones appear as soon as the query resolves.
+ * Every installed course, live — or `undefined` until the imported courses have been
+ * read. Returning only the bundled ones in the meantime would make every consumer
+ * resolve the active course to the bundled fallback for a render, and the session
+ * runner (which plans exactly once) would then plan the wrong course.
  */
-export function useAllPrograms(): ProgramEntry[] {
-  const imported = useLiveQuery(loadImportedEntries, [], [] as ProgramEntry[]);
-  return useMemo(() => [...bundledEntries, ...imported], [imported]);
+export function useAllPrograms(): ProgramEntry[] | undefined {
+  const imported = useLiveQuery(loadImportedEntries, []);
+  return useMemo(() => (imported ? [...bundledEntries, ...imported] : undefined), [imported]);
 }
 
+/** `undefined` while loading and when no installed course has this id. */
 export function useProgram(id: string): Program | undefined {
   const entries = useAllPrograms();
-  return entries.find((entry) => entry.program.id === id)?.program;
+  return entries?.find((entry) => entry.program.id === id)?.program;
 }
 
 /**
@@ -102,14 +106,17 @@ export function resolveActiveEntry(
   );
 }
 
-/** The active course entry (with its bundled/imported source), live. */
+/**
+ * The active course entry (with its bundled/imported source), live. `undefined` while
+ * the installed courses are still loading — callers must wait instead of falling back.
+ */
 export function useActiveProgramEntry(): ProgramEntry | undefined {
   const { activeProgramId } = useSettings();
   const entries = useAllPrograms();
-  return resolveActiveEntry(entries, activeProgramId);
+  return entries ? resolveActiveEntry(entries, activeProgramId) : undefined;
 }
 
-/** The active course, live. Used by Learn, the session runner and the library. */
+/** The active course, live (`undefined` while loading). Used by Learn, the session runner and the library. */
 export function useActiveProgram(): Program | undefined {
   return useActiveProgramEntry()?.program;
 }
@@ -130,8 +137,10 @@ export async function putImportedProgram(program: Program, fileName?: string): P
 }
 
 /**
- * Removes an imported course. `deleteProgress` also drops everything recorded for it:
- * topic progress, session rows and the attempts of those sessions.
+ * Removes an imported course. A saved in-progress session of that course is always
+ * dropped (it could never be resumed). `deleteProgress` also drops everything recorded
+ * for it: topic progress, session rows, the attempts of those sessions and the learner's
+ * custom topics of that course.
  */
 export async function removeImportedProgram(
   programId: string,
@@ -139,11 +148,14 @@ export async function removeImportedProgram(
 ): Promise<void> {
   await db.transaction(
     'rw',
-    [db.programs, db.topicProgress, db.sessions, db.attempts],
+    [db.programs, db.settings, db.topicProgress, db.sessions, db.attempts, db.customTopics],
     async () => {
       await db.programs.delete(programId);
+      const saved = await readActiveSession();
+      if (saved && saved.state.programId === programId) await clearActiveSession();
       if (!deleteProgress) return;
       await db.topicProgress.where('programId').equals(programId).delete();
+      await db.customTopics.filter((row) => row.programId === programId).delete();
       const sessionIds = (
         await db.sessions.filter((row) => row.programId === programId).toArray()
       ).map((row) => row.id);

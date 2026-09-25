@@ -97,6 +97,27 @@ describe('checkCourseFile — happy path', () => {
   });
 });
 
+describe('checkCourseFile — warnings', () => {
+  it('does not block an import on warning-level content problems', () => {
+    const course = makeCourse('en-b2', ['en-b2-m1-work']);
+    const topic = course.modules[0].topics[0];
+    // A hint that repeats a sampleAnswer word is only a 'warning' in contentRules.ts.
+    topic.exercises.push({
+      id: 'en-b2-m1-work-03',
+      type: 'about_me',
+      topicId: topic.id,
+      difficulty: 1,
+      allowedModes: ['tiles'],
+      prompt: 'Answer about yourself.',
+      explanation: 'Use falar.',
+      question: 'Que línguas falas?',
+      sampleAnswer: 'Eu falo português.',
+      hints: ['falo', 'inglês', 'espanhol'],
+    });
+    expect(check(course).ok).toBe(true);
+  });
+});
+
 describe('checkCourseFile — rejections', () => {
   it('rejects a file over the size limit without even parsing it', () => {
     const result = checkCourseFile('', MAX_COURSE_FILE_BYTES + 1, [installedBundled]);

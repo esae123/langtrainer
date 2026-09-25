@@ -77,12 +77,17 @@ function SessionRun({
   // A new session always uses the active course; a *resumed* one keeps running the
   // course it was planned from, even after the learner switched courses
   // (docs/stage-4a-spec.md §2). `undefined` while the snapshot is still loading, so
-  // the runner doesn't plan a fresh session from the wrong course first.
+  // the runner doesn't plan a fresh session from the wrong course first. Likewise
+  // `undefined` until the imported courses are loaded: the runner plans exactly once,
+  // so it must not see the bundled fallback of an imported active course.
   const resumedProgram =
     resume && stored
-      ? entries.find((entry) => entry.program.id === stored.state.programId)?.program
+      ? entries?.find((entry) => entry.program.id === stored.state.programId)?.program
       : undefined;
-  const program = resume && stored === undefined ? undefined : (resumedProgram ?? activeProgram);
+  const program =
+    entries === undefined || (resume && stored === undefined)
+      ? undefined
+      : (resumedProgram ?? activeProgram);
 
   const runner = useSessionRunner(program, settings, resume, practicePlan ?? undefined);
   const [stopOpen, setStopOpen] = useState(false);

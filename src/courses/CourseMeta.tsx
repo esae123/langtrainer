@@ -31,8 +31,15 @@ export function CourseCountsLine({ entry }: { entry: ProgramEntry }) {
       {t('courses.meta', {
         level: entry.program.level,
         language: languageLabel(entry.program.targetLanguage, uiLanguage),
-        modules: counts.modules,
-        topics: counts.topics,
+        modules: t(
+          counts.modules === 1 ? 'courses.modulesCount.one' : 'courses.modulesCount.other',
+          {
+            count: counts.modules,
+          }
+        ),
+        topics: t(counts.topics === 1 ? 'courses.topicsCount.one' : 'courses.topicsCount.other', {
+          count: counts.topics,
+        }),
       })}
     </span>
   );

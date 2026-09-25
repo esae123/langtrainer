@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { ChevronRight, Download, Play } from 'lucide-react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router';
@@ -38,23 +38,25 @@ export function LearnScreen() {
   const runExport = useExportBackup();
   const [bannerDismissed, setBannerDismissed] = useState(readBannerDismissed);
   const [coursesOpen, setCoursesOpen] = useState(false);
+  const courseHintId = useId();
 
   const entries = useAllPrograms();
   const activeEntry = useActiveProgramEntry();
   const program = activeEntry?.program;
   // The *resolved* id, so a settings value pointing at a removed course still shows
-  // the progress of the course that is actually active.
-  const programId = program?.id ?? settings.activeProgramId;
+  // the progress of the course that is actually active. `undefined` while the
+  // installed courses load — nothing course-specific is shown until then.
+  const programId = program?.id;
   const progress = useLiveQuery(
-    () => db.topicProgress.where('programId').equals(programId).toArray(),
+    async () => (programId ? db.topicProgress.where('programId').equals(programId).toArray() : []),
     [programId],
     []
   );
   const activeSession = useActiveSession();
   // A saved session can belong to a course that is no longer the active one.
   const sessionProgramTitle =
-    activeSession && activeSession.state.programId !== programId
-      ? (entries.find((entry) => entry.program.id === activeSession.state.programId)?.program
+    activeSession && programId && activeSession.state.programId !== programId
+      ? (entries?.find((entry) => entry.program.id === activeSession.state.programId)?.program
           .title ?? activeSession.state.programId)
       : null;
 
@@ -157,78 +159,92 @@ export function LearnScreen() {
         </Card>
       )}
 
-      <Card className="!p-0">
-        <button
-          type="button"
-          onClick={() => setCoursesOpen(true)}
-          aria-label={t('learn.openCourses')}
-          className="flex min-h-11 w-full items-center gap-3 p-4 text-left"
-        >
-          <span className="flex-1">
-            <span className="flex items-center gap-2">
-              <span className="text-xs font-semibold uppercase tracking-wide text-accent">
-                {program?.level ?? '—'}
-              </span>
-              {activeEntry && <CourseSourceBadge entry={activeEntry} />}
-            </span>
-            <span className="mt-1 block text-lg font-semibold text-text">
-              {program?.title ?? settings.activeProgramId}
-            </span>
-            <span className="mt-1 block text-sm text-muted">
-              {t('learn.programSummary', {
-                modules: modulesCount,
-                topics: topicsCount,
-                exercises: exercisesCount,
-              })}
-            </span>
-            <span className="mt-1 block text-xs text-muted">{t('learn.courseCardHint')}</span>
-          </span>
-          <ChevronRight size={20} strokeWidth={2} aria-hidden className="shrink-0 text-muted" />
-        </button>
-      </Card>
-
-      <Card>
-        <p className="text-xs font-semibold uppercase tracking-wide text-muted">
-          {t('learn.currentTopic')}
-        </p>
-        {currentTopic ? (
-          <>
-            <h2 className="mt-1 text-lg font-semibold text-text">{currentTopic.title}</h2>
-            {currentModule && <p className="text-sm text-muted">{currentModule.title}</p>}
-            <div className="mt-3 flex items-center gap-3">
-              <div aria-hidden className="h-1.5 flex-1 overflow-hidden rounded-full bg-line">
-                <div
-                  className="h-full rounded-full bg-accent"
-                  style={{
-                    width: `${Math.min(100, Math.round((seenCount / COMPLETION_THRESHOLD) * 100))}%`,
-                  }}
-                />
+      {!activeEntry || !program ? (
+        <Card>
+          <p className="text-sm text-muted">{t('learn.loadingCourse')}</p>
+        </Card>
+      ) : (
+        <>
+          {/* The title is the heading *and* the button's name; its ::after stretches the
+              tap target over the whole card. */}
+          <Card className="relative flex items-center gap-3">
+            <div className="flex-1">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-semibold uppercase tracking-wide text-accent">
+                  {program.level}
+                </span>
+                <CourseSourceBadge entry={activeEntry} />
               </div>
-              <span className="text-sm font-medium tabular-nums text-muted">
-                {seenCount}/{COMPLETION_THRESHOLD}
-              </span>
+              <h2 className="mt-1 text-lg font-semibold text-text">
+                <button
+                  type="button"
+                  onClick={() => setCoursesOpen(true)}
+                  aria-describedby={courseHintId}
+                  className="text-left after:absolute after:inset-0 after:rounded-2xl after:content-['']"
+                >
+                  {program.title}
+                </button>
+              </h2>
+              <p className="mt-1 text-sm text-muted">
+                {t('learn.programSummary', {
+                  modules: modulesCount,
+                  topics: topicsCount,
+                  exercises: exercisesCount,
+                })}
+              </p>
+              <p id={courseHintId} className="mt-1 text-xs text-muted">
+                {t('learn.courseCardHint')}
+              </p>
             </div>
-            <p className="mt-1 text-xs text-muted">
-              {t('learn.currentTopicMeta', {
-                seen: seenCount,
-                threshold: COMPLETION_THRESHOLD,
-              })}
+            <ChevronRight size={20} strokeWidth={2} aria-hidden className="shrink-0 text-muted" />
+          </Card>
+
+          <Card>
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted">
+              {t('learn.currentTopic')}
             </p>
-          </>
-        ) : (
-          <>
-            <h2 className="mt-1 text-lg font-semibold text-text">{t('learn.currentTopicNone')}</h2>
-            <p className="text-sm text-muted">{t('learn.currentTopicNoneBody')}</p>
-          </>
-        )}
-        <p className="mt-3 border-t border-line pt-3 text-sm text-muted">
-          {nextReviewAt === undefined
-            ? t('learn.nextReviewNone')
-            : nextReviewAt <= Date.now()
-              ? t('learn.nextReviewDue')
-              : t('learn.nextReview', { date: formatDate(nextReviewAt, settings.uiLanguage) })}
-        </p>
-      </Card>
+            {currentTopic ? (
+              <>
+                <h2 className="mt-1 text-lg font-semibold text-text">{currentTopic.title}</h2>
+                {currentModule && <p className="text-sm text-muted">{currentModule.title}</p>}
+                <div className="mt-3 flex items-center gap-3">
+                  <div aria-hidden className="h-1.5 flex-1 overflow-hidden rounded-full bg-line">
+                    <div
+                      className="h-full rounded-full bg-accent"
+                      style={{
+                        width: `${Math.min(100, Math.round((seenCount / COMPLETION_THRESHOLD) * 100))}%`,
+                      }}
+                    />
+                  </div>
+                  <span className="text-sm font-medium tabular-nums text-muted">
+                    {seenCount}/{COMPLETION_THRESHOLD}
+                  </span>
+                </div>
+                <p className="mt-1 text-xs text-muted">
+                  {t('learn.currentTopicMeta', {
+                    seen: seenCount,
+                    threshold: COMPLETION_THRESHOLD,
+                  })}
+                </p>
+              </>
+            ) : (
+              <>
+                <h2 className="mt-1 text-lg font-semibold text-text">
+                  {t('learn.currentTopicNone')}
+                </h2>
+                <p className="text-sm text-muted">{t('learn.currentTopicNoneBody')}</p>
+              </>
+            )}
+            <p className="mt-3 border-t border-line pt-3 text-sm text-muted">
+              {nextReviewAt === undefined
+                ? t('learn.nextReviewNone')
+                : nextReviewAt <= Date.now()
+                  ? t('learn.nextReviewDue')
+                  : t('learn.nextReview', { date: formatDate(nextReviewAt, settings.uiLanguage) })}
+            </p>
+          </Card>
+        </>
+      )}
 
       <div>
         <p className="mb-2 text-sm font-medium text-muted">{t('learn.sessionLength')}</p>

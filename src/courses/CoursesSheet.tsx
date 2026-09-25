@@ -1,7 +1,7 @@
 import { useId } from 'react';
 import { Check, Upload } from 'lucide-react';
 import { Sheet } from '../components/Sheet';
-import { setActiveProgram, useAllPrograms } from '../content/programRegistry';
+import { resolveActiveEntry, setActiveProgram, useAllPrograms } from '../content/programRegistry';
 import { useT } from '../i18n';
 import { useSettings } from '../settings/settingsStore';
 import { CourseCountsLine, CourseProgressLine, CourseSourceBadge } from './CourseMeta';
@@ -17,7 +17,9 @@ export function CoursesSheet({ open, onClose }: { open: boolean; onClose: () => 
   const t = useT();
   const titleId = useId();
   const settings = useSettings();
-  const entries = useAllPrograms();
+  const entries = useAllPrograms() ?? [];
+  // The *resolved* active course, so a stale `activeProgramId` still marks the one in use.
+  const activeId = resolveActiveEntry(entries, settings.activeProgramId)?.program.id;
 
   return (
     <Sheet open={open} onClose={onClose} titleId={titleId}>
@@ -27,7 +29,7 @@ export function CoursesSheet({ open, onClose }: { open: boolean; onClose: () => 
 
       <ul className="mt-3 flex max-h-[55vh] flex-col gap-2 overflow-y-auto">
         {entries.map((entry) => {
-          const active = entry.program.id === settings.activeProgramId;
+          const active = entry.program.id === activeId;
           return (
             <li key={entry.program.id}>
               <button

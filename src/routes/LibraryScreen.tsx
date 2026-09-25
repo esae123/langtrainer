@@ -1,7 +1,7 @@
 import { ArrowLeft, Check, ChevronRight } from 'lucide-react';
 import { Link, useNavigate } from 'react-router';
 import { Card } from '../components/Card';
-import { useAllPrograms, type ProgramEntry } from '../content/programRegistry';
+import { resolveActiveEntry, useAllPrograms, type ProgramEntry } from '../content/programRegistry';
 import { CourseActions } from '../courses/CourseActions';
 import { CourseCountsLine, CourseSourceBadge } from '../courses/CourseMeta';
 import { useT, type TranslationKey } from '../i18n';
@@ -103,6 +103,10 @@ export function LibraryScreen() {
   const navigate = useNavigate();
   const settings = useSettings();
   const entries = useAllPrograms();
+  // The *resolved* active course, so a stale `activeProgramId` still marks the one in use.
+  const activeId = entries
+    ? resolveActiveEntry(entries, settings.activeProgramId)?.program.id
+    : undefined;
 
   return (
     <div className="flex flex-col gap-8">
@@ -118,17 +122,19 @@ export function LibraryScreen() {
         <h1 className="text-2xl font-semibold text-text">{t('library.title')}</h1>
       </div>
 
-      {entries.length === 0 && (
+      {entries === undefined && <p className="text-sm text-muted">{t('learn.loadingCourse')}</p>}
+
+      {entries?.length === 0 && (
         <Card>
           <p className="text-sm text-muted">{t('library.coursesEmpty')}</p>
         </Card>
       )}
 
-      {entries.map((entry) => (
+      {entries?.map((entry) => (
         <CourseSection
           key={entry.program.id}
           entry={entry}
-          active={entry.program.id === settings.activeProgramId}
+          active={entry.program.id === activeId}
         />
       ))}
     </div>

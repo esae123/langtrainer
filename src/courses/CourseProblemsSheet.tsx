@@ -42,7 +42,9 @@ export function CourseProblemsSheet({
         {t('courses.problemsTitle')}
       </h2>
       <p className="mt-2 text-sm text-muted">
-        {t('courses.problemsBody', { count: all.length, shown: shown.length })}
+        {all.length === 1
+          ? t('courses.problemsBody.one')
+          : t('courses.problemsBody', { count: all.length, shown: shown.length })}
       </p>
       <ol className="mt-3 max-h-[45vh] divide-y divide-line overflow-y-auto rounded-xl border border-line">
         {shown.map((problem, i) => (

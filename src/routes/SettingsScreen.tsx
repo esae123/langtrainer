@@ -473,7 +473,10 @@ export function SettingsScreen() {
           <ChevronRight size={20} strokeWidth={2} aria-hidden className="text-muted" />
         </Link>
         <div className="flex items-center justify-between gap-3 px-4 py-3">
-          <span className="text-sm font-medium text-text">{t('courses.import')}</span>
+          <span className="flex flex-col">
+            <span className="text-sm font-medium text-text">{t('courses.title')}</span>
+            <span className="text-xs text-muted">{t('settings.coursesHint')}</span>
+          </span>
           <ImportCourseButton className="flex min-h-11 items-center gap-2 rounded-lg border border-line px-4 text-sm font-semibold text-text">
             <Upload size={18} strokeWidth={2} aria-hidden />
             {t('courses.import')}

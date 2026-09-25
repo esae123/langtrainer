@@ -98,10 +98,14 @@ export function checkCourseFile(
     };
   }
 
-  const problems: CourseProblem[] = checkContent(program).problems.map((problem) => ({
-    path: problem.path,
-    message: problem.message,
-  }));
+  // Warnings are advisory (`content:check` prints them but still passes), so they never
+  // block an import and are not shown.
+  const problems: CourseProblem[] = checkContent(program)
+    .problems.filter((problem) => problem.severity !== 'warning')
+    .map((problem) => ({
+      path: problem.path,
+      message: problem.message,
+    }));
 
   // Topic ids double as progress keys, so two installed courses sharing one would mix
   // their progress; ids are therefore unique across every installed course.

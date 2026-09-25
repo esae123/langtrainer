@@ -32,9 +32,14 @@ export function CourseActions({ entry }: { entry: ProgramEntry }) {
 
   async function remove() {
     setConfirmOpen(false);
-    await removeImportedProgram(entry.program.id, alsoProgress);
-    setAlsoProgress(false);
-    showToast(t('courses.removed'));
+    try {
+      await removeImportedProgram(entry.program.id, alsoProgress);
+      showToast(t('courses.removed'));
+    } catch {
+      showToast(t('courses.removeError'));
+    } finally {
+      setAlsoProgress(false);
+    }
   }
 
   return (

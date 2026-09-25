@@ -66,7 +66,8 @@ export function LibraryDetailScreen() {
   const navigate = useNavigate();
   const { itemId } = useParams<{ itemId: string }>();
   const entries = useAllPrograms();
-  const { topic, phraseSet } = itemId ? findItem(entries, itemId) : {};
+  const loading = entries === undefined;
+  const { topic, phraseSet } = entries && itemId ? findItem(entries, itemId) : {};
 
   return (
     <div className="flex flex-col gap-6">
@@ -80,11 +81,11 @@ export function LibraryDetailScreen() {
           <ArrowLeft size={22} strokeWidth={2} aria-hidden />
         </button>
         <h1 className="text-lg font-semibold text-text">
-          {topic?.title ?? phraseSet?.title ?? t('library.notFoundTitle')}
+          {topic?.title ?? phraseSet?.title ?? (loading ? '' : t('library.notFoundTitle'))}
         </h1>
       </div>
 
-      {!topic && !phraseSet && (
+      {!loading && !topic && !phraseSet && (
         <Card>
           <p className="text-sm text-muted">{t('library.notFoundBody')}</p>
         </Card>

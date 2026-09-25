@@ -66,16 +66,20 @@ export function ImportCourseButton({
     event.target.value = '';
     if (!file) return;
 
-    const result = await readAndCheckCourseFile(file, await installedCourses());
-    if (!result.ok) {
-      setProblems(result.problems);
-      return;
+    try {
+      const result = await readAndCheckCourseFile(file, await installedCourses());
+      if (!result.ok) {
+        setProblems(result.problems);
+        return;
+      }
+      if (result.replacesImported) {
+        setPending({ program: result.program, fileName: file.name, title: result.program.title });
+        return;
+      }
+      await install(result.program, file.name);
+    } catch {
+      showToast(t('courses.importError'));
     }
-    if (result.replacesImported) {
-      setPending({ program: result.program, fileName: file.name, title: result.program.title });
-      return;
-    }
-    await install(result.program, file.name);
   }
 
   return (
@@ -103,7 +107,9 @@ export function ImportCourseButton({
         onConfirm={() => {
           const next = pending;
           setPending(null);
-          if (next) void install(next.program, next.fileName);
+          if (next) {
+            install(next.program, next.fileName).catch(() => showToast(t('courses.importError')));
+          }
         }}
         onCancel={() => setPending(null)}
       />

@@ -13,6 +13,19 @@ import {
   resolveActiveEntry,
 } from '../programRegistry';
 import type { Program } from '../types';
+import { readActiveSession, saveActiveSession } from '../../session/activeSession';
+import type { SessionState } from '../../session/sessionState';
+
+/** Just enough of a session snapshot for `readActiveSession` to accept it. */
+function savedSessionOf(programId: string): SessionState {
+  return {
+    sessionId: `s-${programId}`,
+    programId,
+    index: 0,
+    responses: [],
+    plan: { items: [] },
+  } as unknown as SessionState;
+}
 
 const BUNDLED_ID = bundledEntries[0].program.id;
 
@@ -227,6 +240,43 @@ describe('putImportedProgram / removeImportedProgram', () => {
     expect(await db.topicProgress.get('m1-greetings')).toBeDefined();
     expect(await db.sessions.get('s-pt')).toBeDefined();
     expect(await db.attempts.get('a-pt')).toBeDefined();
+  });
+
+  it('always drops a saved in-progress session of the removed course', async () => {
+    await putImportedProgram(makeCourse('en-b2', ['en-b2-m1-work']));
+    await saveActiveSession(savedSessionOf('en-b2'));
+
+    await removeImportedProgram('en-b2', false);
+
+    expect(await readActiveSession()).toBeNull();
+  });
+
+  it('keeps a saved session that belongs to another course', async () => {
+    await putImportedProgram(makeCourse('en-b2', ['en-b2-m1-work']));
+    await saveActiveSession(savedSessionOf(BUNDLED_ID));
+
+    await removeImportedProgram('en-b2', true);
+
+    expect((await readActiveSession())?.state.programId).toBe(BUNDLED_ID);
+  });
+
+  it("deletes the course's custom topics only together with its progress", async () => {
+    const custom = (id: string, programId: string) => ({
+      id,
+      programId,
+      createdAt: 1,
+      topic: makeCourse(programId, [id]).modules[0].topics[0],
+    });
+    await putImportedProgram(makeCourse('en-b2', ['en-b2-m1-work']));
+    await db.customTopics.bulkPut([custom('c-en', 'en-b2'), custom('c-pt', BUNDLED_ID)]);
+
+    await removeImportedProgram('en-b2', false);
+    expect(await db.customTopics.get('c-en')).toBeDefined();
+
+    await putImportedProgram(makeCourse('en-b2', ['en-b2-m1-work']));
+    await removeImportedProgram('en-b2', true);
+    expect(await db.customTopics.get('c-en')).toBeUndefined();
+    expect(await db.customTopics.get('c-pt')).toBeDefined();
   });
 
   it('moves the active course back to a bundled one when the active course is removed', async () => {
