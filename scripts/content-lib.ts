@@ -1,5 +1,5 @@
 // Shared file-loading logic for scripts/content-check.ts and scripts/content-build.ts.
-// Reads content/pt-PT-A1/**/*.json off disk (see docs/content-authoring.md §1) and assembles
+// Reads content/<programId>/**/*.json off disk (default program pt-PT-A1, `--program <id>`) (see docs/content-authoring.md §1) and assembles
 // a plain object shaped like a Program, ready for `validateProgram()`. Never throws on missing
 // content files — those become entries in `problems` instead, so authors can check (or build)
 // whatever content currently exists.
@@ -8,7 +8,43 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
-export const CONTENT_ROOT = path.join(SCRIPT_DIR, '..', 'content', 'pt-PT-A1');
+export const REPO_ROOT = path.join(SCRIPT_DIR, '..');
+export const DEFAULT_PROGRAM_ID = 'pt-PT-A1';
+
+/** content/<programId> */
+export function contentRootFor(programId: string): string {
+  return path.join(REPO_ROOT, 'content', programId);
+}
+
+/** `--program <id>` from argv, or the default course. */
+export function programIdFromArgs(argv: readonly string[]): string {
+  const i = argv.indexOf('--program');
+  const value = i === -1 ? undefined : argv[i + 1];
+  return value && !value.startsWith('--') ? value : DEFAULT_PROGRAM_ID;
+}
+
+/**
+ * Ids of the courses built into the app: the JSON files imported by
+ * src/content/programs/index.ts. Parsed from the source (Node can't import that module
+ * directly — it imports JSON without an import attribute).
+ */
+export function bundledProgramIds(): string[] {
+  const indexPath = path.join(REPO_ROOT, 'src', 'content', 'programs', 'index.ts');
+  if (!existsSync(indexPath)) return [];
+  const source = readFileSync(indexPath, 'utf8');
+  return [...source.matchAll(/from\s+['"]\.\/([^'"]+)\.json['"]/g)].map((m) => m[1]);
+}
+
+/**
+ * Where content:build writes a course: bundled courses go into the app
+ * (src/content/programs/<id>.json, committed); any other course becomes an importable file
+ * in dist-courses/<id>.json (gitignored) to be imported on the phone (docs/courses.md).
+ */
+export function buildOutputPath(programId: string, bundledIds: readonly string[] = bundledProgramIds()): string {
+  return bundledIds.includes(programId)
+    ? path.join(REPO_ROOT, 'src', 'content', 'programs', `${programId}.json`)
+    : path.join(REPO_ROOT, 'dist-courses', `${programId}.json`);
+}
 
 export interface LoadProblem {
   path: string;
@@ -36,13 +72,13 @@ export interface LoadResult {
   unlistedProblems: LoadProblem[];
 }
 
-function readJson(relPath: string): Record<string, unknown> {
-  const full = path.join(CONTENT_ROOT, relPath);
+function readJson(root: string, relPath: string): Record<string, unknown> {
+  const full = path.join(root, relPath);
   return JSON.parse(readFileSync(full, 'utf8')) as Record<string, unknown>;
 }
 
-function fileExists(relPath: string): boolean {
-  return existsSync(path.join(CONTENT_ROOT, relPath));
+function fileExists(root: string, relPath: string): boolean {
+  return existsSync(path.join(root, relPath));
 }
 
 function stringArray(v: unknown): string[] {
@@ -92,6 +128,7 @@ export function moduleTopicOrder(moduleJson: Record<string, unknown>): string[] 
  * files become `problems` at `missingSeverity` and are simply left out of the returned topics.
  */
 function loadModuleTopics(
+  root: string,
   moduleId: string,
   moduleJson: Record<string, unknown>,
   missingSeverity: 'error' | 'warning',
@@ -100,7 +137,7 @@ function loadModuleTopics(
   const topics: unknown[] = [];
   for (const topicId of moduleTopicOrder(moduleJson)) {
     const topicRelPath = `topics/${topicId}.json`;
-    if (!fileExists(topicRelPath)) {
+    if (!fileExists(root, topicRelPath)) {
       problems.push({
         path: topicRelPath,
         message: `topic "${topicId}" (listed in modules/${moduleId}.json) is missing`,
@@ -108,14 +145,14 @@ function loadModuleTopics(
       });
       continue;
     }
-    topics.push(readJson(topicRelPath));
+    topics.push(readJson(root, topicRelPath));
   }
   return topics;
 }
 
 /** Every module id with a file under `modules/` (regardless of program.json's moduleOrder). */
-function allModuleFileIds(): string[] {
-  const dir = path.join(CONTENT_ROOT, 'modules');
+function allModuleFileIds(root: string): string[] {
+  const dir = path.join(root, 'modules');
   if (!existsSync(dir)) return [];
   return readdirSync(dir)
     .filter((f) => f.endsWith('.json'))
@@ -132,23 +169,24 @@ function allModuleFileIds(): string[] {
  * into `unlistedModules`/`unlistedProblems` (see `LoadResult`) — `content-build` ignores them,
  * `content-check` validates and reports them under their own heading.
  */
-export function loadProgram(allowMissing: boolean): LoadResult {
+export function loadProgram(allowMissing: boolean, programId: string = DEFAULT_PROGRAM_ID): LoadResult {
+  const root = contentRootFor(programId);
   const problems: LoadProblem[] = [];
   const missingSeverity: 'error' | 'warning' = allowMissing ? 'warning' : 'error';
 
-  if (!fileExists('program.json')) {
-    problems.push({ path: 'program.json', message: 'file not found', severity: 'error' });
+  if (!fileExists(root, 'program.json')) {
+    problems.push({ path: 'program.json', message: `file not found (content/${programId}/program.json)`, severity: 'error' });
     return { program: { modules: [], phraseSets: [] }, problems, unlistedModules: [], unlistedProblems: [] };
   }
 
-  const programMeta = readJson('program.json');
+  const programMeta = readJson(root, 'program.json');
   const moduleOrder = stringArray(programMeta.moduleOrder);
   const phraseSetOrder = stringArray(programMeta.phraseSetOrder);
 
   const modules: Record<string, unknown>[] = [];
   for (const moduleId of moduleOrder) {
     const moduleRelPath = `modules/${moduleId}.json`;
-    if (!fileExists(moduleRelPath)) {
+    if (!fileExists(root, moduleRelPath)) {
       problems.push({
         path: moduleRelPath,
         message: `module "${moduleId}" (listed in program.json moduleOrder) is missing`,
@@ -156,12 +194,12 @@ export function loadProgram(allowMissing: boolean): LoadResult {
       });
       continue;
     }
-    const moduleJson = readJson(moduleRelPath);
+    const moduleJson = readJson(root, moduleRelPath);
     modules.push({
       id: moduleJson.id,
       title: moduleJson.title,
       description: moduleJson.description,
-      topics: loadModuleTopics(moduleId, moduleJson, missingSeverity, problems),
+      topics: loadModuleTopics(root, moduleId, moduleJson, missingSeverity, problems),
     });
   }
 
@@ -171,21 +209,21 @@ export function loadProgram(allowMissing: boolean): LoadResult {
   const unlistedProblems: LoadProblem[] = [];
   const unlistedModules: Record<string, unknown>[] = [];
   const listedIds = new Set(moduleOrder);
-  for (const moduleId of allModuleFileIds()) {
+  for (const moduleId of allModuleFileIds(root)) {
     if (listedIds.has(moduleId)) continue;
-    const moduleJson = readJson(`modules/${moduleId}.json`);
+    const moduleJson = readJson(root, `modules/${moduleId}.json`);
     unlistedModules.push({
       id: moduleJson.id,
       title: moduleJson.title,
       description: moduleJson.description,
-      topics: loadModuleTopics(moduleId, moduleJson, 'warning', unlistedProblems),
+      topics: loadModuleTopics(root, moduleId, moduleJson, 'warning', unlistedProblems),
     });
   }
 
   const phraseSets: unknown[] = [];
   for (const phraseSetId of phraseSetOrder) {
     const phraseSetRelPath = `phrases/${phraseSetId}.json`;
-    if (!fileExists(phraseSetRelPath)) {
+    if (!fileExists(root, phraseSetRelPath)) {
       problems.push({
         path: phraseSetRelPath,
         message: `phrase set "${phraseSetId}" (listed in program.json phraseSetOrder) is missing`,
@@ -193,7 +231,7 @@ export function loadProgram(allowMissing: boolean): LoadResult {
       });
       continue;
     }
-    phraseSets.push(readJson(phraseSetRelPath));
+    phraseSets.push(readJson(root, phraseSetRelPath));
   }
 
   const program: Record<string, unknown> = {

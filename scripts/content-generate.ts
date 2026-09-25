@@ -27,17 +27,23 @@ export const REPO_ROOT = path.join(SCRIPT_DIR, '..');
 const PROMPT_PARTS_DIR = path.join(SCRIPT_DIR, 'prompt-parts');
 
 /**
- * Default Gemini model — a current Flash-class model (cheap/fast, generous free tier).
- * Model aliases get retired periodically: if generation starts failing with 404, check
- * https://ai.google.dev/gemini-api/docs/models for the current alias and update this constant
- * (or pass --model / set GEMINI_MODEL).
+ * Default Gemini model — a Flash-class model (cheap/fast, generous free tier).
+ * Model names change and old ones get retired: if generation starts failing with 404, check
+ * https://ai.google.dev/gemini-api/docs/models (or the model list in AI Studio) and pass
+ * --model / set GEMINI_MODEL, or update this constant.
  */
-export const DEFAULT_MODEL = 'gemini-2.0-flash';
+export const DEFAULT_MODEL = 'gemini-2.5-flash';
 
 export const CHUNK_SIZE = 20;
 export const MAX_REPAIR_ROUNDS = 2;
+/** Generous: a 20-exercise chunk is ~8-10k tokens, and thinking models spend output tokens too. */
+export const MAX_OUTPUT_TOKENS = 32768;
 const DEFAULT_SLEEP_MS = 2000;
-const MAX_RETRIES_429 = 5;
+/** Total HTTP attempts per call (first try + retries) on 429/500/503. */
+export const MAX_ATTEMPTS = 5;
+/** Upper bound for one backoff wait, whatever the server asks for. */
+export const MAX_RETRY_DELAY_MS = 60_000;
+const RETRYABLE_STATUSES = new Set([429, 500, 503]);
 
 // ---------- small fs helpers ----------
 
@@ -194,7 +200,9 @@ export function buildJobs(cli: Cli): Job[] {
     if (!moduleId) throw new Error(`topic "${cli.topic}" was not found in any module of program "${cli.program}"`);
     const brief = findModuleTopicBrief(cli.program, moduleId, cli.topic);
     if (!brief) throw new Error(`topic "${cli.topic}" was not found in any module of program "${cli.program}"`);
-    jobs.push(briefToJob(cli.program, moduleId, brief, cli.count));
+    // Same guard as --module/--phrases: never overwrite a (possibly hand-reviewed) file without --force.
+    const topicPath = path.join(programRoot(cli.program), 'topics', `${brief.id}.json`);
+    if (!fileExists(topicPath) || cli.force) jobs.push(briefToJob(cli.program, moduleId, brief, cli.count));
   }
 
   if (cli.module) {
@@ -260,16 +268,83 @@ export function buildSystemPrompt(programId: string, programTitle: string, targe
   ].join('\n');
 }
 
-/** User prompt for one chunk of a job (docs/stage-4b-spec.md §3: "topic brief ... required id range"). */
-export function buildUserPrompt(job: Job, chunk: { startNum: number; endNum: number; isContinuation: boolean }): string {
-  const id = containerId(job);
-  const range = `${id}-${String(chunk.startNum).padStart(2, '0')}..${id}-${String(chunk.endNum).padStart(2, '0')}`;
-  const thisChunkCount = chunk.endNum - chunk.startNum + 1;
+// ---------- ids and normalisation ----------
 
+function isObject(v: unknown): v is Record<string, unknown> {
+  return typeof v === 'object' && v !== null && !Array.isArray(v);
+}
+
+/** `<containerId>-NN`, 1-based. */
+export function exerciseIdFor(container: string, n: number): string {
+  return `${container}-${String(n).padStart(2, '0')}`;
+}
+
+function exercisesOf(obj: Record<string, unknown>): Record<string, unknown>[] {
+  return Array.isArray(obj.exercises) ? obj.exercises.filter(isObject) : [];
+}
+
+/**
+ * Forces the job's own ids onto whatever the model returned (review B3): topic/phrase-set id,
+ * the topic's moduleId, every exercise's topicId and sequential exercise ids `<id>-01…`. The
+ * model sometimes "improves" an id; without this, the validation filter (which keys on the job
+ * id) would silently drop its problems and a broken file would be written. Extra exercises
+ * beyond the job's count are dropped. Missing title/kind (first chunk lost) fall back to the brief.
+ */
+export function normalizeMerged(job: Job, merged: Record<string, unknown>): Record<string, unknown> {
+  const id = containerId(job);
+  const exercises = exercisesOf(merged)
+    .slice(0, exerciseCount(job))
+    .map((exercise, i) => {
+      const { id: _id, type, topicId: _topicId, ...rest } = exercise;
+      return { id: exerciseIdFor(id, i + 1), type, topicId: id, ...rest };
+    });
+  const { id: _id, moduleId: _moduleId, exercises: _exercises, ...rest } = merged;
+  if (job.kind === 'topic') {
+    return {
+      id,
+      moduleId: job.moduleId,
+      ...rest,
+      title: typeof rest.title === 'string' ? rest.title : job.title,
+      kind: typeof rest.kind === 'string' ? rest.kind : job.topicKind,
+      exercises,
+    };
+  }
+  return { id, ...rest, title: typeof rest.title === 'string' ? rest.title : job.title, exercises };
+}
+
+/** Ids the job asked for but the merged JSON does not have (a lost or short chunk). */
+export function missingExerciseIds(job: Job, merged: Record<string, unknown>): string[] {
+  const have = exercisesOf(merged).length;
+  const ids: string[] = [];
+  for (let n = have + 1; n <= exerciseCount(job); n++) ids.push(exerciseIdFor(containerId(job), n));
+  return ids;
+}
+
+/**
+ * The "target sentence" of an exercise as the model wrote it (lenient: raw JSON, any type),
+ * so later chunks and repairs can be told which sentences are already taken.
+ */
+function targetSentence(exercise: Record<string, unknown>): string | undefined {
+  const join = (v: unknown) =>
+    Array.isArray(v) ? v.filter((x) => typeof x === 'string').join(' ') : typeof v === 'string' ? v : undefined;
+  return (
+    join(exercise.sentence) ??
+    (typeof exercise.template === 'string' ? exercise.template : undefined) ??
+    join(exercise.answer) ??
+    (typeof exercise.sampleAnswer === 'string' ? exercise.sampleAnswer : undefined)
+  );
+}
+
+function usedSentences(exercises: Record<string, unknown>[]): string[] {
+  return exercises.map(targetSentence).filter((x): x is string => typeof x === 'string' && x.length > 0);
+}
+
+// ---------- prompts ----------
+
+function jobDescriptionLines(job: Job): string[] {
   const lines: string[] = [];
   if (job.kind === 'topic') {
     lines.push(
-      'Write one Topic JSON.',
       `programId: ${job.programId}`,
       `moduleId: ${job.moduleId}`,
       `topicId: ${job.topicId}`,
@@ -282,7 +357,6 @@ export function buildUserPrompt(job: Job, chunk: { startNum: number; endNum: num
     lines.push(`Total exercise count for the topic: ${job.count}`);
   } else {
     lines.push(
-      'Write one PhraseSet JSON.',
       `programId: ${job.programId}`,
       `phraseSetId: ${job.phraseSetId}`,
       `title: ${job.title}`,
@@ -291,6 +365,42 @@ export function buildUserPrompt(job: Job, chunk: { startNum: number; endNum: num
       `Total exercise count for the phrase set: ${job.exerciseCount}`
     );
   }
+  return lines;
+}
+
+/** What a continuation chunk must know about the chunks before it (review S5). */
+export interface ChunkContext {
+  /** Topic context / phrase list and key items from chunk 1, so later chunks stay on the same material. */
+  header?: Record<string, unknown>;
+  /** Target sentences already used by earlier exercises. */
+  sentences: string[];
+}
+
+/** Topic context + keyItems (or the phrase list) of the first chunk, compact. */
+function headerSummary(header: Record<string, unknown>): string[] {
+  const lines: string[] = [];
+  if (typeof header.context === 'string' && header.context.trim()) lines.push(`Topic context: ${header.context.trim()}`);
+  if (Array.isArray(header.keyItems) && header.keyItems.length > 0) {
+    lines.push(`Key items: ${JSON.stringify(header.keyItems)}`);
+  }
+  if (Array.isArray(header.phrases) && header.phrases.length > 0) {
+    lines.push(`Phrases of the set: ${JSON.stringify(header.phrases)}`);
+  }
+  return lines;
+}
+
+/** User prompt for one chunk of a job (docs/stage-4b-spec.md §3: "topic brief ... required id range"). */
+export function buildUserPrompt(
+  job: Job,
+  chunk: { startNum: number; endNum: number; isContinuation: boolean },
+  previous?: ChunkContext
+): string {
+  const id = containerId(job);
+  const range = `${exerciseIdFor(id, chunk.startNum)}..${exerciseIdFor(id, chunk.endNum)}`;
+  const thisChunkCount = chunk.endNum - chunk.startNum + 1;
+
+  const lines: string[] = [job.kind === 'topic' ? 'Write one Topic JSON.' : 'Write one PhraseSet JSON.'];
+  lines.push(...jobDescriptionLines(job));
 
   if (!chunk.isContinuation) {
     lines.push(
@@ -300,7 +410,16 @@ export function buildUserPrompt(job: Job, chunk: { startNum: number; endNum: num
       `${chunk.startNum}-${chunk.endNum} (required id range ${range}, exactly ${thisChunkCount} exercises).`
     );
   } else {
+    if (previous?.header) {
+      lines.push('', 'The earlier part of this JSON already defines (keep using exactly this material):');
+      lines.push(...headerSummary(previous.header));
+    }
+    if (previous && previous.sentences.length > 0) {
+      lines.push('', 'Target sentences already used by the earlier exercises (do NOT repeat or trivially rephrase them):');
+      lines.push(...previous.sentences.map((sentence) => `- ${sentence}`));
+    }
     lines.push(
+      '',
       `Continue the same ${job.kind === 'topic' ? 'topic' : 'phrase set'}, do not repeat sentences already used`,
       `in the earlier exercises. Return ONLY {"exercises": [...]} with exercises ${chunk.startNum}-${chunk.endNum}`,
       `(required id range ${range}, exactly ${thisChunkCount} exercises).`
@@ -310,17 +429,123 @@ export function buildUserPrompt(job: Job, chunk: { startNum: number; endNum: num
   return lines.join('\n');
 }
 
-function buildRepairPrompt(merged: Record<string, unknown>, problems: ContentProblem[]): string {
-  return [
-    'The following JSON has problems. Fix ALL of them and return the FULL corrected JSON (same shape',
-    'as below, nothing else — no prose, no markdown fences).',
+/** What one repair round asks for. */
+export interface RepairRequest {
+  /** Existing exercises to fix, by id. */
+  fixIds: string[];
+  /** Ids to write from scratch (lost/short chunks). */
+  missingIds: string[];
+  /** Topic-level fields (context, keyItems, …) have problems too. */
+  fixHeader: boolean;
+}
+
+/** Problems grouped into a repair request: exercise problems by id, everything else is header-level. */
+export function repairRequestFor(
+  merged: Record<string, unknown>,
+  problems: ContentProblem[],
+  missingIds: string[]
+): RepairRequest {
+  const existing = new Set(exercisesOf(merged).map((e) => e.id));
+  const fixIds: string[] = [];
+  let fixHeader = false;
+  for (const problem of problems) {
+    if (problem.severity === 'warning') continue;
+    if (problem.exerciseId && existing.has(problem.exerciseId)) {
+      if (!fixIds.includes(problem.exerciseId)) fixIds.push(problem.exerciseId);
+    } else if (!problem.exerciseId) {
+      fixHeader = true;
+    }
+  }
+  return { fixIds, missingIds, fixHeader };
+}
+
+/**
+ * Repair prompt (review B4): only the affected exercises plus the problem list, not the whole
+ * 40-exercise JSON — the reply is small, so it neither truncates nor rewrites good exercises.
+ */
+export function buildRepairPrompt(
+  job: Job,
+  merged: Record<string, unknown>,
+  problems: ContentProblem[],
+  request: RepairRequest
+): string {
+  const exercises = exercisesOf(merged);
+  const toFix = exercises.filter((e) => typeof e.id === 'string' && request.fixIds.includes(e.id));
+  const others = exercises.filter((e) => !(typeof e.id === 'string' && request.fixIds.includes(e.id)));
+  const { exercises: _exercises, ...header } = merged;
+  const noun = job.kind === 'topic' ? 'topic' : 'phrase set';
+
+  const lines: string[] = [`Some parts of the ${noun} "${containerId(job)}" have problems. Fix ALL of them.`, ''];
+  lines.push(...jobDescriptionLines(job));
+  if (request.fixHeader) {
+    lines.push('', `Current ${noun} fields (without exercises):`, JSON.stringify(header));
+  } else {
+    lines.push('', ...headerSummary(header));
+  }
+  if (toFix.length > 0) {
+    lines.push('', 'Exercises to fix (keep each id):', JSON.stringify(toFix));
+  }
+  if (request.missingIds.length > 0) {
+    lines.push('', `Also write these missing exercises from scratch, following every rule: ${request.missingIds.join(', ')}`);
+  }
+  const taken = usedSentences(others);
+  if (taken.length > 0) {
+    lines.push('', 'Sentences used by the other exercises (do not repeat them):', ...taken.map((x) => `- ${x}`));
+  }
+  lines.push('', 'Problems:', ...problems.filter((p) => p.severity !== 'warning').map((p) => `- ${p.exerciseId ?? p.path}: ${p.message}`));
+  lines.push(
     '',
-    'JSON:',
-    JSON.stringify(merged),
-    '',
-    'Problems:',
-    ...problems.map((p) => `- ${p.path}: ${p.message}`),
-  ].join('\n');
+    'Return ONLY one JSON object: {' +
+      (request.fixHeader ? `"header": { every ${noun} field except exercises, corrected }, ` : '') +
+      '"exercises": [ the fixed and the new exercises, each with its id ]}. No prose, no markdown fences.'
+  );
+  return lines.join('\n');
+}
+
+/**
+ * Splices a repair reply back into the merged JSON: returned exercises replace the requested
+ * ones by id (an exercise whose id the model changed takes the next unfilled requested id, in
+ * order), missing ones are appended in id order, and a returned `header` replaces the topic
+ * fields. Anything the model sent that was not asked for is ignored.
+ */
+export function spliceRepair(
+  job: Job,
+  merged: Record<string, unknown>,
+  reply: Record<string, unknown>,
+  request: RepairRequest
+): Record<string, unknown> {
+  const exercises = exercisesOf(merged);
+  const pending = [...request.fixIds, ...request.missingIds];
+  const placed = new Map<string, Record<string, unknown>>();
+  const unmatched: Record<string, unknown>[] = [];
+  for (const exercise of exercisesOf(reply)) {
+    const idx = typeof exercise.id === 'string' ? pending.indexOf(exercise.id) : -1;
+    if (idx === -1) {
+      unmatched.push(exercise);
+      continue;
+    }
+    placed.set(pending[idx], exercise);
+    pending.splice(idx, 1);
+  }
+  for (const exercise of unmatched) {
+    const id = pending.shift();
+    if (!id) break;
+    placed.set(id, exercise);
+  }
+
+  const next = exercises.map((e) => (typeof e.id === 'string' && placed.has(e.id) ? { ...placed.get(e.id), id: e.id } : e));
+  for (const id of request.missingIds) {
+    const exercise = placed.get(id);
+    if (!exercise) break; // keep ids sequential: stop at the first one still missing
+    next.push({ ...exercise, id });
+  }
+
+  let base: Record<string, unknown> = merged;
+  if (request.fixHeader && isObject(reply.header)) {
+    const { exercises: _exercises, ...header } = reply.header;
+    base = { ...merged, ...header };
+  }
+  return normalizeMerged(job, { ...base, exercises: next });
 }
 
 // ---------- Gemini REST call ----------
@@ -334,6 +559,8 @@ export interface GeminiUsage {
 export interface GeminiResult {
   text: string;
   usage?: GeminiUsage;
+  /** e.g. "STOP", "MAX_TOKENS", "SAFETY". */
+  finishReason?: string;
 }
 
 interface GeminiCallOptions {
@@ -341,38 +568,94 @@ interface GeminiCallOptions {
   apiKey: string;
   systemPrompt: string;
   userPrompt: string;
-  maxRetries?: number;
+  /** Total HTTP attempts on 429/500/503 (default MAX_ATTEMPTS). */
+  maxAttempts?: number;
+  /** Injected in tests. */
+  sleepFn?: (ms: number) => Promise<void>;
 }
 
-/** Calls the Gemini REST API with `fetch` (no SDK). Retries on 429 with exponential backoff. */
+/** Parses "12s" / "1.5s" (google.rpc.RetryInfo) into ms. */
+function parseDurationMs(value: unknown): number | undefined {
+  if (typeof value !== 'string') return undefined;
+  const m = /^(\d+(?:\.\d+)?)s$/.exec(value.trim());
+  return m ? Number(m[1]) * 1000 : undefined;
+}
+
+/**
+ * How long to wait before retrying (review S2): `Retry-After` (delta seconds or an HTTP date),
+ * else the body's `error.details[].retryDelay` ("12s"), else exponential backoff. Never NaN,
+ * never negative, never more than MAX_RETRY_DELAY_MS.
+ */
+export function retryDelayMs(retryAfter: string | null, bodyText: string, attempt: number, now = Date.now()): number {
+  let ms: number | undefined;
+  if (retryAfter !== null && retryAfter.trim() !== '') {
+    const seconds = Number(retryAfter);
+    if (Number.isFinite(seconds)) ms = seconds * 1000;
+    else {
+      const at = Date.parse(retryAfter);
+      if (Number.isFinite(at)) ms = at - now;
+    }
+  }
+  if (ms === undefined) {
+    try {
+      const body = JSON.parse(bodyText) as { error?: { details?: { retryDelay?: unknown }[] } };
+      for (const detail of body.error?.details ?? []) {
+        const parsed = parseDurationMs(detail?.retryDelay);
+        if (parsed !== undefined) {
+          ms = parsed;
+          break;
+        }
+      }
+    } catch {
+      // not JSON — fall back to backoff
+    }
+  }
+  if (ms === undefined || !Number.isFinite(ms)) ms = 2 ** attempt * 1000;
+  return Math.min(MAX_RETRY_DELAY_MS, Math.max(0, ms));
+}
+
+/** Calls the Gemini REST API with `fetch` (no SDK). Retries 429/500/503 with backoff, up to MAX_ATTEMPTS tries. */
 export async function callGemini(opts: GeminiCallOptions): Promise<GeminiResult> {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${opts.model}:generateContent?key=${opts.apiKey}`;
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${opts.model}:generateContent`;
   const body = JSON.stringify({
     contents: [{ role: 'user', parts: [{ text: opts.userPrompt }] }],
-    systemInstruction: { role: 'system', parts: [{ text: opts.systemPrompt }] },
-    generationConfig: { responseMimeType: 'application/json' },
+    systemInstruction: { parts: [{ text: opts.systemPrompt }] },
+    generationConfig: { responseMimeType: 'application/json', maxOutputTokens: MAX_OUTPUT_TOKENS },
   });
-  const maxRetries = opts.maxRetries ?? MAX_RETRIES_429;
+  const maxAttempts = opts.maxAttempts ?? MAX_ATTEMPTS;
+  const wait = opts.sleepFn ?? sleep;
 
-  for (let attempt = 0; ; attempt++) {
-    const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body });
+  for (let attempt = 1; ; attempt++) {
+    const res = await fetch(url, {
+      method: 'POST',
+      // The key goes in a header, never in the URL (URLs end up in logs and error messages).
+      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': opts.apiKey },
+      body,
+    });
 
-    if (res.status === 429 && attempt < maxRetries) {
-      const retryAfter = res.headers.get('retry-after');
-      const waitMs = retryAfter ? Number(retryAfter) * 1000 : 2 ** attempt * 1000;
-      await sleep(waitMs);
-      continue;
-    }
     if (!res.ok) {
-      throw new Error(`Gemini API error ${res.status}: ${await res.text()}`);
+      const errorText = await res.text();
+      if (RETRYABLE_STATUSES.has(res.status) && attempt < maxAttempts) {
+        const waitMs = retryDelayMs(res.headers.get('retry-after'), errorText, attempt - 1);
+        console.log(`  Gemini HTTP ${res.status} — retrying in ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${maxAttempts})`);
+        await wait(waitMs);
+        continue;
+      }
+      throw new Error(`Gemini API error ${res.status}: ${errorText}`);
     }
     const json = (await res.json()) as {
-      candidates?: { content?: { parts?: { text?: string }[] } }[];
+      candidates?: { content?: { parts?: { text?: string; thought?: boolean }[] }; finishReason?: string }[];
       usageMetadata?: GeminiUsage;
     };
-    const text = json.candidates?.[0]?.content?.parts?.[0]?.text;
-    if (typeof text !== 'string') throw new Error('Gemini response had no text part');
-    return { text, usage: json.usageMetadata };
+    const candidate = json.candidates?.[0];
+    // Thinking models may return several parts, some of them thoughts: keep only the answer.
+    const texts = (candidate?.content?.parts ?? [])
+      .filter((part) => part.thought !== true && typeof part.text === 'string')
+      .map((part) => part.text as string);
+    if (texts.length === 0) {
+      throw new Error(`Gemini response had no text part (finishReason: ${candidate?.finishReason ?? 'none'})`);
+    }
+    return { text: texts.join(''), usage: json.usageMetadata, finishReason: candidate?.finishReason };
   }
 }
 
@@ -380,7 +663,40 @@ export async function callGemini(opts: GeminiCallOptions): Promise<GeminiResult>
 export function parseModelJson(text: string): Record<string, unknown> {
   const trimmed = text.trim();
   const fenced = /^```(?:json)?\s*([\s\S]*?)\s*```$/.exec(trimmed);
-  return JSON.parse(fenced ? fenced[1] : trimmed) as Record<string, unknown>;
+  const parsed: unknown = JSON.parse(fenced ? fenced[1] : trimmed);
+  if (!isObject(parsed)) throw new Error('model reply is not a JSON object');
+  return parsed;
+}
+
+/**
+ * One call whose reply must be a complete JSON object: a reply cut off at MAX_TOKENS or one that
+ * does not parse is retried once (review B4). Returns null when both tries fail; HTTP errors
+ * (after callGemini's own retries) are thrown.
+ */
+async function callForJson(
+  cli: Cli,
+  apiKey: string,
+  systemPrompt: string,
+  userPrompt: string,
+  label: string
+): Promise<Record<string, unknown> | null> {
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const result = await callGemini({ model: cli.model, apiKey, systemPrompt, userPrompt });
+    printUsage(label, attempt === 1 ? '' : '(retry)', result.usage);
+    let reason: string;
+    if (result.finishReason === 'MAX_TOKENS') {
+      reason = 'the reply was cut off (finishReason MAX_TOKENS)';
+    } else {
+      try {
+        return parseModelJson(result.text);
+      } catch (err) {
+        reason = `the reply is not valid JSON (${err instanceof Error ? err.message : String(err)})`;
+      }
+    }
+    console.error(`  [${label}] ${reason}${attempt === 1 ? ' — retrying once' : ' — giving up on this call'}`);
+    if (attempt === 1) await sleep(cli.sleepMs);
+  }
+  return null;
 }
 
 /** Merges chunk responses: first chunk is the base object, later chunks contribute only exercises. */
@@ -417,36 +733,85 @@ export function hasBlockingProblems(problems: ContentProblem[]): boolean {
   return problems.some((p) => p.severity !== 'warning');
 }
 
+function errorMessage(err: unknown): string {
+  return err instanceof Error ? err.message : String(err);
+}
+
+/**
+ * Structural (validateProgram) problems of the job's own container, one per broken exercise:
+ * validateProgram stops at the first error, so each exercise is checked on its own inside a
+ * known-good stub container, and the header is checked with no exercises.
+ */
+function structuralProblems(job: Job, meta: Record<string, unknown>, merged: Record<string, unknown>, prefix: string): ContentProblem[] {
+  const wrap = (container: Record<string, unknown>) =>
+    job.kind === 'topic'
+      ? { ...meta, modules: [{ id: job.moduleId, title: job.moduleId, description: '', topics: [container] }], phraseSets: [] }
+      : { ...meta, modules: [], phraseSets: [container] };
+  const stubHeader: Record<string, unknown> =
+    job.kind === 'topic'
+      ? { id: job.topicId, moduleId: job.moduleId, title: 'x', kind: 'grammar', context: 'x', keyItems: [] }
+      : { id: job.phraseSetId, title: 'x', phrases: [] };
+
+  const problems: ContentProblem[] = [];
+  try {
+    validateProgram(wrap({ ...merged, exercises: [] }));
+  } catch (err) {
+    problems.push({ path: prefix.slice(0, -1), message: errorMessage(err), severity: 'error' });
+  }
+  const exercises = exercisesOf(merged);
+  exercises.forEach((exercise, i) => {
+    try {
+      validateProgram(wrap({ ...stubHeader, exercises: [exercise] }));
+    } catch (err) {
+      problems.push({
+        path: `${prefix}exercises[${i}]`,
+        message: errorMessage(err).replace('.exercises[0]', `.exercises[${i}]`),
+        severity: 'error',
+        ...(typeof exercise.id === 'string' ? { exerciseId: exercise.id } : {}),
+        exerciseNumber: i + 1,
+        exerciseCount: exercises.length,
+      });
+    }
+  });
+  return problems;
+}
+
 /**
  * Validates the merged JSON as part of a temporary program containing the module's existing
  * topics plus the new/updated one (docs/stage-4b-spec.md §3), and returns only the problems that
  * belong to this job's own container (so pre-existing issues in sibling topics don't block it).
+ * Call it on `normalizeMerged` output: the filter keys on the job's id.
  */
 export function validateMerged(job: Job, merged: Record<string, unknown>): ContentProblem[] {
   const meta = readProgramMeta(job.programId);
-  let stub: Record<string, unknown>;
-  let prefix: string;
+  const prefix = job.kind === 'topic' ? `modules.${job.moduleId}.topics.${job.topicId}.` : `phraseSets.${job.phraseSetId}.`;
 
-  if (job.kind === 'topic') {
-    const siblings = loadSiblingTopics(job.programId, job.moduleId, job.topicId);
-    stub = {
-      ...meta,
-      modules: [{ id: job.moduleId, title: job.moduleId, description: '', topics: [...siblings, merged] }],
-      phraseSets: [],
-    };
-    prefix = `modules.${job.moduleId}.topics.${job.topicId}.`;
-  } else {
-    stub = { ...meta, modules: [], phraseSets: [merged] };
-    prefix = `phraseSets.${job.phraseSetId}.`;
-  }
+  const structural = structuralProblems(job, meta, merged, prefix);
+  if (structural.length > 0) return structural;
+
+  const stub =
+    job.kind === 'topic'
+      ? {
+          ...meta,
+          modules: [
+            {
+              id: job.moduleId,
+              title: job.moduleId,
+              description: '',
+              topics: [...loadSiblingTopics(job.programId, job.moduleId, job.topicId), merged],
+            },
+          ],
+          phraseSets: [],
+        }
+      : { ...meta, modules: [], phraseSets: [merged] };
 
   try {
     const program = validateProgram(stub);
     const { problems } = checkContent(program);
     return problems.filter((p) => p.path.startsWith(prefix));
   } catch (err) {
-    const message = err instanceof Error ? err.message : String(err);
-    return [{ path: prefix.slice(0, -1), message, severity: 'error' }];
+    // Only a broken *sibling* topic can get here — the job's own container passed above.
+    return [{ path: prefix.slice(0, -1), message: `module could not be validated: ${errorMessage(err)}`, severity: 'error' }];
   }
 }
 
@@ -467,7 +832,7 @@ async function formatJson(obj: unknown): Promise<string> {
 function printUsage(label: string, chunkLabel: string, usage?: GeminiUsage): void {
   if (!usage) return;
   console.log(
-    `  [${label} ${chunkLabel}] tokens — prompt: ${usage.promptTokenCount ?? '?'}, ` +
+    `  [${label}${chunkLabel ? ` ${chunkLabel}` : ''}] tokens — prompt: ${usage.promptTokenCount ?? '?'}, ` +
       `candidates: ${usage.candidatesTokenCount ?? '?'}, total: ${usage.totalTokenCount ?? '?'}`
   );
 }
@@ -478,7 +843,7 @@ function outputPath(job: Job): string {
     : path.join(programRoot(job.programId), 'phrases', `${job.phraseSetId}.json`);
 }
 
-function draftPath(job: Job): string {
+export function draftPath(job: Job): string {
   const dir = job.kind === 'topic' ? 'topics' : 'phrases';
   return path.join(programRoot(job.programId), dir, `_draft-${containerId(job)}.json`);
 }
@@ -489,12 +854,21 @@ export interface GenerateResult {
   repairRounds: number;
 }
 
+function missingProblem(job: Job, missing: string[]): ContentProblem {
+  return {
+    path: `${containerId(job)}.exercises`,
+    message: `${missing.length} exercise(s) missing: ${missing[0]}..${missing[missing.length - 1]} (a chunk was lost)`,
+    severity: 'error',
+  };
+}
+
 /**
  * Core generation loop, independent of the filesystem (job/cli/systemPrompt/validate are all
- * plain inputs): chunked generation via `callGemini`/global `fetch`, merge, validate, then up to
- * `MAX_REPAIR_ROUNDS` repair calls while `validate` still reports a blocking problem. Exported
- * for direct unit testing (scripts/__tests__/content-generate.test.ts) with a mocked `fetch` and
- * a stub `validate`, without touching real content files.
+ * plain inputs): chunked generation via `callGemini`/global `fetch`, merge + normalise ids,
+ * validate, then up to `MAX_REPAIR_ROUNDS` targeted repair calls while there is a blocking
+ * problem or missing exercises. Never throws on an API failure: whatever was merged so far is
+ * returned with the failure as a problem, so the caller can always write a draft. Exported for
+ * unit tests with a mocked `fetch` and a stub `validate`.
  */
 export async function generateAndRepair(
   job: Job,
@@ -503,17 +877,25 @@ export async function generateAndRepair(
   systemPrompt: string,
   validate: (merged: Record<string, unknown>) => ContentProblem[]
 ): Promise<GenerateResult> {
+  const id = containerId(job);
   const total = exerciseCount(job);
   const chunkCount = Math.max(1, Math.ceil(total / CHUNK_SIZE));
-  const chunks: Record<string, unknown>[] = [];
+  let merged: Record<string, unknown> = normalizeMerged(job, {});
+  let fatal: ContentProblem | null = null;
 
   for (let i = 0; i < chunkCount; i++) {
     const startNum = i * CHUNK_SIZE + 1;
     const endNum = Math.min(total, (i + 1) * CHUNK_SIZE);
-    const userPrompt = buildUserPrompt(job, { startNum, endNum, isContinuation: i > 0 });
+    const soFar = exercisesOf(merged);
+    const { exercises: _exercises, ...header } = merged;
+    const userPrompt = buildUserPrompt(
+      job,
+      { startNum, endNum, isContinuation: i > 0 },
+      i > 0 ? { header, sentences: usedSentences(soFar) } : undefined
+    );
 
     if (cli.dryRun) {
-      console.log(`\n=== ${containerId(job)} — chunk ${i + 1}/${chunkCount} ===`);
+      console.log(`\n=== ${id} — chunk ${i + 1}/${chunkCount} ===`);
       console.log('--- system prompt ---');
       console.log(systemPrompt);
       console.log('--- user prompt ---');
@@ -521,29 +903,65 @@ export async function generateAndRepair(
       continue;
     }
 
-    const result = await callGemini({ model: cli.model, apiKey, systemPrompt, userPrompt });
-    printUsage(containerId(job), `chunk ${i + 1}/${chunkCount}`, result.usage);
-    chunks.push(parseModelJson(result.text));
+    let reply: Record<string, unknown> | null;
+    try {
+      reply = await callForJson(cli, apiKey, systemPrompt, userPrompt, `${id} chunk ${i + 1}/${chunkCount}`);
+    } catch (err) {
+      fatal = { path: id, message: `generation stopped: ${errorMessage(err)}`, severity: 'error' };
+      break;
+    }
+    if (reply) {
+      const chunkExercises = exercisesOf(reply).slice(0, endNum - startNum + 1);
+      merged = normalizeMerged(
+        job,
+        i === 0 ? { ...reply, exercises: chunkExercises } : { ...merged, exercises: [...soFar, ...chunkExercises] }
+      );
+    }
+    // A lost chunk is not fatal: its exercises show up as missing and the repair round writes them.
     if (i < chunkCount - 1) await sleep(cli.sleepMs);
   }
 
   if (cli.dryRun) return { merged: {}, problems: [], repairRounds: 0 };
 
-  let merged = mergeExerciseChunks(chunks);
-  let problems = validate(merged);
+  const check = (): ContentProblem[] => {
+    const missing = missingExerciseIds(job, merged);
+    const problems = validate(merged);
+    return missing.length > 0 ? [...problems, missingProblem(job, missing)] : problems;
+  };
 
+  if (fatal) return { merged, problems: [...check(), fatal], repairRounds: 0 };
+
+  let problems = check();
   let round = 0;
   while (hasBlockingProblems(problems) && round < MAX_REPAIR_ROUNDS) {
     round++;
-    const repairPrompt = buildRepairPrompt(merged, problems);
-    const result = await callGemini({ model: cli.model, apiKey, systemPrompt, userPrompt: repairPrompt });
-    printUsage(containerId(job), `repair ${round}/${MAX_REPAIR_ROUNDS}`, result.usage);
-    merged = parseModelJson(result.text);
-    problems = validate(merged);
-    if (hasBlockingProblems(problems) && round < MAX_REPAIR_ROUNDS) await sleep(cli.sleepMs);
+    await sleep(cli.sleepMs);
+    const request = repairRequestFor(merged, problems, missingExerciseIds(job, merged));
+    const repairPrompt = buildRepairPrompt(job, merged, problems, request);
+    let reply: Record<string, unknown> | null;
+    try {
+      reply = await callForJson(cli, apiKey, systemPrompt, repairPrompt, `${id} repair ${round}/${MAX_REPAIR_ROUNDS}`);
+    } catch (err) {
+      return {
+        merged,
+        problems: [...problems, { path: id, message: `repair stopped: ${errorMessage(err)}`, severity: 'error' }],
+        repairRounds: round,
+      };
+    }
+    if (reply) merged = spliceRepair(job, merged, reply, request);
+    problems = check();
   }
 
   return { merged, problems, repairRounds: round };
+}
+
+/** Writes `_draft-<id>.json` (whatever was generated) and prints why. */
+function writeDraft(job: Job, merged: Record<string, unknown>, problems: ContentProblem[], why: string): void {
+  const dPath = draftPath(job);
+  mkdirSync(path.dirname(dPath), { recursive: true });
+  writeFileSync(dPath, `${JSON.stringify(merged, null, 2)}\n`, 'utf8');
+  console.error(`\n${containerId(job)}: ${why} — wrote ${path.relative(REPO_ROOT, dPath)}`);
+  for (const p of problems) console.error(`  - ${p.exerciseId ?? p.path}: ${p.message}`);
 }
 
 /** Runs one job (topic or phrase set) against real content files: generate, validate, write. */
@@ -555,15 +973,19 @@ export async function runJob(job: Job, cli: Cli, apiKey: string, programMetaFor:
     typeof meta.targetLanguage === 'string' ? meta.targetLanguage : '?'
   );
 
-  const { merged, problems } = await generateAndRepair(job, cli, apiKey, systemPrompt, (m) => validateMerged(job, m));
+  let result: GenerateResult;
+  try {
+    result = await generateAndRepair(job, cli, apiKey, systemPrompt, (m) => validateMerged(job, m));
+  } catch (err) {
+    // Not expected (API failures are returned as problems), but never lose the run silently.
+    writeDraft(job, normalizeMerged(job, {}), [{ path: containerId(job), message: errorMessage(err) }], 'generation crashed');
+    return false;
+  }
   if (cli.dryRun) return true;
+  const { merged, problems, repairRounds } = result;
 
   if (hasBlockingProblems(problems)) {
-    const dPath = draftPath(job);
-    mkdirSync(path.dirname(dPath), { recursive: true });
-    writeFileSync(dPath, `${JSON.stringify(merged, null, 2)}\n`, 'utf8');
-    console.error(`\n${containerId(job)}: still failing after ${MAX_REPAIR_ROUNDS} repair rounds — wrote ${dPath}`);
-    for (const p of problems) console.error(`  - ${p.path}: ${p.message}`);
+    writeDraft(job, merged, problems, `still failing after ${repairRounds} repair round(s)`);
     return false;
   }
 

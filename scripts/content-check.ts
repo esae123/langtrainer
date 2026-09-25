@@ -1,12 +1,13 @@
-// Validates content/pt-PT-A1/**/*.json without writing anything.
-// Usage: node scripts/content-check.ts [--allow-missing]
+// Validates content/<program>/**/*.json without writing anything.
+// Usage: node scripts/content-check.ts [--program <id>] [--allow-missing]
+//   --program <id>   course folder under content/ (default pt-PT-A1)
 //   --allow-missing  downgrade missing topic/phrase-set files (for modules in program.json's
 //                     moduleOrder) to warnings — useful while content is still being authored.
 //                     Modules not (yet) in moduleOrder are always checked this leniently: their
 //                     missing topic files are warnings regardless of this flag (see content-lib.ts).
 import { checkContent, type ContentProblem, type ContentStats } from '../src/content/contentRules.ts';
 import { validateProgram } from '../src/content/validateProgram.ts';
-import { loadProgram } from './content-lib.ts';
+import { loadProgram, programIdFromArgs } from './content-lib.ts';
 import { printReport, type UnlistedReport } from './content-report.ts';
 
 interface RawModule {
@@ -20,7 +21,7 @@ const {
   problems: loadProblems,
   unlistedModules,
   unlistedProblems,
-} = loadProgram(allowMissing);
+} = loadProgram(allowMissing, programIdFromArgs(process.argv.slice(2)));
 
 const stats: Record<string, ContentStats> = {};
 const ruleProblems: ContentProblem[] = [];

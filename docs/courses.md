@@ -18,15 +18,17 @@ There are two kinds of course:
 
 1. Create `content/<programId>/` with `program.json`, `modules/*.json` and `topics/*.json` (see
    [`content-authoring.md`](./content-authoring.md) for the layout and the authoring rules).
-2. `npm run content:check` — validates the structure and every content rule.
-3. `npm run content:build` — writes the built course into `src/content/programs/<programId>.json`.
-4. Add the built file to the list in `src/content/programs/index.ts`.
-5. Commit and push; the deploy makes it available to every install of the app.
+2. `npm run content:check -- --program <programId>` — validates the structure and every content rule.
+3. `npm run content:build -- --program <programId>` — a course not yet bundled is written to
+   `dist-courses/<programId>.json`. The first time, move that file to `src/content/programs/<programId>.json` and add
+   it to the list in `src/content/programs/index.ts`; from then on the build writes there directly.
+4. Commit and push; the deploy makes it available to every install of the app.
 
 ### 2. Imported: a JSON file on the phone
 
-1. Build the course file (`npm run content:build` produces exactly the right shape) or get it from someone else.
-2. On the phone, open **Settings → Library → Import course**, or tap the course card on the Learn screen and choose
+1. Build the course file with `npm run content:build -- --program <programId>` (writes `dist-courses/<programId>.json`,
+   exactly the right shape) or get it from someone else.
+2. On the phone, open **Settings → Library → Courses → Import course**, or tap the course card on the Learn screen and choose
    **Import a course from file…**.
 3. Pick the `.json` file. The app checks it before saving anything:
    - it must be valid JSON under 10 MB;

@@ -1,5 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import { loadProgram, moduleTopicBriefs, moduleTopicOrder } from '../content-lib.ts';
+import path from 'node:path';
+import {
+  buildOutputPath,
+  bundledProgramIds,
+  loadProgram,
+  moduleTopicBriefs,
+  moduleTopicOrder,
+  programIdFromArgs,
+  REPO_ROOT,
+} from '../content-lib.ts';
 
 describe('moduleTopicOrder — both module file shapes parse (docs/stage-4b-spec.md §1)', () => {
   it('derives the order from topics[].id in the new brief shape', () => {
@@ -84,5 +93,31 @@ describe('loadProgram — modules not (yet) in moduleOrder are still loaded sepa
   it('still reports a missing moduleOrder module/topic as an error without --allow-missing', () => {
     const { problems } = loadProgram(false);
     expect(problems.every((p) => p.severity !== 'error')).toBe(true); // m1 and all its topics exist
+  });
+});
+
+describe('--program (review S8)', () => {
+  it('defaults to pt-PT-A1 and reads --program <id>', () => {
+    expect(programIdFromArgs([])).toBe('pt-PT-A1');
+    expect(programIdFromArgs(['--allow-missing'])).toBe('pt-PT-A1');
+    expect(programIdFromArgs(['--program', 'en-b2', '--allow-missing'])).toBe('en-b2');
+    expect(programIdFromArgs(['--program', '--allow-missing'])).toBe('pt-PT-A1');
+  });
+
+  it('loads another course folder', () => {
+    const { program } = loadProgram(true, 'en-b2');
+    expect(program.id).toBe('en-b2');
+  });
+
+  it('knows the bundled courses from src/content/programs/index.ts', () => {
+    expect(bundledProgramIds()).toContain('pt-PT-A1');
+    expect(bundledProgramIds()).not.toContain('en-b2');
+  });
+
+  it('writes bundled courses into the app and others to dist-courses/', () => {
+    expect(buildOutputPath('pt-PT-A1', ['pt-PT-A1'])).toBe(
+      path.join(REPO_ROOT, 'src/content/programs/pt-PT-A1.json')
+    );
+    expect(buildOutputPath('en-b2', ['pt-PT-A1'])).toBe(path.join(REPO_ROOT, 'dist-courses/en-b2.json'));
   });
 });
