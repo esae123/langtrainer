@@ -10,6 +10,7 @@ deterministic given its inputs — `now` and an `rng` (`Rng = () => number`, see
 | `plan.ts`     | what to practise: blocks, topic and exercise selection, input modes   |
 | `check.ts`    | is the answer right, per exercise type and input mode                 |
 | `progress.ts` | topic progress, topic completion, spaced repetition                   |
+| `stats.ts`    | Progress-screen statistics: streaks, totals, per-topic numbers        |
 | `text.ts`     | normalisation, diacritics stripping, Levenshtein distance             |
 | `hint.ts`     | "first letter + length" hint for typed answers                        |
 | `rng.ts`      | seeded PRNG, shuffling, weighted picks, string hashing                |
@@ -142,3 +143,34 @@ correct):
 A perfect review resets `failedReviewsInARow` to 0. `finishSession` also returns per-topic
 outcomes (before/after snapshots and counts), which the summary screen turns into lines
 like "→ ready for review in 30 days".
+
+## Statistics (`stats.ts`)
+
+The Progress screen shows the **active course** only. Its rows are the course's
+`sessions`, the `attempts` of those sessions and its `topicProgress` rows. Unless noted,
+only **regular** work counts: `sessions.kind === 'practice'` and `attempts.practice ===
+true` are left out.
+
+- `streaks(sessions, now, tzOffsetMinutes?)` → `{ current, best }`: runs of consecutive
+  **local calendar days** with at least one regular session that has `completed >= 1`
+  (a session belongs to the day it started). `current` counts back from today, or from
+  yesterday when nothing has been done today yet. The offset has the sign of
+  `Date#getTimezoneOffset`; without it the runtime's local offset is used per timestamp.
+- `overview(sessions, attempts)` → `{ sessions, answered, correct, accuracy }`: regular
+  sessions with at least one answer, regular attempts, the correct ones, and
+  `correct / answered` (0 with nothing answered). A fresh course (`sessions === 0`) shows
+  the empty state instead of the statistics.
+- `topicStats(program, rows, attempts)` → per module, per topic in program order:
+  `status` (from the progress row, `new` without one), `seen` (distinct
+  `seenExerciseIds` still in the topic), `total` (exercise count), `attempts`,
+  `accuracy` (`null` with no attempt), `lastPractisedAt` (latest regular attempt) and
+  `nextReviewAt`. Phrase sets are not topics and are not listed.
+- `needsWork(modules)` → up to three topics with **≥ 5 attempts** and accuracy **below
+  80%**, weakest first.
+- `upcomingReviews(rows, now)` → the next five `review`/`maintenance` rows by
+  `nextReviewAt`; overdue ones (`<= now`) sort first and carry `overdue: true`.
+- `recentSessions(sessions, n = 10)` → newest first, **practice runs included** (tagged by
+  `kind`), with `{ startedAt, completed, correct, planned, kind, interrupted }`.
+
+The session summary of a regular session adds one line by score: ≥ 90% "Excellent",
+70–89% "Good work", below 70% "Worth another go".

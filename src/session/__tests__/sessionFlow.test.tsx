@@ -122,6 +122,7 @@ describe('/session happy path', () => {
     expect(await screen.findByText(/session complete/i)).toBeInTheDocument();
     expect(screen.getByText('100%')).toBeInTheDocument();
     expect(screen.getByText('3 of 3 correct')).toBeInTheDocument();
+    expect(screen.getByText('Excellent — keep this pace.')).toBeInTheDocument();
     expect(screen.getByText('New material')).toBeInTheDocument();
     expect(screen.queryByText('Interrupted')).not.toBeInTheDocument();
     // Nothing was wrong, so only "Repeat session" is offered as practice.

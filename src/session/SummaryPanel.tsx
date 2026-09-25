@@ -26,6 +26,13 @@ const BLOCK_LABELS: Record<BlockKind, TranslationKey> = {
   phrases: 'session.block.phrases',
 };
 
+/** One-line encouragement for a regular session, by score (docs/stage-5-spec.md). */
+function gradeKey(percentage: number): TranslationKey {
+  if (percentage >= 90) return 'session.grade.excellent';
+  if (percentage >= 70) return 'session.grade.good';
+  return 'session.grade.retry';
+}
+
 function days(from: number, to: number): number {
   return Math.max(1, Math.round((to - from) / DAY_MS));
 }
@@ -116,6 +123,9 @@ export function SummaryPanel({
             {practice ? t('session.practiceTitle') : t('session.summaryTitle')}
           </h1>
           <p className="text-sm text-muted">{t('session.summaryScore', { correct, total })}</p>
+          {!practice && total > 0 && (
+            <p className="break-words text-sm font-medium text-text">{t(gradeKey(percentage))}</p>
+          )}
           {practice && state.plan.fromMistakes && (
             <p className="text-sm font-medium text-accent">
               {t('session.practiceFixed', { fixed: correct, of: state.plan.items.length })}
