@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import type { InputMode } from '../../content/types';
-import { INPUT_PRESETS, type SessionLength } from '../../settings/settings';
+import {
+  DEFAULT_SESSION_MIX,
+  INPUT_PRESETS,
+  SESSION_MIX_PRESETS,
+  type SessionLength,
+  type SessionMix,
+} from '../../settings/settings';
 import {
   makeProgram,
   makeProgress,
@@ -11,6 +17,8 @@ import {
 } from '../../test/fixtures';
 import {
   BLOCK_COMPOSITION,
+  OPEN_CYCLE,
+  blockCountsFor,
   currentTopicOf,
   pickMode,
   planNextCycle,
@@ -333,5 +341,74 @@ describe('determinism', () => {
     expect(a.items.map((i) => `${i.exercise.id}:${i.mode}`)).toEqual(
       b.items.map((i) => `${i.exercise.id}:${i.mode}`)
     );
+  });
+});
+
+describe('session mix (blockCountsFor)', () => {
+  const LENGTHS: SessionLength[] = [5, 10, 15, 20, 30, 'open'];
+  const sum = (c: { new: number; review: number; phrases: number }) => c.new + c.review + c.phrases;
+  const mix = (preset: SessionMix['preset'], shares = DEFAULT_SESSION_MIX.shares): SessionMix => ({
+    preset,
+    shares,
+  });
+
+  it('balanced is exactly the old table and open cycle (also the default)', () => {
+    for (const length of [5, 10, 15, 20, 30] as const) {
+      expect(blockCountsFor(length, DEFAULT_SESSION_MIX)).toEqual(BLOCK_COMPOSITION[length]);
+      expect(blockCountsFor(length)).toEqual(BLOCK_COMPOSITION[length]);
+    }
+    expect(blockCountsFor('open', DEFAULT_SESSION_MIX)).toEqual(OPEN_CYCLE);
+    expect(blockCountsFor('open')).toEqual({ new: 3, review: 2, phrases: 1 });
+  });
+
+  it.each(['more-new', 'more-review'] as const)(
+    '%s sums to the length for every length',
+    (preset) => {
+      for (const length of LENGTHS) {
+        const counts = blockCountsFor(length, mix(preset, SESSION_MIX_PRESETS[preset]));
+        expect(sum(counts)).toBe(length === 'open' ? 6 : length);
+      }
+    }
+  );
+
+  it('uses largest-remainder rounding', () => {
+    const moreNew = mix('more-new', SESSION_MIX_PRESETS['more-new']);
+    expect(blockCountsFor(10, moreNew)).toEqual({ new: 7, review: 2, phrases: 1 });
+    expect(blockCountsFor(15, moreNew)).toEqual({ new: 11, review: 3, phrases: 1 });
+    expect(blockCountsFor('open', moreNew)).toEqual({ new: 4, review: 1, phrases: 1 });
+    const moreReview = mix('more-review', SESSION_MIX_PRESETS['more-review']);
+    expect(blockCountsFor(5, moreReview)).toEqual({ new: 1, review: 3, phrases: 1 });
+    expect(blockCountsFor(20, moreReview)).toEqual({ new: 6, review: 11, phrases: 3 });
+    expect(blockCountsFor('open', moreReview)).toEqual({ new: 2, review: 3, phrases: 1 });
+  });
+
+  it('gives a zero share zero items', () => {
+    for (const length of LENGTHS) {
+      const noPhrases = blockCountsFor(length, mix('custom', { new: 60, review: 40, phrases: 0 }));
+      expect(noPhrases.phrases).toBe(0);
+      expect(sum(noPhrases)).toBe(length === 'open' ? 6 : length);
+      const onlyReview = blockCountsFor(length, mix('custom', { new: 0, review: 100, phrases: 0 }));
+      expect(onlyReview).toEqual({ new: 0, review: sum(onlyReview), phrases: 0 });
+    }
+  });
+
+  it('planSession and planNextCycle follow the mix', () => {
+    const sessionMix = mix('custom', { new: 0, review: 50, phrases: 50 });
+    const progress = [
+      makeProgress('t1', { status: 'review', reviewStage: 1, nextReviewAt: NOW - DAY_MS }),
+    ];
+    const input = {
+      program: makeStandardProgram(),
+      progress,
+      sessionLength: 10 as const,
+      inputShares: INPUT_PRESETS.normal,
+      sessionMix,
+      now: NOW,
+      rng: mulberry32(5),
+    };
+    expect(countBlocks(planSession(input))).toEqual({ new: 0, review: 5, phrases: 5 });
+    const open = { ...input, sessionLength: 'open' as const };
+    const extended = planNextCycle(planSession(open), open);
+    expect(countBlocks(extended)).toEqual({ new: 0, review: 6, phrases: 6 });
   });
 });

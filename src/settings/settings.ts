@@ -2,11 +2,24 @@ export type UiLanguage = 'en' | 'ru';
 export type Theme = 'system' | 'light' | 'dark';
 export type SessionLength = 5 | 10 | 15 | 20 | 30 | 'open';
 export type InputPreset = 'easy' | 'normal' | 'serious' | 'custom';
+export type SessionMixPreset = 'balanced' | 'more-new' | 'more-review' | 'custom';
 
 export interface InputShares {
   tiles: number;
   letters: number;
   typing: number;
+}
+
+/** Percent of a session given to each block; integers summing to 100. */
+export interface SessionMixShares {
+  new: number;
+  review: number;
+  phrases: number;
+}
+
+export interface SessionMix {
+  preset: SessionMixPreset;
+  shares: SessionMixShares;
 }
 
 export interface Settings {
@@ -16,6 +29,8 @@ export interface Settings {
   sessionLength: SessionLength;
   inputPreset: InputPreset;
   inputShares: InputShares;
+  /** How a session is split between new material, review and everyday phrases. */
+  sessionMix: SessionMix;
   /** Show "first letter + length" under the prompt in typing mode. */
   typingHint: boolean;
   /** Stored locally only. Never included in backup export; masked in the UI. */
@@ -30,6 +45,19 @@ export const INPUT_PRESETS: Record<Exclude<InputPreset, 'custom'>, InputShares> 
   serious: { tiles: 40, letters: 30, typing: 30 },
 };
 
+export const SESSION_MIX_PRESETS: Record<Exclude<SessionMixPreset, 'custom'>, SessionMixShares> = {
+  // `balanced` is planned with the fixed BLOCK_COMPOSITION table (src/engine/plan.ts);
+  // these shares only describe it and seed the custom sliders.
+  balanced: { new: 50, review: 33, phrases: 17 },
+  'more-new': { new: 70, review: 20, phrases: 10 },
+  'more-review': { new: 30, review: 55, phrases: 15 },
+};
+
+export const DEFAULT_SESSION_MIX: SessionMix = {
+  preset: 'balanced',
+  shares: SESSION_MIX_PRESETS.balanced,
+};
+
 export const DEFAULT_SETTINGS: Settings = {
   uiLanguage: 'en',
   theme: 'system',
@@ -40,6 +68,7 @@ export const DEFAULT_SETTINGS: Settings = {
   sessionLength: 10,
   inputPreset: 'normal',
   inputShares: INPUT_PRESETS.normal,
+  sessionMix: DEFAULT_SESSION_MIX,
   typingHint: true,
   geminiApiKey: '',
   generateOnlyOnWifi: true,
@@ -48,32 +77,83 @@ export const DEFAULT_SETTINGS: Settings = {
 
 export const SESSION_LENGTH_OPTIONS: SessionLength[] = [5, 10, 15, 20, 30, 'open'];
 
-/** Normalizes three shares so they sum to exactly 100, preserving proportions. */
-export function normalizeInputShares(shares: InputShares): InputShares {
-  const { tiles, letters, typing } = shares;
-  const clamped = {
-    tiles: Math.max(0, tiles),
-    letters: Math.max(0, letters),
-    typing: Math.max(0, typing),
-  };
-  const total = clamped.tiles + clamped.letters + clamped.typing;
-  if (total === 0) return { tiles: 100, letters: 0, typing: 0 };
-  if (total === 100) return clamped;
+/**
+ * Normalizes non-negative integer shares so they sum to exactly 100, preserving
+ * proportions. All zero → the first key gets 100.
+ */
+export function normalizeShares<K extends string>(
+  shares: Record<K, number>,
+  keys: readonly K[]
+): Record<K, number> {
+  const clamped = {} as Record<K, number>;
+  for (const key of keys) {
+    const value = shares[key];
+    clamped[key] = Number.isFinite(value) ? Math.max(0, value) : 0;
+  }
+  const total = keys.reduce((sum, key) => sum + clamped[key], 0);
+  if (total === 0) {
+    const first = {} as Record<K, number>;
+    keys.forEach((key, i) => (first[key] = i === 0 ? 100 : 0));
+    return first;
+  }
+  if (total === 100 && keys.every((key) => Number.isInteger(clamped[key]))) return clamped;
 
-  const scaled = {
-    tiles: Math.round((clamped.tiles / total) * 100),
-    letters: Math.round((clamped.letters / total) * 100),
-    typing: Math.round((clamped.typing / total) * 100),
-  };
+  const scaled = {} as Record<K, number>;
+  for (const key of keys) scaled[key] = Math.round((clamped[key] / total) * 100);
   // Rounding can leave the sum off by a point or two; fix it up on the largest share.
-  const diff = 100 - (scaled.tiles + scaled.letters + scaled.typing);
+  const diff = 100 - keys.reduce((sum, key) => sum + scaled[key], 0);
   if (diff !== 0) {
-    const largestKey = (['tiles', 'letters', 'typing'] as const).reduce((a, b) =>
-      scaled[a] >= scaled[b] ? a : b
-    );
+    const largestKey = keys.reduce((a, b) => (scaled[a] >= scaled[b] ? a : b));
     scaled[largestKey] += diff;
   }
   return scaled;
+}
+
+const INPUT_SHARE_KEYS = ['tiles', 'letters', 'typing'] as const;
+export const SESSION_MIX_KEYS = ['new', 'review', 'phrases'] as const;
+
+/** Normalizes three shares so they sum to exactly 100, preserving proportions. */
+export function normalizeInputShares(shares: InputShares): InputShares {
+  return normalizeShares(shares, INPUT_SHARE_KEYS);
+}
+
+export function normalizeMixShares(shares: SessionMixShares): SessionMixShares {
+  return normalizeShares(shares, SESSION_MIX_KEYS);
+}
+
+const SESSION_MIX_PRESET_IDS: readonly SessionMixPreset[] = [
+  'balanced',
+  'more-new',
+  'more-review',
+  'custom',
+];
+
+/**
+ * A usable `sessionMix` from whatever was stored (settings saved before Stage 5 have
+ * none; a hand-edited backup may carry garbage). A named preset always uses its own
+ * shares; `custom` keeps the stored shares, normalized to 100.
+ */
+export function sanitizeSessionMix(value: unknown): SessionMix {
+  if (typeof value !== 'object' || value === null) return DEFAULT_SESSION_MIX;
+  const { preset, shares } = value as { preset?: unknown; shares?: unknown };
+  if (!SESSION_MIX_PRESET_IDS.includes(preset as SessionMixPreset)) return DEFAULT_SESSION_MIX;
+  if (preset !== 'custom') {
+    const named = preset as Exclude<SessionMixPreset, 'custom'>;
+    return { preset: named, shares: SESSION_MIX_PRESETS[named] };
+  }
+  if (typeof shares !== 'object' || shares === null) {
+    return { preset: 'custom', shares: SESSION_MIX_PRESETS.balanced };
+  }
+  const raw = shares as Record<string, unknown>;
+  const numeric = (key: string) => (typeof raw[key] === 'number' ? (raw[key] as number) : 0);
+  return {
+    preset: 'custom',
+    shares: normalizeMixShares({
+      new: numeric('new'),
+      review: numeric('review'),
+      phrases: numeric('phrases'),
+    }),
+  };
 }
 
 export function isInputSharesValid(shares: InputShares): boolean {

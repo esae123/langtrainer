@@ -1,9 +1,13 @@
 import { describe, expect, it } from 'vitest';
 import {
+  DEFAULT_SESSION_MIX,
   DEFAULT_SETTINGS,
   INPUT_PRESETS,
+  SESSION_MIX_PRESETS,
   isInputSharesValid,
   normalizeInputShares,
+  normalizeMixShares,
+  sanitizeSessionMix,
 } from '../settings';
 
 describe('input share presets', () => {
@@ -57,5 +61,44 @@ describe('normalizeInputShares', () => {
     const result = normalizeInputShares({ tiles: -10, letters: 60, typing: 40 });
     expect(result.tiles).toBeGreaterThanOrEqual(0);
     expect(result.tiles + result.letters + result.typing).toBe(100);
+  });
+});
+
+describe('session mix', () => {
+  it('defaults to balanced 50/33/17 and the presets match the spec', () => {
+    expect(DEFAULT_SETTINGS.sessionMix).toEqual({
+      preset: 'balanced',
+      shares: { new: 50, review: 33, phrases: 17 },
+    });
+    expect(SESSION_MIX_PRESETS['more-new']).toEqual({ new: 70, review: 20, phrases: 10 });
+    expect(SESSION_MIX_PRESETS['more-review']).toEqual({ new: 30, review: 55, phrases: 15 });
+  });
+
+  it('normalizeMixShares keeps the sum at 100', () => {
+    expect(normalizeMixShares({ new: 100, review: 33, phrases: 17 })).toEqual({
+      new: 67,
+      review: 22,
+      phrases: 11,
+    });
+    expect(normalizeMixShares({ new: 0, review: 0, phrases: 0 })).toEqual({
+      new: 100,
+      review: 0,
+      phrases: 0,
+    });
+  });
+
+  it('sanitizeSessionMix fills in or repairs a stored value', () => {
+    expect(sanitizeSessionMix(undefined)).toEqual(DEFAULT_SESSION_MIX);
+    expect(sanitizeSessionMix('nonsense')).toEqual(DEFAULT_SESSION_MIX);
+    expect(sanitizeSessionMix({ preset: 'huge' })).toEqual(DEFAULT_SESSION_MIX);
+    expect(sanitizeSessionMix({ preset: 'more-new', shares: { new: 1 } })).toEqual({
+      preset: 'more-new',
+      shares: SESSION_MIX_PRESETS['more-new'],
+    });
+    expect(
+      sanitizeSessionMix({ preset: 'custom', shares: { new: 60, review: 60, phrases: 'x' } })
+    ).toEqual({ preset: 'custom', shares: { new: 50, review: 50, phrases: 0 } });
+    const custom = { preset: 'custom', shares: { new: 20, review: 70, phrases: 10 } };
+    expect(sanitizeSessionMix(custom)).toEqual(custom);
   });
 });

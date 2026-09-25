@@ -31,4 +31,18 @@ describe('loadSettings / updateSettings', () => {
     expect(settings.uiLanguage).toBe('ru');
     expect(settings.theme).toBe('dark');
   });
+
+  it('fills in sessionMix for settings stored before it existed', async () => {
+    const { sessionMix: _omit, ...legacy } = { ...DEFAULT_SETTINGS, uiLanguage: 'ru' as const };
+    await db.settings.put({ key: 'settings', value: legacy });
+    const settings = await loadSettings();
+    expect(settings.uiLanguage).toBe('ru');
+    expect(settings.sessionMix).toEqual(DEFAULT_SETTINGS.sessionMix);
+  });
+
+  it('keeps a custom sessionMix', async () => {
+    const sessionMix = { preset: 'custom' as const, shares: { new: 10, review: 80, phrases: 10 } };
+    await updateSettings({ sessionMix });
+    expect((await loadSettings()).sessionMix).toEqual(sessionMix);
+  });
 });

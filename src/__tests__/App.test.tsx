@@ -73,4 +73,31 @@ describe('App', () => {
 
     expect(screen.queryByText(/back up your progress/i)).not.toBeInTheDocument();
   });
+
+  it('switches the session mix and keeps the custom sliders at 100', async () => {
+    window.location.hash = '#/settings';
+    render(<App />);
+    expect(await screen.findByText('Session mix')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /^balanced/i })).toHaveAttribute('aria-pressed', 'true');
+
+    fireEvent.click(screen.getByRole('button', { name: /^more review/i }));
+    await waitFor(async () => {
+      const row = (await db.settings.get('settings')) as SettingsRow | undefined;
+      expect((row?.value as { sessionMix?: unknown })?.sessionMix).toEqual({
+        preset: 'more-review',
+        shares: { new: 30, review: 55, phrases: 15 },
+      });
+    });
+
+    fireEvent.click(screen.getByRole('button', { name: /set your own split/i }));
+    const slider = await screen.findByRole('slider', { name: /new topic/i });
+    fireEvent.change(slider, { target: { value: '0' } });
+    await waitFor(async () => {
+      const row = (await db.settings.get('settings')) as SettingsRow | undefined;
+      expect((row?.value as { sessionMix?: unknown })?.sessionMix).toEqual({
+        preset: 'custom',
+        shares: { new: 0, review: 79, phrases: 21 },
+      });
+    });
+  });
 });

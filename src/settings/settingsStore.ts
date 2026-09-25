@@ -1,12 +1,15 @@
 import { createContext, useContext } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../db/db';
-import { DEFAULT_SETTINGS, type Settings } from './settings';
+import { DEFAULT_SETTINGS, sanitizeSessionMix, type Settings } from './settings';
 
 const SETTINGS_ROW_KEY = 'settings';
 
 function mergeWithDefaults(value: unknown): Settings {
-  return { ...DEFAULT_SETTINGS, ...(value as Partial<Settings>) };
+  const merged: Settings = { ...DEFAULT_SETTINGS, ...(value as Partial<Settings>) };
+  // Nested and added in Stage 5: fill it in (or repair it) instead of trusting the blob.
+  merged.sessionMix = sanitizeSessionMix(merged.sessionMix);
+  return merged;
 }
 
 export async function loadSettings(): Promise<Settings> {

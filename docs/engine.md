@@ -29,6 +29,32 @@ Block composition per session length (each row sums to the length):
 | 30     | 15                                     | 10     | 5       |
 | open   | cycles of 6: 3 new, 2 review, 1 phrase |
 
+This is the **balanced** session mix, the default. `settings.sessionMix` (`{ preset,
+shares: { new, review, phrases } }`, integer percentages summing to 100) picks another
+split in `blockCountsFor(length, mix)`:
+
+| preset        | new                         | review | phrases |
+| ------------- | --------------------------- | ------ | ------- |
+| `balanced`    | 50                          | 33     | 17      |
+| `more-new`    | 70                          | 20     | 10      |
+| `more-review` | 30                          | 55     | 15      |
+| `custom`      | the learner's three sliders |
+
+- `balanced` always uses the table above verbatim (its 50/33/17 shares only describe it
+  and seed the custom sliders), so the default plans exactly as before.
+- Every other mix splits `length × share / 100` with **largest-remainder rounding**
+  (`splitByShares`): floor each block, then hand the leftover items to the largest
+  fractional parts, ties to the earlier block (new → review → phrases). Counts always
+  sum to the length; a block with share 0 gets 0 items. An open session applies the same
+  split to each cycle of 6. Examples: `more-new` at 10 → 7/2/1, `more-review` at 5 →
+  1/3/1, `more-new` open cycle → 4/1/1.
+- The fallbacks below are unchanged: an empty due list still fills review from a
+  completed or the current topic, a finished course still turns new into review, and a
+  short block still tops up from the topics already in use.
+- Stored settings without `sessionMix` (anything saved before Stage 5, or an older
+  backup) load as the default; a named preset always uses its own shares, and a `custom`
+  split is re-normalized to 100 on load.
+
 - Items are ordered **new → review → phrases**. `planNextCycle` appends one more cycle to
   an open-ended plan and never repeats an exercise already in it.
 - **Current topic** = the first topic in program order (module order → topic order) whose

@@ -82,11 +82,12 @@ export function useSessionRunner(
             progress: progressRef.current,
             sessionLength: settings.sessionLength,
             inputShares: settings.inputShares,
+            sessionMix: settings.sessionMix,
             now,
             rng: rngRef.current,
           }
         : null,
-    [program, settings.sessionLength, settings.inputShares]
+    [program, settings.sessionLength, settings.inputShares, settings.sessionMix]
   );
 
   // Plan a new session, or pick up the persisted one. `bootstrappedRef` keeps this to

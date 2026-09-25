@@ -193,6 +193,34 @@ describe('export -> import round trip', () => {
     expect(restored?.program.title).toBe('English B2');
   });
 
+  it('keeps the session mix setting through a round trip', async () => {
+    const sessionMix = { preset: 'custom' as const, shares: { new: 20, review: 70, phrases: 10 } };
+    await updateSettings({ sessionMix });
+    const backup = await buildBackup();
+
+    await clearAllTables();
+    const file = new File([JSON.stringify(backup)], 'backup.json', { type: 'application/json' });
+    await importBackup(file);
+    expect((await loadSettings()).sessionMix).toEqual(sessionMix);
+  });
+
+  it('gives a backup made before the session mix existed the default mix', async () => {
+    await seedFixtureData('key');
+    const backup = await buildBackup();
+    const row = backup.data.settings.find((entry) => entry.key === 'settings');
+    delete (row?.value as Record<string, unknown>).sessionMix;
+
+    await clearAllTables();
+    const file = new File([JSON.stringify(backup)], 'backup.json', { type: 'application/json' });
+    await importBackup(file);
+    const settings = await loadSettings();
+    expect(settings.sessionMix).toEqual({
+      preset: 'balanced',
+      shares: { new: 50, review: 33, phrases: 17 },
+    });
+    expect(settings.uiLanguage).toBe('ru');
+  });
+
   it('accepts an older backup that has no programs table', async () => {
     await seedFixtureData('key');
     const backup = await buildBackup();

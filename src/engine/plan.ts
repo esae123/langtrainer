@@ -1,7 +1,14 @@
 // Session planning (docs/stage-3-spec.md §2). Pure: no React, no Dexie; `now` and
 // `rng` are always passed in.
 import type { Exercise, InputMode, Program, Topic } from '../content/types';
-import type { InputShares, SessionLength } from '../settings/settings';
+import {
+  DEFAULT_SESSION_MIX,
+  normalizeMixShares,
+  type InputShares,
+  type SessionLength,
+  type SessionMix,
+  type SessionMixShares,
+} from '../settings/settings';
 import { pickWeighted, shuffle, type Rng } from './rng';
 import type { TopicProgress } from './types';
 
@@ -45,6 +52,8 @@ export interface PlanInput {
   progress: TopicProgress[];
   sessionLength: SessionLength;
   inputShares: InputShares;
+  /** New / review / phrases split; defaults to `balanced` (the fixed table). */
+  sessionMix?: SessionMix;
   now: number;
   rng: Rng;
   /** Optional explicit session id (otherwise derived from `now` and `rng`). */
@@ -63,9 +72,47 @@ export const BLOCK_COMPOSITION: Record<number, BlockCounts> = {
 /** An open session is planned in repeating cycles of six. */
 export const OPEN_CYCLE: BlockCounts = { new: 3, review: 2, phrases: 1 };
 
-export function blockCountsFor(length: SessionLength): BlockCounts {
-  if (length === 'open') return { ...OPEN_CYCLE };
-  return { ...(BLOCK_COMPOSITION[length] ?? BLOCK_COMPOSITION[10]) };
+/** Items in one open-session cycle. */
+export const OPEN_CYCLE_LENGTH = 6;
+
+const BLOCK_ORDER: readonly BlockKind[] = ['new', 'review', 'phrases'];
+
+/**
+ * Splits `total` items by percentage shares with largest-remainder rounding, so the
+ * counts always sum to `total`. Ties go to the earlier block (new → review → phrases);
+ * a zero share never receives an item.
+ */
+export function splitByShares(total: number, shares: SessionMixShares): BlockCounts {
+  const normalized = normalizeMixShares(shares);
+  const exact = BLOCK_ORDER.map((block) => (total * normalized[block]) / 100);
+  const counts = exact.map(Math.floor);
+  let remaining = total - counts.reduce((sum, n) => sum + n, 0);
+  const byRemainder = BLOCK_ORDER.map((_, i) => i)
+    .filter((i) => normalized[BLOCK_ORDER[i]] > 0)
+    .sort((a, b) => exact[b] - counts[b] - (exact[a] - counts[a]) || a - b);
+  for (const i of byRemainder) {
+    if (remaining <= 0) break;
+    counts[i] += 1;
+    remaining -= 1;
+  }
+  return { new: counts[0], review: counts[1], phrases: counts[2] };
+}
+
+/**
+ * Block sizes for a session (or, for `open`, for one cycle of six). `balanced` keeps the
+ * hand-tuned BLOCK_COMPOSITION / OPEN_CYCLE tables exactly; every other preset (and
+ * `custom`) splits the length by its shares.
+ */
+export function blockCountsFor(
+  length: SessionLength,
+  mix: SessionMix = DEFAULT_SESSION_MIX
+): BlockCounts {
+  if (mix.preset === 'balanced') {
+    if (length === 'open') return { ...OPEN_CYCLE };
+    return { ...(BLOCK_COMPOSITION[length] ?? BLOCK_COMPOSITION[10]) };
+  }
+  const total = length === 'open' ? OPEN_CYCLE_LENGTH : BLOCK_COMPOSITION[length] ? length : 10;
+  return splitByShares(total, mix.shares);
 }
 
 const COMPLETED_STATUSES = new Set(['review', 'mastered', 'maintenance']);
@@ -309,7 +356,7 @@ function buildItems(
 
 export function planSession(input: PlanInput): SessionPlan {
   const open = input.sessionLength === 'open';
-  const counts = blockCountsFor(input.sessionLength);
+  const counts = blockCountsFor(input.sessionLength, input.sessionMix);
   const { items } = buildItems(input, counts, new Set(), new Set());
   return {
     id: input.id ?? `s${input.now.toString(36)}-${Math.floor(input.rng() * 0xffffff).toString(36)}`,
@@ -343,12 +390,15 @@ export function planPractice(
   };
 }
 
-/** Appends one more cycle of six to an open-ended plan, never repeating an exercise. */
+/**
+ * Appends one more cycle of six (split by the session mix) to an open-ended plan, never
+ * repeating an exercise.
+ */
 export function planNextCycle(plan: SessionPlan, input: PlanInput): SessionPlan {
   const used = new Set(plan.items.map((item) => item.exercise.id));
   const contextShown = new Set(
     plan.items.filter((item) => item.showContextBefore).map((item) => item.topicId)
   );
-  const { items } = buildItems(input, { ...OPEN_CYCLE }, used, contextShown);
+  const { items } = buildItems(input, blockCountsFor('open', input.sessionMix), used, contextShown);
   return { ...plan, items: [...plan.items, ...items] };
 }

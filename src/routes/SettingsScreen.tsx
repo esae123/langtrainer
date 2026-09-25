@@ -7,6 +7,7 @@ import {
   Languages,
   Library,
   Palette,
+  SlidersHorizontal,
   Sparkles,
   Timer,
   Trash2,
@@ -28,10 +29,14 @@ import { useT, type TranslationKey } from '../i18n';
 import {
   INPUT_PRESETS,
   SESSION_LENGTH_OPTIONS,
+  SESSION_MIX_PRESETS,
   normalizeInputShares,
+  normalizeMixShares,
   type InputPreset,
   type InputShares,
   type SessionLength,
+  type SessionMixPreset,
+  type SessionMixShares,
   type Theme,
   type UiLanguage,
 } from '../settings/settings';
@@ -54,6 +59,25 @@ const SHARE_FIELDS: { key: keyof InputShares; labelKey: TranslationKey }[] = [
   { key: 'tiles', labelKey: 'settings.inputShares.tiles' },
   { key: 'letters', labelKey: 'settings.inputShares.letters' },
   { key: 'typing', labelKey: 'settings.inputShares.typing' },
+];
+
+const MIX_PRESET_ORDER: SessionMixPreset[] = ['balanced', 'more-new', 'more-review', 'custom'];
+const MIX_LABEL_KEY: Record<SessionMixPreset, TranslationKey> = {
+  balanced: 'settings.mixPreset.balanced',
+  'more-new': 'settings.mixPreset.moreNew',
+  'more-review': 'settings.mixPreset.moreReview',
+  custom: 'settings.mixPreset.custom',
+};
+const MIX_DESC_KEY: Record<SessionMixPreset, TranslationKey> = {
+  balanced: 'settings.mixPreset.balancedDesc',
+  'more-new': 'settings.mixPreset.moreNewDesc',
+  'more-review': 'settings.mixPreset.moreReviewDesc',
+  custom: 'settings.mixPreset.customDesc',
+};
+const MIX_FIELDS: { key: keyof SessionMixShares; labelKey: TranslationKey }[] = [
+  { key: 'new', labelKey: 'settings.mixShares.new' },
+  { key: 'review', labelKey: 'settings.mixShares.review' },
+  { key: 'phrases', labelKey: 'settings.mixShares.phrases' },
 ];
 
 export function SettingsScreen() {
@@ -112,6 +136,17 @@ export function SettingsScreen() {
   function handleShareChange(field: keyof InputShares, value: number) {
     const next = normalizeInputShares({ ...settings.inputShares, [field]: value });
     void updateSettings({ inputShares: next });
+  }
+
+  function handleMixPresetChange(preset: SessionMixPreset) {
+    // Custom starts from whatever split is showing, so the sliders don't jump.
+    const shares = preset === 'custom' ? settings.sessionMix.shares : SESSION_MIX_PRESETS[preset];
+    void updateSettings({ sessionMix: { preset, shares } });
+  }
+
+  function handleMixShareChange(field: keyof SessionMixShares, value: number) {
+    const shares = normalizeMixShares({ ...settings.sessionMix.shares, [field]: value });
+    void updateSettings({ sessionMix: { preset: 'custom', shares } });
   }
 
   function handleFileChosen(event: ChangeEvent<HTMLInputElement>) {
@@ -214,6 +249,59 @@ export function SettingsScreen() {
               </button>
             ))}
           </div>
+        </div>
+      </SettingsGroup>
+
+      <SettingsGroup
+        title={t('settings.sessionMix')}
+        icon={<SlidersHorizontal size={14} strokeWidth={2} aria-hidden />}
+      >
+        <div className="flex flex-col gap-2 px-4 py-3">
+          <div className="flex flex-col gap-2">
+            {MIX_PRESET_ORDER.map((preset) => (
+              <button
+                key={preset}
+                type="button"
+                onClick={() => handleMixPresetChange(preset)}
+                aria-pressed={settings.sessionMix.preset === preset}
+                className={`min-h-11 rounded-xl border px-3 py-2 text-left ${
+                  settings.sessionMix.preset === preset
+                    ? 'border-accent bg-accent-soft'
+                    : 'border-line'
+                }`}
+              >
+                <span className="block break-words text-sm font-semibold text-text">
+                  {t(MIX_LABEL_KEY[preset])}
+                </span>
+                <span className="block break-words text-xs text-muted">
+                  {t(MIX_DESC_KEY[preset])}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {settings.sessionMix.preset === 'custom' && (
+            <div className="mt-2 flex flex-col gap-4">
+              {MIX_FIELDS.map(({ key, labelKey }) => (
+                <label key={key} className="flex flex-col gap-1">
+                  <span className="flex justify-between gap-3 text-xs font-medium text-muted">
+                    <span className="break-words">{t(labelKey)}</span>
+                    <span className="shrink-0 tabular-nums">
+                      {settings.sessionMix.shares[key]}%
+                    </span>
+                  </span>
+                  <input
+                    type="range"
+                    min={0}
+                    max={100}
+                    value={settings.sessionMix.shares[key]}
+                    onChange={(e) => handleMixShareChange(key, Number(e.target.value))}
+                    className="h-11 accent-accent"
+                  />
+                </label>
+              ))}
+            </div>
+          )}
         </div>
       </SettingsGroup>
 
