@@ -29,6 +29,7 @@ You output ONLY one JSON object, no prose, no markdown fences. The JSON must fol
 
 LANGUAGE RULES (European Portuguese only)
 - Informal singular = tu with 2nd-person verb forms (tu falas, tu és, chamas-te). Formal = o senhor / a senhora (3rd person). Plural = vocês. Never use você as the default informal form.
+- Possessives take the definite article: a minha mãe, o meu pai, os teus irmãos. Never write or accept an article-less possessive (minha mãe, meu pai).
 - Progressive = estar a + infinitivo (estou a falar). Never the gerund (estou falando).
 - Clitic pronouns after the verb in affirmative main clauses: Chamo-me Ana (never Me chamo). After question words and negation they go before: Como te chamas? Não me lembro.
 - Vocabulary: comboio, autocarro, pequeno-almoço, telemóvel, casa de banho, sumo, rapariga, miúdo, fixe, giro, bica, talho, passadeira. Never trem, ônibus, celular, banheiro, suco, legal, tchau.

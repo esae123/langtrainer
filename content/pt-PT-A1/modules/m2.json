@@ -18,7 +18,7 @@
       "kind": "vocabulary",
       "count": 40,
       "brief": "Classroom objects (livro, caderno, lápis, borracha, quadro, mesa, cadeira, mochila) and phrases used in class (Posso…?, Não percebo, Pode repetir?, Como se diz … em português?); singular/plural of nouns; polite classroom requests.",
-      "known": "Module 1 grammar; m2-family-pets possessives.",
+      "known": "Module 1 grammar; m2-family-pets possessives. Fixed polite chunks (usable as whole phrases, no poder conjugation): Posso…?, Pode repetir?",
       "avoid": "past tenses, subjunctive, object pronouns, comparatives."
     },
     {

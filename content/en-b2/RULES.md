@@ -16,9 +16,15 @@ grammar system.
   - `word` = that bolded chunk exactly as it appears in `sentence` (the paraphrase, not the
     target word).
   - `answer` = the target word or phrase the paraphrase describes, e.g. `"dodged"`.
-  - `options` = 4 near-synonyms of `answer` (plausible near misses: same register/part of
-    speech, e.g. `dodged / avoided / evaded / sidestepped` — pick the one that actually fits the
-    sentence's collocation).
+  - `options` = 4 items: `answer` plus **exactly three near-misses that do NOT fit this
+    sentence**. Exactly one option may be correct. The near-misses have the same part of speech
+    and look plausible, but each fails for a stated reason: wrong collocation (`*make* a
+    decision` vs `*do* a decision`), wrong register (a slangy word in a formal sentence), or a
+    slightly different meaning. Never offer several valid synonyms (e.g. `dodged / avoided /
+    evaded / sidestepped` would all fit "avoided giving a direct answer" — that exercise has no
+    single answer). Test it: put each option into the sentence; only `answer` may produce a
+    natural, correct B2 sentence. The `explanation` says why the chosen option fits and why
+    at least one near-miss does not.
   - `direction: 'toSupport'` is unused in this course (no support-language translation needed);
     do not generate it.
 - `match_pairs.support` = a short definition or synonym of `match_pairs.target` (not a
