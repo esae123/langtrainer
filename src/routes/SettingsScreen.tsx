@@ -22,6 +22,7 @@ import { ConfirmDialog } from '../components/ConfirmDialog';
 import { SettingsGroup } from '../components/SettingsGroup';
 import { Toggle } from '../components/Toggle';
 import { ImportCourseButton } from '../courses/ImportCourseButton';
+import { ImportHelpButton } from '../courses/ImportHelp';
 import { formatDate } from '../lib/formatDate';
 import { useToast } from '../components/toastStore';
 import { resetAllData } from '../db/reset';
@@ -477,10 +478,13 @@ export function SettingsScreen() {
             <span className="text-sm font-medium text-text">{t('courses.title')}</span>
             <span className="text-xs text-muted">{t('settings.coursesHint')}</span>
           </span>
-          <ImportCourseButton className="flex min-h-11 items-center gap-2 rounded-lg border border-line px-4 text-sm font-semibold text-text">
-            <Upload size={18} strokeWidth={2} aria-hidden />
-            {t('courses.import')}
-          </ImportCourseButton>
+          <span className="flex shrink-0 items-center gap-1">
+            <ImportCourseButton className="flex min-h-11 items-center gap-2 rounded-lg border border-line px-4 text-sm font-semibold text-text">
+              <Upload size={18} strokeWidth={2} aria-hidden />
+              {t('courses.import')}
+            </ImportCourseButton>
+            <ImportHelpButton />
+          </span>
         </div>
       </SettingsGroup>
 

@@ -6,6 +6,7 @@ import { useT } from '../i18n';
 import { useSettings } from '../settings/settingsStore';
 import { CourseCountsLine, CourseProgressLine, CourseSourceBadge } from './CourseMeta';
 import { ImportCourseButton } from './ImportCourseButton';
+import { ImportHelpButton } from './ImportHelp';
 
 /**
  * The course switcher (docs/stage-4a-spec.md §2): every installed course with its level,
@@ -60,14 +61,15 @@ export function CoursesSheet({ open, onClose }: { open: boolean; onClose: () => 
         })}
       </ul>
 
-      <div className="mt-3 border-t border-line pt-3">
+      <div className="mt-3 flex items-center gap-1 border-t border-line pt-3">
         <ImportCourseButton
           onImported={onClose}
-          className="flex min-h-11 w-full items-center gap-2 rounded-xl px-3 text-left text-sm font-semibold text-accent"
+          className="flex min-h-11 flex-1 items-center gap-2 rounded-xl px-3 text-left text-sm font-semibold text-accent"
         >
           <Upload size={18} strokeWidth={2} aria-hidden />
           {t('courses.importFromFile')}
         </ImportCourseButton>
+        <ImportHelpButton />
       </div>
 
       <button

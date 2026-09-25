@@ -289,5 +289,12 @@
   "library.type.order_dialogue": "Восстанови диалог",
   "library.type.translate_word": "Переведи слово",
   "update.available": "Доступна новая версия",
-  "update.update": "Обновить"
+  "update.update": "Обновить",
+  "courses.help.open": "What is a course file?",
+  "courses.help.title": "Importing a course",
+  "courses.help.what": "Pick a .json file with a new course: modules, topics and exercises. It is checked first; nothing is saved if it has problems.",
+  "courses.help.ids": "Topic ids must be unique across all your courses. Exercise ids are <topicId>-01, -02 …",
+  "courses.help.replace": "Importing a file with the same course id replaces the course and keeps your progress.",
+  "courses.help.more": "All exercise types and fields: docs/content-authoring.md.",
+  "courses.help.example": "Minimal example"
 }
