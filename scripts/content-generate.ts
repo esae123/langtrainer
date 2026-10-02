@@ -32,7 +32,7 @@ const PROMPT_PARTS_DIR = path.join(SCRIPT_DIR, 'prompt-parts');
  * https://ai.google.dev/gemini-api/docs/models (or the model list in AI Studio) and pass
  * --model / set GEMINI_MODEL, or update this constant.
  */
-export const DEFAULT_MODEL = 'gemini-2.5-flash';
+export const DEFAULT_MODEL = 'gemini-3.8-flash';
 
 export const CHUNK_SIZE = 20;
 export const MAX_REPAIR_ROUNDS = 2;
@@ -1011,6 +1011,8 @@ export async function runJob(job: Job, cli: Cli, apiKey: string, programMetaFor:
 // ---------- CLI entry point ----------
 
 async function main(): Promise<void> {
+  // .env must be loaded before parsing: parseArgs falls back to process.env.GEMINI_MODEL.
+  loadEnvFile();
   const cli = parseArgs(process.argv.slice(2));
 
   if (!cli.module && !cli.topic && !cli.phrases) {
@@ -1022,7 +1024,7 @@ async function main(): Promise<void> {
     return;
   }
 
-  loadEnvFile();
+  console.log(`Model: ${cli.model}`);
   const apiKey = process.env.GEMINI_API_KEY;
   if (!cli.dryRun && !apiKey) {
     console.error(

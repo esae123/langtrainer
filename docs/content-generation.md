@@ -13,7 +13,7 @@ authoring contract).
 3. `.env` is gitignored (`.gitignore` already excludes `.env` and `.env.*`, keeping only
    `.env.example`) — **never commit it**. `scripts/content-generate.ts` loads it automatically
    with Node's built-in `process.loadEnvFile()` (no dependency added).
-4. **Choose the model.** The default is `gemini-2.5-flash` (`DEFAULT_MODEL` at the top of
+4. **Choose the model.** The default is `gemini-3.8-flash` (`DEFAULT_MODEL` at the top of
    `scripts/content-generate.ts`). Override it with `GEMINI_MODEL=<name>` in `.env` or with
    `--model <name>` on the command line (the flag wins). **Model names change and old ones are
    retired** — if a run fails with a 404 or "model not found", look up a current model name in
