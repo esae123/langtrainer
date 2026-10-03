@@ -571,7 +571,7 @@
       "givenAnswer": "Estou um pouco cansada, mas tudo bem.",
       "answer": ["Como", "estás,", "Rita?"],
       "distractors": ["está,", "estão,", "estou,"],
-      "acceptedAnswers": ["Como é que estás, Rita?"]
+      "acceptedAnswers": ["Como é que estás, Rita?", "Como é que tu estás, Rita?"]
     },
     {
       "id": "m1-greetings-39",

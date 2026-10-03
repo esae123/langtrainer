@@ -170,7 +170,8 @@
       "tags": ["question-words", "onde", "e-que"],
       "givenAnswer": "Moro no Porto.",
       "answer": ["Onde", "é", "que", "moras?"],
-      "distractors": ["Como", "Quem", "mora?"]
+      "distractors": ["Como", "Quem", "mora?"],
+      "acceptedAnswers": ["Onde é que tu moras?"]
     },
     {
       "id": "m1-question-words-10",
@@ -330,7 +331,8 @@
       "explanation": "Irmãos is masculine plural, so quantos. Portuguese has no extra word for \"do\": Quantos irmãos tens?",
       "tags": ["question-words", "quantos", "agreement"],
       "answer": ["Quantos", "irmãos", "tens?"],
-      "distractors": ["Quantas", "Quanto", "tem?"]
+      "distractors": ["Quantas", "Quanto", "tem?"],
+      "acceptedAnswers": ["Quantos irmãos é que tens?"]
     },
     {
       "id": "m1-question-words-22",
@@ -412,7 +414,8 @@
       "explanation": "O que asks about an action or a thing. Portuguese uses the simple present here: O que fazes aqui?",
       "tags": ["question-words", "o-que"],
       "answer": ["O", "que", "fazes", "aqui?"],
-      "distractors": ["Qual", "Quem", "fazer"]
+      "distractors": ["Qual", "Quem", "fazer"],
+      "acceptedAnswers": ["O que é que fazes aqui?"]
     },
     {
       "id": "m1-question-words-28",
@@ -518,7 +521,8 @@
       "tags": ["question-words", "porque", "e-que"],
       "givenAnswer": "Estudo porque quero trabalhar em Lisboa.",
       "answer": ["Porque", "é", "que", "estudas?"],
-      "distractors": ["Porquê", "Como", "estudar"]
+      "distractors": ["Porquê", "Como", "estudar"],
+      "acceptedAnswers": ["Porque é que tu estudas?"]
     },
     {
       "id": "m1-question-words-36",
@@ -530,7 +534,8 @@
       "explanation": "Order: porque + é que + não + verb. The negative não stays right before the verb.",
       "tags": ["question-words", "porque", "e-que", "word-order"],
       "answer": ["Porque", "é", "que", "não", "vens?"],
-      "distractors": ["Porquê", "Como", "venho?"]
+      "distractors": ["Porquê", "Como", "venho?"],
+      "acceptedAnswers": ["Porque é que tu não vens?"]
     },
     {
       "id": "m1-question-words-37",
@@ -582,7 +587,8 @@
       "explanation": "És for tu, and portuguesa because you are speaking to a woman. The answer is Sim, sou. or Não, não sou.",
       "tags": ["question-words", "yes-no", "agreement"],
       "answer": ["És", "portuguesa?"],
-      "distractors": ["Sou", "português?"]
+      "distractors": ["Sou", "português?"],
+      "acceptedAnswers": ["Tu és portuguesa?"]
     }
   ]
 }

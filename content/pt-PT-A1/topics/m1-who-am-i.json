@@ -153,7 +153,8 @@
       "explanation": "«Ser» + nationality agrees with the speaker, so a woman says «portuguesa»; the city takes «de».",
       "tags": ["ser", "nationalities", "agreement"],
       "answer": ["Sou", "portuguesa,", "de", "Coimbra."],
-      "distractors": ["português,", "estou"]
+      "distractors": ["português,", "estou"],
+      "acceptedAnswers": ["Eu sou portuguesa, de Coimbra."]
     },
     {
       "id": "m1-who-am-i-08",
@@ -287,7 +288,8 @@
       "tags": ["origin", "questions", "é que"],
       "givenAnswer": "Sou de Faro.",
       "answer": ["De", "onde", "é", "que", "és?"],
-      "distractors": ["sou", "estás", "aonde"]
+      "distractors": ["sou", "estás", "aonde"],
+      "acceptedAnswers": ["De onde é que tu és?"]
     },
     {
       "id": "m1-who-am-i-18",
@@ -487,7 +489,8 @@
       "explanation": "«Não» goes before the verb, and both adjectives agree with the male speaker.",
       "tags": ["ser", "negation", "nationalities"],
       "answer": ["Não", "sou", "espanhol,", "sou", "português."],
-      "distractors": ["espanhola,", "portuguesa.", "é"]
+      "distractors": ["espanhola,", "portuguesa.", "é"],
+      "acceptedAnswers": ["Eu não sou espanhol, sou português."]
     },
     {
       "id": "m1-who-am-i-33",
@@ -584,7 +587,8 @@
       "explanation": "«Um pouco de + language» means 'a little …'; here «de» is needed, unlike in «falo português».",
       "tags": ["falar", "languages"],
       "answer": ["Falo", "um", "pouco", "de", "português."],
-      "distractors": ["falas", "pouca", "o"]
+      "distractors": ["falas", "pouca", "o"],
+      "acceptedAnswers": ["Eu falo um pouco de português."]
     },
     {
       "id": "m1-who-am-i-40",

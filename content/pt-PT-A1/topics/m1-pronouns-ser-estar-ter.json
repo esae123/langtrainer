@@ -257,6 +257,7 @@
       "prompt": "Build: 'We are very tired today.'",
       "answer": ["Nós", "estamos", "muito", "cansados", "hoje."],
       "distractors": ["somos", "estão", "está"],
+      "acceptedAnswers": ["Estamos muito cansados hoje."],
       "explanation": "Tiredness is a passing state, so estar: nós estamos. 'Somos cansados' would describe a permanent quality.",
       "tags": ["estar", "states"]
     },
@@ -282,6 +283,7 @@
       "prompt": "Build: 'I am from Faro, but I am in Lisbon.'",
       "answer": ["Eu", "sou", "de", "Faro,", "mas", "estou", "em", "Lisboa."],
       "distractors": ["está", "és", "tenho"],
+      "acceptedAnswers": ["Sou de Faro, mas estou em Lisboa."],
       "explanation": "The same English 'am' needs two verbs here: ser for where you are from, estar for where you are now.",
       "tags": ["ser", "estar", "contrast"]
     },

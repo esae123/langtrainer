@@ -105,7 +105,8 @@
       "explanation": "Braga has no article, so em stays alone: moro em Braga. No and na already contain the article o/a, so they do not fit here.",
       "tags": ["em", "cities"],
       "answer": ["Moro", "em", "Braga."],
-      "distractors": ["no", "na"]
+      "distractors": ["no", "na"],
+      "acceptedAnswers": ["Eu moro em Braga."]
     },
     {
       "id": "m1-articles-de-em-05",
@@ -176,7 +177,8 @@
       "explanation": "Livro is masculine, so \"a book\" is um livro. Uma only goes with feminine nouns.",
       "tags": ["articles", "gender"],
       "answer": ["Tenho", "um", "livro."],
-      "distractors": ["uma", "o", "umas"]
+      "distractors": ["uma", "o", "umas"],
+      "acceptedAnswers": ["Eu tenho um livro."]
     },
     {
       "id": "m1-articles-de-em-10",
@@ -283,7 +285,8 @@
       "explanation": "Gostar always takes de, and the city is o Porto, so de + o = do: gosto muito do Porto.",
       "tags": ["de", "contractions", "gostar"],
       "answer": ["Gosto", "muito", "do", "Porto."],
-      "distractors": ["da", "no", "de"]
+      "distractors": ["da", "no", "de"],
+      "acceptedAnswers": ["Eu gosto muito do Porto."]
     },
     {
       "id": "m1-articles-de-em-18",
@@ -296,7 +299,8 @@
       "tags": ["questions", "em"],
       "givenAnswer": "Moro na Rua Augusta.",
       "answer": ["Onde", "é", "que", "moras?"],
-      "distractors": ["De", "Como", "moro"]
+      "distractors": ["De", "Como", "moro"],
+      "acceptedAnswers": ["Onde é que tu moras?"]
     },
     {
       "id": "m1-articles-de-em-19",
@@ -376,7 +380,8 @@
       "tags": ["questions", "em"],
       "givenAnswer": "Trabalho no hospital de Braga.",
       "answer": ["Onde", "é", "que", "trabalhas?"],
-      "distractors": ["De", "Qual", "trabalho"]
+      "distractors": ["De", "Qual", "trabalho"],
+      "acceptedAnswers": ["Onde é que tu trabalhas?"]
     },
     {
       "id": "m1-articles-de-em-25",
@@ -575,7 +580,8 @@
       "tags": ["questions", "de", "gostar"],
       "givenAnswer": "Gosto dos museus de Lisboa.",
       "answer": ["De", "que", "é", "que", "gostas?"],
-      "distractors": ["Do", "gosto", "Como"]
+      "distractors": ["Do", "gosto", "Como"],
+      "acceptedAnswers": ["De que é que tu gostas?"]
     },
     {
       "id": "m1-articles-de-em-40",

@@ -50,6 +50,7 @@ PEDAGOGY
 - A distractor must never equal an answer token once you ignore case, trailing . ! ? and guillemets («») — e.g. answer ["Tens","um","gato?"] must not use "tens" or "Tens?" as a distractor.
 - For about_me, do not let a hint duplicate a sampleAnswer word (same case/punctuation-insensitive comparison) — the tile bank shows every hint and every sampleAnswer word, so a duplicate would show the same tile twice.
 - No two exercises in a topic with the same target sentence.
+- European Portuguese often drops the subject pronoun. For build_phrase and question_for_answer, put the variant with/without eu/tu/nós in acceptedAnswers (questions only in European word order, with é que). Never accept Brazilian word order.
 
 SCHEMA (TypeScript)
 Topic = { id: string; moduleId: string; title: string; kind: 'grammar'|'vocabulary'|'situation'; context: string;
@@ -102,6 +103,7 @@ Return only the JSON.
 ```
 
 Tips:
+
 - For big topics, ask for 20 exercises twice (ids 01–20, then 21–40 "continue from id 21, do not repeat sentences") and merge the arrays.
 - If the model drifts into Brazilian forms, reply: "Rewrite in European Portuguese: tu forms, estar a + infinitive, clitics after the verb, catorze/dezasseis." and re-run the check.
 - Phrase sets use the `PhraseSet` shape instead: `{ id, title, phrases: [{ target, support, register?, situation? }], exercises }` with 50 phrases and 40 exercises (order_dialogue, match_pairs, build_phrase, fill_gaps, translate_word).

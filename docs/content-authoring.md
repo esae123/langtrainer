@@ -37,22 +37,23 @@ their own `RULES.md` alongside their `program.json`.
 - Vary subjects and names: use Portuguese names (Ana, João, Rita, Pedro, Sofia, Miguel, Inês, Tiago), cities (Lisboa, Porto, Coimbra, Braga, Faro), and international ones (Madrid, Londres, Moscovo, Berlim).
 - No two exercises in a topic with identical target sentences.
 - Register `formal | informal | neutral` on phrases where it matters.
+- European Portuguese often drops the subject pronoun. For `build_phrase` and `question_for_answer`, put the variant with/without eu/tu/nós in `acceptedAnswers` (questions only in European word order, with é que). Never accept Brazilian word order.
 
 ## 4. Per-type invariants (enforced by validator)
 
 Common: `id` unique across the whole program, pattern `<topicId>-<nn>` (e.g. `m1-greetings-07`); `topicId` equals the containing topic/phrase-set id; `allowedModes` non-empty and type-compatible (below); `prompt`, `explanation` non-empty; `difficulty` 1–3.
 
-| type | allowedModes allowed | invariants |
-|---|---|---|
-| build_phrase | tiles, letters (only if answer ≤ 4 words), typing | `answer` 2–10 words; `distractors` 1–4, none equal to an answer word (case-sensitive); `acceptedAnswers` optional alternatives as full strings |
-| fill_gaps | tiles, letters, typing | count of `___` in `template` == `gaps.length` (1–3); `wordBank` ⊇ all gap answers, has 2–4 extra distractors, no duplicates |
-| question_for_answer | tiles, letters (≤ 4 words), typing | `givenAnswer` non-empty; `answer` 2–8 words ending with `?` as last token or last token containing `?`; `distractors` 1–4 |
-| about_me | tiles, typing | `question` in target language; `sampleAnswer` 2–12 words; `hints` 3–8 words/chunks the learner may need (tile bank = sampleAnswer words + hints) |
-| find_error | tiles, letters | `sentence` 3–10 tokens; `0 ≤ wrongIndex < sentence.length`; `correction` ≠ `sentence[wrongIndex]`; `options` 3–4 items including `correction`, excluding `sentence[wrongIndex]` |
-| number_sequence | tiles, letters, typing | `sequence` 4–6 items with exactly one `null`; `answerWords` 1–2 accepted spellings of the missing number word; `options` 4–6 number words including `answerWords[0]` |
-| match_pairs | tiles | `pairs` 4–6, all `target` unique, all `support` unique |
-| order_dialogue | tiles | `lines` 3–6, speakers alternate A/B, first is A |
-| translate_word | tiles, letters, typing | `direction`; `sentence` contains `word` (the sentence in the *source* language shows `word` in bold via `**word**`); `options` 4 items including `answer` |
+| type                | allowedModes allowed                              | invariants                                                                                                                                                                      |
+| ------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| build_phrase        | tiles, letters (only if answer ≤ 4 words), typing | `answer` 2–10 words; `distractors` 1–4, none equal to an answer word (case-sensitive); `acceptedAnswers` optional alternatives as full strings                                  |
+| fill_gaps           | tiles, letters, typing                            | count of `___` in `template` == `gaps.length` (1–3); `wordBank` ⊇ all gap answers, has 2–4 extra distractors, no duplicates                                                     |
+| question_for_answer | tiles, letters (≤ 4 words), typing                | `givenAnswer` non-empty; `answer` 2–8 words ending with `?` as last token or last token containing `?`; `distractors` 1–4                                                       |
+| about_me            | tiles, typing                                     | `question` in target language; `sampleAnswer` 2–12 words; `hints` 3–8 words/chunks the learner may need (tile bank = sampleAnswer words + hints)                                |
+| find_error          | tiles, letters                                    | `sentence` 3–10 tokens; `0 ≤ wrongIndex < sentence.length`; `correction` ≠ `sentence[wrongIndex]`; `options` 3–4 items including `correction`, excluding `sentence[wrongIndex]` |
+| number_sequence     | tiles, letters, typing                            | `sequence` 4–6 items with exactly one `null`; `answerWords` 1–2 accepted spellings of the missing number word; `options` 4–6 number words including `answerWords[0]`            |
+| match_pairs         | tiles                                             | `pairs` 4–6, all `target` unique, all `support` unique                                                                                                                          |
+| order_dialogue      | tiles                                             | `lines` 3–6, speakers alternate A/B, first is A                                                                                                                                 |
+| translate_word      | tiles, letters, typing                            | `direction`; `sentence` contains `word` (the sentence in the _source_ language shows `word` in bold via `**word**`); `options` 4 items including `answer`                       |
 
 Tokens in `answer`, `sentence`, `lines[].text` keep punctuation attached to the word (`Lisboa.`, `chamas?`). Tiles are shown exactly as tokens.
 
@@ -63,16 +64,16 @@ Phrase set: 50 phrases, 40 exercises (order_dialogue, match_pairs, build_phrase,
 
 ## 6. Module 1 topic plan (from the roadmap)
 
-| topicId | title | kind | core content |
-|---|---|---|---|
-| m1-greetings | Greetings and politeness | situation | Olá, Bom dia/tarde/noite, Tudo bem?, Por favor, Obrigado/a, De nada, Desculpe, Com licença, Até logo/amanhã, Adeus; tu vs você register |
-| m1-who-am-i | Introducing yourself | grammar | chamar-se, ser + nationality (português/portuguesa, russo/russa, inglês/inglesa, espanhol/espanhola…), ser de + city, ter … anos, falar + language; agreement of nationality adjectives |
-| m1-pronouns-ser-estar-ter | Pronouns, ser, estar, ter | grammar | eu/tu/você/ele/ela/nós/vocês/eles/elas; full present of ser, estar, ter; ser vs estar (permanent vs temporary; location with estar) |
-| m1-ar-verbs | Regular -ar verbs | grammar | falar, morar, trabalhar, estudar, gostar de; endings -o/-as/-a/-amos/-am; negation with não |
-| m1-articles-de-em | Articles and de/em contractions | grammar | o/a/os/as, um/uma/uns/umas; gender & number cues; de+o=do, de+a=da, em+o=no, em+a=na, plurals dos/das/nos/nas; "sou do Porto", "moro na Rua…" |
-| m1-professions-languages | Professions and languages | vocabulary | professor/a, jornalista, médico/a, engenheiro/a, estudante, advogado/a, cozinheiro/a, enfermeiro/a, empresário/a, reformado/a; "sou professor" (no article); languages: português, inglês, russo, espanhol, francês, alemão |
-| m1-numbers | Numbers 0–50 and ordinals | vocabulary | zero…cinquenta, um/uma & dois/duas agreement, vinte e um, ordinals primeiro…sexto; age, phone numbers, floor numbers (andar), prices in euros |
-| m1-question-words | Question words and word order | grammar | como, quem, onde, de onde, o que, qual, quanto/a, quantos/as, porquê/porque; plain vs "é que"; answering yes/no questions (Sim, sou. / Não, não sou.) |
+| topicId                   | title                           | kind       | core content                                                                                                                                                                                                                |
+| ------------------------- | ------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| m1-greetings              | Greetings and politeness        | situation  | Olá, Bom dia/tarde/noite, Tudo bem?, Por favor, Obrigado/a, De nada, Desculpe, Com licença, Até logo/amanhã, Adeus; tu vs você register                                                                                     |
+| m1-who-am-i               | Introducing yourself            | grammar    | chamar-se, ser + nationality (português/portuguesa, russo/russa, inglês/inglesa, espanhol/espanhola…), ser de + city, ter … anos, falar + language; agreement of nationality adjectives                                     |
+| m1-pronouns-ser-estar-ter | Pronouns, ser, estar, ter       | grammar    | eu/tu/você/ele/ela/nós/vocês/eles/elas; full present of ser, estar, ter; ser vs estar (permanent vs temporary; location with estar)                                                                                         |
+| m1-ar-verbs               | Regular -ar verbs               | grammar    | falar, morar, trabalhar, estudar, gostar de; endings -o/-as/-a/-amos/-am; negation with não                                                                                                                                 |
+| m1-articles-de-em         | Articles and de/em contractions | grammar    | o/a/os/as, um/uma/uns/umas; gender & number cues; de+o=do, de+a=da, em+o=no, em+a=na, plurals dos/das/nos/nas; "sou do Porto", "moro na Rua…"                                                                               |
+| m1-professions-languages  | Professions and languages       | vocabulary | professor/a, jornalista, médico/a, engenheiro/a, estudante, advogado/a, cozinheiro/a, enfermeiro/a, empresário/a, reformado/a; "sou professor" (no article); languages: português, inglês, russo, espanhol, francês, alemão |
+| m1-numbers                | Numbers 0–50 and ordinals       | vocabulary | zero…cinquenta, um/uma & dois/duas agreement, vinte e um, ordinals primeiro…sexto; age, phone numbers, floor numbers (andar), prices in euros                                                                               |
+| m1-question-words         | Question words and word order   | grammar    | como, quem, onde, de onde, o que, qual, quanto/a, quantos/as, porquê/porque; plain vs "é que"; answering yes/no questions (Sim, sou. / Não, não sou.)                                                                       |
 
 Phrase set `everyday-1` "Everyday phrases 1": reactions and social formulas — Parabéns!, Saúde!, Bom apetite!, Boa viagem!, Boa sorte!, Bem-vindo/a!, Com licença, Desculpe / Desculpa, Não faz mal, Não percebo, Pode repetir?, Fala inglês?, Como se diz … em português?, Está tudo bem, Até já, Fixe!, Está bem, Claro, Pois, Então…, Que pena!, Boas férias!, Feliz aniversário!, Bom fim de semana!, Igualmente!, etc.
 

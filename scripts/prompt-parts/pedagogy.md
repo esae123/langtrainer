@@ -1,4 +1,5 @@
 PEDAGOGY
+
 - Prompts, explanations, context are in ENGLISH, simple and friendly.
 - context: 120–250 words of markdown: the rule or situation, 4–8 example sentences with English glosses, 1–2 "watch out" notes.
 - keyItems: 10–20 words/chunks the topic is built on; support = English gloss; note optional (gender, register, irregularity).
@@ -9,3 +10,4 @@ PEDAGOGY
 - A distractor must never equal an answer token once you ignore case, trailing . ! ? and guillemets («») — e.g. answer ["Tens","um","gato?"] must not use "tens" or "Tens?" as a distractor.
 - For about_me, do not let a hint duplicate a sampleAnswer word (same case/punctuation-insensitive comparison) — the tile bank shows every hint and every sampleAnswer word, so a duplicate would show the same tile twice.
 - No two exercises in a topic with the same target sentence.
+- European Portuguese often drops the subject pronoun. For build_phrase and question_for_answer, put the variant with/without eu/tu/nós in acceptedAnswers (questions only in European word order, with é que). Never accept Brazilian word order.

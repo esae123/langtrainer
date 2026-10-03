@@ -544,7 +544,8 @@
       "explanation": "A yes/no question keeps the word order of a statement; only the intonation rises. «Tens» is the tu form.",
       "givenAnswer": "Sim, tenho uma gata.",
       "answer": ["Tens", "animais", "em", "casa?"],
-      "distractors": ["Tem", "animal", "na"]
+      "distractors": ["Tem", "animal", "na"],
+      "acceptedAnswers": ["Tu tens animais em casa?"]
     },
     {
       "id": "m2-family-pets-30",

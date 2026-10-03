@@ -6,21 +6,40 @@
   "context": "## Regular -ar verbs\n\nMost Portuguese verbs end in **-ar** and they all work the same way. Take off the **-ar** and add the ending for the person: **-o** (eu), **-as** (tu), **-a** (ele / ela / você), **-amos** (nós), **-am** (eles / elas / vocês).\n\nSo **falar** (to speak) gives: falo, falas, fala, falamos, falam. The same endings work for **morar** (to live), **trabalhar** (to work), **estudar** (to study) and **gostar** (to like).\n\n- **Falo português e inglês.** — I speak Portuguese and English.\n- **Tu moras em Lisboa?** — Do you live in Lisbon?\n- **A Rita trabalha num banco.** — Rita works in a bank.\n- **Estudamos português às terças.** — We study Portuguese on Tuesdays.\n- **Eles gostam de café.** — They like coffee.\n- **Não falo alemão.** — I do not speak German.\n\n**Watch out 1:** to say no, put **não** straight before the verb: *Não trabalho hoje.* / *A Ana não gosta de chá.*\n\n**Watch out 2:** **gostar** always takes **de**, and de joins the article: *gosto do Porto*, *gosto da música*.\n\n**Watch out 3:** there is no extra word for \"do\" or \"does\" in questions: *Moras aqui?* means \"Do you live here?\".",
   "keyItems": [
     { "target": "falar", "support": "to speak" },
-    { "target": "morar", "support": "to live (in a place)", "note": "Used with em: moro em Lisboa." },
+    {
+      "target": "morar",
+      "support": "to live (in a place)",
+      "note": "Used with em: moro em Lisboa."
+    },
     { "target": "trabalhar", "support": "to work" },
     { "target": "estudar", "support": "to study" },
     { "target": "gostar de", "support": "to like", "note": "Never without de: gosto de café." },
-    { "target": "-o, -as, -a, -amos, -am", "support": "the -ar endings (eu, tu, ele/ela, nós, eles)" },
+    {
+      "target": "-o, -as, -a, -amos, -am",
+      "support": "the -ar endings (eu, tu, ele/ela, nós, eles)"
+    },
     { "target": "falo, falas, fala, falamos, falam", "support": "I / you / he / we / they speak" },
     { "target": "não", "support": "not", "note": "Goes straight before the verb." },
     { "target": "Falo um pouco de português.", "support": "I speak a little Portuguese." },
-    { "target": "Moras em Lisboa?", "support": "Do you live in Lisbon?", "note": "No extra word for 'do' in Portuguese." },
+    {
+      "target": "Moras em Lisboa?",
+      "support": "Do you live in Lisbon?",
+      "note": "No extra word for 'do' in Portuguese."
+    },
     { "target": "Trabalho num banco.", "support": "I work in a bank.", "note": "em + um = num." },
     { "target": "Estudamos português.", "support": "We study Portuguese." },
     { "target": "Gosto do Porto.", "support": "I like Porto.", "note": "de + o = do." },
-    { "target": "Gosto da comida portuguesa.", "support": "I like Portuguese food.", "note": "de + a = da." },
+    {
+      "target": "Gosto da comida portuguesa.",
+      "support": "I like Portuguese food.",
+      "note": "de + a = da."
+    },
     { "target": "Não falo alemão.", "support": "I do not speak German." },
-    { "target": "Onde é que trabalhas?", "support": "Where do you work?", "note": "The 'é que' form is very common in Portugal." },
+    {
+      "target": "Onde é que trabalhas?",
+      "support": "Where do you work?",
+      "note": "The 'é que' form is very common in Portugal."
+    },
     { "target": "Que línguas falas?", "support": "Which languages do you speak?" }
   ],
   "exercises": [
@@ -201,6 +220,7 @@
       "prompt": "Build: 'We do not like tea.'",
       "answer": ["Nós", "não", "gostamos", "de", "chá."],
       "distractors": ["gostam", "gosto", "da"],
+      "acceptedAnswers": ["Não gostamos de chá."],
       "explanation": "Não goes before the verb, nós takes -amos, and gostar keeps de: não gostamos de chá.",
       "tags": ["gostar", "negation", "nos"]
     },
@@ -237,6 +257,7 @@
       "prompt": "Build: 'I live in Porto and I like the city a lot.'",
       "answer": ["Eu", "moro", "no", "Porto", "e", "gosto", "muito", "da", "cidade."],
       "distractors": ["mora", "gostas", "do", "na"],
+      "acceptedAnswers": ["Moro no Porto e gosto muito da cidade."],
       "explanation": "Two contractions to choose: em + o Porto = no Porto, and gostar de + a cidade = da cidade.",
       "tags": ["morar", "gostar", "contractions"]
     },
@@ -304,6 +325,7 @@
       "givenAnswer": "Sim, gosto muito de Lisboa.",
       "answer": ["Gostas", "de", "Lisboa?"],
       "distractors": ["Gosta", "Gostam"],
+      "acceptedAnswers": ["Tu gostas de Lisboa?"],
       "explanation": "A yes/no question needs no extra word: just the tu form gostas, with de after it.",
       "tags": ["gostar", "questions"]
     },

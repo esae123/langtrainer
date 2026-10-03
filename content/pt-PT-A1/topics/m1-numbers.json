@@ -207,7 +207,8 @@
       "explanation": "Gato is masculine, so two is dois. With gatas you would say duas gatas.",
       "tags": ["numbers", "agreement", "ter"],
       "answer": ["Tenho", "dois", "gatos."],
-      "distractors": ["duas", "gata.", "tens"]
+      "distractors": ["duas", "gata.", "tens"],
+      "acceptedAnswers": ["Eu tenho dois gatos."]
     },
     {
       "id": "m1-numbers-13",
@@ -326,7 +327,8 @@
       "explanation": "Age is expressed with ter, not ser: tenho vinte e três anos. The e between the parts is obligatory.",
       "tags": ["numbers", "age", "ter"],
       "answer": ["Tenho", "vinte", "e", "três", "anos."],
-      "distractors": ["Sou", "trinta", "dois"]
+      "distractors": ["Sou", "trinta", "dois"],
+      "acceptedAnswers": ["Eu tenho vinte e três anos."]
     },
     {
       "id": "m1-numbers-22",
@@ -528,7 +530,8 @@
       "explanation": "Floors take em + o = no: moro no terceiro andar. The ordinal is masculine because of andar.",
       "tags": ["numbers", "ordinals", "andar"],
       "answer": ["Moro", "no", "terceiro", "andar."],
-      "distractors": ["na", "terceira", "três"]
+      "distractors": ["na", "terceira", "três"],
+      "acceptedAnswers": ["Eu moro no terceiro andar."]
     },
     {
       "id": "m1-numbers-37",

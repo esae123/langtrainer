@@ -98,7 +98,8 @@
       "explanation": "After ser a job takes no article, so it is Sou professora, not \"Sou uma professora\".",
       "tags": ["professions", "ser", "no-article"],
       "answer": ["Sou", "professora."],
-      "distractors": ["uma", "professor"]
+      "distractors": ["uma", "professor"],
+      "acceptedAnswers": ["Eu sou professora."]
     },
     {
       "id": "m1-professions-languages-04",
@@ -494,7 +495,8 @@
       "explanation": "Languages follow falar with no article, and \"a little\" is um pouco de + language.",
       "tags": ["languages", "falar"],
       "answer": ["Falo", "português", "e", "um", "pouco", "de", "russo."],
-      "distractors": ["russa", "falas", "o"]
+      "distractors": ["russa", "falas", "o"],
+      "acceptedAnswers": ["Eu falo português e um pouco de russo."]
     },
     {
       "id": "m1-professions-languages-32",
@@ -520,7 +522,8 @@
       "tags": ["languages", "questions"],
       "givenAnswer": "Falo inglês e espanhol.",
       "answer": ["Que", "línguas", "é", "que", "falas?"],
-      "distractors": ["Qual", "falo", "Quantos"]
+      "distractors": ["Qual", "falo", "Quantos"],
+      "acceptedAnswers": ["Que línguas é que tu falas?"]
     },
     {
       "id": "m1-professions-languages-34",

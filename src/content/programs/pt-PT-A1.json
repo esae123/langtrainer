@@ -1239,7 +1239,8 @@
                 "estou,"
               ],
               "acceptedAnswers": [
-                "Como é que estás, Rita?"
+                "Como é que estás, Rita?",
+                "Como é que tu estás, Rita?"
               ]
             },
             {
@@ -1603,6 +1604,9 @@
               "distractors": [
                 "português,",
                 "estou"
+              ],
+              "acceptedAnswers": [
+                "Eu sou portuguesa, de Coimbra."
               ]
             },
             {
@@ -1901,6 +1905,9 @@
                 "sou",
                 "estás",
                 "aonde"
+              ],
+              "acceptedAnswers": [
+                "De onde é que tu és?"
               ]
             },
             {
@@ -2368,6 +2375,9 @@
                 "espanhola,",
                 "portuguesa.",
                 "é"
+              ],
+              "acceptedAnswers": [
+                "Eu não sou espanhol, sou português."
               ]
             },
             {
@@ -2598,6 +2608,9 @@
                 "falas",
                 "pouca",
                 "o"
+              ],
+              "acceptedAnswers": [
+                "Eu falo um pouco de português."
               ]
             },
             {
@@ -3157,6 +3170,9 @@
                 "somos",
                 "estão",
                 "está"
+              ],
+              "acceptedAnswers": [
+                "Estamos muito cansados hoje."
               ]
             },
             {
@@ -3220,6 +3236,9 @@
                 "está",
                 "és",
                 "tenho"
+              ],
+              "acceptedAnswers": [
+                "Sou de Faro, mas estou em Lisboa."
               ]
             },
             {
@@ -4481,6 +4500,9 @@
                 "gostam",
                 "gosto",
                 "da"
+              ],
+              "acceptedAnswers": [
+                "Não gostamos de chá."
               ]
             },
             {
@@ -4575,6 +4597,9 @@
                 "gostas",
                 "do",
                 "na"
+              ],
+              "acceptedAnswers": [
+                "Moro no Porto e gosto muito da cidade."
               ]
             },
             {
@@ -4728,6 +4753,9 @@
               "distractors": [
                 "Gosta",
                 "Gostam"
+              ],
+              "acceptedAnswers": [
+                "Tu gostas de Lisboa?"
               ]
             },
             {
@@ -5491,6 +5519,9 @@
               "distractors": [
                 "no",
                 "na"
+              ],
+              "acceptedAnswers": [
+                "Eu moro em Braga."
               ]
             },
             {
@@ -5651,6 +5682,9 @@
                 "uma",
                 "o",
                 "umas"
+              ],
+              "acceptedAnswers": [
+                "Eu tenho um livro."
               ]
             },
             {
@@ -5887,6 +5921,9 @@
                 "da",
                 "no",
                 "de"
+              ],
+              "acceptedAnswers": [
+                "Eu gosto muito do Porto."
               ]
             },
             {
@@ -5916,6 +5953,9 @@
                 "De",
                 "Como",
                 "moro"
+              ],
+              "acceptedAnswers": [
+                "Onde é que tu moras?"
               ]
             },
             {
@@ -6100,6 +6140,9 @@
                 "De",
                 "Qual",
                 "trabalho"
+              ],
+              "acceptedAnswers": [
+                "Onde é que tu trabalhas?"
               ]
             },
             {
@@ -6586,6 +6629,9 @@
                 "Do",
                 "gosto",
                 "Como"
+              ],
+              "acceptedAnswers": [
+                "De que é que tu gostas?"
               ]
             },
             {
@@ -6808,6 +6854,9 @@
               "distractors": [
                 "uma",
                 "professor"
+              ],
+              "acceptedAnswers": [
+                "Eu sou professora."
               ]
             },
             {
@@ -7648,6 +7697,9 @@
                 "russa",
                 "falas",
                 "o"
+              ],
+              "acceptedAnswers": [
+                "Eu falo português e um pouco de russo."
               ]
             },
             {
@@ -7715,6 +7767,9 @@
                 "Qual",
                 "falo",
                 "Quantos"
+              ],
+              "acceptedAnswers": [
+                "Que línguas é que tu falas?"
               ]
             },
             {
@@ -8427,6 +8482,9 @@
                 "duas",
                 "gata.",
                 "tens"
+              ],
+              "acceptedAnswers": [
+                "Eu tenho dois gatos."
               ]
             },
             {
@@ -8696,6 +8754,9 @@
                 "Sou",
                 "trinta",
                 "dois"
+              ],
+              "acceptedAnswers": [
+                "Eu tenho vinte e três anos."
               ]
             },
             {
@@ -9160,6 +9221,9 @@
                 "na",
                 "terceira",
                 "três"
+              ],
+              "acceptedAnswers": [
+                "Eu moro no terceiro andar."
               ]
             },
             {
@@ -9638,6 +9702,9 @@
                 "Como",
                 "Quem",
                 "mora?"
+              ],
+              "acceptedAnswers": [
+                "Onde é que tu moras?"
               ]
             },
             {
@@ -10005,6 +10072,9 @@
                 "Quantas",
                 "Quanto",
                 "tem?"
+              ],
+              "acceptedAnswers": [
+                "Quantos irmãos é que tens?"
               ]
             },
             {
@@ -10193,6 +10263,9 @@
                 "Qual",
                 "Quem",
                 "fazer"
+              ],
+              "acceptedAnswers": [
+                "O que é que fazes aqui?"
               ]
             },
             {
@@ -10433,6 +10506,9 @@
                 "Porquê",
                 "Como",
                 "estudar"
+              ],
+              "acceptedAnswers": [
+                "Porque é que tu estudas?"
               ]
             },
             {
@@ -10463,6 +10539,9 @@
                 "Porquê",
                 "Como",
                 "venho?"
+              ],
+              "acceptedAnswers": [
+                "Porque é que tu não vens?"
               ]
             },
             {
@@ -10577,6 +10656,9 @@
               "distractors": [
                 "Sou",
                 "português?"
+              ],
+              "acceptedAnswers": [
+                "Tu és portuguesa?"
               ]
             }
           ]
