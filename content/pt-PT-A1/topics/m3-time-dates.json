@@ -1,0 +1,671 @@
+{
+  "id": "m3-time-dates",
+  "moduleId": "m3",
+  "title": "Time, days, months and dates",
+  "kind": "vocabulary",
+  "context": "In European Portuguese, asking for the time uses **Que horas são?**. When stating the hour, singular verb forms are used for one o'clock, noon, and midnight (*É uma hora*, *É meio-dia*, *É meia-noite*). For all other hours, use plural *são* (*São duas horas*, *São três horas*).\n\nFor minutes past the hour, connect with **e**:\n- *São quatro e dez* (4:10)\n- *São cinco e um quarto* (5:15 — quarter past five)\n- *São seis e meia* (6:30 — half past six)\n\nFor minutes before the hour, use **menos**:\n- *São sete menos um quarto* (6:45 — quarter to seven)\n\nParts of the day use specific prepositions:\n- *de manhã* (in the morning)\n- *à tarde* (in the afternoon)\n- *à noite* (at night)\n\nIn Portugal *de tarde* and *de noite* are also correct and common. With clock times say *às dez da noite*, *às três da tarde*.\n\nDays of the week are *segunda-feira* (Monday) through *sexta-feira* (Friday), plus *sábado* and *domingo*. Months and days are written in lowercase in Portuguese. To state a date, say: *Hoje é dia 15 de maio.*",
+  "keyItems": [
+    {
+      "target": "Que horas são?",
+      "support": "What time is it?"
+    },
+    {
+      "target": "É uma hora.",
+      "support": "It is one o'clock."
+    },
+    {
+      "target": "São duas horas.",
+      "support": "It is two o'clock."
+    },
+    {
+      "target": "É meio-dia.",
+      "support": "It is noon."
+    },
+    {
+      "target": "É meia-noite.",
+      "support": "It is midnight."
+    },
+    {
+      "target": "e um quarto",
+      "support": "quarter past"
+    },
+    {
+      "target": "e meia",
+      "support": "half past"
+    },
+    {
+      "target": "menos um quarto",
+      "support": "quarter to"
+    },
+    {
+      "target": "de manhã",
+      "support": "in the morning"
+    },
+    {
+      "target": "à tarde",
+      "support": "in the afternoon"
+    },
+    {
+      "target": "à noite",
+      "support": "at night / in the evening"
+    },
+    {
+      "target": "segunda-feira",
+      "support": "Monday"
+    },
+    {
+      "target": "sexta-feira",
+      "support": "Friday"
+    },
+    {
+      "target": "sábado",
+      "support": "Saturday"
+    },
+    {
+      "target": "domingo",
+      "support": "Sunday"
+    },
+    {
+      "target": "janeiro",
+      "support": "January"
+    },
+    {
+      "target": "hoje",
+      "support": "today"
+    },
+    {
+      "target": "amanhã",
+      "support": "tomorrow"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m3-time-dates-01",
+      "type": "match_pairs",
+      "topicId": "m3-time-dates",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese expression with its English translation.",
+      "explanation": "«É meio-dia» means noon, «à tarde» refers to the afternoon, «segunda-feira» is Monday, and «hoje» is today.",
+      "pairs": [
+        {
+          "target": "É meio-dia.",
+          "support": "It is noon."
+        },
+        {
+          "target": "à tarde",
+          "support": "in the afternoon"
+        },
+        {
+          "target": "segunda-feira",
+          "support": "Monday"
+        },
+        {
+          "target": "hoje",
+          "support": "today"
+        }
+      ]
+    },
+    {
+      "id": "m3-time-dates-02",
+      "type": "translate_word",
+      "topicId": "m3-time-dates",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese word for the day in bold.",
+      "explanation": "«Friday» in Portuguese is «sexta-feira». Days of the week are usually not capitalized.",
+      "direction": "toTarget",
+      "sentence": "Today is **Friday**.",
+      "word": "Friday",
+      "answer": "sexta-feira",
+      "options": ["sexta-feira", "segunda-feira", "quarta-feira", "sábado"]
+    },
+    {
+      "id": "m3-time-dates-03",
+      "type": "translate_word",
+      "topicId": "m3-time-dates",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the phrase in bold.",
+      "explanation": "The expression «in the morning» is translated as «de manhã» in European Portuguese.",
+      "direction": "toTarget",
+      "sentence": "I study **in the morning**.",
+      "word": "in the morning",
+      "answer": "de manhã",
+      "options": ["de manhã", "à tarde", "à noite", "de noite"]
+    },
+    {
+      "id": "m3-time-dates-04",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that it is three o'clock.",
+      "explanation": "Use plural «são» for hours greater than one: «São três horas».",
+      "answer": ["São", "três", "horas."],
+      "distractors": ["É", "doze", "hora"]
+    },
+    {
+      "id": "m3-time-dates-05",
+      "type": "question_for_answer",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «São quatro horas.» What did you ask?",
+      "explanation": "To ask what time it is in Portuguese, use «Que horas são?».",
+      "givenAnswer": "São quatro horas.",
+      "answer": ["Que", "horas", "são?"],
+      "distractors": ["Qual", "hora", "é?"]
+    },
+    {
+      "id": "m3-time-dates-06",
+      "type": "fill_gaps",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the sentence to say: \"It is half past one\" (1:30).",
+      "explanation": "Use singular «É» for one o'clock and «e meia» for half past.",
+      "template": "___ uma hora ___ meia.",
+      "gaps": [
+        {
+          "answer": "É"
+        },
+        {
+          "answer": "e"
+        }
+      ],
+      "wordBank": ["É", "e", "São", "menos", "de"]
+    },
+    {
+      "id": "m3-time-dates-07",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"Today is Monday.\"",
+      "explanation": "In Portuguese, state the day using «Hoje é» followed by the day name, like «segunda-feira».",
+      "answer": ["Hoje", "é", "segunda-feira."],
+      "distractors": ["são", "domingo", "de"]
+    },
+    {
+      "id": "m3-time-dates-08",
+      "type": "question_for_answer",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Someone says: «Hoje é terça-feira.» Write the question they are answering.",
+      "explanation": "Ask what day today is with «Que dia é hoje?».",
+      "givenAnswer": "Hoje é terça-feira.",
+      "answer": ["Que", "dia", "é", "hoje?"],
+      "distractors": ["Qual", "horas", "são?"]
+    },
+    {
+      "id": "m3-time-dates-09",
+      "type": "find_error",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Find the wrong word and select the correction.",
+      "explanation": "For 1 o'clock singular verb «É» is required: «É uma hora.», not «São».",
+      "sentence": ["São", "uma", "hora."],
+      "wrongIndex": 0,
+      "correction": "É",
+      "options": ["É", "Estar", "Tenho"]
+    },
+    {
+      "id": "m3-time-dates-10",
+      "type": "about_me",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about today's day of the week.",
+      "explanation": "Respond with «Hoje é...» followed by the day of the week in Portuguese.",
+      "question": "Que dia da semana é hoje?",
+      "sampleAnswer": "Hoje é quinta-feira.",
+      "hints": [
+        "segunda-feira.",
+        "terça-feira.",
+        "quarta-feira.",
+        "sexta-feira.",
+        "sábado.",
+        "domingo."
+      ]
+    },
+    {
+      "id": "m3-time-dates-11",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"It is quarter past eight.\" (8:15)",
+      "explanation": "In European Portuguese, 15 minutes past the hour is expressed as «e um quarto».",
+      "answer": ["São", "oito", "e", "um", "quarto."],
+      "distractors": ["menos", "hora", "duas"],
+      "acceptedAnswers": ["São oito e quinze."]
+    },
+    {
+      "id": "m3-time-dates-12",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"It is quarter to five.\" (4:45)",
+      "explanation": "To indicate minutes remaining until the next hour, use «menos um quarto»: «São cinco menos um quarto».",
+      "answer": ["São", "cinco", "menos", "um", "quarto."],
+      "distractors": ["e", "quatro", "horas"],
+      "acceptedAnswers": ["São cinco menos quinze.", "São quatro e quarenta e cinco."]
+    },
+    {
+      "id": "m3-time-dates-13",
+      "type": "translate_word",
+      "topicId": "m3-time-dates",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese word for \"midnight\".",
+      "explanation": "«Midnight» translates as «meia-noite» in Portuguese.",
+      "direction": "toTarget",
+      "sentence": "It is **midnight** now.",
+      "word": "midnight",
+      "answer": "meia-noite",
+      "options": ["meia-noite", "meio-dia", "da noite", "madrugada"]
+    },
+    {
+      "id": "m3-time-dates-14",
+      "type": "fill_gaps",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the gaps to say: \"Today is the tenth of May.\"",
+      "explanation": "Dates use «é dia [number] de [month]»: «Hoje é dia dez de maio».",
+      "template": "Hoje ___ dia dez ___ maio.",
+      "gaps": [
+        {
+          "answer": "é"
+        },
+        {
+          "answer": "de"
+        }
+      ],
+      "wordBank": ["é", "de", "são", "em", "do"]
+    },
+    {
+      "id": "m3-time-dates-15",
+      "type": "question_for_answer",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague says: «Hoje é dia vinte de abril.» What did you ask?",
+      "explanation": "To ask for today's date, ask «Qual é a data de hoje?» or «Que dia é hoje?».",
+      "givenAnswer": "Hoje é dia vinte de abril.",
+      "answer": ["Qual", "é", "a", "data", "de", "hoje?"],
+      "distractors": ["onde", "horas", "são"],
+      "acceptedAnswers": ["Qual é a data de hoje?", "Que dia é hoje?"]
+    },
+    {
+      "id": "m3-time-dates-16",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Translate: \"We work in the afternoon.\"",
+      "explanation": "Use «à tarde» to express action in the afternoon.",
+      "answer": ["Nós", "trabalhamos", "à", "tarde."],
+      "distractors": ["de", "manhã", "noite"],
+      "acceptedAnswers": ["Nós trabalhamos à tarde.", "Trabalhamos à tarde."]
+    },
+    {
+      "id": "m3-time-dates-17",
+      "type": "find_error",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Find the wrong word and select the correct option.",
+      "explanation": "«Meio-dia» is singular, so it takes «É»: «É meio-dia agora.»",
+      "sentence": ["São", "meio-dia", "agora."],
+      "wrongIndex": 0,
+      "correction": "É",
+      "options": ["É", "Está", "Somos"]
+    },
+    {
+      "id": "m3-time-dates-18",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"My birthday is in July.\"",
+      "explanation": "Months take the preposition «em»: «em julho». Remember European Portuguese uses the article with possessives («O meu aniversário»).",
+      "answer": ["O", "meu", "aniversário", "é", "em", "julho."],
+      "distractors": ["de", "no", "a"]
+    },
+    {
+      "id": "m3-time-dates-19",
+      "type": "fill_gaps",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the gaps: \"I study in the morning and work at night.\"",
+      "explanation": "The standard prepositions are «de manhã» (in the morning) and «à noite» (at night).",
+      "template": "Eu estudo ___ manhã e trabalho ___ noite.",
+      "gaps": [
+        {
+          "answer": "de"
+        },
+        {
+          "answer": "à"
+        }
+      ],
+      "wordBank": ["de", "à", "em", "na", "da"]
+    },
+    {
+      "id": "m3-time-dates-20",
+      "type": "question_for_answer",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The waiter answers: «O restaurante abre às sete horas da noite.» Ask at what time the restaurant opens.",
+      "explanation": "To ask at what time something happens, use «A que horas…?»: «A que horas abre o restaurante?».",
+      "givenAnswer": "O restaurante abre às sete horas da noite.",
+      "answer": ["A", "que", "horas", "abre", "o", "restaurante?"],
+      "distractors": ["Quando", "é", "onde"],
+      "acceptedAnswers": [
+        "A que horas abre o restaurante?",
+        "A que horas é que abre o restaurante?"
+      ]
+    },
+    {
+      "id": "m3-time-dates-21",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that it is quarter past ten.",
+      "explanation": "For hours above one, use «São». Quarter past is «e um quarto».",
+      "answer": ["São", "dez", "e", "um", "quarto."],
+      "distractors": ["É", "menos", "vinte"]
+    },
+    {
+      "id": "m3-time-dates-22",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say that tomorrow is Saturday.",
+      "explanation": "«Amanhã» means tomorrow and days of the week are lowercased in Portuguese.",
+      "answer": ["Amanhã", "é", "sábado."],
+      "distractors": ["Hoje", "domingo", "são"]
+    },
+    {
+      "id": "m3-time-dates-23",
+      "type": "fill_gaps",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Today is Tuesday. The train leaves at four o'clock.\"",
+      "explanation": "Days of the week are lowercased. Specific times use «às» with plural hours («às quatro horas»).",
+      "template": "Hoje é ___. O comboio parte ___ quatro horas.",
+      "gaps": [
+        {
+          "answer": "terça-feira"
+        },
+        {
+          "answer": "às"
+        }
+      ],
+      "wordBank": ["terça-feira", "às", "quarta-feira", "ao", "à"]
+    },
+    {
+      "id": "m3-time-dates-24",
+      "type": "question_for_answer",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «A aula é à noite.» What did you ask?",
+      "explanation": "«A que horas…?» asks for the clock time. «Quando…?» (when) is also fine here, so both are accepted.",
+      "givenAnswer": "A aula é às oito da noite.",
+      "answer": ["A", "que", "horas", "é", "a", "aula?"],
+      "distractors": ["Onde", "Quando", "como"],
+      "acceptedAnswers": [
+        "A que horas é que é a aula?",
+        "Quando é a aula?",
+        "Quando é que é a aula?"
+      ]
+    },
+    {
+      "id": "m3-time-dates-25",
+      "type": "translate_word",
+      "topicId": "m3-time-dates",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Months of the year are written in lower case in Portuguese. December is «dezembro».",
+      "direction": "toTarget",
+      "sentence": "My birthday is in **December**.",
+      "word": "December",
+      "answer": "dezembro",
+      "options": ["dezembro", "novembro", "outubro", "janeiro"]
+    },
+    {
+      "id": "m3-time-dates-26",
+      "type": "find_error",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Clock times take «às» (a + as horas): «às dez horas». Only noon and midnight differ: «ao meio-dia», «à meia-noite».",
+      "sentence": ["O", "comboio", "parte", "na", "dez", "horas."],
+      "wrongIndex": 3,
+      "correction": "às",
+      "options": ["às", "ao", "à"]
+    },
+    {
+      "id": "m3-time-dates-27",
+      "type": "about_me",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about your favorite day of the week.",
+      "explanation": "State your favorite day using «O meu dia favorito é...».",
+      "question": "Qual é o teu dia da semana favorito?",
+      "sampleAnswer": "O meu dia favorito é sábado.",
+      "hints": ["domingo.", "sexta-feira.", "gosto", "de", "segunda-feira."]
+    },
+    {
+      "id": "m3-time-dates-28",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that today is the 25th of April.",
+      "explanation": "Dates use «dia + [number] + de + [month]». Months are written in lower case.",
+      "answer": ["Hoje", "é", "dia", "vinte", "e", "cinco", "de", "abril."],
+      "distractors": ["Amanhã", "do", "horas"],
+      "acceptedAnswers": ["Hoje é dia 25 de abril."]
+    },
+    {
+      "id": "m3-time-dates-29",
+      "type": "question_for_answer",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «O almoço é ao meio-dia.» What did you ask?",
+      "explanation": "To ask what time a specific event occurs, ask «A que horas é...».",
+      "givenAnswer": "O almoço é ao meio-dia.",
+      "answer": ["A", "que", "horas", "é", "o", "almoço?"],
+      "distractors": ["Onde", "Qual", "como"],
+      "acceptedAnswers": [
+        "A que horas é que é o almoço?",
+        "Quando é o almoço?",
+        "Quando é que é o almoço?"
+      ]
+    },
+    {
+      "id": "m3-time-dates-30",
+      "type": "fill_gaps",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill in the gaps to talk about travel times.",
+      "explanation": "«Meio-dia» takes «ao» («ao meio-dia»), while plural hours take «às» («às duas e meia»).",
+      "template": "O autocarro chega ___ meio-dia e sai ___ duas e meia.",
+      "gaps": [
+        {
+          "answer": "ao"
+        },
+        {
+          "answer": "às"
+        }
+      ],
+      "wordBank": ["ao", "às", "à", "de", "no"]
+    },
+    {
+      "id": "m3-time-dates-31",
+      "type": "translate_word",
+      "topicId": "m3-time-dates",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Wednesday in Portuguese is «quarta-feira».",
+      "direction": "toTarget",
+      "sentence": "We have a meeting on **Wednesday**.",
+      "word": "Wednesday",
+      "answer": "quarta-feira",
+      "options": ["quarta-feira", "quinta-feira", "terça-feira", "sexta-feira"]
+    },
+    {
+      "id": "m3-time-dates-32",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: It is twenty to nine.",
+      "explanation": "To say minutes before the hour, state the upcoming hour followed by «menos» and the minutes.",
+      "answer": ["São", "nove", "menos", "vinte."],
+      "distractors": ["É", "dez", "quarenta"],
+      "acceptedAnswers": ["São oito e quarenta."]
+    },
+    {
+      "id": "m3-time-dates-33",
+      "type": "question_for_answer",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «A festa é no sábado.» What did you ask?",
+      "explanation": "«Em que dia…?» asks for the day; «Quando…?» (when) works too. «No sábado» = on Saturday.",
+      "givenAnswer": "A festa é no sábado.",
+      "answer": ["Em", "que", "dia", "é", "a", "festa?"],
+      "distractors": ["Onde", "Qual", "como"],
+      "acceptedAnswers": [
+        "Em que dia é que é a festa?",
+        "Quando é a festa?",
+        "Quando é que é a festa?"
+      ]
+    },
+    {
+      "id": "m3-time-dates-34",
+      "type": "find_error",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Hours greater than one require plural verb forms: «São três horas».",
+      "sentence": ["É", "três", "horas", "da", "tarde."],
+      "wrongIndex": 0,
+      "correction": "São",
+      "options": ["São", "Está", "Estão"]
+    },
+    {
+      "id": "m3-time-dates-35",
+      "type": "about_me",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself: when do you start work?",
+      "explanation": "Answer with the time after «às»: «Começo a trabalhar às nove (horas).» Add «e meia» for half past.",
+      "question": "A que horas começas a trabalhar?",
+      "sampleAnswer": "Começo a trabalhar às nove horas.",
+      "hints": ["oito", "dez", "e", "meia", "de", "manhã"]
+    },
+    {
+      "id": "m3-time-dates-36",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the museum closes at quarter to six.",
+      "explanation": "«Às seis menos um quarto» means at quarter to six.",
+      "answer": ["O", "museu", "fecha", "às", "seis", "menos", "um", "quarto."],
+      "distractors": ["abre", "cinco", "vinte"],
+      "acceptedAnswers": ["O museu fecha às cinco e quarenta e cinco."]
+    },
+    {
+      "id": "m3-time-dates-37",
+      "type": "fill_gaps",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The month of January is cold and August is hot.\"",
+      "explanation": "«Janeiro» (January) is winter in Portugal, while «agosto» (August) is summer.",
+      "template": "O mês de ___ é frio e ___ é quente.",
+      "gaps": [
+        {
+          "answer": "janeiro"
+        },
+        {
+          "answer": "agosto"
+        }
+      ],
+      "wordBank": ["janeiro", "agosto", "fevereiro", "maio"]
+    },
+    {
+      "id": "m3-time-dates-38",
+      "type": "order_dialogue",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "At the train station. Put the conversation in order.",
+      "explanation": "Asking for train times begins with «A que horas parte...» and ends with pleasantries.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Com licença, a que horas parte o comboio?"
+        },
+        {
+          "speaker": "B",
+          "text": "O comboio parte às dez e quinze."
+        },
+        {
+          "speaker": "A",
+          "text": "Muito obrigado!"
+        },
+        {
+          "speaker": "B",
+          "text": "De nada. Boa viagem!"
+        }
+      ]
+    },
+    {
+      "id": "m3-time-dates-39",
+      "type": "question_for_answer",
+      "topicId": "m3-time-dates",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «O meu aniversário é a dez de outubro.» What did you ask?",
+      "explanation": "Ask «Quando é...» to inquire about dates and events like birthdays.",
+      "givenAnswer": "O meu aniversário é a dez de outubro.",
+      "answer": ["Quando", "é", "o", "teu", "aniversário?"],
+      "distractors": ["Onde", "Como", "Qual"],
+      "acceptedAnswers": ["Quando é que é o teu aniversário?"]
+    },
+    {
+      "id": "m3-time-dates-40",
+      "type": "build_phrase",
+      "topicId": "m3-time-dates",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Today is Sunday, it is one o'clock.",
+      "explanation": "Single hour uses «é uma hora». «Domingo» is Sunday.",
+      "answer": ["Hoje", "é", "domingo,", "é", "uma", "hora."],
+      "distractors": ["amanhã", "sábado", "duas"]
+    }
+  ]
+}
