@@ -1,0 +1,643 @@
+{
+  "id": "m2-classroom-objects",
+  "moduleId": "m2",
+  "title": "Classroom objects and class communication",
+  "kind": "vocabulary",
+  "context": "## In the classroom\n\nThe things on your desk: **o livro** (book), **o caderno** (notebook), **o lápis** (pencil), **a caneta** (pen), **a borracha** (eraser), **a mochila** (backpack), **a mesa** (desk, table), **a cadeira** (chair) and **o quadro** (board).\n\n**Plural:** after a vowel add **-s**: *livro → livros*, *caneta → canetas*. Words in **-or** add **-es**: *professor → professores*. **Lápis** never changes: *um lápis, dois lápis*.\n\nPhrases you need in class:\n\n- *Não percebo.* (I don't understand.)\n- *Pode repetir, por favor?* (Can you repeat, please? — to the teacher)\n- *Como se diz «pen» em português?* (How do you say \"pen\" in Portuguese?)\n- *O que significa «quadro»?* (What does \"quadro\" mean?)\n- *Posso entrar?* (May I come in?)\n- *Preciso de uma borracha.* (I need an eraser.)\n- *Há vinte cadeiras na sala.* (There are twenty chairs in the room.)\n\n**Watch out!**\n\n- Use **Posso …?** + infinitive to ask permission for yourself (*Posso entrar?*), and **Pode …?** to ask the teacher to do something (*Pode repetir?*).\n- In Portugal \"I don't understand\" is **Não percebo**.\n- **Há** means both \"there is\" and \"there are\", and it never changes.\n- After **precisar** always use **de**: *Preciso de um lápis.*",
+  "keyItems": [
+    {
+      "target": "o livro",
+      "support": "the book"
+    },
+    {
+      "target": "o caderno",
+      "support": "the notebook"
+    },
+    {
+      "target": "o lápis",
+      "support": "the pencil",
+      "note": "plural os lápis (no change)"
+    },
+    {
+      "target": "a caneta",
+      "support": "the pen"
+    },
+    {
+      "target": "a borracha",
+      "support": "the eraser"
+    },
+    {
+      "target": "a mochila",
+      "support": "the backpack"
+    },
+    {
+      "target": "a mesa",
+      "support": "the desk / the table"
+    },
+    {
+      "target": "a cadeira",
+      "support": "the chair"
+    },
+    {
+      "target": "o quadro",
+      "support": "the board"
+    },
+    {
+      "target": "o professor / a professora",
+      "support": "the teacher (male / female)",
+      "note": "plural professores"
+    },
+    {
+      "target": "o aluno / a aluna",
+      "support": "the student (male / female)"
+    },
+    {
+      "target": "a sala (de aula)",
+      "support": "the classroom"
+    },
+    {
+      "target": "há",
+      "support": "there is / there are",
+      "note": "never changes"
+    },
+    {
+      "target": "precisar de",
+      "support": "to need",
+      "note": "preciso de uma caneta"
+    },
+    {
+      "target": "Não percebo.",
+      "support": "I don't understand."
+    },
+    {
+      "target": "Pode repetir, por favor?",
+      "support": "Can you repeat, please?",
+      "note": "formal, to the teacher"
+    },
+    {
+      "target": "Como se diz … em português?",
+      "support": "How do you say … in Portuguese?"
+    },
+    {
+      "target": "O que significa …?",
+      "support": "What does … mean?"
+    },
+    {
+      "target": "Posso …?",
+      "support": "May I …?",
+      "note": "+ infinitive: Posso entrar?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m2-classroom-objects-01",
+      "type": "translate_word",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Lápis» is a pencil and «caneta» a pen. «Lápis» is masculine (o lápis) and is the same in the plural.",
+      "direction": "toTarget",
+      "sentence": "I need a **pencil**.",
+      "word": "pencil",
+      "answer": "lápis",
+      "options": ["lápis", "caneta", "livro", "borracha"]
+    },
+    {
+      "id": "m2-classroom-objects-02",
+      "type": "translate_word",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Mochila» is a backpack. It is feminine, so it is «a minha mochila».",
+      "direction": "toTarget",
+      "sentence": "Where is my **backpack**?",
+      "word": "backpack",
+      "answer": "mochila",
+      "options": ["mochila", "mesa", "cadeira", "caneta"]
+    },
+    {
+      "id": "m2-classroom-objects-03",
+      "type": "translate_word",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Borracha» is the eraser (rubber). It is feminine: a borracha, uma borracha.",
+      "direction": "toTarget",
+      "sentence": "The **eraser** is in my backpack.",
+      "word": "eraser",
+      "answer": "borracha",
+      "options": ["borracha", "caneta", "caderno", "quadro"]
+    },
+    {
+      "id": "m2-classroom-objects-04",
+      "type": "translate_word",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "You write in a «caderno»; a «livro» is a book you read.",
+      "direction": "toTarget",
+      "sentence": "Write the word in your **notebook**.",
+      "word": "notebook",
+      "answer": "caderno",
+      "options": ["caderno", "livro", "quadro", "lápis"]
+    },
+    {
+      "id": "m2-classroom-objects-05",
+      "type": "translate_word",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Dois» needs a plural: «caneta» ends in a vowel, so it just adds -s: «canetas».",
+      "direction": "toTarget",
+      "sentence": "I have two **pens**.",
+      "word": "pens",
+      "answer": "canetas",
+      "options": ["canetas", "caneta", "lápis", "cadernos"]
+    },
+    {
+      "id": "m2-classroom-objects-06",
+      "type": "fill_gaps",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I have a book and a pen.\"",
+      "explanation": "«Livro» is masculine, so «um livro»; «caneta» is feminine, so «uma caneta».",
+      "template": "Tenho ___ livro e ___ caneta.",
+      "gaps": [
+        {
+          "answer": "um"
+        },
+        {
+          "answer": "uma"
+        }
+      ],
+      "wordBank": ["um", "uma", "uns", "umas"]
+    },
+    {
+      "id": "m2-classroom-objects-07",
+      "type": "fill_gaps",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Rita has two pencils and three erasers.\"",
+      "explanation": "«Lápis» does not change in the plural: «dois lápis». «Borracha» ends in a vowel, so it adds -s: «borrachas».",
+      "template": "A Rita tem dois ___ e três ___.",
+      "gaps": [
+        {
+          "answer": "lápis"
+        },
+        {
+          "answer": "borrachas"
+        }
+      ],
+      "wordBank": ["lápis", "borrachas", "lápises", "borracha", "caderno"]
+    },
+    {
+      "id": "m2-classroom-objects-08",
+      "type": "fill_gaps",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Sorry, I don't understand. Can you repeat, please?\"",
+      "explanation": "«Não percebo» is the Portuguese way to say \"I don't understand\". After «Pode» the verb stays in the infinitive: «Pode repetir?».",
+      "template": "Desculpe, não ___. Pode ___, por favor?",
+      "gaps": [
+        {
+          "answer": "percebo"
+        },
+        {
+          "answer": "repetir"
+        }
+      ],
+      "wordBank": ["percebo", "repetir", "percebes", "repito", "falo"]
+    },
+    {
+      "id": "m2-classroom-objects-09",
+      "type": "fill_gaps",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"How do you say 'chair' in Portuguese?\"",
+      "explanation": "The fixed question is «Como se diz … em português?». Languages take «em» with no article.",
+      "template": "Como se ___ «chair» ___ português?",
+      "gaps": [
+        {
+          "answer": "diz"
+        },
+        {
+          "answer": "em"
+        }
+      ],
+      "wordBank": ["diz", "em", "significa", "no", "de"]
+    },
+    {
+      "id": "m2-classroom-objects-10",
+      "type": "fill_gaps",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"My books and my pens are in the backpack.\"",
+      "explanation": "«Os meus» needs a masculine plural noun (livros), «as minhas» a feminine plural one (canetas).",
+      "template": "Os meus ___ e as minhas ___ estão na mochila.",
+      "gaps": [
+        {
+          "answer": "livros"
+        },
+        {
+          "answer": "canetas"
+        }
+      ],
+      "wordBank": ["livros", "canetas", "livro", "caneta", "borracha"]
+    },
+    {
+      "id": "m2-classroom-objects-11",
+      "type": "fill_gaps",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The teachers (male) and the students (female) are in the classroom.\"",
+      "explanation": "Words ending in -or add -es in the plural: «professores». «As» is feminine plural, so «alunas».",
+      "template": "Os ___ e as ___ estão na sala.",
+      "gaps": [
+        {
+          "answer": "professores"
+        },
+        {
+          "answer": "alunas"
+        }
+      ],
+      "wordBank": ["professores", "alunas", "professor", "alunos", "aluna"]
+    },
+    {
+      "id": "m2-classroom-objects-12",
+      "type": "fill_gaps",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"May I use your eraser, please?\" (to a classmate)",
+      "explanation": "Ask permission for yourself with «Posso» + infinitive. «A tua» needs a feminine singular noun: «borracha».",
+      "template": "___ usar a tua ___, por favor?",
+      "gaps": [
+        {
+          "answer": "Posso"
+        },
+        {
+          "answer": "borracha"
+        }
+      ],
+      "wordBank": ["Posso", "borracha", "Pode", "borrachas", "caderno"]
+    },
+    {
+      "id": "m2-classroom-objects-13",
+      "type": "build_phrase",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"I don't understand.\"",
+      "explanation": "In Portugal \"I don't understand\" is «Não percebo». «Não» goes before the verb.",
+      "answer": ["Não", "percebo."],
+      "distractors": ["percebes", "percebe", "Sim"],
+      "acceptedAnswers": ["Eu não percebo."]
+    },
+    {
+      "id": "m2-classroom-objects-14",
+      "type": "build_phrase",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You arrive late. Ask the teacher: \"May I come in?\"",
+      "explanation": "Ask permission for yourself with «Posso» + infinitive: «Posso entrar?».",
+      "answer": ["Posso", "entrar?"],
+      "distractors": ["Pode", "entra?", "Sou"]
+    },
+    {
+      "id": "m2-classroom-objects-15",
+      "type": "build_phrase",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask the teacher politely: \"Can you repeat, please?\"",
+      "explanation": "«Pode …?» asks the teacher (formal) to do something; the verb after it stays in the infinitive.",
+      "answer": ["Pode", "repetir,", "por", "favor?"],
+      "distractors": ["Posso", "repete", "para"]
+    },
+    {
+      "id": "m2-classroom-objects-16",
+      "type": "build_phrase",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask the teacher: \"How do you say 'pen' in Portuguese?\"",
+      "explanation": "The fixed question is «Como se diz … em português?», with «em» and no article before the language.",
+      "answer": ["Como", "se", "diz", "«pen»", "em", "português?"],
+      "distractors": ["significa", "no", "chama"],
+      "acceptedAnswers": ["Como é que se diz «pen» em português?"]
+    },
+    {
+      "id": "m2-classroom-objects-17",
+      "type": "build_phrase",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"I need an eraser.\"",
+      "explanation": "«Precisar» is always followed by «de». «Borracha» is feminine, so «uma».",
+      "answer": ["Preciso", "de", "uma", "borracha."],
+      "distractors": ["um", "da", "borrachas."],
+      "acceptedAnswers": ["Eu preciso de uma borracha."]
+    },
+    {
+      "id": "m2-classroom-objects-18",
+      "type": "build_phrase",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"My notebook is in the backpack.\"",
+      "explanation": "«Caderno» is masculine, so «o meu». Location takes «estar», and «em + a mochila» becomes «na mochila».",
+      "answer": ["O", "meu", "caderno", "está", "na", "mochila."],
+      "distractors": ["minha", "no", "é"]
+    },
+    {
+      "id": "m2-classroom-objects-19",
+      "type": "build_phrase",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"My pens are on the desk.\"",
+      "explanation": "«Canetas» is feminine plural, so «as minhas» and the plural «estão». «Em + a mesa» becomes «na mesa».",
+      "answer": ["As", "minhas", "canetas", "estão", "na", "mesa."],
+      "distractors": ["Os", "meus", "está", "caneta"]
+    },
+    {
+      "id": "m2-classroom-objects-20",
+      "type": "build_phrase",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"There are twenty chairs in the classroom.\"",
+      "explanation": "«Há» means \"there are\" and never changes. «Vinte» needs the plural «cadeiras».",
+      "answer": ["Há", "vinte", "cadeiras", "na", "sala."],
+      "distractors": ["São", "cadeira", "no"],
+      "acceptedAnswers": ["Na sala há vinte cadeiras."]
+    },
+    {
+      "id": "m2-classroom-objects-21",
+      "type": "build_phrase",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask a classmate: \"May I use your pencil, please?\"",
+      "explanation": "«Posso» + infinitive asks permission. «Lápis» is masculine, so «o teu lápis».",
+      "answer": ["Posso", "usar", "o", "teu", "lápis,", "por", "favor?"],
+      "distractors": ["Pode", "a", "tua", "lápises"]
+    },
+    {
+      "id": "m2-classroom-objects-22",
+      "type": "build_phrase",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"The teachers are in the classroom.\"",
+      "explanation": "«Professor» ends in -or, so the plural adds -es: «professores». A plural subject takes «estão».",
+      "answer": ["Os", "professores", "estão", "na", "sala", "de", "aula."],
+      "distractors": ["professor", "está", "no"]
+    },
+    {
+      "id": "m2-classroom-objects-23",
+      "type": "build_phrase",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"I have three books and two pencils.\"",
+      "explanation": "«Livro» adds -s in the plural, but «lápis» does not change: «dois lápis».",
+      "answer": ["Tenho", "três", "livros", "e", "dois", "lápis."],
+      "distractors": ["lápises", "livro", "tem"],
+      "acceptedAnswers": ["Eu tenho três livros e dois lápis."]
+    },
+    {
+      "id": "m2-classroom-objects-24",
+      "type": "question_for_answer",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The teacher answers: «Cadeira» significa «chair». What did you ask?",
+      "explanation": "To ask what a Portuguese word means, use «O que significa …?».",
+      "givenAnswer": "«Cadeira» significa «chair».",
+      "answer": ["O", "que", "significa", "«cadeira»?"],
+      "distractors": ["Como", "diz", "«chair»?"],
+      "acceptedAnswers": ["O que é que significa «cadeira»?"]
+    },
+    {
+      "id": "m2-classroom-objects-25",
+      "type": "question_for_answer",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The teacher answers: Diz-se «caderno». What did you ask?",
+      "explanation": "To ask for the Portuguese word, use «Como se diz … em português?» with the English word inside.",
+      "givenAnswer": "Diz-se «caderno».",
+      "answer": ["Como", "se", "diz", "«notebook»", "em", "português?"],
+      "distractors": ["significa", "no", "«caderno»"],
+      "acceptedAnswers": ["Como é que se diz «notebook» em português?"]
+    },
+    {
+      "id": "m2-classroom-objects-26",
+      "type": "question_for_answer",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You want to close the door. The teacher answers: «Sim, claro.» What did you ask?",
+      "explanation": "Asking permission for yourself is «Posso» + infinitive: «Posso fechar a porta?».",
+      "givenAnswer": "Sim, claro.",
+      "answer": ["Posso", "fechar", "a", "porta?"],
+      "distractors": ["Pode", "fecho", "portas?"]
+    },
+    {
+      "id": "m2-classroom-objects-27",
+      "type": "question_for_answer",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You ask a friend what is in their backpack. They answer: «Tenho dois cadernos e um livro.» What did you ask? (informal)",
+      "explanation": "«O que» asks \"what\". «Tens» is the tu form of «ter», and «em + a mochila» is «na mochila».",
+      "givenAnswer": "Tenho dois cadernos e um livro.",
+      "answer": ["O", "que", "tens", "na", "mochila?"],
+      "distractors": ["tem", "no", "Quantos"],
+      "acceptedAnswers": [
+        "O que é que tens na mochila?",
+        "O que tens na tua mochila?",
+        "O que é que tens na tua mochila?"
+      ]
+    },
+    {
+      "id": "m2-classroom-objects-28",
+      "type": "question_for_answer",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Tenho três canetas.» What did you ask? (informal)",
+      "explanation": "«Canetas» is feminine plural, so «quantas», not «quantos». «Tens» is the tu form.",
+      "givenAnswer": "Tenho três canetas.",
+      "answer": ["Quantas", "canetas", "tens?"],
+      "distractors": ["Quantos", "tem?", "caneta"],
+      "acceptedAnswers": ["Quantas canetas é que tens?"]
+    },
+    {
+      "id": "m2-classroom-objects-29",
+      "type": "question_for_answer",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «A minha mochila está na cadeira.» What did you ask? (informal)",
+      "explanation": "Location takes «estar». «Mochila» is feminine, so to a friend it is «a tua mochila».",
+      "givenAnswer": "A minha mochila está na cadeira.",
+      "answer": ["Onde", "está", "a", "tua", "mochila?"],
+      "distractors": ["o", "teu", "é"],
+      "acceptedAnswers": ["Onde é que está a tua mochila?"]
+    },
+    {
+      "id": "m2-classroom-objects-30",
+      "type": "question_for_answer",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Os meus lápis estão na mesa.» What did you ask? (informal)",
+      "explanation": "«Os lápis» is plural here (os meus), so «estão» and «os teus».",
+      "givenAnswer": "Os meus lápis estão na mesa.",
+      "answer": ["Onde", "estão", "os", "teus", "lápis?"],
+      "distractors": ["está", "as", "tuas"],
+      "acceptedAnswers": ["Onde é que estão os teus lápis?"]
+    },
+    {
+      "id": "m2-classroom-objects-31",
+      "type": "question_for_answer",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The teacher answers: «Há vinte e cinco alunos na sala.» What did you ask?",
+      "explanation": "«Alunos» is masculine plural, so «quantos». «Há» asks how many there are.",
+      "givenAnswer": "Há vinte e cinco alunos na sala.",
+      "answer": ["Quantos", "alunos", "há", "na", "sala?"],
+      "distractors": ["Quantas", "são", "no"],
+      "acceptedAnswers": ["Quantos alunos é que há na sala?"]
+    },
+    {
+      "id": "m2-classroom-objects-32",
+      "type": "question_for_answer",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A classmate answers: «A professora chama-se Rita.» What did you ask?",
+      "explanation": "You ask about a third person, so «se chama», not «te chamas». «Professora» is feminine: «a professora».",
+      "givenAnswer": "A professora chama-se Rita.",
+      "answer": ["Como", "se", "chama", "a", "professora?"],
+      "distractors": ["te", "chamas", "o"],
+      "acceptedAnswers": ["Como é que se chama a professora?"]
+    },
+    {
+      "id": "m2-classroom-objects-33",
+      "type": "find_error",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Lápis» is the same in the singular and the plural: «o lápis, os lápis».",
+      "sentence": ["Os", "lápises", "estão", "na", "mesa."],
+      "wrongIndex": 1,
+      "correction": "lápis",
+      "options": ["lápis", "lapis", "lápices"]
+    },
+    {
+      "id": "m2-classroom-objects-34",
+      "type": "find_error",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «dois» the noun is plural; «caderno» ends in a vowel, so it adds -s: «cadernos».",
+      "sentence": ["Tenho", "dois", "caderno", "na", "mochila."],
+      "wrongIndex": 2,
+      "correction": "cadernos",
+      "options": ["cadernos", "cadernes", "caderna"]
+    },
+    {
+      "id": "m2-classroom-objects-35",
+      "type": "find_error",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Sala» is feminine singular, so «em + a sala» becomes «na sala».",
+      "sentence": ["A", "professora", "está", "no", "sala."],
+      "wrongIndex": 3,
+      "correction": "na",
+      "options": ["na", "nos", "nas"]
+    },
+    {
+      "id": "m2-classroom-objects-36",
+      "type": "find_error",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In the fixed question «Como se diz … em português?» the language takes «em» without an article.",
+      "sentence": ["Como", "se", "diz", "«pencil»", "no", "português?"],
+      "wrongIndex": 4,
+      "correction": "em",
+      "options": ["em", "de", "na"]
+    },
+    {
+      "id": "m2-classroom-objects-37",
+      "type": "find_error",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Location takes «estar», not «ser», and «os alunos» is plural: «estão».",
+      "sentence": ["Os", "alunos", "são", "na", "sala", "de", "aula."],
+      "wrongIndex": 2,
+      "correction": "estão",
+      "options": ["estão", "está", "estamos"]
+    },
+    {
+      "id": "m2-classroom-objects-38",
+      "type": "about_me",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Start with «Tenho …» and give each object its article or number: «um livro», «duas canetas».",
+      "question": "O que tens na mochila?",
+      "sampleAnswer": "Tenho um livro e duas canetas.",
+      "hints": ["caderno", "lápis", "borracha", "três"]
+    },
+    {
+      "id": "m2-classroom-objects-39",
+      "type": "about_me",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Location takes «estar». «Em + a» becomes «na»: «na mesa», «na mochila», «em casa».",
+      "question": "Onde está o teu caderno?",
+      "sampleAnswer": "O meu caderno está na mesa.",
+      "hints": ["mochila", "cadeira", "sala", "casa"]
+    },
+    {
+      "id": "m2-classroom-objects-40",
+      "type": "about_me",
+      "topicId": "m2-classroom-objects",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Answer with «há» + number + plural noun. «Há» never changes: «há doze alunos».",
+      "question": "Quantos alunos há na tua aula de português?",
+      "sampleAnswer": "Na minha aula há doze alunos.",
+      "hints": ["vinte", "quinze", "alunas", "e", "só"]
+    }
+  ]
+}

@@ -1,0 +1,615 @@
+{
+  "id": "m2-spatial-prepositions",
+  "moduleId": "m2",
+  "title": "Spatial prepositions",
+  "kind": "grammar",
+  "context": "## Where is it?\n\nSay where something is with **estar** + a place phrase. Most end in **de**:\n\n- **em cima de** (on, on top of) · **debaixo de** (under)\n- **dentro de** (inside) · **ao lado de** (next to)\n- **em frente de** (in front of, opposite) · **atrás de** (behind)\n- **entre … e …** (between … and …)\n\n**De** joins with the article: de + o = **do**, de + a = **da**, de + os = **dos**, de + as = **das**.\n\n- *O livro está em cima da mesa.* (The book is on the table.)\n- *A mochila está debaixo da cadeira.* (The backpack is under the chair.)\n- *A caneta está dentro do estojo.* (The pen is inside the pencil case.)\n- *O professor está em frente do quadro.* (The teacher is in front of the board.)\n- *O gato está atrás da porta.* (The cat is behind the door.)\n- *A Ana está ao lado do Pedro.* (Ana is next to Pedro.)\n- *A mesa está entre a porta e a janela.* (The table is between the door and the window.)\n\n**Watch out!**\n\n- **Entre** has no **de**: *entre a porta e a janela*, never ~~entre da porta~~.\n- Location always takes **estar**, never **ser**: *O gato está debaixo da mesa.*\n- **De** also joins with demonstratives: *em cima desta mesa*, *dentro desse estojo*.\n- In Portugal you also hear **em frente ao** and **à frente do** for \"in front of\".",
+  "keyItems": [
+    {
+      "target": "em cima de",
+      "support": "on / on top of",
+      "note": "em cima da mesa"
+    },
+    {
+      "target": "debaixo de",
+      "support": "under",
+      "note": "debaixo da cadeira"
+    },
+    {
+      "target": "dentro de",
+      "support": "inside",
+      "note": "dentro do estojo"
+    },
+    {
+      "target": "ao lado de",
+      "support": "next to",
+      "note": "ao lado do quadro"
+    },
+    {
+      "target": "em frente de",
+      "support": "in front of / opposite",
+      "note": "also em frente a, à frente de"
+    },
+    {
+      "target": "atrás de",
+      "support": "behind",
+      "note": "atrás da porta"
+    },
+    {
+      "target": "entre … e …",
+      "support": "between … and …",
+      "note": "no de: entre a porta e a janela"
+    },
+    {
+      "target": "de + o / a / os / as",
+      "support": "do / da / dos / das"
+    },
+    {
+      "target": "Onde está …?",
+      "support": "Where is …?",
+      "note": "also Onde é que está …?"
+    },
+    {
+      "target": "o estojo",
+      "support": "the pencil case"
+    },
+    {
+      "target": "a porta / a janela",
+      "support": "the door / the window"
+    },
+    {
+      "target": "o telemóvel",
+      "support": "the mobile phone"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m2-spatial-prepositions-01",
+      "type": "translate_word",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Debaixo de» means under. «Cadeira» is feminine, so de + a = «debaixo da».",
+      "direction": "toTarget",
+      "sentence": "The cat is **under** the chair.",
+      "word": "under",
+      "answer": "debaixo da",
+      "options": ["debaixo da", "em cima da", "dentro da", "atrás da"]
+    },
+    {
+      "id": "m2-spatial-prepositions-02",
+      "type": "translate_word",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Em cima de» means on top of. «Mesa» is feminine, so «em cima da mesa».",
+      "direction": "toTarget",
+      "sentence": "The phone is **on top of** the desk.",
+      "word": "on top of",
+      "answer": "em cima da",
+      "options": ["em cima da", "debaixo da", "ao lado da", "dentro da"]
+    },
+    {
+      "id": "m2-spatial-prepositions-03",
+      "type": "translate_word",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Dentro de» means inside. «Estojo» is masculine, so de + o = «dentro do».",
+      "direction": "toTarget",
+      "sentence": "The pen is **inside** the pencil case.",
+      "word": "inside",
+      "answer": "dentro do",
+      "options": ["dentro do", "atrás do", "em cima do", "debaixo do"]
+    },
+    {
+      "id": "m2-spatial-prepositions-04",
+      "type": "translate_word",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Ao lado de» means next to. «Porta» is feminine, so «ao lado da porta».",
+      "direction": "toTarget",
+      "sentence": "The chair is **next to** the door.",
+      "word": "next to",
+      "answer": "ao lado da",
+      "options": ["ao lado da", "ao lado do", "atrás da", "em frente da"]
+    },
+    {
+      "id": "m2-spatial-prepositions-05",
+      "type": "translate_word",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Atrás de» means behind. «Sofá» is masculine, so de + o = «atrás do».",
+      "direction": "toTarget",
+      "sentence": "The bag is **behind** the sofa.",
+      "word": "behind",
+      "answer": "atrás do",
+      "options": ["atrás do", "atrás da", "debaixo do", "dentro do"]
+    },
+    {
+      "id": "m2-spatial-prepositions-06",
+      "type": "fill_gaps",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The pen is inside the pencil case and the pencil is on the table.\"",
+      "explanation": "The «de» of the place phrase joins with the article: «estojo» is masculine (do), «mesa» is feminine (da).",
+      "template": "A caneta está dentro ___ estojo e o lápis está em cima ___ mesa.",
+      "gaps": [
+        {
+          "answer": "do"
+        },
+        {
+          "answer": "da"
+        }
+      ],
+      "wordBank": ["do", "da", "de", "no", "dos"]
+    },
+    {
+      "id": "m2-spatial-prepositions-07",
+      "type": "fill_gaps",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gap: \"The dog is behind the door.\"",
+      "explanation": "«Atrás de» means behind. «Cima» alone is not enough: \"on top of\" is «em cima de».",
+      "template": "O cão está ___ da porta.",
+      "gaps": [
+        {
+          "answer": "atrás"
+        }
+      ],
+      "wordBank": ["atrás", "debaixo", "entre", "cima"]
+    },
+    {
+      "id": "m2-spatial-prepositions-08",
+      "type": "fill_gaps",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The cat is between the sofa and the chair.\"",
+      "explanation": "«Entre» has no «de»: «entre o sofá e a cadeira». The two places are joined with «e».",
+      "template": "O gato está ___ o sofá ___ a cadeira.",
+      "gaps": [
+        {
+          "answer": "entre"
+        },
+        {
+          "answer": "e"
+        }
+      ],
+      "wordBank": ["entre", "e", "do", "de", "ou"]
+    },
+    {
+      "id": "m2-spatial-prepositions-09",
+      "type": "fill_gaps",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The books are on the table and the backpacks are under the chairs.\"",
+      "explanation": "De + a = «da» (mesa, singular); de + as = «das» (cadeiras, plural).",
+      "template": "Os livros estão em cima ___ mesa e as mochilas estão debaixo ___ cadeiras.",
+      "gaps": [
+        {
+          "answer": "da"
+        },
+        {
+          "answer": "das"
+        }
+      ],
+      "wordBank": ["da", "das", "do", "dos", "de"]
+    },
+    {
+      "id": "m2-spatial-prepositions-10",
+      "type": "fill_gaps",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The students are in front of the window.\"",
+      "explanation": "The phrase is «em frente de»; «janela» is feminine, so de + a = «da».",
+      "template": "Os alunos estão ___ frente ___ janela.",
+      "gaps": [
+        {
+          "answer": "em"
+        },
+        {
+          "answer": "da"
+        }
+      ],
+      "wordBank": ["em", "da", "do", "na", "no"]
+    },
+    {
+      "id": "m2-spatial-prepositions-11",
+      "type": "fill_gaps",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"My backpack is next to the door.\"",
+      "explanation": "The phrase is «ao lado de». «Porta» is feminine, so de + a = «da».",
+      "template": "A minha mochila está ___ ___ ___ porta.",
+      "gaps": [
+        {
+          "answer": "ao"
+        },
+        {
+          "answer": "lado"
+        },
+        {
+          "answer": "da"
+        }
+      ],
+      "wordBank": ["ao", "lado", "da", "do", "de", "no"]
+    },
+    {
+      "id": "m2-spatial-prepositions-12",
+      "type": "fill_gaps",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"My pencil is inside this pencil case and yours is on that notebook (near you).\"",
+      "explanation": "«De» also joins with demonstratives: de + este = «deste» (near me), de + esse = «desse» (near you).",
+      "template": "O meu lápis está dentro ___ estojo e o teu está em cima ___ caderno.",
+      "gaps": [
+        {
+          "answer": "deste"
+        },
+        {
+          "answer": "desse"
+        }
+      ],
+      "wordBank": ["deste", "desse", "desta", "dessa", "do"]
+    },
+    {
+      "id": "m2-spatial-prepositions-13",
+      "type": "build_phrase",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"It's under the table.\"",
+      "explanation": "Location takes «estar». «Mesa» is feminine, so «debaixo da mesa».",
+      "answer": ["Está", "debaixo", "da", "mesa."],
+      "distractors": ["do", "cima", "Estão"]
+    },
+    {
+      "id": "m2-spatial-prepositions-14",
+      "type": "build_phrase",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"I'm inside the classroom.\"",
+      "explanation": "«Estar» for where you are; «sala» is feminine, so «dentro da».",
+      "answer": ["Estou", "dentro", "da", "sala."],
+      "distractors": ["do", "Está", "Sou"],
+      "acceptedAnswers": ["Eu estou dentro da sala."]
+    },
+    {
+      "id": "m2-spatial-prepositions-15",
+      "type": "build_phrase",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"The book is on top of the table.\"",
+      "explanation": "«Em cima de» + «a mesa» becomes «em cima da mesa». Location takes «estar».",
+      "answer": ["O", "livro", "está", "em", "cima", "da", "mesa."],
+      "distractors": ["do", "debaixo", "é"]
+    },
+    {
+      "id": "m2-spatial-prepositions-16",
+      "type": "build_phrase",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"The cat is under the sofa.\"",
+      "explanation": "«Sofá» is masculine, so de + o = «debaixo do sofá».",
+      "answer": ["O", "gato", "está", "debaixo", "do", "sofá."],
+      "distractors": ["da", "dentro", "é"]
+    },
+    {
+      "id": "m2-spatial-prepositions-17",
+      "type": "build_phrase",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"Ana is next to Pedro.\"",
+      "explanation": "Names take an article in Portugal: «o Pedro», so «ao lado do Pedro».",
+      "answer": ["A", "Ana", "está", "ao", "lado", "do", "Pedro."],
+      "distractors": ["da", "de", "é"]
+    },
+    {
+      "id": "m2-spatial-prepositions-18",
+      "type": "build_phrase",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"The pens are inside the pencil case.\"",
+      "explanation": "A plural subject takes «estão». «Estojo» is masculine: «dentro do estojo».",
+      "answer": ["As", "canetas", "estão", "dentro", "do", "estojo."],
+      "distractors": ["está", "da", "de"]
+    },
+    {
+      "id": "m2-spatial-prepositions-19",
+      "type": "build_phrase",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"The table is between the door and the window.\"",
+      "explanation": "«Entre» never takes «de»: «entre a porta e a janela».",
+      "answer": ["A", "mesa", "está", "entre", "a", "porta", "e", "a", "janela."],
+      "distractors": ["da", "do", "de"]
+    },
+    {
+      "id": "m2-spatial-prepositions-20",
+      "type": "build_phrase",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"My notebook is under the books.\"",
+      "explanation": "«Livros» is masculine plural, so de + os = «dos».",
+      "answer": ["O", "meu", "caderno", "está", "debaixo", "dos", "livros."],
+      "distractors": ["das", "minha", "do"]
+    },
+    {
+      "id": "m2-spatial-prepositions-21",
+      "type": "build_phrase",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"The teacher is in front of the board.\"",
+      "explanation": "The phrase is «em frente de»; «quadro» is masculine, so «em frente do quadro».",
+      "answer": ["O", "professor", "está", "em", "frente", "do", "quadro."],
+      "distractors": ["da", "na", "é"],
+      "acceptedAnswers": [
+        "O professor está em frente ao quadro.",
+        "O professor está à frente do quadro."
+      ]
+    },
+    {
+      "id": "m2-spatial-prepositions-22",
+      "type": "build_phrase",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"Rita's dog is behind the door.\"",
+      "explanation": "«Da Rita» is de + a Rita; «atrás da porta» is de + a porta.",
+      "answer": ["O", "cão", "da", "Rita", "está", "atrás", "da", "porta."],
+      "distractors": ["do", "de", "é"]
+    },
+    {
+      "id": "m2-spatial-prepositions-23",
+      "type": "build_phrase",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say to a friend: \"Your backpack is next to my chair.\"",
+      "explanation": "«Ao lado de» + «a minha cadeira» becomes «ao lado da minha cadeira». «Mochila» is feminine: «a tua».",
+      "answer": ["A", "tua", "mochila", "está", "ao", "lado", "da", "minha", "cadeira."],
+      "distractors": ["teu", "do", "meu"]
+    },
+    {
+      "id": "m2-spatial-prepositions-24",
+      "type": "question_for_answer",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You ask where the book is. Your friend answers: «Está em cima da mesa.» What did you ask?",
+      "explanation": "«Onde» asks where, and location takes «estar»: «Onde está …?».",
+      "givenAnswer": "Está em cima da mesa.",
+      "answer": ["Onde", "está", "o", "livro?"],
+      "distractors": ["Como", "é", "a"],
+      "acceptedAnswers": ["Onde é que está o livro?", "Onde é que o livro está?"]
+    },
+    {
+      "id": "m2-spatial-prepositions-25",
+      "type": "question_for_answer",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «O meu telemóvel está dentro da mochila.» What did you ask? (informal)",
+      "explanation": "Location takes «estar». «Telemóvel» is masculine, so to a friend it is «o teu telemóvel».",
+      "givenAnswer": "O meu telemóvel está dentro da mochila.",
+      "answer": ["Onde", "está", "o", "teu", "telemóvel?"],
+      "distractors": ["tua", "meu", "é"],
+      "acceptedAnswers": ["Onde é que está o teu telemóvel?", "Onde é que o teu telemóvel está?"]
+    },
+    {
+      "id": "m2-spatial-prepositions-26",
+      "type": "question_for_answer",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Os lápis estão dentro do estojo.» What did you ask?",
+      "explanation": "«Os lápis» is plural, so «estão». Location never takes «ser».",
+      "givenAnswer": "Os lápis estão dentro do estojo.",
+      "answer": ["Onde", "estão", "os", "lápis?"],
+      "distractors": ["está", "as", "são"],
+      "acceptedAnswers": ["Onde é que estão os lápis?", "Onde é que os lápis estão?"]
+    },
+    {
+      "id": "m2-spatial-prepositions-27",
+      "type": "question_for_answer",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You ask if the chair is next to the window. Your friend answers: «Sim, está ao lado da janela.» What did you ask?",
+      "explanation": "A yes/no question keeps statement order. «Janela» is feminine: «ao lado da janela».",
+      "givenAnswer": "Sim, está ao lado da janela.",
+      "answer": ["A", "cadeira", "está", "ao", "lado", "da", "janela?"],
+      "distractors": ["do", "é", "de"]
+    },
+    {
+      "id": "m2-spatial-prepositions-28",
+      "type": "question_for_answer",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You ask where Inês is. Your friend answers: «A Inês está entre o Tiago e a Sofia.» What did you ask?",
+      "explanation": "Names take an article: «a Inês». Location takes «estar»: «Onde está …?».",
+      "givenAnswer": "A Inês está entre o Tiago e a Sofia.",
+      "answer": ["Onde", "está", "a", "Inês?"],
+      "distractors": ["Quem", "é", "o"],
+      "acceptedAnswers": ["Onde é que está a Inês?", "Onde é que a Inês está?"]
+    },
+    {
+      "id": "m2-spatial-prepositions-29",
+      "type": "question_for_answer",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You ask whether the dog is under the sofa. Your friend answers: «Não, está atrás do sofá.» What did you ask?",
+      "explanation": "«Debaixo de» means under; «sofá» is masculine, so «debaixo do sofá».",
+      "givenAnswer": "Não, está atrás do sofá.",
+      "answer": ["O", "cão", "está", "debaixo", "do", "sofá?"],
+      "distractors": ["da", "dentro", "é"]
+    },
+    {
+      "id": "m2-spatial-prepositions-30",
+      "type": "question_for_answer",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You ask whether the books are on the table. Your friend answers: «Não, estão em cima da cadeira.» What did you ask?",
+      "explanation": "«Os livros» is plural, so «estão». «Mesa» is feminine: «em cima da mesa».",
+      "givenAnswer": "Não, estão em cima da cadeira.",
+      "answer": ["Os", "livros", "estão", "em", "cima", "da", "mesa?"],
+      "distractors": ["está", "do", "debaixo"]
+    },
+    {
+      "id": "m2-spatial-prepositions-31",
+      "type": "question_for_answer",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You ask what is behind the board. The teacher answers: «Há um mapa atrás do quadro.» What did you ask?",
+      "explanation": "«O que há …?» asks what there is. «Quadro» is masculine: «atrás do quadro».",
+      "givenAnswer": "Há um mapa atrás do quadro.",
+      "answer": ["O", "que", "há", "atrás", "do", "quadro?"],
+      "distractors": ["Onde", "da", "de"],
+      "acceptedAnswers": [
+        "O que é que há atrás do quadro?",
+        "O que está atrás do quadro?",
+        "O que é que está atrás do quadro?"
+      ]
+    },
+    {
+      "id": "m2-spatial-prepositions-32",
+      "type": "question_for_answer",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You ask a friend where they are. They answer: «Estou entre a porta e a janela.» What did you ask? (informal)",
+      "explanation": "To a friend, «estar» is «estás». Location never takes «ser».",
+      "givenAnswer": "Estou entre a porta e a janela.",
+      "answer": ["Onde", "estás?"],
+      "distractors": ["está?", "és?", "Como"],
+      "acceptedAnswers": ["Onde é que estás?", "Onde é que tu estás?"]
+    },
+    {
+      "id": "m2-spatial-prepositions-33",
+      "type": "find_error",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Mesa» is feminine singular, so de + a = «da»: «em cima da mesa».",
+      "sentence": ["O", "livro", "está", "em", "cima", "do", "mesa."],
+      "wrongIndex": 5,
+      "correction": "da",
+      "options": ["da", "de", "das"]
+    },
+    {
+      "id": "m2-spatial-prepositions-34",
+      "type": "find_error",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Estojo» is masculine singular, so de + o = «do»: «dentro do estojo».",
+      "sentence": ["A", "caneta", "está", "dentro", "da", "estojo."],
+      "wrongIndex": 4,
+      "correction": "do",
+      "options": ["do", "de", "dos"]
+    },
+    {
+      "id": "m2-spatial-prepositions-35",
+      "type": "find_error",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The phrase is «ao lado de», and de + a porta = «da porta».",
+      "sentence": ["A", "cadeira", "está", "ao", "lado", "a", "porta."],
+      "wrongIndex": 5,
+      "correction": "da",
+      "options": ["da", "do", "de"]
+    },
+    {
+      "id": "m2-spatial-prepositions-36",
+      "type": "find_error",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Location takes «estar», not «ser»: «O gato está debaixo da cama».",
+      "sentence": ["O", "gato", "é", "debaixo", "da", "cama."],
+      "wrongIndex": 2,
+      "correction": "está",
+      "options": ["está", "estão", "és"]
+    },
+    {
+      "id": "m2-spatial-prepositions-37",
+      "type": "find_error",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Entre» never takes «de»: «entre a porta e a janela».",
+      "sentence": ["Os", "alunos", "estão", "entre", "da", "porta", "e", "a", "janela."],
+      "wrongIndex": 4,
+      "correction": "a",
+      "options": ["a", "de", "o"]
+    },
+    {
+      "id": "m2-spatial-prepositions-38",
+      "type": "about_me",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Answer with «Está» + a place phrase. «De» joins with the article: «dentro da mochila», «ao lado do computador».",
+      "question": "Onde está o teu telemóvel?",
+      "sampleAnswer": "Está dentro da mochila.",
+      "hints": ["em", "cima", "mesa", "ao", "lado", "do", "computador"]
+    },
+    {
+      "id": "m2-spatial-prepositions-39",
+      "type": "about_me",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «A minha mochila está …» and a place phrase: «debaixo da cadeira», «ao lado da porta».",
+      "question": "Onde está a tua mochila?",
+      "sampleAnswer": "A minha mochila está debaixo da cadeira.",
+      "hints": ["ao", "lado", "mesa", "porta", "em", "cima"]
+    },
+    {
+      "id": "m2-spatial-prepositions-40",
+      "type": "about_me",
+      "topicId": "m2-spatial-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Start with the place, «Em cima da minha mesa», then «há» + the objects. «Há» never changes.",
+      "question": "O que há em cima da tua mesa?",
+      "sampleAnswer": "Em cima da minha mesa há um livro e uma caneta.",
+      "hints": ["dois", "lápis", "caderno", "computador", "três"]
+    }
+  ]
+}

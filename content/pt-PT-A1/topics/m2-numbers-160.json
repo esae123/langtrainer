@@ -1,0 +1,618 @@
+{
+  "id": "m2-numbers-160",
+  "moduleId": "m2",
+  "title": "Numbers 51–160",
+  "kind": "vocabulary",
+  "context": "## Numbers 51–160\n\nThe tens after fifty: **sessenta** (60), **setenta** (70), **oitenta** (80), **noventa** (90). Join tens and units with **e**: *cinquenta e um* (51), *setenta e quatro* (74), *noventa e nove* (99).\n\nOne hundred on its own is **cem**. As soon as something follows, it becomes **cento e …**:\n\n- *cem euros* (100 euros)\n- *cento e um* (101), *cento e dezasseis* (116)\n- *cento e cinquenta* (150), *cento e vinte e cinco* (125)\n\nExamples:\n\n- *O meu avô tem oitenta e dois anos.* (My grandfather is 82.)\n- *O casaco custa cem euros.* (The jacket costs 100 euros.)\n- *O livro tem cento e uma páginas.* (The book has 101 pages.)\n- *São noventa e cinco euros, por favor.* (That's 95 euros, please.)\n- *Quanto custam os sapatos?* (How much are the shoes?)\n\n**Watch out!**\n\n- **Sessenta** (60) and **setenta** (70) are easy to mix up: **s**essenta like **s**eis, **set**enta like **set**e.\n- **Um/uma** and **dois/duas** agree with the noun at the end of any number: *cento e uma páginas, noventa e duas casas*. **Cem** never changes.\n- Portugal writes **catorze**, **dezasseis**, **dezassete**, **dezanove**: *cento e dezanove* (119).",
+  "keyItems": [
+    {
+      "target": "sessenta",
+      "support": "sixty"
+    },
+    {
+      "target": "setenta",
+      "support": "seventy"
+    },
+    {
+      "target": "oitenta",
+      "support": "eighty"
+    },
+    {
+      "target": "noventa",
+      "support": "ninety"
+    },
+    {
+      "target": "cinquenta e um / cinquenta e uma",
+      "support": "fifty-one",
+      "note": "agrees with the noun"
+    },
+    {
+      "target": "noventa e dois / noventa e duas",
+      "support": "ninety-two",
+      "note": "agrees with the noun"
+    },
+    {
+      "target": "cem",
+      "support": "one hundred",
+      "note": "only for exactly 100; never changes"
+    },
+    {
+      "target": "cento e um / cento e uma",
+      "support": "one hundred and one"
+    },
+    {
+      "target": "cento e dez",
+      "support": "one hundred and ten"
+    },
+    {
+      "target": "cento e dezasseis",
+      "support": "one hundred and sixteen",
+      "note": "PT spelling: dezasseis"
+    },
+    {
+      "target": "cento e cinquenta",
+      "support": "one hundred and fifty"
+    },
+    {
+      "target": "cento e sessenta",
+      "support": "one hundred and sixty"
+    },
+    {
+      "target": "Quanto custa …? / Quanto custam …?",
+      "support": "How much is …? / How much are …?"
+    },
+    {
+      "target": "São … euros.",
+      "support": "That's … euros."
+    },
+    {
+      "target": "Quantos / Quantas …?",
+      "support": "How many …?",
+      "note": "agrees with the noun"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m2-numbers-160-01",
+      "type": "translate_word",
+      "topicId": "m2-numbers-160",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "70 is «setenta», built on «sete» (7). Don't mix it up with «sessenta» (60), built on «seis».",
+      "direction": "toTarget",
+      "sentence": "My grandfather is **seventy**.",
+      "word": "seventy",
+      "answer": "setenta",
+      "options": ["setenta", "sessenta", "oitenta", "dezassete"]
+    },
+    {
+      "id": "m2-numbers-160-02",
+      "type": "translate_word",
+      "topicId": "m2-numbers-160",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Exactly 100 is «cem». «Cento» is only used when more follows: «cento e dez».",
+      "direction": "toTarget",
+      "sentence": "The jacket costs **a hundred** euros.",
+      "word": "a hundred",
+      "answer": "cem",
+      "options": ["cem", "cento", "cento e dez", "noventa"]
+    },
+    {
+      "id": "m2-numbers-160-03",
+      "type": "number_sequence",
+      "topicId": "m2-numbers-160",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Which number is missing? Write it as a word.",
+      "explanation": "Counting in tens: cinquenta, sessenta, setenta, oitenta.",
+      "sequence": [50, 60, null, 80],
+      "answerWords": ["setenta"],
+      "options": ["setenta", "sessenta", "noventa", "oitenta"]
+    },
+    {
+      "id": "m2-numbers-160-04",
+      "type": "fill_gaps",
+      "topicId": "m2-numbers-160",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gap: «My uncle is sixty.»",
+      "explanation": "60 is «sessenta», from «seis». «Setenta» (70) comes from «sete».",
+      "template": "O meu tio tem ___ anos.",
+      "gaps": [
+        {
+          "answer": "sessenta"
+        }
+      ],
+      "wordBank": ["sessenta", "setenta", "seis", "dezasseis"]
+    },
+    {
+      "id": "m2-numbers-160-05",
+      "type": "build_phrase",
+      "topicId": "m2-numbers-160",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: «It costs sixty euros.»",
+      "explanation": "60 is «sessenta». One thing costs: «custa»; «custam» is for plural things.",
+      "answer": ["Custa", "sessenta", "euros."],
+      "distractors": ["setenta", "seis", "Custam"]
+    },
+    {
+      "id": "m2-numbers-160-06",
+      "type": "question_for_answer",
+      "topicId": "m2-numbers-160",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "In a shop the assistant answers: «Custa cem euros.» What did you ask?",
+      "explanation": "Ask a price with «Quanto custa?». «Quanto» does not change here, and one item takes «custa».",
+      "givenAnswer": "Custa cem euros.",
+      "answer": ["Quanto", "custa?"],
+      "distractors": ["Quantos", "Quanta", "custam?"],
+      "acceptedAnswers": ["Quanto é que custa?"]
+    },
+    {
+      "id": "m2-numbers-160-07",
+      "type": "find_error",
+      "topicId": "m2-numbers-160",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Exactly 100 is «cem»: «Tenho cem euros». «Cento» only appears before «e …», as in «cento e dez».",
+      "sentence": ["Tenho", "cento", "euros."],
+      "wrongIndex": 1,
+      "correction": "cem",
+      "options": ["cem", "centos", "centas"]
+    },
+    {
+      "id": "m2-numbers-160-08",
+      "type": "about_me",
+      "topicId": "m2-numbers-160",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself (or about someone you know).",
+      "explanation": "Age uses «ter … anos». For 81–99 join the units with «e»: «oitenta e dois anos».",
+      "question": "Quantos anos tem o teu avô?",
+      "sampleAnswer": "O meu avô tem oitenta anos.",
+      "hints": ["setenta", "noventa", "sessenta", "e", "dois", "três"]
+    },
+    {
+      "id": "m2-numbers-160-09",
+      "type": "translate_word",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Above 100, «cem» becomes «cento e …»: «cento e cinquenta». «Cento e quinze» is 115.",
+      "direction": "toTarget",
+      "sentence": "The book has **one hundred and fifty** pages.",
+      "word": "one hundred and fifty",
+      "answer": "cento e cinquenta",
+      "options": ["cento e cinquenta", "cem e cinquenta", "cento e quinze", "cento e sessenta"]
+    },
+    {
+      "id": "m2-numbers-160-10",
+      "type": "translate_word",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Dois» agrees with the noun even inside a big number: «casas» is feminine, so «noventa e duas casas».",
+      "direction": "toTarget",
+      "sentence": "Our street has **ninety-two** houses (a casa is feminine).",
+      "word": "ninety-two",
+      "answer": "noventa e duas",
+      "options": ["noventa e duas", "noventa e dois", "setenta e duas", "noventa e doze"]
+    },
+    {
+      "id": "m2-numbers-160-11",
+      "type": "number_sequence",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Which number is missing? Write it as a word.",
+      "explanation": "After noventa comes exactly 100: «cem». «Cento» is only used when more follows.",
+      "sequence": [70, 80, 90, null],
+      "answerWords": ["cem"],
+      "options": ["cem", "cento", "noventa e um", "cento e dez"]
+    },
+    {
+      "id": "m2-numbers-160-12",
+      "type": "number_sequence",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Which number is missing? Write it as a word.",
+      "explanation": "104 is «cento e quatro»: «cento» plus «e» plus the units. «Cento e catorze» is 114.",
+      "sequence": [101, 102, 103, null],
+      "answerWords": ["cento e quatro"],
+      "options": ["cento e quatro", "cem e quatro", "cento e catorze", "cento e cinco"]
+    },
+    {
+      "id": "m2-numbers-160-13",
+      "type": "fill_gaps",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «The jacket costs 100 euros and the sweater 60.»",
+      "explanation": "Exactly 100 is «cem», never «cento» on its own. 60 is «sessenta».",
+      "template": "O casaco custa ___ euros e a camisola custa ___.",
+      "gaps": [
+        {
+          "answer": "cem"
+        },
+        {
+          "answer": "sessenta"
+        }
+      ],
+      "wordBank": ["cem", "sessenta", "cento", "setenta", "seis"]
+    },
+    {
+      "id": "m2-numbers-160-14",
+      "type": "fill_gaps",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «The ticket costs 135 euros.»",
+      "explanation": "Above 100 use «cento», and put «e» between every part: «cento e trinta e cinco».",
+      "template": "O bilhete custa ___ e trinta e ___ euros.",
+      "gaps": [
+        {
+          "answer": "cento"
+        },
+        {
+          "answer": "cinco"
+        }
+      ],
+      "wordBank": ["cento", "cinco", "cem", "quinze", "cinquenta"]
+    },
+    {
+      "id": "m2-numbers-160-15",
+      "type": "fill_gaps",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «My grandmother is 97.»",
+      "explanation": "97 is «noventa» (90) «e sete» (7). «Dezassete» is 17 and «setenta» is 70.",
+      "template": "A minha avó tem ___ e ___ anos.",
+      "gaps": [
+        {
+          "answer": "noventa"
+        },
+        {
+          "answer": "sete"
+        }
+      ],
+      "wordBank": ["noventa", "sete", "setenta", "dezassete"]
+    },
+    {
+      "id": "m2-numbers-160-16",
+      "type": "fill_gaps",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «The plane has 150 seats.»",
+      "explanation": "150 is «cento e cinquenta». «Cem» is only for exactly 100.",
+      "template": "O avião tem ___ e ___ lugares.",
+      "gaps": [
+        {
+          "answer": "cento"
+        },
+        {
+          "answer": "cinquenta"
+        }
+      ],
+      "wordBank": ["cento", "cinquenta", "cem", "quinze", "sessenta"]
+    },
+    {
+      "id": "m2-numbers-160-17",
+      "type": "build_phrase",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «My grandmother is a hundred.»",
+      "explanation": "Exactly 100 is «cem». Age always uses «ter»: «tem cem anos».",
+      "answer": ["A", "minha", "avó", "tem", "cem", "anos."],
+      "distractors": ["cento", "é", "avô"]
+    },
+    {
+      "id": "m2-numbers-160-18",
+      "type": "build_phrase",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «My grandfather is seventy-four.»",
+      "explanation": "74 is «setenta e quatro». «Catorze» is 14, and age uses «ter», not «ser».",
+      "answer": ["O", "meu", "avô", "tem", "setenta", "e", "quatro", "anos."],
+      "distractors": ["sessenta", "é", "catorze"]
+    },
+    {
+      "id": "m2-numbers-160-19",
+      "type": "build_phrase",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «That's eighty-five euros.»",
+      "explanation": "Prices in euros are plural: «São … euros». 85 is «oitenta e cinco»; «quinze» is 15.",
+      "answer": ["São", "oitenta", "e", "cinco", "euros."],
+      "distractors": ["setenta", "oito", "quinze"]
+    },
+    {
+      "id": "m2-numbers-160-20",
+      "type": "question_for_answer",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «O meu avô tem noventa anos.» What did you ask? (informal)",
+      "explanation": "Ask age with «Quantos anos tem …?». «Anos» is masculine plural, so «quantos»; about the grandfather, «tem».",
+      "givenAnswer": "O meu avô tem noventa anos.",
+      "answer": ["Quantos", "anos", "tem", "o", "teu", "avô?"],
+      "distractors": ["Quantas", "tens", "tua"],
+      "acceptedAnswers": ["Quantos anos é que tem o teu avô?", "Quantos anos é que o teu avô tem?"]
+    },
+    {
+      "id": "m2-numbers-160-21",
+      "type": "question_for_answer",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "In a shop the assistant answers: «Custam noventa euros.» You were asking about the shoes. What did you ask?",
+      "explanation": "«Os sapatos» is plural, so «custam». «Quanto» stays the same when asking a price.",
+      "givenAnswer": "Custam noventa euros.",
+      "answer": ["Quanto", "custam", "os", "sapatos?"],
+      "distractors": ["custa", "Quantos", "as"],
+      "acceptedAnswers": ["Quanto é que custam os sapatos?"]
+    },
+    {
+      "id": "m2-numbers-160-22",
+      "type": "question_for_answer",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You ask about the school. Your friend answers: «Tem cento e sessenta alunos.» What did you ask?",
+      "explanation": "«Alunos» is masculine plural, so «quantos». The school is one thing, so the verb is «tem».",
+      "givenAnswer": "Tem cento e sessenta alunos.",
+      "answer": ["Quantos", "alunos", "tem", "a", "escola?"],
+      "distractors": ["Quantas", "têm", "o"],
+      "acceptedAnswers": [
+        "Quantos alunos é que tem a escola?",
+        "Quantos alunos é que a escola tem?"
+      ]
+    },
+    {
+      "id": "m2-numbers-160-23",
+      "type": "question_for_answer",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Sim, tenho cem euros.» What did you ask? (informal)",
+      "explanation": "Exactly 100 is «cem». To a friend, «ter» is «tens».",
+      "givenAnswer": "Sim, tenho cem euros.",
+      "answer": ["Tens", "cem", "euros?"],
+      "distractors": ["cento", "Tem", "euro?"],
+      "acceptedAnswers": ["Tu tens cem euros?"]
+    },
+    {
+      "id": "m2-numbers-160-24",
+      "type": "find_error",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "When something follows 100, «cem» becomes «cento»: «cento e dez euros».",
+      "sentence": ["O", "bilhete", "custa", "cem", "e", "dez", "euros."],
+      "wrongIndex": 3,
+      "correction": "cento",
+      "options": ["cento", "centos", "centa"]
+    },
+    {
+      "id": "m2-numbers-160-25",
+      "type": "about_me",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Say the number with «É o número …». Remember «cem» for 100 and «cento e …» above it.",
+      "question": "Qual é o número da tua casa?",
+      "sampleAnswer": "É o número cento e doze.",
+      "hints": ["cinquenta", "sessenta", "setenta", "noventa", "cem", "um", "dois"]
+    },
+    {
+      "id": "m2-numbers-160-26",
+      "type": "about_me",
+      "topicId": "m2-numbers-160",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself (a rough price is fine).",
+      "explanation": "Price: «custa … euros». Exactly 100 is «cem»; above it, «cento e …» with «e» between every part.",
+      "question": "Quanto custa o teu telemóvel?",
+      "sampleAnswer": "O meu telemóvel custa cento e cinquenta euros.",
+      "hints": ["cem", "noventa", "sessenta", "setenta", "oitenta", "cinco"]
+    },
+    {
+      "id": "m2-numbers-160-27",
+      "type": "number_sequence",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Which number is missing? Write it as a word.",
+      "explanation": "116 is «cento e dezasseis», with the Portuguese spelling «dezasseis».",
+      "sequence": [114, 115, null, 117],
+      "answerWords": ["cento e dezasseis"],
+      "options": ["cento e dezasseis", "cem e dezasseis", "cento e seis", "cento e dezassete"]
+    },
+    {
+      "id": "m2-numbers-160-28",
+      "type": "fill_gaps",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «The room has 102 chairs.» (a cadeira is feminine)",
+      "explanation": "Above 100 use «cento e …». «Dois» agrees with the noun: «cadeiras» is feminine, so «duas».",
+      "template": "A sala tem ___ e ___ cadeiras.",
+      "gaps": [
+        {
+          "answer": "cento"
+        },
+        {
+          "answer": "duas"
+        }
+      ],
+      "wordBank": ["cento", "duas", "cem", "dois", "doze"]
+    },
+    {
+      "id": "m2-numbers-160-29",
+      "type": "fill_gaps",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «That's 116 euros, please.»",
+      "explanation": "116 is «cento e dezasseis». «Sessenta» is 60 and «seis» is 6.",
+      "template": "São ___ e ___ euros, por favor.",
+      "gaps": [
+        {
+          "answer": "cento"
+        },
+        {
+          "answer": "dezasseis"
+        }
+      ],
+      "wordBank": ["cento", "dezasseis", "cem", "sessenta", "seis"]
+    },
+    {
+      "id": "m2-numbers-160-30",
+      "type": "build_phrase",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «The rucksack costs ninety-nine euros.»",
+      "explanation": "99 is «noventa e nove». «Dezanove» is 19. One thing costs: «custa».",
+      "answer": ["A", "mochila", "custa", "noventa", "e", "nove", "euros."],
+      "distractors": ["dezanove", "oitenta", "custam"]
+    },
+    {
+      "id": "m2-numbers-160-31",
+      "type": "build_phrase",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «The book has a hundred and one pages.»",
+      "explanation": "Above 100 «cem» becomes «cento e …», and «um» agrees with the feminine «páginas»: «cento e uma».",
+      "answer": ["O", "livro", "tem", "cento", "e", "uma", "páginas."],
+      "distractors": ["cem", "um", "página."]
+    },
+    {
+      "id": "m2-numbers-160-32",
+      "type": "build_phrase",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «The ticket costs a hundred and twenty-five euros.»",
+      "explanation": "Put «e» between every part: «cento e vinte e cinco». «Cem» is only for exactly 100.",
+      "answer": ["O", "bilhete", "custa", "cento", "e", "vinte", "e", "cinco", "euros."],
+      "distractors": ["cem", "quinze", "custam"]
+    },
+    {
+      "id": "m2-numbers-160-33",
+      "type": "build_phrase",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «The school has ninety-one girls.»",
+      "explanation": "«Raparigas» is feminine, so the number ends in «uma»: «noventa e uma raparigas».",
+      "answer": ["A", "escola", "tem", "noventa", "e", "uma", "raparigas."],
+      "distractors": ["um", "setenta", "rapariga."]
+    },
+    {
+      "id": "m2-numbers-160-34",
+      "type": "build_phrase",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «The train has a hundred and sixty seats.»",
+      "explanation": "160 is «cento e sessenta». In Portugal a train is «o comboio».",
+      "answer": ["O", "comboio", "tem", "cento", "e", "sessenta", "lugares."],
+      "distractors": ["cem", "setenta", "seis"]
+    },
+    {
+      "id": "m2-numbers-160-35",
+      "type": "build_phrase",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «The bicycle costs a hundred and fifteen euros.»",
+      "explanation": "115 is «cento e quinze»; «cento e cinquenta» would be 150.",
+      "answer": ["A", "bicicleta", "custa", "cento", "e", "quinze", "euros."],
+      "distractors": ["cem", "cinquenta", "custam"]
+    },
+    {
+      "id": "m2-numbers-160-36",
+      "type": "question_for_answer",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You ask about the book. Your friend answers: «Tem cento e vinte páginas.» What did you ask?",
+      "explanation": "«Páginas» is feminine plural, so «quantas». The book is one thing: «tem».",
+      "givenAnswer": "Tem cento e vinte páginas.",
+      "answer": ["Quantas", "páginas", "tem", "o", "livro?"],
+      "distractors": ["Quantos", "Quanto", "têm"],
+      "acceptedAnswers": [
+        "Quantas páginas é que tem o livro?",
+        "Quantas páginas é que o livro tem?"
+      ]
+    },
+    {
+      "id": "m2-numbers-160-37",
+      "type": "question_for_answer",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Moro no número cento e trinta.» What did you ask? (informal)",
+      "explanation": "Ask with «Em que número …?» and the tu form «moras». The answer «no número» is «em + o número».",
+      "givenAnswer": "Moro no número cento e trinta.",
+      "answer": ["Em", "que", "número", "moras?"],
+      "distractors": ["mora?", "Qual", "No"],
+      "acceptedAnswers": ["Em que número é que moras?"]
+    },
+    {
+      "id": "m2-numbers-160-38",
+      "type": "question_for_answer",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "An elderly lady answers: «Tenho oitenta e sete anos.» What did you ask? (formal: a senhora)",
+      "explanation": "Formal «a senhora» takes the third-person form «tem». «Anos» is masculine, so «quantos».",
+      "givenAnswer": "Tenho oitenta e sete anos.",
+      "answer": ["Quantos", "anos", "tem", "a", "senhora?"],
+      "distractors": ["tens", "Quantas", "o"],
+      "acceptedAnswers": ["Quantos anos é que a senhora tem?", "Quantos anos é que tem a senhora?"]
+    },
+    {
+      "id": "m2-numbers-160-39",
+      "type": "find_error",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The last part of the number agrees with the noun: «páginas» is feminine, so «cento e uma páginas».",
+      "sentence": ["O", "livro", "tem", "cento", "e", "um", "páginas."],
+      "wrongIndex": 5,
+      "correction": "uma",
+      "options": ["uma", "uns", "umas"]
+    },
+    {
+      "id": "m2-numbers-160-40",
+      "type": "find_error",
+      "topicId": "m2-numbers-160",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Casas» is feminine, so «dois» becomes «duas»: «noventa e duas casas».",
+      "sentence": ["A", "rua", "tem", "noventa", "e", "dois", "casas."],
+      "wrongIndex": 5,
+      "correction": "duas",
+      "options": ["duas", "doze", "dez"]
+    }
+  ]
+}

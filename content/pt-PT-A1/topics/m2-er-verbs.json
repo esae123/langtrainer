@@ -1,0 +1,638 @@
+{
+  "id": "m2-er-verbs",
+  "moduleId": "m2",
+  "title": "Regular -er verbs",
+  "kind": "grammar",
+  "context": "## Regular -er verbs\n\nVerbs like **viver** (to live), **comer** (to eat), **beber** (to drink), **escrever** (to write), **aprender** (to learn) and **vender** (to sell) drop **-er** and add these endings:\n\n| | -er: comer | -ar: falar |\n|---|---|---|\n| eu | com**o** | fal**o** |\n| tu | com**es** | fal**as** |\n| você / ele / ela | com**e** | fal**a** |\n| nós | com**emos** | fal**amos** |\n| vocês / eles / elas | com**em** | fal**am** |\n\nOnly **eu** is the same (-o). Everywhere else the -ar **a** becomes **e**.\n\n- *Vivo em Lisboa.* (I live in Lisbon.)\n- *Bebes café?* (Do you drink coffee?)\n- *A Ana escreve uma carta.* (Ana writes a letter.)\n- *Aprendemos português.* (We learn Portuguese.)\n- *Eles vendem fruta no mercado.* (They sell fruit at the market.)\n- *Não como carne.* (I don't eat meat.)\n\n**Watch out!**\n\n- Don't mix the endings: *falamos* but *comemos*, *falam* but *comem*.\n- **Não** goes right before the verb: *O João não bebe vinho.*\n- The subject pronoun is often dropped, because the ending already shows the person: *Vivo no Porto.*\n- **Viver** and **morar** both mean \"to live (somewhere)\".",
+  "keyItems": [
+    {
+      "target": "viver",
+      "support": "to live",
+      "note": "vivo em Lisboa; = morar"
+    },
+    {
+      "target": "comer",
+      "support": "to eat"
+    },
+    {
+      "target": "beber",
+      "support": "to drink"
+    },
+    {
+      "target": "escrever",
+      "support": "to write"
+    },
+    {
+      "target": "aprender",
+      "support": "to learn"
+    },
+    {
+      "target": "vender",
+      "support": "to sell"
+    },
+    {
+      "target": "eu como",
+      "support": "I eat",
+      "note": "ending -o (same as -ar)"
+    },
+    {
+      "target": "tu comes",
+      "support": "you eat (informal)",
+      "note": "ending -es (-ar: -as)"
+    },
+    {
+      "target": "você / ele / ela come",
+      "support": "you (formal) / he / she eats",
+      "note": "ending -e (-ar: -a)"
+    },
+    {
+      "target": "nós comemos",
+      "support": "we eat",
+      "note": "ending -emos (-ar: -amos)"
+    },
+    {
+      "target": "vocês / eles / elas comem",
+      "support": "you (plural) / they eat",
+      "note": "ending -em (-ar: -am)"
+    },
+    {
+      "target": "não + verb",
+      "support": "not",
+      "note": "não como carne"
+    },
+    {
+      "target": "o pão / a sopa / o peixe / a carne / a fruta",
+      "support": "bread / soup / fish / meat / fruit"
+    },
+    {
+      "target": "a água / o café / o chá / o leite / o sumo",
+      "support": "water / coffee / tea / milk / juice"
+    },
+    {
+      "target": "ao almoço / ao jantar / de manhã / à noite",
+      "support": "at lunch / at dinner / in the morning / at night"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m2-er-verbs-01",
+      "type": "translate_word",
+      "topicId": "m2-er-verbs",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Beber» means to drink. With «eu» the ending is -o: «bebo».",
+      "direction": "toTarget",
+      "sentence": "I **drink** coffee in the morning.",
+      "word": "drink",
+      "answer": "bebo",
+      "options": ["bebo", "como", "bebe", "vivo"]
+    },
+    {
+      "id": "m2-er-verbs-02",
+      "type": "translate_word",
+      "topicId": "m2-er-verbs",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Aprender» means to learn. «A Ana» is ela, so the ending is -e: «aprende».",
+      "direction": "toTarget",
+      "sentence": "Ana **learns** Portuguese in Lisbon.",
+      "word": "learns",
+      "answer": "aprende",
+      "options": ["aprende", "aprendes", "vende", "aprendem"]
+    },
+    {
+      "id": "m2-er-verbs-03",
+      "type": "translate_word",
+      "topicId": "m2-er-verbs",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Viver» means to live. With «nós» the -er ending is -emos: «vivemos».",
+      "direction": "toTarget",
+      "sentence": "We **live** in Coimbra.",
+      "word": "live",
+      "answer": "vivemos",
+      "options": ["vivemos", "vivem", "vendemos", "vivo"]
+    },
+    {
+      "id": "m2-er-verbs-04",
+      "type": "translate_word",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Vender» means to sell. «Os meus pais» is eles, so the ending is -em: «vendem».",
+      "direction": "toTarget",
+      "sentence": "My parents **sell** books.",
+      "word": "sell",
+      "answer": "vendem",
+      "options": ["vendem", "vende", "vivem", "bebem"]
+    },
+    {
+      "id": "m2-er-verbs-05",
+      "type": "translate_word",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold (talking to a friend).",
+      "explanation": "You talk to a friend (tu), so «escrever» takes -es: «escreves».",
+      "direction": "toTarget",
+      "sentence": "Tiago, you **write** very well!",
+      "word": "write",
+      "answer": "escreves",
+      "options": ["escreves", "escreve", "escrevem", "aprendes"]
+    },
+    {
+      "id": "m2-er-verbs-06",
+      "type": "fill_gaps",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I eat bread and drink coffee.\"",
+      "explanation": "With «eu», -er verbs end in -o: «como», «bebo».",
+      "template": "Eu ___ pão e ___ café.",
+      "gaps": [
+        {
+          "answer": "como"
+        },
+        {
+          "answer": "bebo"
+        }
+      ],
+      "wordBank": ["como", "bebo", "come", "bebe", "comes"]
+    },
+    {
+      "id": "m2-er-verbs-07",
+      "type": "fill_gaps",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with «viver»: \"You live in Lisbon and I live in Porto.\" (informal)",
+      "explanation": "«Tu» takes -es (vives) and «eu» takes -o (vivo).",
+      "template": "Tu ___ em Lisboa e eu ___ no Porto.",
+      "gaps": [
+        {
+          "answer": "vives"
+        },
+        {
+          "answer": "vivo"
+        }
+      ],
+      "wordBank": ["vives", "vivo", "vive", "vivemos"]
+    },
+    {
+      "id": "m2-er-verbs-08",
+      "type": "fill_gaps",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"My parents live in Porto and sell fruit at the market.\"",
+      "explanation": "«Os meus pais» is eles, so both verbs take -em: «vivem», «vendem».",
+      "template": "Os meus pais ___ no Porto e ___ fruta no mercado.",
+      "gaps": [
+        {
+          "answer": "vivem"
+        },
+        {
+          "answer": "vendem"
+        }
+      ],
+      "wordBank": ["vivem", "vendem", "vive", "vende", "vendemos"]
+    },
+    {
+      "id": "m2-er-verbs-09",
+      "type": "fill_gaps",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"We learn Portuguese and we study a lot.\"",
+      "explanation": "With «nós», -er verbs end in -emos (aprendemos) and -ar verbs in -amos (estudamos). Don't swap the vowels.",
+      "template": "Nós ___ português e ___ muito.",
+      "gaps": [
+        {
+          "answer": "aprendemos"
+        },
+        {
+          "answer": "estudamos"
+        }
+      ],
+      "wordBank": ["aprendemos", "estudamos", "aprendamos", "estudemos", "aprendem"]
+    },
+    {
+      "id": "m2-er-verbs-10",
+      "type": "fill_gaps",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I live in Braga and work at the hospital.\"",
+      "explanation": "With «eu», both -ar and -er verbs end in -o: «vivo», «trabalho».",
+      "template": "___ em Braga e ___ no hospital.",
+      "gaps": [
+        {
+          "answer": "Vivo"
+        },
+        {
+          "answer": "trabalho"
+        }
+      ],
+      "wordBank": ["Vivo", "trabalho", "Vive", "trabalha", "trabalhas"]
+    },
+    {
+      "id": "m2-er-verbs-11",
+      "type": "fill_gaps",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Don't you drink coffee? — No, I drink tea.\" (informal)",
+      "explanation": "The question is to tu, so «bebes»; the answer is about me, so «bebo».",
+      "template": "Tu não ___ café? — Não, ___ chá.",
+      "gaps": [
+        {
+          "answer": "bebes"
+        },
+        {
+          "answer": "bebo"
+        }
+      ],
+      "wordBank": ["bebes", "bebo", "bebe", "bebem"]
+    },
+    {
+      "id": "m2-er-verbs-12",
+      "type": "fill_gaps",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"What do you (plural) eat at dinner? — We eat soup.\"",
+      "explanation": "«Vocês» takes -em: «comem». The answer is for nós, so -emos: «Comemos».",
+      "template": "O que é que vocês ___ ao jantar? — ___ sopa.",
+      "gaps": [
+        {
+          "answer": "comem"
+        },
+        {
+          "answer": "Comemos"
+        }
+      ],
+      "wordBank": ["comem", "Comemos", "comes", "Como", "Comam"]
+    },
+    {
+      "id": "m2-er-verbs-13",
+      "type": "build_phrase",
+      "topicId": "m2-er-verbs",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Use «viver». Say: \"I live in Lisbon.\"",
+      "explanation": "With «eu», «viver» ends in -o: «vivo». «Eu» can be dropped because the ending shows the person.",
+      "answer": ["Vivo", "em", "Lisboa."],
+      "distractors": ["Vive", "Vives", "no"],
+      "acceptedAnswers": ["Eu vivo em Lisboa."]
+    },
+    {
+      "id": "m2-er-verbs-14",
+      "type": "build_phrase",
+      "topicId": "m2-er-verbs",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"I don't eat meat.\"",
+      "explanation": "«Não» goes right before the verb. With «eu», «comer» is «como».",
+      "answer": ["Não", "como", "carne."],
+      "distractors": ["come", "comes", "Sim"],
+      "acceptedAnswers": ["Eu não como carne."]
+    },
+    {
+      "id": "m2-er-verbs-15",
+      "type": "build_phrase",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"Rita drinks coffee with milk in the morning.\"",
+      "explanation": "«A Rita» is ela, so «beber» takes -e: «bebe».",
+      "answer": ["A", "Rita", "bebe", "café", "com", "leite", "de", "manhã."],
+      "distractors": ["bebes", "bebo", "na"]
+    },
+    {
+      "id": "m2-er-verbs-16",
+      "type": "build_phrase",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"We learn Portuguese.\"",
+      "explanation": "With «nós», -er verbs end in -emos: «aprendemos» (compare -ar: estudamos).",
+      "answer": ["Nós", "aprendemos", "português."],
+      "distractors": ["aprendem", "aprendamos", "aprende"],
+      "acceptedAnswers": ["Aprendemos português."]
+    },
+    {
+      "id": "m2-er-verbs-17",
+      "type": "build_phrase",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"They sell books at the market.\" (eles)",
+      "explanation": "With «eles», -er verbs end in -em: «vendem». «Em + o mercado» becomes «no mercado».",
+      "answer": ["Eles", "vendem", "livros", "no", "mercado."],
+      "distractors": ["vende", "vendam", "na"]
+    },
+    {
+      "id": "m2-er-verbs-18",
+      "type": "build_phrase",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask a friend: \"Do you write a lot of messages?\"",
+      "explanation": "To a friend (tu), «escrever» ends in -es: «escreves». «Mensagens» is feminine, so «muitas».",
+      "answer": ["Escreves", "muitas", "mensagens?"],
+      "distractors": ["Escreve", "Escrevo", "muitos"],
+      "acceptedAnswers": ["Tu escreves muitas mensagens?"]
+    },
+    {
+      "id": "m2-er-verbs-19",
+      "type": "build_phrase",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"My brother lives and works in London.\"",
+      "explanation": "«O meu irmão» is ele: -er «vive», -ar «trabalha». Only the vowel of the ending differs.",
+      "answer": ["O", "meu", "irmão", "vive", "e", "trabalha", "em", "Londres."],
+      "distractors": ["vives", "trabalhas", "minha"]
+    },
+    {
+      "id": "m2-er-verbs-20",
+      "type": "build_phrase",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"We don't drink coffee at night.\"",
+      "explanation": "«Não» goes before the verb, and «nós» takes -emos: «bebemos».",
+      "answer": ["Nós", "não", "bebemos", "café", "à", "noite."],
+      "distractors": ["bebem", "bebamos", "de"],
+      "acceptedAnswers": ["Não bebemos café à noite."]
+    },
+    {
+      "id": "m2-er-verbs-21",
+      "type": "build_phrase",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask two friends: \"Do you eat soup at dinner?\"",
+      "explanation": "«Vocês» takes the same ending as eles: -em, «comem».",
+      "answer": ["Vocês", "comem", "sopa", "ao", "jantar?"],
+      "distractors": ["comes", "come", "comam"]
+    },
+    {
+      "id": "m2-er-verbs-22",
+      "type": "build_phrase",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"My mother sells houses in Coimbra.\"",
+      "explanation": "«A minha mãe» is ela, so «vender» takes -e: «vende».",
+      "answer": ["A", "minha", "mãe", "vende", "casas", "em", "Coimbra."],
+      "distractors": ["vendo", "vendes", "meu"]
+    },
+    {
+      "id": "m2-er-verbs-23",
+      "type": "build_phrase",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"My children speak Portuguese and learn English.\"",
+      "explanation": "With eles, -ar verbs end in -am (falam) and -er verbs in -em (aprendem).",
+      "answer": ["Os", "meus", "filhos", "falam", "português", "e", "aprendem", "inglês."],
+      "distractors": ["falem", "aprendam", "aprende"]
+    },
+    {
+      "id": "m2-er-verbs-24",
+      "type": "question_for_answer",
+      "topicId": "m2-er-verbs",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Vivo no Porto.» What did you ask? (informal)",
+      "explanation": "To a friend, «viver» takes -es: «vives». «Onde» asks where.",
+      "givenAnswer": "Vivo no Porto.",
+      "answer": ["Onde", "vives?"],
+      "distractors": ["vive?", "vivo", "Como"],
+      "acceptedAnswers": [
+        "Onde é que vives?",
+        "Onde é que tu vives?",
+        "Onde moras?",
+        "Onde é que moras?"
+      ]
+    },
+    {
+      "id": "m2-er-verbs-25",
+      "type": "question_for_answer",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Bebo água.» What did you ask? (informal)",
+      "explanation": "«O que» asks \"what\"; to a friend, «beber» ends in -es: «bebes».",
+      "givenAnswer": "Bebo água.",
+      "answer": ["O", "que", "bebes?"],
+      "distractors": ["bebe?", "comes?", "Quem"],
+      "acceptedAnswers": ["O que é que bebes?"]
+    },
+    {
+      "id": "m2-er-verbs-26",
+      "type": "question_for_answer",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Não, não como carne.» What did you ask? (informal)",
+      "explanation": "A yes/no question keeps statement order; only the intonation rises. «Tu» takes -es: «comes».",
+      "givenAnswer": "Não, não como carne.",
+      "answer": ["Comes", "carne?"],
+      "distractors": ["Come", "Como", "carnes?"],
+      "acceptedAnswers": ["Tu comes carne?"]
+    },
+    {
+      "id": "m2-er-verbs-27",
+      "type": "question_for_answer",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Os meus pais vivem em Faro.» What did you ask? (informal)",
+      "explanation": "«Os teus pais» is plural (eles), so «vivem».",
+      "givenAnswer": "Os meus pais vivem em Faro.",
+      "answer": ["Onde", "vivem", "os", "teus", "pais?"],
+      "distractors": ["vive", "as", "tuas"],
+      "acceptedAnswers": [
+        "Onde é que vivem os teus pais?",
+        "Onde é que os teus pais vivem?",
+        "Onde moram os teus pais?",
+        "Onde é que moram os teus pais?"
+      ]
+    },
+    {
+      "id": "m2-er-verbs-28",
+      "type": "question_for_answer",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friends answer: «Comemos peixe ao jantar.» What did you ask?",
+      "explanation": "You ask two friends (vocês), so «comem»; they answer with nós, «comemos».",
+      "givenAnswer": "Comemos peixe ao jantar.",
+      "answer": ["O", "que", "é", "que", "vocês", "comem", "ao", "jantar?"],
+      "distractors": ["comemos", "come", "comam"],
+      "acceptedAnswers": [
+        "O que comem vocês ao jantar?",
+        "O que é que comem ao jantar?",
+        "O que comem ao jantar?"
+      ]
+    },
+    {
+      "id": "m2-er-verbs-29",
+      "type": "question_for_answer",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A friend answers: «A Inês escreve uma carta à avó.» You asked what Inês is writing. What did you ask?",
+      "explanation": "«A Inês» is ela, so «escreve». After «O que» the subject usually comes after the verb, or use «é que».",
+      "givenAnswer": "A Inês escreve uma carta à avó.",
+      "answer": ["O", "que", "escreve", "a", "Inês?"],
+      "distractors": ["escreves", "escrevo", "Quem"],
+      "acceptedAnswers": ["O que é que a Inês escreve?", "O que é que escreve a Inês?"]
+    },
+    {
+      "id": "m2-er-verbs-30",
+      "type": "question_for_answer",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A stall owner answers: «Sim, vendemos fruta no mercado.» What did you ask? (to two people)",
+      "explanation": "«Vocês» takes -em: «vendem». A yes/no question keeps statement order.",
+      "givenAnswer": "Sim, vendemos fruta no mercado.",
+      "answer": ["Vocês", "vendem", "fruta", "no", "mercado?"],
+      "distractors": ["vende", "vendemos", "na"]
+    },
+    {
+      "id": "m2-er-verbs-31",
+      "type": "question_for_answer",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Não, não bebo vinho.» What did you ask? (informal)",
+      "explanation": "To a friend, «beber» ends in -es: «bebes». The answer «não bebo» uses -o for eu.",
+      "givenAnswer": "Não, não bebo vinho.",
+      "answer": ["Bebes", "vinho?"],
+      "distractors": ["Bebe", "Bebo", "sumo?"],
+      "acceptedAnswers": ["Tu bebes vinho?"]
+    },
+    {
+      "id": "m2-er-verbs-32",
+      "type": "question_for_answer",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Aprendo português porque moro em Lisboa.» What did you ask? (informal)",
+      "explanation": "«Porque é que …?» asks why. To a friend, «aprender» ends in -es: «aprendes».",
+      "givenAnswer": "Aprendo português porque moro em Lisboa.",
+      "answer": ["Porque", "é", "que", "aprendes", "português?"],
+      "distractors": ["aprende", "Porquê", "aprendo"],
+      "acceptedAnswers": ["Porque aprendes português?", "Porque é que tu aprendes português?"]
+    },
+    {
+      "id": "m2-er-verbs-33",
+      "type": "find_error",
+      "topicId": "m2-er-verbs",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «tu», -er verbs end in -es: «tu comes».",
+      "sentence": ["Tu", "come", "muita", "fruta."],
+      "wrongIndex": 1,
+      "correction": "comes",
+      "options": ["comes", "comem", "comas"]
+    },
+    {
+      "id": "m2-er-verbs-34",
+      "type": "find_error",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «nós», -er verbs end in -emos: «vendemos». The -a- belongs to -ar verbs (falamos).",
+      "sentence": ["Nós", "vendamos", "livros", "no", "mercado."],
+      "wrongIndex": 1,
+      "correction": "vendemos",
+      "options": ["vendemos", "vendem", "vendo"]
+    },
+    {
+      "id": "m2-er-verbs-35",
+      "type": "find_error",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «eles», -er verbs end in -em: «bebem». Don't use the -ar ending -am here.",
+      "sentence": ["Eles", "bebam", "água", "ao", "almoço."],
+      "wrongIndex": 1,
+      "correction": "bebem",
+      "options": ["bebem", "bebe", "bebes"]
+    },
+    {
+      "id": "m2-er-verbs-36",
+      "type": "find_error",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«A minha irmã» is ela, so the ending is -e: «escreve». -es is only for tu.",
+      "sentence": ["A", "minha", "irmã", "escreves", "muitas", "cartas."],
+      "wrongIndex": 3,
+      "correction": "escreve",
+      "options": ["escreve", "escrevem", "escrevemos"]
+    },
+    {
+      "id": "m2-er-verbs-37",
+      "type": "find_error",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Os meus pais» is plural (eles), so «comem». «Não» stays before the verb.",
+      "sentence": ["Os", "meus", "pais", "não", "come", "carne", "ao", "jantar."],
+      "wrongIndex": 4,
+      "correction": "comem",
+      "options": ["comem", "comes", "como"]
+    },
+    {
+      "id": "m2-er-verbs-38",
+      "type": "about_me",
+      "topicId": "m2-er-verbs",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Answer with «Vivo em …» (eu → -o). Some cities take an article: «Vivo no Porto».",
+      "question": "Onde é que vives?",
+      "sampleAnswer": "Vivo em Coimbra.",
+      "hints": ["no", "Porto.", "Lisboa.", "Moscovo."]
+    },
+    {
+      "id": "m2-er-verbs-39",
+      "type": "about_me",
+      "topicId": "m2-er-verbs",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «bebo» (eu → -o) and the drink: «Bebo chá», «Bebo sumo de laranja».",
+      "question": "O que é que bebes de manhã?",
+      "sampleAnswer": "Bebo café com leite.",
+      "hints": ["chá", "água", "sumo", "de", "laranja", "e"]
+    },
+    {
+      "id": "m2-er-verbs-40",
+      "type": "about_me",
+      "topicId": "m2-er-verbs",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «como» for what you eat and «bebo» for what you drink. For \"I don't eat …\": «Não como …».",
+      "question": "O que é que comes ao almoço?",
+      "sampleAnswer": "Ao almoço como sopa e peixe.",
+      "hints": ["carne", "fruta", "pão", "não", "bebo", "água"]
+    }
+  ]
+}

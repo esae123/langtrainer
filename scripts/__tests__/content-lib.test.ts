@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import {
   buildOutputPath,
@@ -25,7 +26,12 @@ describe('moduleTopicOrder — both module file shapes parse (docs/stage-4b-spec
   });
 
   it('falls back to the old topicOrder[] shape when there is no topics[]', () => {
-    const moduleJson = { id: 'm1', title: 'Module 1', description: 'd', topicOrder: ['m1-a', 'm1-b'] };
+    const moduleJson = {
+      id: 'm1',
+      title: 'Module 1',
+      description: 'd',
+      topicOrder: ['m1-a', 'm1-b'],
+    };
     expect(moduleTopicOrder(moduleJson)).toEqual(['m1-a', 'm1-b']);
   });
 
@@ -65,6 +71,16 @@ describe('moduleTopicBriefs', () => {
 });
 
 describe('loadProgram — modules not (yet) in moduleOrder are still loaded separately', () => {
+  // Expectations are derived from the real content tree, so adding a module to moduleOrder
+  // does not break these tests.
+  const contentRoot = path.join(import.meta.dirname, '..', '..', 'content', 'pt-PT-A1');
+  const realModuleOrder = (): string[] =>
+    JSON.parse(readFileSync(path.join(contentRoot, 'program.json'), 'utf8')).moduleOrder;
+  const realModuleFiles = (): string[] =>
+    readdirSync(path.join(contentRoot, 'modules'))
+      .filter((f) => f.endsWith('.json'))
+      .map((f) => f.replace(/\.json$/, ''))
+      .sort();
   // Exercises against the real content/pt-PT-A1 tree (CONTENT_ROOT in content-lib.ts is fixed to
   // it) rather than a fixture, mirroring how content-check.ts/content-build.ts use loadProgram.
   // As of stage 4b, program.json's moduleOrder is ["m1"] only, and modules/m2.json..m7.json
@@ -73,13 +89,14 @@ describe('loadProgram — modules not (yet) in moduleOrder are still loaded sepa
   it('keeps program.modules restricted to moduleOrder (what content-build uses)', () => {
     const { program } = loadProgram(true);
     const ids = (program.modules as { id: unknown }[]).map((m) => m.id);
-    expect(ids).toEqual(['m1']);
+    expect(ids).toEqual(realModuleOrder());
   });
 
   it('returns modules present on disk but outside moduleOrder as unlistedModules', () => {
     const { unlistedModules } = loadProgram(true);
     const ids = (unlistedModules as { id: unknown }[]).map((m) => m.id).sort();
-    expect(ids).toEqual(['m2', 'm3', 'm4', 'm5', 'm6', 'm7']);
+    const listed = new Set(realModuleOrder());
+    expect(ids).toEqual(realModuleFiles().filter((id) => !listed.has(id)));
   });
 
   it('reports missing topic files of unlisted modules as warnings, regardless of allowMissing', () => {
@@ -118,6 +135,8 @@ describe('--program (review S8)', () => {
     expect(buildOutputPath('pt-PT-A1', ['pt-PT-A1'])).toBe(
       path.join(REPO_ROOT, 'src/content/programs/pt-PT-A1.json')
     );
-    expect(buildOutputPath('en-b2', ['pt-PT-A1'])).toBe(path.join(REPO_ROOT, 'dist-courses/en-b2.json'));
+    expect(buildOutputPath('en-b2', ['pt-PT-A1'])).toBe(
+      path.join(REPO_ROOT, 'dist-courses/en-b2.json')
+    );
   });
 });

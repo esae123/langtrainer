@@ -1,0 +1,647 @@
+{
+  "id": "m2-colors-antonyms",
+  "moduleId": "m2",
+  "title": "Colors and antonym pairs",
+  "kind": "vocabulary",
+  "context": "## Colours and opposites\n\nColours and other adjectives come **after** the noun or after **ser**, and they agree with it in gender and number.\n\n- Words in **-o** have four forms: *o carro vermelho, a mala vermelha, os sapatos vermelhos, as calças vermelhas.*\n- Words in **-e** or a consonant have one form per number: *verde / verdes, azul / azuis, grande / grandes.*\n- **Cor-de-rosa** (pink) and **cor de laranja** (orange) never change: *as flores são cor-de-rosa.*\n\nOpposites to learn in pairs: **grande / pequeno**, **alto / baixo**, **novo / velho**, **caro / barato**, **quente / frio**, **comprido / curto**.\n\n- *A casa é velha, mas é muito bonita.* (The house is old, but it's very pretty.)\n- *Os quartos são pequenos.* (The bedrooms are small.)\n- *O meu telemóvel é preto.* (My phone is black.)\n- *Este casaco é barato.* (This jacket is cheap.)\n- *O chá está quente e o sumo está frio.* (The tea is hot and the juice is cold.)\n- *De que cor é o teu carro? É cinzento.* (What colour is your car? It's grey.)\n\n**Watch out!**\n\n- In Portugal grey is **cinzento** and brown is **castanho**.\n- For the temperature of food and drinks right now, use **estar**: *a sopa está fria*.\n- A colour used as a noun is masculine: *a minha cor favorita é **o** azul.*",
+  "keyItems": [
+    {
+      "target": "vermelho / vermelha",
+      "support": "red"
+    },
+    {
+      "target": "amarelo / amarela",
+      "support": "yellow"
+    },
+    {
+      "target": "preto / preta",
+      "support": "black"
+    },
+    {
+      "target": "branco / branca",
+      "support": "white"
+    },
+    {
+      "target": "castanho / castanha",
+      "support": "brown"
+    },
+    {
+      "target": "cinzento / cinzenta",
+      "support": "grey",
+      "note": "PT word"
+    },
+    {
+      "target": "azul / azuis",
+      "support": "blue",
+      "note": "same for masculine and feminine"
+    },
+    {
+      "target": "verde / verdes",
+      "support": "green",
+      "note": "same for masculine and feminine"
+    },
+    {
+      "target": "cor-de-rosa",
+      "support": "pink",
+      "note": "never changes"
+    },
+    {
+      "target": "grande / pequeno",
+      "support": "big / small",
+      "note": "grande has one form: grande, grandes"
+    },
+    {
+      "target": "alto / baixo",
+      "support": "tall, high / short, low"
+    },
+    {
+      "target": "novo / velho",
+      "support": "new, young / old"
+    },
+    {
+      "target": "caro / barato",
+      "support": "expensive / cheap"
+    },
+    {
+      "target": "quente / frio",
+      "support": "hot / cold",
+      "note": "quente has one form; frio, fria"
+    },
+    {
+      "target": "comprido / curto",
+      "support": "long / short (length)"
+    },
+    {
+      "target": "bonito / bonita",
+      "support": "pretty, nice-looking"
+    },
+    {
+      "target": "De que cor é …?",
+      "support": "What colour is …?",
+      "note": "plural: De que cor são …?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m2-colors-antonyms-01",
+      "type": "translate_word",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Carro» is masculine singular, so the colour keeps its -o form: «vermelho».",
+      "direction": "toTarget",
+      "sentence": "My car is **red**.",
+      "word": "red",
+      "answer": "vermelho",
+      "options": ["vermelho", "vermelha", "amarelo", "verde"]
+    },
+    {
+      "id": "m2-colors-antonyms-02",
+      "type": "translate_word",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«O gato» is masculine, so «preto». A female cat is «uma gata preta».",
+      "direction": "toTarget",
+      "sentence": "The cat is **black**.",
+      "word": "black",
+      "answer": "preto",
+      "options": ["preto", "preta", "branco", "castanho"]
+    },
+    {
+      "id": "m2-colors-antonyms-03",
+      "type": "match_pairs",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each pair of opposites with its meaning.",
+      "explanation": "Learn adjectives in opposite pairs. Note two kinds of short: «baixo» for height, «curto» for length.",
+      "pairs": [
+        {
+          "target": "grande / pequeno",
+          "support": "big / small"
+        },
+        {
+          "target": "novo / velho",
+          "support": "new / old"
+        },
+        {
+          "target": "caro / barato",
+          "support": "expensive / cheap"
+        },
+        {
+          "target": "quente / frio",
+          "support": "hot / cold"
+        },
+        {
+          "target": "alto / baixo",
+          "support": "tall / short"
+        },
+        {
+          "target": "comprido / curto",
+          "support": "long / short"
+        }
+      ]
+    },
+    {
+      "id": "m2-colors-antonyms-04",
+      "type": "build_phrase",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: «The car is red.»",
+      "explanation": "«Carro» is masculine, so «o carro» and «vermelho». A colour is a permanent quality, so «ser».",
+      "answer": ["O", "carro", "é", "vermelho."],
+      "distractors": ["vermelha.", "está", "A"]
+    },
+    {
+      "id": "m2-colors-antonyms-05",
+      "type": "build_phrase",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: «The door is green.»",
+      "explanation": "«Verde» has the same form for masculine and feminine; only the plural changes (verdes).",
+      "answer": ["A", "porta", "é", "verde."],
+      "distractors": ["O", "verdes.", "são"]
+    },
+    {
+      "id": "m2-colors-antonyms-06",
+      "type": "question_for_answer",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "In a shop you point at a jacket (o casaco). The assistant answers: «Não, é barato.» What did you ask?",
+      "explanation": "«Não, é barato» rejects the opposite, so you asked «É caro?». «Casaco» is masculine: «caro», not «cara».",
+      "givenAnswer": "Não, é barato.",
+      "answer": ["É", "caro?"],
+      "distractors": ["cara?", "barato?", "São"]
+    },
+    {
+      "id": "m2-colors-antonyms-07",
+      "type": "find_error",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Casa» is feminine singular, so the colour ends in -a: «branca».",
+      "sentence": ["A", "casa", "é", "branco."],
+      "wrongIndex": 3,
+      "correction": "branca",
+      "options": ["branca", "brancas", "brancos"]
+    },
+    {
+      "id": "m2-colors-antonyms-08",
+      "type": "about_me",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "«Telemóvel» is masculine, so the colour takes its masculine form: «preto, branco, cinzento».",
+      "question": "De que cor é o teu telemóvel?",
+      "sampleAnswer": "O meu telemóvel é preto.",
+      "hints": ["branco", "azul", "cinzento", "vermelho", "cor-de-rosa"]
+    },
+    {
+      "id": "m2-colors-antonyms-09",
+      "type": "translate_word",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«A mala» (the bag) is feminine, so «amarelo» changes to «amarela».",
+      "direction": "toTarget",
+      "sentence": "Rita's bag is **yellow**.",
+      "word": "yellow",
+      "answer": "amarela",
+      "options": ["amarela", "amarelo", "vermelha", "branca"]
+    },
+    {
+      "id": "m2-colors-antonyms-10",
+      "type": "translate_word",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Os sapatos» is masculine plural, so «barato» takes -os: «baratos».",
+      "direction": "toTarget",
+      "sentence": "My shoes are **cheap**.",
+      "word": "cheap",
+      "answer": "baratos",
+      "options": ["baratos", "baratas", "caros", "barato"]
+    },
+    {
+      "id": "m2-colors-antonyms-11",
+      "type": "translate_word",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Cor-de-rosa» never changes, even with a feminine plural noun: «as flores são cor-de-rosa».",
+      "direction": "toTarget",
+      "sentence": "The flowers are **pink**.",
+      "word": "pink",
+      "answer": "cor-de-rosa",
+      "options": ["cor-de-rosa", "cor-de-rosas", "vermelhas", "amarelas"]
+    },
+    {
+      "id": "m2-colors-antonyms-12",
+      "type": "build_phrase",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «My bag is black.»",
+      "explanation": "«Mala» is feminine, so «a minha» and «preta».",
+      "answer": ["A", "minha", "mala", "é", "preta."],
+      "distractors": ["preto.", "meu", "está"]
+    },
+    {
+      "id": "m2-colors-antonyms-13",
+      "type": "build_phrase",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: «The coffee is cold.»",
+      "explanation": "The temperature of food or drink right now uses «estar». «Café» is masculine, so «frio».",
+      "answer": ["O", "café", "está", "frio."],
+      "distractors": ["fria.", "é", "quente."]
+    },
+    {
+      "id": "m2-colors-antonyms-14",
+      "type": "build_phrase",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: «The shoes are cheap.»",
+      "explanation": "«Sapatos» is masculine plural: verb «são» and «baratos».",
+      "answer": ["Os", "sapatos", "são", "baratos."],
+      "distractors": ["baratas.", "é", "caros."]
+    },
+    {
+      "id": "m2-colors-antonyms-15",
+      "type": "fill_gaps",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «The car is white and the motorbike is black.»",
+      "explanation": "Each colour agrees with its own noun: «o carro» is masculine (branco), «a mota» is feminine (preta).",
+      "template": "O carro é ___ e a mota é ___.",
+      "gaps": [
+        {
+          "answer": "branco"
+        },
+        {
+          "answer": "preta"
+        }
+      ],
+      "wordBank": ["branco", "preta", "branca", "preto", "pretas"]
+    },
+    {
+      "id": "m2-colors-antonyms-16",
+      "type": "fill_gaps",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «The soup is hot, but the water is cold.»",
+      "explanation": "«Quente» has one singular form for both genders. «Água» is feminine, so «fria».",
+      "template": "A sopa está ___, mas a água está ___.",
+      "gaps": [
+        {
+          "answer": "quente"
+        },
+        {
+          "answer": "fria"
+        }
+      ],
+      "wordBank": ["quente", "fria", "frio", "quentes", "frias"]
+    },
+    {
+      "id": "m2-colors-antonyms-17",
+      "type": "fill_gaps",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «Your jacket is new and very pretty.»",
+      "explanation": "«Casaco» is masculine singular, so both adjectives end in -o.",
+      "template": "O teu casaco é ___ e muito ___.",
+      "gaps": [
+        {
+          "answer": "novo"
+        },
+        {
+          "answer": "bonito"
+        }
+      ],
+      "wordBank": ["novo", "bonito", "nova", "bonita", "velho"]
+    },
+    {
+      "id": "m2-colors-antonyms-18",
+      "type": "question_for_answer",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «O meu carro é cinzento.» What did you ask? (informal)",
+      "explanation": "Ask a colour with «De que cor é …?». To a friend, «o meu carro» becomes «o teu carro».",
+      "givenAnswer": "O meu carro é cinzento.",
+      "answer": ["De", "que", "cor", "é", "o", "teu", "carro?"],
+      "distractors": ["tua", "são", "Qual"],
+      "acceptedAnswers": ["De que cor é que é o teu carro?"]
+    },
+    {
+      "id": "m2-colors-antonyms-19",
+      "type": "question_for_answer",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You ask your friend about the soup. Your friend answers: «Sim, está muito quente.» What did you ask?",
+      "explanation": "The temperature of food right now uses «estar», not «ser». «Sopa» is feminine: «a sopa».",
+      "givenAnswer": "Sim, está muito quente.",
+      "answer": ["A", "sopa", "está", "quente?"],
+      "distractors": ["é", "fria?", "o"]
+    },
+    {
+      "id": "m2-colors-antonyms-20",
+      "type": "question_for_answer",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «A minha casa é grande e branca.» What did you ask? (informal)",
+      "explanation": "«Como é …?» asks what something is like. «Casa» is feminine, so «a tua casa».",
+      "givenAnswer": "A minha casa é grande e branca.",
+      "answer": ["Como", "é", "a", "tua", "casa?"],
+      "distractors": ["está", "teu", "De"],
+      "acceptedAnswers": ["Como é que é a tua casa?"]
+    },
+    {
+      "id": "m2-colors-antonyms-21",
+      "type": "question_for_answer",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You ask a friend about his flat (o apartamento). He answers: «Não, é velho.» What did you ask?",
+      "explanation": "«Não, é velho» rejects the opposite, «novo». «Apartamento» is masculine: «o teu», «novo».",
+      "givenAnswer": "Não, é velho.",
+      "answer": ["O", "teu", "apartamento", "é", "novo?"],
+      "distractors": ["tua", "velho?", "nova?"]
+    },
+    {
+      "id": "m2-colors-antonyms-22",
+      "type": "question_for_answer",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "In a shop you point at a jacket. The assistant answers: «Sim, é muito barato.» What did you ask?",
+      "explanation": "«Casaco» is masculine, so «este» and «barato». «Sim, é barato» confirms the same adjective.",
+      "givenAnswer": "Sim, é muito barato.",
+      "answer": ["Este", "casaco", "é", "barato?"],
+      "distractors": ["Esta", "cara?", "barata?"],
+      "acceptedAnswers": ["Esse casaco é barato?"]
+    },
+    {
+      "id": "m2-colors-antonyms-23",
+      "type": "find_error",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Chá» is masculine singular, so «frio». «Fria» is for feminine nouns like «a água».",
+      "sentence": ["O", "chá", "está", "fria."],
+      "wrongIndex": 3,
+      "correction": "frio",
+      "options": ["frio", "frios", "frias"]
+    },
+    {
+      "id": "m2-colors-antonyms-24",
+      "type": "find_error",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Azul» does not change for gender, but in the plural it becomes «azuis». «Calças» is plural.",
+      "sentence": ["As", "calças", "do", "João", "são", "azul."],
+      "wrongIndex": 5,
+      "correction": "azuis",
+      "options": ["azuis", "azuls", "azules"]
+    },
+    {
+      "id": "m2-colors-antonyms-25",
+      "type": "about_me",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "«Casa» is feminine, so the adjectives end in -a: «pequena, velha, nova». «Grande» has one form.",
+      "question": "Como é a tua casa?",
+      "sampleAnswer": "A minha casa é pequena e velha.",
+      "hints": ["grande", "nova", "bonita", "branca", "amarela", "muito"]
+    },
+    {
+      "id": "m2-colors-antonyms-26",
+      "type": "about_me",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "A colour used as a noun is masculine and takes «o»: «o azul», «o verde», «o cor-de-rosa».",
+      "question": "Qual é a tua cor favorita?",
+      "sampleAnswer": "A minha cor favorita é o azul.",
+      "hints": ["verde", "vermelho", "amarelo", "preto", "cor-de-rosa"]
+    },
+    {
+      "id": "m2-colors-antonyms-27",
+      "type": "build_phrase",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «Sofia's dress is pink.»",
+      "explanation": "«De + a Sofia» contracts to «da Sofia». «Cor-de-rosa» never changes its form.",
+      "answer": ["O", "vestido", "da", "Sofia", "é", "cor-de-rosa."],
+      "distractors": ["do", "cor-de-rosas.", "a"]
+    },
+    {
+      "id": "m2-colors-antonyms-28",
+      "type": "build_phrase",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «The house is old, but it's very pretty.»",
+      "explanation": "«Casa» is feminine, so both adjectives end in -a: «velha», «bonita».",
+      "answer": ["A", "casa", "é", "velha,", "mas", "é", "muito", "bonita."],
+      "distractors": ["velho,", "bonito.", "está"]
+    },
+    {
+      "id": "m2-colors-antonyms-29",
+      "type": "build_phrase",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «The tea is hot and the juice is cold.»",
+      "explanation": "Drink temperature now uses «estar». «Quente» has one singular form; «sumo» is masculine, so «frio».",
+      "answer": ["O", "chá", "está", "quente", "e", "o", "sumo", "está", "frio."],
+      "distractors": ["é", "fria.", "quentes"]
+    },
+    {
+      "id": "m2-colors-antonyms-30",
+      "type": "build_phrase",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «My (female) cats are white and grey.»",
+      "explanation": "«Gatas» is feminine plural, so «as minhas» and -as endings. Grey in Portugal is «cinzento».",
+      "answer": ["As", "minhas", "gatas", "são", "brancas", "e", "cinzentas."],
+      "distractors": ["brancos", "cinzentos.", "Os"]
+    },
+    {
+      "id": "m2-colors-antonyms-31",
+      "type": "build_phrase",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «The bedroom is small and the windows are big.»",
+      "explanation": "Each adjective agrees with its own noun: «o quarto» (pequeno), «as janelas» (grandes).",
+      "answer": ["O", "quarto", "é", "pequeno", "e", "as", "janelas", "são", "grandes."],
+      "distractors": ["pequena", "grande.", "está"]
+    },
+    {
+      "id": "m2-colors-antonyms-32",
+      "type": "build_phrase",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «I have a new car, but it isn't expensive.»",
+      "explanation": "The adjective comes after the noun: «um carro novo». «Carro» is masculine: «novo», «caro».",
+      "answer": ["Tenho", "um", "carro", "novo,", "mas", "não", "é", "caro."],
+      "distractors": ["nova,", "cara.", "uma"],
+      "acceptedAnswers": ["Eu tenho um carro novo, mas não é caro."]
+    },
+    {
+      "id": "m2-colors-antonyms-33",
+      "type": "fill_gaps",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «Pedro's house is big and old.»",
+      "explanation": "The adjectives agree with «a casa», not with Pedro: «velha». «Grande» is the same for both genders.",
+      "template": "A casa do Pedro é ___ e ___.",
+      "gaps": [
+        {
+          "answer": "grande"
+        },
+        {
+          "answer": "velha"
+        }
+      ],
+      "wordBank": ["grande", "velha", "velho", "grandes", "pequena"]
+    },
+    {
+      "id": "m2-colors-antonyms-34",
+      "type": "fill_gaps",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «The trousers are blue and the shoes are brown.»",
+      "explanation": "Both nouns are plural: «azul» becomes «azuis», and «sapatos» is masculine, so «castanhos».",
+      "template": "As calças são ___ e os sapatos são ___.",
+      "gaps": [
+        {
+          "answer": "azuis"
+        },
+        {
+          "answer": "castanhos"
+        }
+      ],
+      "wordBank": ["azuis", "castanhos", "azul", "castanhas", "castanho"]
+    },
+    {
+      "id": "m2-colors-antonyms-35",
+      "type": "fill_gaps",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «The sweaters are pink and the skirts are green.»",
+      "explanation": "«Cor-de-rosa» never changes. «Verde» only adds -s in the plural: «verdes».",
+      "template": "As camisolas são ___ e as saias são ___.",
+      "gaps": [
+        {
+          "answer": "cor-de-rosa"
+        },
+        {
+          "answer": "verdes"
+        }
+      ],
+      "wordBank": ["cor-de-rosa", "verdes", "cor-de-rosas", "verde"]
+    },
+    {
+      "id": "m2-colors-antonyms-36",
+      "type": "fill_gaps",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «The bedrooms are small, but the kitchen is big.»",
+      "explanation": "«Os quartos» is masculine plural (pequenos); «a cozinha» is singular, and «grande» is the same for both genders.",
+      "template": "Os quartos são ___, mas a cozinha é ___.",
+      "gaps": [
+        {
+          "answer": "pequenos"
+        },
+        {
+          "answer": "grande"
+        }
+      ],
+      "wordBank": ["pequenos", "grande", "pequenas", "grandes", "pequeno"]
+    },
+    {
+      "id": "m2-colors-antonyms-37",
+      "type": "question_for_answer",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «As minhas calças são pretas.» What did you ask? (informal)",
+      "explanation": "«Calças» is always plural, so «são» and «as tuas».",
+      "givenAnswer": "As minhas calças são pretas.",
+      "answer": ["De", "que", "cor", "são", "as", "tuas", "calças?"],
+      "distractors": ["é", "teus", "tua"],
+      "acceptedAnswers": ["De que cor é que são as tuas calças?"]
+    },
+    {
+      "id": "m2-colors-antonyms-38",
+      "type": "question_for_answer",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You ask about Inês's shoes. Your friend answers: «São vermelhos.» What did you ask?",
+      "explanation": "«Sapatos» is plural, so «De que cor são …?». «De + a Inês» contracts to «da Inês».",
+      "givenAnswer": "São vermelhos.",
+      "answer": ["De", "que", "cor", "são", "os", "sapatos", "da", "Inês?"],
+      "distractors": ["é", "do", "das"],
+      "acceptedAnswers": ["De que cor é que são os sapatos da Inês?"]
+    },
+    {
+      "id": "m2-colors-antonyms-39",
+      "type": "question_for_answer",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You ask a friend about his (male) cats. He answers: «Sim, são pretos.» What did you ask?",
+      "explanation": "«Gatos» is masculine plural: «os teus», «são» and «pretos».",
+      "givenAnswer": "Sim, são pretos.",
+      "answer": ["Os", "teus", "gatos", "são", "pretos?"],
+      "distractors": ["tuas", "é", "pretas?"]
+    },
+    {
+      "id": "m2-colors-antonyms-40",
+      "type": "find_error",
+      "topicId": "m2-colors-antonyms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Computador» is masculine singular, so both adjectives are masculine: «novo», «caro».",
+      "sentence": ["O", "computador", "é", "novo,", "mas", "é", "muito", "cara."],
+      "wrongIndex": 7,
+      "correction": "caro",
+      "options": ["caro", "caros", "caras"]
+    }
+  ]
+}

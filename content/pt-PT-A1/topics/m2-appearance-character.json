@@ -1,0 +1,646 @@
+{
+  "id": "m2-appearance-character",
+  "moduleId": "m2",
+  "title": "Appearance, character and physical states",
+  "kind": "vocabulary",
+  "context": "## What people are like, and how they feel\n\nUse **ser** for what a person is like: height, build and character. The adjective agrees with the person: **-o** for a man, **-a** for a woman, **-s** in the plural.\n\n- *O João é alto e simpático.* (João is tall and nice.)\n- *A Ana é baixa e tímida.* (Ana is short and shy.)\n- *Os meus primos são muito engraçados.* (My cousins are very funny.)\n\nUse **ter** for features: hair, eyes, a beard.\n\n- *A Rita tem o cabelo curto e os olhos azuis.* (Rita has short hair and blue eyes.)\n- *O meu avô tem barba.* (My grandfather has a beard.)\n\nFor how you feel right now, use **estar** + adjective or **ter** + noun:\n\n- *Hoje estou cansada.* (I'm tired today, said by a woman.)\n- *Tenho fome e tenho sede.* (I'm hungry and thirsty.)\n- *Tens frio? Não, tenho calor!* (Are you cold? No, I'm hot!)\n\n**Watch out!**\n\n- English says *I am hungry*, Portuguese says *I have hunger*: **tenho fome**, never *estou fome* or *sou fome*. You will also hear **estou com fome**, which is correct too.\n- **Fome** and **sede** are feminine, so \"very\" is **muita**: *tenho muita fome*. **Frio**, **calor** and **sono** are masculine: *tenho muito sono*.\n- **Como é a Rita?** asks what she is like; **Como está a Rita?** asks how she is today.",
+  "keyItems": [
+    {
+      "target": "alto / alta",
+      "support": "tall"
+    },
+    {
+      "target": "baixo / baixa",
+      "support": "short (height)"
+    },
+    {
+      "target": "magro / magra",
+      "support": "thin"
+    },
+    {
+      "target": "gordo / gorda",
+      "support": "fat",
+      "note": "can sound rude about a person"
+    },
+    {
+      "target": "simpático / simpática",
+      "support": "nice, friendly"
+    },
+    {
+      "target": "tímido / tímida",
+      "support": "shy"
+    },
+    {
+      "target": "engraçado / engraçada",
+      "support": "funny"
+    },
+    {
+      "target": "o cabelo curto / comprido",
+      "support": "short / long hair",
+      "note": "also louro (blond), castanho (brown)"
+    },
+    {
+      "target": "os olhos azuis / castanhos",
+      "support": "blue / brown eyes",
+      "note": "azul becomes azuis in the plural"
+    },
+    {
+      "target": "a barba",
+      "support": "the beard",
+      "note": "ter barba = to have a beard"
+    },
+    {
+      "target": "estar cansado / cansada",
+      "support": "to be tired",
+      "note": "estar, because it is a state now"
+    },
+    {
+      "target": "ter fome",
+      "support": "to be hungry",
+      "note": "muita fome"
+    },
+    {
+      "target": "ter sede",
+      "support": "to be thirsty",
+      "note": "muita sede"
+    },
+    {
+      "target": "ter frio / ter calor",
+      "support": "to be cold / to be hot",
+      "note": "muito frio, muito calor"
+    },
+    {
+      "target": "ter sono",
+      "support": "to be sleepy",
+      "note": "muito sono"
+    },
+    {
+      "target": "Como é …?",
+      "support": "What is … like?",
+      "note": "ser: permanent traits"
+    },
+    {
+      "target": "Como está …?",
+      "support": "How is … (now)?",
+      "note": "estar: state right now"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m2-appearance-character-01",
+      "type": "translate_word",
+      "topicId": "m2-appearance-character",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Height is described with «ser» + adjective. «Irmão» is masculine singular, so «alto».",
+      "direction": "toTarget",
+      "sentence": "My brother is very **tall**.",
+      "word": "tall",
+      "answer": "alto",
+      "options": ["alto", "alta", "baixo", "altos"]
+    },
+    {
+      "id": "m2-appearance-character-02",
+      "type": "translate_word",
+      "topicId": "m2-appearance-character",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«A barba» is the beard. Features take «ter», with no article: «tem barba».",
+      "direction": "toTarget",
+      "sentence": "My grandfather has a **beard**.",
+      "word": "beard",
+      "answer": "barba",
+      "options": ["barba", "cabelo", "olhos", "cara"]
+    },
+    {
+      "id": "m2-appearance-character-03",
+      "type": "translate_word",
+      "topicId": "m2-appearance-character",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Os olhos» (the eyes) is masculine plural, so its adjective is plural too: «olhos azuis».",
+      "direction": "toTarget",
+      "sentence": "Rita has blue **eyes**.",
+      "word": "eyes",
+      "answer": "olhos",
+      "options": ["olhos", "cabelo", "barba", "óculos"]
+    },
+    {
+      "id": "m2-appearance-character-04",
+      "type": "build_phrase",
+      "topicId": "m2-appearance-character",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: «I'm hungry.»",
+      "explanation": "Hunger is a noun used with «ter»: «tenho fome» (literally \"I have hunger\"). «Estou fome» is wrong; «estou com fome» also works.",
+      "answer": ["Tenho", "fome."],
+      "distractors": ["Estou", "Sou", "sede."],
+      "acceptedAnswers": ["Eu tenho fome.", "Estou com fome.", "Eu estou com fome."]
+    },
+    {
+      "id": "m2-appearance-character-05",
+      "type": "question_for_answer",
+      "topicId": "m2-appearance-character",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Sim, tenho muita fome.» What did you ask? (informal)",
+      "explanation": "Hunger takes «ter», and the tu form is «tens». A yes/no question keeps statement word order with rising intonation.",
+      "givenAnswer": "Sim, tenho muita fome.",
+      "answer": ["Tens", "fome?"],
+      "distractors": ["Estás", "Tem", "sede?"],
+      "acceptedAnswers": ["Tu tens fome?"]
+    },
+    {
+      "id": "m2-appearance-character-06",
+      "type": "question_for_answer",
+      "topicId": "m2-appearance-character",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your female friend answers: «Sim, estou muito cansada.» What did you ask? (informal)",
+      "explanation": "Tiredness is a state right now, so «estar»: tu «estás». Your friend is a woman, so «cansada».",
+      "givenAnswer": "Sim, estou muito cansada.",
+      "answer": ["Estás", "cansada?"],
+      "distractors": ["És", "cansado?", "Tens"],
+      "acceptedAnswers": ["Tu estás cansada?"]
+    },
+    {
+      "id": "m2-appearance-character-07",
+      "type": "find_error",
+      "topicId": "m2-appearance-character",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Hunger is a noun, so it goes with «ter»: «Eu tenho fome». «Estar» needs an adjective (cansado) or «com» (estou com fome).",
+      "sentence": ["Eu", "estou", "fome."],
+      "wrongIndex": 1,
+      "correction": "tenho",
+      "options": ["tenho", "sou", "tens"]
+    },
+    {
+      "id": "m2-appearance-character-08",
+      "type": "about_me",
+      "topicId": "m2-appearance-character",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "«Como és?» asks what you are like, so answer with «sou» + adjectives. A woman uses -a: «Sou alta e simpática.»",
+      "question": "Como és?",
+      "sampleAnswer": "Sou alto e simpático.",
+      "hints": ["alta", "simpática", "baixo", "baixa", "tímido", "tímida", "engraçado"]
+    },
+    {
+      "id": "m2-appearance-character-09",
+      "type": "translate_word",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Irmã» is feminine, so the adjective ends in -a: «tímida». Character uses «ser»: «A minha irmã é muito tímida.»",
+      "direction": "toTarget",
+      "sentence": "My sister is very **shy**.",
+      "word": "shy",
+      "answer": "tímida",
+      "options": ["tímida", "tímido", "simpática", "engraçada"]
+    },
+    {
+      "id": "m2-appearance-character-10",
+      "type": "translate_word",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Being sleepy is «ter sono» (literally \"to have sleep\"), like «ter fome» and «ter sede».",
+      "direction": "toTarget",
+      "sentence": "I'm **sleepy**.",
+      "word": "sleepy",
+      "answer": "tenho sono",
+      "options": ["tenho sono", "estou sono", "sou sono", "tenho sede"]
+    },
+    {
+      "id": "m2-appearance-character-11",
+      "type": "build_phrase",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say to a female friend: «You are very nice.»",
+      "explanation": "Character is permanent, so «ser»: tu «és». Your friend is a woman, so «simpática».",
+      "answer": ["És", "muito", "simpática."],
+      "distractors": ["Estás", "simpático.", "É"],
+      "acceptedAnswers": ["Tu és muito simpática."]
+    },
+    {
+      "id": "m2-appearance-character-12",
+      "type": "build_phrase",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: «We are very cold.»",
+      "explanation": "Feeling cold is «ter frio». «Frio» is a masculine noun, so «muito frio» (but «muita fome»).",
+      "answer": ["Temos", "muito", "frio."],
+      "distractors": ["muita", "Somos", "fria."],
+      "acceptedAnswers": [
+        "Nós temos muito frio.",
+        "Estamos com muito frio.",
+        "Nós estamos com muito frio."
+      ]
+    },
+    {
+      "id": "m2-appearance-character-13",
+      "type": "build_phrase",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «Miguel is tired today.»",
+      "explanation": "Being tired is a state now, so «estar», not «ser». In Portugal first names take the article: «o Miguel».",
+      "answer": ["O", "Miguel", "está", "cansado", "hoje."],
+      "distractors": ["é", "cansada", "tem"],
+      "acceptedAnswers": ["Hoje o Miguel está cansado."]
+    },
+    {
+      "id": "m2-appearance-character-14",
+      "type": "build_phrase",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «Ana is short and funny.»",
+      "explanation": "Height and character use «ser». «A Ana» is feminine, so both adjectives end in -a.",
+      "answer": ["A", "Ana", "é", "baixa", "e", "engraçada."],
+      "distractors": ["está", "baixo", "engraçado"]
+    },
+    {
+      "id": "m2-appearance-character-15",
+      "type": "fill_gaps",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «Tiago is tall and has a beard.»",
+      "explanation": "Height is described with «ser» (é alto); a feature like a beard takes «ter» (tem barba).",
+      "template": "O Tiago ___ alto e ___ barba.",
+      "gaps": [
+        {
+          "answer": "é"
+        },
+        {
+          "answer": "tem"
+        }
+      ],
+      "wordBank": ["é", "tem", "está", "tens", "são"]
+    },
+    {
+      "id": "m2-appearance-character-16",
+      "type": "fill_gaps",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «Inês is short and nice.»",
+      "explanation": "«A Inês» is feminine singular, so every adjective after «é» ends in -a.",
+      "template": "A Inês é ___ e ___.",
+      "gaps": [
+        {
+          "answer": "baixa"
+        },
+        {
+          "answer": "simpática"
+        }
+      ],
+      "wordBank": ["baixa", "simpática", "baixo", "simpático", "alta"]
+    },
+    {
+      "id": "m2-appearance-character-17",
+      "type": "fill_gaps",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps (a woman speaking): «Today I am tired and sleepy.»",
+      "explanation": "«Cansada» is an adjective for a state now, so «estou». «Sono» is a noun, so «tenho sono».",
+      "template": "Hoje eu ___ cansada e ___ sono.",
+      "gaps": [
+        {
+          "answer": "estou"
+        },
+        {
+          "answer": "tenho"
+        }
+      ],
+      "wordBank": ["estou", "tenho", "sou", "tem", "estás"]
+    },
+    {
+      "id": "m2-appearance-character-18",
+      "type": "fill_gaps",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «We are very hungry.»",
+      "explanation": "Hunger is «ter fome»; with «nós» the verb is «temos». «Muita» is feminine because «fome» is a feminine noun.",
+      "template": "Nós ___ muita ___.",
+      "gaps": [
+        {
+          "answer": "temos"
+        },
+        {
+          "answer": "fome"
+        }
+      ],
+      "wordBank": ["temos", "fome", "estamos", "somos", "sede"]
+    },
+    {
+      "id": "m2-appearance-character-19",
+      "type": "question_for_answer",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «O meu irmão é alto e muito simpático.» What did you ask? (informal)",
+      "explanation": "«Como é …?» asks what someone is like (ser: permanent traits). «Como está …?» would ask how he is today.",
+      "givenAnswer": "O meu irmão é alto e muito simpático.",
+      "answer": ["Como", "é", "o", "teu", "irmão?"],
+      "distractors": ["está", "tua", "Quem"],
+      "acceptedAnswers": ["Como é que é o teu irmão?"]
+    },
+    {
+      "id": "m2-appearance-character-20",
+      "type": "question_for_answer",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You ask a friend about Rita. Your friend answers: «Está cansada e tem frio.» What did you ask?",
+      "explanation": "The answer describes a state right now, so the question uses «estar»: «Como está a Rita?». «Como é a Rita?» would ask what she is like.",
+      "givenAnswer": "Está cansada e tem frio.",
+      "answer": ["Como", "está", "a", "Rita?"],
+      "distractors": ["é", "o", "estás"],
+      "acceptedAnswers": ["Como é que está a Rita?"]
+    },
+    {
+      "id": "m2-appearance-character-21",
+      "type": "question_for_answer",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Tenho sede.» What did you ask? (informal)",
+      "explanation": "Physical needs use «ter», so «O que é que tens?» (What's the matter?) matches «Tenho sede». Tu form: «tens».",
+      "givenAnswer": "Tenho sede.",
+      "answer": ["O", "que", "é", "que", "tens?"],
+      "distractors": ["estás?", "és?", "tem?"],
+      "acceptedAnswers": ["O que tens?"]
+    },
+    {
+      "id": "m2-appearance-character-22",
+      "type": "question_for_answer",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your female friend answers: «Sou baixa e tenho o cabelo louro.» What did you ask? (informal)",
+      "explanation": "She describes permanent traits, so the question uses «ser»: tu «és». «Como estás?» asks how she feels now.",
+      "givenAnswer": "Sou baixa e tenho o cabelo louro.",
+      "answer": ["Como", "és?"],
+      "distractors": ["estás?", "é?", "Quem"],
+      "acceptedAnswers": ["Como é que és?", "Como és tu?"]
+    },
+    {
+      "id": "m2-appearance-character-23",
+      "type": "find_error",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The adjective agrees with the person: «a Rita» is feminine singular, so «simpática».",
+      "sentence": ["A", "Rita", "é", "muito", "simpático."],
+      "wrongIndex": 4,
+      "correction": "simpática",
+      "options": ["simpática", "simpáticas", "simpáticos"]
+    },
+    {
+      "id": "m2-appearance-character-24",
+      "type": "find_error",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Features such as a beard, hair or eyes take «ter»: «O meu pai tem barba». «Ser» goes with adjectives like «alto».",
+      "sentence": ["O", "meu", "pai", "é", "barba."],
+      "wrongIndex": 3,
+      "correction": "tem",
+      "options": ["tem", "está", "tens"]
+    },
+    {
+      "id": "m2-appearance-character-25",
+      "type": "about_me",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Hair and eyes take «ter»: «Tenho o cabelo …». «Cabelo» is masculine, so «curto, castanho, louro».",
+      "question": "Tens o cabelo comprido ou curto?",
+      "sampleAnswer": "Tenho o cabelo curto e castanho.",
+      "hints": ["comprido", "louro", "preto", "olhos", "azuis", "castanhos"]
+    },
+    {
+      "id": "m2-appearance-character-26",
+      "type": "about_me",
+      "topicId": "m2-appearance-character",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "States now: «estou» + adjective (cansado/cansada) or «tenho» + noun (fome, sede, frio, sono).",
+      "question": "Como estás hoje?",
+      "sampleAnswer": "Estou cansado e tenho sono.",
+      "hints": ["cansada", "fome", "sede", "frio", "muito", "muita", "bem"]
+    },
+    {
+      "id": "m2-appearance-character-27",
+      "type": "build_phrase",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «Pedro and Tiago are tall and thin.»",
+      "explanation": "Two people make a plural subject: verb «são» and adjectives with -s, «altos e magros».",
+      "answer": ["O", "Pedro", "e", "o", "Tiago", "são", "altos", "e", "magros."],
+      "distractors": ["é", "alto", "magro"]
+    },
+    {
+      "id": "m2-appearance-character-28",
+      "type": "build_phrase",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «My sister has blue eyes.»",
+      "explanation": "Features take «ter». «Olhos» is plural, so «azul» becomes «azuis».",
+      "answer": ["A", "minha", "irmã", "tem", "olhos", "azuis."],
+      "distractors": ["é", "azul.", "meu"],
+      "acceptedAnswers": ["A minha irmã tem os olhos azuis."]
+    },
+    {
+      "id": "m2-appearance-character-29",
+      "type": "build_phrase",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «My grandfather is thin and has a beard.»",
+      "explanation": "Build uses «ser» (é magro), a beard uses «ter» (tem barba). «Avô» with ô is grandfather, so «magro».",
+      "answer": ["O", "meu", "avô", "é", "magro", "e", "tem", "barba."],
+      "distractors": ["está", "magra", "avó"]
+    },
+    {
+      "id": "m2-appearance-character-30",
+      "type": "build_phrase",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: «I'm very thirsty.»",
+      "explanation": "Thirst is «ter sede». «Sede» is a feminine noun, so «muita sede», not «muito».",
+      "answer": ["Tenho", "muita", "sede."],
+      "distractors": ["muito", "Estou", "sono."],
+      "acceptedAnswers": [
+        "Eu tenho muita sede.",
+        "Estou com muita sede.",
+        "Eu estou com muita sede."
+      ]
+    },
+    {
+      "id": "m2-appearance-character-31",
+      "type": "build_phrase",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say to a friend: «Your (female) friends are very shy.»",
+      "explanation": "«Amigas» is feminine plural, so «as tuas» and «tímidas». Character uses «ser»: «são».",
+      "answer": ["As", "tuas", "amigas", "são", "muito", "tímidas."],
+      "distractors": ["Os", "teus", "tímidos.", "estão"]
+    },
+    {
+      "id": "m2-appearance-character-32",
+      "type": "build_phrase",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say (a woman speaking): «I'm tired and I'm cold.»",
+      "explanation": "A state adjective goes with «estar» (estou cansada, -a for a woman); cold is a noun with «ter» (tenho frio).",
+      "answer": ["Estou", "cansada", "e", "tenho", "frio."],
+      "distractors": ["cansado", "Sou", "fria."],
+      "acceptedAnswers": ["Eu estou cansada e tenho frio.", "Estou cansada e estou com frio."]
+    },
+    {
+      "id": "m2-appearance-character-33",
+      "type": "fill_gaps",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «My brothers are tall and funny.»",
+      "explanation": "«Os meus irmãos» is masculine plural, so both adjectives take -os.",
+      "template": "Os meus irmãos são ___ e ___.",
+      "gaps": [
+        {
+          "answer": "altos"
+        },
+        {
+          "answer": "engraçados"
+        }
+      ],
+      "wordBank": ["altos", "engraçados", "alto", "engraçadas", "altas"]
+    },
+    {
+      "id": "m2-appearance-character-34",
+      "type": "fill_gaps",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «Sofia is very sleepy and very hungry.»",
+      "explanation": "«Muito» agrees with the noun: «sono» is masculine (muito sono), «fome» is feminine (muita fome).",
+      "template": "A Sofia tem ___ sono e ___ fome.",
+      "gaps": [
+        {
+          "answer": "muito"
+        },
+        {
+          "answer": "muita"
+        }
+      ],
+      "wordBank": ["muito", "muita", "muitos", "muitas"]
+    },
+    {
+      "id": "m2-appearance-character-35",
+      "type": "fill_gaps",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: «My grandmother has short hair and blue eyes.»",
+      "explanation": "The adjective agrees with the feature, not the person: «o cabelo» is masculine singular (curto), «os olhos» masculine plural (azuis).",
+      "template": "A minha avó tem o cabelo ___ e os olhos ___.",
+      "gaps": [
+        {
+          "answer": "curto"
+        },
+        {
+          "answer": "azuis"
+        }
+      ],
+      "wordBank": ["curto", "azuis", "curta", "azul", "curtos"]
+    },
+    {
+      "id": "m2-appearance-character-36",
+      "type": "question_for_answer",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Sim, a minha irmã é muito tímida.» What did you ask? (informal)",
+      "explanation": "To a friend, «a minha irmã» becomes «a tua irmã». Character uses «ser», and «irmã» needs the feminine «tímida».",
+      "givenAnswer": "Sim, a minha irmã é muito tímida.",
+      "answer": ["A", "tua", "irmã", "é", "tímida?"],
+      "distractors": ["teu", "está", "tímido?"]
+    },
+    {
+      "id": "m2-appearance-character-37",
+      "type": "question_for_answer",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Os meus pais são altos e magros.» What did you ask? (informal)",
+      "explanation": "«Os pais» is plural, so «Como são …?». «Ser», because height and build are permanent.",
+      "givenAnswer": "Os meus pais são altos e magros.",
+      "answer": ["Como", "são", "os", "teus", "pais?"],
+      "distractors": ["é", "estão", "tuas"],
+      "acceptedAnswers": ["Como é que são os teus pais?"]
+    },
+    {
+      "id": "m2-appearance-character-38",
+      "type": "question_for_answer",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your elderly male neighbour answers: «Sim, tenho muito frio.» What did you ask? (formal: o senhor)",
+      "explanation": "Formal «o senhor» takes the third-person form «tem». Feeling cold is «ter frio».",
+      "givenAnswer": "Sim, tenho muito frio.",
+      "answer": ["O", "senhor", "tem", "frio?"],
+      "distractors": ["Tens", "está", "a", "senhora"],
+      "acceptedAnswers": ["Tem frio?"]
+    },
+    {
+      "id": "m2-appearance-character-39",
+      "type": "find_error",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Fome» is a feminine noun, so «very» must agree: «muita fome». Compare «muito frio», «muito sono».",
+      "sentence": ["Hoje", "tenho", "muito", "fome."],
+      "wrongIndex": 2,
+      "correction": "muita",
+      "options": ["muita", "muitos", "muitas"]
+    },
+    {
+      "id": "m2-appearance-character-40",
+      "type": "find_error",
+      "topicId": "m2-appearance-character",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Os meus primos» is masculine plural, so the adjective is «engraçados».",
+      "sentence": ["Os", "meus", "primos", "são", "muito", "engraçadas."],
+      "wrongIndex": 5,
+      "correction": "engraçados",
+      "options": ["engraçados", "engraçado", "engraçada"]
+    }
+  ]
+}

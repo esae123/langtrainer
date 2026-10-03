@@ -1,0 +1,626 @@
+{
+  "id": "m2-demonstratives",
+  "moduleId": "m2",
+  "title": "Demonstratives and de/em contractions",
+  "kind": "grammar",
+  "context": "## This, that and that over there\n\nPortuguese has **three** distances:\n\n- near me → **este / esta / estes / estas** and **isto**\n- near you → **esse / essa / esses / essas** and **isso**\n- far from both of us → **aquele / aquela / aqueles / aquelas** and **aquilo**\n\n**Este, esse, aquele** go with a noun and agree with it, with no article: *este livro, esta caneta, aqueles alunos*. **Isto, isso, aquilo** stand alone for a thing you don't name, and never change.\n\n- *Isto é um caderno.* (This is a notebook.)\n- *O que é isso?* (What is that? — the thing near you)\n- *Este lápis é meu.* (This pencil is mine.)\n- *Essa mochila é tua?* (Is that backpack yours?)\n- *Aquela casa é muito bonita.* (That house over there is very pretty.)\n- *Gosto muito desta sala.* (I really like this room.)\n- *Moro nesta rua.* (I live on this street.)\n- *Não sou daqui.* (I'm not from here.)\n\n**De** and **em** join with all of them, just like with articles: de + este = **deste**, de + essa = **dessa**, de + aquele = **daquele**, de + isto = **disto**, em + esta = **nesta**, em + aquela = **naquela**, em + isso = **nisso**, de + aqui = **daqui**.\n\n**Watch out!**\n\n- Never put an article before a demonstrative: *este livro*, not ~~o este livro~~.\n- Before a noun use **este/esse/aquele**; alone use **isto/isso/aquilo**: *Gosto deste livro.* / *Gosto disto.*",
+  "keyItems": [
+    {
+      "target": "este / esta",
+      "support": "this (near me)",
+      "note": "plural estes / estas"
+    },
+    {
+      "target": "esse / essa",
+      "support": "that (near you)",
+      "note": "plural esses / essas"
+    },
+    {
+      "target": "aquele / aquela",
+      "support": "that (over there)",
+      "note": "plural aqueles / aquelas"
+    },
+    {
+      "target": "isto",
+      "support": "this (thing), near me",
+      "note": "never changes; no noun after it"
+    },
+    {
+      "target": "isso",
+      "support": "that (thing), near you",
+      "note": "never changes"
+    },
+    {
+      "target": "aquilo",
+      "support": "that (thing) over there",
+      "note": "never changes"
+    },
+    {
+      "target": "deste / desta",
+      "support": "of / from this",
+      "note": "de + este / de + esta"
+    },
+    {
+      "target": "desse / dessa",
+      "support": "of / from that (near you)",
+      "note": "de + esse / de + essa"
+    },
+    {
+      "target": "daquele / daquela",
+      "support": "of / from that (over there)",
+      "note": "de + aquele / de + aquela"
+    },
+    {
+      "target": "disto / disso / daquilo",
+      "support": "of this / of that / of that over there",
+      "note": "de + isto / isso / aquilo"
+    },
+    {
+      "target": "neste / nesta",
+      "support": "in / on this",
+      "note": "em + este / em + esta"
+    },
+    {
+      "target": "nesse / naquele / naquela",
+      "support": "in / on that",
+      "note": "em + esse / aquele / aquela"
+    },
+    {
+      "target": "nisto / nisso",
+      "support": "in / about this, that",
+      "note": "em + isto / em + isso"
+    },
+    {
+      "target": "aqui / daqui",
+      "support": "here / from here",
+      "note": "de + aqui"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m2-demonstratives-01",
+      "type": "translate_word",
+      "topicId": "m2-demonstratives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For an unnamed thing near you (the speaker), use «isto». «Este» needs a noun after it.",
+      "direction": "toTarget",
+      "sentence": "You are holding something: \"What is **this**?\"",
+      "word": "this",
+      "answer": "isto",
+      "options": ["isto", "isso", "aquilo", "este"]
+    },
+    {
+      "id": "m2-demonstratives-02",
+      "type": "translate_word",
+      "topicId": "m2-demonstratives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For an unnamed thing near the person you talk to, use «isso». «Esse» needs a noun after it.",
+      "direction": "toTarget",
+      "sentence": "Your friend is holding something: \"What is **that**?\"",
+      "word": "that",
+      "answer": "isso",
+      "options": ["isso", "isto", "aquilo", "esse"]
+    },
+    {
+      "id": "m2-demonstratives-03",
+      "type": "translate_word",
+      "topicId": "m2-demonstratives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For an unnamed thing far from both of you, use «aquilo». It never changes.",
+      "direction": "toTarget",
+      "sentence": "You point far away: \"**That** is the school.\"",
+      "word": "That",
+      "answer": "Aquilo",
+      "options": ["Aquilo", "Isso", "Isto", "Aquele"]
+    },
+    {
+      "id": "m2-demonstratives-04",
+      "type": "translate_word",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Before a noun use the variable form. «Livro» is masculine and near you, so «este livro».",
+      "direction": "toTarget",
+      "sentence": "I really like **this** book.",
+      "word": "this",
+      "answer": "este",
+      "options": ["este", "esta", "isto", "esse"]
+    },
+    {
+      "id": "m2-demonstratives-05",
+      "type": "translate_word",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«De + aqui» always joins into «daqui»: «Não sou daqui».",
+      "direction": "toTarget",
+      "sentence": "I am not **from here**.",
+      "word": "from here",
+      "answer": "daqui",
+      "options": ["daqui", "aqui", "deste", "disto"]
+    },
+    {
+      "id": "m2-demonstratives-06",
+      "type": "fill_gaps",
+      "topicId": "m2-demonstratives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"This (here) is a book and that (over there) is a notebook.\"",
+      "explanation": "For unnamed things use the invariable forms: «isto» near you, «aquilo» far from both.",
+      "template": "___ é um livro e ___ é um caderno.",
+      "gaps": [
+        {
+          "answer": "Isto"
+        },
+        {
+          "answer": "aquilo"
+        }
+      ],
+      "wordBank": ["Isto", "aquilo", "Isso", "aquela", "Disto"]
+    },
+    {
+      "id": "m2-demonstratives-07",
+      "type": "fill_gaps",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"This pen is mine and this pencil is yours.\"",
+      "explanation": "The demonstrative agrees with the noun: «caneta» is feminine (esta), «lápis» is masculine (este).",
+      "template": "___ caneta é minha e ___ lápis é teu.",
+      "gaps": [
+        {
+          "answer": "Esta"
+        },
+        {
+          "answer": "este"
+        }
+      ],
+      "wordBank": ["Esta", "este", "Isto", "Estas", "estes"]
+    },
+    {
+      "id": "m2-demonstratives-08",
+      "type": "fill_gaps",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I really like this book, but I don't like that (the thing near you).\"",
+      "explanation": "«Gostar» needs «de». Before a noun: de + este = «deste»; alone, for the thing near you: de + isso = «disso».",
+      "template": "Gosto muito ___ livro, mas não gosto ___.",
+      "gaps": [
+        {
+          "answer": "deste"
+        },
+        {
+          "answer": "disso"
+        }
+      ],
+      "wordBank": ["deste", "disso", "este", "isso", "desta", "disto"]
+    },
+    {
+      "id": "m2-demonstratives-09",
+      "type": "fill_gaps",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I live on this street, in that house over there.\"",
+      "explanation": "«Morar» uses «em». «Rua» and «casa» are feminine: em + esta = «nesta», em + aquela = «naquela».",
+      "template": "Moro ___ rua, ___ casa.",
+      "gaps": [
+        {
+          "answer": "nesta"
+        },
+        {
+          "answer": "naquela"
+        }
+      ],
+      "wordBank": ["nesta", "naquela", "neste", "naquele", "esta"]
+    },
+    {
+      "id": "m2-demonstratives-10",
+      "type": "fill_gaps",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"What is that (near you)? — This is my backpack.\"",
+      "explanation": "You ask about the thing near your friend: «isso». Your friend has it, so they answer with «isto».",
+      "template": "O que é ___? — ___ é a minha mochila.",
+      "gaps": [
+        {
+          "answer": "isso"
+        },
+        {
+          "answer": "Isto"
+        }
+      ],
+      "wordBank": ["isso", "Isto", "esse", "Este", "disso"]
+    },
+    {
+      "id": "m2-demonstratives-11",
+      "type": "fill_gaps",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"These students (m) are Portuguese and those students (f) over there are Spanish.\"",
+      "explanation": "The demonstrative agrees with the noun: «alunos» masculine plural (estes), «alunas» feminine plural (aquelas, far away).",
+      "template": "___ alunos são portugueses e ___ alunas são espanholas.",
+      "gaps": [
+        {
+          "answer": "Estes"
+        },
+        {
+          "answer": "aquelas"
+        }
+      ],
+      "wordBank": ["Estes", "aquelas", "Estas", "aqueles", "essas"]
+    },
+    {
+      "id": "m2-demonstratives-12",
+      "type": "fill_gaps",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I don't understand this. What does this word mean?\" (word = palavra)",
+      "explanation": "Alone, \"this\" is «isto». Before the feminine noun «palavra» it is «esta».",
+      "template": "Não percebo ___. O que significa ___ palavra?",
+      "gaps": [
+        {
+          "answer": "isto"
+        },
+        {
+          "answer": "esta"
+        }
+      ],
+      "wordBank": ["isto", "esta", "este", "disto", "isso"]
+    },
+    {
+      "id": "m2-demonstratives-13",
+      "type": "build_phrase",
+      "topicId": "m2-demonstratives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"This is a notebook.\"",
+      "explanation": "For an unnamed thing near you, use «isto». It never changes. «Caderno» is masculine: «um».",
+      "answer": ["Isto", "é", "um", "caderno."],
+      "distractors": ["Isso", "uma", "são"]
+    },
+    {
+      "id": "m2-demonstratives-14",
+      "type": "build_phrase",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"This pencil is mine.\"",
+      "explanation": "«Lápis» is masculine and near you, so «este lápis». No article before a demonstrative.",
+      "answer": ["Este", "lápis", "é", "meu."],
+      "distractors": ["Esta", "Esse", "minha."]
+    },
+    {
+      "id": "m2-demonstratives-15",
+      "type": "build_phrase",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Point at the backpack next to your friend and ask: \"Is that backpack yours?\"",
+      "explanation": "The backpack is near your friend, so «essa». «Mochila» is feminine: «essa», «tua».",
+      "answer": ["Essa", "mochila", "é", "tua?"],
+      "distractors": ["Esse", "Esta", "teu?"]
+    },
+    {
+      "id": "m2-demonstratives-16",
+      "type": "build_phrase",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"That house over there is very pretty.\"",
+      "explanation": "Far from both of you: «aquele/aquela». «Casa» is feminine, so «aquela» and «bonita».",
+      "answer": ["Aquela", "casa", "é", "muito", "bonita."],
+      "distractors": ["Aquele", "Essa", "bonito."]
+    },
+    {
+      "id": "m2-demonstratives-17",
+      "type": "build_phrase",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"These chairs are small.\"",
+      "explanation": "«Cadeiras» is feminine plural and near you, so «estas».",
+      "answer": ["Estas", "cadeiras", "são", "pequenas."],
+      "distractors": ["Estes", "Essas", "pequenos."]
+    },
+    {
+      "id": "m2-demonstratives-18",
+      "type": "build_phrase",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"I'm not from here.\"",
+      "explanation": "Origin takes «ser de», and «de + aqui» joins into «daqui».",
+      "answer": ["Não", "sou", "daqui."],
+      "distractors": ["aqui.", "deste", "Estou"],
+      "acceptedAnswers": ["Eu não sou daqui."]
+    },
+    {
+      "id": "m2-demonstratives-19",
+      "type": "build_phrase",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"Those teachers over there are from Porto.\"",
+      "explanation": "«Professores» is masculine plural and far away: «aqueles». «De + o Porto» becomes «do Porto».",
+      "answer": ["Aqueles", "professores", "são", "do", "Porto."],
+      "distractors": ["Aquelas", "Esses", "de"]
+    },
+    {
+      "id": "m2-demonstratives-20",
+      "type": "build_phrase",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: \"I really like this room.\"",
+      "explanation": "«Gostar» needs «de», and de + esta joins into «desta». «Sala» is feminine.",
+      "answer": ["Gosto", "muito", "desta", "sala."],
+      "distractors": ["esta", "deste", "de"],
+      "acceptedAnswers": ["Eu gosto muito desta sala."]
+    },
+    {
+      "id": "m2-demonstratives-21",
+      "type": "build_phrase",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"My grandparents live on that street over there.\"",
+      "explanation": "«Morar» uses «em», and em + aquela joins into «naquela». «Avós» is plural, so «moram».",
+      "answer": ["Os", "meus", "avós", "moram", "naquela", "rua."],
+      "distractors": ["aquela", "nessa", "mora"]
+    },
+    {
+      "id": "m2-demonstratives-22",
+      "type": "build_phrase",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend has a book next to them. Say: \"I need that book, please.\"",
+      "explanation": "«Precisar» needs «de». The book is near your friend, so de + esse = «desse».",
+      "answer": ["Preciso", "desse", "livro,", "por", "favor."],
+      "distractors": ["deste", "esse", "disso"],
+      "acceptedAnswers": ["Eu preciso desse livro, por favor."]
+    },
+    {
+      "id": "m2-demonstratives-23",
+      "type": "build_phrase",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"These pens are mine and those (near you) are yours.\"",
+      "explanation": "«Canetas» is feminine plural: «estas» near me, «essas» near you. «Essas» can stand alone when the noun is clear.",
+      "answer": ["Estas", "canetas", "são", "minhas", "e", "essas", "são", "tuas."],
+      "distractors": ["Estes", "meus", "esses"]
+    },
+    {
+      "id": "m2-demonstratives-24",
+      "type": "question_for_answer",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend is holding something and answers: «Isto é uma borracha.» What did you ask?",
+      "explanation": "The thing is near your friend, so you ask with «isso». Your friend, who holds it, answers with «isto».",
+      "givenAnswer": "Isto é uma borracha.",
+      "answer": ["O", "que", "é", "isso?"],
+      "distractors": ["isto?", "aquilo?", "está"],
+      "acceptedAnswers": ["O que é que é isso?"]
+    },
+    {
+      "id": "m2-demonstratives-25",
+      "type": "question_for_answer",
+      "topicId": "m2-demonstratives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You point at something far away. Your friend answers: «Aquilo é o rio Tejo.» What did you ask?",
+      "explanation": "For an unnamed thing far from both of you, use «aquilo». «O que é …?» asks what something is.",
+      "givenAnswer": "Aquilo é o rio Tejo.",
+      "answer": ["O", "que", "é", "aquilo?"],
+      "distractors": ["isso?", "isto?", "Quem"],
+      "acceptedAnswers": ["O que é que é aquilo?"]
+    },
+    {
+      "id": "m2-demonstratives-26",
+      "type": "question_for_answer",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You point at the book next to your friend. They answer: «Sim, este livro é meu.» What did you ask? (informal)",
+      "explanation": "The book is near your friend, so you say «esse livro»; your friend, who has it, says «este».",
+      "givenAnswer": "Sim, este livro é meu.",
+      "answer": ["Esse", "livro", "é", "teu?"],
+      "distractors": ["Este", "tua?", "Isso"],
+      "acceptedAnswers": ["Esse livro é o teu?"]
+    },
+    {
+      "id": "m2-demonstratives-27",
+      "type": "question_for_answer",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You hold a pen and ask a friend. They answer: «Não, essa caneta é da Rita.» What did you ask? (informal)",
+      "explanation": "The pen is in your hand, so «esta caneta»; your friend says «essa». «Caneta» is feminine: «esta», «tua».",
+      "givenAnswer": "Não, essa caneta é da Rita.",
+      "answer": ["Esta", "caneta", "é", "tua?"],
+      "distractors": ["Essa", "Este", "teu?"],
+      "acceptedAnswers": ["Esta caneta é a tua?"]
+    },
+    {
+      "id": "m2-demonstratives-28",
+      "type": "question_for_answer",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Aquela rapariga é a Inês.» What did you ask?",
+      "explanation": "«Quem» asks who. «Rapariga» (girl) is feminine, so «aquela».",
+      "givenAnswer": "Aquela rapariga é a Inês.",
+      "answer": ["Quem", "é", "aquela", "rapariga?"],
+      "distractors": ["aquele", "Que", "essa"],
+      "acceptedAnswers": ["Quem é que é aquela rapariga?"]
+    },
+    {
+      "id": "m2-demonstratives-29",
+      "type": "question_for_answer",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Aqueles alunos são de Madrid.» What did you ask?",
+      "explanation": "Origin is «ser de», so the question starts with «De onde». «Alunos» is masculine plural: «aqueles».",
+      "givenAnswer": "Aqueles alunos são de Madrid.",
+      "answer": ["De", "onde", "são", "aqueles", "alunos?"],
+      "distractors": ["Quem", "estão", "aquelas"],
+      "acceptedAnswers": ["De onde é que são aqueles alunos?"]
+    },
+    {
+      "id": "m2-demonstratives-30",
+      "type": "question_for_answer",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The teacher answers: «Nesta sala há trinta cadeiras.» What did you ask?",
+      "explanation": "«Cadeiras» is feminine plural, so «quantas». «Em + esta sala» joins into «nesta sala».",
+      "givenAnswer": "Nesta sala há trinta cadeiras.",
+      "answer": ["Quantas", "cadeiras", "há", "nesta", "sala?"],
+      "distractors": ["Quantos", "esta", "neste"],
+      "acceptedAnswers": ["Quantas cadeiras é que há nesta sala?"]
+    },
+    {
+      "id": "m2-demonstratives-31",
+      "type": "question_for_answer",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend is reading a book. They answer: «Sim, gosto muito deste livro.» What did you ask? (informal)",
+      "explanation": "The book is near your friend: de + esse = «desse». Your friend, who holds it, says «deste».",
+      "givenAnswer": "Sim, gosto muito deste livro.",
+      "answer": ["Gostas", "desse", "livro?"],
+      "distractors": ["deste", "Gosta", "esse"],
+      "acceptedAnswers": ["Tu gostas desse livro?"]
+    },
+    {
+      "id": "m2-demonstratives-32",
+      "type": "question_for_answer",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Não, não sou daqui. Sou de Braga.» What did you ask? (informal)",
+      "explanation": "Origin takes «ser de»: «És daqui?». «De + aqui» joins into «daqui».",
+      "givenAnswer": "Não, não sou daqui. Sou de Braga.",
+      "answer": ["És", "daqui?"],
+      "distractors": ["Estás", "aqui?", "É"],
+      "acceptedAnswers": ["Tu és daqui?"]
+    },
+    {
+      "id": "m2-demonstratives-33",
+      "type": "find_error",
+      "topicId": "m2-demonstratives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Mesa» is feminine singular, so the demonstrative is «essa».",
+      "sentence": ["Esse", "mesa", "é", "grande."],
+      "wrongIndex": 0,
+      "correction": "Essa",
+      "options": ["Essa", "Esses", "Isso"]
+    },
+    {
+      "id": "m2-demonstratives-34",
+      "type": "find_error",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Before a noun use the variable form: de + este = «deste». «Disto» stands alone, with no noun.",
+      "sentence": ["Gosto", "muito", "disto", "livro."],
+      "wrongIndex": 2,
+      "correction": "deste",
+      "options": ["deste", "desta", "disso"]
+    },
+    {
+      "id": "m2-demonstratives-35",
+      "type": "find_error",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "For an unnamed thing, use the invariable «isto». «Este» needs a noun: «este livro».",
+      "sentence": ["O", "que", "é", "este?"],
+      "wrongIndex": 3,
+      "correction": "isto?",
+      "options": ["isto?", "esta?", "estes?"]
+    },
+    {
+      "id": "m2-demonstratives-36",
+      "type": "find_error",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Professores» is masculine plural, so «aqueles».",
+      "sentence": ["Aquelas", "professores", "são", "muito", "simpáticos."],
+      "wrongIndex": 0,
+      "correction": "Aqueles",
+      "options": ["Aqueles", "Aquele", "Essas"]
+    },
+    {
+      "id": "m2-demonstratives-37",
+      "type": "find_error",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Casa» is feminine singular, so em + aquela = «naquela».",
+      "sentence": ["Os", "meus", "pais", "moram", "naquele", "casa."],
+      "wrongIndex": 4,
+      "correction": "naquela",
+      "options": ["naquela", "naquelas", "nesse"]
+    },
+    {
+      "id": "m2-demonstratives-38",
+      "type": "about_me",
+      "topicId": "m2-demonstratives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Answer with «ser»: «Sim, sou daqui.» or «Não, sou de …». «De + aqui» is «daqui».",
+      "question": "És daqui?",
+      "sampleAnswer": "Não, sou do Porto.",
+      "hints": ["Sim,", "daqui.", "de", "Lisboa.", "Braga."]
+    },
+    {
+      "id": "m2-demonstratives-39",
+      "type": "about_me",
+      "topicId": "m2-demonstratives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "«Gostar» needs «de»: de + esta = «desta». «Cidade» is feminine.",
+      "question": "Gostas desta cidade?",
+      "sampleAnswer": "Sim, gosto muito desta cidade.",
+      "hints": ["Não,", "é", "bonita.", "grande.", "pequena."]
+    },
+    {
+      "id": "m2-demonstratives-40",
+      "type": "about_me",
+      "topicId": "m2-demonstratives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Start with «Nesta sala há …» (em + esta = nesta). «Há» never changes.",
+      "question": "O que há nesta sala?",
+      "sampleAnswer": "Nesta sala há uma mesa e duas cadeiras.",
+      "hints": ["um", "quadro", "três", "livros", "janela"]
+    }
+  ]
+}
