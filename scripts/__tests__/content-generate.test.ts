@@ -310,11 +310,11 @@ describe('retryDelayMs', () => {
   it('falls back to error.details[].retryDelay, then to exponential backoff', () => {
     const body = JSON.stringify({ error: { details: [{ foo: 1 }, { retryDelay: '12s' }] } });
     expect(retryDelayMs(null, body, 0, now)).toBe(12_000);
-    expect(retryDelayMs(null, 'not json', 2, now)).toBe(4000);
+    expect(retryDelayMs(null, 'not json', 2, now)).toBe(40_000);
   });
 
   it('never returns NaN or more than the cap', () => {
-    expect(retryDelayMs('soon-ish', '', 1, now)).toBe(2000);
+    expect(retryDelayMs('soon-ish', '', 1, now)).toBe(20_000);
     expect(retryDelayMs('3600', '', 0, now)).toBe(MAX_RETRY_DELAY_MS);
     expect(retryDelayMs(null, '', 20, now)).toBe(MAX_RETRY_DELAY_MS);
     expect(retryDelayMs('Fri, 25 Sep 2026 11:00:00 GMT', '', 0, now)).toBe(0);
@@ -389,7 +389,7 @@ describe('buildJobs — never overwrites without --force (review B2)', () => {
   });
 
   it('still builds a --topic job when there is no file yet', () => {
-    expect(buildJobs(fakeCli({ topic: 'm2-classroom-objects' }))).toHaveLength(1);
+    expect(buildJobs(fakeCli({ topic: 'm7-near-synonyms-suffix' }))).toHaveLength(1);
   });
 });
 

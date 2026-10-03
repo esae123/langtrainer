@@ -43,6 +43,8 @@ const DEFAULT_SLEEP_MS = 2000;
 export const MAX_ATTEMPTS = 5;
 /** Upper bound for one backoff wait, whatever the server asks for. */
 export const MAX_RETRY_DELAY_MS = 60_000;
+/** First backoff pause when the API gives no delay; doubles per attempt (10s, 20s, 40s, 60s cap). Overload spikes (503) usually need more than a few seconds. */
+export const BASE_RETRY_DELAY_MS = 10_000;
 const RETRYABLE_STATUSES = new Set([429, 500, 503]);
 
 // ---------- small fs helpers ----------
@@ -610,7 +612,7 @@ export function retryDelayMs(retryAfter: string | null, bodyText: string, attemp
       // not JSON — fall back to backoff
     }
   }
-  if (ms === undefined || !Number.isFinite(ms)) ms = 2 ** attempt * 1000;
+  if (ms === undefined || !Number.isFinite(ms)) ms = BASE_RETRY_DELAY_MS * 2 ** attempt;
   return Math.min(MAX_RETRY_DELAY_MS, Math.max(0, ms));
 }
 

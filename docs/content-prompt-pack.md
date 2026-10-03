@@ -44,8 +44,8 @@ PEDAGOGY
 - context: 120–250 words of markdown: the rule or situation, 4–8 example sentences with English glosses, 1–2 "watch out" notes.
 - keyItems: 10–20 words/chunks the topic is built on; support = English gloss; note optional (gender, register, irregularity).
 - Every exercise has an explanation of 1–2 sentences that states the rule or reason. Never just repeat the answer.
-- The learner PRODUCES language: prefer build_phrase, fill_gaps, question_for_answer, find_error, about_me. Use translate_word / match_pairs mainly for vocabulary.
-- difficulty: 1 = recognise / short form; 2 = full sentence with one decision; 3 = two decisions or longer sentence. Spread ≈ 30% / 45% / 25%.
+- The learner PRODUCES language. The most valuable exercises make the learner compose: build_phrase (a whole sentence from a situation or English meaning), question_for_answer (write the question for a given answer) and translate_word toTarget (English → Portuguese, allow letters/typing). Mix for 40 exercises: 10–12 build_phrase, 8–10 question_for_answer, 4–6 translate_word (toTarget), 6–8 fill_gaps (prefer 2–3 gaps), 4–5 find_error, 3 about_me, at most 2 match_pairs/order_dialogue in total (number topics may use number_sequence instead). Vocabulary topics keep the same productive core: at most 6 translate_word and 2 match_pairs.
+- difficulty: 1 = recognise / short form; 2 = full sentence with one decision; 3 = two decisions or a longer sentence (6+ words). Spread ≈ 20% / 45% / 35% (≈ 8 / 18 / 14 of 40). Most difficulty-3 items are build_phrase or question_for_answer.
 - Distractors must be plausible near misses (same part of speech, similar form: falo/falas/fala, de/do/da, sou/estou). Never random unrelated words. Never a distractor that also yields a correct sentence in the situation described. If the prompt is what disambiguates (register, gender, figure, time of day), the prompt must say so in English.
 - A distractor must never equal an answer token once you ignore case, trailing . ! ? and guillemets («») — e.g. answer ["Tens","um","gato?"] must not use "tens" or "Tens?" as a distractor.
 - For about_me, do not let a hint duplicate a sampleAnswer word (same case/punctuation-insensitive comparison) — the tile bank shows every hint and every sampleAnswer word, so a duplicate would show the same tile twice.
@@ -96,7 +96,7 @@ title: Family and pets
 kind: vocabulary
 Core content: family members (pai, mãe, filho/filha, irmão/irmã, avô/avó, tio/tia, primo/prima, marido, mulher, namorado/a), pets (cão, gato), possessives o meu / a minha / os meus / as minhas, "ter" for having family members, ages of family members.
 Exercise count: 40
-Recommended mix: 10 fill_gaps, 8 build_phrase, 6 question_for_answer, 5 find_error, 4 about_me, 4 translate_word, 3 match_pairs or order_dialogue. (For vocabulary topics shift toward translate_word/match_pairs ≈ 12.)
+Recommended mix: 10–12 build_phrase, 8–10 question_for_answer, 4–6 translate_word (English → Portuguese), 6–8 fill_gaps, 4–5 find_error, 3 about_me, at most 2 match_pairs/order_dialogue. Difficulty ≈ 8 / 18 / 14.
 Grammar already known by the learner (may be reused): Module 1 — ser/estar/ter, -ar verbs, articles, de/em contractions, numbers to 50, question words.
 Grammar NOT yet known (do not use): past tenses, subjunctive, object pronouns, comparatives.
 Return only the JSON.

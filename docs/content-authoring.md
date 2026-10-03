@@ -59,7 +59,7 @@ Tokens in `answer`, `sentence`, `lines[].text` keep punctuation attached to the 
 
 ## 5. Topic size and mix
 
-Each topic: **40 exercises**. Recommended mix for a grammar topic: 10 fill_gaps, 8 build_phrase, 6 question_for_answer, 5 find_error, 4 about_me, 4 translate_word, 3 match_pairs or order_dialogue. Vocabulary topics shift toward translate_word/match_pairs (≈ 12) and number_sequence where relevant. Difficulty spread ≈ 30% / 45% / 25%.
+Each topic: **40 exercises**, weighted toward exercises that make the learner compose (owner decision, Oct 2026): 10–12 build_phrase, 8–10 question_for_answer, 4–6 translate_word (toTarget, English → Portuguese), 6–8 fill_gaps (prefer 2–3 gaps), 4–5 find_error, 3 about_me, at most 2 match_pairs/order_dialogue (number topics may use number_sequence instead). Vocabulary topics keep the same productive core: at most 6 translate_word and 2 match_pairs. Difficulty spread ≈ 20% / 45% / 35% (≈ 8 / 18 / 14); most difficulty-3 items are build_phrase or question_for_answer.
 Phrase set: 50 phrases, 40 exercises (order_dialogue, match_pairs, build_phrase, fill_gaps, translate_word).
 
 ## 6. Module 1 topic plan (from the roadmap)
