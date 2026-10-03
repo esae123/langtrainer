@@ -13,7 +13,7 @@
 //   node scripts/content-generate.ts --program en-b2 --module m1 --dry-run
 // Flags: --program <id> (default pt-PT-A1), --module <id>, --topic <id>, --phrases <id>,
 //        --force (regenerate even if the file already exists), --dry-run (print prompts only,
-//        no API calls, no GEMINI_API_KEY required), --model <name>, --count <n>,
+//        no API calls, no GEMINI_API_KEY required), --model <name>, --thinking <low|high>, --count <n>,
 //        --sleep <ms> (default 2000, pause between sequential calls).
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
@@ -37,7 +37,7 @@ export const DEFAULT_MODEL = 'gemini-3.8-flash';
 export const CHUNK_SIZE = 20;
 export const MAX_REPAIR_ROUNDS = 2;
 /** Generous: a 20-exercise chunk is ~8-10k tokens, and thinking models spend output tokens too. */
-export const MAX_OUTPUT_TOKENS = 32768;
+export const MAX_OUTPUT_TOKENS = 65536;
 const DEFAULT_SLEEP_MS = 2000;
 /** Total HTTP attempts per call (first try + retries) on 429/500/503. */
 export const MAX_ATTEMPTS = 5;
@@ -94,6 +94,8 @@ export interface Cli {
   force: boolean;
   dryRun: boolean;
   model: string;
+  /** Gemini 3 thinking level (e.g. low | high); omitted from the request when unset. */
+  thinkingLevel?: string;
   count?: number;
   sleepMs: number;
 }
@@ -113,6 +115,7 @@ export function parseArgs(argv: string[]): Cli {
     force: argv.includes('--force'),
     dryRun: argv.includes('--dry-run'),
     model: get('--model') ?? process.env.GEMINI_MODEL ?? DEFAULT_MODEL,
+    thinkingLevel: get('--thinking') ?? (process.env.GEMINI_THINKING_LEVEL || undefined),
     count: countRaw ? Number(countRaw) : undefined,
     sleepMs: sleepRaw ? Number(sleepRaw) : DEFAULT_SLEEP_MS,
   };
@@ -153,7 +156,11 @@ function exerciseCount(job: Job): number {
   return job.kind === 'topic' ? job.count : job.exerciseCount;
 }
 
-function findModuleTopicBrief(programId: string, moduleId: string, topicId: string): ModuleTopicBrief | undefined {
+function findModuleTopicBrief(
+  programId: string,
+  moduleId: string,
+  topicId: string
+): ModuleTopicBrief | undefined {
   const modulePath = path.join(programRoot(programId), 'modules', `${moduleId}.json`);
   if (!fileExists(modulePath)) return undefined;
   return moduleTopicBriefs(readJson(modulePath)).find((t) => t.id === topicId);
@@ -170,7 +177,12 @@ function findModuleIdForTopic(programId: string, topicId: string): string | unde
   return undefined;
 }
 
-function briefToJob(programId: string, moduleId: string, brief: ModuleTopicBrief, countOverride?: number): TopicJob {
+function briefToJob(
+  programId: string,
+  moduleId: string,
+  brief: ModuleTopicBrief,
+  countOverride?: number
+): TopicJob {
   return {
     kind: 'topic',
     programId,
@@ -199,12 +211,19 @@ export function buildJobs(cli: Cli): Job[] {
 
   if (cli.topic) {
     const moduleId = findModuleIdForTopic(cli.program, cli.topic);
-    if (!moduleId) throw new Error(`topic "${cli.topic}" was not found in any module of program "${cli.program}"`);
+    if (!moduleId)
+      throw new Error(
+        `topic "${cli.topic}" was not found in any module of program "${cli.program}"`
+      );
     const brief = findModuleTopicBrief(cli.program, moduleId, cli.topic);
-    if (!brief) throw new Error(`topic "${cli.topic}" was not found in any module of program "${cli.program}"`);
+    if (!brief)
+      throw new Error(
+        `topic "${cli.topic}" was not found in any module of program "${cli.program}"`
+      );
     // Same guard as --module/--phrases: never overwrite a (possibly hand-reviewed) file without --force.
     const topicPath = path.join(programRoot(cli.program), 'topics', `${brief.id}.json`);
-    if (!fileExists(topicPath) || cli.force) jobs.push(briefToJob(cli.program, moduleId, brief, cli.count));
+    if (!fileExists(topicPath) || cli.force)
+      jobs.push(briefToJob(cli.program, moduleId, brief, cli.count));
   }
 
   if (cli.module) {
@@ -219,7 +238,8 @@ export function buildJobs(cli: Cli): Job[] {
 
   if (cli.phrases) {
     const planPath = path.join(programRoot(cli.program), 'phrases.plan.json');
-    if (!fileExists(planPath)) throw new Error(`phrases.plan.json not found for program "${cli.program}"`);
+    if (!fileExists(planPath))
+      throw new Error(`phrases.plan.json not found for program "${cli.program}"`);
     const plan = JSON.parse(readFileSync(planPath, 'utf8')) as PhraseSetPlanEntry[];
     const entry = plan.find((p) => p.id === cli.phrases);
     if (!entry) throw new Error(`phrase set "${cli.phrases}" not found in ${planPath}`);
@@ -247,9 +267,15 @@ function readPromptPart(name: string): string {
 }
 
 /** System prompt = intro + this program's RULES.md + the shared pedagogy/schema/examples/self-check. */
-export function buildSystemPrompt(programId: string, programTitle: string, targetLanguage: string): string {
+export function buildSystemPrompt(
+  programId: string,
+  programTitle: string,
+  targetLanguage: string
+): string {
   const rulesPath = path.join(programRoot(programId), 'RULES.md');
-  const rules = fileExists(rulesPath) ? readText(rulesPath).trim() : '(no RULES.md found for this program)';
+  const rules = fileExists(rulesPath)
+    ? readText(rulesPath).trim()
+    : '(no RULES.md found for this program)';
   const intro =
     `You are an experienced teacher preparing "${programTitle}" (target language: ${targetLanguage}) exercises ` +
     'for a language-learning app. You output ONLY one JSON object, no prose, no markdown fences. The JSON must ' +
@@ -292,7 +318,10 @@ function exercisesOf(obj: Record<string, unknown>): Record<string, unknown>[] {
  * id) would silently drop its problems and a broken file would be written. Extra exercises
  * beyond the job's count are dropped. Missing title/kind (first chunk lost) fall back to the brief.
  */
-export function normalizeMerged(job: Job, merged: Record<string, unknown>): Record<string, unknown> {
+export function normalizeMerged(
+  job: Job,
+  merged: Record<string, unknown>
+): Record<string, unknown> {
   const id = containerId(job);
   const exercises = exercisesOf(merged)
     .slice(0, exerciseCount(job))
@@ -328,7 +357,11 @@ export function missingExerciseIds(job: Job, merged: Record<string, unknown>): s
  */
 function targetSentence(exercise: Record<string, unknown>): string | undefined {
   const join = (v: unknown) =>
-    Array.isArray(v) ? v.filter((x) => typeof x === 'string').join(' ') : typeof v === 'string' ? v : undefined;
+    Array.isArray(v)
+      ? v.filter((x) => typeof x === 'string').join(' ')
+      : typeof v === 'string'
+        ? v
+        : undefined;
   return (
     join(exercise.sentence) ??
     (typeof exercise.template === 'string' ? exercise.template : undefined) ??
@@ -338,7 +371,9 @@ function targetSentence(exercise: Record<string, unknown>): string | undefined {
 }
 
 function usedSentences(exercises: Record<string, unknown>[]): string[] {
-  return exercises.map(targetSentence).filter((x): x is string => typeof x === 'string' && x.length > 0);
+  return exercises
+    .map(targetSentence)
+    .filter((x): x is string => typeof x === 'string' && x.length > 0);
 }
 
 // ---------- prompts ----------
@@ -381,7 +416,8 @@ export interface ChunkContext {
 /** Topic context + keyItems (or the phrase list) of the first chunk, compact. */
 function headerSummary(header: Record<string, unknown>): string[] {
   const lines: string[] = [];
-  if (typeof header.context === 'string' && header.context.trim()) lines.push(`Topic context: ${header.context.trim()}`);
+  if (typeof header.context === 'string' && header.context.trim())
+    lines.push(`Topic context: ${header.context.trim()}`);
   if (Array.isArray(header.keyItems) && header.keyItems.length > 0) {
     lines.push(`Key items: ${JSON.stringify(header.keyItems)}`);
   }
@@ -401,7 +437,9 @@ export function buildUserPrompt(
   const range = `${exerciseIdFor(id, chunk.startNum)}..${exerciseIdFor(id, chunk.endNum)}`;
   const thisChunkCount = chunk.endNum - chunk.startNum + 1;
 
-  const lines: string[] = [job.kind === 'topic' ? 'Write one Topic JSON.' : 'Write one PhraseSet JSON.'];
+  const lines: string[] = [
+    job.kind === 'topic' ? 'Write one Topic JSON.' : 'Write one PhraseSet JSON.',
+  ];
   lines.push(...jobDescriptionLines(job));
 
   if (!chunk.isContinuation) {
@@ -413,11 +451,17 @@ export function buildUserPrompt(
     );
   } else {
     if (previous?.header) {
-      lines.push('', 'The earlier part of this JSON already defines (keep using exactly this material):');
+      lines.push(
+        '',
+        'The earlier part of this JSON already defines (keep using exactly this material):'
+      );
       lines.push(...headerSummary(previous.header));
     }
     if (previous && previous.sentences.length > 0) {
-      lines.push('', 'Target sentences already used by the earlier exercises (do NOT repeat or trivially rephrase them):');
+      lines.push(
+        '',
+        'Target sentences already used by the earlier exercises (do NOT repeat or trivially rephrase them):'
+      );
       lines.push(...previous.sentences.map((sentence) => `- ${sentence}`));
     }
     lines.push(
@@ -473,11 +517,16 @@ export function buildRepairPrompt(
 ): string {
   const exercises = exercisesOf(merged);
   const toFix = exercises.filter((e) => typeof e.id === 'string' && request.fixIds.includes(e.id));
-  const others = exercises.filter((e) => !(typeof e.id === 'string' && request.fixIds.includes(e.id)));
+  const others = exercises.filter(
+    (e) => !(typeof e.id === 'string' && request.fixIds.includes(e.id))
+  );
   const { exercises: _exercises, ...header } = merged;
   const noun = job.kind === 'topic' ? 'topic' : 'phrase set';
 
-  const lines: string[] = [`Some parts of the ${noun} "${containerId(job)}" have problems. Fix ALL of them.`, ''];
+  const lines: string[] = [
+    `Some parts of the ${noun} "${containerId(job)}" have problems. Fix ALL of them.`,
+    '',
+  ];
   lines.push(...jobDescriptionLines(job));
   if (request.fixHeader) {
     lines.push('', `Current ${noun} fields (without exercises):`, JSON.stringify(header));
@@ -488,13 +537,26 @@ export function buildRepairPrompt(
     lines.push('', 'Exercises to fix (keep each id):', JSON.stringify(toFix));
   }
   if (request.missingIds.length > 0) {
-    lines.push('', `Also write these missing exercises from scratch, following every rule: ${request.missingIds.join(', ')}`);
+    lines.push(
+      '',
+      `Also write these missing exercises from scratch, following every rule: ${request.missingIds.join(', ')}`
+    );
   }
   const taken = usedSentences(others);
   if (taken.length > 0) {
-    lines.push('', 'Sentences used by the other exercises (do not repeat them):', ...taken.map((x) => `- ${x}`));
+    lines.push(
+      '',
+      'Sentences used by the other exercises (do not repeat them):',
+      ...taken.map((x) => `- ${x}`)
+    );
   }
-  lines.push('', 'Problems:', ...problems.filter((p) => p.severity !== 'warning').map((p) => `- ${p.exerciseId ?? p.path}: ${p.message}`));
+  lines.push(
+    '',
+    'Problems:',
+    ...problems
+      .filter((p) => p.severity !== 'warning')
+      .map((p) => `- ${p.exerciseId ?? p.path}: ${p.message}`)
+  );
   lines.push(
     '',
     'Return ONLY one JSON object: {' +
@@ -535,7 +597,9 @@ export function spliceRepair(
     placed.set(id, exercise);
   }
 
-  const next = exercises.map((e) => (typeof e.id === 'string' && placed.has(e.id) ? { ...placed.get(e.id), id: e.id } : e));
+  const next = exercises.map((e) =>
+    typeof e.id === 'string' && placed.has(e.id) ? { ...placed.get(e.id), id: e.id } : e
+  );
   for (const id of request.missingIds) {
     const exercise = placed.get(id);
     if (!exercise) break; // keep ids sequential: stop at the first one still missing
@@ -570,6 +634,8 @@ interface GeminiCallOptions {
   apiKey: string;
   systemPrompt: string;
   userPrompt: string;
+  /** Gemini 3 `generationConfig.thinkingConfig.thinkingLevel`; not sent when undefined. */
+  thinkingLevel?: string;
   /** Total HTTP attempts on 429/500/503 (default MAX_ATTEMPTS). */
   maxAttempts?: number;
   /** Injected in tests. */
@@ -588,7 +654,12 @@ function parseDurationMs(value: unknown): number | undefined {
  * else the body's `error.details[].retryDelay` ("12s"), else exponential backoff. Never NaN,
  * never negative, never more than MAX_RETRY_DELAY_MS.
  */
-export function retryDelayMs(retryAfter: string | null, bodyText: string, attempt: number, now = Date.now()): number {
+export function retryDelayMs(
+  retryAfter: string | null,
+  bodyText: string,
+  attempt: number,
+  now = Date.now()
+): number {
   let ms: number | undefined;
   if (retryAfter !== null && retryAfter.trim() !== '') {
     const seconds = Number(retryAfter);
@@ -622,7 +693,11 @@ export async function callGemini(opts: GeminiCallOptions): Promise<GeminiResult>
   const body = JSON.stringify({
     contents: [{ role: 'user', parts: [{ text: opts.userPrompt }] }],
     systemInstruction: { parts: [{ text: opts.systemPrompt }] },
-    generationConfig: { responseMimeType: 'application/json', maxOutputTokens: MAX_OUTPUT_TOKENS },
+    generationConfig: {
+      responseMimeType: 'application/json',
+      maxOutputTokens: MAX_OUTPUT_TOKENS,
+      ...(opts.thinkingLevel ? { thinkingConfig: { thinkingLevel: opts.thinkingLevel } } : {}),
+    },
   });
   const maxAttempts = opts.maxAttempts ?? MAX_ATTEMPTS;
   const wait = opts.sleepFn ?? sleep;
@@ -639,14 +714,19 @@ export async function callGemini(opts: GeminiCallOptions): Promise<GeminiResult>
       const errorText = await res.text();
       if (RETRYABLE_STATUSES.has(res.status) && attempt < maxAttempts) {
         const waitMs = retryDelayMs(res.headers.get('retry-after'), errorText, attempt - 1);
-        console.log(`  Gemini HTTP ${res.status} — retrying in ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${maxAttempts})`);
+        console.log(
+          `  Gemini HTTP ${res.status} — retrying in ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${maxAttempts})`
+        );
         await wait(waitMs);
         continue;
       }
       throw new Error(`Gemini API error ${res.status}: ${errorText}`);
     }
     const json = (await res.json()) as {
-      candidates?: { content?: { parts?: { text?: string; thought?: boolean }[] }; finishReason?: string }[];
+      candidates?: {
+        content?: { parts?: { text?: string; thought?: boolean }[] };
+        finishReason?: string;
+      }[];
       usageMetadata?: GeminiUsage;
     };
     const candidate = json.candidates?.[0];
@@ -655,9 +735,15 @@ export async function callGemini(opts: GeminiCallOptions): Promise<GeminiResult>
       .filter((part) => part.thought !== true && typeof part.text === 'string')
       .map((part) => part.text as string);
     if (texts.length === 0) {
-      throw new Error(`Gemini response had no text part (finishReason: ${candidate?.finishReason ?? 'none'})`);
+      throw new Error(
+        `Gemini response had no text part (finishReason: ${candidate?.finishReason ?? 'none'})`
+      );
     }
-    return { text: texts.join(''), usage: json.usageMetadata, finishReason: candidate?.finishReason };
+    return {
+      text: texts.join(''),
+      usage: json.usageMetadata,
+      finishReason: candidate?.finishReason,
+    };
   }
 }
 
@@ -683,7 +769,13 @@ async function callForJson(
   label: string
 ): Promise<Record<string, unknown> | null> {
   for (let attempt = 1; attempt <= 2; attempt++) {
-    const result = await callGemini({ model: cli.model, apiKey, systemPrompt, userPrompt });
+    const result = await callGemini({
+      model: cli.model,
+      thinkingLevel: cli.thinkingLevel,
+      apiKey,
+      systemPrompt,
+      userPrompt,
+    });
     printUsage(label, attempt === 1 ? '' : '(retry)', result.usage);
     let reason: string;
     if (result.finishReason === 'MAX_TOKENS') {
@@ -695,7 +787,9 @@ async function callForJson(
         reason = `the reply is not valid JSON (${err instanceof Error ? err.message : String(err)})`;
       }
     }
-    console.error(`  [${label}] ${reason}${attempt === 1 ? ' — retrying once' : ' — giving up on this call'}`);
+    console.error(
+      `  [${label}] ${reason}${attempt === 1 ? ' — retrying once' : ' — giving up on this call'}`
+    );
     if (attempt === 1) await sleep(cli.sleepMs);
   }
   return null;
@@ -714,7 +808,11 @@ export function mergeExerciseChunks(chunks: Record<string, unknown>[]): Record<s
 
 // ---------- validation against the real program (docs/stage-4b-spec.md §3) ----------
 
-function loadSiblingTopics(programId: string, moduleId: string, excludeTopicId: string): Record<string, unknown>[] {
+function loadSiblingTopics(
+  programId: string,
+  moduleId: string,
+  excludeTopicId: string
+): Record<string, unknown>[] {
   const root = programRoot(programId);
   const modulePath = path.join(root, 'modules', `${moduleId}.json`);
   if (!fileExists(modulePath)) return [];
@@ -744,14 +842,32 @@ function errorMessage(err: unknown): string {
  * validateProgram stops at the first error, so each exercise is checked on its own inside a
  * known-good stub container, and the header is checked with no exercises.
  */
-function structuralProblems(job: Job, meta: Record<string, unknown>, merged: Record<string, unknown>, prefix: string): ContentProblem[] {
+function structuralProblems(
+  job: Job,
+  meta: Record<string, unknown>,
+  merged: Record<string, unknown>,
+  prefix: string
+): ContentProblem[] {
   const wrap = (container: Record<string, unknown>) =>
     job.kind === 'topic'
-      ? { ...meta, modules: [{ id: job.moduleId, title: job.moduleId, description: '', topics: [container] }], phraseSets: [] }
+      ? {
+          ...meta,
+          modules: [
+            { id: job.moduleId, title: job.moduleId, description: '', topics: [container] },
+          ],
+          phraseSets: [],
+        }
       : { ...meta, modules: [], phraseSets: [container] };
   const stubHeader: Record<string, unknown> =
     job.kind === 'topic'
-      ? { id: job.topicId, moduleId: job.moduleId, title: 'x', kind: 'grammar', context: 'x', keyItems: [] }
+      ? {
+          id: job.topicId,
+          moduleId: job.moduleId,
+          title: 'x',
+          kind: 'grammar',
+          context: 'x',
+          keyItems: [],
+        }
       : { id: job.phraseSetId, title: 'x', phrases: [] };
 
   const problems: ContentProblem[] = [];
@@ -786,7 +902,10 @@ function structuralProblems(job: Job, meta: Record<string, unknown>, merged: Rec
  */
 export function validateMerged(job: Job, merged: Record<string, unknown>): ContentProblem[] {
   const meta = readProgramMeta(job.programId);
-  const prefix = job.kind === 'topic' ? `modules.${job.moduleId}.topics.${job.topicId}.` : `phraseSets.${job.phraseSetId}.`;
+  const prefix =
+    job.kind === 'topic'
+      ? `modules.${job.moduleId}.topics.${job.topicId}.`
+      : `phraseSets.${job.phraseSetId}.`;
 
   const structural = structuralProblems(job, meta, merged, prefix);
   if (structural.length > 0) return structural;
@@ -813,7 +932,13 @@ export function validateMerged(job: Job, merged: Record<string, unknown>): Conte
     return problems.filter((p) => p.path.startsWith(prefix));
   } catch (err) {
     // Only a broken *sibling* topic can get here — the job's own container passed above.
-    return [{ path: prefix.slice(0, -1), message: `module could not be validated: ${errorMessage(err)}`, severity: 'error' }];
+    return [
+      {
+        path: prefix.slice(0, -1),
+        message: `module could not be validated: ${errorMessage(err)}`,
+        severity: 'error',
+      },
+    ];
   }
 }
 
@@ -907,7 +1032,13 @@ export async function generateAndRepair(
 
     let reply: Record<string, unknown> | null;
     try {
-      reply = await callForJson(cli, apiKey, systemPrompt, userPrompt, `${id} chunk ${i + 1}/${chunkCount}`);
+      reply = await callForJson(
+        cli,
+        apiKey,
+        systemPrompt,
+        userPrompt,
+        `${id} chunk ${i + 1}/${chunkCount}`
+      );
     } catch (err) {
       fatal = { path: id, message: `generation stopped: ${errorMessage(err)}`, severity: 'error' };
       break;
@@ -916,7 +1047,9 @@ export async function generateAndRepair(
       const chunkExercises = exercisesOf(reply).slice(0, endNum - startNum + 1);
       merged = normalizeMerged(
         job,
-        i === 0 ? { ...reply, exercises: chunkExercises } : { ...merged, exercises: [...soFar, ...chunkExercises] }
+        i === 0
+          ? { ...reply, exercises: chunkExercises }
+          : { ...merged, exercises: [...soFar, ...chunkExercises] }
       );
     }
     // A lost chunk is not fatal: its exercises show up as missing and the repair round writes them.
@@ -942,11 +1075,20 @@ export async function generateAndRepair(
     const repairPrompt = buildRepairPrompt(job, merged, problems, request);
     let reply: Record<string, unknown> | null;
     try {
-      reply = await callForJson(cli, apiKey, systemPrompt, repairPrompt, `${id} repair ${round}/${MAX_REPAIR_ROUNDS}`);
+      reply = await callForJson(
+        cli,
+        apiKey,
+        systemPrompt,
+        repairPrompt,
+        `${id} repair ${round}/${MAX_REPAIR_ROUNDS}`
+      );
     } catch (err) {
       return {
         merged,
-        problems: [...problems, { path: id, message: `repair stopped: ${errorMessage(err)}`, severity: 'error' }],
+        problems: [
+          ...problems,
+          { path: id, message: `repair stopped: ${errorMessage(err)}`, severity: 'error' },
+        ],
         repairRounds: round,
       };
     }
@@ -958,7 +1100,12 @@ export async function generateAndRepair(
 }
 
 /** Writes `_draft-<id>.json` (whatever was generated) and prints why. */
-function writeDraft(job: Job, merged: Record<string, unknown>, problems: ContentProblem[], why: string): void {
+function writeDraft(
+  job: Job,
+  merged: Record<string, unknown>,
+  problems: ContentProblem[],
+  why: string
+): void {
   const dPath = draftPath(job);
   mkdirSync(path.dirname(dPath), { recursive: true });
   writeFileSync(dPath, `${JSON.stringify(merged, null, 2)}\n`, 'utf8');
@@ -967,7 +1114,12 @@ function writeDraft(job: Job, merged: Record<string, unknown>, problems: Content
 }
 
 /** Runs one job (topic or phrase set) against real content files: generate, validate, write. */
-export async function runJob(job: Job, cli: Cli, apiKey: string, programMetaFor: (id: string) => Record<string, unknown>): Promise<boolean> {
+export async function runJob(
+  job: Job,
+  cli: Cli,
+  apiKey: string,
+  programMetaFor: (id: string) => Record<string, unknown>
+): Promise<boolean> {
   const meta = programMetaFor(job.programId);
   const systemPrompt = buildSystemPrompt(
     job.programId,
@@ -980,7 +1132,12 @@ export async function runJob(job: Job, cli: Cli, apiKey: string, programMetaFor:
     result = await generateAndRepair(job, cli, apiKey, systemPrompt, (m) => validateMerged(job, m));
   } catch (err) {
     // Not expected (API failures are returned as problems), but never lose the run silently.
-    writeDraft(job, normalizeMerged(job, {}), [{ path: containerId(job), message: errorMessage(err) }], 'generation crashed');
+    writeDraft(
+      job,
+      normalizeMerged(job, {}),
+      [{ path: containerId(job), message: errorMessage(err) }],
+      'generation crashed'
+    );
     return false;
   }
   if (cli.dryRun) return true;
@@ -1020,13 +1177,15 @@ async function main(): Promise<void> {
   if (!cli.module && !cli.topic && !cli.phrases) {
     console.error(
       'Usage: node scripts/content-generate.ts --program <id> (--module <id> | --topic <id> | --phrases <id>) ' +
-        '[--force] [--dry-run] [--model <name>] [--count <n>] [--sleep <ms>]'
+        '[--force] [--dry-run] [--model <name>] [--thinking <low|high>] [--count <n>] [--sleep <ms>]'
     );
     process.exitCode = 1;
     return;
   }
 
-  console.log(`Model: ${cli.model}`);
+  console.log(
+    `Model: ${cli.model}${cli.thinkingLevel ? ` (thinking level: ${cli.thinkingLevel})` : ''}`
+  );
   const apiKey = process.env.GEMINI_API_KEY;
   if (!cli.dryRun && !apiKey) {
     console.error(
@@ -1047,7 +1206,9 @@ async function main(): Promise<void> {
   }
 
   if (jobs.length === 0) {
-    console.log('Nothing to generate — every requested topic/phrase set already has a file (use --force to redo).');
+    console.log(
+      'Nothing to generate — every requested topic/phrase set already has a file (use --force to redo).'
+    );
     return;
   }
 
@@ -1059,7 +1220,8 @@ async function main(): Promise<void> {
   if (!ok) process.exitCode = 1;
 }
 
-const isMain = process.argv[1] !== undefined && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+const isMain =
+  process.argv[1] !== undefined && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) {
   main().catch((err) => {
     console.error(err);

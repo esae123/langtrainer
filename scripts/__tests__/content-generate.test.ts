@@ -76,7 +76,13 @@ function fakeExercises(id: string, from: number, to: number, extra: Record<strin
   const out: Record<string, unknown>[] = [];
   for (let n = from; n <= to; n++) {
     const nn = String(n).padStart(2, '0');
-    out.push({ id: `${id}-${nn}`, type: 'translate_word', topicId: id, sentence: `Sentence ${nn}.`, ...extra });
+    out.push({
+      id: `${id}-${nn}`,
+      type: 'translate_word',
+      topicId: id,
+      sentence: `Sentence ${nn}.`,
+      ...extra,
+    });
   }
   return out;
 }
@@ -94,7 +100,9 @@ function gemini429(retryAfterSeconds = '0'): Response {
   return {
     ok: false,
     status: 429,
-    headers: { get: (k: string) => (k.toLowerCase() === 'retry-after' ? retryAfterSeconds : null) } as unknown as Headers,
+    headers: {
+      get: (k: string) => (k.toLowerCase() === 'retry-after' ? retryAfterSeconds : null),
+    } as unknown as Headers,
     json: async () => ({}),
     text: async () => 'rate limited',
   } as unknown as Response;
@@ -143,7 +151,7 @@ describe('buildUserPrompt', () => {
     expect(prompt).toContain('m2-classroom-objects-01..m2-classroom-objects-20');
   });
 
-  it('asks for a continuation with the second chunk\'s id range, without repeating sentences', () => {
+  it("asks for a continuation with the second chunk's id range, without repeating sentences", () => {
     const job = fakeTopicJob({ count: 40 });
     const prompt = buildUserPrompt(job, { startNum: 21, endNum: 40, isContinuation: true });
     expect(prompt).toContain('m2-classroom-objects-21..m2-classroom-objects-40');
@@ -154,12 +162,22 @@ describe('buildUserPrompt', () => {
 describe('mergeExerciseChunks', () => {
   it('concatenates exercises across chunks, keeping the first chunk as the base object', () => {
     const merged = mergeExerciseChunks([
-      { id: 'm2-a', title: 'A', context: 'c', keyItems: [], exercises: [{ id: 'm2-a-01' }, { id: 'm2-a-02' }] },
+      {
+        id: 'm2-a',
+        title: 'A',
+        context: 'c',
+        keyItems: [],
+        exercises: [{ id: 'm2-a-01' }, { id: 'm2-a-02' }],
+      },
       { exercises: [{ id: 'm2-a-03' }] },
     ]);
     expect(merged.id).toBe('m2-a');
     expect(merged.context).toBe('c');
-    expect((merged.exercises as { id: string }[]).map((e) => e.id)).toEqual(['m2-a-01', 'm2-a-02', 'm2-a-03']);
+    expect((merged.exercises as { id: string }[]).map((e) => e.id)).toEqual([
+      'm2-a-01',
+      'm2-a-02',
+      'm2-a-03',
+    ]);
   });
 
   it('throws when given no chunks', () => {
@@ -192,10 +210,17 @@ describe('hasBlockingProblems', () => {
 
 describe('callGemini', () => {
   it('returns the text and usage from a successful response', async () => {
-    const fetchMock = vi.fn().mockResolvedValue(geminiOk({ exercises: [] }, { totalTokenCount: 42 }));
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(geminiOk({ exercises: [] }, { totalTokenCount: 42 }));
     vi.stubGlobal('fetch', fetchMock);
 
-    const result = await callGemini({ model: 'm', apiKey: 'k', systemPrompt: 'sys', userPrompt: 'usr' });
+    const result = await callGemini({
+      model: 'm',
+      apiKey: 'k',
+      systemPrompt: 'sys',
+      userPrompt: 'usr',
+    });
     expect(JSON.parse(result.text)).toEqual({ exercises: [] });
     expect(result.usage).toEqual({ totalTokenCount: 42 });
     expect(fetchMock).toHaveBeenCalledTimes(1);
@@ -209,7 +234,12 @@ describe('callGemini', () => {
       .mockResolvedValueOnce(geminiOk({ exercises: [] }));
     vi.stubGlobal('fetch', fetchMock);
 
-    const result = await callGemini({ model: 'm', apiKey: 'k', systemPrompt: 'sys', userPrompt: 'usr' });
+    const result = await callGemini({
+      model: 'm',
+      apiKey: 'k',
+      systemPrompt: 'sys',
+      userPrompt: 'usr',
+    });
     expect(fetchMock).toHaveBeenCalledTimes(3);
     expect(JSON.parse(result.text)).toEqual({ exercises: [] });
   });
@@ -219,14 +249,22 @@ describe('callGemini', () => {
     vi.stubGlobal('fetch', fetchMock);
 
     await expect(
-      callGemini({ model: 'm', apiKey: 'k', systemPrompt: 'sys', userPrompt: 'usr', maxAttempts: 2 })
+      callGemini({
+        model: 'm',
+        apiKey: 'k',
+        systemPrompt: 'sys',
+        userPrompt: 'usr',
+        maxAttempts: 2,
+      })
     ).rejects.toThrow();
     expect(fetchMock).toHaveBeenCalledTimes(2);
   });
 
   it('retries 500 and 503 too, waiting per the body retryDelay', async () => {
     const waits: number[] = [];
-    const retryBody = JSON.stringify({ error: { details: [{ '@type': 'RetryInfo', retryDelay: '3s' }] } });
+    const retryBody = JSON.stringify({
+      error: { details: [{ '@type': 'RetryInfo', retryDelay: '3s' }] },
+    });
     const withBody = (status: number) =>
       ({ ...geminiError(status), text: async () => retryBody }) as unknown as Response;
     const fetchMock = vi
@@ -253,9 +291,9 @@ describe('callGemini', () => {
     const fetchMock = vi.fn().mockResolvedValue(geminiError(400));
     vi.stubGlobal('fetch', fetchMock);
 
-    await expect(callGemini({ model: 'm', apiKey: 'k', systemPrompt: 'sys', userPrompt: 'usr' })).rejects.toThrow(
-      /Gemini API error 400/
-    );
+    await expect(
+      callGemini({ model: 'm', apiKey: 'k', systemPrompt: 'sys', userPrompt: 'usr' })
+    ).rejects.toThrow(/Gemini API error 400/);
     expect(fetchMock).toHaveBeenCalledTimes(1);
   });
 
@@ -263,7 +301,12 @@ describe('callGemini', () => {
     const fetchMock = vi.fn().mockResolvedValue(geminiOk({ exercises: [] }));
     vi.stubGlobal('fetch', fetchMock);
 
-    await callGemini({ model: 'gemini-x', apiKey: 'SECRET', systemPrompt: 'sys', userPrompt: 'usr' });
+    await callGemini({
+      model: 'gemini-x',
+      apiKey: 'SECRET',
+      systemPrompt: 'sys',
+      userPrompt: 'usr',
+    });
     const [url, init] = fetchMock.mock.calls[0] as [string, RequestInit];
     expect(url).not.toContain('SECRET');
     expect(url).toContain('models/gemini-x:generateContent');
@@ -276,6 +319,24 @@ describe('callGemini', () => {
     expect(body.systemInstruction).not.toHaveProperty('role');
   });
 
+  it('sends thinkingConfig.thinkingLevel only when a thinking level is set', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(geminiOk({ exercises: [] }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await callGemini({ model: 'gemini-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' });
+    await callGemini({
+      model: 'gemini-x',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+      thinkingLevel: 'high',
+    });
+    const plain = requestBody(fetchMock, 0) as { generationConfig: Record<string, unknown> };
+    const thinking = requestBody(fetchMock, 1) as { generationConfig: Record<string, unknown> };
+    expect(plain.generationConfig).not.toHaveProperty('thinkingConfig');
+    expect(thinking.generationConfig.thinkingConfig).toEqual({ thinkingLevel: 'high' });
+  });
+
   it('joins all text parts and skips thought parts', async () => {
     const res = {
       ok: true,
@@ -285,7 +346,9 @@ describe('callGemini', () => {
         candidates: [
           {
             finishReason: 'STOP',
-            content: { parts: [{ text: 'thinking…', thought: true }, { text: '{"a":' }, { text: '1}' }] },
+            content: {
+              parts: [{ text: 'thinking…', thought: true }, { text: '{"a":' }, { text: '1}' }],
+            },
           },
         ],
       }),
@@ -293,7 +356,12 @@ describe('callGemini', () => {
     } as unknown as Response;
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(res));
 
-    const result = await callGemini({ model: 'm', apiKey: 'k', systemPrompt: 'sys', userPrompt: 'usr' });
+    const result = await callGemini({
+      model: 'm',
+      apiKey: 'k',
+      systemPrompt: 'sys',
+      userPrompt: 'usr',
+    });
     expect(result.text).toBe('{"a":1}');
     expect(result.finishReason).toBe('STOP');
   });
@@ -325,7 +393,12 @@ describe('generateAndRepair — repair loop', () => {
   it('does not call the repair prompt when the first validation has no blocking problems', async () => {
     const fetchMock = vi
       .fn()
-      .mockResolvedValue(geminiOk({ id: 'm2-classroom-objects', exercises: fakeExercises('m2-classroom-objects', 1, 20) }));
+      .mockResolvedValue(
+        geminiOk({
+          id: 'm2-classroom-objects',
+          exercises: fakeExercises('m2-classroom-objects', 1, 20),
+        })
+      );
     vi.stubGlobal('fetch', fetchMock);
     const validate = vi.fn().mockReturnValue([]);
 
@@ -345,7 +418,12 @@ describe('generateAndRepair — repair loop', () => {
       .mockResolvedValueOnce(geminiOk({ exercises: [{ id: `${id}-01`, bad: false }] }));
     vi.stubGlobal('fetch', fetchMock);
 
-    const problem: ContentProblem = { path: 'x', message: 'bad exercise', severity: 'error', exerciseId: `${id}-01` };
+    const problem: ContentProblem = {
+      path: 'x',
+      message: 'bad exercise',
+      severity: 'error',
+      exerciseId: `${id}-01`,
+    };
     const validate = vi.fn().mockReturnValueOnce([problem]).mockReturnValueOnce([]);
 
     const job = fakeTopicJob({ count: 20 });
@@ -359,7 +437,10 @@ describe('generateAndRepair — repair loop', () => {
   });
 
   it('stops after MAX_REPAIR_ROUNDS rounds even if problems remain', async () => {
-    const alwaysBadPayload = { id: 'm2-classroom-objects', exercises: fakeExercises('m2-classroom-objects', 1, 20) };
+    const alwaysBadPayload = {
+      id: 'm2-classroom-objects',
+      exercises: fakeExercises('m2-classroom-objects', 1, 20),
+    };
     const fetchMock = vi.fn().mockResolvedValue(geminiOk(alwaysBadPayload));
     vi.stubGlobal('fetch', fetchMock);
 
@@ -378,7 +459,9 @@ describe('generateAndRepair — repair loop', () => {
 
 describe('buildJobs — never overwrites without --force (review B2)', () => {
   it('skips --topic when the topic file already exists', () => {
-    expect(existsSync(path.join(REPO_ROOT, 'content/pt-PT-A1/topics/m2-family-pets.json'))).toBe(true);
+    expect(existsSync(path.join(REPO_ROOT, 'content/pt-PT-A1/topics/m2-family-pets.json'))).toBe(
+      true
+    );
     expect(buildJobs(fakeCli({ topic: 'm2-family-pets' }))).toEqual([]);
   });
 
@@ -435,12 +518,20 @@ describe('ids forced to the job (review B3)', () => {
     const job = fakeTopicJob({ count: 20 });
     vi.stubGlobal(
       'fetch',
-      vi.fn().mockResolvedValue(geminiOk({ id: 'renamed', moduleId: 'm7', exercises: fakeExercises('renamed', 5, 24) }))
+      vi
+        .fn()
+        .mockResolvedValue(
+          geminiOk({ id: 'renamed', moduleId: 'm7', exercises: fakeExercises('renamed', 5, 24) })
+        )
     );
     const validate = vi.fn().mockReturnValue([]);
 
     const result = await generateAndRepair(job, fakeCli(), 'key', 'sys', validate);
-    const seen = validate.mock.calls[0][0] as { id: string; moduleId: string; exercises: { id: string }[] };
+    const seen = validate.mock.calls[0][0] as {
+      id: string;
+      moduleId: string;
+      exercises: { id: string }[];
+    };
     expect(seen.id).toBe('m2-classroom-objects');
     expect(seen.moduleId).toBe('m2');
     expect(seen.exercises[0].id).toBe('m2-classroom-objects-01');
@@ -481,11 +572,19 @@ describe('truncated / invalid replies and targeted repair (review B4)', () => {
   it('retries a chunk once when it was cut off at MAX_TOKENS', async () => {
     const fetchMock = vi
       .fn()
-      .mockResolvedValueOnce(geminiRaw('{"id": "m2-classroom-objects", "exercises": [{"id"', 'MAX_TOKENS'))
+      .mockResolvedValueOnce(
+        geminiRaw('{"id": "m2-classroom-objects", "exercises": [{"id"', 'MAX_TOKENS')
+      )
       .mockResolvedValueOnce(geminiOk({ id, exercises: fakeExercises(id, 1, 20) }));
     vi.stubGlobal('fetch', fetchMock);
 
-    const result = await generateAndRepair(fakeTopicJob({ count: 20 }), fakeCli(), 'key', 'sys', () => []);
+    const result = await generateAndRepair(
+      fakeTopicJob({ count: 20 }),
+      fakeCli(),
+      'key',
+      'sys',
+      () => []
+    );
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(result.problems).toEqual([]);
     expect(result.merged.exercises).toHaveLength(20);
@@ -494,13 +593,21 @@ describe('truncated / invalid replies and targeted repair (review B4)', () => {
   it('keeps chunk 1 when chunk 2 is invalid twice, then repair writes only the missing exercises', async () => {
     const fetchMock = vi
       .fn()
-      .mockResolvedValueOnce(geminiOk({ id, context: 'c', keyItems: [], exercises: fakeExercises(id, 1, 20) }))
+      .mockResolvedValueOnce(
+        geminiOk({ id, context: 'c', keyItems: [], exercises: fakeExercises(id, 1, 20) })
+      )
       .mockResolvedValueOnce(geminiRaw('not json at all'))
       .mockResolvedValueOnce(geminiRaw('{"exercises": [', 'MAX_TOKENS'))
       .mockResolvedValueOnce(geminiOk({ exercises: fakeExercises(id, 21, 40) }));
     vi.stubGlobal('fetch', fetchMock);
 
-    const result = await generateAndRepair(fakeTopicJob({ count: 40 }), fakeCli(), 'key', 'sys', () => []);
+    const result = await generateAndRepair(
+      fakeTopicJob({ count: 40 }),
+      fakeCli(),
+      'key',
+      'sys',
+      () => []
+    );
     expect(fetchMock).toHaveBeenCalledTimes(4);
     const repairPrompt = userPromptOf(fetchMock, 3);
     expect(repairPrompt).toContain(`${id}-21, ${id}-22`);
@@ -518,13 +625,26 @@ describe('truncated / invalid replies and targeted repair (review B4)', () => {
       .fn()
       .mockResolvedValueOnce(geminiOk({ id, exercises: fakeExercises(id, 1, 20) }))
       .mockResolvedValueOnce(
-        geminiOk({ exercises: [{ id: `${id}-05`, type: 'translate_word', sentence: 'Fixed five.' }] })
+        geminiOk({
+          exercises: [{ id: `${id}-05`, type: 'translate_word', sentence: 'Fixed five.' }],
+        })
       );
     vi.stubGlobal('fetch', fetchMock);
-    const problem: ContentProblem = { path: 'p', message: 'wrong options', severity: 'error', exerciseId: `${id}-05` };
+    const problem: ContentProblem = {
+      path: 'p',
+      message: 'wrong options',
+      severity: 'error',
+      exerciseId: `${id}-05`,
+    };
     const validate = vi.fn().mockReturnValueOnce([problem]).mockReturnValue([]);
 
-    const result = await generateAndRepair(fakeTopicJob({ count: 20 }), fakeCli(), 'key', 'sys', validate);
+    const result = await generateAndRepair(
+      fakeTopicJob({ count: 20 }),
+      fakeCli(),
+      'key',
+      'sys',
+      validate
+    );
     const repairPrompt = userPromptOf(fetchMock, 1);
     expect(repairPrompt).toContain(`"id":"${id}-05"`);
     expect(repairPrompt).not.toContain(`"id":"${id}-06"`);
@@ -537,12 +657,21 @@ describe('truncated / invalid replies and targeted repair (review B4)', () => {
 
   it('buildRepairPrompt asks for the header only when a topic-level field is broken', () => {
     const job = fakeTopicJob({ count: 20 });
-    const merged = normalizeMerged(job, { context: '', keyItems: [], exercises: fakeExercises(id, 1, 20) });
-    const prompt = buildRepairPrompt(job, merged, [{ path: 'x.context', message: 'empty context' }], {
-      fixIds: [],
-      missingIds: [],
-      fixHeader: true,
+    const merged = normalizeMerged(job, {
+      context: '',
+      keyItems: [],
+      exercises: fakeExercises(id, 1, 20),
     });
+    const prompt = buildRepairPrompt(
+      job,
+      merged,
+      [{ path: 'x.context', message: 'empty context' }],
+      {
+        fixIds: [],
+        missingIds: [],
+        fixHeader: true,
+      }
+    );
     expect(prompt).toContain('"header"');
     expect(prompt).not.toContain(`"id":"${id}-01"`);
   });
@@ -554,7 +683,13 @@ describe('truncated / invalid replies and targeted repair (review B4)', () => {
       .mockResolvedValueOnce(geminiError(400));
     vi.stubGlobal('fetch', fetchMock);
 
-    const result = await generateAndRepair(fakeTopicJob({ count: 40 }), fakeCli(), 'key', 'sys', () => []);
+    const result = await generateAndRepair(
+      fakeTopicJob({ count: 40 }),
+      fakeCli(),
+      'key',
+      'sys',
+      () => []
+    );
     expect(result.merged.exercises).toHaveLength(20);
     expect(hasBlockingProblems(result.problems)).toBe(true);
     expect(result.problems.some((p) => /Gemini API error 400/.test(p.message))).toBe(true);
@@ -569,13 +704,21 @@ describe('truncated / invalid replies and targeted repair (review B4)', () => {
       'fetch',
       vi
         .fn()
-        .mockResolvedValueOnce(geminiOk({ id: 'm2-zz-generator-test', exercises: fakeExercises('x', 1, 20) }))
+        .mockResolvedValueOnce(
+          geminiOk({ id: 'm2-zz-generator-test', exercises: fakeExercises('x', 1, 20) })
+        )
         .mockResolvedValueOnce(geminiError(400))
     );
     try {
-      const ok = await runJob(job, fakeCli(), 'key', () => ({ title: 'T', targetLanguage: 'pt-PT' }));
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
       expect(ok).toBe(false);
-      const written = JSON.parse(readFileSync(draft, 'utf8')) as { id: string; exercises: unknown[] };
+      const written = JSON.parse(readFileSync(draft, 'utf8')) as {
+        id: string;
+        exercises: unknown[];
+      };
       expect(written.id).toBe('m2-zz-generator-test');
       expect(written.exercises).toHaveLength(20);
     } finally {

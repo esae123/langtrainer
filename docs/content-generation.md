@@ -146,3 +146,7 @@ printed problems the same way the script's repair loop does.
   **Settings → Courses → Import course**) and pick the file. The app validates it, installs it
   and makes it the active course. Importing a newer build of the same course replaces it and
   keeps your progress as long as topic ids are unchanged. More in `docs/courses.md`.
+
+## Thinking level (Gemini 3 models)
+
+Set `GEMINI_THINKING_LEVEL=high` in `.env`, or pass `--thinking high` for one run. The script sends it as `generationConfig.thinkingConfig.thinkingLevel`; when unset, nothing is sent and the model uses its default. If a model rejects the field (HTTP 400 mentioning thinking), remove the setting for that model. Thinking tokens count toward the output limit, which is why `MAX_OUTPUT_TOKENS` is 65536.
