@@ -8,6 +8,11 @@ interface TileBankProps {
   onChange: (placedIds: string[]) => void;
   /** How many slots the answer line hints at (usually the expected token count). */
   slots?: number;
+  /**
+   * The expected sentence's final punctuation mark (from `finalPunctuationMark`), shown
+   * as a fixed, muted, non-interactive character after the last slot — never on a tile.
+   */
+  finalMark?: string | null;
 }
 
 /**
@@ -15,7 +20,7 @@ interface TileBankProps {
  * appends it; tapping a placed tile returns it. Used tiles stay in the bank as
  * invisible placeholders so the layout never jumps.
  */
-export function TileBank({ tiles, placedIds, onChange, slots }: TileBankProps) {
+export function TileBank({ tiles, placedIds, onChange, slots, finalMark }: TileBankProps) {
   const t = useT();
   const byId = new Map(tiles.map((tile) => [tile.id, tile]));
   const placed = placedIds.map((id) => byId.get(id)).filter((tile): tile is Tile => Boolean(tile));
@@ -25,7 +30,7 @@ export function TileBank({ tiles, placedIds, onChange, slots }: TileBankProps) {
     <div className="flex flex-col gap-4">
       <div
         aria-label={t('session.answerLine')}
-        className="flex min-h-[4.25rem] flex-wrap content-start items-start gap-2 rounded-2xl border border-dashed border-line bg-sheet/60 p-2"
+        className="flex min-h-[4.25rem] flex-wrap content-start items-center gap-2 rounded-2xl border border-dashed border-line bg-sheet/60 p-2"
       >
         {placed.map((tile) => (
           <TileButton
@@ -43,6 +48,9 @@ export function TileBank({ tiles, placedIds, onChange, slots }: TileBankProps) {
             className="min-h-11 w-12 rounded-xl border border-dashed border-line"
           />
         ))}
+        {finalMark && (
+          <span className="select-none px-0.5 text-lg font-medium text-muted">{finalMark}</span>
+        )}
       </div>
 
       <div aria-label={t('session.tileBank')} className="flex flex-wrap gap-2">

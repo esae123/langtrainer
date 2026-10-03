@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { BuildPhraseExercise, QuestionForAnswerExercise } from '../content/types';
 import { mulberry32, shuffle } from '../engine/rng';
+import { finalPunctuationMark } from '../engine/text';
 import { TextAnswerInput } from './widgets/TextAnswerInput';
 import { TileBank } from './widgets/TileBank';
 import { toTiles } from './widgets/tiles';
@@ -17,6 +18,7 @@ export function PhraseExerciseView({
   onSubmit,
 }: ExerciseViewProps<PhraseExercise>) {
   const answerText = exercise.answer.join(' ');
+  const finalMark = useMemo(() => finalPunctuationMark(answerText), [answerText]);
   const tiles = useMemo(
     () => toTiles(shuffle([...exercise.answer, ...exercise.distractors], mulberry32(seed))),
     [exercise.answer, exercise.distractors, seed]
@@ -49,6 +51,7 @@ export function PhraseExerciseView({
           placedIds={placedIds}
           onChange={setPlacedIds}
           slots={exercise.answer.length}
+          finalMark={finalMark}
         />
       ) : (
         <TextAnswerInput

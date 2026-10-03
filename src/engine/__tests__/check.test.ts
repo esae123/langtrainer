@@ -10,7 +10,7 @@ import type {
 } from '../../content/types';
 import { makeBuildPhrase, makeTranslateWord } from '../../test/fixtures';
 import { checkAnswer, expectedAnswerText, gradePairs, responseToText } from '../check';
-import { levenshtein, normalize, stripDiacritics } from '../text';
+import { finalPunctuationMark, levenshtein, normalize, stripDiacritics, stripTokenPunctuation } from '../text';
 
 describe('normalize', () => {
   it('trims, collapses whitespace and lowercases', () => {
@@ -24,8 +24,31 @@ describe('normalize', () => {
     expect(normalize('"Olá."')).toBe('olá');
   });
 
-  it('keeps internal punctuation and hyphens', () => {
-    expect(normalize('Chamo-me Ana, e tu?')).toBe('chamo-me ana, e tu');
+  it('keeps word-internal hyphens and apostrophes but drops all other punctuation', () => {
+    expect(normalize('Chamo-me Ana, e tu?')).toBe('chamo-me ana e tu');
+    expect(normalize("d'água")).toBe("d'água");
+  });
+});
+
+describe('stripTokenPunctuation', () => {
+  it('drops leading/trailing punctuation but never word-internal hyphens or apostrophes', () => {
+    expect(stripTokenPunctuation('trabalhas?')).toBe('trabalhas');
+    expect(stripTokenPunctuation('Lisboa,')).toBe('Lisboa');
+    expect(stripTokenPunctuation('chama-se')).toBe('chama-se');
+    expect(stripTokenPunctuation("d'água")).toBe("d'água");
+    expect(stripTokenPunctuation('«Bom')).toBe('Bom');
+    expect(stripTokenPunctuation('dia!»')).toBe('dia');
+    expect(stripTokenPunctuation('médico.')).toBe('médico');
+  });
+});
+
+describe('finalPunctuationMark', () => {
+  it('reads the sentence-final mark, ignoring trailing quotes', () => {
+    expect(finalPunctuationMark('Tu és professor?')).toBe('?');
+    expect(finalPunctuationMark('O João é médico.')).toBe('.');
+    expect(finalPunctuationMark('Que surpresa!')).toBe('!');
+    expect(finalPunctuationMark('«Bom dia!»')).toBe('!');
+    expect(finalPunctuationMark('Eu falo inglês')).toBeNull();
   });
 });
 
@@ -118,6 +141,58 @@ describe('checkAnswer — build_phrase', () => {
     });
     expect(checkAnswer(short, 'typing', { kind: 'text', text: 'sin' }).correct).toBe(false);
     expect(checkAnswer(short, 'typing', { kind: 'text', text: 'Sim!' }).correct).toBe(true);
+  });
+
+  it('never lets punctuation decide correctness, in any mode', () => {
+    const question = makeBuildPhrase('e3', 't1', {
+      answer: ['Tu', 'és', 'professor?'],
+      acceptedAnswers: [],
+      distractors: [],
+    });
+    // Tiles: the learner cannot place the "?" (it is not on any tile), so the response
+    // never has it — still correct.
+    expect(
+      checkAnswer(question, 'tiles', { kind: 'tokens', tokens: ['Tu', 'és', 'professor'] }).correct
+    ).toBe(true);
+    // Letters/typing: a missing or extra final "?" never makes the answer wrong.
+    expect(
+      checkAnswer(question, 'letters', { kind: 'text', text: 'tu és professor' }).correct
+    ).toBe(true);
+    expect(
+      checkAnswer(question, 'typing', { kind: 'text', text: 'tu és professor' }).correct
+    ).toBe(true);
+    expect(
+      checkAnswer(question, 'typing', { kind: 'text', text: 'tu és professor???' }).correct
+    ).toBe(true);
+
+    // A missing or extra comma never makes the answer wrong either.
+    const comma = makeBuildPhrase('e4', 't1', {
+      answer: ['Chamo-me', 'Ana,', 'e', 'tu?'],
+      acceptedAnswers: [],
+      distractors: [],
+    });
+    expect(
+      checkAnswer(comma, 'letters', { kind: 'text', text: 'chamo-me ana e tu' }).correct
+    ).toBe(true);
+    expect(
+      checkAnswer(comma, 'typing', { kind: 'text', text: 'chamo-me, ana, e, tu?' }).correct
+    ).toBe(true);
+  });
+
+  it('keeps word-internal hyphens and apostrophes when checking', () => {
+    const hyphenated = makeBuildPhrase('e5', 't1', {
+      answer: ['Ela', 'chama-se', 'Ana.'],
+      acceptedAnswers: [],
+      distractors: [],
+    });
+    expect(
+      checkAnswer(hyphenated, 'typing', { kind: 'text', text: 'ela chama-se ana' }).correct
+    ).toBe(true);
+    // "chamase" (hyphen dropped) is a different word and must not match — letters mode
+    // has no typo tolerance, so this isolates the hyphen-preservation behaviour.
+    expect(
+      checkAnswer(hyphenated, 'letters', { kind: 'text', text: 'ela chamase ana' }).correct
+    ).toBe(false);
   });
 });
 

@@ -7,6 +7,7 @@ import { AccentBar } from './widgets/AccentBar';
 import { insertAtCaret } from './widgets/accents';
 import { LetterBoard } from './widgets/LetterBoard';
 import { TileButton } from './widgets/TileButton';
+import { toTiles } from './widgets/tiles';
 import { TypingHint } from './widgets/TypingHint';
 import { composeLetters, isLettersComplete } from './widgets/letters';
 import type { ExerciseViewProps } from './types';
@@ -25,11 +26,7 @@ export function FillGapsView({
   const gapCount = exercise.gaps.length;
   const segments = useMemo(() => exercise.template.split(GAP), [exercise.template]);
   const tiles = useMemo(
-    () =>
-      shuffle(exercise.wordBank, mulberry32(seed)).map((label, i) => ({
-        id: `${i}-${label}`,
-        label,
-      })),
+    () => toTiles(shuffle(exercise.wordBank, mulberry32(seed))),
     [exercise.wordBank, seed]
   );
 

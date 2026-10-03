@@ -105,7 +105,7 @@ describe('/session happy path', () => {
     await answerCurrent('option', ['trabalho']);
 
     expect(await screen.findByText('2/3')).toBeInTheDocument();
-    await answerCurrent('tiles', ['Eu', 'falo', 'inglês.']);
+    await answerCurrent('tiles', ['Eu', 'falo', 'inglês']);
 
     // Third exercise is about_me: free answer, then a self-grade.
     expect(await screen.findByText('3/3')).toBeInTheDocument();
@@ -207,7 +207,7 @@ describe('/session happy path', () => {
     fireEvent.click(await screen.findByRole('button', { name: 'Resume' }));
     // Straight back to the second exercise, with the first answer still counted.
     expect(await screen.findByText('2/3')).toBeInTheDocument();
-    await answerCurrent('tiles', ['Eu', 'falo', 'inglês.']);
+    await answerCurrent('tiles', ['Eu', 'falo', 'inglês']);
     expect(await screen.findByText('3/3')).toBeInTheDocument();
     expect(screen.getByText('Onde é que moras?')).toBeInTheDocument();
     second.unmount();
@@ -222,7 +222,7 @@ describe('/session happy path', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Check' }));
     expect(await screen.findByText(/not quite/i)).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Continue' }));
-    await answerCurrent('tiles', ['Eu', 'falo', 'inglês.']);
+    await answerCurrent('tiles', ['Eu', 'falo', 'inglês']);
     fireEvent.click(await screen.findByRole('button', { name: 'Add Moro' }));
     fireEvent.click(screen.getByRole('button', { name: 'Check' }));
     fireEvent.click(await screen.findByRole('button', { name: 'Yes' }));

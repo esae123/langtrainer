@@ -45,7 +45,37 @@ function TypingHarness() {
   );
 }
 
+describe('toTiles', () => {
+  it('strips leading/trailing punctuation from tile labels, keeping word-internal hyphens', () => {
+    const tiles = toTiles(['Tu', 'és', 'professor?', 'chama-se', "d'água", 'Lisboa,']);
+    expect(tiles.map((tile) => tile.label)).toEqual([
+      'Tu',
+      'és',
+      'professor',
+      'chama-se',
+      "d'água",
+      'Lisboa',
+    ]);
+  });
+
+  it('keeps distinct tiles by index even when stripping makes two labels equal', () => {
+    const tiles = toTiles(['médico.', 'médico,']);
+    expect(tiles.map((tile) => tile.label)).toEqual(['médico', 'médico']);
+    expect(new Set(tiles.map((tile) => tile.id)).size).toBe(2);
+  });
+});
+
 describe('TileBank', () => {
+  it('shows the expected sentence final mark after the last slot, never on a tile', () => {
+    const tiles = toTiles(['Tu', 'és', 'professor?']);
+    render(
+      <TileBank tiles={tiles} placedIds={tiles.map((t) => t.id)} onChange={() => {}} slots={3} finalMark="?" />
+    );
+    expect(screen.getByRole('button', { name: 'Remove professor' })).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: /professor\?/ })).not.toBeInTheDocument();
+    expect(screen.getByLabelText('Your answer')).toHaveTextContent('Tuésprofessor?');
+  });
+
   it('appends tapped tiles to the answer line and removes them again', () => {
     render(<TileBankHarness />);
 

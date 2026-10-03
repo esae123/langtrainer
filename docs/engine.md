@@ -99,14 +99,29 @@ The practice summary shows the score, "Fixed: n of m" after a retry, and offers
 `{ correct, diacriticsOk, expected, matchedAccepted? }`. `diacriticsOk` is `null` whenever
 the learner did not type characters (tiles, matching, ordering, self-graded answers).
 
-`normalize(s)`: trim, collapse whitespace, lowercase, drop terminal `.`/`!`/`?` and
-surrounding quotes/guillemets; internal punctuation and hyphens are kept.
+`normalize(s)`: trim, collapse whitespace, lowercase, drop **all** punctuation — not just
+terminal `.`/`!`/`?`/surrounding quotes/guillemets, but every comma, semicolon, colon,
+ellipsis etc. anywhere in the string — except word-internal hyphens and apostrophes
+(`chama-se`, `d'água` keep theirs). A missing or extra comma, a missing final `?`, or
+guillemets around the whole sentence never change the comparison, in any mode.
+`stripTokenPunctuation(token)` does the same for a single token (used for tile labels and
+by `normalize` itself, word by word). `finalPunctuationMark(s)` reads the sentence's final
+`.`/`?`/`!`/`…`, ignoring any trailing quote, for the tile answer line (see below).
 `stripDiacritics(s)`: NFD + drop combining marks (`ç`→`c`, `não`→`nao`).
+
+**Tiles** (`build_phrase`, `question_for_answer`, `about_me`, `fill_gaps`): every tile's
+label is its token with leading/trailing punctuation stripped by `stripTokenPunctuation` —
+a tile never reads `trabalhas?` or `Lisboa,`, which would give away word order by itself.
+Tiles stay distinct by index even when two labels become equal after stripping. The answer
+line shows the expected sentence's final mark (from `finalPunctuationMark`) as a fixed,
+muted, non-interactive character after the last slot, so a question still reads as a
+question without the mark being on a tile; internal commas are never shown this way. The
+feedback sheet always shows the full correct sentence with its original punctuation.
 
 Per mode (applied to the expected answer and every accepted variant, exact matches first):
 
 - **tiles** — response is the placed tokens joined by spaces; correct on normalised
-  equality; `diacriticsOk: null`.
+  equality (all punctuation removed from both sides, see above); `diacriticsOk: null`.
 - **letters** — correct on normalised equality (`diacriticsOk: true`) or, failing that, on
   equality after stripping diacritics (`correct: true, diacriticsOk: false`). No typo
   tolerance.

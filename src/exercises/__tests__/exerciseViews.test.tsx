@@ -224,8 +224,13 @@ describe('answering through the views', () => {
   it('question_for_answer shows the given answer and accepts tiles', () => {
     const onChange = renderView(questionForAnswer, 'tiles');
     expect(screen.getByText('Moro em Lisboa.')).toBeInTheDocument();
+    // The tile label never carries the question mark — it would give away the last word.
+    expect(screen.queryByRole('button', { name: /Add moras\?/ })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Add moras' })).toBeInTheDocument();
+    // The final mark is shown as fixed text next to the answer line instead.
+    expect(screen.getByLabelText('Your answer')).toHaveTextContent('?');
     fireEvent.click(screen.getByRole('button', { name: 'Add Onde' }));
-    fireEvent.click(screen.getByRole('button', { name: 'Add moras?' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Add moras' }));
     expect(checkAnswer(questionForAnswer, 'tiles', lastResponse(onChange)!).correct).toBe(true);
   });
 
