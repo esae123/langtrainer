@@ -1,0 +1,633 @@
+{
+  "id": "m3-food-restaurant",
+  "moduleId": "m3",
+  "title": "Food, drinks and eating out",
+  "kind": "situation",
+  "context": "# Eating out in Portugal\n\nEating out is a central part of daily life in Portugal, from a quick **bica** (espresso) at the counter to a relaxed lunch at a **restaurante** or **tasca**.\n\nWhen you enter, you can ask for a table: **Uma mesa para duas pessoas, por favor.** (A table for two people, please.) The waiter might ask: **O que deseja?** (What would you like?) or show you **a ementa** (the menu). At lunchtime, look for **o prato do dia** (the dish of the day), which is fresh, fast, and good value.\n\nTo order food and drinks politely, Portuguese speakers use the fixed chunk **Queria…** (I would like…):\n\n- **Queria um café e uma água, por favor.** — I would like a coffee and a water, please.\n- **Para mim, o peixe grelhado.** — For me, the grilled fish.\n- **A sopa de legumes está muito boa.** — The vegetable soup is very good.\n- **Quer sobremesa?** — Would you like dessert?\n- **A conta, por favor.** — The bill, please.\n\n**Watch out!**\n\n1. Use **sumo** for juice, never Brazilian *suco*. An espresso is often called a **bica** in Lisbon.\n2. In Portugal, **a ementa** is the menu and **a conta** is the bill.\n3. Polite ordering uses **Queria…**, not the direct *Quero* (I want).",
+  "keyItems": [
+    {
+      "target": "a ementa",
+      "support": "the menu"
+    },
+    {
+      "target": "a conta",
+      "support": "the bill"
+    },
+    {
+      "target": "o prato do dia",
+      "support": "the dish of the day"
+    },
+    {
+      "target": "Queria…",
+      "support": "I would like…",
+      "note": "polite request formula"
+    },
+    {
+      "target": "uma mesa para dois",
+      "support": "a table for two"
+    },
+    {
+      "target": "o empregado / a empregada",
+      "support": "the waiter / waitress"
+    },
+    {
+      "target": "o café / a bica",
+      "support": "the coffee / espresso",
+      "note": "bica is standard in Lisbon"
+    },
+    {
+      "target": "a água (com / sem gás)",
+      "support": "water (sparkling / still)"
+    },
+    {
+      "target": "o sumo de laranja",
+      "support": "the orange juice",
+      "note": "sumo, not suco"
+    },
+    {
+      "target": "a sopa de legumes",
+      "support": "the vegetable soup"
+    },
+    {
+      "target": "o peixe grelhado",
+      "support": "the grilled fish"
+    },
+    {
+      "target": "o frango assado",
+      "support": "the roast chicken"
+    },
+    {
+      "target": "a sobremesa",
+      "support": "the dessert"
+    },
+    {
+      "target": "o pão",
+      "support": "the bread"
+    },
+    {
+      "target": "as batatas fritas",
+      "support": "the chips / french fries"
+    },
+    {
+      "target": "Bom apetite!",
+      "support": "Enjoy your meal!"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m3-food-restaurant-01",
+      "type": "translate_word",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Conta» means the bill in a restaurant or café. It is feminine: «a conta».",
+      "direction": "toTarget",
+      "sentence": "Can we have the **bill**, please?",
+      "word": "bill",
+      "answer": "conta",
+      "options": ["conta", "ementa", "mesa", "gorjeta"]
+    },
+    {
+      "id": "m3-food-restaurant-02",
+      "type": "translate_word",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In Portugal, juice is «sumo». The Brazilian word «suco» is not used in European Portuguese.",
+      "direction": "toTarget",
+      "sentence": "I want an orange **juice**.",
+      "word": "juice",
+      "answer": "sumo",
+      "options": ["sumo", "água", "leite", "chá"]
+    },
+    {
+      "id": "m3-food-restaurant-03",
+      "type": "translate_word",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Ementa» is the restaurant menu in European Portuguese. It is feminine: «a ementa».",
+      "direction": "toTarget",
+      "sentence": "Where is the **menu**?",
+      "word": "menu",
+      "answer": "ementa",
+      "options": ["ementa", "conta", "prato", "copo"]
+    },
+    {
+      "id": "m3-food-restaurant-04",
+      "type": "translate_word",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Sobremesa» means dessert in Portuguese. It is a feminine noun: «a sobremesa».",
+      "direction": "toTarget",
+      "sentence": "Do you want **dessert**?",
+      "word": "dessert",
+      "answer": "sobremesa",
+      "options": ["sobremesa", "sopa", "entrada", "salada"]
+    },
+    {
+      "id": "m3-food-restaurant-05",
+      "type": "translate_word",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Grelhado» is grilled and agrees with masculine nouns like «peixe»: «o peixe grelhado».",
+      "direction": "toTarget",
+      "sentence": "Today I want **grilled** fish.",
+      "word": "grilled",
+      "answer": "grelhado",
+      "options": ["grelhado", "assado", "cozido", "frito"]
+    },
+    {
+      "id": "m3-food-restaurant-06",
+      "type": "fill_gaps",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Pedro wants an espresso and a cake.\"",
+      "explanation": "«Bica» (espresso) is feminine, so «uma bica»; «bolo» (cake) is masculine, so «um bolo».",
+      "template": "O Pedro quer ___ bica e ___ bolo.",
+      "gaps": [
+        {
+          "answer": "uma"
+        },
+        {
+          "answer": "um"
+        }
+      ],
+      "wordBank": ["uma", "um", "umas", "uns", "do"]
+    },
+    {
+      "id": "m3-food-restaurant-07",
+      "type": "fill_gaps",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I would like the dish of the day and a soup.\"",
+      "explanation": "Use the polite chunk «Queria». «Prato» is masculine (o prato) and «sopa» is feminine (uma sopa).",
+      "template": "___ o prato do dia e ___ sopa de legumes.",
+      "gaps": [
+        {
+          "answer": "Queria"
+        },
+        {
+          "answer": "uma"
+        }
+      ],
+      "wordBank": ["Queria", "uma", "Quero", "um", "da"]
+    },
+    {
+      "id": "m3-food-restaurant-08",
+      "type": "fill_gaps",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"A table for two people, please.\"",
+      "explanation": "«Mesa» is feminine (uma mesa) and takes «para» before the number of people (duas pessoas).",
+      "template": "___ mesa ___ duas pessoas, por favor.",
+      "gaps": [
+        {
+          "answer": "Uma"
+        },
+        {
+          "answer": "para"
+        }
+      ],
+      "wordBank": ["Uma", "para", "Um", "por", "de"]
+    },
+    {
+      "id": "m3-food-restaurant-09",
+      "type": "fill_gaps",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Do you want sparkling water or still water?\"",
+      "explanation": "In Portugal, sparkling water is «água com gás» and still water is «água sem gás».",
+      "template": "Quer água ___ gás ou ___ gás?",
+      "gaps": [
+        {
+          "answer": "com"
+        },
+        {
+          "answer": "sem"
+        }
+      ],
+      "wordBank": ["com", "sem", "de", "no", "do"]
+    },
+    {
+      "id": "m3-food-restaurant-10",
+      "type": "fill_gaps",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"For me, roast chicken with chips.\"",
+      "explanation": "«Para mim» means 'for me'. «Frango» is masculine (o frango) and chips are «batatas fritas».",
+      "template": "Para mim, o frango ___ com batatas ___.",
+      "gaps": [
+        {
+          "answer": "assado"
+        },
+        {
+          "answer": "fritas"
+        }
+      ],
+      "wordBank": ["assado", "fritas", "assada", "fritos", "grelhado"]
+    },
+    {
+      "id": "m3-food-restaurant-11",
+      "type": "fill_gaps",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I would like to see the menu, please.\"",
+      "explanation": "Start a polite request with «Queria». «A ementa» is the menu, and the set politeness phrase is «por favor».",
+      "template": "___ ver a ___, por ___.",
+      "gaps": [
+        {
+          "answer": "Queria"
+        },
+        {
+          "answer": "ementa"
+        },
+        {
+          "answer": "favor"
+        }
+      ],
+      "wordBank": ["Queria", "ementa", "favor", "Quero", "conta", "exemplo"]
+    },
+    {
+      "id": "m3-food-restaurant-12",
+      "type": "fill_gaps",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The waiter brings the bread and the olives.\"",
+      "explanation": "«Empregado» is masculine singular (o empregado), «pão» is masculine (o pão), and «azeitonas» is feminine plural (as azeitonas).",
+      "template": "___ empregado traz o ___ e as ___.",
+      "gaps": [
+        {
+          "answer": "O"
+        },
+        {
+          "answer": "pão"
+        },
+        {
+          "answer": "azeitonas"
+        }
+      ],
+      "wordBank": ["O", "pão", "azeitonas", "A", "queijo", "manteigas"]
+    },
+    {
+      "id": "m3-food-restaurant-13",
+      "type": "build_phrase",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask for the bill politely: \"The bill, please.\"",
+      "explanation": "«A conta, por favor» is the standard polite way to ask for the bill in Portugal.",
+      "answer": ["A", "conta,", "por", "favor."],
+      "distractors": ["O", "ementa,", "para"]
+    },
+    {
+      "id": "m3-food-restaurant-14",
+      "type": "build_phrase",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Wish someone a good meal: \"Enjoy your meal!\"",
+      "explanation": "«Bom apetite!» is said to someone before they eat. «Apetite» is masculine, so «bom».",
+      "answer": ["Bom", "apetite!"],
+      "distractors": ["Boa", "obrigado!", "tarde!"]
+    },
+    {
+      "id": "m3-food-restaurant-15",
+      "type": "build_phrase",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Order an espresso politely: \"I would like an espresso, please.\"",
+      "explanation": "«Queria» is the polite request formula. «Café» is masculine: «um café».",
+      "answer": ["Queria", "um", "café,", "por", "favor."],
+      "distractors": ["Quero", "uma", "com"],
+      "acceptedAnswers": ["Queria uma bica, por favor.", "Eu queria um café, por favor."]
+    },
+    {
+      "id": "m3-food-restaurant-16",
+      "type": "build_phrase",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Order a drink: \"I would like an orange juice.\"",
+      "explanation": "Juice is «sumo» in Portugal, never «suco». Orange juice is «sumo de laranja».",
+      "answer": ["Queria", "um", "sumo", "de", "laranja."],
+      "distractors": ["uma", "suco", "da"],
+      "acceptedAnswers": ["Eu queria um sumo de laranja."]
+    },
+    {
+      "id": "m3-food-restaurant-17",
+      "type": "build_phrase",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask for a table: \"A table for two, please.\"",
+      "explanation": "«Mesa» is feminine (uma mesa). After «para», use «dois» or «duas pessoas».",
+      "answer": ["Uma", "mesa", "para", "dois,", "por", "favor."],
+      "distractors": ["Um", "duas", "com"],
+      "acceptedAnswers": ["Uma mesa para duas pessoas, por favor."]
+    },
+    {
+      "id": "m3-food-restaurant-18",
+      "type": "build_phrase",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what you want to eat: \"For me, the grilled fish with salad.\"",
+      "explanation": "«Para mim» starts your order. «Peixe» is masculine (o peixe grelhado) and «salada» is feminine (com salada).",
+      "answer": ["Para", "mim,", "o", "peixe", "grelhado", "com", "salada."],
+      "distractors": ["a", "grelhada", "de"],
+      "acceptedAnswers": ["Para mim o peixe grelhado com salada."]
+    },
+    {
+      "id": "m3-food-restaurant-19",
+      "type": "build_phrase",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what someone wants: \"Ana wants roast chicken with rice.\"",
+      "explanation": "«Frango assado» is roast chicken. «Arroz» (rice) is masculine and takes «com».",
+      "answer": ["A", "Ana", "quer", "frango", "assado", "com", "arroz."],
+      "distractors": ["O", "queria", "assada"],
+      "acceptedAnswers": ["A Ana quer o frango assado com arroz."]
+    },
+    {
+      "id": "m3-food-restaurant-20",
+      "type": "build_phrase",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Order drinks: \"We would like sparkling water and red wine.\"",
+      "explanation": "«Água com gás» is sparkling water; «vinho tinto» is red wine in Portugal.",
+      "answer": ["Queremos", "água", "com", "gás", "e", "vinho", "tinto."],
+      "distractors": ["sem", "tinta", "branca"],
+      "acceptedAnswers": ["Nós queremos água com gás e vinho tinto."]
+    },
+    {
+      "id": "m3-food-restaurant-21",
+      "type": "build_phrase",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what the special is: \"Today the dish of the day is codfish.\"",
+      "explanation": "«Prato do dia» is masculine singular. In Portugal, «bacalhau» is cod.",
+      "answer": ["Hoje", "o", "prato", "do", "dia", "é", "bacalhau."],
+      "distractors": ["da", "são", "no"],
+      "acceptedAnswers": ["O prato do dia hoje é bacalhau."]
+    },
+    {
+      "id": "m3-food-restaurant-22",
+      "type": "build_phrase",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what is on the table: \"On the table there is bread, butter and cheese.\"",
+      "explanation": "«Há» means 'there is / there are'. Food items: «pão» (bread), «manteiga» (butter) and «queijo» (cheese).",
+      "answer": ["Na", "mesa", "há", "pão,", "manteiga", "e", "queijo."],
+      "distractors": ["No", "têm", "da"]
+    },
+    {
+      "id": "m3-food-restaurant-23",
+      "type": "build_phrase",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Politely ask the waiter: \"Can I see the dessert menu, please?\"",
+      "explanation": "«Posso» + infinitive asks permission. «A ementa das sobremesas» is the dessert menu (de + as = das).",
+      "answer": ["Posso", "ver", "a", "ementa", "das", "sobremesas,", "por", "favor?"],
+      "distractors": ["Pode", "o", "de"]
+    },
+    {
+      "id": "m3-food-restaurant-24",
+      "type": "question_for_answer",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The waiter answers: «O prato do dia é peixe grelhado.» What did you ask?",
+      "explanation": "«Qual é» asks 'what is / which is' when asking about a specific item on the menu.",
+      "givenAnswer": "O prato do dia é peixe grelhado.",
+      "answer": ["Qual", "é", "o", "prato", "do", "dia?"],
+      "distractors": ["Como", "da", "Que"],
+      "acceptedAnswers": ["Qual é que é o prato do dia?"]
+    },
+    {
+      "id": "m3-food-restaurant-25",
+      "type": "question_for_answer",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The customer answers: «Queria uma bica, por favor.» What did the waiter ask?",
+      "explanation": "«O que deseja?» is the polite question waiters use to take an order.",
+      "givenAnswer": "Queria uma bica, por favor.",
+      "answer": ["O", "que", "deseja?"],
+      "distractors": ["Quem", "desejas?", "onde"],
+      "acceptedAnswers": ["O que é que deseja?", "O que quer?"]
+    },
+    {
+      "id": "m3-food-restaurant-26",
+      "type": "question_for_answer",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The customer answers: «Sim, queria um café e a conta.» What did the waiter ask?",
+      "explanation": "Waiters ask «Deseja mais alguma coisa?» (Would you like anything else?) at the end of a meal.",
+      "givenAnswer": "Sim, queria um café e a conta.",
+      "answer": ["Deseja", "mais", "alguma", "coisa?"],
+      "distractors": ["Desejam", "muito", "nada?"],
+      "acceptedAnswers": ["Quer mais alguma coisa?"]
+    },
+    {
+      "id": "m3-food-restaurant-27",
+      "type": "question_for_answer",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The waiter answers: «São doze euros.» What did you ask?",
+      "explanation": "To ask the bill total, use «Quanto é a conta?» or «Quanto é?» in Portuguese.",
+      "givenAnswer": "São doze euros.",
+      "answer": ["Quanto", "é", "a", "conta?"],
+      "distractors": ["Quando", "são", "o"],
+      "acceptedAnswers": ["Quanto é que é a conta?"]
+    },
+    {
+      "id": "m3-food-restaurant-28",
+      "type": "question_for_answer",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Quero água sem gás.» What did you ask? (informal)",
+      "explanation": "Ask a friend with the tu form: «O que queres beber?» or «O que queres?».",
+      "givenAnswer": "Quero água sem gás.",
+      "answer": ["O", "que", "queres", "beber?"],
+      "distractors": ["Como", "quer", "comer?"],
+      "acceptedAnswers": ["O que é que queres beber?", "O que é que tu queres beber?"]
+    },
+    {
+      "id": "m3-food-restaurant-29",
+      "type": "question_for_answer",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The waiter answers: «Temos mousse de chocolate e fruta.» What did you ask?",
+      "explanation": "«Que sobremesas têm?» asks what desserts the restaurant has.",
+      "givenAnswer": "Temos mousse de chocolate e fruta.",
+      "answer": ["Que", "sobremesas", "têm?"],
+      "distractors": ["Qual", "sobremesa", "tem?"],
+      "acceptedAnswers": ["Que sobremesas é que têm?"]
+    },
+    {
+      "id": "m3-food-restaurant-30",
+      "type": "question_for_answer",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The waiter answers: «Sim, temos uma mesa livre lá fora.» What did you ask?",
+      "explanation": "«Têm uma mesa livre?» asks if the restaurant has a free table.",
+      "givenAnswer": "Sim, temos uma mesa livre lá fora.",
+      "answer": ["Têm", "uma", "mesa", "livre?"],
+      "distractors": ["Tem", "um", "livres?"],
+      "acceptedAnswers": ["Vocês têm uma mesa livre?"]
+    },
+    {
+      "id": "m3-food-restaurant-31",
+      "type": "question_for_answer",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Prefiro carne grelhada.» What did you ask? (informal)",
+      "explanation": "«Preferes peixe ou carne?» asks a friend to choose between two options.",
+      "givenAnswer": "Prefiro carne grelhada.",
+      "answer": ["Preferes", "peixe", "ou", "carne?"],
+      "distractors": ["Prefere", "frango", "e"],
+      "acceptedAnswers": ["Tu preferes peixe ou carne?", "O que preferes?", "O que é que preferes?"]
+    },
+    {
+      "id": "m3-food-restaurant-32",
+      "type": "question_for_answer",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The waiter answers: «O café custa um euro.» What did you ask?",
+      "explanation": "«Quanto custa o café?» asks for the price of the coffee.",
+      "givenAnswer": "O café custa um euro.",
+      "answer": ["Quanto", "custa", "o", "café?"],
+      "distractors": ["Quando", "custam", "a"],
+      "acceptedAnswers": ["Quanto é que custa o café?"]
+    },
+    {
+      "id": "m3-food-restaurant-33",
+      "type": "find_error",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In Portugal, juice is «sumo». «Suco» is Brazilian Portuguese.",
+      "sentence": ["Queria", "um", "suco", "de", "laranja,", "por", "favor."],
+      "wrongIndex": 2,
+      "correction": "sumo",
+      "options": ["sumo", "chá", "copo"]
+    },
+    {
+      "id": "m3-food-restaurant-34",
+      "type": "find_error",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Conta» is feminine in Portuguese: «a conta», not «o conta».",
+      "sentence": ["O", "conta,", "por", "favor."],
+      "wrongIndex": 0,
+      "correction": "A",
+      "options": ["A", "As", "Um"]
+    },
+    {
+      "id": "m3-food-restaurant-35",
+      "type": "find_error",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Sopa» is feminine, so the adjective must agree: «sopa fria», not «frio».",
+      "sentence": ["A", "sopa", "está", "muito", "frio", "hoje."],
+      "wrongIndex": 4,
+      "correction": "fria",
+      "options": ["fria", "frias", "quente"]
+    },
+    {
+      "id": "m3-food-restaurant-36",
+      "type": "find_error",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Peixe» is masculine, so «o peixe», not «a peixe».",
+      "sentence": ["Para", "mim,", "a", "peixe", "grelhado."],
+      "wrongIndex": 2,
+      "correction": "o",
+      "options": ["o", "um", "do"]
+    },
+    {
+      "id": "m3-food-restaurant-37",
+      "type": "find_error",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Batata» is feminine: «batatas fritas», not «fritos».",
+      "sentence": ["Queremos", "o", "frango", "com", "batatas", "fritos", "e", "salada."],
+      "wrongIndex": 5,
+      "correction": "fritas",
+      "options": ["fritas", "cozidas", "assadas"]
+    },
+    {
+      "id": "m3-food-restaurant-38",
+      "type": "about_me",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Start with «Queria …» or «Gosto de …» and name your favourite drink.",
+      "question": "O que queres beber?",
+      "sampleAnswer": "Queria uma água com gás.",
+      "hints": ["sumo", "laranja", "chá", "cerveja"]
+    },
+    {
+      "id": "m3-food-restaurant-39",
+      "type": "about_me",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State what you prefer to eat for lunch using «Prefiro …» or «Para mim …».",
+      "question": "O que preferes comer ao almoço?",
+      "sampleAnswer": "Prefiro peixe grelhado com arroz.",
+      "hints": ["carne", "frango", "assado", "salada"]
+    },
+    {
+      "id": "m3-food-restaurant-40",
+      "type": "about_me",
+      "topicId": "m3-food-restaurant",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Order dessert politely with «Queria …» or decline with «Não quero sobremesa».",
+      "question": "Quer sobremesa depois do almoço?",
+      "sampleAnswer": "Sim, queria uma mousse de chocolate.",
+      "hints": ["bolo", "fruta", "gelado", "só", "café"]
+    }
+  ]
+}
