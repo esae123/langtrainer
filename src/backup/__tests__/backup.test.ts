@@ -234,6 +234,17 @@ describe('export -> import round trip', () => {
     expect(await db.topicProgress.get('t1')).toBeDefined();
   });
 
+  it('accepts a backup file shared as text/plain (Chrome Android share target)', async () => {
+    await seedFixtureData('key');
+    const backup = await buildBackup();
+
+    await clearAllTables();
+    const file = new File([JSON.stringify(backup)], 'backup.json', { type: 'text/plain' });
+    await importBackup(file);
+
+    expect(await db.profile.get('me')).toMatchObject({ aboutMe: 'Learning Portuguese' });
+  });
+
   it('replaces existing data rather than merging it', async () => {
     await seedFixtureData('key-1');
     const backup = await buildBackup();

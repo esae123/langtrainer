@@ -90,7 +90,7 @@ export function ImportCourseButton({
       <input
         ref={inputRef}
         type="file"
-        accept=".json,application/json"
+        accept=".json,application/json,text/plain"
         onChange={(event) => void handleFile(event)}
         className="hidden"
         data-testid="course-file-input"

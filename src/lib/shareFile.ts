@@ -1,7 +1,10 @@
 // Handing a generated JSON file to the OS: Web Share API on a phone, a download link
 // everywhere else. Shared by the backup export and the course-file export.
 
-type ShareCapableNavigator = Navigator & {
+// Web Share is typed as always-present in lib.dom, but it isn't implemented everywhere
+// (desktop Chrome/Firefox, most browsers without a share target). Override rather than
+// intersect so these members stay optional for feature-detection at runtime.
+type ShareCapableNavigator = Omit<Navigator, 'canShare' | 'share'> & {
   canShare?: (data?: ShareData) => boolean;
   share?: (data: ShareData) => Promise<void>;
 };
@@ -17,28 +20,49 @@ export async function shareOrDownloadFile(
   filename: string,
   type = 'application/json'
 ): Promise<ShareOutcome> {
-  const file = new File([text], filename, { type });
+  // Chrome on Android only allows a handful of MIME types through the Web Share
+  // Level 2 file-type allowlist, and application/json is not one of them — sharing
+  // with that type makes nav.share reject even when canShare() returned true. The
+  // importer reads file contents, not file.type, so text/plain is safe to share
+  // under; the download fallback below still uses the caller's real `type`.
+  const shareFile = new File([text], filename, { type: 'text/plain' });
 
   const nav = navigator as ShareCapableNavigator;
-  if (nav.share && nav.canShare?.({ files: [file] })) {
-    try {
-      await nav.share({ files: [file], title: filename });
-    } catch (err) {
-      if (err instanceof Error && err.name === 'AbortError') return 'cancelled';
-      throw err;
-    }
-    return 'shared';
+  const share = nav.share;
+  let canShare: boolean;
+  try {
+    canShare =
+      typeof share === 'function' && Boolean(nav.canShare?.({ files: [shareFile] }));
+  } catch {
+    canShare = false;
   }
 
-  const url = URL.createObjectURL(file);
+  if (canShare && share) {
+    try {
+      await share({ files: [shareFile], title: filename });
+      return 'shared';
+    } catch (err) {
+      // Duck-typed rather than `instanceof Error`: DOMException (what a real share
+      // rejection is) doesn't reliably satisfy `instanceof Error` across environments.
+      if ((err as { name?: unknown } | null)?.name === 'AbortError') return 'cancelled';
+      // Any other failure (NotAllowedError from expired user activation, DataError,
+      // TypeError, etc.) falls through to the download link instead of surfacing
+      // "Backup failed" — the file is still safely on the device either way.
+    }
+  }
+
+  // Not caught: if this also throws, "Backup failed" is the right outcome — there's
+  // no further fallback to try.
+  const downloadFile = new File([text], filename, { type });
+  const url = URL.createObjectURL(downloadFile);
   const link = document.createElement('a');
   link.href = url;
   link.download = filename;
   document.body.appendChild(link);
   link.click();
   link.remove();
-  // Some browsers (notably older Safari) need the URL to stay valid slightly
-  // past the synchronous click; revoking on the next tick is safe everywhere.
-  setTimeout(() => URL.revokeObjectURL(url), 0);
+  // Android's download manager can pick the blob up well after the click returns,
+  // especially in a standalone PWA; revoke after a delay instead of immediately.
+  setTimeout(() => URL.revokeObjectURL(url), 30_000);
   return 'downloaded';
 }

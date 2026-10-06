@@ -429,7 +429,7 @@ export function SettingsScreen() {
           <input
             ref={fileInputRef}
             type="file"
-            accept=".json,application/json"
+            accept=".json,application/json,text/plain"
             onChange={handleFileChosen}
             className="hidden"
           />
