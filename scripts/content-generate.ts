@@ -1,20 +1,24 @@
-// LangTrainer — Gemini-backed content generator (docs/stage-4b-spec.md §3).
-// Node 24, no SDK: calls the Gemini REST API directly via global fetch, no new dependency.
+// LangTrainer — Gemini/OpenAI-backed content generator (docs/stage-4b-spec.md §3).
+// Node 24, no SDK: calls the Gemini and OpenAI REST APIs directly via global fetch, no new
+// dependency.
 //
-// NOT verified against the real Gemini API in this repo — there is no GEMINI_API_KEY available
-// here, and this script must never call the real API from an automated run. Unit tests
-// (scripts/__tests__/content-generate.test.ts) mock `fetch`; treat the very first real run
-// against a live key as exploratory, and read its printed report carefully.
+// NOT verified against the real Gemini or OpenAI APIs in this repo — there is no GEMINI_API_KEY
+// or OPENAI_API_KEY available here, and this script must never call a real API from an automated
+// run. Unit tests (scripts/__tests__/content-generate.test.ts) mock `fetch`; treat the very first
+// real run against a live key as exploratory, and read its printed report carefully.
 //
 // Usage:
 //   node scripts/content-generate.ts --program pt-PT-A1 --module m2
 //   node scripts/content-generate.ts --program pt-PT-A1 --topic m2-family-pets --force
 //   node scripts/content-generate.ts --program pt-PT-A1 --phrases everyday-2
 //   node scripts/content-generate.ts --program en-b2 --module m1 --dry-run
+//   node scripts/content-generate.ts --program pt-PT-A1 --topic m3-daily-routine --provider openai
 // Flags: --program <id> (default pt-PT-A1), --module <id>, --topic <id>, --phrases <id>,
 //        --force (regenerate even if the file already exists), --dry-run (print prompts only,
-//        no API calls, no GEMINI_API_KEY required), --model <name>, --thinking <low|high>, --count <n>,
-//        --sleep <ms> (default 2000, pause between sequential calls).
+//        no API calls, no API key required), --provider <gemini|openai> (default gemini, or
+//        AI_PROVIDER in .env), --model <name>, --thinking <low|high|medium> (gemini: thinking
+//        level; openai: reasoning_effort), --count <n>, --sleep <ms> (default 2000, pause
+//        between sequential calls).
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -32,7 +36,7 @@ const PROMPT_PARTS_DIR = path.join(SCRIPT_DIR, 'prompt-parts');
  * https://ai.google.dev/gemini-api/docs/models (or the model list in AI Studio) and pass
  * --model / set GEMINI_MODEL, or update this constant.
  */
-export const DEFAULT_MODEL = 'gemini-3.8-flash';
+export const DEFAULT_MODEL = 'gemini-3.5-flash';
 
 export const CHUNK_SIZE = 20;
 export const MAX_REPAIR_ROUNDS = 2;
@@ -45,7 +49,16 @@ export const MAX_ATTEMPTS = 5;
 export const MAX_RETRY_DELAY_MS = 60_000;
 /** First backoff pause when the API gives no delay; doubles per attempt (10s, 20s, 40s, 60s cap). Overload spikes (503) usually need more than a few seconds. */
 export const BASE_RETRY_DELAY_MS = 10_000;
-const RETRYABLE_STATUSES = new Set([429, 500, 503]);
+const RETRYABLE_STATUSES = new Set([429, 500, 502, 503]);
+
+/**
+ * Thrown when the whole run must stop immediately — not just the current job/chunk: a Gemini
+ * per-model *daily* free-tier quota exhausted (retrying or moving to the next topic would just
+ * burn the same exhausted quota), or an OpenAI `insufficient_quota` (no credits — every further
+ * call would fail the same way). Caught once, at the top of the jobs loop in `main`; never
+ * written as a draft, and jobs not yet started are simply never attempted.
+ */
+export class StopRunError extends Error {}
 
 // ---------- small fs helpers ----------
 
@@ -86,6 +99,8 @@ export function loadEnvFile(): void {
 
 // ---------- CLI ----------
 
+export type Provider = 'gemini' | 'openai';
+
 export interface Cli {
   program: string;
   module?: string;
@@ -93,11 +108,19 @@ export interface Cli {
   phrases?: string;
   force: boolean;
   dryRun: boolean;
+  provider: Provider;
+  /** Empty string when the active provider has no usable model (e.g. openai with no
+   *  OPENAI_MODEL set) — checked before any real API call, never used as a literal model name. */
   model: string;
-  /** Gemini 3 thinking level (e.g. low | high); omitted from the request when unset. */
+  /** Gemini 3 thinking level (low | high) or OpenAI `reasoning_effort` (low | medium | high);
+   *  omitted from the request when unset. */
   thinkingLevel?: string;
   count?: number;
   sleepMs: number;
+}
+
+function normalizeProvider(value: string | undefined): Provider {
+  return value === 'openai' ? 'openai' : 'gemini';
 }
 
 export function parseArgs(argv: string[]): Cli {
@@ -107,6 +130,16 @@ export function parseArgs(argv: string[]): Cli {
   };
   const countRaw = get('--count');
   const sleepRaw = get('--sleep');
+  const provider = normalizeProvider(get('--provider') ?? process.env.AI_PROVIDER);
+  const model =
+    get('--model') ??
+    (provider === 'openai' ? process.env.OPENAI_MODEL : process.env.GEMINI_MODEL) ??
+    (provider === 'gemini' ? DEFAULT_MODEL : undefined);
+  const thinkingLevel =
+    get('--thinking') ??
+    ((provider === 'openai'
+      ? process.env.OPENAI_REASONING_EFFORT
+      : process.env.GEMINI_THINKING_LEVEL) || undefined);
   return {
     program: get('--program') ?? 'pt-PT-A1',
     module: get('--module'),
@@ -114,8 +147,9 @@ export function parseArgs(argv: string[]): Cli {
     phrases: get('--phrases'),
     force: argv.includes('--force'),
     dryRun: argv.includes('--dry-run'),
-    model: get('--model') ?? process.env.GEMINI_MODEL ?? DEFAULT_MODEL,
-    thinkingLevel: get('--thinking') ?? (process.env.GEMINI_THINKING_LEVEL || undefined),
+    provider,
+    model: model ?? '',
+    thinkingLevel,
     count: countRaw ? Number(countRaw) : undefined,
     sleepMs: sleepRaw ? Number(sleepRaw) : DEFAULT_SLEEP_MS,
   };
@@ -687,6 +721,56 @@ export function retryDelayMs(
   return Math.min(MAX_RETRY_DELAY_MS, Math.max(0, ms));
 }
 
+/** "3h 5m" / "5m" / "<1m", for a human-readable quota reset hint. */
+function formatDuration(ms: number): string {
+  const totalMinutes = Math.max(1, Math.round(ms / 60_000));
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+  if (hours > 0) return minutes > 0 ? `${hours}h ${minutes}m` : `${hours}h`;
+  return `${minutes}m`;
+}
+
+/**
+ * Detects a Gemini *daily* free-tier quota failure in a 429 body (review: Task B) — a
+ * `QuotaFailure` violation whose `quotaId` contains "PerDay", or any `retryDelay` over 10
+ * minutes (a per-minute quota resets fast; only a daily one waits that long). Per-minute 429s
+ * (short retryDelay, no "PerDay" quotaId) are not matched here and keep retrying as before.
+ */
+function geminiDailyQuotaInfo(
+  bodyText: string
+): { quotaId?: string; resetMs?: number } | undefined {
+  let body: {
+    error?: {
+      details?: Array<{
+        '@type'?: string;
+        violations?: Array<{ quotaId?: string }>;
+        retryDelay?: unknown;
+      }>;
+    };
+  };
+  try {
+    body = JSON.parse(bodyText);
+  } catch {
+    return undefined;
+  }
+  const details = body.error?.details ?? [];
+  let quotaId: string | undefined;
+  for (const detail of details) {
+    for (const violation of detail.violations ?? []) {
+      if (violation.quotaId?.includes('PerDay')) quotaId = violation.quotaId;
+    }
+  }
+  let resetMs: number | undefined;
+  for (const detail of details) {
+    const parsed = parseDurationMs(detail.retryDelay);
+    if (parsed !== undefined) resetMs = parsed;
+  }
+  if (quotaId !== undefined || (resetMs !== undefined && resetMs > 10 * 60_000)) {
+    return { quotaId, resetMs };
+  }
+  return undefined;
+}
+
 /** Calls the Gemini REST API with `fetch` (no SDK). Retries 429/500/503 with backoff, up to MAX_ATTEMPTS tries. */
 export async function callGemini(opts: GeminiCallOptions): Promise<GeminiResult> {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${opts.model}:generateContent`;
@@ -712,6 +796,18 @@ export async function callGemini(opts: GeminiCallOptions): Promise<GeminiResult>
 
     if (!res.ok) {
       const errorText = await res.text();
+      if (res.status === 429) {
+        const quota = geminiDailyQuotaInfo(errorText);
+        if (quota) {
+          const resetHint = quota.resetMs !== undefined ? `in ~${formatDuration(quota.resetMs)}` : 'tomorrow';
+          throw new StopRunError(
+            `Gemini daily free-tier quota exhausted for model "${opts.model}"` +
+              `${quota.quotaId ? ` (${quota.quotaId})` : ''} — resets ${resetHint}. ` +
+              'Quotas are per model: try a different one with --model, or wait and retry tomorrow. ' +
+              'Stopping the whole run now — content already written is untouched.'
+          );
+        }
+      }
       if (RETRYABLE_STATUSES.has(res.status) && attempt < maxAttempts) {
         const waitMs = retryDelayMs(res.headers.get('retry-after'), errorText, attempt - 1);
         console.log(
@@ -747,6 +843,173 @@ export async function callGemini(opts: GeminiCallOptions): Promise<GeminiResult>
   }
 }
 
+// ---------- OpenAI REST call ----------
+
+export interface OpenAIUsage {
+  prompt_tokens?: number;
+  completion_tokens?: number;
+  total_tokens?: number;
+}
+
+export interface OpenAIResult {
+  text: string;
+  usage?: OpenAIUsage;
+  /** e.g. "stop", "length", "content_filter". */
+  finishReason?: string;
+}
+
+interface OpenAICallOptions {
+  model: string;
+  apiKey: string;
+  systemPrompt: string;
+  userPrompt: string;
+  /** Sent as `reasoning_effort` (low | medium | high); not sent when undefined. */
+  reasoningEffort?: string;
+  /** Overrides MAX_OUTPUT_TOKENS — some models cap lower (OPENAI_MAX_COMPLETION_TOKENS). */
+  maxCompletionTokens?: number;
+  /** Total HTTP attempts on 429/500/502/503 (default MAX_ATTEMPTS). */
+  maxAttempts?: number;
+  /** Injected in tests. */
+  sleepFn?: (ms: number) => Promise<void>;
+}
+
+/** A 429 whose body is `error.code`/`error.type` === "insufficient_quota" — no credits left; retrying never helps. */
+function isInsufficientQuota(bodyText: string): boolean {
+  try {
+    const body = JSON.parse(bodyText) as { error?: { code?: string; type?: string } };
+    return body.error?.code === 'insufficient_quota' || body.error?.type === 'insufficient_quota';
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Calls the OpenAI chat completions REST API with `fetch` (no SDK). Retries 429/500/502/503 with
+ * the same backoff as `callGemini`, up to `maxAttempts` tries — except a 429 that is
+ * `insufficient_quota` (no billing credits), which throws `StopRunError` immediately: every
+ * further call would fail the exact same way, so retrying or moving to the next job is pointless.
+ */
+export async function callOpenAI(opts: OpenAICallOptions): Promise<OpenAIResult> {
+  const url = 'https://api.openai.com/v1/chat/completions';
+  const body = JSON.stringify({
+    model: opts.model,
+    messages: [
+      { role: 'system', content: opts.systemPrompt },
+      { role: 'user', content: opts.userPrompt },
+    ],
+    response_format: { type: 'json_object' },
+    max_completion_tokens: opts.maxCompletionTokens ?? MAX_OUTPUT_TOKENS,
+    ...(opts.reasoningEffort ? { reasoning_effort: opts.reasoningEffort } : {}),
+  });
+  const maxAttempts = opts.maxAttempts ?? MAX_ATTEMPTS;
+  const wait = opts.sleepFn ?? sleep;
+
+  for (let attempt = 1; ; attempt++) {
+    const res = await fetch(url, {
+      method: 'POST',
+      // The key goes in the Authorization header, never in the URL or logged anywhere.
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${opts.apiKey}` },
+      body,
+    });
+
+    if (!res.ok) {
+      const errorText = await res.text();
+      if (res.status === 429 && isInsufficientQuota(errorText)) {
+        throw new StopRunError(
+          'OpenAI quota/credits exhausted — check billing at ' +
+            'https://platform.openai.com/account/billing. Stopping the whole run now — content ' +
+            'already written is untouched.'
+        );
+      }
+      if (RETRYABLE_STATUSES.has(res.status) && attempt < maxAttempts) {
+        const waitMs = retryDelayMs(res.headers.get('retry-after'), errorText, attempt - 1);
+        console.log(
+          `  OpenAI HTTP ${res.status} — retrying in ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${maxAttempts})`
+        );
+        await wait(waitMs);
+        continue;
+      }
+      throw new Error(`OpenAI API error ${res.status}: ${errorText}`);
+    }
+    const json = (await res.json()) as {
+      choices?: {
+        message?: { content?: string; refusal?: string };
+        finish_reason?: string;
+      }[];
+      usage?: OpenAIUsage;
+    };
+    const choice = json.choices?.[0];
+    if (choice?.message?.refusal) {
+      throw new Error(`OpenAI refused the request: ${choice.message.refusal}`);
+    }
+    const text = choice?.message?.content;
+    if (typeof text !== 'string') {
+      throw new Error(
+        `OpenAI response had no message content (finish_reason: ${choice?.finish_reason ?? 'none'})`
+      );
+    }
+    return { text, usage: json.usage, finishReason: choice?.finish_reason };
+  }
+}
+
+function openaiMaxCompletionTokens(): number {
+  const raw = process.env.OPENAI_MAX_COMPLETION_TOKENS;
+  const n = raw ? Number(raw) : NaN;
+  return Number.isFinite(n) && n > 0 ? n : MAX_OUTPUT_TOKENS;
+}
+
+/** Common shape both providers are normalised to, for `callForJson`/`printUsage`. */
+interface ModelCallResult {
+  text: string;
+  /** Normalised: Gemini's "MAX_TOKENS" / OpenAI's "length" both come out as "MAX_TOKENS". */
+  finishReason?: string;
+  usage?: { prompt?: number; completion?: number; total?: number };
+}
+
+/** Dispatches to `callGemini` or `callOpenAI` per `cli.provider` and normalises the result. */
+async function callModel(
+  cli: Cli,
+  apiKey: string,
+  systemPrompt: string,
+  userPrompt: string
+): Promise<ModelCallResult> {
+  if (cli.provider === 'openai') {
+    const result = await callOpenAI({
+      model: cli.model,
+      apiKey,
+      systemPrompt,
+      userPrompt,
+      reasoningEffort: cli.thinkingLevel,
+      maxCompletionTokens: openaiMaxCompletionTokens(),
+    });
+    return {
+      text: result.text,
+      finishReason: result.finishReason === 'length' ? 'MAX_TOKENS' : result.finishReason,
+      usage: {
+        prompt: result.usage?.prompt_tokens,
+        completion: result.usage?.completion_tokens,
+        total: result.usage?.total_tokens,
+      },
+    };
+  }
+  const result = await callGemini({
+    model: cli.model,
+    thinkingLevel: cli.thinkingLevel,
+    apiKey,
+    systemPrompt,
+    userPrompt,
+  });
+  return {
+    text: result.text,
+    finishReason: result.finishReason,
+    usage: {
+      prompt: result.usage?.promptTokenCount,
+      completion: result.usage?.candidatesTokenCount,
+      total: result.usage?.totalTokenCount,
+    },
+  };
+}
+
 /** Parses the model's JSON reply, defensively stripping markdown fences if the model added any. */
 export function parseModelJson(text: string): Record<string, unknown> {
   const trimmed = text.trim();
@@ -769,13 +1032,7 @@ async function callForJson(
   label: string
 ): Promise<Record<string, unknown> | null> {
   for (let attempt = 1; attempt <= 2; attempt++) {
-    const result = await callGemini({
-      model: cli.model,
-      thinkingLevel: cli.thinkingLevel,
-      apiKey,
-      systemPrompt,
-      userPrompt,
-    });
+    const result = await callModel(cli, apiKey, systemPrompt, userPrompt);
     printUsage(label, attempt === 1 ? '' : '(retry)', result.usage);
     let reason: string;
     if (result.finishReason === 'MAX_TOKENS') {
@@ -956,11 +1213,15 @@ async function formatJson(obj: unknown): Promise<string> {
 
 // ---------- one job end to end ----------
 
-function printUsage(label: string, chunkLabel: string, usage?: GeminiUsage): void {
+function printUsage(
+  label: string,
+  chunkLabel: string,
+  usage?: { prompt?: number; completion?: number; total?: number }
+): void {
   if (!usage) return;
   console.log(
-    `  [${label}${chunkLabel ? ` ${chunkLabel}` : ''}] tokens — prompt: ${usage.promptTokenCount ?? '?'}, ` +
-      `candidates: ${usage.candidatesTokenCount ?? '?'}, total: ${usage.totalTokenCount ?? '?'}`
+    `  [${label}${chunkLabel ? ` ${chunkLabel}` : ''}] tokens — prompt: ${usage.prompt ?? '?'}, ` +
+      `completion: ${usage.completion ?? '?'}, total: ${usage.total ?? '?'}`
   );
 }
 
@@ -1040,6 +1301,7 @@ export async function generateAndRepair(
         `${id} chunk ${i + 1}/${chunkCount}`
       );
     } catch (err) {
+      if (err instanceof StopRunError) throw err;
       fatal = { path: id, message: `generation stopped: ${errorMessage(err)}`, severity: 'error' };
       break;
     }
@@ -1083,6 +1345,7 @@ export async function generateAndRepair(
         `${id} repair ${round}/${MAX_REPAIR_ROUNDS}`
       );
     } catch (err) {
+      if (err instanceof StopRunError) throw err;
       return {
         merged,
         problems: [
@@ -1099,13 +1362,29 @@ export async function generateAndRepair(
   return { merged, problems, repairRounds: round };
 }
 
-/** Writes `_draft-<id>.json` (whatever was generated) and prints why. */
+/** True when nothing useful was ever received: no exercises and no topic/phrase-set context. */
+function hasNoContent(merged: Record<string, unknown>): boolean {
+  if (exercisesOf(merged).length > 0) return false;
+  return !(typeof merged.context === 'string' && merged.context.trim().length > 0);
+}
+
+/**
+ * Writes `_draft-<id>.json` (whatever was generated) and prints why — unless nothing at all was
+ * generated (review: Task C), in which case only the failure is printed: an empty draft file
+ * with 0 exercises is never useful and just clutters `content/<programId>/` with files for
+ * topics that were never really attempted.
+ */
 function writeDraft(
   job: Job,
   merged: Record<string, unknown>,
   problems: ContentProblem[],
   why: string
 ): void {
+  if (hasNoContent(merged)) {
+    console.error(`\n${containerId(job)}: ${why} — no content was received, not writing a draft`);
+    for (const p of problems) console.error(`  - ${p.exerciseId ?? p.path}: ${p.message}`);
+    return;
+  }
   const dPath = draftPath(job);
   mkdirSync(path.dirname(dPath), { recursive: true });
   writeFileSync(dPath, `${JSON.stringify(merged, null, 2)}\n`, 'utf8');
@@ -1131,7 +1410,9 @@ export async function runJob(
   try {
     result = await generateAndRepair(job, cli, apiKey, systemPrompt, (m) => validateMerged(job, m));
   } catch (err) {
-    // Not expected (API failures are returned as problems), but never lose the run silently.
+    // StopRunError must stop the whole run (caller's loop), not just this job — never swallow it.
+    if (err instanceof StopRunError) throw err;
+    // Not expected otherwise (API failures are returned as problems), but never lose the run silently.
     writeDraft(
       job,
       normalizeMerged(job, {}),
@@ -1167,29 +1448,57 @@ export async function runJob(
   return true;
 }
 
+/**
+ * The clear failure message for `--provider openai` with no usable model (no OPENAI_MODEL, no
+ * `--model`) — never a hardcoded model name, since OpenAI retires/renames model ids; the user is
+ * told where to look instead. Returns undefined when the provider has a model (or isn't openai).
+ */
+export function openAiModelError(cli: Cli): string | undefined {
+  if (cli.provider !== 'openai' || cli.model) return undefined;
+  return (
+    'OPENAI_MODEL is not set. Set OPENAI_MODEL in .env (or pass --model <name>) to a current OpenAI ' +
+    'model id — do not guess, check a current "mini"-class model on ' +
+    'https://platform.openai.com/docs/pricing for a cheap default.'
+  );
+}
+
 // ---------- CLI entry point ----------
 
 async function main(): Promise<void> {
-  // .env must be loaded before parsing: parseArgs falls back to process.env.GEMINI_MODEL.
+  // .env must be loaded before parsing: parseArgs falls back to process.env.GEMINI_MODEL/OPENAI_MODEL.
   loadEnvFile();
   const cli = parseArgs(process.argv.slice(2));
 
   if (!cli.module && !cli.topic && !cli.phrases) {
     console.error(
       'Usage: node scripts/content-generate.ts --program <id> (--module <id> | --topic <id> | --phrases <id>) ' +
-        '[--force] [--dry-run] [--model <name>] [--thinking <low|high>] [--count <n>] [--sleep <ms>]'
+        '[--force] [--dry-run] [--provider <gemini|openai>] [--model <name>] [--thinking <low|high|medium>] ' +
+        '[--count <n>] [--sleep <ms>]'
     );
     process.exitCode = 1;
     return;
   }
 
   console.log(
-    `Model: ${cli.model}${cli.thinkingLevel ? ` (thinking level: ${cli.thinkingLevel})` : ''}`
+    `Provider: ${cli.provider}  Model: ${cli.model || '(not set)'}` +
+      `${cli.thinkingLevel ? ` (thinking/reasoning: ${cli.thinkingLevel})` : ''}`
   );
-  const apiKey = process.env.GEMINI_API_KEY;
+
+  const modelError = openAiModelError(cli);
+  if (modelError) {
+    console.error(modelError);
+    // Dry runs never call the API, so let them through to still preview the prompts.
+    if (!cli.dryRun) {
+      process.exitCode = 1;
+      return;
+    }
+  }
+
+  const apiKeyEnvVar = cli.provider === 'openai' ? 'OPENAI_API_KEY' : 'GEMINI_API_KEY';
+  const apiKey = process.env[apiKeyEnvVar];
   if (!cli.dryRun && !apiKey) {
     console.error(
-      'GEMINI_API_KEY is not set. Copy .env.example to .env and fill it in, or pass --dry-run to preview ' +
+      `${apiKeyEnvVar} is not set. Copy .env.example to .env and fill it in, or pass --dry-run to preview ` +
         'the prompts without calling the API.'
     );
     process.exitCode = 1;
@@ -1214,8 +1523,17 @@ async function main(): Promise<void> {
 
   let ok = true;
   for (const job of jobs) {
-    const jobOk = await runJob(job, cli, apiKey ?? '', readProgramMeta);
-    ok = ok && jobOk;
+    try {
+      const jobOk = await runJob(job, cli, apiKey ?? '', readProgramMeta);
+      ok = ok && jobOk;
+    } catch (err) {
+      if (!(err instanceof StopRunError)) throw err;
+      // Stop the whole run immediately: jobs not yet started are never attempted (no empty
+      // draft for them), and anything already written by earlier jobs in this loop stays.
+      console.error(`\n${err.message}`);
+      ok = false;
+      break;
+    }
   }
   if (!ok) process.exitCode = 1;
 }

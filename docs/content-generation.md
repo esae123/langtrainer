@@ -1,24 +1,72 @@
-# LangTrainer — Content generation with Gemini (free tier)
+# LangTrainer — Content generation with Gemini or OpenAI (free tier / pay-as-you-go)
 
 This page covers `scripts/content-generate.ts`, the automated content generator introduced in
-stage 4b. It calls the Gemini REST API directly (no SDK, just `fetch`) to write topic and
-phrase-set JSON files under `content/<programId>/`, using the same rules and schema as
+stage 4b. It calls the Gemini or OpenAI REST API directly (no SDK, just `fetch`) to write topic
+and phrase-set JSON files under `content/<programId>/`, using the same rules and schema as
 `docs/content-prompt-pack.md` (manual generation) and `docs/content-authoring.md` (the full
-authoring contract).
+authoring contract). Everything except the two provider calls themselves (chunking, id
+normalisation, validation, the repair loop, draft files, `--force` guards) is provider-independent.
 
 ## 1. Set up `.env`
 
-1. Get a free-tier API key at <https://aistudio.google.com/apikey>.
-2. Copy `.env.example` to `.env` in the repo root and fill in `GEMINI_API_KEY`.
+1. Get a free-tier API key at <https://aistudio.google.com/apikey> (Gemini) or, for OpenAI, an API
+   key at <https://platform.openai.com/api-keys> (pay-as-you-go, no free tier).
+2. Copy `.env.example` to `.env` in the repo root and fill in `GEMINI_API_KEY` (default provider)
+   or `OPENAI_API_KEY` + `OPENAI_MODEL` (see §1b).
 3. `.env` is gitignored (`.gitignore` already excludes `.env` and `.env.*`, keeping only
    `.env.example`) — **never commit it**. `scripts/content-generate.ts` loads it automatically
    with Node's built-in `process.loadEnvFile()` (no dependency added).
-4. **Choose the model.** The default is `gemini-3.8-flash` (`DEFAULT_MODEL` at the top of
+4. **Choose the Gemini model.** The default is `gemini-3.8-flash` (`DEFAULT_MODEL` at the top of
    `scripts/content-generate.ts`). Override it with `GEMINI_MODEL=<name>` in `.env` or with
    `--model <name>` on the command line (the flag wins). **Model names change and old ones are
    retired** — if a run fails with a 404 or "model not found", look up a current model name in
    AI Studio (<https://aistudio.google.com>) or at <https://ai.google.dev/gemini-api/docs/models>
    and pass that instead.
+
+## 1b. Switching to OpenAI
+
+Set the provider with `AI_PROVIDER=openai` in `.env`, or pass `--provider openai` on the command
+line (the flag wins; default is `gemini`). Then:
+
+- `OPENAI_API_KEY` — required for any real (non-`--dry-run`) OpenAI call.
+- `OPENAI_MODEL` — **required**, no hardcoded default: OpenAI model ids change, so the script
+  refuses to guess one. Check a current "mini"-class model (cheap, fast) on
+  <https://platform.openai.com/docs/pricing> and set it here, or pass `--model <name>`. Missing
+  it fails with a clear message before any API call (dry runs are exempt, since they never call
+  the API).
+- `OPENAI_REASONING_EFFORT` (optional, `low | medium | high`) — sent as `reasoning_effort` for
+  reasoning-capable models; same role as `GEMINI_THINKING_LEVEL`, overridden per run with
+  `--thinking`.
+- `OPENAI_MAX_COMPLETION_TOKENS` (optional) — overrides `MAX_OUTPUT_TOKENS` (65536) for
+  `max_completion_tokens`; some OpenAI models cap lower.
+
+Example:
+
+```sh
+# .env
+AI_PROVIDER=openai
+OPENAI_API_KEY=sk-...
+OPENAI_MODEL=gpt-5-mini   # check platform.openai.com/docs/pricing for the current name
+```
+
+```sh
+npm run content:generate -- --program pt-PT-A1 --topic m3-daily-routine --provider openai
+```
+
+**Cost hint:** a 40-exercise topic is roughly 25k input + 25k output tokens across its chunks and
+any repair rounds (less for a 20-exercise topic/phrase set) — check
+<https://platform.openai.com/docs/pricing> for current per-token prices before a big run; prompt
+and completion token counts are printed after every call either way.
+
+Request/response shape (no SDK, `fetch` only): `POST
+https://api.openai.com/v1/chat/completions` with `Authorization: Bearer <key>`, a `system` +
+`user` message pair, `response_format: {type: "json_object"}` and `max_completion_tokens` (no
+`temperature` is sent — some reasoning models reject it). The reply's
+`choices[0].message.content` is parsed as JSON; `finish_reason: "length"` is treated exactly like
+Gemini's `MAX_TOKENS` (retried once, then handled by the repair loop); a `refusal` message fails
+the call. 429s are retried with backoff like Gemini's, **except** a `429` whose body is
+`error.code`/`error.type` `insufficient_quota` — out of billing credits — which stops the whole
+run immediately (see §4).
 
 ## 2. Commands
 
@@ -42,9 +90,14 @@ Other flags:
 - `--force` — regenerate even if the topic/phrase-set file already exists. Without it,
   `--module`, `--topic` and `--phrases` all skip anything that already has a file, so a
   reviewed topic is never overwritten by accident.
-- `--dry-run` — print the system + user prompts for every chunk without calling the API (no
-  `GEMINI_API_KEY` required — use this to sanity-check a new module's briefs).
-- `--model <name>` / `--count <n>` — override the model or the exercise count for this run.
+- `--dry-run` — print the system + user prompts for every chunk without calling the API (no API
+  key required — use this to sanity-check a new module's briefs).
+- `--provider <gemini|openai>` — which API to call (default `gemini`, or `AI_PROVIDER` in `.env`;
+  see §1b for OpenAI setup).
+- `--model <name>` / `--count <n>` — override the model (for whichever provider is active) or the
+  exercise count for this run.
+- `--thinking <low|high|medium>` — Gemini 3 thinking level, or OpenAI `reasoning_effort`,
+  depending on `--provider` (or `GEMINI_THINKING_LEVEL` / `OPENAI_REASONING_EFFORT` in `.env`).
 - `--sleep <ms>` (default 2000) — pause between sequential API calls (see free-tier limits below).
 
 Preview without any API key or network access:
@@ -85,25 +138,43 @@ For each topic/phrase-set that needs generating:
    rounds. If problems remain after that, or an API call fails for good, whatever was generated
    is written to `content/<programId>/topics/_draft-<id>.json` (or `phrases/_draft-<id>.json`)
    instead of the real path, and the command exits 1 with the problem list printed — nothing
-   broken is ever written to the real topic file, and no finished chunk is lost.
+   broken is ever written to the real topic file, and no finished chunk is lost. If generation
+   failed before any content at all came back (e.g. the very first call errored), **no draft file
+   is written** — only the failure is printed, so `content/<programId>/` isn't cluttered with
+   empty `_draft-*.json` files for topics that were never really attempted.
 5. On success, the file is written Prettier-formatted, and the script prints the next steps.
 
-**This script must never be pointed at the real API from an automated/CI run** — there is no key
+**This script must never be pointed at a real API from an automated/CI run** — there is no key
 committed anywhere, and the unit tests (`scripts/__tests__/content-generate.test.ts`) mock
-`fetch` instead of calling Gemini. The very first real run against a live key should be treated
-as exploratory: read its printed report and the generated JSON carefully before trusting it.
+`fetch` instead of calling Gemini or OpenAI. The very first real run against a live key should be
+treated as exploratory: read its printed report and the generated JSON carefully before trusting
+it.
 
-## 4. Free-tier limits
+## 4. Rate limits, quotas, and stopping the whole run
 
-Gemini's free tier enforces requests-per-minute and requests-per-day limits that vary by model
+Gemini's free tier enforces requests-per-minute **and requests-per-day** limits that vary by model
 and change over time — check the current numbers at
 <https://ai.google.dev/gemini-api/docs/rate-limits> before a big generation run. The script is
-free-tier friendly by design: calls are sequential (never parallel), there's a `--sleep` pause
-(default 2000 ms) between calls, and a 429, 500 or 503 response is retried with backoff rather
-than failing the whole run: the wait comes from `Retry-After` (seconds or an HTTP date) or the
-error body's `retryDelay` (e.g. `"12s"`), otherwise it is exponential; each wait is capped at 60 s
-and there are at most 5 tries per call. Token usage from `usageMetadata` is printed after every call so you can watch your
-budget.
+rate-limit friendly by design: calls are sequential (never parallel), there's a `--sleep` pause
+(default 2000 ms) between calls, and a 429, 500, 502 or 503 response is retried with backoff
+rather than failing the whole run: the wait comes from `Retry-After` (seconds or an HTTP date) or
+the error body's `retryDelay` (e.g. `"12s"`), otherwise it is exponential; each wait is capped at
+60 s and there are at most 5 tries per call. Token usage is printed after every call so you can
+watch your budget.
+
+Two failures are different: retrying (or moving on to the next topic) would just burn the same
+exhausted quota/credits, so the script **stops the whole run immediately** instead — any topic a
+previous job in the same run already finished and wrote stays on disk, and no draft file is
+written for a topic that was never attempted:
+
+- **Gemini — daily quota exhausted.** A 429 whose body is a `QuotaFailure` violation with a
+  `quotaId` containing `"PerDay"` (or a `retryDelay` over 10 minutes). The message names the
+  model, when the quota resets, and reminds you that quotas are per model — pass a different
+  `--model`, or wait and retry tomorrow. A short per-minute 429 is unaffected and keeps retrying
+  as before.
+- **OpenAI — out of credits.** A 429 whose body is `error.code`/`error.type`
+  `insufficient_quota`. The message points at
+  <https://platform.openai.com/account/billing>.
 
 ## 5. Recommended workflow
 
@@ -147,6 +218,8 @@ printed problems the same way the script's repair loop does.
   and makes it the active course. Importing a newer build of the same course replaces it and
   keeps your progress as long as topic ids are unchanged. More in `docs/courses.md`.
 
-## Thinking level (Gemini 3 models)
+## Thinking level / reasoning effort
 
-Set `GEMINI_THINKING_LEVEL=high` in `.env`, or pass `--thinking high` for one run. The script sends it as `generationConfig.thinkingConfig.thinkingLevel`; when unset, nothing is sent and the model uses its default. If a model rejects the field (HTTP 400 mentioning thinking), remove the setting for that model. Thinking tokens count toward the output limit, which is why `MAX_OUTPUT_TOKENS` is 65536.
+**Gemini 3 models:** set `GEMINI_THINKING_LEVEL=high` in `.env`, or pass `--thinking high` for one run. The script sends it as `generationConfig.thinkingConfig.thinkingLevel`; when unset, nothing is sent and the model uses its default. If a model rejects the field (HTTP 400 mentioning thinking), remove the setting for that model. Thinking tokens count toward the output limit, which is why `MAX_OUTPUT_TOKENS` is 65536.
+
+**OpenAI reasoning models:** set `OPENAI_REASONING_EFFORT=medium` in `.env` (`low | medium | high`), or pass `--thinking medium` for one run (`--provider openai` makes `--thinking` apply to OpenAI's `reasoning_effort` instead of Gemini's thinking level). Unset = the model's default; reasoning tokens also count toward `max_completion_tokens`.

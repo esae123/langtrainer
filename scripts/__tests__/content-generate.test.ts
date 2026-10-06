@@ -8,6 +8,7 @@ import {
   buildSystemPrompt,
   buildUserPrompt,
   callGemini,
+  callOpenAI,
   draftPath,
   generateAndRepair,
   hasBlockingProblems,
@@ -16,10 +17,13 @@ import {
   mergeExerciseChunks,
   MAX_REPAIR_ROUNDS,
   normalizeMerged,
+  openAiModelError,
+  parseArgs,
   parseModelJson,
   REPO_ROOT,
   retryDelayMs,
   runJob,
+  StopRunError,
   validateMerged,
   type Cli,
   type TopicJob,
@@ -30,6 +34,7 @@ function fakeCli(overrides: Partial<Cli> = {}): Cli {
     program: 'pt-PT-A1',
     force: false,
     dryRun: false,
+    provider: 'gemini',
     model: 'test-model',
     sleepMs: 0,
     ...overrides,
@@ -106,6 +111,65 @@ function gemini429(retryAfterSeconds = '0'): Response {
     json: async () => ({}),
     text: async () => 'rate limited',
   } as unknown as Response;
+}
+
+/** A 429 with a Gemini QuotaFailure body whose violation quotaId contains "PerDay". */
+function geminiDailyQuota429(retryDelay = '7200s'): Response {
+  const body = JSON.stringify({
+    error: {
+      message: 'quota exceeded',
+      details: [
+        {
+          '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+          violations: [{ quotaId: 'GenerateContentPerDayPerProjectPerModel-FreeTier' }],
+        },
+        { '@type': 'type.googleapis.com/google.rpc.RetryInfo', retryDelay },
+      ],
+    },
+  });
+  return {
+    ok: false,
+    status: 429,
+    headers: { get: () => null } as unknown as Headers,
+    json: async () => ({}),
+    text: async () => body,
+  } as unknown as Response;
+}
+
+/** A minimal well-formed fetch Response for a successful OpenAI chat completions call. */
+function openAiOk(content: unknown, finishReason = 'stop', usage?: Record<string, number>): Response {
+  const text = typeof content === 'string' ? content : JSON.stringify(content);
+  return {
+    ok: true,
+    status: 200,
+    headers: { get: () => null } as unknown as Headers,
+    json: async () => ({
+      choices: [{ message: { content: text }, finish_reason: finishReason }],
+      usage,
+    }),
+    text: async () => '',
+  } as unknown as Response;
+}
+
+function openAiError(status: number, bodyText = 'server error'): Response {
+  return {
+    ok: false,
+    status,
+    headers: { get: () => null } as unknown as Headers,
+    json: async () => ({}),
+    text: async () => bodyText,
+  } as unknown as Response;
+}
+
+function openAiInsufficientQuota(): Response {
+  return openAiError(
+    429,
+    JSON.stringify({ error: { code: 'insufficient_quota', message: 'You exceeded your quota' } })
+  );
+}
+
+function openAiRequestBody(fetchMock: ReturnType<typeof vi.fn>, call: number): Record<string, unknown> {
+  return JSON.parse(fetchMock.mock.calls[call][1].body as string) as Record<string, unknown>;
 }
 
 function geminiError(status: number): Response {
@@ -721,6 +785,337 @@ describe('truncated / invalid replies and targeted repair (review B4)', () => {
       };
       expect(written.id).toBe('m2-zz-generator-test');
       expect(written.exercises).toHaveLength(20);
+    } finally {
+      rmSync(draft, { force: true });
+    }
+  });
+});
+
+describe('callOpenAI', () => {
+  it('sends the right URL, bearer header, response_format and max_completion_tokens, no temperature', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(openAiOk({ exercises: [] }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await callOpenAI({ model: 'gpt-x', apiKey: 'SECRET', systemPrompt: 'sys', userPrompt: 'usr' });
+
+    const [url, init] = fetchMock.mock.calls[0] as [string, RequestInit];
+    expect(url).toBe('https://api.openai.com/v1/chat/completions');
+    expect(url).not.toContain('SECRET');
+    expect((init.headers as Record<string, string>).Authorization).toBe('Bearer SECRET');
+    const body = openAiRequestBody(fetchMock, 0) as {
+      model: string;
+      messages: { role: string; content: string }[];
+      response_format: Record<string, unknown>;
+      max_completion_tokens: number;
+      temperature?: unknown;
+      reasoning_effort?: unknown;
+    };
+    expect(body.model).toBe('gpt-x');
+    expect(body.messages).toEqual([
+      { role: 'system', content: 'sys' },
+      { role: 'user', content: 'usr' },
+    ]);
+    expect(body.response_format).toEqual({ type: 'json_object' });
+    expect(body.max_completion_tokens).toBe(MAX_OUTPUT_TOKENS);
+    expect(body).not.toHaveProperty('temperature');
+    expect(body).not.toHaveProperty('reasoning_effort');
+  });
+
+  it('sends reasoning_effort only when set', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(openAiOk({ exercises: [] }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await callOpenAI({ model: 'gpt-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' });
+    await callOpenAI({
+      model: 'gpt-x',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+      reasoningEffort: 'medium',
+    });
+
+    const plain = openAiRequestBody(fetchMock, 0);
+    const withEffort = openAiRequestBody(fetchMock, 1) as { reasoning_effort: string };
+    expect(plain).not.toHaveProperty('reasoning_effort');
+    expect(withEffort.reasoning_effort).toBe('medium');
+  });
+
+  it('respects an explicit maxCompletionTokens override', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(openAiOk({ exercises: [] }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await callOpenAI({
+      model: 'gpt-x',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+      maxCompletionTokens: 4096,
+    });
+    const body = openAiRequestBody(fetchMock, 0) as { max_completion_tokens: number };
+    expect(body.max_completion_tokens).toBe(4096);
+  });
+
+  it('parses choices[0].message.content and usage/finish_reason', async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(
+        openAiOk({ exercises: [{ id: 'x-01' }] }, 'stop', {
+          prompt_tokens: 100,
+          completion_tokens: 50,
+          total_tokens: 150,
+        })
+      );
+    vi.stubGlobal('fetch', fetchMock);
+
+    const result = await callOpenAI({ model: 'gpt-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' });
+    expect(JSON.parse(result.text)).toEqual({ exercises: [{ id: 'x-01' }] });
+    expect(result.finishReason).toBe('stop');
+    expect(result.usage).toEqual({ prompt_tokens: 100, completion_tokens: 50, total_tokens: 150 });
+  });
+
+  it('reports finish_reason "length" (like Gemini MAX_TOKENS) without throwing', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(openAiOk('{"exercises":[', 'length'));
+    vi.stubGlobal('fetch', fetchMock);
+
+    const result = await callOpenAI({ model: 'gpt-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' });
+    expect(result.finishReason).toBe('length');
+  });
+
+  it('throws on a refusal', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: { get: () => null } as unknown as Headers,
+      json: async () => ({
+        choices: [{ message: { refusal: 'cannot help with that' }, finish_reason: 'stop' }],
+      }),
+      text: async () => '',
+    } as unknown as Response);
+    vi.stubGlobal('fetch', fetchMock);
+
+    await expect(
+      callOpenAI({ model: 'gpt-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' })
+    ).rejects.toThrow(/cannot help with that/);
+  });
+
+  it('retries 429 rate limits that are not insufficient_quota', async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(openAiError(429, JSON.stringify({ error: { type: 'rate_limit_exceeded' } })))
+      .mockResolvedValueOnce(openAiOk({ exercises: [] }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    const result = await callOpenAI({
+      model: 'gpt-x',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+      sleepFn: async () => {},
+    });
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+    expect(JSON.parse(result.text)).toEqual({ exercises: [] });
+  });
+
+  it('retries 500/502/503', async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(openAiError(500))
+      .mockResolvedValueOnce(openAiError(502))
+      .mockResolvedValueOnce(openAiError(503))
+      .mockResolvedValueOnce(openAiOk({ exercises: [] }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await callOpenAI({
+      model: 'gpt-x',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+      sleepFn: async () => {},
+    });
+    expect(fetchMock).toHaveBeenCalledTimes(4);
+  });
+
+  it('throws StopRunError immediately on insufficient_quota, without retrying', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(openAiInsufficientQuota());
+    vi.stubGlobal('fetch', fetchMock);
+
+    await expect(
+      callOpenAI({ model: 'gpt-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' })
+    ).rejects.toThrow(StopRunError);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    await expect(
+      callOpenAI({ model: 'gpt-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' })
+    ).rejects.toThrow(/quota\/credits exhausted — check billing/);
+  });
+});
+
+describe('generateAndRepair with provider openai', () => {
+  it('uses callOpenAI end to end and reports no blocking problems on success', async () => {
+    const id = 'm2-classroom-objects';
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(openAiOk({ id, exercises: fakeExercises(id, 1, 20) }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    const job = fakeTopicJob({ count: 20 });
+    const result = await generateAndRepair(
+      job,
+      fakeCli({ provider: 'openai', model: 'gpt-x' }),
+      'key',
+      'sys',
+      () => []
+    );
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    const [url] = fetchMock.mock.calls[0] as [string];
+    expect(url).toBe('https://api.openai.com/v1/chat/completions');
+    expect(result.problems).toEqual([]);
+    expect(result.merged.exercises).toHaveLength(20);
+  });
+
+  it('stops the whole run (StopRunError propagates out) on insufficient_quota', async () => {
+    const id = 'm2-classroom-objects';
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(openAiInsufficientQuota()));
+
+    await expect(
+      generateAndRepair(
+        fakeTopicJob({ topicId: id, count: 20 }),
+        fakeCli({ provider: 'openai', model: 'gpt-x' }),
+        'key',
+        'sys',
+        () => []
+      )
+    ).rejects.toThrow(StopRunError);
+  });
+});
+
+describe('parseArgs — provider/model resolution', () => {
+  it('defaults to gemini with DEFAULT_MODEL', () => {
+    const cli = parseArgs(['--topic', 'x']);
+    expect(cli.provider).toBe('gemini');
+    expect(cli.model).not.toBe('');
+  });
+
+  it('--provider openai with no OPENAI_MODEL/--model leaves model empty (missing-model condition)', () => {
+    const cli = parseArgs(['--provider', 'openai', '--topic', 'x']);
+    expect(cli.provider).toBe('openai');
+    expect(cli.model).toBe('');
+    expect(openAiModelError(cli)).toMatch(/OPENAI_MODEL is not set/);
+  });
+
+  it('--model overrides whichever provider is active', () => {
+    const cli = parseArgs(['--provider', 'openai', '--model', 'gpt-x', '--topic', 'x']);
+    expect(cli.model).toBe('gpt-x');
+    expect(openAiModelError(cli)).toBeUndefined();
+  });
+
+  it('reads AI_PROVIDER and OPENAI_MODEL from the environment', () => {
+    const prevProvider = process.env.AI_PROVIDER;
+    const prevModel = process.env.OPENAI_MODEL;
+    process.env.AI_PROVIDER = 'openai';
+    process.env.OPENAI_MODEL = 'gpt-env';
+    try {
+      const cli = parseArgs(['--topic', 'x']);
+      expect(cli.provider).toBe('openai');
+      expect(cli.model).toBe('gpt-env');
+    } finally {
+      if (prevProvider === undefined) delete process.env.AI_PROVIDER;
+      else process.env.AI_PROVIDER = prevProvider;
+      if (prevModel === undefined) delete process.env.OPENAI_MODEL;
+      else process.env.OPENAI_MODEL = prevModel;
+    }
+  });
+});
+
+describe('callGemini — daily quota (review: Task B)', () => {
+  it('throws StopRunError without retrying when the 429 body is a PerDay QuotaFailure', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(geminiDailyQuota429('7200s'));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await expect(
+      callGemini({ model: 'gemini-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' })
+    ).rejects.toThrow(StopRunError);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+  });
+
+  it('includes which model, a reset hint, and the --model/tomorrow hint in the message', async () => {
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(geminiDailyQuota429('7200s')));
+    await expect(
+      callGemini({ model: 'gemini-special', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' })
+    ).rejects.toThrow(/gemini-special/);
+    await expect(
+      callGemini({ model: 'gemini-special', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' })
+    ).rejects.toThrow(/--model/);
+  });
+
+  it('a short per-minute 429 (no PerDay quotaId, short retryDelay) still retries as before', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(gemini429('0'));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await expect(
+      callGemini({ model: 'm', apiKey: 'k', systemPrompt: 's', userPrompt: 'u', maxAttempts: 2 })
+    ).rejects.toThrow();
+    expect(fetchMock).toHaveBeenCalledTimes(2); // retried, not stopped immediately
+  });
+
+  it('stops the whole run via generateAndRepair/runJob, and writes no draft for a never-attempted job', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(geminiDailyQuota429('7200s')));
+
+    const job = fakeTopicJob({ topicId: 'm2-zz-quota-test', count: 20 });
+    const draft = draftPath(job);
+    try {
+      await expect(
+        runJob(job, fakeCli(), 'key', () => ({ title: 'T', targetLanguage: 'pt-PT' }))
+      ).rejects.toThrow(StopRunError);
+      expect(existsSync(draft)).toBe(false);
+    } finally {
+      rmSync(draft, { force: true });
+    }
+  });
+});
+
+describe('no empty draft is written (review: Task C)', () => {
+  it('writeDraft (via runJob) writes nothing when the job never received any content', async () => {
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(geminiError(400)));
+
+    const job = fakeTopicJob({ topicId: 'm2-zz-empty-draft-test', count: 20 });
+    const draft = draftPath(job);
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(false);
+      expect(existsSync(draft)).toBe(false);
+    } finally {
+      rmSync(draft, { force: true });
+    }
+  });
+
+  it('still writes a draft when there is partial content', async () => {
+    const job = fakeTopicJob({ topicId: 'm2-zz-partial-draft-test', count: 40 });
+    const draft = draftPath(job);
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    vi.stubGlobal(
+      'fetch',
+      vi
+        .fn()
+        .mockResolvedValueOnce(
+          geminiOk({ id: 'm2-zz-partial-draft-test', exercises: fakeExercises('x', 1, 20) })
+        )
+        .mockResolvedValueOnce(geminiError(400))
+    );
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(false);
+      expect(existsSync(draft)).toBe(true);
     } finally {
       rmSync(draft, { force: true });
     }
