@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import App from '../../App';
 import { db } from '../../db/db';
@@ -130,5 +130,19 @@ describe('Progress screen', () => {
       'aria-expanded',
       'false'
     );
+  });
+
+  it('starts a focus session from a Needs work row', async () => {
+    await seed();
+    window.location.hash = '#/progress';
+    render(<App />);
+    const needsWork = (await screen.findByText('Needs work')).closest('section')!;
+    // The row still links to the Library detail.
+    expect(within(needsWork).getByRole('link', { name: /Topic t1/ })).toHaveAttribute(
+      'href',
+      '#/library/t1'
+    );
+    fireEvent.click(within(needsWork).getByRole('button', { name: 'Practise Topic t1' }));
+    await waitFor(() => expect(window.location.hash).toBe('#/session?focus=t1'));
   });
 });

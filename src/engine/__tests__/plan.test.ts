@@ -21,6 +21,7 @@ import {
   blockCountsFor,
   currentTopicOf,
   pickMode,
+  planFocus,
   planNextCycle,
   planSession,
   type SessionPlan,
@@ -74,7 +75,7 @@ describe('planSession block sizes', () => {
     const blocks = plan({ sessionLength: 10 }).items.map((i) => i.block);
     expect(blocks).toEqual(
       [...blocks].sort((a, b) => {
-        const rank = { new: 0, review: 1, phrases: 2 };
+        const rank = { new: 0, review: 1, phrases: 2, focus: 3 };
         return rank[a] - rank[b];
       })
     );
@@ -575,5 +576,163 @@ describe('review scheduling (docs/stage-6-spec.md §1)', () => {
         expect(outcome.srsApplied).toBe(true);
       }
     }
+  });
+});
+
+describe('planFocus (docs/stage-6-spec.md §4)', () => {
+  const focusInput = (
+    sessionLength: SessionLength,
+    progress: TopicProgress[] = [],
+    seed = 1,
+    program = makeStandardProgram()
+  ) => ({
+    program,
+    progress,
+    sessionLength,
+    inputShares: INPUT_PRESETS.normal,
+    now: NOW,
+    rng: mulberry32(seed),
+    id: 'focus-1',
+  });
+
+  it.each([5, 10, 15, 20, 30] as const)('length %i: all items from the topic, no repeats', (n) => {
+    const p = planFocus(focusInput(n), 't2');
+    expect(p).toMatchObject({ kind: 'focus', focusTopicId: 't2', open: false, plannedLength: n });
+    expect(p.items).toHaveLength(n);
+    expect(p.items.every((i) => i.topicId === 't2' && i.block === 'focus')).toBe(true);
+    expect(new Set(p.items.map((i) => i.exercise.id)).size).toBe(n);
+    expect(p.items.every((i) => i.exercise.allowedModes.includes(i.mode))).toBe(true);
+  });
+
+  it('orders unseen first, then past mistakes, then the rest', () => {
+    const all = makeStandardProgram().modules[0].topics[0].exercises.map((e) => e.id);
+    const seen = all.slice(0, 35);
+    const wrong = [seen[3], seen[30]];
+    for (const seed of [1, 2, 3]) {
+      const p = planFocus(
+        focusInput(
+          10,
+          [
+            makeProgress('t1', {
+              status: 'review',
+              seenExerciseIds: seen,
+              wrongExerciseIds: wrong,
+            }),
+          ],
+          seed
+        ),
+        't1'
+      );
+      const ids = p.items.map((i) => i.exercise.id);
+      expect(ids.slice(0, 5).sort()).toEqual(all.slice(35).sort());
+      expect(ids.slice(5, 7).sort()).toEqual([...wrong].sort());
+      expect(ids.slice(7).every((id) => seen.includes(id) && !wrong.includes(id))).toBe(true);
+    }
+  });
+
+  it('shows the context screen first for a topic, never for a phrase set', () => {
+    const topic = planFocus(focusInput(10), 't1');
+    expect(topic.items[0].showContextBefore).toBe(true);
+    expect(topic.items.filter((i) => i.showContextBefore)).toHaveLength(1);
+    const phrases = planFocus(focusInput(10), 'ps1');
+    expect(phrases.items).toHaveLength(10);
+    expect(phrases.items.every((i) => i.topicId === 'ps1' && i.block === 'focus')).toBe(true);
+    expect(phrases.items.some((i) => i.showContextBefore)).toBe(false);
+  });
+
+  it('plans fewer items when the topic is smaller than the session', () => {
+    const p = planFocus(focusInput(20), 'ps1');
+    expect(p.items).toHaveLength(12);
+    expect(p.plannedLength).toBe(12);
+  });
+
+  it('open: cycles of six from the same topic until the pool is exhausted', () => {
+    const input = focusInput('open');
+    let p = planFocus(input, 'ps1');
+    expect(p).toMatchObject({ open: true, plannedLength: 0 });
+    expect(p.items).toHaveLength(6);
+    p = planNextCycle(p, input);
+    expect(p.items).toHaveLength(12);
+    // 12 exercises in ps1: nothing left, so nothing is appended and the session ends.
+    const again = planNextCycle(p, input);
+    expect(again.items).toHaveLength(12);
+    expect(new Set(p.items.map((i) => i.exercise.id)).size).toBe(12);
+    expect(p.items.every((i) => i.topicId === 'ps1' && i.block === 'focus')).toBe(true);
+    expect(p.items.some((i) => i.showContextBefore)).toBe(false);
+  });
+
+  it('is empty for an unknown topic', () => {
+    expect(planFocus(focusInput(10), 'nope').items).toEqual([]);
+  });
+
+  it('a focus session on a stage-2 topic leaves the SRS alone', () => {
+    const before = makeProgress('t1', {
+      status: 'review',
+      reviewStage: 2,
+      firstCompletedAt: NOW - 90 * DAY_MS,
+      nextReviewAt: NOW - DAY_MS,
+      failedReviewsInARow: 1,
+      seenExerciseIds: makeStandardProgram()
+        .modules[0].topics[0].exercises.slice(0, 25)
+        .map((e) => e.id),
+    });
+    const p = planFocus(focusInput(10, [before]), 't1');
+    let row = before;
+    for (const item of p.items) row = applyAttempt(row, item.exercise.id, true, NOW + 1);
+    const { rows, outcomes } = finishSession(
+      [row],
+      p.items.map((i) => ({ topicId: i.topicId, block: i.block, correct: true })),
+      NOW + 2,
+      NOW
+    );
+    expect(rows[0]).toMatchObject({
+      status: 'review',
+      reviewStage: 2,
+      nextReviewAt: NOW - DAY_MS,
+      failedReviewsInARow: 1,
+    });
+    expect(rows[0].lastReviewedAt).toBeUndefined();
+    expect(rows[0].history).toEqual([{ at: NOW + 2, correct: 10, total: 10 }]);
+    expect(rows[0].seenExerciseIds.length).toBeGreaterThan(25);
+    expect(outcomes[0]).toMatchObject({ reviewed: false, srsApplied: false });
+
+    for (const status of ['mastered', 'maintenance'] as const) {
+      const fixed = makeProgress('t1', { status, reviewStage: 3, nextReviewAt: 123 });
+      const done = finishSession(
+        [fixed],
+        Array.from({ length: 5 }, () => ({
+          topicId: 't1',
+          block: 'focus' as const,
+          correct: true,
+        })),
+        NOW
+      );
+      expect(done.rows[0]).toMatchObject({ status, reviewStage: 3, nextReviewAt: 123 });
+    }
+  });
+
+  it('still completes a learning topic for the first time', () => {
+    const start = makeProgress('t1', {
+      status: 'learning',
+      seenExerciseIds: makeStandardProgram()
+        .modules[0].topics[0].exercises.slice(0, 15)
+        .map((e) => e.id),
+    });
+    const p = planFocus(focusInput(10, [start]), 't1');
+    let row = start;
+    for (const item of p.items) row = applyAttempt(row, item.exercise.id, true, NOW + 5);
+    expect(row).toMatchObject({
+      status: 'review',
+      reviewStage: 1,
+      firstCompletedAt: NOW + 5,
+      nextReviewAt: NOW + 5 + 7 * DAY_MS,
+    });
+    const { rows } = finishSession(
+      [row],
+      p.items.map((i) => ({ topicId: i.topicId, block: i.block, correct: true })),
+      NOW + 10,
+      NOW
+    );
+    expect(rows[0]).toMatchObject({ reviewStage: 1, nextReviewAt: NOW + 5 + 7 * DAY_MS });
   });
 });

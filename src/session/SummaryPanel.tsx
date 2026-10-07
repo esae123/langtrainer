@@ -1,4 +1,4 @@
-import { Check, Play, Repeat, RotateCcw } from 'lucide-react';
+import { Check, Play, Repeat, RotateCcw, Target } from 'lucide-react';
 import { Card } from '../components/Card';
 import type { Program } from '../content/types';
 import type { BlockKind } from '../engine/plan';
@@ -13,6 +13,7 @@ interface SummaryPanelProps {
   outcomes: TopicOutcome[] | null;
   program: Program | undefined;
   onDone: () => void;
+  /** "Another session"; for a focus session, "Practise again" (a new focus plan). */
   onAnother: () => void;
   /** Practice run over the wrong answers of this session (docs/stage-3b-spec.md §4). */
   onRetryMistakes: () => void;
@@ -24,6 +25,7 @@ const BLOCK_LABELS: Record<BlockKind, TranslationKey> = {
   new: 'session.block.new',
   review: 'session.summaryReviewBlock',
   phrases: 'session.block.phrases',
+  focus: 'session.summaryFocusBlock',
 };
 
 /** One-line encouragement for a regular session, by score (docs/stage-5-spec.md). */
@@ -52,9 +54,10 @@ export function SummaryPanel({
   const percentage = total === 0 ? 0 : Math.round((correct / total) * 100);
   const endedAt = state.endedAt ?? Date.now();
   const practice = state.plan.kind === 'practice';
+  const focus = state.plan.kind === 'focus';
   const wrong = total - correct;
 
-  const blocks = (['new', 'review', 'phrases'] as BlockKind[])
+  const blocks = (['new', 'review', 'phrases', 'focus'] as BlockKind[])
     .map((block) => {
       const drafts = state.responses.filter((draft) => draft.block === block);
       return {
@@ -238,8 +241,12 @@ export function SummaryPanel({
               onClick={onAnother}
               className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-accent text-base font-semibold text-accent-ink shadow-sm active:opacity-90"
             >
-              <Play size={20} strokeWidth={2} aria-hidden />
-              {t('session.another')}
+              {focus ? (
+                <Target size={20} strokeWidth={2} aria-hidden />
+              ) : (
+                <Play size={20} strokeWidth={2} aria-hidden />
+              )}
+              {focus ? t('session.practiseAgain') : t('session.another')}
             </button>
           )}
         </div>

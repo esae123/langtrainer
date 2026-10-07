@@ -13,6 +13,7 @@ import { Link, useNavigate } from 'react-router';
 import { Card } from '../components/Card';
 import { useActiveProgram } from '../content/programRegistry';
 import { db } from '../db/db';
+import { useStartFocus } from '../session/useStartFocus';
 import { currentTopicOf } from '../engine/plan';
 import { COMPLETED_STATUSES } from '../engine/progress';
 import {
@@ -231,6 +232,7 @@ export function ProgressScreen() {
   const { uiLanguage } = useSettings();
   const program = useActiveProgram();
   const programId = program?.id;
+  const { startFocus, confirmSheet } = useStartFocus();
 
   const data = useLiveQuery(async () => {
     if (!programId) return null;
@@ -307,10 +309,10 @@ export function ProgressScreen() {
           <Card className="!p-0">
             <ul className="divide-y divide-line">
               {weak.map((topic) => (
-                <li key={topic.topicId}>
+                <li key={topic.topicId} className="flex items-center gap-2 pr-3">
                   <Link
                     to={`/library/${topic.topicId}`}
-                    className="flex min-h-11 items-center justify-between gap-3 px-4 py-2.5"
+                    className="flex min-h-11 min-w-0 flex-1 items-center justify-between gap-3 py-2.5 pl-4"
                   >
                     <span className="min-w-0 break-words text-sm font-medium text-text">
                       {topic.title}
@@ -319,6 +321,15 @@ export function ProgressScreen() {
                       {percent(topic.accuracy ?? 0)}
                     </span>
                   </Link>
+                  <button
+                    type="button"
+                    onClick={() => startFocus(topic.topicId, topic.title)}
+                    aria-label={t('progress.practiseTopic', { topic: topic.title })}
+                    className="flex min-h-11 shrink-0 items-center gap-1.5 rounded-xl border border-accent px-3 text-sm font-semibold text-accent"
+                  >
+                    <Target size={16} strokeWidth={2} aria-hidden />
+                    {t('progress.practise')}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -357,6 +368,11 @@ export function ProgressScreen() {
                       {t('progress.practiceTag')}
                     </span>
                   )}
+                  {session.kind === 'focus' && (
+                    <span className="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-semibold text-accent">
+                      {t('progress.focusTag')}
+                    </span>
+                  )}
                   {session.interrupted && (
                     <span className="rounded-full bg-highlight/30 px-2 py-0.5 text-xs font-semibold text-text">
                       {t('progress.interruptedTag')}
@@ -371,6 +387,7 @@ export function ProgressScreen() {
           </ul>
         </Card>
       </section>
+      {confirmSheet}
     </div>
   );
 }

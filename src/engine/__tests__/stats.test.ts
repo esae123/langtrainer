@@ -203,3 +203,32 @@ describe('recentSessions', () => {
     expect(recentSessions(rows, 3)).toHaveLength(3);
   });
 });
+
+describe('focus sessions (docs/stage-6-spec.md §4)', () => {
+  it('count like regular sessions for streak, sessions, answered and accuracy', () => {
+    const sessions = [
+      session(NOW - DAY_MS, { kind: 'focus' }),
+      session(NOW - HOUR, { kind: 'regular' }),
+      session(NOW - 2 * HOUR, { kind: 'practice' }),
+    ];
+    expect(streaks(sessions, NOW, 0)).toEqual({ current: 2, best: 2 });
+    expect(streaks([session(NOW - HOUR, { kind: 'focus' })], NOW, 0).current).toBe(1);
+
+    const attempts = [
+      attempt('t1', true),
+      attempt('t1', false),
+      attempt('t1', true, { practice: true }),
+    ];
+    expect(overview(sessions, attempts)).toEqual({
+      sessions: 2,
+      answered: 2,
+      correct: 1,
+      accuracy: 0.5,
+    });
+    expect(recentSessions(sessions).map((row) => row.kind)).toEqual([
+      'regular',
+      'practice',
+      'focus',
+    ]);
+  });
+});

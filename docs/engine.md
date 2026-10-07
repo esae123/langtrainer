@@ -109,6 +109,36 @@ dropping the context screens. A practice run is drill, not progress:
 The practice summary shows the score, "Fixed: n of m" after a retry, and offers
 **Done** / **Retry again** (over the mistakes of that practice run).
 
+## Focus sessions (`planFocus`)
+
+**Practise this topic** (Library topic / phrase-set detail) and **Practise** (Progress →
+Needs work rows) start a focus session on one topic or phrase set
+(docs/stage-6-spec.md §4). The route is **`/session?focus=<topicId>`** (HashRouter query
+string, so a focus session survives a reload of the URL); `/session?resume=1` still
+resumes whatever was saved, focus sessions included. If an unfinished session exists, a
+confirm sheet asks first ("Discard and start" / "Cancel"); confirming clears the saved
+snapshot. The session runs in the installed course that contains the topic.
+
+- `planFocus(input, topicId)` → `SessionPlan` with `kind: 'focus'`, `focusTopicId`, every
+  item in block `'focus'`. Order: unseen first, then `wrongExerciseIds`, then the rest
+  (each group shuffled; no per-exercise timestamps are kept). No exercise repeats. Length
+  = `sessionLength` (fewer when the topic runs out); open → cycles of six from the same
+  topic via `planNextCycle` until the pool is exhausted, then the session ends. Input
+  modes as usual. The context screen precedes the first item of a topic, never a phrase
+  set.
+- Recording is normal (not practice): `applyAttempt` marks seen / keeps wrong ids / moves
+  `new → learning` and still triggers the 20-distinct first completion. Attempt rows carry
+  `block: 'focus'` (every attempt now stores its `block`; older rows have none), the
+  session row `kind: 'focus'` (not indexed, no Dexie version bump).
+- `finishSession` adds the history entry, but focus attempts are never review-block
+  attempts, so there is no `lastReviewedAt` and **no SRS transition**: `reviewStage`,
+  `nextReviewAt`, `failedReviewsInARow` and a mastered/maintenance status stay as they
+  were.
+- Stats count focus sessions like regular ones (streak, sessions, answered, accuracy);
+  Recent sessions tags them "Focus".
+- Summary: the same score, Retry mistakes / Repeat session and Done; "Another session"
+  becomes **Practise again** (a fresh focus plan for the same topic).
+
 ## Checking (`checkAnswer`)
 
 `checkAnswer(exercise, mode, response)` returns
@@ -206,7 +236,7 @@ like "→ ready for review in 30 days".
 The Progress screen shows the **active course** only. Its rows are the course's
 `sessions`, the `attempts` of those sessions and its `topicProgress` rows. Unless noted,
 only **regular** work counts: `sessions.kind === 'practice'` and `attempts.practice ===
-true` are left out.
+true` are left out (focus sessions count as regular work).
 
 - `streaks(sessions, now, tzOffsetMinutes?)` → `{ current, best }`: runs of consecutive
   **local calendar days** with at least one regular session that has `completed >= 1`

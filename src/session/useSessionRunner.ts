@@ -10,7 +10,13 @@ import {
   type ExerciseResponse,
   type SelfGrade,
 } from '../engine/check';
-import { planNextCycle, planSession, type PlanInput, type SessionPlan } from '../engine/plan';
+import {
+  planFocus,
+  planNextCycle,
+  planSession,
+  type PlanInput,
+  type SessionPlan,
+} from '../engine/plan';
 import {
   applyAttempt,
   emptyTopicProgress,
@@ -52,6 +58,7 @@ function toAttemptRow(draft: AttemptDraft, sessionId: string, practice: boolean)
     ...(draft.diacriticsOk !== null ? { diacriticsOk: draft.diacriticsOk } : {}),
     ...(draft.selfGraded ? { selfGraded: true } : {}),
     ...(practice ? { practice: true } : {}),
+    block: draft.block,
     answer: draft.answer,
     at: draft.at,
   };
@@ -60,12 +67,15 @@ function toAttemptRow(draft: AttemptDraft, sessionId: string, practice: boolean)
 /**
  * @param practicePlan when given, this exact plan is run as a practice session instead
  *        of planning (or resuming) a regular one.
+ * @param focusTopicId when given (and no practice plan), plans a focus session on that
+ *        topic or phrase set (docs/stage-6-spec.md §4) instead of a regular one.
  */
 export function useSessionRunner(
   program: Program | undefined,
   settings: Settings,
   resume: boolean,
-  practicePlan?: SessionPlan
+  practicePlan?: SessionPlan,
+  focusTopicId?: string
 ): SessionRunner {
   const [state, dispatch] = useReducer(sessionReducer, null);
   const [outcomes, setOutcomes] = useState<TopicOutcome[] | null>(null);
@@ -121,9 +131,10 @@ export function useSessionRunner(
       }
       const input = planInput(now);
       if (!input) return;
-      dispatch({ type: 'init', state: initSessionState(planSession(input), now) });
+      const plan = focusTopicId ? planFocus(input, focusTopicId) : planSession(input);
+      dispatch({ type: 'init', state: initSessionState(plan, now) });
     })();
-  }, [program, resume, planInput, practicePlan]);
+  }, [program, resume, planInput, practicePlan, focusTopicId]);
 
   // Persist on every transition; drop the snapshot once the summary is reached.
   useEffect(() => {
@@ -154,11 +165,13 @@ export function useSessionRunner(
         completed: responses.length,
         correct: responses.filter((draft) => draft.correct).length,
         interrupted,
-        kind: practice ? 'practice' : 'regular',
+        kind: plan.kind,
       });
 
       // Practice runs are drill only: no history entry, no SRS transition, no status
-      // change (docs/stage-3b-spec.md §4).
+      // change (docs/stage-3b-spec.md §4). Focus sessions do go through finishSession:
+      // their attempts are all in the `focus` block, so it adds history but never moves
+      // the SRS (docs/stage-6-spec.md §4).
       if (practice) {
         setOutcomes([]);
         return;

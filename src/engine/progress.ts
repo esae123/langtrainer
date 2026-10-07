@@ -161,6 +161,10 @@ function applySrs(row: TopicProgress, perfect: boolean, now: number): void {
  * when nothing is due, `plan.ts` fills the review block from the current topic, so a
  * brand-new stage 1 / +7d schedule (just set by `applyAttempt`) must not immediately
  * jump to stage 2 / +30d. `sessionStartedAt` is what tells the two apart.
+ *
+ * Focus sessions (docs/stage-6-spec.md §4) only produce `focus`-block attempts, so they
+ * add history but never set `lastReviewedAt` or move the SRS: reviewStage, nextReviewAt,
+ * failedReviewsInARow and a mastered / maintenance status stay as they were.
  */
 export function finishSession(
   rows: TopicProgress[],

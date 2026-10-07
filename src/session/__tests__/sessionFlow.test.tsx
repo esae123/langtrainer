@@ -283,3 +283,103 @@ describe('/session happy path', () => {
     expect(await screen.findByText(/unfinished session discarded/i)).toBeInTheDocument();
   });
 });
+
+describe('focus sessions (docs/stage-6-spec.md §4)', () => {
+  /** Focus plans shuffle the unseen exercises, so answer whichever one is shown. */
+  async function answerAllThree() {
+    for (let i = 1; i <= 3; i += 1) {
+      expect(await screen.findByText(`${i}/3`)).toBeInTheDocument();
+      if (screen.queryByRole('radio', { name: 'trabalho' })) {
+        await answerCurrent('option', ['trabalho']);
+      } else if (screen.queryByRole('button', { name: 'Add Eu' })) {
+        await answerCurrent('tiles', ['Eu', 'falo', 'inglês']);
+      } else {
+        fireEvent.click(screen.getByRole('button', { name: 'Add Moro' }));
+        fireEvent.click(screen.getByRole('button', { name: 'Check' }));
+        fireEvent.click(await screen.findByRole('button', { name: 'Yes' }));
+      }
+    }
+  }
+
+  it('runs a focus session, keeps the SRS and offers Practise again', async () => {
+    const nextReviewAt = Date.now() - 1000;
+    await db.topicProgress.put({
+      topicId: 't1',
+      programId: 'pt-PT-A1',
+      status: 'review',
+      reviewStage: 2,
+      firstCompletedAt: Date.now() - 90 * 24 * 60 * 60 * 1000,
+      nextReviewAt,
+      failedReviewsInARow: 0,
+      history: [],
+      seenExerciseIds: [],
+      wrongExerciseIds: [],
+    });
+    window.location.hash = '#/session?focus=t1';
+    renderApp();
+
+    // Context screen first, then the topic's exercises only.
+    expect(await screen.findByText('Regular -ar verbs')).toBeInTheDocument();
+    await startSession();
+    expect(await screen.findByText('Focus · Regular -ar verbs')).toBeInTheDocument();
+    await answerAllThree();
+
+    expect(await screen.findByText(/session complete/i)).toBeInTheDocument();
+    expect(screen.getByText('Focus practice')).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Another session' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Repeat session' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Done' })).toBeInTheDocument();
+
+    await waitFor(async () => expect((await db.topicProgress.get('t1'))?.history).toHaveLength(1));
+    const row = await db.topicProgress.get('t1');
+    expect(row).toMatchObject({ status: 'review', reviewStage: 2, nextReviewAt });
+    expect(row?.lastReviewedAt).toBeUndefined();
+    expect(row?.seenExerciseIds).toHaveLength(3);
+    const sessions = await db.sessions.toArray();
+    expect(sessions).toHaveLength(1);
+    expect(sessions[0]).toMatchObject({ kind: 'focus', completed: 3 });
+    const attempts = await db.attempts.toArray();
+    expect(attempts.every((a) => a.block === 'focus' && a.practice === undefined)).toBe(true);
+
+    // Practise again: a new focus plan for the same topic.
+    fireEvent.click(screen.getByRole('button', { name: 'Practise again' }));
+    expect(await screen.findByRole('button', { name: /start exercises/i })).toBeInTheDocument();
+    await startSession();
+    expect(await screen.findByText('Focus · Regular -ar verbs')).toBeInTheDocument();
+  });
+
+  it('asks before discarding an unfinished session', async () => {
+    renderApp();
+    await startSession();
+    await answerCurrent('option', ['trabalho']);
+    await waitFor(async () => expect(await readActiveSession()).not.toBeNull());
+    await waitFor(async () => expect(await db.topicProgress.get('t1')).toBeTruthy());
+
+    window.location.hash = '#/library/t1';
+    fireEvent.click(await screen.findByRole('button', { name: 'Practise this topic' }));
+    const dialog = await screen.findByRole('dialog');
+    expect(dialog).toHaveTextContent(
+      'You have an unfinished session. Discard it and practise «Regular -ar verbs»?'
+    );
+    fireEvent.click(screen.getByRole('button', { name: 'Cancel' }));
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument());
+    expect(window.location.hash).toBe('#/library/t1');
+    expect(await readActiveSession()).not.toBeNull();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Practise this topic' }));
+    fireEvent.click(await screen.findByRole('button', { name: 'Discard and start' }));
+    await waitFor(() => expect(window.location.hash).toBe('#/session?focus=t1'));
+    expect(await screen.findByRole('button', { name: /start exercises/i })).toBeInTheDocument();
+    await waitFor(async () => expect((await readActiveSession())?.state.plan.kind).toBe('focus'));
+    expect((await readActiveSession())?.state.responses).toHaveLength(0);
+  });
+
+  it('starts straight away from the Library when nothing is unfinished', async () => {
+    window.location.hash = '#/library/t1';
+    renderApp();
+    fireEvent.click(await screen.findByRole('button', { name: 'Practise this topic' }));
+    await waitFor(() => expect(window.location.hash).toBe('#/session?focus=t1'));
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    expect(await screen.findByRole('button', { name: /start exercises/i })).toBeInTheDocument();
+  });
+});

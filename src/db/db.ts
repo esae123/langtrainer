@@ -1,5 +1,6 @@
 import Dexie, { type EntityTable } from 'dexie';
 import type { Exercise, InputMode, Program, Topic } from '../content/types';
+import type { BlockKind } from '../engine/plan';
 import type { TopicProgress, TopicStatus } from '../engine/types';
 
 export interface SettingsRow {
@@ -26,8 +27,12 @@ export interface SessionRow {
   completed: number;
   correct: number;
   interrupted: boolean;
-  /** Practice runs (retry mistakes / repeat session) never touch topic progress. */
-  kind?: 'regular' | 'practice';
+  /**
+   * Practice runs (retry mistakes / repeat session) never touch topic progress; focus
+   * sessions (one chosen topic) record progress but never move the SRS. Not indexed, so
+   * the new value needs no schema bump.
+   */
+  kind?: 'regular' | 'practice' | 'focus';
 }
 
 export interface AttemptRow {
@@ -44,6 +49,8 @@ export interface AttemptRow {
   selfGraded?: boolean;
   /** Answered in a practice session, so it is excluded from progress and SRS. */
   practice?: boolean;
+  /** The plan block it was answered in (`focus` for focus sessions); absent on older rows. */
+  block?: BlockKind;
 }
 
 export interface CustomTopicRow {

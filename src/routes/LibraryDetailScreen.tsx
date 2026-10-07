@@ -1,4 +1,4 @@
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Target } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router';
 import { Card } from '../components/Card';
 import type { Exercise, PhraseSet, Topic } from '../content/types';
@@ -6,6 +6,7 @@ import { useAllPrograms, type ProgramEntry } from '../content/programRegistry';
 import { useT, type TranslationKey } from '../i18n';
 import { MiniMarkdown } from '../lib/markdownLite';
 import { difficultyDots, renderCorrectAnswer } from '../lib/renderExercise';
+import { useStartFocus } from '../session/useStartFocus';
 
 /**
  * Topic and phrase-set ids are unique across every installed course (import rejects
@@ -68,6 +69,8 @@ export function LibraryDetailScreen() {
   const entries = useAllPrograms();
   const loading = entries === undefined;
   const { topic, phraseSet } = entries && itemId ? findItem(entries, itemId) : {};
+  const { startFocus, confirmSheet } = useStartFocus();
+  const item = topic ?? phraseSet;
 
   return (
     <div className="flex flex-col gap-6">
@@ -80,10 +83,21 @@ export function LibraryDetailScreen() {
         >
           <ArrowLeft size={22} strokeWidth={2} aria-hidden />
         </button>
-        <h1 className="text-lg font-semibold text-text">
+        <h1 className="min-w-0 break-words text-lg font-semibold text-text">
           {topic?.title ?? phraseSet?.title ?? (loading ? '' : t('library.notFoundTitle'))}
         </h1>
       </div>
+
+      {item && item.exercises.length > 0 && (
+        <button
+          type="button"
+          onClick={() => startFocus(item.id, item.title)}
+          className="flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-accent px-4 text-base font-semibold text-accent-ink shadow-sm active:opacity-90"
+        >
+          <Target size={20} strokeWidth={2} aria-hidden />
+          {t('library.practise')}
+        </button>
+      )}
 
       {!loading && !topic && !phraseSet && (
         <Card>
@@ -173,6 +187,7 @@ export function LibraryDetailScreen() {
           </section>
         </>
       )}
+      {confirmSheet}
     </div>
   );
 }

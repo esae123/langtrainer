@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router';
 import { Card } from '../components/Card';
 import { ConfirmDialog } from '../components/ConfirmDialog';
 import { useActiveProgram, useAllPrograms } from '../content/programRegistry';
-import { planPractice, type SessionPlan } from '../engine/plan';
+import { exercisesByTopic, planPractice, type SessionPlan } from '../engine/plan';
 import { useT } from '../i18n';
 import { useSettings } from '../settings/settingsStore';
 import { useActiveSession } from './activeSession';
@@ -33,16 +33,22 @@ function practicePlanFrom(state: SessionState, fromMistakes: boolean): SessionPl
   });
 }
 
-/** `/session` — full-screen flow with no bottom tab bar. */
+/**
+ * `/session` — full-screen flow with no bottom tab bar. `/session?resume=1` resumes the
+ * saved session; `/session?focus=<topicId>` starts a focus session on one topic or phrase
+ * set (docs/stage-6-spec.md §4).
+ */
 export function SessionScreen() {
-  // Remounting with a new key is how "Another session" plans a fresh session.
+  // Remounting with a new key is how "Another session" / "Practise again" plans afresh.
   const [runKey, setRunKey] = useState(0);
   const [practicePlan, setPracticePlan] = useState<SessionPlan | null>(null);
   const [searchParams] = useSearchParams();
+  const resume = runKey === 0 && searchParams.get('resume') === '1';
   return (
     <SessionRun
       key={runKey}
-      resume={runKey === 0 && searchParams.get('resume') === '1'}
+      resume={resume}
+      focusTopicId={resume ? undefined : (searchParams.get('focus') ?? undefined)}
       practicePlan={practicePlan}
       onRestart={() => {
         setPracticePlan(null);
@@ -58,11 +64,13 @@ export function SessionScreen() {
 
 function SessionRun({
   resume,
+  focusTopicId,
   practicePlan,
   onRestart,
   onPractice,
 }: {
   resume: boolean;
+  focusTopicId: string | undefined;
   practicePlan: SessionPlan | null;
   onRestart: () => void;
   onPractice: (plan: SessionPlan) => void;
@@ -84,12 +92,23 @@ function SessionRun({
     resume && stored
       ? entries?.find((entry) => entry.program.id === stored.state.programId)?.program
       : undefined;
+  // A focus session runs in the course that contains the topic (the Library lists
+  // every installed course), falling back to the active one.
+  const focusProgram = focusTopicId
+    ? entries?.find((entry) => exercisesByTopic(entry.program).has(focusTopicId))?.program
+    : undefined;
   const program =
     entries === undefined || (resume && stored === undefined)
       ? undefined
-      : (resumedProgram ?? activeProgram);
+      : (resumedProgram ?? focusProgram ?? activeProgram);
 
-  const runner = useSessionRunner(program, settings, resume, practicePlan ?? undefined);
+  const runner = useSessionRunner(
+    program,
+    settings,
+    resume,
+    practicePlan ?? undefined,
+    focusTopicId
+  );
   const [stopOpen, setStopOpen] = useState(false);
   const { state } = runner;
 
@@ -164,11 +183,13 @@ function SessionRun({
   const firstOfBlock = !previous || previous.block !== item.block;
   const blockLabel = practice
     ? t('session.block.practice')
-    : item.block === 'review'
-      ? t('session.block.review', { topic: info.title })
-      : item.block === 'phrases'
-        ? t('session.block.phrases')
-        : t('session.block.new');
+    : item.block === 'focus'
+      ? t('session.block.focus', { topic: info.title })
+      : item.block === 'review'
+        ? t('session.block.review', { topic: info.title })
+        : item.block === 'phrases'
+          ? t('session.block.phrases')
+          : t('session.block.new');
 
   return (
     <div className={shell}>
@@ -178,7 +199,11 @@ function SessionRun({
         index={state.index}
         total={state.plan.plannedLength}
         blockLabel={blockLabel}
-        banner={!practice && firstOfBlock && item.block !== 'new' ? blockLabel : null}
+        banner={
+          !practice && firstOfBlock && item.block !== 'new' && item.block !== 'focus'
+            ? blockLabel
+            : null
+        }
         feedback={state.feedback}
         onSubmit={runner.submit}
         onContinue={runner.next}

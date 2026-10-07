@@ -13,13 +13,16 @@ import { MIN_REVIEW_ATTEMPTS } from './progress';
 import { pickWeighted, shuffle, type Rng } from './rng';
 import type { TopicProgress } from './types';
 
-export type BlockKind = 'new' | 'review' | 'phrases';
+/** `focus`: an item of a focus session on one chosen topic (docs/stage-6-spec.md §4). */
+export type BlockKind = 'new' | 'review' | 'phrases' | 'focus';
 
 /**
  * Regular sessions drive progress and the SRS; practice sessions (retry mistakes /
- * repeat session, docs/stage-3b-spec.md §4) are pure drill and change neither.
+ * repeat session, docs/stage-3b-spec.md §4) are pure drill and change neither. Focus
+ * sessions (one chosen topic, docs/stage-6-spec.md §4) record progress like regular ones
+ * but never move the SRS.
  */
-export type SessionKind = 'regular' | 'practice';
+export type SessionKind = 'regular' | 'practice' | 'focus';
 
 export interface PlannedItem {
   exercise: Exercise;
@@ -40,6 +43,8 @@ export interface SessionPlan {
   kind: SessionKind;
   /** Practice plans built from the wrong answers only, so the summary can say "Fixed". */
   fromMistakes?: boolean;
+  /** Focus sessions: the topic or phrase set being practised. */
+  focusTopicId?: string;
 }
 
 export interface BlockCounts {
@@ -76,7 +81,7 @@ export const OPEN_CYCLE: BlockCounts = { new: 3, review: 2, phrases: 1 };
 /** Items in one open-session cycle. */
 export const OPEN_CYCLE_LENGTH = 6;
 
-const BLOCK_ORDER: readonly BlockKind[] = ['new', 'review', 'phrases'];
+const BLOCK_ORDER: readonly Exclude<BlockKind, 'focus'>[] = ['new', 'review', 'phrases'];
 
 /**
  * Splits `total` items by percentage shares with largest-remainder rounding, so the
@@ -377,7 +382,7 @@ function buildItems(
       }
     }
     // Keep block order (new → review → phrases) after topping up.
-    const blockRank: Record<BlockKind, number> = { new: 0, review: 1, phrases: 2 };
+    const blockRank: Record<BlockKind, number> = { new: 0, review: 1, phrases: 2, focus: 3 };
     picked.sort((a, b) => blockRank[a.block] - blockRank[b.block]);
   }
 
@@ -435,10 +440,72 @@ export function planPractice(
 }
 
 /**
- * Appends one more cycle of six (split by the session mix) to an open-ended plan, never
- * repeating an exercise.
+ * Focus items from one topic or phrase set: unseen first, then past mistakes, then the
+ * rest (each group shuffled — no per-exercise timestamps are kept), skipping `used`.
+ */
+function focusItems(
+  input: PlanInput,
+  topicId: string,
+  count: number,
+  used: ReadonlySet<string>,
+  withContext: boolean
+): PlannedItem[] {
+  const { program, progress, rng } = input;
+  const topic = orderedTopics(program).find((candidate) => candidate.id === topicId);
+  const exercises = exercisesByTopic(program).get(topicId) ?? [];
+  const pool = orderedPool(
+    exercises,
+    seenSetFor(progress, topicId),
+    wrongSetFor(progress, topicId),
+    used,
+    rng,
+    false
+  );
+  return pool.slice(0, count).map((exercise, i) => {
+    const item: PlannedItem = {
+      exercise,
+      mode: pickMode(exercise.allowedModes, input.inputShares, rng),
+      block: 'focus',
+      topicId,
+    };
+    // Topics get their context screen first; phrase sets have none.
+    if (i === 0 && withContext && topic) item.showContextBefore = true;
+    return item;
+  });
+}
+
+/**
+ * A focus session on one topic or phrase set (docs/stage-6-spec.md §4): every item comes
+ * from it, never repeating an exercise; the length is the learner's `sessionLength`
+ * (fewer when the topic runs out). An open session plans cycles of six from the same
+ * topic until its pool is exhausted (see `planNextCycle`).
+ */
+export function planFocus(input: PlanInput, topicId: string): SessionPlan {
+  const open = input.sessionLength === 'open';
+  const count = input.sessionLength === 'open' ? OPEN_CYCLE_LENGTH : input.sessionLength;
+  const items = focusItems(input, topicId, count, new Set(), true);
+  return {
+    id: input.id ?? `f${input.now.toString(36)}-${Math.floor(input.rng() * 0xffffff).toString(36)}`,
+    programId: input.program.id,
+    plannedLength: open ? 0 : items.length,
+    open,
+    items,
+    kind: 'focus',
+    focusTopicId: topicId,
+  };
+}
+
+/**
+ * Appends one more cycle of six to an open-ended plan, never repeating an exercise:
+ * split by the session mix for a regular plan, from the same topic for a focus plan
+ * (nothing is appended once that topic is exhausted, which ends the session).
  */
 export function planNextCycle(plan: SessionPlan, input: PlanInput): SessionPlan {
+  if (plan.kind === 'focus' && plan.focusTopicId) {
+    const used = new Set(plan.items.map((item) => item.exercise.id));
+    const items = focusItems(input, plan.focusTopicId, OPEN_CYCLE_LENGTH, used, false);
+    return { ...plan, items: [...plan.items, ...items] };
+  }
   const used = new Set(plan.items.map((item) => item.exercise.id));
   const contextShown = new Set(
     plan.items.filter((item) => item.showContextBefore).map((item) => item.topicId)

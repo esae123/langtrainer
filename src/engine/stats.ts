@@ -13,7 +13,8 @@ export interface StatsSession {
   completed: number;
   correct: number;
   interrupted: boolean;
-  kind?: 'regular' | 'practice';
+  /** Focus sessions count like regular ones; only practice runs are left out. */
+  kind?: 'regular' | 'practice' | 'focus';
 }
 
 export interface StatsAttempt {
@@ -189,7 +190,7 @@ export interface RecentSession {
   completed: number;
   correct: number;
   planned: number;
-  kind: 'regular' | 'practice';
+  kind: 'regular' | 'practice' | 'focus';
   interrupted: boolean;
 }
 
