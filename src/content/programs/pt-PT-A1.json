@@ -19758,6 +19758,5754 @@
           ]
         }
       ]
+    },
+    {
+      "id": "m3",
+      "title": "Module 3 — Daily routine, time, food and leisure",
+      "description": "Tell the time, describe a daily routine, order food and drinks, and accept or decline invitations, using -ir verbs, reflexive verbs and the everyday irregular verbs (ir, ver, ler, sair, ouvir).",
+      "topics": [
+        {
+          "id": "m3-time-dates",
+          "moduleId": "m3",
+          "title": "Time, days, months and dates",
+          "kind": "vocabulary",
+          "context": "In European Portuguese, asking for the time uses **Que horas são?**. When stating the hour, singular verb forms are used for one o'clock, noon, and midnight (*É uma hora*, *É meio-dia*, *É meia-noite*). For all other hours, use plural *são* (*São duas horas*, *São três horas*).\n\nFor minutes past the hour, connect with **e**:\n- *São quatro e dez* (4:10)\n- *São cinco e um quarto* (5:15 — quarter past five)\n- *São seis e meia* (6:30 — half past six)\n\nFor minutes before the hour, use **menos**:\n- *São sete menos um quarto* (6:45 — quarter to seven)\n\nParts of the day use specific prepositions:\n- *de manhã* (in the morning)\n- *à tarde* (in the afternoon)\n- *à noite* (at night)\n\nIn Portugal *de tarde* and *de noite* are also correct and common. With clock times say *às dez da noite*, *às três da tarde*.\n\nDays of the week are *segunda-feira* (Monday) through *sexta-feira* (Friday), plus *sábado* and *domingo*. Months and days are written in lowercase in Portuguese. To state a date, say: *Hoje é dia 15 de maio.*",
+          "keyItems": [
+            {
+              "target": "Que horas são?",
+              "support": "What time is it?"
+            },
+            {
+              "target": "É uma hora.",
+              "support": "It is one o'clock."
+            },
+            {
+              "target": "São duas horas.",
+              "support": "It is two o'clock."
+            },
+            {
+              "target": "É meio-dia.",
+              "support": "It is noon."
+            },
+            {
+              "target": "É meia-noite.",
+              "support": "It is midnight."
+            },
+            {
+              "target": "e um quarto",
+              "support": "quarter past"
+            },
+            {
+              "target": "e meia",
+              "support": "half past"
+            },
+            {
+              "target": "menos um quarto",
+              "support": "quarter to"
+            },
+            {
+              "target": "de manhã",
+              "support": "in the morning"
+            },
+            {
+              "target": "à tarde",
+              "support": "in the afternoon"
+            },
+            {
+              "target": "à noite",
+              "support": "at night / in the evening"
+            },
+            {
+              "target": "segunda-feira",
+              "support": "Monday"
+            },
+            {
+              "target": "sexta-feira",
+              "support": "Friday"
+            },
+            {
+              "target": "sábado",
+              "support": "Saturday"
+            },
+            {
+              "target": "domingo",
+              "support": "Sunday"
+            },
+            {
+              "target": "janeiro",
+              "support": "January"
+            },
+            {
+              "target": "hoje",
+              "support": "today"
+            },
+            {
+              "target": "amanhã",
+              "support": "tomorrow"
+            }
+          ],
+          "exercises": [
+            {
+              "id": "m3-time-dates-01",
+              "topicId": "m3-time-dates",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles"
+              ],
+              "prompt": "Match each Portuguese expression with its English translation.",
+              "explanation": "«É meio-dia» means noon, «à tarde» refers to the afternoon, «segunda-feira» is Monday, and «hoje» is today.",
+              "type": "match_pairs",
+              "pairs": [
+                {
+                  "target": "É meio-dia.",
+                  "support": "It is noon."
+                },
+                {
+                  "target": "à tarde",
+                  "support": "in the afternoon"
+                },
+                {
+                  "target": "segunda-feira",
+                  "support": "Monday"
+                },
+                {
+                  "target": "hoje",
+                  "support": "today"
+                }
+              ]
+            },
+            {
+              "id": "m3-time-dates-02",
+              "topicId": "m3-time-dates",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese word for the day in bold.",
+              "explanation": "«Friday» in Portuguese is «sexta-feira». Days of the week are usually not capitalized.",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Today is **Friday**.",
+              "word": "Friday",
+              "answer": "sexta-feira",
+              "options": [
+                "sexta-feira",
+                "segunda-feira",
+                "quarta-feira",
+                "sábado"
+              ]
+            },
+            {
+              "id": "m3-time-dates-03",
+              "topicId": "m3-time-dates",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the phrase in bold.",
+              "explanation": "The expression «in the morning» is translated as «de manhã» in European Portuguese.",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "I study **in the morning**.",
+              "word": "in the morning",
+              "answer": "de manhã",
+              "options": [
+                "de manhã",
+                "à tarde",
+                "à noite",
+                "de noite"
+              ]
+            },
+            {
+              "id": "m3-time-dates-04",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that it is three o'clock.",
+              "explanation": "Use plural «são» for hours greater than one: «São três horas».",
+              "type": "build_phrase",
+              "answer": [
+                "São",
+                "três",
+                "horas."
+              ],
+              "distractors": [
+                "É",
+                "doze",
+                "hora"
+              ]
+            },
+            {
+              "id": "m3-time-dates-05",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «São quatro horas.» What did you ask?",
+              "explanation": "To ask what time it is in Portuguese, use «Que horas são?».",
+              "type": "question_for_answer",
+              "givenAnswer": "São quatro horas.",
+              "answer": [
+                "Que",
+                "horas",
+                "são?"
+              ],
+              "distractors": [
+                "Qual",
+                "hora",
+                "é?"
+              ]
+            },
+            {
+              "id": "m3-time-dates-06",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Complete the sentence to say: \"It is half past one\" (1:30).",
+              "explanation": "Use singular «É» for one o'clock and «e meia» for half past.",
+              "type": "fill_gaps",
+              "template": "___ uma hora ___ meia.",
+              "gaps": [
+                {
+                  "answer": "É"
+                },
+                {
+                  "answer": "e"
+                }
+              ],
+              "wordBank": [
+                "É",
+                "e",
+                "São",
+                "menos",
+                "de"
+              ]
+            },
+            {
+              "id": "m3-time-dates-07",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: \"Today is Monday.\"",
+              "explanation": "In Portuguese, state the day using «Hoje é» followed by the day name, like «segunda-feira».",
+              "type": "build_phrase",
+              "answer": [
+                "Hoje",
+                "é",
+                "segunda-feira."
+              ],
+              "distractors": [
+                "são",
+                "domingo",
+                "de"
+              ]
+            },
+            {
+              "id": "m3-time-dates-08",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Someone says: «Hoje é terça-feira.» Write the question they are answering.",
+              "explanation": "Ask what day today is with «Que dia é hoje?».",
+              "type": "question_for_answer",
+              "givenAnswer": "Hoje é terça-feira.",
+              "answer": [
+                "Que",
+                "dia",
+                "é",
+                "hoje?"
+              ],
+              "distractors": [
+                "Qual",
+                "horas",
+                "são?"
+              ]
+            },
+            {
+              "id": "m3-time-dates-09",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Find the wrong word and select the correction.",
+              "explanation": "For 1 o'clock singular verb «É» is required: «É uma hora.», not «São».",
+              "type": "find_error",
+              "sentence": [
+                "São",
+                "uma",
+                "hora."
+              ],
+              "wrongIndex": 0,
+              "correction": "É",
+              "options": [
+                "É",
+                "Estar",
+                "Tenho"
+              ]
+            },
+            {
+              "id": "m3-time-dates-10",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about today's day of the week.",
+              "explanation": "Respond with «Hoje é...» followed by the day of the week in Portuguese.",
+              "type": "about_me",
+              "question": "Que dia da semana é hoje?",
+              "sampleAnswer": "Hoje é quinta-feira.",
+              "hints": [
+                "segunda-feira.",
+                "terça-feira.",
+                "quarta-feira.",
+                "sexta-feira.",
+                "sábado.",
+                "domingo."
+              ]
+            },
+            {
+              "id": "m3-time-dates-11",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: \"It is quarter past eight.\" (8:15)",
+              "explanation": "In European Portuguese, 15 minutes past the hour is expressed as «e um quarto».",
+              "type": "build_phrase",
+              "answer": [
+                "São",
+                "oito",
+                "e",
+                "um",
+                "quarto."
+              ],
+              "distractors": [
+                "menos",
+                "hora",
+                "duas"
+              ],
+              "acceptedAnswers": [
+                "São oito e quinze."
+              ]
+            },
+            {
+              "id": "m3-time-dates-12",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: \"It is quarter to five.\" (4:45)",
+              "explanation": "To indicate minutes remaining until the next hour, use «menos um quarto»: «São cinco menos um quarto».",
+              "type": "build_phrase",
+              "answer": [
+                "São",
+                "cinco",
+                "menos",
+                "um",
+                "quarto."
+              ],
+              "distractors": [
+                "e",
+                "quatro",
+                "horas"
+              ],
+              "acceptedAnswers": [
+                "São cinco menos quinze.",
+                "São quatro e quarenta e cinco."
+              ]
+            },
+            {
+              "id": "m3-time-dates-13",
+              "topicId": "m3-time-dates",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese word for \"midnight\".",
+              "explanation": "«Midnight» translates as «meia-noite» in Portuguese.",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "It is **midnight** now.",
+              "word": "midnight",
+              "answer": "meia-noite",
+              "options": [
+                "meia-noite",
+                "meio-dia",
+                "da noite",
+                "madrugada"
+              ]
+            },
+            {
+              "id": "m3-time-dates-14",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Fill in the gaps to say: \"Today is the tenth of May.\"",
+              "explanation": "Dates use «é dia [number] de [month]»: «Hoje é dia dez de maio».",
+              "type": "fill_gaps",
+              "template": "Hoje ___ dia dez ___ maio.",
+              "gaps": [
+                {
+                  "answer": "é"
+                },
+                {
+                  "answer": "de"
+                }
+              ],
+              "wordBank": [
+                "é",
+                "de",
+                "são",
+                "em",
+                "do"
+              ]
+            },
+            {
+              "id": "m3-time-dates-15",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your colleague says: «Hoje é dia vinte de abril.» What did you ask?",
+              "explanation": "To ask for today's date, ask «Qual é a data de hoje?» or «Que dia é hoje?».",
+              "type": "question_for_answer",
+              "givenAnswer": "Hoje é dia vinte de abril.",
+              "answer": [
+                "Qual",
+                "é",
+                "a",
+                "data",
+                "de",
+                "hoje?"
+              ],
+              "distractors": [
+                "onde",
+                "horas",
+                "são"
+              ],
+              "acceptedAnswers": [
+                "Qual é a data de hoje?",
+                "Que dia é hoje?"
+              ]
+            },
+            {
+              "id": "m3-time-dates-16",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Translate: \"We work in the afternoon.\"",
+              "explanation": "Use «à tarde» to express action in the afternoon.",
+              "type": "build_phrase",
+              "answer": [
+                "Nós",
+                "trabalhamos",
+                "à",
+                "tarde."
+              ],
+              "distractors": [
+                "de",
+                "manhã",
+                "noite"
+              ],
+              "acceptedAnswers": [
+                "Nós trabalhamos à tarde.",
+                "Trabalhamos à tarde."
+              ]
+            },
+            {
+              "id": "m3-time-dates-17",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Find the wrong word and select the correct option.",
+              "explanation": "«Meio-dia» is singular, so it takes «É»: «É meio-dia agora.»",
+              "type": "find_error",
+              "sentence": [
+                "São",
+                "meio-dia",
+                "agora."
+              ],
+              "wrongIndex": 0,
+              "correction": "É",
+              "options": [
+                "É",
+                "Está",
+                "Somos"
+              ]
+            },
+            {
+              "id": "m3-time-dates-18",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: \"My birthday is in July.\"",
+              "explanation": "Months take the preposition «em»: «em julho». Remember European Portuguese uses the article with possessives («O meu aniversário»).",
+              "type": "build_phrase",
+              "answer": [
+                "O",
+                "meu",
+                "aniversário",
+                "é",
+                "em",
+                "julho."
+              ],
+              "distractors": [
+                "de",
+                "no",
+                "a"
+              ]
+            },
+            {
+              "id": "m3-time-dates-19",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Fill in the gaps: \"I study in the morning and work at night.\"",
+              "explanation": "The standard prepositions are «de manhã» (in the morning) and «à noite» (at night).",
+              "type": "fill_gaps",
+              "template": "Eu estudo ___ manhã e trabalho ___ noite.",
+              "gaps": [
+                {
+                  "answer": "de"
+                },
+                {
+                  "answer": "à"
+                }
+              ],
+              "wordBank": [
+                "de",
+                "à",
+                "em",
+                "na",
+                "da"
+              ]
+            },
+            {
+              "id": "m3-time-dates-20",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "The waiter answers: «O restaurante abre às sete horas da noite.» Ask at what time the restaurant opens.",
+              "explanation": "To ask at what time something happens, use «A que horas…?»: «A que horas abre o restaurante?».",
+              "type": "question_for_answer",
+              "givenAnswer": "O restaurante abre às sete horas da noite.",
+              "answer": [
+                "A",
+                "que",
+                "horas",
+                "abre",
+                "o",
+                "restaurante?"
+              ],
+              "distractors": [
+                "Quando",
+                "é",
+                "onde"
+              ],
+              "acceptedAnswers": [
+                "A que horas abre o restaurante?",
+                "A que horas é que abre o restaurante?"
+              ]
+            },
+            {
+              "id": "m3-time-dates-21",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that it is quarter past ten.",
+              "explanation": "For hours above one, use «São». Quarter past is «e um quarto».",
+              "type": "build_phrase",
+              "answer": [
+                "São",
+                "dez",
+                "e",
+                "um",
+                "quarto."
+              ],
+              "distractors": [
+                "É",
+                "menos",
+                "vinte"
+              ]
+            },
+            {
+              "id": "m3-time-dates-22",
+              "topicId": "m3-time-dates",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Say that tomorrow is Saturday.",
+              "explanation": "«Amanhã» means tomorrow and days of the week are lowercased in Portuguese.",
+              "type": "build_phrase",
+              "answer": [
+                "Amanhã",
+                "é",
+                "sábado."
+              ],
+              "distractors": [
+                "Hoje",
+                "domingo",
+                "são"
+              ]
+            },
+            {
+              "id": "m3-time-dates-23",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the gaps: \"Today is Tuesday. The train leaves at four o'clock.\"",
+              "explanation": "Days of the week are lowercased. Specific times use «às» with plural hours («às quatro horas»).",
+              "type": "fill_gaps",
+              "template": "Hoje é ___. O comboio parte ___ quatro horas.",
+              "gaps": [
+                {
+                  "answer": "terça-feira"
+                },
+                {
+                  "answer": "às"
+                }
+              ],
+              "wordBank": [
+                "terça-feira",
+                "às",
+                "quarta-feira",
+                "ao",
+                "à"
+              ]
+            },
+            {
+              "id": "m3-time-dates-24",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «A aula é à noite.» What did you ask?",
+              "explanation": "«A que horas…?» asks for the clock time. «Quando…?» (when) is also fine here, so both are accepted.",
+              "type": "question_for_answer",
+              "givenAnswer": "A aula é às oito da noite.",
+              "answer": [
+                "A",
+                "que",
+                "horas",
+                "é",
+                "a",
+                "aula?"
+              ],
+              "distractors": [
+                "Onde",
+                "Quando",
+                "como"
+              ],
+              "acceptedAnswers": [
+                "A que horas é que é a aula?",
+                "Quando é a aula?",
+                "Quando é que é a aula?"
+              ]
+            },
+            {
+              "id": "m3-time-dates-25",
+              "topicId": "m3-time-dates",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "Months of the year are written in lower case in Portuguese. December is «dezembro».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "My birthday is in **December**.",
+              "word": "December",
+              "answer": "dezembro",
+              "options": [
+                "dezembro",
+                "novembro",
+                "outubro",
+                "janeiro"
+              ]
+            },
+            {
+              "id": "m3-time-dates-26",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "Clock times take «às» (a + as horas): «às dez horas». Only noon and midnight differ: «ao meio-dia», «à meia-noite».",
+              "type": "find_error",
+              "sentence": [
+                "O",
+                "comboio",
+                "parte",
+                "na",
+                "dez",
+                "horas."
+              ],
+              "wrongIndex": 3,
+              "correction": "às",
+              "options": [
+                "às",
+                "ao",
+                "à"
+              ]
+            },
+            {
+              "id": "m3-time-dates-27",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about your favorite day of the week.",
+              "explanation": "State your favorite day using «O meu dia favorito é...».",
+              "type": "about_me",
+              "question": "Qual é o teu dia da semana favorito?",
+              "sampleAnswer": "O meu dia favorito é sábado.",
+              "hints": [
+                "domingo.",
+                "sexta-feira.",
+                "gosto",
+                "de",
+                "segunda-feira."
+              ]
+            },
+            {
+              "id": "m3-time-dates-28",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that today is the 25th of April.",
+              "explanation": "Dates use «dia + [number] + de + [month]». Months are written in lower case.",
+              "type": "build_phrase",
+              "answer": [
+                "Hoje",
+                "é",
+                "dia",
+                "vinte",
+                "e",
+                "cinco",
+                "de",
+                "abril."
+              ],
+              "distractors": [
+                "Amanhã",
+                "do",
+                "horas"
+              ],
+              "acceptedAnswers": [
+                "Hoje é dia 25 de abril."
+              ]
+            },
+            {
+              "id": "m3-time-dates-29",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your colleague answers: «O almoço é ao meio-dia.» What did you ask?",
+              "explanation": "To ask what time a specific event occurs, ask «A que horas é...».",
+              "type": "question_for_answer",
+              "givenAnswer": "O almoço é ao meio-dia.",
+              "answer": [
+                "A",
+                "que",
+                "horas",
+                "é",
+                "o",
+                "almoço?"
+              ],
+              "distractors": [
+                "Onde",
+                "Qual",
+                "como"
+              ],
+              "acceptedAnswers": [
+                "A que horas é que é o almoço?",
+                "Quando é o almoço?",
+                "Quando é que é o almoço?"
+              ]
+            },
+            {
+              "id": "m3-time-dates-30",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill in the gaps to talk about travel times.",
+              "explanation": "«Meio-dia» takes «ao» («ao meio-dia»), while plural hours take «às» («às duas e meia»).",
+              "type": "fill_gaps",
+              "template": "O autocarro chega ___ meio-dia e sai ___ duas e meia.",
+              "gaps": [
+                {
+                  "answer": "ao"
+                },
+                {
+                  "answer": "às"
+                }
+              ],
+              "wordBank": [
+                "ao",
+                "às",
+                "à",
+                "de",
+                "no"
+              ]
+            },
+            {
+              "id": "m3-time-dates-31",
+              "topicId": "m3-time-dates",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "Wednesday in Portuguese is «quarta-feira».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "We have a meeting on **Wednesday**.",
+              "word": "Wednesday",
+              "answer": "quarta-feira",
+              "options": [
+                "quarta-feira",
+                "quinta-feira",
+                "terça-feira",
+                "sexta-feira"
+              ]
+            },
+            {
+              "id": "m3-time-dates-32",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Say: It is twenty to nine.",
+              "explanation": "To say minutes before the hour, state the upcoming hour followed by «menos» and the minutes.",
+              "type": "build_phrase",
+              "answer": [
+                "São",
+                "nove",
+                "menos",
+                "vinte."
+              ],
+              "distractors": [
+                "É",
+                "dez",
+                "quarenta"
+              ],
+              "acceptedAnswers": [
+                "São oito e quarenta."
+              ]
+            },
+            {
+              "id": "m3-time-dates-33",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «A festa é no sábado.» What did you ask?",
+              "explanation": "«Em que dia…?» asks for the day; «Quando…?» (when) works too. «No sábado» = on Saturday.",
+              "type": "question_for_answer",
+              "givenAnswer": "A festa é no sábado.",
+              "answer": [
+                "Em",
+                "que",
+                "dia",
+                "é",
+                "a",
+                "festa?"
+              ],
+              "distractors": [
+                "Onde",
+                "Qual",
+                "como"
+              ],
+              "acceptedAnswers": [
+                "Em que dia é que é a festa?",
+                "Quando é a festa?",
+                "Quando é que é a festa?"
+              ]
+            },
+            {
+              "id": "m3-time-dates-34",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "Hours greater than one require plural verb forms: «São três horas».",
+              "type": "find_error",
+              "sentence": [
+                "É",
+                "três",
+                "horas",
+                "da",
+                "tarde."
+              ],
+              "wrongIndex": 0,
+              "correction": "São",
+              "options": [
+                "São",
+                "Está",
+                "Estão"
+              ]
+            },
+            {
+              "id": "m3-time-dates-35",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about yourself: when do you start work?",
+              "explanation": "Answer with the time after «às»: «Começo a trabalhar às nove (horas).» Add «e meia» for half past.",
+              "type": "about_me",
+              "question": "A que horas começas a trabalhar?",
+              "sampleAnswer": "Começo a trabalhar às nove horas.",
+              "hints": [
+                "oito",
+                "dez",
+                "e",
+                "meia",
+                "de",
+                "manhã"
+              ]
+            },
+            {
+              "id": "m3-time-dates-36",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that the museum closes at quarter to six.",
+              "explanation": "«Às seis menos um quarto» means at quarter to six.",
+              "type": "build_phrase",
+              "answer": [
+                "O",
+                "museu",
+                "fecha",
+                "às",
+                "seis",
+                "menos",
+                "um",
+                "quarto."
+              ],
+              "distractors": [
+                "abre",
+                "cinco",
+                "vinte"
+              ],
+              "acceptedAnswers": [
+                "O museu fecha às cinco e quarenta e cinco."
+              ]
+            },
+            {
+              "id": "m3-time-dates-37",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the gaps: \"The month of January is cold and August is hot.\"",
+              "explanation": "«Janeiro» (January) is winter in Portugal, while «agosto» (August) is summer.",
+              "type": "fill_gaps",
+              "template": "O mês de ___ é frio e ___ é quente.",
+              "gaps": [
+                {
+                  "answer": "janeiro"
+                },
+                {
+                  "answer": "agosto"
+                }
+              ],
+              "wordBank": [
+                "janeiro",
+                "agosto",
+                "fevereiro",
+                "maio"
+              ]
+            },
+            {
+              "id": "m3-time-dates-38",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles"
+              ],
+              "prompt": "At the train station. Put the conversation in order.",
+              "explanation": "Asking for train times begins with «A que horas parte...» and ends with pleasantries.",
+              "type": "order_dialogue",
+              "lines": [
+                {
+                  "speaker": "A",
+                  "text": "Com licença, a que horas parte o comboio?"
+                },
+                {
+                  "speaker": "B",
+                  "text": "O comboio parte às dez e quinze."
+                },
+                {
+                  "speaker": "A",
+                  "text": "Muito obrigado!"
+                },
+                {
+                  "speaker": "B",
+                  "text": "De nada. Boa viagem!"
+                }
+              ]
+            },
+            {
+              "id": "m3-time-dates-39",
+              "topicId": "m3-time-dates",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «O meu aniversário é a dez de outubro.» What did you ask?",
+              "explanation": "Ask «Quando é...» to inquire about dates and events like birthdays.",
+              "type": "question_for_answer",
+              "givenAnswer": "O meu aniversário é a dez de outubro.",
+              "answer": [
+                "Quando",
+                "é",
+                "o",
+                "teu",
+                "aniversário?"
+              ],
+              "distractors": [
+                "Onde",
+                "Como",
+                "Qual"
+              ],
+              "acceptedAnswers": [
+                "Quando é que é o teu aniversário?"
+              ]
+            },
+            {
+              "id": "m3-time-dates-40",
+              "topicId": "m3-time-dates",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: Today is Sunday, it is one o'clock.",
+              "explanation": "Single hour uses «é uma hora». «Domingo» is Sunday.",
+              "type": "build_phrase",
+              "answer": [
+                "Hoje",
+                "é",
+                "domingo,",
+                "é",
+                "uma",
+                "hora."
+              ],
+              "distractors": [
+                "amanhã",
+                "sábado",
+                "duas"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "m3-daily-routine",
+          "moduleId": "m3",
+          "title": "Daily routine and habits",
+          "kind": "grammar",
+          "context": "Daily routines in Portuguese often use the present tense. Regular **-ir** verbs follow a clear pattern: **abro, abres, abre**; **decido, decides, decide**. Some very common routine verbs are irregular: **vou**, **vejo**, **leio**, **saio**, **ouço**. For habits, Portuguese often uses **costumar + infinitivo**. Reflexive verbs talk about actions you do to yourself, like getting up or going to bed.\n\n- **Levanto-me às sete.** — I get up at seven.\n- **Lavas-te antes do pequeno-almoço?** — Do you wash before breakfast?\n- **A Marta veste-se depressa.** — Marta gets dressed quickly.\n- **Costumamos ler à noite.** — We usually read at night.\n- **O Rui sai às oito e vai para a escola.** — Rui leaves at eight and goes to school.\n- **Eu ouço música e leio o jornal.** — I listen to music and read the newspaper.\n- **Assistes ao filme ou ao telejornal?** — Do you watch the film or the news?\n\n**Watch out:**\n- **assistir** normally needs **a**: **assistir ao filme**.\n- After question words and negation, reflexive pronouns go before the verb: **Quando te deitas?**, **não me deito tarde**.",
+          "keyItems": [
+            {
+              "target": "abrir",
+              "support": "to open",
+              "note": "regular -ir"
+            },
+            {
+              "target": "decidir",
+              "support": "to decide",
+              "note": "regular -ir"
+            },
+            {
+              "target": "partir",
+              "support": "to leave",
+              "note": "regular -ir"
+            },
+            {
+              "target": "assistir a",
+              "support": "to watch / attend",
+              "note": "takes the preposition a"
+            },
+            {
+              "target": "levantar-se",
+              "support": "to get up",
+              "note": "reflexive"
+            },
+            {
+              "target": "deitar-se",
+              "support": "to go to bed",
+              "note": "reflexive"
+            },
+            {
+              "target": "lavar-se",
+              "support": "to wash oneself",
+              "note": "reflexive"
+            },
+            {
+              "target": "vestir-se",
+              "support": "to get dressed",
+              "note": "reflexive"
+            },
+            {
+              "target": "ir",
+              "support": "to go",
+              "note": "irregular: vou, vais, vai"
+            },
+            {
+              "target": "ver",
+              "support": "to see / watch",
+              "note": "irregular: vejo, vês"
+            },
+            {
+              "target": "ler",
+              "support": "to read",
+              "note": "irregular: leio, lês, leem"
+            },
+            {
+              "target": "sair",
+              "support": "to go out / leave",
+              "note": "irregular: saio, sais, sai"
+            },
+            {
+              "target": "ouvir",
+              "support": "to hear / listen",
+              "note": "irregular: ouço, ouves"
+            },
+            {
+              "target": "costumar + infinitivo",
+              "support": "to usually do something",
+              "note": "habitual action"
+            }
+          ],
+          "exercises": [
+            {
+              "id": "m3-daily-routine-01",
+              "topicId": "m3-daily-routine",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "Regular -ir verbs use «-e» in the ele/ela form: «ela abre».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "She **opens** the window every morning.",
+              "word": "opens",
+              "answer": "abre",
+              "options": [
+                "abre",
+                "abro",
+                "abres",
+                "abrem"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-02",
+              "topicId": "m3-daily-routine",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Ir» is irregular: with «eu», the form is «vou».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "I **go** to work at eight.",
+              "word": "go",
+              "answer": "vou",
+              "options": [
+                "vou",
+                "vais",
+                "vai",
+                "vamos"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-03",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the two gaps.",
+              "explanation": "Use «costumar + infinitivo» for habits: «costumo ler». «Ouvir» is irregular in the 1st person: «ouço».",
+              "type": "fill_gaps",
+              "template": "Ao sábado, eu ___ ler em casa e ___ música.",
+              "gaps": [
+                {
+                  "answer": "costumo"
+                },
+                {
+                  "answer": "ouço"
+                }
+              ],
+              "wordBank": [
+                "costumo",
+                "ouço",
+                "costumas",
+                "ouve"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-04",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: We usually read after dinner.",
+              "explanation": "For habits, «costumar» is followed by an infinitive: «costumamos ler». «De + o» contracts to «do» in «depois do jantar».",
+              "type": "build_phrase",
+              "answer": [
+                "Costumamos",
+                "ler",
+                "depois",
+                "do",
+                "jantar."
+              ],
+              "distractors": [
+                "costumam",
+                "vemos",
+                "antes"
+              ],
+              "acceptedAnswers": [
+                "Nós costumamos ler depois do jantar."
+              ]
+            },
+            {
+              "id": "m3-daily-routine-05",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Vou de autocarro para o trabalho.» What did you ask? (informal)",
+              "explanation": "Use «Como» to ask about the way someone goes somewhere. «Ir» is irregular: «tu vais».",
+              "type": "question_for_answer",
+              "givenAnswer": "Vou de autocarro para o trabalho.",
+              "answer": [
+                "Como",
+                "é",
+                "que",
+                "vais",
+                "para",
+                "o",
+                "trabalho?"
+              ],
+              "distractors": [
+                "onde",
+                "comboio",
+                "moras"
+              ],
+              "acceptedAnswers": [
+                "Como vais para o trabalho?",
+                "Como é que tu vais para o trabalho?"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-06",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "With «tu», the present form is «deitas-te». In a yes/no question without a question word, the reflexive pronoun stays after the verb.",
+              "type": "find_error",
+              "sentence": [
+                "Tu",
+                "deita-te",
+                "cedo?"
+              ],
+              "wrongIndex": 1,
+              "correction": "deitas-te",
+              "options": [
+                "deitas-te",
+                "deito-me",
+                "deitam-se"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-07",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: Ana and Pedro get dressed at seven thirty.",
+              "explanation": "«Vestir-se» is reflexive, so in an affirmative sentence the pronoun comes after the verb: «vestem-se». For clock time, use «às».",
+              "type": "build_phrase",
+              "answer": [
+                "A",
+                "Ana",
+                "e",
+                "o",
+                "Pedro",
+                "vestem-se",
+                "às",
+                "sete",
+                "e",
+                "meia."
+              ],
+              "distractors": [
+                "deitam-se",
+                "oito",
+                "cedo"
+              ],
+              "acceptedAnswers": [
+                "A Ana e o Pedro vestem-se às sete e trinta."
+              ]
+            },
+            {
+              "id": "m3-daily-routine-08",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Deito-me às onze.» What did you ask? (informal)",
+              "explanation": "After a question phrase, reflexive pronouns go before the verb: «te deitas». You ask time with «A que horas...?»",
+              "type": "question_for_answer",
+              "givenAnswer": "Deito-me às onze.",
+              "answer": [
+                "A",
+                "que",
+                "horas",
+                "te",
+                "deitas?"
+              ],
+              "distractors": [
+                "levantas",
+                "cedo",
+                "cama"
+              ],
+              "acceptedAnswers": [
+                "A que horas é que te deitas?",
+                "A que horas é que tu te deitas?"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-09",
+              "topicId": "m3-daily-routine",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Ouvir» is irregular: the eles/elas form is «ouvem».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "They **listen to** music in the car.",
+              "word": "listen to",
+              "answer": "ouvem",
+              "options": [
+                "ouço",
+                "ouves",
+                "ouve",
+                "ouvem"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-10",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete Rui's routine.",
+              "explanation": "Both verbs are irregular: «ele sai» and «ele vai». Use the present for a usual routine.",
+              "type": "fill_gaps",
+              "template": "O Rui ___ de casa às sete e ___ para a escola às oito.",
+              "gaps": [
+                {
+                  "answer": "sai"
+                },
+                {
+                  "answer": "vai"
+                }
+              ],
+              "wordBank": [
+                "sai",
+                "vai",
+                "vão",
+                "vou"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-11",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: On Saturdays, we go out and watch a film.",
+              "explanation": "Use the present for regular habits. «Sair» and «ver» are irregular: «saímos», «vemos».",
+              "type": "build_phrase",
+              "answer": [
+                "Ao",
+                "sábado",
+                "saímos",
+                "e",
+                "vemos",
+                "um",
+                "filme."
+              ],
+              "distractors": [
+                "ouvimos",
+                "domingo",
+                "vão"
+              ],
+              "acceptedAnswers": [
+                "Ao sábado nós saímos e vemos um filme.",
+                "Nós saímos e vemos um filme ao sábado."
+              ]
+            },
+            {
+              "id": "m3-daily-routine-12",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about yourself.",
+              "explanation": "Use «costumar + infinitivo» for a habit, or answer with a present tense routine. A reflexive verb like «deitar-se» becomes «deito-me» with «eu».",
+              "type": "about_me",
+              "question": "O que costumas fazer à noite?",
+              "sampleAnswer": "Costumo ler e deito-me às onze.",
+              "hints": [
+                "vejo",
+                "televisão",
+                "ouço",
+                "música",
+                "cedo",
+                "depois do jantar"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-13",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "«Assistir» normally takes «a»: «assistimos ao filme». «A + o» contracts to «ao».",
+              "type": "find_error",
+              "sentence": [
+                "Nós",
+                "assistimos",
+                "o",
+                "filme",
+                "à",
+                "noite."
+              ],
+              "wrongIndex": 2,
+              "correction": "ao",
+              "options": [
+                "ao",
+                "a",
+                "do"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-14",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Parto de casa às oito.» What did you ask? (informal)",
+              "explanation": "«Partir» is a regular -ir verb: with «tu», it becomes «partes». You can also use the common question form with «é que».",
+              "type": "question_for_answer",
+              "givenAnswer": "Parto de casa às oito.",
+              "answer": [
+                "A",
+                "que",
+                "horas",
+                "partes",
+                "de",
+                "casa?"
+              ],
+              "distractors": [
+                "vais",
+                "trabalho",
+                "chegas"
+              ],
+              "acceptedAnswers": [
+                "A que horas é que partes de casa?",
+                "A que horas é que tu partes de casa?"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-15",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: You get up early and go by bus. (informal)",
+              "explanation": "«Levantar-se» is reflexive, so with «tu» you say «levantas-te». «Ir» is irregular: «vais».",
+              "type": "build_phrase",
+              "answer": [
+                "Levantas-te",
+                "cedo",
+                "e",
+                "vais",
+                "de",
+                "autocarro."
+              ],
+              "distractors": [
+                "deitas-te",
+                "comboio",
+                "vou"
+              ],
+              "acceptedAnswers": [
+                "Tu levantas-te cedo e vais de autocarro."
+              ]
+            },
+            {
+              "id": "m3-daily-routine-16",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the three gaps.",
+              "explanation": "These common verbs have irregular plural forms: «ouvem», «leem», «saem». The present tense can describe habits.",
+              "type": "fill_gaps",
+              "template": "Os meus pais ___ música de manhã, ___ o jornal e não ___ cedo.",
+              "gaps": [
+                {
+                  "answer": "ouvem"
+                },
+                {
+                  "answer": "leem"
+                },
+                {
+                  "answer": "saem"
+                }
+              ],
+              "wordBank": [
+                "ouvem",
+                "leem",
+                "saem",
+                "ouve",
+                "leio",
+                "vai"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-17",
+              "topicId": "m3-daily-routine",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Ler» is irregular: with «tu», the form is «lês».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "You **read** the newspaper in the café. (informal)",
+              "word": "read",
+              "answer": "lês",
+              "options": [
+                "leio",
+                "lês",
+                "lê",
+                "leem"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-18",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Sim, assisto ao telejornal depois do jantar.» What did you ask? (informal)",
+              "explanation": "«Assistir» needs «a»: with «o telejornal», this becomes «ao telejornal». With «tu», the verb is regular: «assistes».",
+              "type": "question_for_answer",
+              "givenAnswer": "Sim, assisto ao telejornal depois do jantar.",
+              "answer": [
+                "Assistes",
+                "ao",
+                "telejornal",
+                "depois",
+                "do",
+                "jantar?"
+              ],
+              "distractors": [
+                "vês",
+                "filme",
+                "cedo"
+              ],
+              "acceptedAnswers": [
+                "Tu assistes ao telejornal depois do jantar?"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-19",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: At night, I decide to read and go to bed early.",
+              "explanation": "«Decidir» is a regular -ir verb: «eu decido». «Deitar-se» is reflexive, so in an affirmative sentence you say «deito-me».",
+              "type": "build_phrase",
+              "answer": [
+                "À",
+                "noite",
+                "decido",
+                "ler",
+                "e",
+                "deito-me",
+                "cedo."
+              ],
+              "distractors": [
+                "decides",
+                "tarde",
+                "sais"
+              ],
+              "acceptedAnswers": [
+                "Eu decido ler e deito-me cedo à noite."
+              ]
+            },
+            {
+              "id": "m3-daily-routine-20",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the two gaps.",
+              "explanation": "Both verbs are irregular with «tu»: «vês» and «lês». Use them for two common evening habits.",
+              "type": "fill_gaps",
+              "template": "Tu ___ televisão à noite ou ___ um livro?",
+              "gaps": [
+                {
+                  "answer": "vês"
+                },
+                {
+                  "answer": "lês"
+                }
+              ],
+              "wordBank": [
+                "vês",
+                "lês",
+                "vejo",
+                "ouves"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-21",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: I open the office door at nine.",
+              "explanation": "With «eu», regular -ir verbs end in «-o»: «abro». «De + o» contracts to «do»: «do escritório».",
+              "type": "build_phrase",
+              "answer": [
+                "Abro",
+                "a",
+                "porta",
+                "do",
+                "escritório",
+                "às",
+                "nove."
+              ],
+              "distractors": [
+                "abre",
+                "abres",
+                "da"
+              ],
+              "acceptedAnswers": [
+                "Eu abro a porta do escritório às nove."
+              ]
+            },
+            {
+              "id": "m3-daily-routine-22",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Complete the Sunday routine.",
+              "explanation": "«Levantar-se» keeps the reflexive pronoun after the verb in an affirmative sentence: «levantamo-nos». «Sair» and «ir» are irregular: «saímos», «vamos».",
+              "type": "fill_gaps",
+              "template": "Ao domingo, nós ___ mais tarde, ___ de casa às dez e ___ ao parque.",
+              "gaps": [
+                {
+                  "answer": "levantamo-nos"
+                },
+                {
+                  "answer": "saímos"
+                },
+                {
+                  "answer": "vamos"
+                }
+              ],
+              "wordBank": [
+                "levantamo-nos",
+                "saímos",
+                "vamos",
+                "levantam-se",
+                "vão",
+                "vai"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-23",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "You ask your friends about Lisbon. They answer: «Vamos de comboio.» What did you ask?",
+              "explanation": "To ask how a group goes somewhere, use «como» and the 3rd person plural: «vão». «É que» is very common in spoken Portuguese.",
+              "type": "question_for_answer",
+              "givenAnswer": "Vamos de comboio.",
+              "answer": [
+                "Como",
+                "é",
+                "que",
+                "vão",
+                "para",
+                "Lisboa?"
+              ],
+              "distractors": [
+                "vais",
+                "de",
+                "autocarro?",
+                "onde"
+              ],
+              "acceptedAnswers": [
+                "Como vão para Lisboa?",
+                "Como é que vocês vão para Lisboa?"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-24",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "«Ouvir» is irregular. With «tu», the correct form is «ouves».",
+              "type": "find_error",
+              "sentence": [
+                "Tu",
+                "ouve",
+                "a",
+                "rádio",
+                "de",
+                "manhã?"
+              ],
+              "wrongIndex": 1,
+              "correction": "ouves",
+              "options": [
+                "ouves",
+                "ouço",
+                "ouvem"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-25",
+              "topicId": "m3-daily-routine",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "The verb is «sair». With «eu», the form is «saio».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "I **leave** the office at six.",
+              "word": "leave",
+              "answer": "saio",
+              "options": [
+                "saio",
+                "sais",
+                "sai",
+                "saímos"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-26",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: Marta usually reads on the train.",
+              "explanation": "For habits, Portuguese often uses «costumar + infinitivo». With «a Marta», use «costuma».",
+              "type": "build_phrase",
+              "answer": [
+                "A",
+                "Marta",
+                "costuma",
+                "ler",
+                "no",
+                "comboio."
+              ],
+              "distractors": [
+                "costumam",
+                "lê",
+                "na"
+              ],
+              "acceptedAnswers": [
+                "Marta costuma ler no comboio."
+              ]
+            },
+            {
+              "id": "m3-daily-routine-27",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the two gaps with the correct verb forms.",
+              "explanation": "«Ler» and «ver» are irregular in the 3rd person singular: «lê» and «vê».",
+              "type": "fill_gaps",
+              "template": "Ao pequeno-almoço, o Tiago ___ o jornal, mas a irmã não ___ televisão.",
+              "gaps": [
+                {
+                  "answer": "lê"
+                },
+                {
+                  "answer": "vê"
+                }
+              ],
+              "wordBank": [
+                "lê",
+                "vê",
+                "leio",
+                "vejo",
+                "lês",
+                "vês"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-28",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Não, não me lavo depois do jantar.» What did you ask? (informal)",
+              "explanation": "In a yes/no question with «tu», the reflexive pronoun stays after the verb: «Lavas-te...?». In the negative answer, it moves before the verb: «não me lavo».",
+              "type": "question_for_answer",
+              "givenAnswer": "Não, não me lavo depois do jantar.",
+              "answer": [
+                "Lavas-te",
+                "depois",
+                "do",
+                "jantar?"
+              ],
+              "distractors": [
+                "Lava-te",
+                "antes",
+                "da",
+                "escola?"
+              ],
+              "acceptedAnswers": [
+                "Tu lavas-te depois do jantar?"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-29",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Say: They watch the lesson online.",
+              "explanation": "«Assistir» normally takes «a». With «a aula», «a + a» becomes «à»: «assistem à aula».",
+              "type": "build_phrase",
+              "answer": [
+                "Assistem",
+                "à",
+                "aula",
+                "online."
+              ],
+              "distractors": [
+                "ao",
+                "veem",
+                "as"
+              ],
+              "acceptedAnswers": [
+                "Eles assistem à aula online."
+              ]
+            },
+            {
+              "id": "m3-daily-routine-30",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about yourself.",
+              "explanation": "Use «costumar + infinitivo» to talk about a habit. You can answer with «Sim» or «Não» and then give a short detail.",
+              "type": "about_me",
+              "question": "Costumas ouvir música quando estudas?",
+              "sampleAnswer": "Sim, costumo ouvir música clássica.",
+              "hints": [
+                "não",
+                "às",
+                "vezes",
+                "rock,",
+                "jazz,",
+                "quando",
+                "trabalho"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-31",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Complete Sofia's routine.",
+              "explanation": "In an affirmative clause, the reflexive pronoun usually goes after the verb: «levanta-se». After negation, it goes before the verb: «não se deita».",
+              "type": "fill_gaps",
+              "template": "Hoje, a Sofia ___ cedo, mas não ___ tarde.",
+              "gaps": [
+                {
+                  "answer": "levanta-se"
+                },
+                {
+                  "answer": "se deita"
+                }
+              ],
+              "wordBank": [
+                "levanta-se",
+                "se deita",
+                "deita-se",
+                "se levanta",
+                "levantam-se"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-32",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "«Ir» is irregular. With «nós», the correct form is «vamos».",
+              "type": "find_error",
+              "sentence": [
+                "Nós",
+                "vai",
+                "ao",
+                "ginásio",
+                "depois",
+                "do",
+                "trabalho."
+              ],
+              "wrongIndex": 1,
+              "correction": "vamos",
+              "options": [
+                "vamos",
+                "vão",
+                "vais"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-33",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: Before sleeping, I read for twenty minutes.",
+              "explanation": "«Ler» is irregular: with «eu» it becomes «leio». «Antes de dormir» is a natural time expression for a routine.",
+              "type": "build_phrase",
+              "answer": [
+                "Antes",
+                "de",
+                "dormir,",
+                "leio",
+                "durante",
+                "vinte",
+                "minutos."
+              ],
+              "distractors": [
+                "lês",
+                "vejo",
+                "dormes"
+              ],
+              "acceptedAnswers": [
+                "Eu leio durante vinte minutos antes de dormir.",
+                "Antes de dormir, eu leio durante vinte minutos."
+              ]
+            },
+            {
+              "id": "m3-daily-routine-34",
+              "topicId": "m3-daily-routine",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Decidir» is a regular -ir verb. With «nós», the ending is «-imos»: «decidimos».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "We usually **decide** together.",
+              "word": "decide",
+              "answer": "decidimos",
+              "options": [
+                "decidimos",
+                "decidem",
+                "decides",
+                "decido"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-35",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Leio antes de dormir.» What did you ask? (informal)",
+              "explanation": "To ask about time in a general way, use «Quando». With «tu», the form is «lês».",
+              "type": "question_for_answer",
+              "givenAnswer": "Leio antes de dormir.",
+              "answer": [
+                "Quando",
+                "é",
+                "que",
+                "lês?"
+              ],
+              "distractors": [
+                "Onde",
+                "costumas",
+                "agora",
+                "dormir?"
+              ],
+              "acceptedAnswers": [
+                "Quando lês?",
+                "Quando é que tu lês?"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-36",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: We leave after lunch and go to Coimbra.",
+              "explanation": "«Sair» and «ir» are irregular: «saímos» and «vamos». «Depois de + o almoço» contracts to «depois do almoço».",
+              "type": "build_phrase",
+              "answer": [
+                "Saímos",
+                "depois",
+                "do",
+                "almoço",
+                "e",
+                "vamos",
+                "para",
+                "Coimbra."
+              ],
+              "distractors": [
+                "vai",
+                "saem",
+                "ao"
+              ],
+              "acceptedAnswers": [
+                "Nós saímos depois do almoço e vamos para Coimbra."
+              ]
+            },
+            {
+              "id": "m3-daily-routine-37",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the two gaps.",
+              "explanation": "Regular -ir verbs with «tu» end in «-es»: «abres», «decides».",
+              "type": "fill_gaps",
+              "template": "Na aula, tu ___ o livro e ___ se respondes agora ou depois.",
+              "gaps": [
+                {
+                  "answer": "abres"
+                },
+                {
+                  "answer": "decides"
+                }
+              ],
+              "wordBank": [
+                "abres",
+                "decides",
+                "abro",
+                "decide",
+                "abrem",
+                "decidimos"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-38",
+              "topicId": "m3-daily-routine",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about yourself.",
+              "explanation": "Use «costumar + infinitivo» for something you do regularly. After that, add what you read.",
+              "type": "about_me",
+              "question": "O que costumas ler à noite?",
+              "sampleAnswer": "Costumo ler revistas ou um romance.",
+              "hints": [
+                "jornais,",
+                "banda",
+                "desenhada,",
+                "antes",
+                "de",
+                "dormir",
+                "não"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-39",
+              "topicId": "m3-daily-routine",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "«Ver» is irregular: eu vejo, tu vês, ela vê, eles veem. With «ela» the form is «vê».",
+              "type": "find_error",
+              "sentence": [
+                "Ela",
+                "vejo",
+                "as",
+                "notícias",
+                "online."
+              ],
+              "wrongIndex": 1,
+              "correction": "vê",
+              "options": [
+                "vê",
+                "vês",
+                "veem"
+              ]
+            },
+            {
+              "id": "m3-daily-routine-40",
+              "topicId": "m3-daily-routine",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Não, não me deito tarde durante a semana.» What did you ask? (informal)",
+              "explanation": "In an affirmative yes/no question with «tu», the reflexive pronoun comes after the verb: «Deitas-te...?». In the negative answer, it comes before the verb: «não me deito».",
+              "type": "question_for_answer",
+              "givenAnswer": "Não, não me deito tarde durante a semana.",
+              "answer": [
+                "Deitas-te",
+                "tarde",
+                "durante",
+                "a",
+                "semana?"
+              ],
+              "distractors": [
+                "Deita-te",
+                "cedo",
+                "fim",
+                "de"
+              ],
+              "acceptedAnswers": [
+                "Tu deitas-te tarde durante a semana?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "m3-food-restaurant",
+          "moduleId": "m3",
+          "title": "Food, drinks and eating out",
+          "kind": "situation",
+          "context": "# Eating out in Portugal\n\nEating out is a central part of daily life in Portugal, from a quick **bica** (espresso) at the counter to a relaxed lunch at a **restaurante** or **tasca**.\n\nWhen you enter, you can ask for a table: **Uma mesa para duas pessoas, por favor.** (A table for two people, please.) The waiter might ask: **O que deseja?** (What would you like?) or show you **a ementa** (the menu). At lunchtime, look for **o prato do dia** (the dish of the day), which is fresh, fast, and good value.\n\nTo order food and drinks politely, Portuguese speakers use the fixed chunk **Queria…** (I would like…):\n\n- **Queria um café e uma água, por favor.** — I would like a coffee and a water, please.\n- **Para mim, o peixe grelhado.** — For me, the grilled fish.\n- **A sopa de legumes está muito boa.** — The vegetable soup is very good.\n- **Quer sobremesa?** — Would you like dessert?\n- **A conta, por favor.** — The bill, please.\n\n**Watch out!**\n\n1. Use **sumo** for juice, never Brazilian *suco*. An espresso is often called a **bica** in Lisbon.\n2. In Portugal, **a ementa** is the menu and **a conta** is the bill.\n3. Polite ordering uses **Queria…**, not the direct *Quero* (I want).",
+          "keyItems": [
+            {
+              "target": "a ementa",
+              "support": "the menu"
+            },
+            {
+              "target": "a conta",
+              "support": "the bill"
+            },
+            {
+              "target": "o prato do dia",
+              "support": "the dish of the day"
+            },
+            {
+              "target": "Queria…",
+              "support": "I would like…",
+              "note": "polite request formula"
+            },
+            {
+              "target": "uma mesa para dois",
+              "support": "a table for two"
+            },
+            {
+              "target": "o empregado / a empregada",
+              "support": "the waiter / waitress"
+            },
+            {
+              "target": "o café / a bica",
+              "support": "the coffee / espresso",
+              "note": "bica is standard in Lisbon"
+            },
+            {
+              "target": "a água (com / sem gás)",
+              "support": "water (sparkling / still)"
+            },
+            {
+              "target": "o sumo de laranja",
+              "support": "the orange juice",
+              "note": "sumo, not suco"
+            },
+            {
+              "target": "a sopa de legumes",
+              "support": "the vegetable soup"
+            },
+            {
+              "target": "o peixe grelhado",
+              "support": "the grilled fish"
+            },
+            {
+              "target": "o frango assado",
+              "support": "the roast chicken"
+            },
+            {
+              "target": "a sobremesa",
+              "support": "the dessert"
+            },
+            {
+              "target": "o pão",
+              "support": "the bread"
+            },
+            {
+              "target": "as batatas fritas",
+              "support": "the chips / french fries"
+            },
+            {
+              "target": "Bom apetite!",
+              "support": "Enjoy your meal!"
+            }
+          ],
+          "exercises": [
+            {
+              "id": "m3-food-restaurant-01",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Conta» means the bill in a restaurant or café. It is feminine: «a conta».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Can we have the **bill**, please?",
+              "word": "bill",
+              "answer": "conta",
+              "options": [
+                "conta",
+                "ementa",
+                "mesa",
+                "gorjeta"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-02",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "In Portugal, juice is «sumo». The Brazilian word «suco» is not used in European Portuguese.",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "I want an orange **juice**.",
+              "word": "juice",
+              "answer": "sumo",
+              "options": [
+                "sumo",
+                "água",
+                "leite",
+                "chá"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-03",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Ementa» is the restaurant menu in European Portuguese. It is feminine: «a ementa».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Where is the **menu**?",
+              "word": "menu",
+              "answer": "ementa",
+              "options": [
+                "ementa",
+                "conta",
+                "prato",
+                "copo"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-04",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Sobremesa» means dessert in Portuguese. It is a feminine noun: «a sobremesa».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Do you want **dessert**?",
+              "word": "dessert",
+              "answer": "sobremesa",
+              "options": [
+                "sobremesa",
+                "sopa",
+                "entrada",
+                "salada"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-05",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Grelhado» is grilled and agrees with masculine nouns like «peixe»: «o peixe grelhado».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Today I want **grilled** fish.",
+              "word": "grilled",
+              "answer": "grelhado",
+              "options": [
+                "grelhado",
+                "assado",
+                "cozido",
+                "frito"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-06",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the gaps: \"Pedro wants an espresso and a cake.\"",
+              "explanation": "«Bica» (espresso) is feminine, so «uma bica»; «bolo» (cake) is masculine, so «um bolo».",
+              "type": "fill_gaps",
+              "template": "O Pedro quer ___ bica e ___ bolo.",
+              "gaps": [
+                {
+                  "answer": "uma"
+                },
+                {
+                  "answer": "um"
+                }
+              ],
+              "wordBank": [
+                "uma",
+                "um",
+                "umas",
+                "uns",
+                "do"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-07",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the gaps: \"I would like the dish of the day and a soup.\"",
+              "explanation": "Use the polite chunk «Queria». «Prato» is masculine (o prato) and «sopa» is feminine (uma sopa).",
+              "type": "fill_gaps",
+              "template": "___ o prato do dia e ___ sopa de legumes.",
+              "gaps": [
+                {
+                  "answer": "Queria"
+                },
+                {
+                  "answer": "uma"
+                }
+              ],
+              "wordBank": [
+                "Queria",
+                "uma",
+                "Quero",
+                "um",
+                "da"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-08",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the gaps: \"A table for two people, please.\"",
+              "explanation": "«Mesa» is feminine (uma mesa) and takes «para» before the number of people (duas pessoas).",
+              "type": "fill_gaps",
+              "template": "___ mesa ___ duas pessoas, por favor.",
+              "gaps": [
+                {
+                  "answer": "Uma"
+                },
+                {
+                  "answer": "para"
+                }
+              ],
+              "wordBank": [
+                "Uma",
+                "para",
+                "Um",
+                "por",
+                "de"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-09",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the gaps: \"Do you want sparkling water or still water?\"",
+              "explanation": "In Portugal, sparkling water is «água com gás» and still water is «água sem gás».",
+              "type": "fill_gaps",
+              "template": "Quer água ___ gás ou ___ gás?",
+              "gaps": [
+                {
+                  "answer": "com"
+                },
+                {
+                  "answer": "sem"
+                }
+              ],
+              "wordBank": [
+                "com",
+                "sem",
+                "de",
+                "no",
+                "do"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-10",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the gaps: \"For me, roast chicken with chips.\"",
+              "explanation": "«Para mim» means 'for me'. «Frango» is masculine (o frango) and chips are «batatas fritas».",
+              "type": "fill_gaps",
+              "template": "Para mim, o frango ___ com batatas ___.",
+              "gaps": [
+                {
+                  "answer": "assado"
+                },
+                {
+                  "answer": "fritas"
+                }
+              ],
+              "wordBank": [
+                "assado",
+                "fritas",
+                "assada",
+                "fritos",
+                "grelhado"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-11",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the gaps: \"I would like to see the menu, please.\"",
+              "explanation": "Start a polite request with «Queria». «A ementa» is the menu, and the set politeness phrase is «por favor».",
+              "type": "fill_gaps",
+              "template": "___ ver a ___, por ___.",
+              "gaps": [
+                {
+                  "answer": "Queria"
+                },
+                {
+                  "answer": "ementa"
+                },
+                {
+                  "answer": "favor"
+                }
+              ],
+              "wordBank": [
+                "Queria",
+                "ementa",
+                "favor",
+                "Quero",
+                "conta",
+                "exemplo"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-12",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the gaps: \"The waiter brings the bread and the olives.\"",
+              "explanation": "«Empregado» is masculine singular (o empregado), «pão» is masculine (o pão), and «azeitonas» is feminine plural (as azeitonas).",
+              "type": "fill_gaps",
+              "template": "___ empregado traz o ___ e as ___.",
+              "gaps": [
+                {
+                  "answer": "O"
+                },
+                {
+                  "answer": "pão"
+                },
+                {
+                  "answer": "azeitonas"
+                }
+              ],
+              "wordBank": [
+                "O",
+                "pão",
+                "azeitonas",
+                "A",
+                "queijo",
+                "manteigas"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-13",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Ask for the bill politely: \"The bill, please.\"",
+              "explanation": "«A conta, por favor» is the standard polite way to ask for the bill in Portugal.",
+              "type": "build_phrase",
+              "answer": [
+                "A",
+                "conta,",
+                "por",
+                "favor."
+              ],
+              "distractors": [
+                "O",
+                "ementa,",
+                "para"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-14",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Wish someone a good meal: \"Enjoy your meal!\"",
+              "explanation": "«Bom apetite!» is said to someone before they eat. «Apetite» is masculine, so «bom».",
+              "type": "build_phrase",
+              "answer": [
+                "Bom",
+                "apetite!"
+              ],
+              "distractors": [
+                "Boa",
+                "obrigado!",
+                "tarde!"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-15",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Order an espresso politely: \"I would like an espresso, please.\"",
+              "explanation": "«Queria» is the polite request formula. «Café» is masculine: «um café».",
+              "type": "build_phrase",
+              "answer": [
+                "Queria",
+                "um",
+                "café,",
+                "por",
+                "favor."
+              ],
+              "distractors": [
+                "Quero",
+                "uma",
+                "com"
+              ],
+              "acceptedAnswers": [
+                "Queria uma bica, por favor.",
+                "Eu queria um café, por favor."
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-16",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Order a drink: \"I would like an orange juice.\"",
+              "explanation": "Juice is «sumo» in Portugal, never «suco». Orange juice is «sumo de laranja».",
+              "type": "build_phrase",
+              "answer": [
+                "Queria",
+                "um",
+                "sumo",
+                "de",
+                "laranja."
+              ],
+              "distractors": [
+                "uma",
+                "suco",
+                "da"
+              ],
+              "acceptedAnswers": [
+                "Eu queria um sumo de laranja."
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-17",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Ask for a table: \"A table for two, please.\"",
+              "explanation": "«Mesa» is feminine (uma mesa). After «para», use «dois» or «duas pessoas».",
+              "type": "build_phrase",
+              "answer": [
+                "Uma",
+                "mesa",
+                "para",
+                "dois,",
+                "por",
+                "favor."
+              ],
+              "distractors": [
+                "Um",
+                "duas",
+                "com"
+              ],
+              "acceptedAnswers": [
+                "Uma mesa para duas pessoas, por favor."
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-18",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say what you want to eat: \"For me, the grilled fish with salad.\"",
+              "explanation": "«Para mim» starts your order. «Peixe» is masculine (o peixe grelhado) and «salada» is feminine (com salada).",
+              "type": "build_phrase",
+              "answer": [
+                "Para",
+                "mim,",
+                "o",
+                "peixe",
+                "grelhado",
+                "com",
+                "salada."
+              ],
+              "distractors": [
+                "a",
+                "grelhada",
+                "de"
+              ],
+              "acceptedAnswers": [
+                "Para mim o peixe grelhado com salada."
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-19",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say what someone wants: \"Ana wants roast chicken with rice.\"",
+              "explanation": "«Frango assado» is roast chicken. «Arroz» (rice) is masculine and takes «com».",
+              "type": "build_phrase",
+              "answer": [
+                "A",
+                "Ana",
+                "quer",
+                "frango",
+                "assado",
+                "com",
+                "arroz."
+              ],
+              "distractors": [
+                "O",
+                "queria",
+                "assada"
+              ],
+              "acceptedAnswers": [
+                "A Ana quer o frango assado com arroz."
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-20",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Order drinks: \"We would like sparkling water and red wine.\"",
+              "explanation": "«Água com gás» is sparkling water; «vinho tinto» is red wine in Portugal.",
+              "type": "build_phrase",
+              "answer": [
+                "Queremos",
+                "água",
+                "com",
+                "gás",
+                "e",
+                "vinho",
+                "tinto."
+              ],
+              "distractors": [
+                "sem",
+                "tinta",
+                "branca"
+              ],
+              "acceptedAnswers": [
+                "Nós queremos água com gás e vinho tinto."
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-21",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say what the special is: \"Today the dish of the day is codfish.\"",
+              "explanation": "«Prato do dia» is masculine singular. In Portugal, «bacalhau» is cod.",
+              "type": "build_phrase",
+              "answer": [
+                "Hoje",
+                "o",
+                "prato",
+                "do",
+                "dia",
+                "é",
+                "bacalhau."
+              ],
+              "distractors": [
+                "da",
+                "são",
+                "no"
+              ],
+              "acceptedAnswers": [
+                "O prato do dia hoje é bacalhau."
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-22",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say what is on the table: \"On the table there is bread, butter and cheese.\"",
+              "explanation": "«Há» means 'there is / there are'. Food items: «pão» (bread), «manteiga» (butter) and «queijo» (cheese).",
+              "type": "build_phrase",
+              "answer": [
+                "Na",
+                "mesa",
+                "há",
+                "pão,",
+                "manteiga",
+                "e",
+                "queijo."
+              ],
+              "distractors": [
+                "No",
+                "têm",
+                "da"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-23",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Politely ask the waiter: \"Can I see the dessert menu, please?\"",
+              "explanation": "«Posso» + infinitive asks permission. «A ementa das sobremesas» is the dessert menu (de + as = das).",
+              "type": "build_phrase",
+              "answer": [
+                "Posso",
+                "ver",
+                "a",
+                "ementa",
+                "das",
+                "sobremesas,",
+                "por",
+                "favor?"
+              ],
+              "distractors": [
+                "Pode",
+                "o",
+                "de"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-24",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "The waiter answers: «O prato do dia é peixe grelhado.» What did you ask?",
+              "explanation": "«Qual é» asks 'what is / which is' when asking about a specific item on the menu.",
+              "type": "question_for_answer",
+              "givenAnswer": "O prato do dia é peixe grelhado.",
+              "answer": [
+                "Qual",
+                "é",
+                "o",
+                "prato",
+                "do",
+                "dia?"
+              ],
+              "distractors": [
+                "Como",
+                "da",
+                "Que"
+              ],
+              "acceptedAnswers": [
+                "Qual é que é o prato do dia?"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-25",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "The customer answers: «Queria uma bica, por favor.» What did the waiter ask?",
+              "explanation": "«O que deseja?» is the polite question waiters use to take an order.",
+              "type": "question_for_answer",
+              "givenAnswer": "Queria uma bica, por favor.",
+              "answer": [
+                "O",
+                "que",
+                "deseja?"
+              ],
+              "distractors": [
+                "Quem",
+                "desejas?",
+                "onde"
+              ],
+              "acceptedAnswers": [
+                "O que é que deseja?",
+                "O que quer?"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-26",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "The customer answers: «Sim, queria um café e a conta.» What did the waiter ask?",
+              "explanation": "Waiters ask «Deseja mais alguma coisa?» (Would you like anything else?) at the end of a meal.",
+              "type": "question_for_answer",
+              "givenAnswer": "Sim, queria um café e a conta.",
+              "answer": [
+                "Deseja",
+                "mais",
+                "alguma",
+                "coisa?"
+              ],
+              "distractors": [
+                "Desejam",
+                "muito",
+                "nada?"
+              ],
+              "acceptedAnswers": [
+                "Quer mais alguma coisa?"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-27",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "The waiter answers: «São doze euros.» What did you ask?",
+              "explanation": "To ask the bill total, use «Quanto é a conta?» or «Quanto é?» in Portuguese.",
+              "type": "question_for_answer",
+              "givenAnswer": "São doze euros.",
+              "answer": [
+                "Quanto",
+                "é",
+                "a",
+                "conta?"
+              ],
+              "distractors": [
+                "Quando",
+                "são",
+                "o"
+              ],
+              "acceptedAnswers": [
+                "Quanto é que é a conta?"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-28",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Quero água sem gás.» What did you ask? (informal)",
+              "explanation": "Ask a friend with the tu form: «O que queres beber?» or «O que queres?».",
+              "type": "question_for_answer",
+              "givenAnswer": "Quero água sem gás.",
+              "answer": [
+                "O",
+                "que",
+                "queres",
+                "beber?"
+              ],
+              "distractors": [
+                "Como",
+                "quer",
+                "comer?"
+              ],
+              "acceptedAnswers": [
+                "O que é que queres beber?",
+                "O que é que tu queres beber?"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-29",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "The waiter answers: «Temos mousse de chocolate e fruta.» What did you ask?",
+              "explanation": "«Que sobremesas têm?» asks what desserts the restaurant has.",
+              "type": "question_for_answer",
+              "givenAnswer": "Temos mousse de chocolate e fruta.",
+              "answer": [
+                "Que",
+                "sobremesas",
+                "têm?"
+              ],
+              "distractors": [
+                "Qual",
+                "sobremesa",
+                "tem?"
+              ],
+              "acceptedAnswers": [
+                "Que sobremesas é que têm?"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-30",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "The waiter answers: «Sim, temos uma mesa livre lá fora.» What did you ask?",
+              "explanation": "«Têm uma mesa livre?» asks if the restaurant has a free table.",
+              "type": "question_for_answer",
+              "givenAnswer": "Sim, temos uma mesa livre lá fora.",
+              "answer": [
+                "Têm",
+                "uma",
+                "mesa",
+                "livre?"
+              ],
+              "distractors": [
+                "Tem",
+                "um",
+                "livres?"
+              ],
+              "acceptedAnswers": [
+                "Vocês têm uma mesa livre?"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-31",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Prefiro carne grelhada.» What did you ask? (informal)",
+              "explanation": "«Preferes peixe ou carne?» asks a friend to choose between two options.",
+              "type": "question_for_answer",
+              "givenAnswer": "Prefiro carne grelhada.",
+              "answer": [
+                "Preferes",
+                "peixe",
+                "ou",
+                "carne?"
+              ],
+              "distractors": [
+                "Prefere",
+                "frango",
+                "e"
+              ],
+              "acceptedAnswers": [
+                "Tu preferes peixe ou carne?",
+                "O que preferes?",
+                "O que é que preferes?"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-32",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "The waiter answers: «O café custa um euro.» What did you ask?",
+              "explanation": "«Quanto custa o café?» asks for the price of the coffee.",
+              "type": "question_for_answer",
+              "givenAnswer": "O café custa um euro.",
+              "answer": [
+                "Quanto",
+                "custa",
+                "o",
+                "café?"
+              ],
+              "distractors": [
+                "Quando",
+                "custam",
+                "a"
+              ],
+              "acceptedAnswers": [
+                "Quanto é que custa o café?"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-33",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "In Portugal, juice is «sumo». «Suco» is Brazilian Portuguese.",
+              "type": "find_error",
+              "sentence": [
+                "Queria",
+                "um",
+                "suco",
+                "de",
+                "laranja,",
+                "por",
+                "favor."
+              ],
+              "wrongIndex": 2,
+              "correction": "sumo",
+              "options": [
+                "sumo",
+                "chá",
+                "copo"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-34",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "«Conta» is feminine in Portuguese: «a conta», not «o conta».",
+              "type": "find_error",
+              "sentence": [
+                "O",
+                "conta,",
+                "por",
+                "favor."
+              ],
+              "wrongIndex": 0,
+              "correction": "A",
+              "options": [
+                "A",
+                "As",
+                "Um"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-35",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "«Sopa» is feminine, so the adjective must agree: «sopa fria», not «frio».",
+              "type": "find_error",
+              "sentence": [
+                "A",
+                "sopa",
+                "está",
+                "muito",
+                "frio",
+                "hoje."
+              ],
+              "wrongIndex": 4,
+              "correction": "fria",
+              "options": [
+                "fria",
+                "frias",
+                "quente"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-36",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "«Peixe» is masculine, so «o peixe», not «a peixe».",
+              "type": "find_error",
+              "sentence": [
+                "Para",
+                "mim,",
+                "a",
+                "peixe",
+                "grelhado."
+              ],
+              "wrongIndex": 2,
+              "correction": "o",
+              "options": [
+                "o",
+                "um",
+                "do"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-37",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "«Batata» is feminine: «batatas fritas», not «fritos».",
+              "type": "find_error",
+              "sentence": [
+                "Queremos",
+                "o",
+                "frango",
+                "com",
+                "batatas",
+                "fritos",
+                "e",
+                "salada."
+              ],
+              "wrongIndex": 5,
+              "correction": "fritas",
+              "options": [
+                "fritas",
+                "cozidas",
+                "assadas"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-38",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about yourself.",
+              "explanation": "Start with «Queria …» or «Gosto de …» and name your favourite drink.",
+              "type": "about_me",
+              "question": "O que queres beber?",
+              "sampleAnswer": "Queria uma água com gás.",
+              "hints": [
+                "sumo",
+                "laranja",
+                "chá",
+                "cerveja"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-39",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about yourself.",
+              "explanation": "State what you prefer to eat for lunch using «Prefiro …» or «Para mim …».",
+              "type": "about_me",
+              "question": "O que preferes comer ao almoço?",
+              "sampleAnswer": "Prefiro peixe grelhado com arroz.",
+              "hints": [
+                "carne",
+                "frango",
+                "assado",
+                "salada"
+              ]
+            },
+            {
+              "id": "m3-food-restaurant-40",
+              "topicId": "m3-food-restaurant",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about yourself.",
+              "explanation": "Order dessert politely with «Queria …» or decline with «Não quero sobremesa».",
+              "type": "about_me",
+              "question": "Quer sobremesa depois do almoço?",
+              "sampleAnswer": "Sim, queria uma mousse de chocolate.",
+              "hints": [
+                "bolo",
+                "fruta",
+                "gelado",
+                "só",
+                "café"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "m3-leisure-invitations",
+          "moduleId": "m3",
+          "title": "Leisure and invitations",
+          "kind": "situation",
+          "context": "In Portugal, inviting friends out for leisure activities is part of everyday social life. You can invite someone using simple present questions like **Vamos ao cinema?** (Shall we go to the cinema?) or **Queres ir à praia?** (Do you want to go to the beach?).\n\nTo accept an invitation, you can use these polite and enthusiastic phrases:\n- **Sim, com certeza!** (Yes, of course!)\n- **Boa ideia!** (Good idea!)\n- **Combinado!** (Agreed! / It's a deal!)\n\nTo decline politely, express regret and give a simple reason:\n- **Desculpa, não posso.** (Sorry, I can't.)\n- **Tenho de trabalhar.** (I have to work.)\n- **Talvez noutro dia.** (Maybe another day.)\n\n*Examples*:\n- **Vamos ao parque no sábado?** — Shall we go to the park on Saturday?\n- **Sim, com certeza! A que horas?** — Yes, of course! At what time?\n- **Queres ir ao café?** — Do you want to go to the café?\n- **Não posso, tenho de estudar.** — I can't, I have to study.\n- **O que gostas de fazer no teu tempo livre?** — What do you like to do in your free time?\n- **Gosto de ouvir música e ler livros.** — I like to listen to music and read books.\n\n*Watch out*:\n1. Remember preposition contractions: **ir ao cinema** (a + o = ao) with masculine nouns, but **ir à praia** (a + a = à) with feminine nouns.\n2. **Combinado!** is a very common European Portuguese expression used to confirm a plan or meeting.",
+          "keyItems": [
+            {
+              "target": "tempo livre",
+              "support": "free time"
+            },
+            {
+              "target": "ir ao cinema",
+              "support": "to go to the cinema"
+            },
+            {
+              "target": "ir à praia",
+              "support": "to go to the beach"
+            },
+            {
+              "target": "ir ao teatro",
+              "support": "to go to the theatre"
+            },
+            {
+              "target": "ouvir música",
+              "support": "to listen to music"
+            },
+            {
+              "target": "ler um livro",
+              "support": "to read a book"
+            },
+            {
+              "target": "passar tempo com amigos",
+              "support": "to spend time with friends"
+            },
+            {
+              "target": "Vamos...?",
+              "support": "Shall we...?"
+            },
+            {
+              "target": "Queres...?",
+              "support": "Do you want to...?"
+            },
+            {
+              "target": "Sim, com certeza!",
+              "support": "Yes, of course!"
+            },
+            {
+              "target": "Boa ideia!",
+              "support": "Good idea!"
+            },
+            {
+              "target": "Combinado!",
+              "support": "Agreed! / Deal!"
+            },
+            {
+              "target": "Desculpa, não posso.",
+              "support": "Sorry, I can't."
+            },
+            {
+              "target": "Tenho de...",
+              "support": "I have to..."
+            },
+            {
+              "target": "Talvez noutro dia.",
+              "support": "Maybe another day."
+            }
+          ],
+          "exercises": [
+            {
+              "id": "m3-leisure-invitations-01",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles"
+              ],
+              "prompt": "Match each invitation response with its English meaning.",
+              "explanation": "These standard phrases are used in Portugal to accept or decline social invitations.",
+              "type": "match_pairs",
+              "pairs": [
+                {
+                  "target": "Boa ideia!",
+                  "support": "Good idea!"
+                },
+                {
+                  "target": "Combinado!",
+                  "support": "Agreed!"
+                },
+                {
+                  "target": "Talvez noutro dia.",
+                  "support": "Maybe another day."
+                },
+                {
+                  "target": "Desculpa, não posso.",
+                  "support": "Sorry, I can't."
+                }
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-02",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese translation for the bold word.",
+              "explanation": "«Música» means music in European Portuguese.",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "I like to listen to **music** in my free time.",
+              "word": "music",
+              "answer": "música",
+              "options": [
+                "música",
+                "teatro",
+                "cinema",
+                "praia"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-03",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Invite your friend to the cinema: \"Shall we go to the cinema?\"",
+              "explanation": "Use «Vamos» followed by «ao cinema» (a + o cinema = ao cinema).",
+              "type": "build_phrase",
+              "answer": [
+                "Vamos",
+                "ao",
+                "cinema?"
+              ],
+              "distractors": [
+                "da",
+                "fazer",
+                "estudo"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-04",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Fill in the gaps to complete the invitation and positive response.",
+              "explanation": "Places with feminine gender take «à» (a + a praia = à praia). «Boa ideia!» means \"Good idea!\".",
+              "type": "fill_gaps",
+              "template": "— Queres ir ___ praia hoje? — ___ ideia!",
+              "gaps": [
+                {
+                  "answer": "à"
+                },
+                {
+                  "answer": "Boa"
+                }
+              ],
+              "wordBank": [
+                "à",
+                "Boa",
+                "ao",
+                "Mau",
+                "de",
+                "Sim"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-05",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Sim, com certeza!» What was your invitation? (\"Shall we go to the park?\")",
+              "explanation": "«Vamos ao parque?» asks \"Shall we go to the park?\". «Parque» is masculine, so it takes «ao».",
+              "type": "question_for_answer",
+              "givenAnswer": "Sim, com certeza!",
+              "answer": [
+                "Vamos",
+                "ao",
+                "parque?"
+              ],
+              "distractors": [
+                "na",
+                "com",
+                "como"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-06",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correct form.",
+              "explanation": "To say \"I can't\", use the 1st person singular form «não posso», not «pode».",
+              "type": "find_error",
+              "sentence": [
+                "Desculpa,",
+                "não",
+                "pode,",
+                "tenho",
+                "de",
+                "estudar."
+              ],
+              "wrongIndex": 2,
+              "correction": "posso",
+              "options": [
+                "posso",
+                "podes",
+                "podem"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-07",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Build the sentence: \"I like to read books in my free time.\"",
+              "explanation": "«Gostar» takes «de» before an infinitive: «Gosto de ler... no meu tempo livre».",
+              "type": "build_phrase",
+              "answer": [
+                "Gosto",
+                "de",
+                "ler",
+                "livros",
+                "no",
+                "meu",
+                "tempo",
+                "livre."
+              ],
+              "distractors": [
+                "da",
+                "estudar",
+                "com"
+              ],
+              "acceptedAnswers": [
+                "Eu gosto de ler livros no meu tempo livre."
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-08",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles"
+              ],
+              "prompt": "Put the dialogue in a natural order.",
+              "explanation": "First comes the greeting and invitation, then the polite decline, follow-up, and confirmation.",
+              "type": "order_dialogue",
+              "lines": [
+                {
+                  "speaker": "A",
+                  "text": "Olá! Queres ir ao café hoje à tarde?"
+                },
+                {
+                  "speaker": "B",
+                  "text": "Desculpa, não posso. Tenho de trabalhar."
+                },
+                {
+                  "speaker": "A",
+                  "text": "Que pena! Talvez noutro dia?"
+                },
+                {
+                  "speaker": "B",
+                  "text": "Sim, combinado!"
+                }
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-09",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese word for \"Agreed!\".",
+              "explanation": "«Combinado!» is widely used in Portugal to express agreement on a plan.",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "We will meet at six o'clock. **Agreed!**",
+              "word": "Agreed!",
+              "answer": "Combinado!",
+              "options": [
+                "Combinado!",
+                "Desculpa!",
+                "Obrigada!",
+                "Talvez!"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-10",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Gosto de ouvir música.» What question did you ask?",
+              "explanation": "To ask what someone likes to do, use «O que gostas de fazer?» (or «O que é que gostas de fazer?»).",
+              "type": "question_for_answer",
+              "givenAnswer": "Gosto de ouvir música.",
+              "answer": [
+                "O",
+                "que",
+                "gostas",
+                "de",
+                "fazer?"
+              ],
+              "distractors": [
+                "onde",
+                "como",
+                "quem"
+              ],
+              "acceptedAnswers": [
+                "O que é que gostas de fazer?"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-11",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Politely decline an invitation: \"Sorry, I can't, I have to work.\"",
+              "explanation": "Express regret with «Desculpa», then use «não posso» and «tenho de + verb».",
+              "type": "build_phrase",
+              "answer": [
+                "Desculpa,",
+                "não",
+                "posso,",
+                "tenho",
+                "de",
+                "trabalhar."
+              ],
+              "distractors": [
+                "pede",
+                "estudo",
+                "com"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-12",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about yourself in Portuguese.",
+              "explanation": "State your hobbies using «Gosto de + infinitivo» (e.g. «Gosto de ir ao cinema»).",
+              "type": "about_me",
+              "question": "O que gostas de fazer no teu tempo livre?",
+              "sampleAnswer": "Gosto de ler livros e ouvir música.",
+              "hints": [
+                "ir",
+                "ao",
+                "cinema,",
+                "ver",
+                "televisão,",
+                "com",
+                "amigos"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-13",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Fill in the three gaps to complete the invitation dialogue.",
+              "explanation": "Use 2nd person «Queres» to ask, «Sim» to accept, and «Boa ideia!» to express enthusiasm.",
+              "type": "fill_gaps",
+              "template": "— ___ ir ao teatro no sábado? — ___, boa ___!",
+              "gaps": [
+                {
+                  "answer": "Queres"
+                },
+                {
+                  "answer": "Sim"
+                },
+                {
+                  "answer": "ideia"
+                }
+              ],
+              "wordBank": [
+                "Queres",
+                "Sim",
+                "ideia",
+                "Querem",
+                "Não",
+                "tempo"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-14",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Suggest an alternative day: \"Maybe another day, I have to study today.\"",
+              "explanation": "«Talvez noutro dia» means \"Maybe another day\". «Tenho de» means \"I have to\".",
+              "type": "build_phrase",
+              "answer": [
+                "Talvez",
+                "noutro",
+                "dia,",
+                "tenho",
+                "de",
+                "estudar",
+                "hoje."
+              ],
+              "distractors": [
+                "outro",
+                "trabalhar",
+                "com"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-15",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "Cinema is masculine in Portuguese («o cinema»), so «a + o» contracts to «ao».",
+              "type": "find_error",
+              "sentence": [
+                "Nós",
+                "vamos",
+                "à",
+                "cinema",
+                "no",
+                "domingo."
+              ],
+              "wrongIndex": 2,
+              "correction": "ao",
+              "options": [
+                "ao",
+                "do",
+                "em"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-16",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Someone answers: «Não posso, tenho de estudar.» What did you ask? (\"Do you want to go to the beach?\")",
+              "explanation": "«Queres ir à praia?» asks \"Do you want to go to the beach?\". «Praia» is feminine, so «à praia».",
+              "type": "question_for_answer",
+              "givenAnswer": "Não posso, tenho de estudar.",
+              "answer": [
+                "Queres",
+                "ir",
+                "à",
+                "praia?"
+              ],
+              "distractors": [
+                "ao",
+                "como",
+                "onde"
+              ],
+              "acceptedAnswers": [
+                "Tu queres ir à praia?"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-17",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese word for \"beach\".",
+              "explanation": "«Praia» is the Portuguese word for beach.",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Do you want to go to the **beach** today?",
+              "word": "beach",
+              "answer": "praia",
+              "options": [
+                "praia",
+                "cinema",
+                "parque",
+                "teatro"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-18",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Accept enthusiastically: \"Yes, of course! At what time?\"",
+              "explanation": "«Com certeza!» means \"of course!\". «A que horas?» asks \"At what time?\".",
+              "type": "build_phrase",
+              "answer": [
+                "Sim,",
+                "com",
+                "certeza!",
+                "A",
+                "que",
+                "horas?"
+              ],
+              "distractors": [
+                "de",
+                "onde",
+                "como"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-19",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Fill in the missing words.",
+              "explanation": "«Passar tempo» means \"to spend time\". «Os meus amigos» includes the definite article.",
+              "type": "fill_gaps",
+              "template": "Eu gosto de passar ___ com os meus ___.",
+              "gaps": [
+                {
+                  "answer": "tempo"
+                },
+                {
+                  "answer": "amigos"
+                }
+              ],
+              "wordBank": [
+                "tempo",
+                "amigos",
+                "livro",
+                "música",
+                "hora"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-20",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Combinado! Até sábado.» What did you ask? (\"Shall we go to the park on Saturday?\")",
+              "explanation": "«Vamos ao parque no sábado?» combines the preposition «ao» (masculine place) and «no» (masculine day).",
+              "type": "question_for_answer",
+              "givenAnswer": "Combinado! Até sábado.",
+              "answer": [
+                "Vamos",
+                "ao",
+                "parque",
+                "no",
+                "sábado?"
+              ],
+              "distractors": [
+                "na",
+                "da",
+                "como"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-21",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Sim, com certeza!» What did you ask? (\"Shall we go to the café?\")",
+              "explanation": "To propose an activity, use «Vamos ao...?» (Shall we go to...?).",
+              "type": "question_for_answer",
+              "givenAnswer": "Sim, com certeza!",
+              "answer": [
+                "Vamos",
+                "ao",
+                "café?"
+              ],
+              "distractors": [
+                "Ir",
+                "do",
+                "cafés"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-22",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that you want to spend time with friends.",
+              "explanation": "«Quero» means 'I want', and «passar tempo com» means 'to spend time with'.",
+              "type": "build_phrase",
+              "answer": [
+                "Quero",
+                "passar",
+                "tempo",
+                "com",
+                "amigos."
+              ],
+              "distractors": [
+                "passo",
+                "no",
+                "amiga"
+              ],
+              "acceptedAnswers": [
+                "Eu quero passar tempo com amigos.",
+                "Quero passar tempo com os meus amigos.",
+                "Eu quero passar tempo com os meus amigos."
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-23",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Complete the dialogue to decline an invitation politely.",
+              "explanation": "Use «Desculpa, não posso» (Sorry, I can't) and «tenho de» (I have to).",
+              "type": "fill_gaps",
+              "template": "— Queres ir ao teatro? — ___, não ___, tenho ___ trabalhar.",
+              "gaps": [
+                {
+                  "answer": "Desculpa"
+                },
+                {
+                  "answer": "posso"
+                },
+                {
+                  "answer": "de"
+                }
+              ],
+              "wordBank": [
+                "Desculpa",
+                "posso",
+                "de",
+                "Obrigado",
+                "pode",
+                "em"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-24",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "«Praia» is a feminine noun, so the contraction of «a + a» is «à»: «à praia».",
+              "type": "find_error",
+              "sentence": [
+                "Nós",
+                "vamos",
+                "ao",
+                "praia",
+                "hoje."
+              ],
+              "wrongIndex": 2,
+              "correction": "à",
+              "options": [
+                "à",
+                "do",
+                "no"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-25",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about your plans for the weekend.",
+              "explanation": "You can accept enthusiastically («Sim, boa ideia!») or express plans for a specific day.",
+              "type": "about_me",
+              "question": "Queres ir ao cinema no fim de semana?",
+              "sampleAnswer": "Sim, boa ideia! Quero ir no domingo.",
+              "hints": [
+                "Desculpa,",
+                "não",
+                "posso,",
+                "tenho",
+                "de",
+                "trabalhar"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-26",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Ideia» is feminine, so the adjective for 'good' takes the feminine form «boa».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "It is a **good** idea.",
+              "word": "good",
+              "answer": "boa",
+              "options": [
+                "boa",
+                "bom",
+                "bem",
+                "mau"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-27",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Refuse an invitation: «Maybe another day, today I cannot.»",
+              "explanation": "«Talvez noutro dia» means 'Maybe another day'. «Hoje não posso» means 'Today I cannot'.",
+              "type": "build_phrase",
+              "answer": [
+                "Talvez",
+                "noutro",
+                "dia,",
+                "hoje",
+                "não",
+                "posso."
+              ],
+              "distractors": [
+                "outro",
+                "pode",
+                "amanhã"
+              ],
+              "acceptedAnswers": [
+                "Talvez noutro dia, não posso hoje."
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-28",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Sim, com certeza! A que horas?» What did you ask?",
+              "explanation": "Invite someone using «Queres ir ao + noun»: «Queres ir ao cinema hoje?».",
+              "type": "question_for_answer",
+              "givenAnswer": "Sim, com certeza! A que horas?",
+              "answer": [
+                "Queres",
+                "ir",
+                "ao",
+                "cinema",
+                "hoje?"
+              ],
+              "distractors": [
+                "Gostas",
+                "da",
+                "filme"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-29",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Confirm a plan with a friend using a common expression.",
+              "explanation": "«Combinado!» is widely used in European Portuguese to confirm an agreement or plan.",
+              "type": "fill_gaps",
+              "template": "— Vemo-nos às sete horas? — ___!",
+              "gaps": [
+                {
+                  "answer": "Combinado"
+                }
+              ],
+              "wordBank": [
+                "Combinado",
+                "Desculpa",
+                "Obrigado",
+                "Talvez"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-30",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Ask your friend if they want to go to the beach tomorrow.",
+              "explanation": "Use «Queres ir...» (Do you want to go...) followed by «à praia» (feminine contraction).",
+              "type": "build_phrase",
+              "answer": [
+                "Queres",
+                "ir",
+                "à",
+                "praia",
+                "amanhã?"
+              ],
+              "distractors": [
+                "ao",
+                "quer",
+                "em"
+              ],
+              "acceptedAnswers": [
+                "Tu queres ir à praia amanhã?"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-31",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Find the incorrect preposition in this sentence.",
+              "explanation": "In European Portuguese, expressing obligation with «ter» requires «de»: «tenho de estudar».",
+              "type": "find_error",
+              "sentence": [
+                "Eu",
+                "tenho",
+                "para",
+                "estudar",
+                "hoje."
+              ],
+              "wrongIndex": 2,
+              "correction": "de",
+              "options": [
+                "de",
+                "do",
+                "com"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-32",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese translation for the word in bold.",
+              "explanation": "«Tempo livre» translates to 'free time'.",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "What do you like to do in your **free** time?",
+              "word": "free",
+              "answer": "livre",
+              "options": [
+                "livre",
+                "limpo",
+                "novo",
+                "longo"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-33",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend says: «Gosto de ouvir música.» What did you ask them?",
+              "explanation": "Ask what someone likes to listen to using «O que gostas de ouvir?».",
+              "type": "question_for_answer",
+              "givenAnswer": "Gosto de ouvir música.",
+              "answer": [
+                "O",
+                "que",
+                "gostas",
+                "de",
+                "ouvir?"
+              ],
+              "distractors": [
+                "Quem",
+                "fazer",
+                "onde"
+              ],
+              "acceptedAnswers": [
+                "O que é que gostas de ouvir?"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-34",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Propose going to the theatre on Sunday.",
+              "explanation": "«Teatro» is masculine, so «a + o» contracts to «ao teatro».",
+              "type": "build_phrase",
+              "answer": [
+                "Vamos",
+                "ao",
+                "teatro",
+                "no",
+                "domingo?"
+              ],
+              "distractors": [
+                "à",
+                "na",
+                "ir"
+              ],
+              "acceptedAnswers": [
+                "Nós vamos ao teatro no domingo?"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-35",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles"
+              ],
+              "prompt": "Put this conversation making weekend plans in order.",
+              "explanation": "First ask about today, handle the decline, propose another day, then confirm.",
+              "type": "order_dialogue",
+              "lines": [
+                {
+                  "speaker": "A",
+                  "text": "Olá! Queres ir ao cinema hoje?"
+                },
+                {
+                  "speaker": "B",
+                  "text": "Hoje não posso, tenho de trabalhar."
+                },
+                {
+                  "speaker": "A",
+                  "text": "E no sábado? Vamos à praia?"
+                },
+                {
+                  "speaker": "B",
+                  "text": "Boa ideia! Combinado!"
+                }
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-36",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: «I like to read a book in the park.»",
+              "explanation": "«Gosto de ler» is followed by «um livro» and «no parque» (em + o = no).",
+              "type": "build_phrase",
+              "answer": [
+                "Gosto",
+                "de",
+                "ler",
+                "um",
+                "livro",
+                "no",
+                "parque."
+              ],
+              "distractors": [
+                "da",
+                "uma",
+                "leres"
+              ],
+              "acceptedAnswers": [
+                "Eu gosto de ler um livro no parque."
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-37",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Complete the invitation and answer.",
+              "explanation": "«Queres...» asks if someone wants to do something, and «com certeza!» means 'of course!'.",
+              "type": "fill_gaps",
+              "template": "— ___ ir ao restaurante logo? — Sim, com ___!",
+              "gaps": [
+                {
+                  "answer": "Queres"
+                },
+                {
+                  "answer": "certeza"
+                }
+              ],
+              "wordBank": [
+                "Queres",
+                "certeza",
+                "Quer",
+                "dúvida",
+                "ideia"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-38",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Select it and choose the fix.",
+              "explanation": "«Ir» takes «a»; with a masculine place «a + o» contracts to «ao»: «ir ao cinema».",
+              "type": "find_error",
+              "sentence": [
+                "Eu",
+                "gosto",
+                "de",
+                "ir",
+                "em",
+                "cinema."
+              ],
+              "wrongIndex": 4,
+              "correction": "ao",
+              "options": [
+                "ao",
+                "à",
+                "do"
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-39",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "A friend invites you. Answer about yourself: accept or decline.",
+              "explanation": "Accept with «Sim, boa ideia!» or «Combinado!», or decline with «Desculpa, não posso» + a reason with «tenho de…».",
+              "type": "about_me",
+              "question": "Vamos à praia no sábado?",
+              "sampleAnswer": "Desculpa, não posso, tenho de trabalhar.",
+              "hints": [
+                "Sim,",
+                "boa",
+                "ideia!",
+                "Combinado!",
+                "Talvez",
+                "noutro",
+                "dia."
+              ]
+            },
+            {
+              "id": "m3-leisure-invitations-40",
+              "topicId": "m3-leisure-invitations",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles"
+              ],
+              "prompt": "Match each Portuguese expression with its English meaning.",
+              "explanation": "These key phrases are useful for giving quick responses to invitations.",
+              "type": "match_pairs",
+              "pairs": [
+                {
+                  "target": "Boa ideia!",
+                  "support": "Good idea!"
+                },
+                {
+                  "target": "Combinado!",
+                  "support": "Agreed!"
+                },
+                {
+                  "target": "Com certeza!",
+                  "support": "Of course!"
+                },
+                {
+                  "target": "Talvez noutro dia.",
+                  "support": "Maybe another day."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "m3-frequency-time",
+          "moduleId": "m3",
+          "title": "Prepositions of time and frequency",
+          "kind": "grammar",
+          "context": "When you talk about time in Portuguese, small words matter. Use **a / às** for exact times: *às três horas* = at three o'clock, *à uma hora* = at one o'clock. Use **de** for parts of the day: *de manhã* = in the morning. Use **em** with months: *em janeiro* = in January.\n\nWhere frequency words go in European Portuguese:\n- **nunca** goes before the verb: *Ela nunca bebe café.* = She never drinks coffee.\n- **sempre** usually comes right after the verb: *Estudo sempre de manhã.* = I always study in the morning.\n- **às vezes**, **habitualmente**, **geralmente** can open the sentence or follow the verb: *Às vezes vamos ao cinema.* = We sometimes go to the cinema. *Eles almoçam habitualmente às treze horas.* = They usually have lunch at one p.m.\n\nFrequency with **por**:\n- *Trabalhamos cinco dias por semana.* = We work five days a week.\n- *Vou ao ginásio três vezes por mês.* = I go to the gym three times a month.\n\n**Watch out:**\n- a + as = **às**, a + a = **à**.\n- *à noite* and *de noite* are both correct in Portugal; with a clock time say *às dez da noite*.",
+          "keyItems": [
+            {
+              "target": "às",
+              "support": "at (specific time)"
+            },
+            {
+              "target": "à",
+              "support": "at / to (with contractions)"
+            },
+            {
+              "target": "de manhã",
+              "support": "in the morning"
+            },
+            {
+              "target": "à tarde",
+              "support": "in the afternoon"
+            },
+            {
+              "target": "à noite",
+              "support": "at night / in the evening"
+            },
+            {
+              "target": "em janeiro",
+              "support": "in January"
+            },
+            {
+              "target": "sempre",
+              "support": "always"
+            },
+            {
+              "target": "nunca",
+              "support": "never"
+            },
+            {
+              "target": "às vezes",
+              "support": "sometimes"
+            },
+            {
+              "target": "habitualmente",
+              "support": "usually; habitually"
+            },
+            {
+              "target": "geralmente",
+              "support": "generally; usually"
+            },
+            {
+              "target": "por dia",
+              "support": "per day"
+            },
+            {
+              "target": "por semana",
+              "support": "per week"
+            },
+            {
+              "target": "por mês",
+              "support": "per month"
+            }
+          ],
+          "exercises": [
+            {
+              "id": "m3-frequency-time-01",
+              "topicId": "m3-frequency-time",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say: I work in January.",
+              "explanation": "Use «em» with months. In Portuguese, months do not take an article here.",
+              "type": "build_phrase",
+              "answer": [
+                "Eu",
+                "trabalho",
+                "em",
+                "janeiro."
+              ],
+              "distractors": [
+                "de",
+                "no",
+                "à"
+              ],
+              "acceptedAnswers": [
+                "Trabalho em janeiro."
+              ]
+            },
+            {
+              "id": "m3-frequency-time-02",
+              "topicId": "m3-frequency-time",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Geralmente» means usually. It can open the sentence or follow the verb: «Estuda geralmente de manhã».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "She **usually** studies in the morning.",
+              "word": "usually",
+              "answer": "geralmente",
+              "options": [
+                "geralmente",
+                "sempre",
+                "nunca",
+                "às vezes"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-03",
+              "topicId": "m3-frequency-time",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the two gaps.",
+              "explanation": "Use «de manhã» for the morning and «às» with a clock time.",
+              "type": "fill_gaps",
+              "template": "___ manhã, eu estudo ___ oito horas.",
+              "gaps": [
+                {
+                  "answer": "De"
+                },
+                {
+                  "answer": "às"
+                }
+              ],
+              "wordBank": [
+                "De",
+                "às",
+                "em",
+                "por",
+                "a"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-04",
+              "topicId": "m3-frequency-time",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «De manhã.» Ask when they study.",
+              "explanation": "Use «quando» to ask about time. The verb normally comes after the question word.",
+              "type": "question_for_answer",
+              "givenAnswer": "De manhã.",
+              "answer": [
+                "Quando",
+                "estudas?"
+              ],
+              "distractors": [
+                "Onde",
+                "Como",
+                "Quem"
+              ],
+              "acceptedAnswers": [
+                "Quando é que estudas?"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-05",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that you have class at three o'clock.",
+              "explanation": "Use «às» with a specific time. «Três horas» is a clock time.",
+              "type": "build_phrase",
+              "answer": [
+                "Tenho",
+                "aula",
+                "às",
+                "três",
+                "horas."
+              ],
+              "distractors": [
+                "em",
+                "de",
+                "por"
+              ],
+              "acceptedAnswers": [
+                "Eu tenho aula às três horas."
+              ]
+            },
+            {
+              "id": "m3-frequency-time-06",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "«À uma hora»: a + a = à. With plural hours it is «às»: «às duas horas».",
+              "type": "find_error",
+              "sentence": [
+                "Almoço",
+                "sempre",
+                "a",
+                "uma",
+                "hora."
+              ],
+              "wrongIndex": 2,
+              "correction": "à",
+              "options": [
+                "à",
+                "às",
+                "ao"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-07",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Às oito horas.» Ask what time the class starts.",
+              "explanation": "Use «a que horas» to ask for a clock time.",
+              "type": "question_for_answer",
+              "givenAnswer": "Às oito horas.",
+              "answer": [
+                "A",
+                "que",
+                "horas",
+                "começa",
+                "a",
+                "aula?"
+              ],
+              "distractors": [
+                "Quando",
+                "Onde",
+                "Como"
+              ],
+              "acceptedAnswers": [
+                "A que horas é que começa a aula?"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-08",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the two gaps.",
+              "explanation": "«Nunca» goes before the verb. «Geralmente» can open the sentence or sit right before or after the verb.",
+              "type": "fill_gaps",
+              "template": "Eu ___ estudo de manhã e ___ estudo à noite.",
+              "gaps": [
+                {
+                  "answer": "geralmente"
+                },
+                {
+                  "answer": "nunca"
+                }
+              ],
+              "wordBank": [
+                "geralmente",
+                "nunca",
+                "sempre",
+                "às vezes",
+                "habitualmente"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-09",
+              "topicId": "m3-frequency-time",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that you never take the bus to work.",
+              "explanation": "«Nunca» goes before the verb. In Portugal, use «autocarro».",
+              "type": "build_phrase",
+              "answer": [
+                "Nunca",
+                "apanho",
+                "o",
+                "autocarro",
+                "para",
+                "o",
+                "trabalho."
+              ],
+              "distractors": [
+                "comboio",
+                "sempre",
+                "de"
+              ],
+              "acceptedAnswers": [
+                "Eu nunca apanho o autocarro para o trabalho."
+              ]
+            },
+            {
+              "id": "m3-frequency-time-10",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "Use «por» with a time unit to say how often something happens.",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "We go to the gym **weekly**.",
+              "word": "weekly",
+              "answer": "por semana",
+              "options": [
+                "por semana",
+                "por mês",
+                "por dia",
+                "em semana"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-11",
+              "topicId": "m3-frequency-time",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Três vezes por mês.» Ask how many times they go to the gym.",
+              "explanation": "Use «quantas vezes» to ask about frequency.",
+              "type": "question_for_answer",
+              "givenAnswer": "Três vezes por mês.",
+              "answer": [
+                "Quantas",
+                "vezes",
+                "vais",
+                "ao",
+                "ginásio?"
+              ],
+              "distractors": [
+                "Quando",
+                "Onde",
+                "Como"
+              ],
+              "acceptedAnswers": [
+                "Quantas vezes é que vais ao ginásio?"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-12",
+              "topicId": "m3-frequency-time",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the three gaps.",
+              "explanation": "Use «por» with the unit of time, and put the frequency phrase together.",
+              "type": "fill_gaps",
+              "template": "Eu vou ao ginásio ___ vezes ___ semana e ___ domingo não vou.",
+              "gaps": [
+                {
+                  "answer": "três"
+                },
+                {
+                  "answer": "por"
+                },
+                {
+                  "answer": "ao"
+                }
+              ],
+              "wordBank": [
+                "três",
+                "por",
+                "ao",
+                "duas",
+                "de",
+                "em",
+                "às"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-13",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "For the morning, say «de manhã».",
+              "type": "find_error",
+              "sentence": [
+                "Eu",
+                "estudo",
+                "em",
+                "manhã."
+              ],
+              "wrongIndex": 2,
+              "correction": "de",
+              "options": [
+                "de",
+                "à",
+                "por"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-14",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about yourself.",
+              "explanation": "This question asks about frequency. Use a word like «sempre», «nunca» or «às vezes».",
+              "type": "about_me",
+              "question": "Com que frequência estudas inglês?",
+              "sampleAnswer": "Estudo inglês às vezes.",
+              "hints": [
+                "sempre",
+                "nunca",
+                "geralmente",
+                "habitualmente",
+                "por semana",
+                "por mês"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-15",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that she always drinks coffee in the morning.",
+              "explanation": "In European Portuguese «sempre» usually comes right after the verb: «bebe sempre». Use «de manhã» for the morning.",
+              "type": "build_phrase",
+              "answer": [
+                "Ela",
+                "bebe",
+                "sempre",
+                "café",
+                "de",
+                "manhã."
+              ],
+              "distractors": [
+                "nunca",
+                "geralmente",
+                "às"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-16",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend answers: «Sempre.» Ask how often they study.",
+              "explanation": "Use «com que frequência» to ask how often something happens.",
+              "type": "question_for_answer",
+              "givenAnswer": "Sempre.",
+              "answer": [
+                "Com",
+                "que",
+                "frequência",
+                "estudas?"
+              ],
+              "distractors": [
+                "Quando",
+                "Onde",
+                "Como"
+              ],
+              "acceptedAnswers": [
+                "Com que frequência é que estudas?"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-17",
+              "topicId": "m3-frequency-time",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the gap.",
+              "explanation": "Use «por» with a time unit: «uma vez por mês».",
+              "type": "fill_gaps",
+              "template": "Nós vamos ao médico uma vez ___ mês.",
+              "gaps": [
+                {
+                  "answer": "por"
+                }
+              ],
+              "wordBank": [
+                "por",
+                "em",
+                "de",
+                "a"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-18",
+              "topicId": "m3-frequency-time",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that you usually have lunch at one o'clock.",
+              "explanation": "«Habitualmente» can open the sentence or follow the verb. Use «às» with a specific time.",
+              "type": "build_phrase",
+              "answer": [
+                "Habitualmente",
+                "almoço",
+                "às",
+                "treze",
+                "horas."
+              ],
+              "distractors": [
+                "nunca",
+                "sempre",
+                "em"
+              ],
+              "acceptedAnswers": [
+                "Eu almoço habitualmente às treze horas."
+              ]
+            },
+            {
+              "id": "m3-frequency-time-19",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "For repeated days, use «aos sábados». «Sábado» is plural here, so the preposition changes to «aos».",
+              "type": "find_error",
+              "sentence": [
+                "Eu",
+                "vou",
+                "ao",
+                "supermercado",
+                "sempre",
+                "ao",
+                "sábados."
+              ],
+              "wrongIndex": 5,
+              "correction": "aos",
+              "options": [
+                "aos",
+                "em",
+                "por"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-20",
+              "topicId": "m3-frequency-time",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend says: «De manhã, à tarde e à noite.» What did you ask?",
+              "explanation": "Use «quando» to ask about time; «Quando é que estudas?» is the most natural spoken form.",
+              "type": "question_for_answer",
+              "givenAnswer": "De manhã, à tarde e à noite.",
+              "answer": [
+                "Quando",
+                "é",
+                "que",
+                "estudas?"
+              ],
+              "distractors": [
+                "Onde",
+                "Como",
+                "Quantas"
+              ],
+              "acceptedAnswers": [
+                "Quando estudas?",
+                "Quando é que tu estudas?"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-21",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that Ana always drinks tea in the morning.",
+              "explanation": "«Sempre» usually follows the verb: «bebe sempre». Use «de manhã» for the morning.",
+              "type": "build_phrase",
+              "answer": [
+                "A",
+                "Ana",
+                "bebe",
+                "sempre",
+                "chá",
+                "de",
+                "manhã."
+              ],
+              "distractors": [
+                "nunca",
+                "à noite",
+                "café"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-22",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that we usually have class at nine o'clock.",
+              "explanation": "«Habitualmente» can go before the verb or open the sentence. For exact hours, use «às».",
+              "type": "build_phrase",
+              "answer": [
+                "Nós",
+                "habitualmente",
+                "temos",
+                "aula",
+                "às",
+                "nove",
+                "horas."
+              ],
+              "distractors": [
+                "sempre",
+                "à noite",
+                "por semana"
+              ],
+              "acceptedAnswers": [
+                "Habitualmente temos aula às nove horas."
+              ]
+            },
+            {
+              "id": "m3-frequency-time-23",
+              "topicId": "m3-frequency-time",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that he never works on Sundays.",
+              "explanation": "Use «nunca» before the verb. For a repeated day, «aos domingos» is natural in European Portuguese.",
+              "type": "build_phrase",
+              "answer": [
+                "Ele",
+                "nunca",
+                "trabalha",
+                "aos",
+                "domingos."
+              ],
+              "distractors": [
+                "sempre",
+                "às vezes",
+                "à noite"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-24",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that they work three times a month.",
+              "explanation": "Use «por» to show frequency in a time unit, like «por mês».",
+              "type": "build_phrase",
+              "answer": [
+                "Eles",
+                "trabalham",
+                "três",
+                "vezes",
+                "por",
+                "mês."
+              ],
+              "distractors": [
+                "sempre",
+                "por semana",
+                "nunca"
+              ],
+              "acceptedAnswers": [
+                "Trabalham três vezes por mês."
+              ]
+            },
+            {
+              "id": "m3-frequency-time-25",
+              "topicId": "m3-frequency-time",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that you go to the gym sometimes at night.",
+              "explanation": "Place «às vezes» before the verb. Use «à noite» for night/evening.",
+              "type": "build_phrase",
+              "answer": [
+                "Eu",
+                "às",
+                "vezes",
+                "vou",
+                "ao",
+                "ginásio",
+                "à",
+                "noite."
+              ],
+              "distractors": [
+                "sempre",
+                "de manhã",
+                "por semana"
+              ],
+              "acceptedAnswers": [
+                "Às vezes vou ao ginásio à noite."
+              ]
+            },
+            {
+              "id": "m3-frequency-time-26",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that you drink two coffees per day.",
+              "explanation": "Use «por» when you say how much happens in one day.",
+              "type": "build_phrase",
+              "answer": [
+                "Eu",
+                "bebo",
+                "dois",
+                "cafés",
+                "por",
+                "dia."
+              ],
+              "distractors": [
+                "cinco",
+                "por semana",
+                "nunca"
+              ],
+              "acceptedAnswers": [
+                "Bebo dois cafés por dia."
+              ]
+            },
+            {
+              "id": "m3-frequency-time-27",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend says: «Eu estudo sempre às oito horas.» What did you ask?",
+              "explanation": "Ask exact time with «a que horas». «É que» is also very common in Portugal.",
+              "type": "question_for_answer",
+              "givenAnswer": "Eu estudo sempre às oito horas.",
+              "answer": [
+                "A",
+                "que",
+                "horas",
+                "é",
+                "que",
+                "estudas?"
+              ],
+              "distractors": [
+                "Quando",
+                "Quantas vezes",
+                "Onde"
+              ],
+              "acceptedAnswers": [
+                "A que horas estudas?"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-28",
+              "topicId": "m3-frequency-time",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend says: «Vou ao ginásio três vezes por semana.» What did you ask?",
+              "explanation": "Use «quantas vezes» for frequency. Keep the question in European Portuguese word order.",
+              "type": "question_for_answer",
+              "givenAnswer": "Vou ao ginásio três vezes por semana.",
+              "answer": [
+                "Quantas",
+                "vezes",
+                "vais",
+                "ao",
+                "ginásio",
+                "por",
+                "semana?"
+              ],
+              "distractors": [
+                "Quando",
+                "Onde",
+                "A que horas"
+              ],
+              "acceptedAnswers": [
+                "Quantas vezes é que vais ao ginásio por semana?"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-29",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend says: «A Ana bebe chá à noite.» Ask when Ana drinks tea.",
+              "explanation": "In European Portuguese say «Quando é que a Ana bebe chá?». «Quando a Ana bebe chá?» is Brazilian word order.",
+              "type": "question_for_answer",
+              "givenAnswer": "A Ana bebe chá à noite.",
+              "answer": [
+                "Quando",
+                "é",
+                "que",
+                "a",
+                "Ana",
+                "bebe",
+                "chá?"
+              ],
+              "distractors": [
+                "Onde",
+                "Como",
+                "bebes"
+              ],
+              "acceptedAnswers": [
+                "Quando bebe a Ana chá?"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-30",
+              "topicId": "m3-frequency-time",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend says: «Ela almoça geralmente às treze horas.» What did you ask?",
+              "explanation": "For exact times, use «a que horas». The adverb «geralmente» goes before the verb.",
+              "type": "question_for_answer",
+              "givenAnswer": "Ela almoça geralmente às treze horas.",
+              "answer": [
+                "A",
+                "que",
+                "horas",
+                "é",
+                "que",
+                "ela",
+                "almoça",
+                "geralmente?"
+              ],
+              "distractors": [
+                "Quando",
+                "Quantas vezes",
+                "Onde"
+              ],
+              "acceptedAnswers": [
+                "A que horas almoça ela geralmente?"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-31",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friends say: «Trabalhamos cinco dias por semana.» What did you ask them?",
+              "explanation": "You ask them (vocês), so the verb is «trabalham». «Quantos dias por semana…?» asks about frequency in days.",
+              "type": "question_for_answer",
+              "givenAnswer": "Trabalhamos cinco dias por semana.",
+              "answer": [
+                "Quantos",
+                "dias",
+                "por",
+                "semana",
+                "trabalham?"
+              ],
+              "distractors": [
+                "Quando",
+                "Onde",
+                "A que horas"
+              ],
+              "acceptedAnswers": [
+                "Quantos dias por semana é que trabalham?",
+                "Quantos dias por semana é que vocês trabalham?"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-32",
+              "topicId": "m3-frequency-time",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Sempre» means «always». It usually goes before the verb.",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "I **always** study in the morning.",
+              "word": "always",
+              "answer": "sempre",
+              "options": [
+                "sempre",
+                "nunca",
+                "às vezes",
+                "geralmente"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-33",
+              "topicId": "m3-frequency-time",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the word in bold.",
+              "explanation": "«Geralmente» means «usually». It goes before the verb in a normal sentence.",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "She **usually** has lunch at one o'clock.",
+              "word": "usually",
+              "answer": "geralmente",
+              "options": [
+                "geralmente",
+                "sempre",
+                "nunca",
+                "às vezes"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-34",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the Portuguese for the words in bold.",
+              "explanation": "Use «em» with months in Portuguese. «Em janeiro» means «in January».",
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "I go to Lisbon **in January**.",
+              "word": "in January",
+              "answer": "em janeiro",
+              "options": [
+                "em janeiro",
+                "de manhã",
+                "por semana",
+                "à noite"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-35",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the two gaps.",
+              "explanation": "In European Portuguese «sempre» usually follows the verb: «tomam sempre». Use «de manhã» for the morning.",
+              "type": "fill_gaps",
+              "template": "Eles tomam ___ chá ___ manhã.",
+              "gaps": [
+                {
+                  "answer": "sempre"
+                },
+                {
+                  "answer": "de"
+                }
+              ],
+              "wordBank": [
+                "sempre",
+                "de",
+                "nunca",
+                "à",
+                "por",
+                "às vezes"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-36",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the two gaps.",
+              "explanation": "Use contractions like «ao» and «à» in European Portuguese. «À noite» is the correct phrase.",
+              "type": "fill_gaps",
+              "template": "Nós vamos ___ cinema ___ noite.",
+              "gaps": [
+                {
+                  "answer": "ao"
+                },
+                {
+                  "answer": "à"
+                }
+              ],
+              "wordBank": [
+                "ao",
+                "à",
+                "de",
+                "em",
+                "por"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-37",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Fill the two gaps.",
+              "explanation": "Use «por» with a time unit: «cinco dias por semana».",
+              "type": "fill_gaps",
+              "template": "Eu trabalho ___ dias ___ semana.",
+              "gaps": [
+                {
+                  "answer": "cinco"
+                },
+                {
+                  "answer": "por"
+                }
+              ],
+              "wordBank": [
+                "cinco",
+                "por",
+                "quatro",
+                "de",
+                "em",
+                "sempre"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-38",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "Parts of the day: «à noite» (or «de noite»), «de manhã», «à tarde». «Na noite» is not used here.",
+              "type": "find_error",
+              "sentence": [
+                "Ela",
+                "nunca",
+                "bebe",
+                "café",
+                "na",
+                "noite."
+              ],
+              "wrongIndex": 4,
+              "correction": "à",
+              "options": [
+                "à",
+                "em",
+                "por"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-39",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "One word is wrong. Tap it and choose the correction.",
+              "explanation": "Use «por» to talk about frequency in a time unit: «por semana».",
+              "type": "find_error",
+              "sentence": [
+                "Nós",
+                "trabalhamos",
+                "cinco",
+                "dias",
+                "a",
+                "semana."
+              ],
+              "wrongIndex": 4,
+              "correction": "por",
+              "options": [
+                "por",
+                "de",
+                "em"
+              ]
+            },
+            {
+              "id": "m3-frequency-time-40",
+              "topicId": "m3-frequency-time",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Answer about yourself.",
+              "explanation": "Use a frequency word before the verb. Add a natural time phrase like «de manhã» or «à noite».",
+              "type": "about_me",
+              "question": "Com que frequência estudas inglês?",
+              "sampleAnswer": "Estudo inglês geralmente à noite.",
+              "hints": [
+                "sempre",
+                "nunca",
+                "às vezes",
+                "de manhã",
+                "por semana",
+                "habitualmente"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "phraseSets": [

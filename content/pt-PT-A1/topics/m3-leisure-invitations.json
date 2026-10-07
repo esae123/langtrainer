@@ -1,0 +1,674 @@
+{
+  "id": "m3-leisure-invitations",
+  "moduleId": "m3",
+  "title": "Leisure and invitations",
+  "kind": "situation",
+  "context": "In Portugal, inviting friends out for leisure activities is part of everyday social life. You can invite someone using simple present questions like **Vamos ao cinema?** (Shall we go to the cinema?) or **Queres ir à praia?** (Do you want to go to the beach?).\n\nTo accept an invitation, you can use these polite and enthusiastic phrases:\n- **Sim, com certeza!** (Yes, of course!)\n- **Boa ideia!** (Good idea!)\n- **Combinado!** (Agreed! / It's a deal!)\n\nTo decline politely, express regret and give a simple reason:\n- **Desculpa, não posso.** (Sorry, I can't.)\n- **Tenho de trabalhar.** (I have to work.)\n- **Talvez noutro dia.** (Maybe another day.)\n\n*Examples*:\n- **Vamos ao parque no sábado?** — Shall we go to the park on Saturday?\n- **Sim, com certeza! A que horas?** — Yes, of course! At what time?\n- **Queres ir ao café?** — Do you want to go to the café?\n- **Não posso, tenho de estudar.** — I can't, I have to study.\n- **O que gostas de fazer no teu tempo livre?** — What do you like to do in your free time?\n- **Gosto de ouvir música e ler livros.** — I like to listen to music and read books.\n\n*Watch out*:\n1. Remember preposition contractions: **ir ao cinema** (a + o = ao) with masculine nouns, but **ir à praia** (a + a = à) with feminine nouns.\n2. **Combinado!** is a very common European Portuguese expression used to confirm a plan or meeting.",
+  "keyItems": [
+    {
+      "target": "tempo livre",
+      "support": "free time"
+    },
+    {
+      "target": "ir ao cinema",
+      "support": "to go to the cinema"
+    },
+    {
+      "target": "ir à praia",
+      "support": "to go to the beach"
+    },
+    {
+      "target": "ir ao teatro",
+      "support": "to go to the theatre"
+    },
+    {
+      "target": "ouvir música",
+      "support": "to listen to music"
+    },
+    {
+      "target": "ler um livro",
+      "support": "to read a book"
+    },
+    {
+      "target": "passar tempo com amigos",
+      "support": "to spend time with friends"
+    },
+    {
+      "target": "Vamos...?",
+      "support": "Shall we...?"
+    },
+    {
+      "target": "Queres...?",
+      "support": "Do you want to...?"
+    },
+    {
+      "target": "Sim, com certeza!",
+      "support": "Yes, of course!"
+    },
+    {
+      "target": "Boa ideia!",
+      "support": "Good idea!"
+    },
+    {
+      "target": "Combinado!",
+      "support": "Agreed! / Deal!"
+    },
+    {
+      "target": "Desculpa, não posso.",
+      "support": "Sorry, I can't."
+    },
+    {
+      "target": "Tenho de...",
+      "support": "I have to..."
+    },
+    {
+      "target": "Talvez noutro dia.",
+      "support": "Maybe another day."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m3-leisure-invitations-01",
+      "type": "match_pairs",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each invitation response with its English meaning.",
+      "explanation": "These standard phrases are used in Portugal to accept or decline social invitations.",
+      "pairs": [
+        {
+          "target": "Boa ideia!",
+          "support": "Good idea!"
+        },
+        {
+          "target": "Combinado!",
+          "support": "Agreed!"
+        },
+        {
+          "target": "Talvez noutro dia.",
+          "support": "Maybe another day."
+        },
+        {
+          "target": "Desculpa, não posso.",
+          "support": "Sorry, I can't."
+        }
+      ]
+    },
+    {
+      "id": "m3-leisure-invitations-02",
+      "type": "translate_word",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the bold word.",
+      "explanation": "«Música» means music in European Portuguese.",
+      "direction": "toTarget",
+      "sentence": "I like to listen to **music** in my free time.",
+      "word": "music",
+      "answer": "música",
+      "options": ["música", "teatro", "cinema", "praia"]
+    },
+    {
+      "id": "m3-leisure-invitations-03",
+      "type": "build_phrase",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Invite your friend to the cinema: \"Shall we go to the cinema?\"",
+      "explanation": "Use «Vamos» followed by «ao cinema» (a + o cinema = ao cinema).",
+      "answer": ["Vamos", "ao", "cinema?"],
+      "distractors": ["da", "fazer", "estudo"]
+    },
+    {
+      "id": "m3-leisure-invitations-04",
+      "type": "fill_gaps",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the gaps to complete the invitation and positive response.",
+      "explanation": "Places with feminine gender take «à» (a + a praia = à praia). «Boa ideia!» means \"Good idea!\".",
+      "template": "— Queres ir ___ praia hoje? — ___ ideia!",
+      "gaps": [
+        {
+          "answer": "à"
+        },
+        {
+          "answer": "Boa"
+        }
+      ],
+      "wordBank": ["à", "Boa", "ao", "Mau", "de", "Sim"]
+    },
+    {
+      "id": "m3-leisure-invitations-05",
+      "type": "question_for_answer",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Sim, com certeza!» What was your invitation? (\"Shall we go to the park?\")",
+      "explanation": "«Vamos ao parque?» asks \"Shall we go to the park?\". «Parque» is masculine, so it takes «ao».",
+      "givenAnswer": "Sim, com certeza!",
+      "answer": ["Vamos", "ao", "parque?"],
+      "distractors": ["na", "com", "como"]
+    },
+    {
+      "id": "m3-leisure-invitations-06",
+      "type": "find_error",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correct form.",
+      "explanation": "To say \"I can't\", use the 1st person singular form «não posso», not «pode».",
+      "sentence": ["Desculpa,", "não", "pode,", "tenho", "de", "estudar."],
+      "wrongIndex": 2,
+      "correction": "posso",
+      "options": ["posso", "podes", "podem"]
+    },
+    {
+      "id": "m3-leisure-invitations-07",
+      "type": "build_phrase",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Build the sentence: \"I like to read books in my free time.\"",
+      "explanation": "«Gostar» takes «de» before an infinitive: «Gosto de ler... no meu tempo livre».",
+      "answer": ["Gosto", "de", "ler", "livros", "no", "meu", "tempo", "livre."],
+      "distractors": ["da", "estudar", "com"],
+      "acceptedAnswers": ["Eu gosto de ler livros no meu tempo livre."]
+    },
+    {
+      "id": "m3-leisure-invitations-08",
+      "type": "order_dialogue",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Put the dialogue in a natural order.",
+      "explanation": "First comes the greeting and invitation, then the polite decline, follow-up, and confirmation.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Olá! Queres ir ao café hoje à tarde?"
+        },
+        {
+          "speaker": "B",
+          "text": "Desculpa, não posso. Tenho de trabalhar."
+        },
+        {
+          "speaker": "A",
+          "text": "Que pena! Talvez noutro dia?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sim, combinado!"
+        }
+      ]
+    },
+    {
+      "id": "m3-leisure-invitations-09",
+      "type": "translate_word",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese word for \"Agreed!\".",
+      "explanation": "«Combinado!» is widely used in Portugal to express agreement on a plan.",
+      "direction": "toTarget",
+      "sentence": "We will meet at six o'clock. **Agreed!**",
+      "word": "Agreed!",
+      "answer": "Combinado!",
+      "options": ["Combinado!", "Desculpa!", "Obrigada!", "Talvez!"]
+    },
+    {
+      "id": "m3-leisure-invitations-10",
+      "type": "question_for_answer",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Gosto de ouvir música.» What question did you ask?",
+      "explanation": "To ask what someone likes to do, use «O que gostas de fazer?» (or «O que é que gostas de fazer?»).",
+      "givenAnswer": "Gosto de ouvir música.",
+      "answer": ["O", "que", "gostas", "de", "fazer?"],
+      "distractors": ["onde", "como", "quem"],
+      "acceptedAnswers": ["O que é que gostas de fazer?"]
+    },
+    {
+      "id": "m3-leisure-invitations-11",
+      "type": "build_phrase",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Politely decline an invitation: \"Sorry, I can't, I have to work.\"",
+      "explanation": "Express regret with «Desculpa», then use «não posso» and «tenho de + verb».",
+      "answer": ["Desculpa,", "não", "posso,", "tenho", "de", "trabalhar."],
+      "distractors": ["pede", "estudo", "com"]
+    },
+    {
+      "id": "m3-leisure-invitations-12",
+      "type": "about_me",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself in Portuguese.",
+      "explanation": "State your hobbies using «Gosto de + infinitivo» (e.g. «Gosto de ir ao cinema»).",
+      "question": "O que gostas de fazer no teu tempo livre?",
+      "sampleAnswer": "Gosto de ler livros e ouvir música.",
+      "hints": ["ir", "ao", "cinema,", "ver", "televisão,", "com", "amigos"]
+    },
+    {
+      "id": "m3-leisure-invitations-13",
+      "type": "fill_gaps",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the three gaps to complete the invitation dialogue.",
+      "explanation": "Use 2nd person «Queres» to ask, «Sim» to accept, and «Boa ideia!» to express enthusiasm.",
+      "template": "— ___ ir ao teatro no sábado? — ___, boa ___!",
+      "gaps": [
+        {
+          "answer": "Queres"
+        },
+        {
+          "answer": "Sim"
+        },
+        {
+          "answer": "ideia"
+        }
+      ],
+      "wordBank": ["Queres", "Sim", "ideia", "Querem", "Não", "tempo"]
+    },
+    {
+      "id": "m3-leisure-invitations-14",
+      "type": "build_phrase",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Suggest an alternative day: \"Maybe another day, I have to study today.\"",
+      "explanation": "«Talvez noutro dia» means \"Maybe another day\". «Tenho de» means \"I have to\".",
+      "answer": ["Talvez", "noutro", "dia,", "tenho", "de", "estudar", "hoje."],
+      "distractors": ["outro", "trabalhar", "com"]
+    },
+    {
+      "id": "m3-leisure-invitations-15",
+      "type": "find_error",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Cinema is masculine in Portuguese («o cinema»), so «a + o» contracts to «ao».",
+      "sentence": ["Nós", "vamos", "à", "cinema", "no", "domingo."],
+      "wrongIndex": 2,
+      "correction": "ao",
+      "options": ["ao", "do", "em"]
+    },
+    {
+      "id": "m3-leisure-invitations-16",
+      "type": "question_for_answer",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Someone answers: «Não posso, tenho de estudar.» What did you ask? (\"Do you want to go to the beach?\")",
+      "explanation": "«Queres ir à praia?» asks \"Do you want to go to the beach?\". «Praia» is feminine, so «à praia».",
+      "givenAnswer": "Não posso, tenho de estudar.",
+      "answer": ["Queres", "ir", "à", "praia?"],
+      "distractors": ["ao", "como", "onde"],
+      "acceptedAnswers": ["Tu queres ir à praia?"]
+    },
+    {
+      "id": "m3-leisure-invitations-17",
+      "type": "translate_word",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese word for \"beach\".",
+      "explanation": "«Praia» is the Portuguese word for beach.",
+      "direction": "toTarget",
+      "sentence": "Do you want to go to the **beach** today?",
+      "word": "beach",
+      "answer": "praia",
+      "options": ["praia", "cinema", "parque", "teatro"]
+    },
+    {
+      "id": "m3-leisure-invitations-18",
+      "type": "build_phrase",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Accept enthusiastically: \"Yes, of course! At what time?\"",
+      "explanation": "«Com certeza!» means \"of course!\". «A que horas?» asks \"At what time?\".",
+      "answer": ["Sim,", "com", "certeza!", "A", "que", "horas?"],
+      "distractors": ["de", "onde", "como"]
+    },
+    {
+      "id": "m3-leisure-invitations-19",
+      "type": "fill_gaps",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the missing words.",
+      "explanation": "«Passar tempo» means \"to spend time\". «Os meus amigos» includes the definite article.",
+      "template": "Eu gosto de passar ___ com os meus ___.",
+      "gaps": [
+        {
+          "answer": "tempo"
+        },
+        {
+          "answer": "amigos"
+        }
+      ],
+      "wordBank": ["tempo", "amigos", "livro", "música", "hora"]
+    },
+    {
+      "id": "m3-leisure-invitations-20",
+      "type": "question_for_answer",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Combinado! Até sábado.» What did you ask? (\"Shall we go to the park on Saturday?\")",
+      "explanation": "«Vamos ao parque no sábado?» combines the preposition «ao» (masculine place) and «no» (masculine day).",
+      "givenAnswer": "Combinado! Até sábado.",
+      "answer": ["Vamos", "ao", "parque", "no", "sábado?"],
+      "distractors": ["na", "da", "como"]
+    },
+    {
+      "id": "m3-leisure-invitations-21",
+      "type": "question_for_answer",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Sim, com certeza!» What did you ask? (\"Shall we go to the café?\")",
+      "explanation": "To propose an activity, use «Vamos ao...?» (Shall we go to...?).",
+      "givenAnswer": "Sim, com certeza!",
+      "answer": ["Vamos", "ao", "café?"],
+      "distractors": ["Ir", "do", "cafés"]
+    },
+    {
+      "id": "m3-leisure-invitations-22",
+      "type": "build_phrase",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you want to spend time with friends.",
+      "explanation": "«Quero» means 'I want', and «passar tempo com» means 'to spend time with'.",
+      "answer": ["Quero", "passar", "tempo", "com", "amigos."],
+      "distractors": ["passo", "no", "amiga"],
+      "acceptedAnswers": [
+        "Eu quero passar tempo com amigos.",
+        "Quero passar tempo com os meus amigos.",
+        "Eu quero passar tempo com os meus amigos."
+      ]
+    },
+    {
+      "id": "m3-leisure-invitations-23",
+      "type": "fill_gaps",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the dialogue to decline an invitation politely.",
+      "explanation": "Use «Desculpa, não posso» (Sorry, I can't) and «tenho de» (I have to).",
+      "template": "— Queres ir ao teatro? — ___, não ___, tenho ___ trabalhar.",
+      "gaps": [
+        {
+          "answer": "Desculpa"
+        },
+        {
+          "answer": "posso"
+        },
+        {
+          "answer": "de"
+        }
+      ],
+      "wordBank": ["Desculpa", "posso", "de", "Obrigado", "pode", "em"]
+    },
+    {
+      "id": "m3-leisure-invitations-24",
+      "type": "find_error",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Praia» is a feminine noun, so the contraction of «a + a» is «à»: «à praia».",
+      "sentence": ["Nós", "vamos", "ao", "praia", "hoje."],
+      "wrongIndex": 2,
+      "correction": "à",
+      "options": ["à", "do", "no"]
+    },
+    {
+      "id": "m3-leisure-invitations-25",
+      "type": "about_me",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about your plans for the weekend.",
+      "explanation": "You can accept enthusiastically («Sim, boa ideia!») or express plans for a specific day.",
+      "question": "Queres ir ao cinema no fim de semana?",
+      "sampleAnswer": "Sim, boa ideia! Quero ir no domingo.",
+      "hints": ["Desculpa,", "não", "posso,", "tenho", "de", "trabalhar"]
+    },
+    {
+      "id": "m3-leisure-invitations-26",
+      "type": "translate_word",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Ideia» is feminine, so the adjective for 'good' takes the feminine form «boa».",
+      "direction": "toTarget",
+      "sentence": "It is a **good** idea.",
+      "word": "good",
+      "answer": "boa",
+      "options": ["boa", "bom", "bem", "mau"]
+    },
+    {
+      "id": "m3-leisure-invitations-27",
+      "type": "build_phrase",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Refuse an invitation: «Maybe another day, today I cannot.»",
+      "explanation": "«Talvez noutro dia» means 'Maybe another day'. «Hoje não posso» means 'Today I cannot'.",
+      "answer": ["Talvez", "noutro", "dia,", "hoje", "não", "posso."],
+      "distractors": ["outro", "pode", "amanhã"],
+      "acceptedAnswers": ["Talvez noutro dia, não posso hoje."]
+    },
+    {
+      "id": "m3-leisure-invitations-28",
+      "type": "question_for_answer",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Sim, com certeza! A que horas?» What did you ask?",
+      "explanation": "Invite someone using «Queres ir ao + noun»: «Queres ir ao cinema hoje?».",
+      "givenAnswer": "Sim, com certeza! A que horas?",
+      "answer": ["Queres", "ir", "ao", "cinema", "hoje?"],
+      "distractors": ["Gostas", "da", "filme"]
+    },
+    {
+      "id": "m3-leisure-invitations-29",
+      "type": "fill_gaps",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Confirm a plan with a friend using a common expression.",
+      "explanation": "«Combinado!» is widely used in European Portuguese to confirm an agreement or plan.",
+      "template": "— Vemo-nos às sete horas? — ___!",
+      "gaps": [
+        {
+          "answer": "Combinado"
+        }
+      ],
+      "wordBank": ["Combinado", "Desculpa", "Obrigado", "Talvez"]
+    },
+    {
+      "id": "m3-leisure-invitations-30",
+      "type": "build_phrase",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask your friend if they want to go to the beach tomorrow.",
+      "explanation": "Use «Queres ir...» (Do you want to go...) followed by «à praia» (feminine contraction).",
+      "answer": ["Queres", "ir", "à", "praia", "amanhã?"],
+      "distractors": ["ao", "quer", "em"],
+      "acceptedAnswers": ["Tu queres ir à praia amanhã?"]
+    },
+    {
+      "id": "m3-leisure-invitations-31",
+      "type": "find_error",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Find the incorrect preposition in this sentence.",
+      "explanation": "In European Portuguese, expressing obligation with «ter» requires «de»: «tenho de estudar».",
+      "sentence": ["Eu", "tenho", "para", "estudar", "hoje."],
+      "wrongIndex": 2,
+      "correction": "de",
+      "options": ["de", "do", "com"]
+    },
+    {
+      "id": "m3-leisure-invitations-32",
+      "type": "translate_word",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Tempo livre» translates to 'free time'.",
+      "direction": "toTarget",
+      "sentence": "What do you like to do in your **free** time?",
+      "word": "free",
+      "answer": "livre",
+      "options": ["livre", "limpo", "novo", "longo"]
+    },
+    {
+      "id": "m3-leisure-invitations-33",
+      "type": "question_for_answer",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend says: «Gosto de ouvir música.» What did you ask them?",
+      "explanation": "Ask what someone likes to listen to using «O que gostas de ouvir?».",
+      "givenAnswer": "Gosto de ouvir música.",
+      "answer": ["O", "que", "gostas", "de", "ouvir?"],
+      "distractors": ["Quem", "fazer", "onde"],
+      "acceptedAnswers": ["O que é que gostas de ouvir?"]
+    },
+    {
+      "id": "m3-leisure-invitations-34",
+      "type": "build_phrase",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Propose going to the theatre on Sunday.",
+      "explanation": "«Teatro» is masculine, so «a + o» contracts to «ao teatro».",
+      "answer": ["Vamos", "ao", "teatro", "no", "domingo?"],
+      "distractors": ["à", "na", "ir"],
+      "acceptedAnswers": ["Nós vamos ao teatro no domingo?"]
+    },
+    {
+      "id": "m3-leisure-invitations-35",
+      "type": "order_dialogue",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Put this conversation making weekend plans in order.",
+      "explanation": "First ask about today, handle the decline, propose another day, then confirm.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Olá! Queres ir ao cinema hoje?"
+        },
+        {
+          "speaker": "B",
+          "text": "Hoje não posso, tenho de trabalhar."
+        },
+        {
+          "speaker": "A",
+          "text": "E no sábado? Vamos à praia?"
+        },
+        {
+          "speaker": "B",
+          "text": "Boa ideia! Combinado!"
+        }
+      ]
+    },
+    {
+      "id": "m3-leisure-invitations-36",
+      "type": "build_phrase",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «I like to read a book in the park.»",
+      "explanation": "«Gosto de ler» is followed by «um livro» and «no parque» (em + o = no).",
+      "answer": ["Gosto", "de", "ler", "um", "livro", "no", "parque."],
+      "distractors": ["da", "uma", "leres"],
+      "acceptedAnswers": ["Eu gosto de ler um livro no parque."]
+    },
+    {
+      "id": "m3-leisure-invitations-37",
+      "type": "fill_gaps",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the invitation and answer.",
+      "explanation": "«Queres...» asks if someone wants to do something, and «com certeza!» means 'of course!'.",
+      "template": "— ___ ir ao restaurante logo? — Sim, com ___!",
+      "gaps": [
+        {
+          "answer": "Queres"
+        },
+        {
+          "answer": "certeza"
+        }
+      ],
+      "wordBank": ["Queres", "certeza", "Quer", "dúvida", "ideia"]
+    },
+    {
+      "id": "m3-leisure-invitations-38",
+      "type": "find_error",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Select it and choose the fix.",
+      "explanation": "«Ir» takes «a»; with a masculine place «a + o» contracts to «ao»: «ir ao cinema».",
+      "sentence": ["Eu", "gosto", "de", "ir", "em", "cinema."],
+      "wrongIndex": 4,
+      "correction": "ao",
+      "options": ["ao", "à", "do"]
+    },
+    {
+      "id": "m3-leisure-invitations-39",
+      "type": "about_me",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A friend invites you. Answer about yourself: accept or decline.",
+      "explanation": "Accept with «Sim, boa ideia!» or «Combinado!», or decline with «Desculpa, não posso» + a reason with «tenho de…».",
+      "question": "Vamos à praia no sábado?",
+      "sampleAnswer": "Desculpa, não posso, tenho de trabalhar.",
+      "hints": ["Sim,", "boa", "ideia!", "Combinado!", "Talvez", "noutro", "dia."]
+    },
+    {
+      "id": "m3-leisure-invitations-40",
+      "type": "match_pairs",
+      "topicId": "m3-leisure-invitations",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese expression with its English meaning.",
+      "explanation": "These key phrases are useful for giving quick responses to invitations.",
+      "pairs": [
+        {
+          "target": "Boa ideia!",
+          "support": "Good idea!"
+        },
+        {
+          "target": "Combinado!",
+          "support": "Agreed!"
+        },
+        {
+          "target": "Com certeza!",
+          "support": "Of course!"
+        },
+        {
+          "target": "Talvez noutro dia.",
+          "support": "Maybe another day."
+        }
+      ]
+    }
+  ]
+}
