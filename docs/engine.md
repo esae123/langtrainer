@@ -60,9 +60,25 @@ split in `blockCountsFor(length, mix)`:
 - **Current topic** = the first topic in program order (module order → topic order) whose
   status is `new` or `learning`. If every topic has been completed once, the new block
   becomes extra review.
-- **Review block**: topics with status `review`/`maintenance` and `nextReviewAt <= now`,
-  earliest first, spread round-robin over at most two topics. If nothing is due, one
-  random completed topic; if nothing is completed, more current-topic exercises.
+- **Review block**: topics with status `review`/`maintenance` and `nextReviewAt <= now`
+  are due. `finishSession` only moves a topic's SRS stage with at least
+  `MIN_REVIEW_ATTEMPTS` (3) review-block attempts, so the plan guarantees that
+  (docs/stage-6-spec.md §1):
+  - the review block takes **one** due topic (earliest due) with **at least 3 items**; a
+    second due topic is added (round-robin) only when the review target is ≥ 6, and then
+    each gets ≥ 3;
+  - when the review target is below 3 (length 5, or a mix with a small review share), the
+    missing slots are borrowed from the new block first, then from phrases — the total
+    length never changes (balanced length 5 with something due → 1 new / 3 review / 1
+    phrase);
+  - in an open session the review items already planned count: the same due topic is
+    reviewed across cycles until it has 3 items in this session, then the next due topic
+    (with the balanced 3/2/1 cycle the first cycle borrows one new slot, so one cycle is
+    already enough);
+  - a review share of 0 is respected (no forced review);
+  - fallbacks are unchanged: if nothing is due (or every due topic already has 3 items in
+    this open session), one random completed topic; if nothing is completed, more
+    current-topic exercises.
 - **Phrases block**: exercises from the phrase sets in program order, unseen first.
 - **Exercise selection**: three groups, in order — (1) unseen (not in `seenExerciseIds`),
   (2) seen but in `wrongExerciseIds` (last regular attempt was wrong), (3) the rest. The

@@ -9,6 +9,7 @@ import {
   type SessionMix,
   type SessionMixShares,
 } from '../settings/settings';
+import { MIN_REVIEW_ATTEMPTS } from './progress';
 import { pickWeighted, shuffle, type Rng } from './rng';
 import type { TopicProgress } from './types';
 
@@ -117,7 +118,10 @@ export function blockCountsFor(
 
 const COMPLETED_STATUSES = new Set(['review', 'mastered', 'maintenance']);
 const MODE_ORDER: InputMode[] = ['tiles', 'letters', 'typing'];
-/** Due topics are spread over at most this many topics per review block. */
+/**
+ * A review block covers at most this many due topics, and the second one only when the
+ * block has room for MIN_REVIEW_ATTEMPTS items for each (docs/stage-6-spec.md §1).
+ */
 const MAX_REVIEW_TOPICS = 2;
 
 export function orderedTopics(program: Program): Topic[] {
@@ -226,13 +230,16 @@ interface BuildResult {
 
 function buildItems(
   input: PlanInput,
-  counts: BlockCounts,
+  baseCounts: BlockCounts,
   used: Set<string>,
-  contextShown: Set<string>
+  contextShown: Set<string>,
+  /** Items already planned in this session (open sessions), to count review items. */
+  prior: readonly PlannedItem[] = []
 ): BuildResult {
   const { program, progress, rng } = input;
   const byTopic = exercisesByTopic(program);
   const current = currentTopicOf(program, progress);
+  const counts: BlockCounts = { ...baseCounts };
 
   const poolFor = (topicId: string, sortByDifficulty: boolean) =>
     orderedPool(
@@ -244,34 +251,71 @@ function buildItems(
       sortByDifficulty
     );
 
-  // --- new block (current topic, easiest first) -------------------------------
-  const newCandidates: Candidate[] = [];
-  let reviewTarget = counts.review;
-  if (current) {
-    const pool = poolFor(current.id, true);
-    for (const exercise of pool.slice(0, counts.new)) {
-      newCandidates.push({ exercise, topicId: current.id });
-      used.add(exercise.id);
-    }
-  } else {
-    // Everything completed: the new block becomes more review.
-    reviewTarget += counts.new;
-  }
+  // --- review target and due topics ------------------------------------------
+  // Everything completed: the new block becomes more review.
+  let reviewTarget = counts.review + (current ? 0 : counts.new);
 
-  // --- review block ----------------------------------------------------------
+  // finishSession only moves a topic's SRS stage with >= MIN_REVIEW_ATTEMPTS review-block
+  // attempts, so a due topic gets at least that many items (docs/stage-6-spec.md §1).
+  // In an open session the review items already planned count towards it, so the same
+  // topic is reviewed across cycles until it has enough, then the next due topic.
+  const priorReview = new Map<string, number>();
+  for (const item of prior) {
+    if (item.block === 'review') {
+      priorReview.set(item.topicId, (priorReview.get(item.topicId) ?? 0) + 1);
+    }
+  }
+  const stillNeeded = (topicId: string) =>
+    Math.max(0, MIN_REVIEW_ATTEMPTS - (priorReview.get(topicId) ?? 0));
   const dueTopicIds = progress
     .filter(
       (row) =>
         (row.status === 'review' || row.status === 'maintenance') &&
         row.nextReviewAt !== undefined &&
         row.nextReviewAt <= input.now &&
-        byTopic.has(row.topicId)
+        byTopic.has(row.topicId) &&
+        stillNeeded(row.topicId) > 0
     )
     .sort((a, b) => (a.nextReviewAt ?? 0) - (b.nextReviewAt ?? 0))
-    .slice(0, MAX_REVIEW_TOPICS)
     .map((row) => row.topicId);
 
-  let reviewTopicIds = dueTopicIds;
+  let reviewTopicIds: string[] = [];
+  // A review share of 0 is respected: no forced review.
+  if (dueTopicIds.length > 0 && reviewTarget > 0) {
+    reviewTopicIds = dueTopicIds.slice(
+      0,
+      reviewTarget >= MAX_REVIEW_TOPICS * MIN_REVIEW_ATTEMPTS ? MAX_REVIEW_TOPICS : 1
+    );
+    const needed = reviewTopicIds.reduce((sum, id) => sum + stillNeeded(id), 0);
+    // Too few review slots: borrow from the new block first, then from phrases, so the
+    // total length stays the same.
+    let deficit = Math.max(0, needed - reviewTarget);
+    if (current && deficit > 0) {
+      const fromNew = Math.min(deficit, counts.new);
+      counts.new -= fromNew;
+      counts.review += fromNew;
+      reviewTarget += fromNew;
+      deficit -= fromNew;
+    }
+    if (deficit > 0) {
+      const fromPhrases = Math.min(deficit, counts.phrases);
+      counts.phrases -= fromPhrases;
+      counts.review += fromPhrases;
+      reviewTarget += fromPhrases;
+    }
+  }
+
+  // --- new block (current topic, easiest first) -------------------------------
+  const newCandidates: Candidate[] = [];
+  if (current) {
+    const pool = poolFor(current.id, true);
+    for (const exercise of pool.slice(0, counts.new)) {
+      newCandidates.push({ exercise, topicId: current.id });
+      used.add(exercise.id);
+    }
+  }
+
+  // --- review block ----------------------------------------------------------
   if (reviewTopicIds.length === 0) {
     const completed = progress
       .filter((row) => COMPLETED_STATUSES.has(row.status) && byTopic.has(row.topicId))
@@ -399,6 +443,12 @@ export function planNextCycle(plan: SessionPlan, input: PlanInput): SessionPlan 
   const contextShown = new Set(
     plan.items.filter((item) => item.showContextBefore).map((item) => item.topicId)
   );
-  const { items } = buildItems(input, blockCountsFor('open', input.sessionMix), used, contextShown);
+  const { items } = buildItems(
+    input,
+    blockCountsFor('open', input.sessionMix),
+    used,
+    contextShown,
+    plan.items
+  );
   return { ...plan, items: [...plan.items, ...items] };
 }
