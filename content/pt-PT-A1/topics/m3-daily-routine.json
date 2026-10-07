@@ -1,0 +1,657 @@
+{
+  "id": "m3-daily-routine",
+  "moduleId": "m3",
+  "title": "Daily routine and habits",
+  "kind": "grammar",
+  "context": "Daily routines in Portuguese often use the present tense. Regular **-ir** verbs follow a clear pattern: **abro, abres, abre**; **decido, decides, decide**. Some very common routine verbs are irregular: **vou**, **vejo**, **leio**, **saio**, **ouço**. For habits, Portuguese often uses **costumar + infinitivo**. Reflexive verbs talk about actions you do to yourself, like getting up or going to bed.\n\n- **Levanto-me às sete.** — I get up at seven.\n- **Lavas-te antes do pequeno-almoço?** — Do you wash before breakfast?\n- **A Marta veste-se depressa.** — Marta gets dressed quickly.\n- **Costumamos ler à noite.** — We usually read at night.\n- **O Rui sai às oito e vai para a escola.** — Rui leaves at eight and goes to school.\n- **Eu ouço música e leio o jornal.** — I listen to music and read the newspaper.\n- **Assistes ao filme ou ao telejornal?** — Do you watch the film or the news?\n\n**Watch out:**\n- **assistir** normally needs **a**: **assistir ao filme**.\n- After question words and negation, reflexive pronouns go before the verb: **Quando te deitas?**, **não me deito tarde**.",
+  "keyItems": [
+    {
+      "target": "abrir",
+      "support": "to open",
+      "note": "regular -ir"
+    },
+    {
+      "target": "decidir",
+      "support": "to decide",
+      "note": "regular -ir"
+    },
+    {
+      "target": "partir",
+      "support": "to leave",
+      "note": "regular -ir"
+    },
+    {
+      "target": "assistir a",
+      "support": "to watch / attend",
+      "note": "takes the preposition a"
+    },
+    {
+      "target": "levantar-se",
+      "support": "to get up",
+      "note": "reflexive"
+    },
+    {
+      "target": "deitar-se",
+      "support": "to go to bed",
+      "note": "reflexive"
+    },
+    {
+      "target": "lavar-se",
+      "support": "to wash oneself",
+      "note": "reflexive"
+    },
+    {
+      "target": "vestir-se",
+      "support": "to get dressed",
+      "note": "reflexive"
+    },
+    {
+      "target": "ir",
+      "support": "to go",
+      "note": "irregular: vou, vais, vai"
+    },
+    {
+      "target": "ver",
+      "support": "to see / watch",
+      "note": "irregular: vejo, vês"
+    },
+    {
+      "target": "ler",
+      "support": "to read",
+      "note": "irregular: leio, lês, leem"
+    },
+    {
+      "target": "sair",
+      "support": "to go out / leave",
+      "note": "irregular: saio, sais, sai"
+    },
+    {
+      "target": "ouvir",
+      "support": "to hear / listen",
+      "note": "irregular: ouço, ouves"
+    },
+    {
+      "target": "costumar + infinitivo",
+      "support": "to usually do something",
+      "note": "habitual action"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m3-daily-routine-01",
+      "type": "translate_word",
+      "topicId": "m3-daily-routine",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Regular -ir verbs use «-e» in the ele/ela form: «ela abre».",
+      "direction": "toTarget",
+      "sentence": "She **opens** the window every morning.",
+      "word": "opens",
+      "answer": "abre",
+      "options": ["abre", "abro", "abres", "abrem"]
+    },
+    {
+      "id": "m3-daily-routine-02",
+      "type": "translate_word",
+      "topicId": "m3-daily-routine",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Ir» is irregular: with «eu», the form is «vou».",
+      "direction": "toTarget",
+      "sentence": "I **go** to work at eight.",
+      "word": "go",
+      "answer": "vou",
+      "options": ["vou", "vais", "vai", "vamos"]
+    },
+    {
+      "id": "m3-daily-routine-03",
+      "type": "fill_gaps",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps.",
+      "explanation": "Use «costumar + infinitivo» for habits: «costumo ler». «Ouvir» is irregular in the 1st person: «ouço».",
+      "template": "Ao sábado, eu ___ ler em casa e ___ música.",
+      "gaps": [
+        {
+          "answer": "costumo"
+        },
+        {
+          "answer": "ouço"
+        }
+      ],
+      "wordBank": ["costumo", "ouço", "costumas", "ouve"]
+    },
+    {
+      "id": "m3-daily-routine-04",
+      "type": "build_phrase",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We usually read after dinner.",
+      "explanation": "For habits, «costumar» is followed by an infinitive: «costumamos ler». «De + o» contracts to «do» in «depois do jantar».",
+      "answer": ["Costumamos", "ler", "depois", "do", "jantar."],
+      "distractors": ["costumam", "vemos", "antes"],
+      "acceptedAnswers": ["Nós costumamos ler depois do jantar."]
+    },
+    {
+      "id": "m3-daily-routine-05",
+      "type": "question_for_answer",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Vou de autocarro para o trabalho.» What did you ask? (informal)",
+      "explanation": "Use «Como» to ask about the way someone goes somewhere. «Ir» is irregular: «tu vais».",
+      "givenAnswer": "Vou de autocarro para o trabalho.",
+      "answer": ["Como", "é", "que", "vais", "para", "o", "trabalho?"],
+      "distractors": ["onde", "comboio", "moras"],
+      "acceptedAnswers": ["Como vais para o trabalho?", "Como é que tu vais para o trabalho?"]
+    },
+    {
+      "id": "m3-daily-routine-06",
+      "type": "find_error",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «tu», the present form is «deitas-te». In a yes/no question without a question word, the reflexive pronoun stays after the verb.",
+      "sentence": ["Tu", "deita-te", "cedo?"],
+      "wrongIndex": 1,
+      "correction": "deitas-te",
+      "options": ["deitas-te", "deito-me", "deitam-se"]
+    },
+    {
+      "id": "m3-daily-routine-07",
+      "type": "build_phrase",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Ana and Pedro get dressed at seven thirty.",
+      "explanation": "«Vestir-se» is reflexive, so in an affirmative sentence the pronoun comes after the verb: «vestem-se». For clock time, use «às».",
+      "answer": ["A", "Ana", "e", "o", "Pedro", "vestem-se", "às", "sete", "e", "meia."],
+      "distractors": ["deitam-se", "oito", "cedo"],
+      "acceptedAnswers": ["A Ana e o Pedro vestem-se às sete e trinta."]
+    },
+    {
+      "id": "m3-daily-routine-08",
+      "type": "question_for_answer",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Deito-me às onze.» What did you ask? (informal)",
+      "explanation": "After a question phrase, reflexive pronouns go before the verb: «te deitas». You ask time with «A que horas...?»",
+      "givenAnswer": "Deito-me às onze.",
+      "answer": ["A", "que", "horas", "te", "deitas?"],
+      "distractors": ["levantas", "cedo", "cama"],
+      "acceptedAnswers": ["A que horas é que te deitas?", "A que horas é que tu te deitas?"]
+    },
+    {
+      "id": "m3-daily-routine-09",
+      "type": "translate_word",
+      "topicId": "m3-daily-routine",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Ouvir» is irregular: the eles/elas form is «ouvem».",
+      "direction": "toTarget",
+      "sentence": "They **listen to** music in the car.",
+      "word": "listen to",
+      "answer": "ouvem",
+      "options": ["ouço", "ouves", "ouve", "ouvem"]
+    },
+    {
+      "id": "m3-daily-routine-10",
+      "type": "fill_gaps",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete Rui's routine.",
+      "explanation": "Both verbs are irregular: «ele sai» and «ele vai». Use the present for a usual routine.",
+      "template": "O Rui ___ de casa às sete e ___ para a escola às oito.",
+      "gaps": [
+        {
+          "answer": "sai"
+        },
+        {
+          "answer": "vai"
+        }
+      ],
+      "wordBank": ["sai", "vai", "vão", "vou"]
+    },
+    {
+      "id": "m3-daily-routine-11",
+      "type": "build_phrase",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: On Saturdays, we go out and watch a film.",
+      "explanation": "Use the present for regular habits. «Sair» and «ver» are irregular: «saímos», «vemos».",
+      "answer": ["Ao", "sábado", "saímos", "e", "vemos", "um", "filme."],
+      "distractors": ["ouvimos", "domingo", "vão"],
+      "acceptedAnswers": [
+        "Ao sábado nós saímos e vemos um filme.",
+        "Nós saímos e vemos um filme ao sábado."
+      ]
+    },
+    {
+      "id": "m3-daily-routine-12",
+      "type": "about_me",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «costumar + infinitivo» for a habit, or answer with a present tense routine. A reflexive verb like «deitar-se» becomes «deito-me» with «eu».",
+      "question": "O que costumas fazer à noite?",
+      "sampleAnswer": "Costumo ler e deito-me às onze.",
+      "hints": ["vejo", "televisão", "ouço", "música", "cedo", "depois do jantar"]
+    },
+    {
+      "id": "m3-daily-routine-13",
+      "type": "find_error",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Assistir» normally takes «a»: «assistimos ao filme». «A + o» contracts to «ao».",
+      "sentence": ["Nós", "assistimos", "o", "filme", "à", "noite."],
+      "wrongIndex": 2,
+      "correction": "ao",
+      "options": ["ao", "a", "do"]
+    },
+    {
+      "id": "m3-daily-routine-14",
+      "type": "question_for_answer",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Parto de casa às oito.» What did you ask? (informal)",
+      "explanation": "«Partir» is a regular -ir verb: with «tu», it becomes «partes». You can also use the common question form with «é que».",
+      "givenAnswer": "Parto de casa às oito.",
+      "answer": ["A", "que", "horas", "partes", "de", "casa?"],
+      "distractors": ["vais", "trabalho", "chegas"],
+      "acceptedAnswers": [
+        "A que horas é que partes de casa?",
+        "A que horas é que tu partes de casa?"
+      ]
+    },
+    {
+      "id": "m3-daily-routine-15",
+      "type": "build_phrase",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: You get up early and go by bus. (informal)",
+      "explanation": "«Levantar-se» is reflexive, so with «tu» you say «levantas-te». «Ir» is irregular: «vais».",
+      "answer": ["Levantas-te", "cedo", "e", "vais", "de", "autocarro."],
+      "distractors": ["deitas-te", "comboio", "vou"],
+      "acceptedAnswers": ["Tu levantas-te cedo e vais de autocarro."]
+    },
+    {
+      "id": "m3-daily-routine-16",
+      "type": "fill_gaps",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the three gaps.",
+      "explanation": "These common verbs have irregular plural forms: «ouvem», «leem», «saem». The present tense can describe habits.",
+      "template": "Os meus pais ___ música de manhã, ___ o jornal e não ___ cedo.",
+      "gaps": [
+        {
+          "answer": "ouvem"
+        },
+        {
+          "answer": "leem"
+        },
+        {
+          "answer": "saem"
+        }
+      ],
+      "wordBank": ["ouvem", "leem", "saem", "ouve", "leio", "vai"]
+    },
+    {
+      "id": "m3-daily-routine-17",
+      "type": "translate_word",
+      "topicId": "m3-daily-routine",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Ler» is irregular: with «tu», the form is «lês».",
+      "direction": "toTarget",
+      "sentence": "You **read** the newspaper in the café. (informal)",
+      "word": "read",
+      "answer": "lês",
+      "options": ["leio", "lês", "lê", "leem"]
+    },
+    {
+      "id": "m3-daily-routine-18",
+      "type": "question_for_answer",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Sim, assisto ao telejornal depois do jantar.» What did you ask? (informal)",
+      "explanation": "«Assistir» needs «a»: with «o telejornal», this becomes «ao telejornal». With «tu», the verb is regular: «assistes».",
+      "givenAnswer": "Sim, assisto ao telejornal depois do jantar.",
+      "answer": ["Assistes", "ao", "telejornal", "depois", "do", "jantar?"],
+      "distractors": ["vês", "filme", "cedo"],
+      "acceptedAnswers": ["Tu assistes ao telejornal depois do jantar?"]
+    },
+    {
+      "id": "m3-daily-routine-19",
+      "type": "build_phrase",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: At night, I decide to read and go to bed early.",
+      "explanation": "«Decidir» is a regular -ir verb: «eu decido». «Deitar-se» is reflexive, so in an affirmative sentence you say «deito-me».",
+      "answer": ["À", "noite", "decido", "ler", "e", "deito-me", "cedo."],
+      "distractors": ["decides", "tarde", "sais"],
+      "acceptedAnswers": ["Eu decido ler e deito-me cedo à noite."]
+    },
+    {
+      "id": "m3-daily-routine-20",
+      "type": "fill_gaps",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps.",
+      "explanation": "Both verbs are irregular with «tu»: «vês» and «lês». Use them for two common evening habits.",
+      "template": "Tu ___ televisão à noite ou ___ um livro?",
+      "gaps": [
+        {
+          "answer": "vês"
+        },
+        {
+          "answer": "lês"
+        }
+      ],
+      "wordBank": ["vês", "lês", "vejo", "ouves"]
+    },
+    {
+      "id": "m3-daily-routine-21",
+      "type": "build_phrase",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I open the office door at nine.",
+      "explanation": "With «eu», regular -ir verbs end in «-o»: «abro». «De + o» contracts to «do»: «do escritório».",
+      "answer": ["Abro", "a", "porta", "do", "escritório", "às", "nove."],
+      "distractors": ["abre", "abres", "da"],
+      "acceptedAnswers": ["Eu abro a porta do escritório às nove."]
+    },
+    {
+      "id": "m3-daily-routine-22",
+      "type": "fill_gaps",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the Sunday routine.",
+      "explanation": "«Levantar-se» keeps the reflexive pronoun after the verb in an affirmative sentence: «levantamo-nos». «Sair» and «ir» are irregular: «saímos», «vamos».",
+      "template": "Ao domingo, nós ___ mais tarde, ___ de casa às dez e ___ ao parque.",
+      "gaps": [
+        {
+          "answer": "levantamo-nos"
+        },
+        {
+          "answer": "saímos"
+        },
+        {
+          "answer": "vamos"
+        }
+      ],
+      "wordBank": ["levantamo-nos", "saímos", "vamos", "levantam-se", "vão", "vai"]
+    },
+    {
+      "id": "m3-daily-routine-23",
+      "type": "question_for_answer",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You ask your friends about Lisbon. They answer: «Vamos de comboio.» What did you ask?",
+      "explanation": "To ask how a group goes somewhere, use «como» and the 3rd person plural: «vão». «É que» is very common in spoken Portuguese.",
+      "givenAnswer": "Vamos de comboio.",
+      "answer": ["Como", "é", "que", "vão", "para", "Lisboa?"],
+      "distractors": ["vais", "de", "autocarro?", "onde"],
+      "acceptedAnswers": ["Como vão para Lisboa?", "Como é que vocês vão para Lisboa?"]
+    },
+    {
+      "id": "m3-daily-routine-24",
+      "type": "find_error",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Ouvir» is irregular. With «tu», the correct form is «ouves».",
+      "sentence": ["Tu", "ouve", "a", "rádio", "de", "manhã?"],
+      "wrongIndex": 1,
+      "correction": "ouves",
+      "options": ["ouves", "ouço", "ouvem"]
+    },
+    {
+      "id": "m3-daily-routine-25",
+      "type": "translate_word",
+      "topicId": "m3-daily-routine",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The verb is «sair». With «eu», the form is «saio».",
+      "direction": "toTarget",
+      "sentence": "I **leave** the office at six.",
+      "word": "leave",
+      "answer": "saio",
+      "options": ["saio", "sais", "sai", "saímos"]
+    },
+    {
+      "id": "m3-daily-routine-26",
+      "type": "build_phrase",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Marta usually reads on the train.",
+      "explanation": "For habits, Portuguese often uses «costumar + infinitivo». With «a Marta», use «costuma».",
+      "answer": ["A", "Marta", "costuma", "ler", "no", "comboio."],
+      "distractors": ["costumam", "lê", "na"],
+      "acceptedAnswers": ["Marta costuma ler no comboio."]
+    },
+    {
+      "id": "m3-daily-routine-27",
+      "type": "fill_gaps",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps with the correct verb forms.",
+      "explanation": "«Ler» and «ver» are irregular in the 3rd person singular: «lê» and «vê».",
+      "template": "Ao pequeno-almoço, o Tiago ___ o jornal, mas a irmã não ___ televisão.",
+      "gaps": [
+        {
+          "answer": "lê"
+        },
+        {
+          "answer": "vê"
+        }
+      ],
+      "wordBank": ["lê", "vê", "leio", "vejo", "lês", "vês"]
+    },
+    {
+      "id": "m3-daily-routine-28",
+      "type": "question_for_answer",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Não, não me lavo depois do jantar.» What did you ask? (informal)",
+      "explanation": "In a yes/no question with «tu», the reflexive pronoun stays after the verb: «Lavas-te...?». In the negative answer, it moves before the verb: «não me lavo».",
+      "givenAnswer": "Não, não me lavo depois do jantar.",
+      "answer": ["Lavas-te", "depois", "do", "jantar?"],
+      "distractors": ["Lava-te", "antes", "da", "escola?"],
+      "acceptedAnswers": ["Tu lavas-te depois do jantar?"]
+    },
+    {
+      "id": "m3-daily-routine-29",
+      "type": "build_phrase",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: They watch the lesson online.",
+      "explanation": "«Assistir» normally takes «a». With «a aula», «a + a» becomes «à»: «assistem à aula».",
+      "answer": ["Assistem", "à", "aula", "online."],
+      "distractors": ["ao", "veem", "as"],
+      "acceptedAnswers": ["Eles assistem à aula online."]
+    },
+    {
+      "id": "m3-daily-routine-30",
+      "type": "about_me",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «costumar + infinitivo» to talk about a habit. You can answer with «Sim» or «Não» and then give a short detail.",
+      "question": "Costumas ouvir música quando estudas?",
+      "sampleAnswer": "Sim, costumo ouvir música clássica.",
+      "hints": ["não", "às", "vezes", "rock,", "jazz,", "quando", "trabalho"]
+    },
+    {
+      "id": "m3-daily-routine-31",
+      "type": "fill_gaps",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete Sofia's routine.",
+      "explanation": "In an affirmative clause, the reflexive pronoun usually goes after the verb: «levanta-se». After negation, it goes before the verb: «não se deita».",
+      "template": "Hoje, a Sofia ___ cedo, mas não ___ tarde.",
+      "gaps": [
+        {
+          "answer": "levanta-se"
+        },
+        {
+          "answer": "se deita"
+        }
+      ],
+      "wordBank": ["levanta-se", "se deita", "deita-se", "se levanta", "levantam-se"]
+    },
+    {
+      "id": "m3-daily-routine-32",
+      "type": "find_error",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Ir» is irregular. With «nós», the correct form is «vamos».",
+      "sentence": ["Nós", "vai", "ao", "ginásio", "depois", "do", "trabalho."],
+      "wrongIndex": 1,
+      "correction": "vamos",
+      "options": ["vamos", "vão", "vais"]
+    },
+    {
+      "id": "m3-daily-routine-33",
+      "type": "build_phrase",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Before sleeping, I read for twenty minutes.",
+      "explanation": "«Ler» is irregular: with «eu» it becomes «leio». «Antes de dormir» is a natural time expression for a routine.",
+      "answer": ["Antes", "de", "dormir,", "leio", "durante", "vinte", "minutos."],
+      "distractors": ["lês", "vejo", "dormes"],
+      "acceptedAnswers": [
+        "Eu leio durante vinte minutos antes de dormir.",
+        "Antes de dormir, eu leio durante vinte minutos."
+      ]
+    },
+    {
+      "id": "m3-daily-routine-34",
+      "type": "translate_word",
+      "topicId": "m3-daily-routine",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Decidir» is a regular -ir verb. With «nós», the ending is «-imos»: «decidimos».",
+      "direction": "toTarget",
+      "sentence": "We usually **decide** together.",
+      "word": "decide",
+      "answer": "decidimos",
+      "options": ["decidimos", "decidem", "decides", "decido"]
+    },
+    {
+      "id": "m3-daily-routine-35",
+      "type": "question_for_answer",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Leio antes de dormir.» What did you ask? (informal)",
+      "explanation": "To ask about time in a general way, use «Quando». With «tu», the form is «lês».",
+      "givenAnswer": "Leio antes de dormir.",
+      "answer": ["Quando", "é", "que", "lês?"],
+      "distractors": ["Onde", "costumas", "agora", "dormir?"],
+      "acceptedAnswers": ["Quando lês?", "Quando é que tu lês?"]
+    },
+    {
+      "id": "m3-daily-routine-36",
+      "type": "build_phrase",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We leave after lunch and go to Coimbra.",
+      "explanation": "«Sair» and «ir» are irregular: «saímos» and «vamos». «Depois de + o almoço» contracts to «depois do almoço».",
+      "answer": ["Saímos", "depois", "do", "almoço", "e", "vamos", "para", "Coimbra."],
+      "distractors": ["vai", "saem", "ao"],
+      "acceptedAnswers": ["Nós saímos depois do almoço e vamos para Coimbra."]
+    },
+    {
+      "id": "m3-daily-routine-37",
+      "type": "fill_gaps",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps.",
+      "explanation": "Regular -ir verbs with «tu» end in «-es»: «abres», «decides».",
+      "template": "Na aula, tu ___ o livro e ___ se respondes agora ou depois.",
+      "gaps": [
+        {
+          "answer": "abres"
+        },
+        {
+          "answer": "decides"
+        }
+      ],
+      "wordBank": ["abres", "decides", "abro", "decide", "abrem", "decidimos"]
+    },
+    {
+      "id": "m3-daily-routine-38",
+      "type": "about_me",
+      "topicId": "m3-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «costumar + infinitivo» for something you do regularly. After that, add what you read.",
+      "question": "O que costumas ler à noite?",
+      "sampleAnswer": "Costumo ler revistas ou um romance.",
+      "hints": ["jornais,", "banda", "desenhada,", "antes", "de", "dormir", "não"]
+    },
+    {
+      "id": "m3-daily-routine-39",
+      "type": "find_error",
+      "topicId": "m3-daily-routine",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Ver» is irregular: eu vejo, tu vês, ela vê, eles veem. With «ela» the form is «vê».",
+      "sentence": ["Ela", "vejo", "as", "notícias", "online."],
+      "wrongIndex": 1,
+      "correction": "vê",
+      "options": ["vê", "vês", "veem"]
+    },
+    {
+      "id": "m3-daily-routine-40",
+      "type": "question_for_answer",
+      "topicId": "m3-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Não, não me deito tarde durante a semana.» What did you ask? (informal)",
+      "explanation": "In an affirmative yes/no question with «tu», the reflexive pronoun comes after the verb: «Deitas-te...?». In the negative answer, it comes before the verb: «não me deito».",
+      "givenAnswer": "Não, não me deito tarde durante a semana.",
+      "answer": ["Deitas-te", "tarde", "durante", "a", "semana?"],
+      "distractors": ["Deita-te", "cedo", "fim", "de"],
+      "acceptedAnswers": ["Tu deitas-te tarde durante a semana?"]
+    }
+  ]
+}
