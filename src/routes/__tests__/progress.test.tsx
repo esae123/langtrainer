@@ -68,7 +68,7 @@ describe('Progress screen', () => {
     expect(screen.getByRole('button', { name: /start a session/i })).toBeInTheDocument();
   });
 
-  it('shows tiles, needs work, reviews, topics and recent sessions', async () => {
+  it('shows tiles, needs work, topics and recent sessions', async () => {
     await seed();
     window.location.hash = '#/progress';
     render(<App />);
@@ -82,9 +82,9 @@ describe('Progress screen', () => {
     const needsWork = screen.getByText('Needs work').closest('section')!;
     expect(within(needsWork).getByText('Topic t1')).toBeInTheDocument();
 
-    const upcoming = screen.getByText('Upcoming reviews').closest('section')!;
-    expect(within(upcoming).getByText('Topic t2')).toBeInTheDocument();
-    expect(within(upcoming).getByText('Overdue')).toBeInTheDocument();
+    // The upcoming-reviews card is gone (docs/stage-6-spec.md §2).
+    expect(screen.queryByText('Upcoming reviews')).not.toBeInTheDocument();
+    expect(screen.queryByText('Overdue')).not.toBeInTheDocument();
 
     expect(screen.getByText('Module 2')).toBeInTheDocument();
     expect(screen.getByRole('progressbar', { name: '6 of 40 exercises seen' })).toBeInTheDocument();

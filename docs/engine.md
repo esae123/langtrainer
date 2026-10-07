@@ -224,8 +224,6 @@ true` are left out.
   `nextReviewAt`. Phrase sets are not topics and are not listed.
 - `needsWork(modules)` → up to three topics with **≥ 5 attempts** and accuracy **below
   80%**, weakest first.
-- `upcomingReviews(rows, now)` → the next five `review`/`maintenance` rows by
-  `nextReviewAt`; overdue ones (`<= now`) sort first and carry `overdue: true`.
 - `recentSessions(sessions, n = 10)` → newest first, **practice runs included** (tagged by
   `kind`), with `{ startedAt, completed, correct, planned, kind, interrupted }`.
 

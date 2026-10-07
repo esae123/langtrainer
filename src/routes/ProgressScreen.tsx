@@ -1,13 +1,5 @@
 import type { ReactNode } from 'react';
-import {
-  CalendarClock,
-  ChartLine,
-  Flame,
-  ListChecks,
-  Play,
-  Target,
-  TrendingDown,
-} from 'lucide-react';
+import { ChartLine, Flame, ListChecks, Play, Target, TrendingDown } from 'lucide-react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { Link, useNavigate } from 'react-router';
 import { Card } from '../components/Card';
@@ -19,13 +11,11 @@ import {
   recentSessions,
   streaks,
   topicStats,
-  upcomingReviews,
   type TopicStat,
 } from '../engine/stats';
 import type { TopicStatus } from '../engine/types';
 import { useT, type TranslationKey } from '../i18n';
 import { formatDate, formatDateTime } from '../lib/formatDate';
-import { topicInfo } from '../session/topicLookup';
 import { useSettings } from '../settings/settingsStore';
 
 const STATUS_LABEL: Record<TopicStatus, TranslationKey> = {
@@ -172,7 +162,6 @@ export function ProgressScreen() {
   const streak = streaks(data.sessions, now);
   const modules = topicStats(program, data.progress, data.attempts);
   const weak = needsWork(modules);
-  const reviews = upcomingReviews(data.progress, now);
   const recent = recentSessions(data.sessions);
 
   return (
@@ -219,41 +208,6 @@ export function ProgressScreen() {
           </Card>
         </section>
       )}
-
-      <section>
-        <SectionTitle icon={<CalendarClock size={14} strokeWidth={2} aria-hidden />}>
-          {t('progress.upcoming')}
-        </SectionTitle>
-        <Card className="!p-0">
-          {reviews.length === 0 ? (
-            <p className="px-4 py-3 text-sm text-muted">{t('progress.noReviews')}</p>
-          ) : (
-            <ul className="divide-y divide-line">
-              {reviews.map((review) => (
-                <li key={review.topicId}>
-                  <Link
-                    to={`/library/${review.topicId}`}
-                    className="flex min-h-11 items-center justify-between gap-3 px-4 py-2.5"
-                  >
-                    <span className="min-w-0 break-words text-sm text-text">
-                      {topicInfo(program, review.topicId).title}
-                    </span>
-                    <span
-                      className={`shrink-0 text-xs font-semibold tabular-nums ${
-                        review.overdue ? 'text-bad' : 'text-muted'
-                      }`}
-                    >
-                      {review.overdue
-                        ? t('progress.overdue')
-                        : formatDate(review.nextReviewAt, uiLanguage)}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </Card>
-      </section>
 
       <section className="flex flex-col gap-4">
         <SectionTitle icon={<Target size={14} strokeWidth={2} aria-hidden />}>

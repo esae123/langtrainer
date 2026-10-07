@@ -183,33 +183,6 @@ export function needsWork(modules: readonly ModuleStats[]): TopicStat[] {
     .slice(0, NEEDS_WORK_LIMIT);
 }
 
-export interface UpcomingReview {
-  topicId: string;
-  nextReviewAt: number;
-  overdue: boolean;
-}
-
-const UPCOMING_LIMIT = 5;
-
-/** The next five scheduled reviews by `nextReviewAt`; overdue ones come first and are flagged. */
-export function upcomingReviews(
-  progressRows: readonly TopicProgress[],
-  now: number
-): UpcomingReview[] {
-  return progressRows
-    .filter(
-      (row): row is TopicProgress & { nextReviewAt: number } =>
-        (row.status === 'review' || row.status === 'maintenance') && row.nextReviewAt !== undefined
-    )
-    .sort((a, b) => a.nextReviewAt - b.nextReviewAt)
-    .slice(0, UPCOMING_LIMIT)
-    .map((row) => ({
-      topicId: row.topicId,
-      nextReviewAt: row.nextReviewAt,
-      overdue: row.nextReviewAt <= now,
-    }));
-}
-
 export interface RecentSession {
   id: string;
   startedAt: number;

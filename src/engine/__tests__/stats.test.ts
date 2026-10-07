@@ -7,7 +7,6 @@ import {
   recentSessions,
   streaks,
   topicStats,
-  upcomingReviews,
   type StatsAttempt,
   type StatsSession,
 } from '../stats';
@@ -188,28 +187,6 @@ describe('needsWork', () => {
     );
     const attempts = ['t1', 't2', 't3', 't4', 't5'].flatMap((id) => many(id, 0, 5));
     expect(needsWork(topicStats(big, [], attempts))).toHaveLength(3);
-  });
-});
-
-describe('upcomingReviews', () => {
-  it('returns the next five by date, overdue first and flagged', () => {
-    const rows = [
-      makeProgress('a', { status: 'review', nextReviewAt: NOW + 3 * DAY_MS }),
-      makeProgress('b', { status: 'review', nextReviewAt: NOW - DAY_MS }),
-      makeProgress('c', { status: 'maintenance', nextReviewAt: NOW + DAY_MS }),
-      makeProgress('d', { status: 'mastered' }),
-      makeProgress('e', { status: 'learning' }),
-      makeProgress('f', { status: 'review', nextReviewAt: NOW + 5 * DAY_MS }),
-      makeProgress('g', { status: 'review', nextReviewAt: NOW + 6 * DAY_MS }),
-      makeProgress('h', { status: 'review', nextReviewAt: NOW + 7 * DAY_MS }),
-    ];
-    const result = upcomingReviews(rows, NOW);
-    expect(result.map((r) => r.topicId)).toEqual(['b', 'c', 'a', 'f', 'g']);
-    expect(result.map((r) => r.overdue)).toEqual([true, false, false, false, false]);
-  });
-
-  it('is empty when nothing is scheduled', () => {
-    expect(upcomingReviews([makeProgress('t1')], NOW)).toEqual([]);
   });
 });
 
