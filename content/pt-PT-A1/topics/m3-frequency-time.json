@@ -1,0 +1,621 @@
+{
+  "id": "m3-frequency-time",
+  "moduleId": "m3",
+  "title": "Prepositions of time and frequency",
+  "kind": "grammar",
+  "context": "When you talk about time in Portuguese, small words matter. Use **a / às** for exact times: *às três horas* = at three o'clock, *à uma hora* = at one o'clock. Use **de** for parts of the day: *de manhã* = in the morning. Use **em** with months: *em janeiro* = in January.\n\nWhere frequency words go in European Portuguese:\n- **nunca** goes before the verb: *Ela nunca bebe café.* = She never drinks coffee.\n- **sempre** usually comes right after the verb: *Estudo sempre de manhã.* = I always study in the morning.\n- **às vezes**, **habitualmente**, **geralmente** can open the sentence or follow the verb: *Às vezes vamos ao cinema.* = We sometimes go to the cinema. *Eles almoçam habitualmente às treze horas.* = They usually have lunch at one p.m.\n\nFrequency with **por**:\n- *Trabalhamos cinco dias por semana.* = We work five days a week.\n- *Vou ao ginásio três vezes por mês.* = I go to the gym three times a month.\n\n**Watch out:**\n- a + as = **às**, a + a = **à**.\n- *à noite* and *de noite* are both correct in Portugal; with a clock time say *às dez da noite*.",
+  "keyItems": [
+    {
+      "target": "às",
+      "support": "at (specific time)"
+    },
+    {
+      "target": "à",
+      "support": "at / to (with contractions)"
+    },
+    {
+      "target": "de manhã",
+      "support": "in the morning"
+    },
+    {
+      "target": "à tarde",
+      "support": "in the afternoon"
+    },
+    {
+      "target": "à noite",
+      "support": "at night / in the evening"
+    },
+    {
+      "target": "em janeiro",
+      "support": "in January"
+    },
+    {
+      "target": "sempre",
+      "support": "always"
+    },
+    {
+      "target": "nunca",
+      "support": "never"
+    },
+    {
+      "target": "às vezes",
+      "support": "sometimes"
+    },
+    {
+      "target": "habitualmente",
+      "support": "usually; habitually"
+    },
+    {
+      "target": "geralmente",
+      "support": "generally; usually"
+    },
+    {
+      "target": "por dia",
+      "support": "per day"
+    },
+    {
+      "target": "por semana",
+      "support": "per week"
+    },
+    {
+      "target": "por mês",
+      "support": "per month"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m3-frequency-time-01",
+      "type": "build_phrase",
+      "topicId": "m3-frequency-time",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I work in January.",
+      "explanation": "Use «em» with months. In Portuguese, months do not take an article here.",
+      "answer": ["Eu", "trabalho", "em", "janeiro."],
+      "distractors": ["de", "no", "à"],
+      "acceptedAnswers": ["Trabalho em janeiro."]
+    },
+    {
+      "id": "m3-frequency-time-02",
+      "type": "translate_word",
+      "topicId": "m3-frequency-time",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Geralmente» means usually. It can open the sentence or follow the verb: «Estuda geralmente de manhã».",
+      "direction": "toTarget",
+      "sentence": "She **usually** studies in the morning.",
+      "word": "usually",
+      "answer": "geralmente",
+      "options": ["geralmente", "sempre", "nunca", "às vezes"]
+    },
+    {
+      "id": "m3-frequency-time-03",
+      "type": "fill_gaps",
+      "topicId": "m3-frequency-time",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps.",
+      "explanation": "Use «de manhã» for the morning and «às» with a clock time.",
+      "template": "___ manhã, eu estudo ___ oito horas.",
+      "gaps": [
+        {
+          "answer": "De"
+        },
+        {
+          "answer": "às"
+        }
+      ],
+      "wordBank": ["De", "às", "em", "por", "a"]
+    },
+    {
+      "id": "m3-frequency-time-04",
+      "type": "question_for_answer",
+      "topicId": "m3-frequency-time",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «De manhã.» Ask when they study.",
+      "explanation": "Use «quando» to ask about time. The verb normally comes after the question word.",
+      "givenAnswer": "De manhã.",
+      "answer": ["Quando", "estudas?"],
+      "distractors": ["Onde", "Como", "Quem"],
+      "acceptedAnswers": ["Quando é que estudas?"]
+    },
+    {
+      "id": "m3-frequency-time-05",
+      "type": "build_phrase",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you have class at three o'clock.",
+      "explanation": "Use «às» with a specific time. «Três horas» is a clock time.",
+      "answer": ["Tenho", "aula", "às", "três", "horas."],
+      "distractors": ["em", "de", "por"],
+      "acceptedAnswers": ["Eu tenho aula às três horas."]
+    },
+    {
+      "id": "m3-frequency-time-06",
+      "type": "find_error",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«À uma hora»: a + a = à. With plural hours it is «às»: «às duas horas».",
+      "sentence": ["Almoço", "sempre", "a", "uma", "hora."],
+      "wrongIndex": 2,
+      "correction": "à",
+      "options": ["à", "às", "ao"]
+    },
+    {
+      "id": "m3-frequency-time-07",
+      "type": "question_for_answer",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Às oito horas.» Ask what time the class starts.",
+      "explanation": "Use «a que horas» to ask for a clock time.",
+      "givenAnswer": "Às oito horas.",
+      "answer": ["A", "que", "horas", "começa", "a", "aula?"],
+      "distractors": ["Quando", "Onde", "Como"],
+      "acceptedAnswers": ["A que horas é que começa a aula?"]
+    },
+    {
+      "id": "m3-frequency-time-08",
+      "type": "fill_gaps",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps.",
+      "explanation": "«Nunca» goes before the verb. «Geralmente» can open the sentence or sit right before or after the verb.",
+      "template": "Eu ___ estudo de manhã e ___ estudo à noite.",
+      "gaps": [
+        {
+          "answer": "geralmente"
+        },
+        {
+          "answer": "nunca"
+        }
+      ],
+      "wordBank": ["geralmente", "nunca", "sempre", "às vezes", "habitualmente"]
+    },
+    {
+      "id": "m3-frequency-time-09",
+      "type": "build_phrase",
+      "topicId": "m3-frequency-time",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you never take the bus to work.",
+      "explanation": "«Nunca» goes before the verb. In Portugal, use «autocarro».",
+      "answer": ["Nunca", "apanho", "o", "autocarro", "para", "o", "trabalho."],
+      "distractors": ["comboio", "sempre", "de"],
+      "acceptedAnswers": ["Eu nunca apanho o autocarro para o trabalho."]
+    },
+    {
+      "id": "m3-frequency-time-10",
+      "type": "translate_word",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Use «por» with a time unit to say how often something happens.",
+      "direction": "toTarget",
+      "sentence": "We go to the gym **weekly**.",
+      "word": "weekly",
+      "answer": "por semana",
+      "options": ["por semana", "por mês", "por dia", "em semana"]
+    },
+    {
+      "id": "m3-frequency-time-11",
+      "type": "question_for_answer",
+      "topicId": "m3-frequency-time",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Três vezes por mês.» Ask how many times they go to the gym.",
+      "explanation": "Use «quantas vezes» to ask about frequency.",
+      "givenAnswer": "Três vezes por mês.",
+      "answer": ["Quantas", "vezes", "vais", "ao", "ginásio?"],
+      "distractors": ["Quando", "Onde", "Como"],
+      "acceptedAnswers": ["Quantas vezes é que vais ao ginásio?"]
+    },
+    {
+      "id": "m3-frequency-time-12",
+      "type": "fill_gaps",
+      "topicId": "m3-frequency-time",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the three gaps.",
+      "explanation": "Use «por» with the unit of time, and put the frequency phrase together.",
+      "template": "Eu vou ao ginásio ___ vezes ___ semana e ___ domingo não vou.",
+      "gaps": [
+        {
+          "answer": "três"
+        },
+        {
+          "answer": "por"
+        },
+        {
+          "answer": "ao"
+        }
+      ],
+      "wordBank": ["três", "por", "ao", "duas", "de", "em", "às"]
+    },
+    {
+      "id": "m3-frequency-time-13",
+      "type": "find_error",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "For the morning, say «de manhã».",
+      "sentence": ["Eu", "estudo", "em", "manhã."],
+      "wrongIndex": 2,
+      "correction": "de",
+      "options": ["de", "à", "por"]
+    },
+    {
+      "id": "m3-frequency-time-14",
+      "type": "about_me",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "This question asks about frequency. Use a word like «sempre», «nunca» or «às vezes».",
+      "question": "Com que frequência estudas inglês?",
+      "sampleAnswer": "Estudo inglês às vezes.",
+      "hints": ["sempre", "nunca", "geralmente", "habitualmente", "por semana", "por mês"]
+    },
+    {
+      "id": "m3-frequency-time-15",
+      "type": "build_phrase",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that she always drinks coffee in the morning.",
+      "explanation": "In European Portuguese «sempre» usually comes right after the verb: «bebe sempre». Use «de manhã» for the morning.",
+      "answer": ["Ela", "bebe", "sempre", "café", "de", "manhã."],
+      "distractors": ["nunca", "geralmente", "às"]
+    },
+    {
+      "id": "m3-frequency-time-16",
+      "type": "question_for_answer",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Sempre.» Ask how often they study.",
+      "explanation": "Use «com que frequência» to ask how often something happens.",
+      "givenAnswer": "Sempre.",
+      "answer": ["Com", "que", "frequência", "estudas?"],
+      "distractors": ["Quando", "Onde", "Como"],
+      "acceptedAnswers": ["Com que frequência é que estudas?"]
+    },
+    {
+      "id": "m3-frequency-time-17",
+      "type": "fill_gaps",
+      "topicId": "m3-frequency-time",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gap.",
+      "explanation": "Use «por» with a time unit: «uma vez por mês».",
+      "template": "Nós vamos ao médico uma vez ___ mês.",
+      "gaps": [
+        {
+          "answer": "por"
+        }
+      ],
+      "wordBank": ["por", "em", "de", "a"]
+    },
+    {
+      "id": "m3-frequency-time-18",
+      "type": "build_phrase",
+      "topicId": "m3-frequency-time",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you usually have lunch at one o'clock.",
+      "explanation": "«Habitualmente» can open the sentence or follow the verb. Use «às» with a specific time.",
+      "answer": ["Habitualmente", "almoço", "às", "treze", "horas."],
+      "distractors": ["nunca", "sempre", "em"],
+      "acceptedAnswers": ["Eu almoço habitualmente às treze horas."]
+    },
+    {
+      "id": "m3-frequency-time-19",
+      "type": "find_error",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "For repeated days, use «aos sábados». «Sábado» is plural here, so the preposition changes to «aos».",
+      "sentence": ["Eu", "vou", "ao", "supermercado", "sempre", "ao", "sábados."],
+      "wrongIndex": 5,
+      "correction": "aos",
+      "options": ["aos", "em", "por"]
+    },
+    {
+      "id": "m3-frequency-time-20",
+      "type": "question_for_answer",
+      "topicId": "m3-frequency-time",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend says: «De manhã, à tarde e à noite.» What did you ask?",
+      "explanation": "Use «quando» to ask about time; «Quando é que estudas?» is the most natural spoken form.",
+      "givenAnswer": "De manhã, à tarde e à noite.",
+      "answer": ["Quando", "é", "que", "estudas?"],
+      "distractors": ["Onde", "Como", "Quantas"],
+      "acceptedAnswers": ["Quando estudas?", "Quando é que tu estudas?"]
+    },
+    {
+      "id": "m3-frequency-time-21",
+      "type": "build_phrase",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that Ana always drinks tea in the morning.",
+      "explanation": "«Sempre» usually follows the verb: «bebe sempre». Use «de manhã» for the morning.",
+      "answer": ["A", "Ana", "bebe", "sempre", "chá", "de", "manhã."],
+      "distractors": ["nunca", "à noite", "café"]
+    },
+    {
+      "id": "m3-frequency-time-22",
+      "type": "build_phrase",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that we usually have class at nine o'clock.",
+      "explanation": "«Habitualmente» can go before the verb or open the sentence. For exact hours, use «às».",
+      "answer": ["Nós", "habitualmente", "temos", "aula", "às", "nove", "horas."],
+      "distractors": ["sempre", "à noite", "por semana"],
+      "acceptedAnswers": ["Habitualmente temos aula às nove horas."]
+    },
+    {
+      "id": "m3-frequency-time-23",
+      "type": "build_phrase",
+      "topicId": "m3-frequency-time",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that he never works on Sundays.",
+      "explanation": "Use «nunca» before the verb. For a repeated day, «aos domingos» is natural in European Portuguese.",
+      "answer": ["Ele", "nunca", "trabalha", "aos", "domingos."],
+      "distractors": ["sempre", "às vezes", "à noite"]
+    },
+    {
+      "id": "m3-frequency-time-24",
+      "type": "build_phrase",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that they work three times a month.",
+      "explanation": "Use «por» to show frequency in a time unit, like «por mês».",
+      "answer": ["Eles", "trabalham", "três", "vezes", "por", "mês."],
+      "distractors": ["sempre", "por semana", "nunca"],
+      "acceptedAnswers": ["Trabalham três vezes por mês."]
+    },
+    {
+      "id": "m3-frequency-time-25",
+      "type": "build_phrase",
+      "topicId": "m3-frequency-time",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you go to the gym sometimes at night.",
+      "explanation": "Place «às vezes» before the verb. Use «à noite» for night/evening.",
+      "answer": ["Eu", "às", "vezes", "vou", "ao", "ginásio", "à", "noite."],
+      "distractors": ["sempre", "de manhã", "por semana"],
+      "acceptedAnswers": ["Às vezes vou ao ginásio à noite."]
+    },
+    {
+      "id": "m3-frequency-time-26",
+      "type": "build_phrase",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you drink two coffees per day.",
+      "explanation": "Use «por» when you say how much happens in one day.",
+      "answer": ["Eu", "bebo", "dois", "cafés", "por", "dia."],
+      "distractors": ["cinco", "por semana", "nunca"],
+      "acceptedAnswers": ["Bebo dois cafés por dia."]
+    },
+    {
+      "id": "m3-frequency-time-27",
+      "type": "question_for_answer",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend says: «Eu estudo sempre às oito horas.» What did you ask?",
+      "explanation": "Ask exact time with «a que horas». «É que» is also very common in Portugal.",
+      "givenAnswer": "Eu estudo sempre às oito horas.",
+      "answer": ["A", "que", "horas", "é", "que", "estudas?"],
+      "distractors": ["Quando", "Quantas vezes", "Onde"],
+      "acceptedAnswers": ["A que horas estudas?"]
+    },
+    {
+      "id": "m3-frequency-time-28",
+      "type": "question_for_answer",
+      "topicId": "m3-frequency-time",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend says: «Vou ao ginásio três vezes por semana.» What did you ask?",
+      "explanation": "Use «quantas vezes» for frequency. Keep the question in European Portuguese word order.",
+      "givenAnswer": "Vou ao ginásio três vezes por semana.",
+      "answer": ["Quantas", "vezes", "vais", "ao", "ginásio", "por", "semana?"],
+      "distractors": ["Quando", "Onde", "A que horas"],
+      "acceptedAnswers": ["Quantas vezes é que vais ao ginásio por semana?"]
+    },
+    {
+      "id": "m3-frequency-time-29",
+      "type": "question_for_answer",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend says: «A Ana bebe chá à noite.» Ask when Ana drinks tea.",
+      "explanation": "In European Portuguese say «Quando é que a Ana bebe chá?». «Quando a Ana bebe chá?» is Brazilian word order.",
+      "givenAnswer": "A Ana bebe chá à noite.",
+      "answer": ["Quando", "é", "que", "a", "Ana", "bebe", "chá?"],
+      "distractors": ["Onde", "Como", "bebes"],
+      "acceptedAnswers": ["Quando bebe a Ana chá?"]
+    },
+    {
+      "id": "m3-frequency-time-30",
+      "type": "question_for_answer",
+      "topicId": "m3-frequency-time",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend says: «Ela almoça geralmente às treze horas.» What did you ask?",
+      "explanation": "For exact times, use «a que horas». The adverb «geralmente» goes before the verb.",
+      "givenAnswer": "Ela almoça geralmente às treze horas.",
+      "answer": ["A", "que", "horas", "é", "que", "ela", "almoça", "geralmente?"],
+      "distractors": ["Quando", "Quantas vezes", "Onde"],
+      "acceptedAnswers": ["A que horas almoça ela geralmente?"]
+    },
+    {
+      "id": "m3-frequency-time-31",
+      "type": "question_for_answer",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friends say: «Trabalhamos cinco dias por semana.» What did you ask them?",
+      "explanation": "You ask them (vocês), so the verb is «trabalham». «Quantos dias por semana…?» asks about frequency in days.",
+      "givenAnswer": "Trabalhamos cinco dias por semana.",
+      "answer": ["Quantos", "dias", "por", "semana", "trabalham?"],
+      "distractors": ["Quando", "Onde", "A que horas"],
+      "acceptedAnswers": [
+        "Quantos dias por semana é que trabalham?",
+        "Quantos dias por semana é que vocês trabalham?"
+      ]
+    },
+    {
+      "id": "m3-frequency-time-32",
+      "type": "translate_word",
+      "topicId": "m3-frequency-time",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Sempre» means «always». It usually goes before the verb.",
+      "direction": "toTarget",
+      "sentence": "I **always** study in the morning.",
+      "word": "always",
+      "answer": "sempre",
+      "options": ["sempre", "nunca", "às vezes", "geralmente"]
+    },
+    {
+      "id": "m3-frequency-time-33",
+      "type": "translate_word",
+      "topicId": "m3-frequency-time",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Geralmente» means «usually». It goes before the verb in a normal sentence.",
+      "direction": "toTarget",
+      "sentence": "She **usually** has lunch at one o'clock.",
+      "word": "usually",
+      "answer": "geralmente",
+      "options": ["geralmente", "sempre", "nunca", "às vezes"]
+    },
+    {
+      "id": "m3-frequency-time-34",
+      "type": "translate_word",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "Use «em» with months in Portuguese. «Em janeiro» means «in January».",
+      "direction": "toTarget",
+      "sentence": "I go to Lisbon **in January**.",
+      "word": "in January",
+      "answer": "em janeiro",
+      "options": ["em janeiro", "de manhã", "por semana", "à noite"]
+    },
+    {
+      "id": "m3-frequency-time-35",
+      "type": "fill_gaps",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps.",
+      "explanation": "In European Portuguese «sempre» usually follows the verb: «tomam sempre». Use «de manhã» for the morning.",
+      "template": "Eles tomam ___ chá ___ manhã.",
+      "gaps": [
+        {
+          "answer": "sempre"
+        },
+        {
+          "answer": "de"
+        }
+      ],
+      "wordBank": ["sempre", "de", "nunca", "à", "por", "às vezes"]
+    },
+    {
+      "id": "m3-frequency-time-36",
+      "type": "fill_gaps",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps.",
+      "explanation": "Use contractions like «ao» and «à» in European Portuguese. «À noite» is the correct phrase.",
+      "template": "Nós vamos ___ cinema ___ noite.",
+      "gaps": [
+        {
+          "answer": "ao"
+        },
+        {
+          "answer": "à"
+        }
+      ],
+      "wordBank": ["ao", "à", "de", "em", "por"]
+    },
+    {
+      "id": "m3-frequency-time-37",
+      "type": "fill_gaps",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps.",
+      "explanation": "Use «por» with a time unit: «cinco dias por semana».",
+      "template": "Eu trabalho ___ dias ___ semana.",
+      "gaps": [
+        {
+          "answer": "cinco"
+        },
+        {
+          "answer": "por"
+        }
+      ],
+      "wordBank": ["cinco", "por", "quatro", "de", "em", "sempre"]
+    },
+    {
+      "id": "m3-frequency-time-38",
+      "type": "find_error",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Parts of the day: «à noite» (or «de noite»), «de manhã», «à tarde». «Na noite» is not used here.",
+      "sentence": ["Ela", "nunca", "bebe", "café", "na", "noite."],
+      "wrongIndex": 4,
+      "correction": "à",
+      "options": ["à", "em", "por"]
+    },
+    {
+      "id": "m3-frequency-time-39",
+      "type": "find_error",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Use «por» to talk about frequency in a time unit: «por semana».",
+      "sentence": ["Nós", "trabalhamos", "cinco", "dias", "a", "semana."],
+      "wrongIndex": 4,
+      "correction": "por",
+      "options": ["por", "de", "em"]
+    },
+    {
+      "id": "m3-frequency-time-40",
+      "type": "about_me",
+      "topicId": "m3-frequency-time",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use a frequency word before the verb. Add a natural time phrase like «de manhã» or «à noite».",
+      "question": "Com que frequência estudas inglês?",
+      "sampleAnswer": "Estudo inglês geralmente à noite.",
+      "hints": ["sempre", "nunca", "às vezes", "de manhã", "por semana", "habitualmente"]
+    }
+  ]
+}
