@@ -1,16 +1,27 @@
-import type { ReactNode } from 'react';
-import { ChartLine, Flame, ListChecks, Play, Target, TrendingDown } from 'lucide-react';
+import { useState, type ReactNode } from 'react';
+import {
+  ChartLine,
+  ChevronDown,
+  Flame,
+  ListChecks,
+  Play,
+  Target,
+  TrendingDown,
+} from 'lucide-react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { Link, useNavigate } from 'react-router';
 import { Card } from '../components/Card';
 import { useActiveProgram } from '../content/programRegistry';
 import { db } from '../db/db';
+import { currentTopicOf } from '../engine/plan';
+import { COMPLETED_STATUSES } from '../engine/progress';
 import {
   needsWork,
   overview,
   recentSessions,
   streaks,
   topicStats,
+  type ModuleStats,
   type TopicStat,
 } from '../engine/stats';
 import type { TopicStatus } from '../engine/types';
@@ -113,6 +124,107 @@ function TopicRow({ topic, locale }: { topic: TopicStat; locale: string }) {
   );
 }
 
+const expandedKey = (programId: string) => `langtrainer:progress:expanded:${programId}`;
+
+function readExpanded(programId: string): string[] | null {
+  try {
+    const raw = localStorage.getItem(expandedKey(programId));
+    if (raw === null) return null;
+    const parsed: unknown = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed.filter((id) => typeof id === 'string') : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeExpanded(programId: string, moduleIds: string[]): void {
+  try {
+    localStorage.setItem(expandedKey(programId), JSON.stringify(moduleIds));
+  } catch {
+    // storage disabled — the expanded modules just won't be remembered
+  }
+}
+
+/**
+ * Topics grouped under collapsible module headers (docs/stage-6-spec.md §3). By default
+ * only the module of the current topic is open (the first module when there is none);
+ * the learner's choice is remembered per course in localStorage.
+ */
+function TopicsByModule({
+  programId,
+  modules,
+  defaultModuleId,
+  locale,
+}: {
+  programId: string;
+  modules: ModuleStats[];
+  defaultModuleId: string | undefined;
+  locale: string;
+}) {
+  const t = useT();
+  const [expanded, setExpanded] = useState<string[]>(
+    () => readExpanded(programId) ?? (defaultModuleId ? [defaultModuleId] : [])
+  );
+
+  function toggle(moduleId: string) {
+    const next = expanded.includes(moduleId)
+      ? expanded.filter((id) => id !== moduleId)
+      : [...expanded, moduleId];
+    setExpanded(next);
+    writeExpanded(programId, next);
+  }
+
+  return (
+    <Card className="!p-0">
+      <ul className="divide-y divide-line">
+        {modules.map((module) => {
+          const open = expanded.includes(module.moduleId);
+          const completed = module.topics.filter((topic) =>
+            COMPLETED_STATUSES.has(topic.status)
+          ).length;
+          const panelId = `progress-module-${module.moduleId}`;
+          return (
+            <li key={module.moduleId}>
+              <button
+                type="button"
+                aria-expanded={open}
+                aria-controls={panelId}
+                onClick={() => toggle(module.moduleId)}
+                className="flex min-h-11 w-full items-center gap-3 px-4 py-3 text-left"
+              >
+                <span className="flex min-w-0 flex-1 flex-col">
+                  <span className="break-words text-sm font-semibold text-text">
+                    {module.title}
+                  </span>
+                  <span className="text-xs tabular-nums text-muted">
+                    {t('progress.moduleCompleted', {
+                      completed,
+                      total: module.topics.length,
+                    })}
+                  </span>
+                </span>
+                <ChevronDown
+                  size={20}
+                  strokeWidth={2}
+                  aria-hidden
+                  className={`shrink-0 text-muted transition-transform ${open ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {open && (
+                <ul id={panelId} className="divide-y divide-line border-t border-line">
+                  {module.topics.map((topic) => (
+                    <TopicRow key={topic.topicId} topic={topic} locale={locale} />
+                  ))}
+                </ul>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </Card>
+  );
+}
+
 export function ProgressScreen() {
   const t = useT();
   const navigate = useNavigate();
@@ -162,6 +274,11 @@ export function ProgressScreen() {
   const streak = streaks(data.sessions, now);
   const modules = topicStats(program, data.progress, data.attempts);
   const weak = needsWork(modules);
+  const current = currentTopicOf(program, data.progress);
+  const currentModuleId = (
+    program.modules.find((module) => module.topics.some((topic) => topic.id === current?.id)) ??
+    program.modules[0]
+  )?.id;
   const recent = recentSessions(data.sessions);
 
   return (
@@ -209,24 +326,17 @@ export function ProgressScreen() {
         </section>
       )}
 
-      <section className="flex flex-col gap-4">
+      <section>
         <SectionTitle icon={<Target size={14} strokeWidth={2} aria-hidden />}>
           {t('progress.topics')}
         </SectionTitle>
-        {modules.map((module) => (
-          <div key={module.moduleId}>
-            <h3 className="mb-1.5 break-words px-1 text-sm font-semibold text-text">
-              {module.title}
-            </h3>
-            <Card className="!p-0">
-              <ul className="divide-y divide-line">
-                {module.topics.map((topic) => (
-                  <TopicRow key={topic.topicId} topic={topic} locale={uiLanguage} />
-                ))}
-              </ul>
-            </Card>
-          </div>
-        ))}
+        <TopicsByModule
+          key={program.id}
+          programId={program.id}
+          modules={modules}
+          defaultModuleId={currentModuleId}
+          locale={uiLanguage}
+        />
       </section>
 
       <section>

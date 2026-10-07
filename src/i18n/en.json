@@ -131,6 +131,7 @@
   "progress.accuracy": "Accuracy",
   "progress.needsWork": "Needs work",
   "progress.topics": "Topics",
+  "progress.moduleCompleted": "{completed} / {total} topics",
   "progress.seenOf": "{seen} of {total} exercises seen",
   "progress.last": "last: {date}",
   "progress.recent": "Recent sessions",

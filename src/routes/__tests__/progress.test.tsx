@@ -1,4 +1,4 @@
-import { render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import App from '../../App';
 import { db } from '../../db/db';
@@ -12,6 +12,7 @@ vi.mock('../../content/programs', async () => {
 
 afterEach(async () => {
   window.location.hash = '';
+  localStorage.clear();
   await Promise.all(db.tables.map((table) => table.clear()));
 });
 
@@ -93,5 +94,41 @@ describe('Progress screen', () => {
     expect(within(recent).getByText('Practice')).toBeInTheDocument();
     expect(within(recent).getByText('4/4')).toBeInTheDocument();
     expect(within(recent).getByText('2/6')).toBeInTheDocument();
+  });
+
+  it('collapses topics by module, opening the current one and remembering the choice', async () => {
+    await seed();
+    window.location.hash = '#/progress';
+    const { unmount } = render(<App />);
+
+    const m1 = await screen.findByRole('button', { name: /Module 1/ });
+    const m2 = screen.getByRole('button', { name: /Module 2/ });
+    // t1 (Module 1) is the current topic; t2 is in review, so 1 of 2 is completed.
+    expect(m1).toHaveAttribute('aria-expanded', 'true');
+    expect(m1).toHaveTextContent('1 / 2 topics');
+    expect(m2).toHaveAttribute('aria-expanded', 'false');
+    expect(m2).toHaveTextContent('0 / 1 topics');
+    expect(screen.queryByRole('link', { name: /Topic t3/ })).not.toBeInTheDocument();
+
+    fireEvent.click(m2);
+    expect(m2).toHaveAttribute('aria-expanded', 'true');
+    expect(screen.getByRole('link', { name: /Topic t3/ })).toBeInTheDocument();
+    fireEvent.click(m1);
+    expect(m1).toHaveAttribute('aria-expanded', 'false');
+    expect(screen.queryByRole('link', { name: /Topic t2/ })).not.toBeInTheDocument();
+    expect(JSON.parse(localStorage.getItem('langtrainer:progress:expanded:pt-PT-A1')!)).toEqual([
+      'm2',
+    ]);
+
+    unmount();
+    render(<App />);
+    expect(await screen.findByRole('button', { name: /Module 2/ })).toHaveAttribute(
+      'aria-expanded',
+      'true'
+    );
+    expect(screen.getByRole('button', { name: /Module 1/ })).toHaveAttribute(
+      'aria-expanded',
+      'false'
+    );
   });
 });
