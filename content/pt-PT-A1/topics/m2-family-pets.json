@@ -630,7 +630,7 @@
       "type": "find_error",
       "topicId": "m2-family-pets",
       "difficulty": 3,
-      "allowedModes": ["tiles", "letters"],
+      "allowedModes": ["tiles"],
       "prompt": "One word is wrong. Tap it and choose the correction.",
       "explanation": "«O meu» and «simpático» are masculine, so the word is «avô» (grandfather), with the circumflex.",
       "sentence": ["O", "meu", "avó", "é", "muito", "simpático."],

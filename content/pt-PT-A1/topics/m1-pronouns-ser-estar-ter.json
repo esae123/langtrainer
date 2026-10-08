@@ -5,7 +5,10 @@
   "kind": "grammar",
   "context": "## Pronouns, ser, estar, ter\n\nThree verbs come up in almost every Portuguese sentence: **ser** (to be — who you are), **estar** (to be — how or where you are now) and **ter** (to have).\n\nPronouns: **eu** (I), **tu** (you, informal), **você** (you, formal), **ele / ela** (he / she), **nós** (we), **vocês** (you, plural), **eles / elas** (they).\n\n- **ser**: sou, és, é, somos, são\n- **estar**: estou, estás, está, estamos, estão\n- **ter**: tenho, tens, tem, temos, têm\n\nExamples:\n\n- **Eu sou de Lisboa.** — I am from Lisbon.\n- **Tu és portuguesa?** — Are you Portuguese?\n- **A Rita está em casa.** — Rita is at home.\n- **Estamos cansados hoje.** — We are tired today.\n- **Tenho vinte anos.** — I am twenty years old.\n- **Eles têm um carro novo.** — They have a new car.\n\n**Watch out:** use **ser** for what does not change (origin, nationality, profession) and **estar** for moods, health and place: *Sou professora, mas hoje estou doente.* Portuguese also uses **ter** where English says \"be\": *Tenho trinta anos.*, *Tenho fome.*\n\nThe pronoun is often left out, because the ending already says who: *Sou de Faro.* With **tu** the forms end in **-s**: *tu és, tu estás, tu tens*.",
   "keyItems": [
-    { "target": "eu", "support": "I" },
+    {
+      "target": "eu",
+      "support": "I"
+    },
     {
       "target": "tu",
       "support": "you (informal, singular)",
@@ -16,9 +19,18 @@
       "support": "you (formal, singular)",
       "note": "Takes the same verb form as ele/ela. In Portugal it can sound abrupt with strangers or older people: there you say o senhor / a senhora."
     },
-    { "target": "ele", "support": "he" },
-    { "target": "ela", "support": "she" },
-    { "target": "nós", "support": "we" },
+    {
+      "target": "ele",
+      "support": "he"
+    },
+    {
+      "target": "ela",
+      "support": "she"
+    },
+    {
+      "target": "nós",
+      "support": "we"
+    },
     {
       "target": "vocês",
       "support": "you (plural)",
@@ -89,7 +101,11 @@
       "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete: 'I am from Lisbon.'",
       "template": "Eu ___ de Lisboa.",
-      "gaps": [{ "answer": "sou" }],
+      "gaps": [
+        {
+          "answer": "sou"
+        }
+      ],
       "wordBank": ["sou", "estou", "és", "tenho"],
       "explanation": "Where you come from never changes, so it takes ser: eu sou. 'Estou' would say where you are right now.",
       "tags": ["ser", "present", "origin"]
@@ -102,7 +118,11 @@
       "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete: 'Are you tired?' (to a friend)",
       "template": "Tu ___ cansado?",
-      "gaps": [{ "answer": "estás" }],
+      "gaps": [
+        {
+          "answer": "estás"
+        }
+      ],
       "wordBank": ["estás", "és", "estou", "está"],
       "explanation": "Being tired is temporary, so we use estar; with tu the form ends in -s: tu estás.",
       "tags": ["estar", "present", "tu"]
@@ -115,7 +135,11 @@
       "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete: 'She is twenty years old.'",
       "template": "Ela ___ vinte anos.",
-      "gaps": [{ "answer": "tem" }],
+      "gaps": [
+        {
+          "answer": "tem"
+        }
+      ],
       "wordBank": ["tem", "tens", "têm", "é"],
       "explanation": "Portuguese says the age with ter: ela tem vinte anos. The circumflex form têm is for eles/elas/vocês.",
       "tags": ["ter", "age"]
@@ -128,7 +152,14 @@
       "allowedModes": ["tiles", "typing"],
       "prompt": "Complete: 'We are Portuguese, but today we are in Madrid.'",
       "template": "Nós ___ portugueses, mas hoje ___ em Madrid.",
-      "gaps": [{ "answer": "somos" }, { "answer": "estamos" }],
+      "gaps": [
+        {
+          "answer": "somos"
+        },
+        {
+          "answer": "estamos"
+        }
+      ],
       "wordBank": ["somos", "estamos", "são", "estão", "é"],
       "explanation": "Nationality does not change (ser: somos), but the place you are today does (estar: estamos).",
       "tags": ["ser", "estar", "contrast"]
@@ -141,7 +172,11 @@
       "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete: 'Pedro and Rita have two children.'",
       "template": "O Pedro e a Rita ___ dois filhos.",
-      "gaps": [{ "answer": "têm" }],
+      "gaps": [
+        {
+          "answer": "têm"
+        }
+      ],
       "wordBank": ["têm", "tem", "tens", "temos"],
       "explanation": "Two people together are 'eles', so ter takes têm with a circumflex. Singular 'tem' has no accent.",
       "tags": ["ter", "plural"]
@@ -154,7 +189,11 @@
       "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete: 'Where are you (plural) now?'",
       "template": "Onde é que vocês ___ agora?",
-      "gaps": [{ "answer": "estão" }],
+      "gaps": [
+        {
+          "answer": "estão"
+        }
+      ],
       "wordBank": ["estão", "são", "está", "estamos"],
       "explanation": "Where somebody is at this moment takes estar, and vocês goes with estão.",
       "tags": ["estar", "location", "questions"]
@@ -167,7 +206,14 @@
       "allowedModes": ["tiles", "typing"],
       "prompt": "Complete: 'Inês is a doctor and she is thirty years old.'",
       "template": "A Inês ___ médica e ___ trinta anos.",
-      "gaps": [{ "answer": "é" }, { "answer": "tem" }],
+      "gaps": [
+        {
+          "answer": "é"
+        },
+        {
+          "answer": "tem"
+        }
+      ],
       "wordBank": ["é", "tem", "está", "têm", "sou"],
       "explanation": "Profession takes ser (é médica), but age takes ter (tem trinta anos).",
       "tags": ["ser", "ter", "professions"]
@@ -180,7 +226,14 @@
       "allowedModes": ["tiles", "typing"],
       "prompt": "Complete: 'I am hungry and you are thirsty.'",
       "template": "Eu ___ fome e tu ___ sede.",
-      "gaps": [{ "answer": "tenho" }, { "answer": "tens" }],
+      "gaps": [
+        {
+          "answer": "tenho"
+        },
+        {
+          "answer": "tens"
+        }
+      ],
       "wordBank": ["tenho", "tens", "tem", "temos", "sou"],
       "explanation": "Hunger and thirst go with ter in Portuguese: tenho fome, tens sede — not 'sou' or 'estou'.",
       "tags": ["ter", "states"]
@@ -193,7 +246,17 @@
       "allowedModes": ["tiles", "typing"],
       "prompt": "Complete: 'João is a teacher, he is thirty years old and today he is in Faro.'",
       "template": "O João ___ professor, ___ trinta anos e hoje ___ em Faro.",
-      "gaps": [{ "answer": "é" }, { "answer": "tem" }, { "answer": "está" }],
+      "gaps": [
+        {
+          "answer": "é"
+        },
+        {
+          "answer": "tem"
+        },
+        {
+          "answer": "está"
+        }
+      ],
       "wordBank": ["é", "tem", "está", "são", "tenho", "estás"],
       "explanation": "Three different verbs: ser for the job, ter for the age, estar for where he is today.",
       "tags": ["ser", "estar", "ter", "contrast"]
@@ -206,7 +269,17 @@
       "allowedModes": ["tiles", "typing"],
       "prompt": "Complete: 'We are brother and sister: I am the older one and she is sixteen.'",
       "template": "Nós ___ irmãos: eu ___ o mais velho e ela ___ dezasseis anos.",
-      "gaps": [{ "answer": "somos" }, { "answer": "sou" }, { "answer": "tem" }],
+      "gaps": [
+        {
+          "answer": "somos"
+        },
+        {
+          "answer": "sou"
+        },
+        {
+          "answer": "tem"
+        }
+      ],
       "wordBank": ["somos", "sou", "tem", "são", "é", "tenho"],
       "explanation": "Family relations take ser (somos irmãos, sou o mais velho), but the age takes ter (tem dezasseis anos).",
       "tags": ["ser", "ter", "family"]
@@ -442,7 +515,7 @@
       "type": "find_error",
       "topicId": "m1-pronouns-ser-estar-ter",
       "difficulty": 3,
-      "allowedModes": ["tiles", "letters"],
+      "allowedModes": ["tiles"],
       "prompt": "One word is wrong. Find it and fix it.",
       "sentence": ["Os", "meus", "pais", "tem", "uma", "casa", "no", "Porto."],
       "wrongIndex": 3,
@@ -585,11 +658,26 @@
       "allowedModes": ["tiles"],
       "prompt": "Match each Portuguese form of ser with its English meaning.",
       "pairs": [
-        { "target": "eu sou", "support": "I am" },
-        { "target": "tu és", "support": "you are (informal)" },
-        { "target": "ele é", "support": "he is" },
-        { "target": "nós somos", "support": "we are" },
-        { "target": "eles são", "support": "they are" }
+        {
+          "target": "eu sou",
+          "support": "I am"
+        },
+        {
+          "target": "tu és",
+          "support": "you are (informal)"
+        },
+        {
+          "target": "ele é",
+          "support": "he is"
+        },
+        {
+          "target": "nós somos",
+          "support": "we are"
+        },
+        {
+          "target": "eles são",
+          "support": "they are"
+        }
       ],
       "explanation": "These are all the present forms of ser; ele/ela/você share é, and eles/elas/vocês share são.",
       "tags": ["ser", "present"]
@@ -602,12 +690,30 @@
       "allowedModes": ["tiles"],
       "prompt": "Match each Portuguese chunk with its English meaning.",
       "pairs": [
-        { "target": "estou em casa", "support": "I am at home" },
-        { "target": "estás doente", "support": "you are ill" },
-        { "target": "estão cansados", "support": "they are tired" },
-        { "target": "tens razão", "support": "you are right" },
-        { "target": "temos fome", "support": "we are hungry" },
-        { "target": "tem vinte anos", "support": "he is twenty years old" }
+        {
+          "target": "estou em casa",
+          "support": "I am at home"
+        },
+        {
+          "target": "estás doente",
+          "support": "you are ill"
+        },
+        {
+          "target": "estão cansados",
+          "support": "they are tired"
+        },
+        {
+          "target": "tens razão",
+          "support": "you are right"
+        },
+        {
+          "target": "temos fome",
+          "support": "we are hungry"
+        },
+        {
+          "target": "tem vinte anos",
+          "support": "he is twenty years old"
+        }
       ],
       "explanation": "Portuguese uses ter where English uses 'be' for age, hunger and being right: tem vinte anos, temos fome, tens razão.",
       "tags": ["estar", "ter", "chunks"]
@@ -620,10 +726,22 @@
       "allowedModes": ["tiles"],
       "prompt": "Put this first meeting in the right order.",
       "lines": [
-        { "speaker": "A", "text": "Olá! Tu és a Inês?" },
-        { "speaker": "B", "text": "Sim, sou. E tu?" },
-        { "speaker": "A", "text": "Sou o Miguel. Como estás?" },
-        { "speaker": "B", "text": "Estou bem, obrigada." }
+        {
+          "speaker": "A",
+          "text": "Olá! Tu és a Inês?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sim, sou. E tu?"
+        },
+        {
+          "speaker": "A",
+          "text": "Sou o Miguel. Como estás?"
+        },
+        {
+          "speaker": "B",
+          "text": "Estou bem, obrigada."
+        }
       ],
       "explanation": "The dialogue moves from identifying someone with ser (és a Inês? / sou o Miguel) to asking how they feel with estar (Como estás?).",
       "tags": ["ser", "estar", "dialogue"]

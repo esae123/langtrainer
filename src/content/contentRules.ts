@@ -100,7 +100,12 @@ function normalizeTokenIgnoringAccents(s: string): string {
 }
 
 /** Common invariants shared by every exercise type (docs/content-authoring.md §4, "Common"). */
-function checkCommon(exercise: Exercise, containerId: string, path: string, problems: ContentProblem[]): void {
+function checkCommon(
+  exercise: Exercise,
+  containerId: string,
+  path: string,
+  problems: ContentProblem[]
+): void {
   const idPattern = new RegExp(`^${escapeRegExp(containerId)}-\\d{2,}$`);
   if (!idPattern.test(exercise.id)) {
     problems.push({
@@ -181,7 +186,10 @@ function checkFillGaps(e: FillGapsExercise, path: string, problems: ContentProbl
     });
   }
   if (e.gaps.length < 1 || e.gaps.length > 3) {
-    problems.push({ path: `${path}.gaps`, message: `gaps must have 1-3 items (has ${e.gaps.length})` });
+    problems.push({
+      path: `${path}.gaps`,
+      message: `gaps must have 1-3 items (has ${e.gaps.length})`,
+    });
   }
 
   const gapAnswers = e.gaps.map((g) => g.answer);
@@ -204,7 +212,11 @@ function checkFillGaps(e: FillGapsExercise, path: string, problems: ContentProbl
   }
 }
 
-function checkQuestionForAnswer(e: QuestionForAnswerExercise, path: string, problems: ContentProblem[]): void {
+function checkQuestionForAnswer(
+  e: QuestionForAnswerExercise,
+  path: string,
+  problems: ContentProblem[]
+): void {
   if (e.givenAnswer.trim().length === 0) {
     problems.push({ path: `${path}.givenAnswer`, message: 'givenAnswer must not be empty' });
   }
@@ -242,10 +254,16 @@ function checkAboutMe(e: AboutMeExercise, path: string, problems: ContentProblem
   }
   const n = wordCount(e.sampleAnswer);
   if (n < 2 || n > 12) {
-    problems.push({ path: `${path}.sampleAnswer`, message: `sampleAnswer must have 2-12 words (has ${n})` });
+    problems.push({
+      path: `${path}.sampleAnswer`,
+      message: `sampleAnswer must have 2-12 words (has ${n})`,
+    });
   }
   if (e.hints.length < 3 || e.hints.length > 8) {
-    problems.push({ path: `${path}.hints`, message: `hints must have 3-8 items (has ${e.hints.length})` });
+    problems.push({
+      path: `${path}.hints`,
+      message: `hints must have 3-8 items (has ${e.hints.length})`,
+    });
   }
   const sampleNorm = words(e.sampleAnswer).map(normalizeToken);
   for (const h of e.hints) {
@@ -262,42 +280,64 @@ function checkAboutMe(e: AboutMeExercise, path: string, problems: ContentProblem
 function checkFindError(e: FindErrorExercise, path: string, problems: ContentProblem[]): void {
   const n = e.sentence.length;
   if (n < 3 || n > 10) {
-    problems.push({ path: `${path}.sentence`, message: `sentence must have 3-10 tokens (has ${n})` });
+    problems.push({
+      path: `${path}.sentence`,
+      message: `sentence must have 3-10 tokens (has ${n})`,
+    });
   }
   if (e.wrongIndex < 0 || e.wrongIndex >= n) {
-    problems.push({ path: `${path}.wrongIndex`, message: 'wrongIndex must be a valid index into sentence' });
+    problems.push({
+      path: `${path}.wrongIndex`,
+      message: 'wrongIndex must be a valid index into sentence',
+    });
   }
   const wrongToken = e.sentence[e.wrongIndex];
   if (wrongToken !== undefined && e.correction === wrongToken) {
-    problems.push({ path: `${path}.correction`, message: 'correction must differ from sentence[wrongIndex]' });
+    problems.push({
+      path: `${path}.correction`,
+      message: 'correction must differ from sentence[wrongIndex]',
+    });
   } else if (
     wrongToken !== undefined &&
+    e.allowedModes.some((m) => m !== 'tiles') &&
     normalizeTokenIgnoringAccents(e.correction) === normalizeTokenIgnoringAccents(wrongToken)
   ) {
+    // In tiles mode the learner must pick the exact option, so accent contrasts (tem/têm,
+    // avó/avô, a/à) are real tests there; only letters/typing forgive accents.
     // An accent-only "error" (es/és, nao/não...) tests nothing: the app ignores accents when
     // checking answers, so the learner can "fix" it by typing the exact same letters back.
     problems.push({
       path: `${path}.correction`,
-      message: `correction "${e.correction}" differs from sentence[wrongIndex] "${wrongToken}" only by accents — the app ignores accents, so this tests nothing`,
+      message: `correction "${e.correction}" differs from sentence[wrongIndex] "${wrongToken}" only by accents — letters/typing ignore accents, so this tests nothing; restrict allowedModes to ["tiles"]`,
       // Warning, not error: existing authored content may have this issue and content:check
       // must stay green without a language-review pass rewriting it (review item 11).
       severity: 'warning',
     });
   }
   if (e.options.length < 3 || e.options.length > 4) {
-    problems.push({ path: `${path}.options`, message: `options must have 3-4 items (has ${e.options.length})` });
+    problems.push({
+      path: `${path}.options`,
+      message: `options must have 3-4 items (has ${e.options.length})`,
+    });
   }
   if (!e.options.includes(e.correction)) {
     problems.push({ path: `${path}.options`, message: 'options must include correction' });
   }
   if (wrongToken !== undefined && e.options.includes(wrongToken)) {
-    problems.push({ path: `${path}.options`, message: 'options must not include sentence[wrongIndex]' });
+    problems.push({
+      path: `${path}.options`,
+      message: 'options must not include sentence[wrongIndex]',
+    });
   }
   for (let i = 0; i < e.options.length; i++) {
     for (let j = i + 1; j < e.options.length; j++) {
       const a = e.options[i];
       const b = e.options[j];
-      if (a !== b && normalizeTokenIgnoringAccents(a) === normalizeTokenIgnoringAccents(b)) {
+      if (
+        e.allowedModes.some((m) => m !== 'tiles') &&
+        a !== b &&
+        normalizeTokenIgnoringAccents(a) === normalizeTokenIgnoringAccents(b)
+      ) {
         problems.push({
           path: `${path}.options`,
           message: `options "${a}" and "${b}" differ only by accents — the app ignores accents, so one is not a real distractor`,
@@ -308,7 +348,11 @@ function checkFindError(e: FindErrorExercise, path: string, problems: ContentPro
   }
 }
 
-function checkNumberSequence(e: NumberSequenceExercise, path: string, problems: ContentProblem[]): void {
+function checkNumberSequence(
+  e: NumberSequenceExercise,
+  path: string,
+  problems: ContentProblem[]
+): void {
   const n = e.sequence.length;
   if (n < 4 || n > 6) {
     problems.push({ path: `${path}.sequence`, message: `sequence must have 4-6 items (has ${n})` });
@@ -327,7 +371,10 @@ function checkNumberSequence(e: NumberSequenceExercise, path: string, problems: 
     });
   }
   if (e.options.length < 4 || e.options.length > 6) {
-    problems.push({ path: `${path}.options`, message: `options must have 4-6 items (has ${e.options.length})` });
+    problems.push({
+      path: `${path}.options`,
+      message: `options must have 4-6 items (has ${e.options.length})`,
+    });
   }
   if (e.answerWords[0] !== undefined && !e.options.includes(e.answerWords[0])) {
     problems.push({ path: `${path}.options`, message: 'options must include answerWords[0]' });
@@ -347,7 +394,11 @@ function checkMatchPairs(e: MatchPairsExercise, path: string, problems: ContentP
   }
 }
 
-function checkOrderDialogue(e: OrderDialogueExercise, path: string, problems: ContentProblem[]): void {
+function checkOrderDialogue(
+  e: OrderDialogueExercise,
+  path: string,
+  problems: ContentProblem[]
+): void {
   const n = e.lines.length;
   if (n < 3 || n > 6) {
     problems.push({ path: `${path}.lines`, message: `lines must have 3-6 items (has ${n})` });
@@ -357,17 +408,30 @@ function checkOrderDialogue(e: OrderDialogueExercise, path: string, problems: Co
   }
   for (let i = 1; i < e.lines.length; i++) {
     if (e.lines[i].speaker === e.lines[i - 1].speaker) {
-      problems.push({ path: `${path}.lines[${i}]`, message: 'speakers must alternate between A and B' });
+      problems.push({
+        path: `${path}.lines[${i}]`,
+        message: 'speakers must alternate between A and B',
+      });
     }
   }
 }
 
-function checkTranslateWord(e: TranslateWordExercise, path: string, problems: ContentProblem[]): void {
+function checkTranslateWord(
+  e: TranslateWordExercise,
+  path: string,
+  problems: ContentProblem[]
+): void {
   if (!e.sentence.includes(e.word)) {
-    problems.push({ path: `${path}.sentence`, message: `sentence must contain the word "${e.word}"` });
+    problems.push({
+      path: `${path}.sentence`,
+      message: `sentence must contain the word "${e.word}"`,
+    });
   }
   if (e.options.length !== 4) {
-    problems.push({ path: `${path}.options`, message: `options must have exactly 4 items (has ${e.options.length})` });
+    problems.push({
+      path: `${path}.options`,
+      message: `options must have exactly 4 items (has ${e.options.length})`,
+    });
   }
   if (!e.options.includes(e.answer)) {
     problems.push({ path: `${path}.options`, message: 'options must include answer' });

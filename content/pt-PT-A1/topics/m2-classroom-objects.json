@@ -543,7 +543,7 @@
       "type": "find_error",
       "topicId": "m2-classroom-objects",
       "difficulty": 2,
-      "allowedModes": ["tiles", "letters"],
+      "allowedModes": ["tiles"],
       "prompt": "One word is wrong. Tap it and choose the correction.",
       "explanation": "«Lápis» is the same in the singular and the plural: «o lápis, os lápis».",
       "sentence": ["Os", "lápises", "estão", "na", "mesa."],

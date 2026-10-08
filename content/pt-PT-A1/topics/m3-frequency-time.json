@@ -138,7 +138,7 @@
       "type": "find_error",
       "topicId": "m3-frequency-time",
       "difficulty": 2,
-      "allowedModes": ["tiles", "letters"],
+      "allowedModes": ["tiles"],
       "prompt": "One word is wrong. Tap it and choose the correction.",
       "explanation": "«À uma hora»: a + a = à. With plural hours it is «às»: «às duas horas».",
       "sentence": ["Almoço", "sempre", "a", "uma", "hora."],

@@ -5,11 +5,27 @@
   "kind": "grammar",
   "context": "Asking questions in Portuguese is easy: put the question word first and keep the normal word order.\n\n- **Onde moras?** — Where do you live?\n- **Quantos anos tens?** — How old are you?\n\nVery often people add **é que** after the question word. The meaning is exactly the same; it just sounds more natural in speech:\n\n- **Onde é que moras?** — Where do you live?\n- **De onde é que és?** — Where are you from?\n- **Porque é que não vens?** — Why aren't you coming?\n\nThe main question words: **como** (how), **quem** (who), **onde** (where), **de onde** (where from), **o que / que** (what), **qual** (which, what — when you pick from a set), **quanto** (how much), **quantos / quantas** (how many), **porque** (why).\n\nFor a yes/no question you change nothing at all, you just raise your voice at the end: **És estudante? — Sim, sou. / Não, não sou.**\n\nWatch out:\n\n- **Porquê?** stands alone or at the end; **porque** comes in front of the reason: *— Não vou. — Porquê? — Porque estou cansada.*\n- Say **Qual é o teu nome?**, not *O que é o teu nome?*\n- **quanto** agrees with the noun: quantos anos, quantas irmãs, but quanto custa.",
   "keyItems": [
-    { "target": "como?", "support": "how?" },
-    { "target": "quem?", "support": "who?" },
-    { "target": "onde?", "support": "where?" },
-    { "target": "de onde?", "support": "where from?", "note": "with ser: De onde és?" },
-    { "target": "o que? / que?", "support": "what?" },
+    {
+      "target": "como?",
+      "support": "how?"
+    },
+    {
+      "target": "quem?",
+      "support": "who?"
+    },
+    {
+      "target": "onde?",
+      "support": "where?"
+    },
+    {
+      "target": "de onde?",
+      "support": "where from?",
+      "note": "with ser: De onde és?"
+    },
+    {
+      "target": "o que? / que?",
+      "support": "what?"
+    },
     {
       "target": "qual?",
       "support": "which? / what?",
@@ -25,7 +41,11 @@
       "support": "how many?",
       "note": "agrees: quantos anos, quantas irmãs"
     },
-    { "target": "porque", "support": "because", "note": "comes before the reason" },
+    {
+      "target": "porque",
+      "support": "because",
+      "note": "comes before the reason"
+    },
     {
       "target": "porquê?",
       "support": "why?",
@@ -36,17 +56,36 @@
       "support": "(emphatic, no translation)",
       "note": "goes right after the question word"
     },
-    { "target": "Como te chamas?", "support": "What's your name?", "note": "informal, with tu" },
+    {
+      "target": "Como te chamas?",
+      "support": "What's your name?",
+      "note": "informal, with tu"
+    },
     {
       "target": "Como se chama?",
       "support": "What's your name?",
       "note": "formal, with você / o senhor"
     },
-    { "target": "Onde é que moras?", "support": "Where do you live?" },
-    { "target": "Quantos anos tens?", "support": "How old are you?" },
-    { "target": "Qual é o teu número?", "support": "What's your number?" },
-    { "target": "Sim, sou.", "support": "Yes, I am." },
-    { "target": "Não, não sou.", "support": "No, I'm not." },
+    {
+      "target": "Onde é que moras?",
+      "support": "Where do you live?"
+    },
+    {
+      "target": "Quantos anos tens?",
+      "support": "How old are you?"
+    },
+    {
+      "target": "Qual é o teu número?",
+      "support": "What's your number?"
+    },
+    {
+      "target": "Sim, sou.",
+      "support": "Yes, I am."
+    },
+    {
+      "target": "Não, não sou.",
+      "support": "No, I'm not."
+    },
     {
       "target": "Não percebo.",
       "support": "I don't understand.",
@@ -64,7 +103,11 @@
       "explanation": "Como asks about manner or state: Como está a tua mãe? The other words would ask for a person or a place.",
       "tags": ["question-words", "como"],
       "template": "___ está a tua mãe?",
-      "gaps": [{ "answer": "Como" }],
+      "gaps": [
+        {
+          "answer": "Como"
+        }
+      ],
       "wordBank": ["Como", "Quem", "Onde", "Qual"]
     },
     {
@@ -183,7 +226,14 @@
       "explanation": "The order is fixed: question word + é que + verb. Onde é que trabalhas?",
       "tags": ["question-words", "onde", "e-que", "word-order"],
       "template": "___ é ___ trabalhas?",
-      "gaps": [{ "answer": "Onde" }, { "answer": "que" }],
+      "gaps": [
+        {
+          "answer": "Onde"
+        },
+        {
+          "answer": "que"
+        }
+      ],
       "wordBank": ["Onde", "que", "Como", "quem", "qual"]
     },
     {
@@ -196,10 +246,22 @@
       "explanation": "A first conversation usually goes name first, then origin. Notice E tu?, which hands the same question back.",
       "tags": ["question-words", "dialogue", "como", "de-onde"],
       "lines": [
-        { "speaker": "A", "text": "Olá! Como te chamas?" },
-        { "speaker": "B", "text": "Chamo-me Tiago. E tu?" },
-        { "speaker": "A", "text": "Sou a Inês. De onde és?" },
-        { "speaker": "B", "text": "Sou de Braga." }
+        {
+          "speaker": "A",
+          "text": "Olá! Como te chamas?"
+        },
+        {
+          "speaker": "B",
+          "text": "Chamo-me Tiago. E tu?"
+        },
+        {
+          "speaker": "A",
+          "text": "Sou a Inês. De onde és?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sou de Braga."
+        }
       ]
     },
     {
@@ -212,7 +274,11 @@
       "explanation": "Quem asks about a person. Qual would be for choosing between things you can already see.",
       "tags": ["question-words", "quem"],
       "template": "___ é aquela senhora?",
-      "gaps": [{ "answer": "Quem" }],
+      "gaps": [
+        {
+          "answer": "Quem"
+        }
+      ],
       "wordBank": ["Quem", "Qual", "O que", "Como"]
     },
     {
@@ -264,7 +330,11 @@
       "explanation": "Quantos agrees with anos (masculine plural). The verb is tem because we are talking about o teu irmão.",
       "tags": ["question-words", "quantos", "agreement"],
       "template": "___ anos tem o teu irmão?",
-      "gaps": [{ "answer": "Quantos" }],
+      "gaps": [
+        {
+          "answer": "Quantos"
+        }
+      ],
       "wordBank": ["Quantos", "Quantas", "Quanto", "Quanta"]
     },
     {
@@ -318,7 +388,11 @@
       "explanation": "Línguas is feminine plural, so the question word is quantas.",
       "tags": ["question-words", "quantas", "agreement"],
       "template": "___ línguas falas?",
-      "gaps": [{ "answer": "Quantas" }],
+      "gaps": [
+        {
+          "answer": "Quantas"
+        }
+      ],
       "wordBank": ["Quantas", "Quantos", "Quanto", "Que"]
     },
     {
@@ -358,7 +432,11 @@
       "explanation": "With custar the word quanto never changes, even when the verb is plural: Quanto custam os bilhetes?",
       "tags": ["question-words", "quanto", "prices"],
       "template": "___ custam os bilhetes?",
-      "gaps": [{ "answer": "Quanto" }],
+      "gaps": [
+        {
+          "answer": "Quanto"
+        }
+      ],
       "wordBank": ["Quanto", "Quantos", "Quantas", "Como"]
     },
     {
@@ -385,10 +463,22 @@
       "explanation": "Each speaker answers and then asks something new. Notice the é que in the last question.",
       "tags": ["question-words", "dialogue", "quantos", "onde"],
       "lines": [
-        { "speaker": "A", "text": "Olá, Rita! Quantos anos tens?" },
-        { "speaker": "B", "text": "Tenho vinte e cinco. E tu?" },
-        { "speaker": "A", "text": "Tenho trinta. Onde é que moras?" },
-        { "speaker": "B", "text": "Moro em Faro, perto da praia." }
+        {
+          "speaker": "A",
+          "text": "Olá, Rita! Quantos anos tens?"
+        },
+        {
+          "speaker": "B",
+          "text": "Tenho vinte e cinco. E tu?"
+        },
+        {
+          "speaker": "A",
+          "text": "Tenho trinta. Onde é que moras?"
+        },
+        {
+          "speaker": "B",
+          "text": "Moro em Faro, perto da praia."
+        }
       ]
     },
     {
@@ -427,7 +517,11 @@
       "explanation": "With nome, apelido or número Portuguese uses qual, never o que: Qual é o teu apelido?",
       "tags": ["question-words", "qual", "o-que"],
       "template": "___ é o teu apelido?",
-      "gaps": [{ "answer": "Qual" }],
+      "gaps": [
+        {
+          "answer": "Qual"
+        }
+      ],
       "wordBank": ["Qual", "O que", "Quem", "Quantos"]
     },
     {
@@ -488,7 +582,7 @@
       "type": "find_error",
       "topicId": "m1-question-words",
       "difficulty": 2,
-      "allowedModes": ["tiles", "letters"],
+      "allowedModes": ["tiles"],
       "prompt": "One word is wrong. Find it and choose the correct form.",
       "explanation": "Porquê is only used alone or at the end of the sentence. In front of a verb it is porque: Porque não vens hoje?",
       "tags": ["question-words", "porque", "porque-acentuado"],
@@ -507,7 +601,11 @@
       "explanation": "Porque (no accent) introduces the reason. Porquê would only work as a question on its own.",
       "tags": ["question-words", "porque"],
       "template": "Estou em casa ___ está a chover.",
-      "gaps": [{ "answer": "porque" }],
+      "gaps": [
+        {
+          "answer": "porque"
+        }
+      ],
       "wordBank": ["porque", "porquê", "como", "quem"]
     },
     {
@@ -547,7 +645,11 @@
       "explanation": "On its own, \"Why?\" is Porquê?, with an accent. Porque is only used in front of the reason.",
       "tags": ["question-words", "porque-acentuado"],
       "template": "— Não venho à aula amanhã. — ___?",
-      "gaps": [{ "answer": "Porquê" }],
+      "gaps": [
+        {
+          "answer": "Porquê"
+        }
+      ],
       "wordBank": ["Porquê", "Porque", "Onde", "Como"]
     },
     {

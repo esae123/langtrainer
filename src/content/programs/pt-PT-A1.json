@@ -3591,8 +3591,7 @@
               "topicId": "m1-pronouns-ser-estar-ter",
               "difficulty": 3,
               "allowedModes": [
-                "tiles",
-                "letters"
+                "tiles"
               ],
               "prompt": "One word is wrong. Find it and fix it.",
               "explanation": "'Os meus pais' is plural (eles), so ter must be têm with a circumflex.",
@@ -10425,8 +10424,7 @@
               "topicId": "m1-question-words",
               "difficulty": 2,
               "allowedModes": [
-                "tiles",
-                "letters"
+                "tiles"
               ],
               "prompt": "One word is wrong. Find it and choose the correct form.",
               "explanation": "Porquê is only used alone or at the end of the sentence. In front of a verb it is porque: Porque não vens hoje?",
@@ -11694,8 +11692,7 @@
               "topicId": "m2-family-pets",
               "difficulty": 3,
               "allowedModes": [
-                "tiles",
-                "letters"
+                "tiles"
               ],
               "prompt": "One word is wrong. Tap it and choose the correction.",
               "explanation": "«O meu» and «simpático» are masculine, so the word is «avô» (grandfather), with the circumflex.",
@@ -12764,8 +12761,7 @@
               "topicId": "m2-classroom-objects",
               "difficulty": 2,
               "allowedModes": [
-                "tiles",
-                "letters"
+                "tiles"
               ],
               "prompt": "One word is wrong. Tap it and choose the correction.",
               "explanation": "«Lápis» is the same in the singular and the plural: «o lápis, os lápis».",
@@ -24555,8 +24551,7 @@
               "topicId": "m3-frequency-time",
               "difficulty": 2,
               "allowedModes": [
-                "tiles",
-                "letters"
+                "tiles"
               ],
               "prompt": "One word is wrong. Tap it and choose the correction.",
               "explanation": "«À uma hora»: a + a = à. With plural hours it is «às»: «às duas horas».",

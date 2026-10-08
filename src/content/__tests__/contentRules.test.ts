@@ -235,7 +235,9 @@ describe('checkContent — happy path and stats', () => {
 
 describe('checkContent — common invariants', () => {
   it('accepts a well-formed id (positive)', () => {
-    expect(has(checkContent(programWithTopic([validBuildPhrase])).problems, 'must match the pattern')).toBe(false);
+    expect(
+      has(checkContent(programWithTopic([validBuildPhrase])).problems, 'must match the pattern')
+    ).toBe(false);
   });
 
   it('rejects an id that does not match "<topicId>-nn" (negative)', () => {
@@ -252,7 +254,9 @@ describe('checkContent — common invariants', () => {
 
   it('accepts allowedModes that are valid for the exercise type (positive)', () => {
     const ok: MatchPairsExercise = { ...validMatchPairs, allowedModes: ['tiles'] };
-    expect(has(checkContent(programWithTopic([ok])).problems, 'is not allowed for exercise type')).toBe(false);
+    expect(
+      has(checkContent(programWithTopic([ok])).problems, 'is not allowed for exercise type')
+    ).toBe(false);
   });
 
   it('rejects an allowedMode that is not type-compatible (negative)', () => {
@@ -262,8 +266,14 @@ describe('checkContent — common invariants', () => {
   });
 
   it('allows "letters" mode for build_phrase when answer is 4 words or fewer (positive)', () => {
-    const ok: BuildPhraseExercise = { ...validBuildPhrase, allowedModes: ['tiles', 'letters'], answer: ['Eu', 'sou', 'português.'] };
-    expect(has(checkContent(programWithTopic([ok])).problems, 'letters" mode is only allowed')).toBe(false);
+    const ok: BuildPhraseExercise = {
+      ...validBuildPhrase,
+      allowedModes: ['tiles', 'letters'],
+      answer: ['Eu', 'sou', 'português.'],
+    };
+    expect(
+      has(checkContent(programWithTopic([ok])).problems, 'letters" mode is only allowed')
+    ).toBe(false);
   });
 
   it('rejects "letters" mode for build_phrase when answer has more than 4 words (negative)', () => {
@@ -306,13 +316,21 @@ describe('checkContent — common invariants', () => {
   });
 
   it('rejects two exercises in the same topic with the same joined target sentence (negative)', () => {
-    const dup: BuildPhraseExercise = { ...validBuildPhrase, id: `${TOPIC_ID}-99`, answer: [...validBuildPhrase.answer] };
+    const dup: BuildPhraseExercise = {
+      ...validBuildPhrase,
+      id: `${TOPIC_ID}-99`,
+      answer: [...validBuildPhrase.answer],
+    };
     const { problems } = checkContent(programWithTopic([validBuildPhrase, dup]));
     expect(has(problems, 'duplicate target sentence')).toBe(true);
   });
 
   it('accepts two exercises in the same topic with different target sentences (positive)', () => {
-    const other: BuildPhraseExercise = { ...validBuildPhrase, id: `${TOPIC_ID}-99`, answer: ['Tu', 'és', 'russo.'] };
+    const other: BuildPhraseExercise = {
+      ...validBuildPhrase,
+      id: `${TOPIC_ID}-99`,
+      answer: ['Tu', 'és', 'russo.'],
+    };
     const { problems } = checkContent(programWithTopic([validBuildPhrase, other]));
     expect(has(problems, 'duplicate target sentence')).toBe(false);
   });
@@ -327,7 +345,11 @@ describe('checkContent — problem metadata (stage 4b report)', () => {
   });
 
   it('includes the earlier exercise number/id in the duplicate target sentence message', () => {
-    const dup: BuildPhraseExercise = { ...validBuildPhrase, id: `${TOPIC_ID}-99`, answer: [...validBuildPhrase.answer] };
+    const dup: BuildPhraseExercise = {
+      ...validBuildPhrase,
+      id: `${TOPIC_ID}-99`,
+      answer: [...validBuildPhrase.answer],
+    };
     const { problems } = checkContent(programWithTopic([validBuildPhrase, dup]));
     const hit = problems.find((p) => p.message.includes('duplicate target sentence'));
     expect(hit?.message).toContain(`exercise 1, id "${validBuildPhrase.id}"`);
@@ -345,17 +367,23 @@ describe('checkContent — problem metadata (stage 4b report)', () => {
 describe('checkContent — build_phrase invariants', () => {
   it('rejects an answer with fewer than 2 words (negative)', () => {
     const bad: BuildPhraseExercise = { ...validBuildPhrase, answer: ['Olá.'] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'answer must have 2-10 words')).toBe(true);
+    expect(has(checkContent(programWithTopic([bad])).problems, 'answer must have 2-10 words')).toBe(
+      true
+    );
   });
 
   it('rejects zero distractors (negative)', () => {
     const bad: BuildPhraseExercise = { ...validBuildPhrase, distractors: [] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'distractors must have 1-4 items')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'distractors must have 1-4 items')
+    ).toBe(true);
   });
 
   it('rejects a distractor equal to an answer word (negative)', () => {
     const bad: BuildPhraseExercise = { ...validBuildPhrase, distractors: ['sou'] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'duplicates an answer word')).toBe(true);
+    expect(has(checkContent(programWithTopic([bad])).problems, 'duplicates an answer word')).toBe(
+      true
+    );
   });
 
   it('rejects a distractor equal to an answer word after case/punctuation normalisation (negative)', () => {
@@ -365,7 +393,9 @@ describe('checkContent — build_phrase invariants', () => {
       answer: ['Tens', 'um', 'gato?'],
       distractors: ['tens'],
     };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'duplicates an answer word')).toBe(true);
+    expect(has(checkContent(programWithTopic([bad])).problems, 'duplicates an answer word')).toBe(
+      true
+    );
   });
 });
 
@@ -377,34 +407,47 @@ describe('checkContent — fill_gaps invariants', () => {
 
   it('rejects a wordBank missing a gap answer (negative)', () => {
     const bad: FillGapsExercise = { ...validFillGaps, wordBank: ['é', 'somos', 'são'] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'must contain every gap answer')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'must contain every gap answer')
+    ).toBe(true);
   });
 
   it('rejects a wordBank with duplicates (negative)', () => {
     const bad: FillGapsExercise = { ...validFillGaps, wordBank: ['sou', 'sou', 'é', 'somos'] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'must not contain duplicates')).toBe(true);
+    expect(has(checkContent(programWithTopic([bad])).problems, 'must not contain duplicates')).toBe(
+      true
+    );
   });
 
   it('rejects a wordBank with too few distractors (negative)', () => {
     const bad: FillGapsExercise = { ...validFillGaps, wordBank: ['sou'] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'wordBank must contain 2-4 distractor')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'wordBank must contain 2-4 distractor')
+    ).toBe(true);
   });
 });
 
 describe('checkContent — question_for_answer invariants', () => {
   it('rejects an empty givenAnswer (negative)', () => {
     const bad: QuestionForAnswerExercise = { ...validQuestionForAnswer, givenAnswer: '' };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'givenAnswer must not be empty')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'givenAnswer must not be empty')
+    ).toBe(true);
   });
 
   it('rejects an answer whose last word does not contain "?" (negative)', () => {
-    const bad: QuestionForAnswerExercise = { ...validQuestionForAnswer, answer: ['Tu', 'és', 'portuguesa'] };
+    const bad: QuestionForAnswerExercise = {
+      ...validQuestionForAnswer,
+      answer: ['Tu', 'és', 'portuguesa'],
+    };
     expect(has(checkContent(programWithTopic([bad])).problems, 'answer is a question')).toBe(true);
   });
 
   it('rejects zero distractors (negative)', () => {
     const bad: QuestionForAnswerExercise = { ...validQuestionForAnswer, distractors: [] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'distractors must have 1-4 items')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'distractors must have 1-4 items')
+    ).toBe(true);
   });
 
   it('rejects a distractor equal to an answer word after case/punctuation normalisation (negative)', () => {
@@ -414,24 +457,32 @@ describe('checkContent — question_for_answer invariants', () => {
       answer: ['Quantos', 'gatos', 'tens?'],
       distractors: ['tens'],
     };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'duplicates an answer word')).toBe(true);
+    expect(has(checkContent(programWithTopic([bad])).problems, 'duplicates an answer word')).toBe(
+      true
+    );
   });
 });
 
 describe('checkContent — about_me invariants', () => {
   it('rejects an empty question (negative)', () => {
     const bad: AboutMeExercise = { ...validAboutMe, question: '' };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'question must not be empty')).toBe(true);
+    expect(has(checkContent(programWithTopic([bad])).problems, 'question must not be empty')).toBe(
+      true
+    );
   });
 
   it('rejects a sampleAnswer with fewer than 2 words (negative)', () => {
     const bad: AboutMeExercise = { ...validAboutMe, sampleAnswer: 'Ana.' };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'sampleAnswer must have 2-12 words')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'sampleAnswer must have 2-12 words')
+    ).toBe(true);
   });
 
   it('rejects hints outside the 3-8 range (negative)', () => {
     const bad: AboutMeExercise = { ...validAboutMe, hints: ['a', 'b'] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'hints must have 3-8 items')).toBe(true);
+    expect(has(checkContent(programWithTopic([bad])).problems, 'hints must have 3-8 items')).toBe(
+      true
+    );
   });
 
   it('warns (does not error) when a hint duplicates a sampleAnswer word (negative, warning)', () => {
@@ -455,29 +506,40 @@ describe('checkContent — about_me invariants', () => {
 describe('checkContent — find_error invariants', () => {
   it('rejects a sentence with fewer than 3 tokens (negative)', () => {
     const bad: FindErrorExercise = { ...validFindError, sentence: ['Eu', 'di'], wrongIndex: 1 };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'sentence must have 3-10 tokens')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'sentence must have 3-10 tokens')
+    ).toBe(true);
   });
 
   it('rejects an out-of-range wrongIndex (negative)', () => {
     const bad: FindErrorExercise = { ...validFindError, wrongIndex: 99 };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'valid index into sentence')).toBe(true);
+    expect(has(checkContent(programWithTopic([bad])).problems, 'valid index into sentence')).toBe(
+      true
+    );
   });
 
   it('rejects a correction equal to the wrong token (negative)', () => {
     const bad: FindErrorExercise = { ...validFindError, correction: 'di' };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'must differ from sentence[wrongIndex]')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'must differ from sentence[wrongIndex]')
+    ).toBe(true);
   });
 
   it('rejects options that do not include the correction (negative)', () => {
     const bad: FindErrorExercise = { ...validFindError, options: ['do', 'da'] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'options must include correction')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'options must include correction')
+    ).toBe(true);
   });
 
   it('rejects options that include the wrong token (negative)', () => {
     const bad: FindErrorExercise = { ...validFindError, options: ['do', 'de', 'di'] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'options must not include sentence[wrongIndex]')).toBe(
-      true
-    );
+    expect(
+      has(
+        checkContent(programWithTopic([bad])).problems,
+        'options must not include sentence[wrongIndex]'
+      )
+    ).toBe(true);
   });
 
   it('rejects a correction that differs from the wrong token only by accents (review item 11)', () => {
@@ -491,8 +553,24 @@ describe('checkContent — find_error invariants', () => {
     expect(has(checkContent(programWithTopic([bad])).problems, 'only by accents')).toBe(true);
   });
 
+  it('accepts an accent-only contrast when the exercise is tiles-only (exact option must be picked)', () => {
+    const tilesOnly: FindErrorExercise = {
+      ...validFindError,
+      allowedModes: ['tiles'],
+      sentence: ['Eles', 'tem', 'dois', 'gatos.'],
+      wrongIndex: 1,
+      correction: 'têm',
+      options: ['têm', 'temos', 'tens'],
+    };
+    expect(has(checkContent(programWithTopic([tilesOnly])).problems, 'only by accents')).toBe(
+      false
+    );
+  });
+
   it('accepts a correction that differs from the wrong token by more than accents (positive)', () => {
-    expect(has(checkContent(programWithTopic([validFindError])).problems, 'only by accents')).toBe(false);
+    expect(has(checkContent(programWithTopic([validFindError])).problems, 'only by accents')).toBe(
+      false
+    );
   });
 
   it('rejects two options that differ only by accents (review item 11)', () => {
@@ -508,7 +586,9 @@ describe('checkContent — find_error invariants', () => {
 describe('checkContent — number_sequence invariants', () => {
   it('rejects a sequence outside 4-6 items (negative)', () => {
     const bad: NumberSequenceExercise = { ...validNumberSequence, sequence: [1, null, 3] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'sequence must have 4-6 items')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'sequence must have 4-6 items')
+    ).toBe(true);
   });
 
   it('rejects a sequence without exactly one null (negative)', () => {
@@ -517,20 +597,35 @@ describe('checkContent — number_sequence invariants', () => {
   });
 
   it('rejects answerWords outside 1-2 items (negative)', () => {
-    const bad: NumberSequenceExercise = { ...validNumberSequence, answerWords: ['um', 'dois', 'três'] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'answerWords must have 1-2 items')).toBe(true);
+    const bad: NumberSequenceExercise = {
+      ...validNumberSequence,
+      answerWords: ['um', 'dois', 'três'],
+    };
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'answerWords must have 1-2 items')
+    ).toBe(true);
   });
 
   it('rejects options that do not include answerWords[0] (negative)', () => {
-    const bad: NumberSequenceExercise = { ...validNumberSequence, options: ['um', 'dois', 'quatro', 'cinco'] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'options must include answerWords[0]')).toBe(true);
+    const bad: NumberSequenceExercise = {
+      ...validNumberSequence,
+      options: ['um', 'dois', 'quatro', 'cinco'],
+    };
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'options must include answerWords[0]')
+    ).toBe(true);
   });
 });
 
 describe('checkContent — match_pairs invariants', () => {
   it('rejects pairs outside 4-6 items (negative)', () => {
-    const bad: MatchPairsExercise = { ...validMatchPairs, pairs: validMatchPairs.pairs.slice(0, 2) };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'pairs must have 4-6 items')).toBe(true);
+    const bad: MatchPairsExercise = {
+      ...validMatchPairs,
+      pairs: validMatchPairs.pairs.slice(0, 2),
+    };
+    expect(has(checkContent(programWithTopic([bad])).problems, 'pairs must have 4-6 items')).toBe(
+      true
+    );
   });
 
   it('rejects duplicate targets (negative)', () => {
@@ -538,7 +633,9 @@ describe('checkContent — match_pairs invariants', () => {
       ...validMatchPairs,
       pairs: [...validMatchPairs.pairs.slice(0, 3), { target: 'olá', support: 'hi again' }],
     };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'pairs targets must be unique')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'pairs targets must be unique')
+    ).toBe(true);
   });
 
   it('rejects duplicate supports (negative)', () => {
@@ -546,14 +643,21 @@ describe('checkContent — match_pairs invariants', () => {
       ...validMatchPairs,
       pairs: [...validMatchPairs.pairs.slice(0, 3), { target: 'boa tarde', support: 'hello' }],
     };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'pairs supports must be unique')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'pairs supports must be unique')
+    ).toBe(true);
   });
 });
 
 describe('checkContent — order_dialogue invariants', () => {
   it('rejects lines outside 3-6 items (negative)', () => {
-    const bad: OrderDialogueExercise = { ...validOrderDialogue, lines: validOrderDialogue.lines.slice(0, 2) };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'lines must have 3-6 items')).toBe(true);
+    const bad: OrderDialogueExercise = {
+      ...validOrderDialogue,
+      lines: validOrderDialogue.lines.slice(0, 2),
+    };
+    expect(has(checkContent(programWithTopic([bad])).problems, 'lines must have 3-6 items')).toBe(
+      true
+    );
   });
 
   it('rejects a dialogue that does not start with A (negative)', () => {
@@ -561,7 +665,9 @@ describe('checkContent — order_dialogue invariants', () => {
       ...validOrderDialogue,
       lines: [{ speaker: 'B', text: 'Olá!' }, ...validOrderDialogue.lines.slice(1)],
     };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'first line must be spoken by A')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'first line must be spoken by A')
+    ).toBe(true);
   });
 
   it('rejects speakers that do not alternate (negative)', () => {
@@ -573,23 +679,35 @@ describe('checkContent — order_dialogue invariants', () => {
         { speaker: 'B', text: 'Tudo bem.' },
       ],
     };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'speakers must alternate')).toBe(true);
+    expect(has(checkContent(programWithTopic([bad])).problems, 'speakers must alternate')).toBe(
+      true
+    );
   });
 });
 
 describe('checkContent — translate_word invariants', () => {
   it('rejects a sentence that does not contain the word (negative)', () => {
     const bad: TranslateWordExercise = { ...validTranslateWord, word: 'car' };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'sentence must contain the word')).toBe(true);
+    expect(
+      has(checkContent(programWithTopic([bad])).problems, 'sentence must contain the word')
+    ).toBe(true);
   });
 
   it('rejects options that do not have exactly 4 items (negative)', () => {
-    const bad: TranslateWordExercise = { ...validTranslateWord, options: ['casa', 'carro', 'cama'] };
+    const bad: TranslateWordExercise = {
+      ...validTranslateWord,
+      options: ['casa', 'carro', 'cama'],
+    };
     expect(has(checkContent(programWithTopic([bad])).problems, 'exactly 4 items')).toBe(true);
   });
 
   it('rejects options that do not include the answer (negative)', () => {
-    const bad: TranslateWordExercise = { ...validTranslateWord, options: ['carro', 'cama', 'copo', 'cão'] };
-    expect(has(checkContent(programWithTopic([bad])).problems, 'options must include answer')).toBe(true);
+    const bad: TranslateWordExercise = {
+      ...validTranslateWord,
+      options: ['carro', 'cama', 'copo', 'cão'],
+    };
+    expect(has(checkContent(programWithTopic([bad])).problems, 'options must include answer')).toBe(
+      true
+    );
   });
 });
