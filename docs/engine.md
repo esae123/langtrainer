@@ -117,10 +117,20 @@ The practice summary shows the score, "Fixed: n of m" after a retry, and offers
 **Practise this topic** (Library topic / phrase-set detail) and **Practise** (Progress →
 Needs work rows) start a focus session on one topic or phrase set
 (docs/stage-6-spec.md §4). The route is **`/session?focus=<topicId>`** (HashRouter query
-string, so a focus session survives a reload of the URL); `/session?resume=1` still
-resumes whatever was saved, focus sessions included. If an unfinished session exists, a
-confirm sheet asks first ("Discard and start" / "Cancel"); confirming clears the saved
-snapshot. The session runs in the installed course that contains the topic.
+string). `/session?resume=1` resumes whatever was saved, focus sessions included.
+Without `resume=1` the runner reads the saved snapshot first (Android restores a killed
+PWA at its last URL): a plain `/session`, or `/session?focus=X` while the saved session is
+a focus session on X, **resumes** it; any other snapshot (e.g. a regular one under a focus
+URL) is discarded as below before a new plan is made — never silently overwritten. From
+the Library / Progress, an unfinished session first gets a confirm sheet ("Discard and
+start" / "Cancel"). The session runs in the installed course that contains the topic.
+
+**Discarding an unfinished session** ("Discard and start", Learn → Discard, a
+non-matching snapshot above) and the **24-hour expiry** of a snapshot treat a session
+with at least one answer like a stopped one: the `sessions` row is written with
+`interrupted: true` and `finishSession` runs (history, and SRS for due topics), so the
+day keeps its streak and the answers their history. A snapshot without answers is just
+cleared. An expired snapshot is recorded with its last save time as `endedAt`.
 
 - `planFocus(input, topicId)` → `SessionPlan` with `kind: 'focus'`, `focusTopicId`, every
   item in block `'focus'`. Order: unseen first, then `wrongExerciseIds`, then the rest
@@ -140,7 +150,8 @@ snapshot. The session runs in the installed course that contains the topic.
 - Stats count focus sessions like regular ones (streak, sessions, answered, accuracy);
   Recent sessions tags them "Focus".
 - Summary: the same score, Retry mistakes / Repeat session and Done; "Another session"
-  becomes **Practise again** (a fresh focus plan for the same topic).
+  becomes **Practise again** (a fresh focus plan for the same topic, taken from the plan's
+  `focusTopicId`, so it also works after a session resumed via `?resume=1`).
 
 ## Checking (`checkAnswer`)
 

@@ -1,5 +1,5 @@
 import { StrictMode } from 'react';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import App from '../../App';
 import { db } from '../../db/db';
@@ -53,6 +53,9 @@ beforeEach(async () => {
 });
 
 afterEach(async () => {
+  // Unmount before clearing: a still-mounted session would re-save its snapshot, and the
+  // next test's plain /session would then resume it.
+  cleanup();
   window.location.hash = '';
   await Promise.all(db.tables.map((table) => table.clear()));
 });
@@ -281,6 +284,28 @@ describe('/session happy path', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Discard' }));
     await waitFor(async () => expect(await readActiveSession()).toBeNull());
     expect(await screen.findByText(/unfinished session discarded/i)).toBeInTheDocument();
+    // The answered item is not lost: the session is recorded as interrupted.
+    const sessions = await db.sessions.toArray();
+    expect(sessions).toEqual([expect.objectContaining({ completed: 1, interrupted: true })]);
+    expect((await db.topicProgress.get('t1'))?.history).toHaveLength(1);
+  });
+
+  it('a plain /session resumes an unfinished session instead of overwriting it', async () => {
+    const first = renderApp();
+    await startSession();
+    await answerCurrent('option', ['trabalho']);
+    expect(await screen.findByText('2/3')).toBeInTheDocument();
+    await waitFor(async () => expect((await readActiveSession())?.state.index).toBe(1));
+    const sessionId = (await readActiveSession())?.state.sessionId;
+    first.unmount();
+
+    // Android restores a killed PWA at its last URL: #/session, no resume=1.
+    window.location.hash = '#/session';
+    renderApp();
+    expect(await screen.findByText('2/3')).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: /start exercises/i })).not.toBeInTheDocument();
+    expect((await readActiveSession())?.state.sessionId).toBe(sessionId);
+    expect((await readActiveSession())?.state.responses).toHaveLength(1);
   });
 });
 
@@ -372,6 +397,74 @@ describe('focus sessions (docs/stage-6-spec.md §4)', () => {
     expect(await screen.findByRole('button', { name: /start exercises/i })).toBeInTheDocument();
     await waitFor(async () => expect((await readActiveSession())?.state.plan.kind).toBe('focus'));
     expect((await readActiveSession())?.state.responses).toHaveLength(0);
+    // The discarded session had an answer, so it was recorded like a stopped one.
+    const sessions = await db.sessions.toArray();
+    expect(sessions).toEqual([
+      expect.objectContaining({ kind: 'regular', completed: 1, interrupted: true }),
+    ]);
+    expect((await db.topicProgress.get('t1'))?.history).toHaveLength(1);
+  });
+
+  it('reopening /session?focus=X resumes the unfinished focus session on X', async () => {
+    window.location.hash = '#/session?focus=t1';
+    const first = renderApp();
+    await startSession();
+    expect(await screen.findByText('1/3')).toBeInTheDocument();
+    if (screen.queryByRole('radio', { name: 'trabalho' })) {
+      await answerCurrent('option', ['trabalho']);
+    } else if (screen.queryByRole('button', { name: 'Add Eu' })) {
+      await answerCurrent('tiles', ['Eu', 'falo', 'inglês']);
+    } else {
+      fireEvent.click(screen.getByRole('button', { name: 'Add Moro' }));
+      fireEvent.click(screen.getByRole('button', { name: 'Check' }));
+      fireEvent.click(await screen.findByRole('button', { name: 'Yes' }));
+    }
+    expect(await screen.findByText('2/3')).toBeInTheDocument();
+    await waitFor(async () => expect((await readActiveSession())?.state.index).toBe(1));
+    const sessionId = (await readActiveSession())?.state.sessionId;
+    first.unmount();
+
+    renderApp();
+    expect(await screen.findByText('2/3')).toBeInTheDocument();
+    expect((await readActiveSession())?.state.sessionId).toBe(sessionId);
+    expect((await readActiveSession())?.state.responses).toHaveLength(1);
+  });
+
+  it('a focus URL for another session records the old one as interrupted', async () => {
+    const first = renderApp();
+    await startSession();
+    await answerCurrent('option', ['trabalho']);
+    await waitFor(async () => expect((await readActiveSession())?.state.index).toBe(1));
+    await waitFor(async () => expect(await db.topicProgress.get('t1')).toBeTruthy());
+    first.unmount();
+
+    // A regular snapshot does not match a focus URL: it is finalised, not overwritten.
+    window.location.hash = '#/session?focus=t1';
+    renderApp();
+    expect(await screen.findByRole('button', { name: /start exercises/i })).toBeInTheDocument();
+    await waitFor(async () => expect((await readActiveSession())?.state.plan.kind).toBe('focus'));
+    const sessions = await db.sessions.toArray();
+    expect(sessions).toEqual([
+      expect.objectContaining({ kind: 'regular', completed: 1, interrupted: true }),
+    ]);
+  });
+
+  it('Practise again after a resumed focus session starts another focus session', async () => {
+    window.location.hash = '#/session?focus=t1';
+    const first = renderApp();
+    await startSession();
+    expect(await screen.findByText('Focus · Regular -ar verbs')).toBeInTheDocument();
+    await waitFor(async () => expect((await readActiveSession())?.state.phase).toBe('exercise'));
+    first.unmount();
+
+    window.location.hash = '#/session?resume=1';
+    renderApp();
+    await answerAllThree();
+    expect(await screen.findByText(/session complete/i)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Practise again' }));
+    await startSession();
+    expect(await screen.findByText('Focus · Regular -ar verbs')).toBeInTheDocument();
+    await waitFor(async () => expect((await readActiveSession())?.state.plan.kind).toBe('focus'));
   });
 
   it('starts straight away from the Library when nothing is unfinished', async () => {

@@ -13,7 +13,7 @@ import { currentTopicOf } from '../engine/plan';
 import { COMPLETION_THRESHOLD } from '../engine/progress';
 import { useT } from '../i18n';
 import { formatDate } from '../lib/formatDate';
-import { clearActiveSession, useActiveSession } from '../session/activeSession';
+import { discardActiveSession, useActiveSession } from '../session/activeSession';
 import { SESSION_LENGTH_OPTIONS, type SessionLength } from '../settings/settings';
 import { updateSettings, useSettings } from '../settings/settingsStore';
 
@@ -149,7 +149,9 @@ export function LearnScreen() {
             <button
               type="button"
               onClick={() => {
-                void clearActiveSession().then(() => showToast(t('learn.discarded')));
+                void discardActiveSession(activeSession).then(() =>
+                  showToast(t('learn.discarded'))
+                );
               }}
               className="min-h-11 rounded-xl border border-line px-4 text-sm font-medium text-text"
             >

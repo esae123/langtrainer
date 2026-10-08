@@ -1,11 +1,12 @@
 // Starting a focus session (docs/stage-6-spec.md §4) from the Library or Progress
 // screens. An unfinished session is never thrown away silently: the learner confirms
-// first, and only then is the saved snapshot cleared.
+// first, and only then is the saved snapshot discarded (recorded as interrupted when it
+// has answers).
 import { useState, type ReactNode } from 'react';
 import { useNavigate } from 'react-router';
 import { ConfirmDialog } from '../components/ConfirmDialog';
 import { useT } from '../i18n';
-import { clearActiveSession, readActiveSession } from './activeSession';
+import { discardActiveSession, readActiveSession } from './activeSession';
 
 /** The route of a focus session on one topic or phrase set. */
 export function focusSessionPath(topicId: string): string {
@@ -41,7 +42,11 @@ export function useStartFocus(): {
         const target = pending;
         setPending(null);
         if (!target) return;
-        void clearActiveSession().then(() => navigate(focusSessionPath(target.topicId)));
+        // A discarded session with answers is recorded as interrupted (session row +
+        // finishSession), so the day keeps its streak and the answers their history.
+        void readActiveSession()
+          .then((stored) => (stored ? discardActiveSession(stored) : undefined))
+          .then(() => navigate(focusSessionPath(target.topicId)));
       }}
       onCancel={() => setPending(null)}
     />

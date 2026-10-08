@@ -3,11 +3,12 @@ import { db } from '../../db/db';
 import { planSession } from '../../engine/plan';
 import { mulberry32 } from '../../engine/rng';
 import { INPUT_PRESETS } from '../../settings/settings';
-import { makeStandardProgram } from '../../test/fixtures';
+import { makeProgress, makeStandardProgram } from '../../test/fixtures';
 import {
   ACTIVE_SESSION_KEY,
   ACTIVE_SESSION_MAX_AGE_MS,
   clearActiveSession,
+  discardActiveSession,
   readActiveSession,
   saveActiveSession,
 } from '../activeSession';
@@ -31,7 +32,7 @@ function state() {
 }
 
 afterEach(async () => {
-  await db.settings.clear();
+  await Promise.all(db.tables.map((table) => table.clear()));
 });
 
 describe('activeSession persistence', () => {
@@ -51,6 +52,58 @@ describe('activeSession persistence', () => {
     await saveActiveSession(state(), NOW);
     expect(await readActiveSession(NOW + ACTIVE_SESSION_MAX_AGE_MS + 1)).toBeNull();
     expect(await db.settings.get(ACTIVE_SESSION_KEY)).toBeUndefined();
+  });
+
+  it('records an expired snapshot with answers as an interrupted session', async () => {
+    const started = state();
+    const item = started.plan.items[0];
+    await db.topicProgress.put(makeProgress(item.topicId, { status: 'learning' }));
+    const answered = sessionReducer(started, {
+      type: 'submit',
+      draft: {
+        id: `sess-persist-${item.exercise.id}`,
+        exerciseId: item.exercise.id,
+        topicId: item.topicId,
+        mode: item.mode,
+        block: item.block,
+        correct: true,
+        diacriticsOk: null,
+        answer: 'x',
+        at: NOW + 1000,
+      },
+      result: { correct: true, diacriticsOk: null, expected: 'x' },
+    })!;
+    await saveActiveSession(answered, NOW + 2000);
+
+    expect(await readActiveSession(NOW + 2000 + ACTIVE_SESSION_MAX_AGE_MS + 1)).toBeNull();
+    expect(await db.settings.get(ACTIVE_SESSION_KEY)).toBeUndefined();
+    const sessions = await db.sessions.toArray();
+    expect(sessions).toEqual([
+      expect.objectContaining({
+        id: 'sess-persist',
+        startedAt: NOW,
+        endedAt: NOW + 2000,
+        completed: 1,
+        correct: 1,
+        interrupted: true,
+      }),
+    ]);
+    expect((await db.topicProgress.get(item.topicId))?.history).toEqual([
+      { at: NOW + 2000, correct: 1, total: 1 },
+    ]);
+  });
+
+  it('an expired snapshot without answers leaves no session row', async () => {
+    await saveActiveSession(state(), NOW);
+    expect(await readActiveSession(NOW + ACTIVE_SESSION_MAX_AGE_MS + 1)).toBeNull();
+    expect(await db.sessions.count()).toBe(0);
+  });
+
+  it('discarding a session with answers records it, without answers just clears it', async () => {
+    await saveActiveSession(state(), NOW);
+    await discardActiveSession((await readActiveSession(NOW))!);
+    expect(await readActiveSession(NOW)).toBeNull();
+    expect(await db.sessions.count()).toBe(0);
   });
 
   it('ignores a malformed snapshot', async () => {

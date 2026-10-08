@@ -6,7 +6,7 @@ import { useActiveProgram, useAllPrograms } from '../content/programRegistry';
 import { exercisesByTopic, planPractice, type SessionPlan } from '../engine/plan';
 import { useT } from '../i18n';
 import { useSettings } from '../settings/settingsStore';
-import { useActiveSession } from './activeSession';
+import { resumesSnapshot, useActiveSession, type StoredActiveSession } from './activeSession';
 import { ContextPanel } from './ContextPanel';
 import { ExercisePanel } from './ExercisePanel';
 import { SummaryPanel } from './SummaryPanel';
@@ -36,22 +36,39 @@ function practicePlanFrom(state: SessionState, fromMistakes: boolean): SessionPl
 /**
  * `/session` — full-screen flow with no bottom tab bar. `/session?resume=1` resumes the
  * saved session; `/session?focus=<topicId>` starts a focus session on one topic or phrase
- * set (docs/stage-6-spec.md §4).
+ * set (docs/stage-6-spec.md §4). Without `resume=1` a saved session is still picked up
+ * when the URL is a plain `/session` or a focus URL for the same topic (Android restores
+ * a killed PWA at its last URL), see `resumesSnapshot`.
  */
 export function SessionScreen() {
   // Remounting with a new key is how "Another session" / "Practise again" plans afresh.
   const [runKey, setRunKey] = useState(0);
   const [practicePlan, setPracticePlan] = useState<SessionPlan | null>(null);
+  // The focus topic of a restart: "Practise again" keeps it, "Another session" has none.
+  const [restartFocusId, setRestartFocusId] = useState<string | undefined>(undefined);
   const [searchParams] = useSearchParams();
-  const resume = runKey === 0 && searchParams.get('resume') === '1';
+  const stored = useActiveSession();
+  // The snapshot as first loaded decides whether the first run resumes; later saves of
+  // the running session must not flip that decision.
+  const [initialSnapshot, setInitialSnapshot] = useState<StoredActiveSession | null | undefined>(
+    undefined
+  );
+  if (initialSnapshot === undefined && stored !== undefined) setInitialSnapshot(stored);
+
+  const urlFocus = searchParams.get('focus') ?? undefined;
+  const firstRun = runKey === 0;
+  const resume =
+    firstRun && (searchParams.get('resume') === '1' || resumesSnapshot(initialSnapshot, urlFocus));
   return (
     <SessionRun
       key={runKey}
       resume={resume}
-      focusTopicId={resume ? undefined : (searchParams.get('focus') ?? undefined)}
+      deciding={firstRun && initialSnapshot === undefined}
+      focusTopicId={firstRun ? urlFocus : restartFocusId}
       practicePlan={practicePlan}
-      onRestart={() => {
+      onRestart={(focusTopicId) => {
         setPracticePlan(null);
+        setRestartFocusId(focusTopicId);
         setRunKey((key) => key + 1);
       }}
       onPractice={(plan) => {
@@ -64,15 +81,18 @@ export function SessionScreen() {
 
 function SessionRun({
   resume,
+  deciding,
   focusTopicId,
   practicePlan,
   onRestart,
   onPractice,
 }: {
   resume: boolean;
+  /** The saved snapshot is still loading, so it is not yet known whether to resume. */
+  deciding: boolean;
   focusTopicId: string | undefined;
   practicePlan: SessionPlan | null;
-  onRestart: () => void;
+  onRestart: (focusTopicId: string | undefined) => void;
   onPractice: (plan: SessionPlan) => void;
 }) {
   const t = useT();
@@ -98,7 +118,7 @@ function SessionRun({
     ? entries?.find((entry) => exercisesByTopic(entry.program).has(focusTopicId))?.program
     : undefined;
   const program =
-    entries === undefined || (resume && stored === undefined)
+    entries === undefined || deciding || (resume && stored === undefined)
       ? undefined
       : (resumedProgram ?? focusProgram ?? activeProgram);
 
@@ -152,7 +172,9 @@ function SessionRun({
           outcomes={runner.outcomes}
           program={program}
           onDone={() => navigate('/')}
-          onAnother={onRestart}
+          onAnother={() =>
+            onRestart(state.plan.kind === 'focus' ? state.plan.focusTopicId : undefined)
+          }
           onRetryMistakes={() => {
             const plan = practicePlanFrom(state, true);
             if (plan) onPractice(plan);

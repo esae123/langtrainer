@@ -17,17 +17,18 @@ import {
   type PlanInput,
   type SessionPlan,
 } from '../engine/plan';
-import {
-  applyAttempt,
-  emptyTopicProgress,
-  finishSession,
-  type SessionAttemptSummary,
-  type TopicOutcome,
-} from '../engine/progress';
+import { applyAttempt, emptyTopicProgress, type TopicOutcome } from '../engine/progress';
 import { mulberry32, type Rng } from '../engine/rng';
 import type { TopicProgress } from '../engine/types';
 import type { Settings } from '../settings/settings';
-import { clearActiveSession, readActiveSession, saveActiveSession } from './activeSession';
+import {
+  clearActiveSession,
+  discardActiveSession,
+  readActiveSession,
+  resumesSnapshot,
+  saveActiveSession,
+} from './activeSession';
+import { recordSessionEnd } from './recordSessionEnd';
 import {
   currentItem,
   initSessionState,
@@ -122,12 +123,21 @@ export function useSessionRunner(
         return;
       }
 
-      if (resume) {
-        const stored = await readActiveSession(now);
-        if (stored) {
+      // Never overwrite an unfinished session silently (Android restores a killed PWA at
+      // its last URL, so /session or /session?focus=X can reopen while a snapshot
+      // exists). `readActiveSession` also finalises an expired snapshot. An explicit
+      // resume, a plain /session, or a focus URL for the same topic picks the saved
+      // session up; any other snapshot is recorded as interrupted before planning anew.
+      const stored = await readActiveSession(now);
+      if (stored) {
+        if (
+          resume ||
+          (resumesSnapshot(stored, focusTopicId) && stored.state.programId === program.id)
+        ) {
           dispatch({ type: 'init', state: stored.state });
           return;
         }
+        await discardActiveSession(stored);
       }
       const input = planInput(now);
       if (!input) return;
@@ -151,47 +161,11 @@ export function useSessionRunner(
     if (!state || state.phase !== 'summary') return;
     if (finalizedRef.current === state.sessionId) return;
     finalizedRef.current = state.sessionId;
-    const { sessionId, programId, plan, responses, startedAt, interrupted } = state;
     const now = state.endedAt ?? Date.now();
-    const practice = plan.kind === 'practice';
 
     void (async () => {
-      await db.sessions.put({
-        id: sessionId,
-        programId,
-        startedAt,
-        endedAt: now,
-        plannedLength: plan.open ? responses.length : plan.plannedLength,
-        completed: responses.length,
-        correct: responses.filter((draft) => draft.correct).length,
-        interrupted,
-        kind: plan.kind,
-      });
-
-      // Practice runs are drill only: no history entry, no SRS transition, no status
-      // change (docs/stage-3b-spec.md §4). Focus sessions do go through finishSession:
-      // their attempts are all in the `focus` block, so it adds history but never moves
-      // the SRS (docs/stage-6-spec.md §4).
-      if (practice) {
-        setOutcomes([]);
-        return;
-      }
-
-      const topicIds = [...new Set(responses.map((draft) => draft.topicId))];
-      const summaries: SessionAttemptSummary[] = responses.map((draft) => ({
-        topicId: draft.topicId,
-        block: draft.block,
-        correct: draft.correct,
-      }));
-
-      const result = await db.transaction('rw', db.topicProgress, async () => {
-        const rows = await Promise.all(topicIds.map((id) => db.topicProgress.get(id)));
-        const present = rows.filter((row): row is TopicProgress => row !== undefined);
-        const finished = finishSession(present, summaries, now, startedAt);
-        await db.topicProgress.bulkPut(finished.rows);
-        return finished;
-      });
-      progressRef.current = result.rows;
+      const result = await recordSessionEnd(state, now, state.interrupted);
+      if (state.plan.kind !== 'practice') progressRef.current = result.rows;
       setOutcomes(result.outcomes);
     })();
   }, [state]);
