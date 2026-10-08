@@ -10,7 +10,13 @@ import type {
 } from '../../content/types';
 import { makeBuildPhrase, makeTranslateWord } from '../../test/fixtures';
 import { checkAnswer, expectedAnswerText, gradePairs, responseToText } from '../check';
-import { finalPunctuationMark, levenshtein, normalize, stripDiacritics, stripTokenPunctuation } from '../text';
+import {
+  finalPunctuationMark,
+  levenshtein,
+  normalize,
+  stripDiacritics,
+  stripTokenPunctuation,
+} from '../text';
 
 describe('normalize', () => {
   it('trims, collapses whitespace and lowercases', () => {
@@ -27,6 +33,14 @@ describe('normalize', () => {
   it('keeps word-internal hyphens and apostrophes but drops all other punctuation', () => {
     expect(normalize('Chamo-me Ana, e tu?')).toBe('chamo-me ana e tu');
     expect(normalize("d'água")).toBe("d'água");
+  });
+
+  it('drops dashes, inverted marks and low quotes but keeps intra-word hyphens', () => {
+    expect(normalize('Olá — tudo bem?')).toBe('olá tudo bem');
+    expect(normalize('Olá – tudo bem')).toBe('olá tudo bem');
+    expect(normalize('¿Moras aqui? ¡Que bom!')).toBe('moras aqui que bom');
+    expect(normalize('„Bom dia‚')).toBe('bom dia');
+    expect(normalize('Ele chama-se Rui—')).toBe('ele chama-se rui');
   });
 });
 
@@ -158,9 +172,9 @@ describe('checkAnswer — build_phrase', () => {
     expect(
       checkAnswer(question, 'letters', { kind: 'text', text: 'tu és professor' }).correct
     ).toBe(true);
-    expect(
-      checkAnswer(question, 'typing', { kind: 'text', text: 'tu és professor' }).correct
-    ).toBe(true);
+    expect(checkAnswer(question, 'typing', { kind: 'text', text: 'tu és professor' }).correct).toBe(
+      true
+    );
     expect(
       checkAnswer(question, 'typing', { kind: 'text', text: 'tu és professor???' }).correct
     ).toBe(true);
@@ -171,9 +185,9 @@ describe('checkAnswer — build_phrase', () => {
       acceptedAnswers: [],
       distractors: [],
     });
-    expect(
-      checkAnswer(comma, 'letters', { kind: 'text', text: 'chamo-me ana e tu' }).correct
-    ).toBe(true);
+    expect(checkAnswer(comma, 'letters', { kind: 'text', text: 'chamo-me ana e tu' }).correct).toBe(
+      true
+    );
     expect(
       checkAnswer(comma, 'typing', { kind: 'text', text: 'chamo-me, ana, e, tu?' }).correct
     ).toBe(true);

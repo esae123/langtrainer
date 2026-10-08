@@ -285,8 +285,13 @@ function buildItems(
     .map((row) => row.topicId);
 
   let reviewTopicIds: string[] = [];
-  // A review share of 0 is respected: no forced review.
-  if (dueTopicIds.length > 0 && reviewTarget > 0) {
+  // A review share of 0 is respected: no forced review. The gate is the *configured*
+  // share, not the rounded block size: a small share can round to 0 items (custom
+  // 90/10/0 at length 5 → 5/0/0), and due topics must still be reviewed then.
+  const mix = input.sessionMix ?? DEFAULT_SESSION_MIX;
+  const reviewShareConfigured =
+    mix.preset === 'balanced' || normalizeMixShares(mix.shares).review > 0;
+  if (dueTopicIds.length > 0 && (reviewShareConfigured || reviewTarget > 0)) {
     reviewTopicIds = dueTopicIds.slice(
       0,
       reviewTarget >= MAX_REVIEW_TOPICS * MIN_REVIEW_ATTEMPTS ? MAX_REVIEW_TOPICS : 1

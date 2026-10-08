@@ -523,6 +523,15 @@ describe('review scheduling (docs/stage-6-spec.md §1)', () => {
     expect(p.items).toHaveLength(10);
   });
 
+  it('a small review share that rounds to 0 items still reviews a due topic', () => {
+    const sessionMix = { preset: 'custom' as const, shares: { new: 90, review: 10, phrases: 0 } };
+    expect(blockCountsFor(5, sessionMix)).toEqual({ new: 5, review: 0, phrases: 0 });
+    const p = planSession({ ...input(5, dueSets[1]), sessionMix });
+    expect(countBlocks(p)).toEqual({ new: 2, review: 3, phrases: 0 });
+    expect(reviewCounts(p).get('t1')).toBe(MIN_REVIEW_ATTEMPTS);
+    expect(p.items).toHaveLength(5);
+  });
+
   for (const dueCount of [0, 1, 2, 3]) {
     it(`open session, ${dueCount} due: each due topic reaches 3 items, then the next`, () => {
       const progress = dueSets[dueCount];

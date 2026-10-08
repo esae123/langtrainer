@@ -75,10 +75,13 @@ split in `blockCountsFor(length, mix)`:
     reviewed across cycles until it has 3 items in this session, then the next due topic
     (with the balanced 3/2/1 cycle the first cycle borrows one new slot, so one cycle is
     already enough);
-  - a review share of 0 is respected (no forced review);
+  - a review share of 0 is respected (no forced review). The gate is the **configured**
+    share, not the rounded block: a small share that rounds to 0 items (custom 90/10/0 at
+    length 5 → 5/0/0) still reviews a due topic (→ 2/3/0);
   - fallbacks are unchanged: if nothing is due (or every due topic already has 3 items in
     this open session), one random completed topic; if nothing is completed, more
-    current-topic exercises.
+    current-topic exercises. Such fallback items are **extra practice**: `finishSession`
+    only moves the SRS of a topic that was due when the session started (see below).
 - **Phrases block**: exercises from the phrase sets in program order, unseen first.
 - **Exercise selection**: three groups, in order — (1) unseen (not in `seenExerciseIds`),
   (2) seen but in `wrongExerciseIds` (last regular attempt was wrong), (3) the rest. The
@@ -147,7 +150,8 @@ the learner did not type characters (tiles, matching, ordering, self-graded answ
 
 `normalize(s)`: trim, collapse whitespace, lowercase, drop **all** punctuation — not just
 terminal `.`/`!`/`?`/surrounding quotes/guillemets, but every comma, semicolon, colon,
-ellipsis etc. anywhere in the string — except word-internal hyphens and apostrophes
+ellipsis, em/en dash (`—` `–`), inverted mark (`¿` `¡`), low quote (`„` `‚`) etc. anywhere
+in the string — except word-internal hyphens and apostrophes
 (`chama-se`, `d'água` keep theirs). A missing or extra comma, a missing final `?`, or
 guillemets around the whole sentence never change the comparison, in any mode.
 `stripTokenPunctuation(token)` does the same for a single token (used for tile labels and
@@ -214,9 +218,13 @@ topic touched it appends a `history` entry `{ at, correct, total }`. A topic onl
 sessionStartedAt` and a completed status) — planning falls back to the current topic when
 nothing is due, so review-block items on a `learning` topic, or on one completed minutes
 ago, are just extra practice: they set neither `lastReviewedAt` nor an SRS transition, and
-a fresh stage 1 / +7d schedule stays intact. For a genuinely reviewed topic with **at least
-3 attempts in the review block**, the SRS state moves (100% = every one of those attempts
-correct):
+a fresh stage 1 / +7d schedule stays intact. The topic must also have been **due when the
+session started** (`nextReviewAt !== undefined && nextReviewAt <= sessionStartedAt`): when
+nothing is due the review block is filled from a random completed topic, and those items
+are extra practice too (recorded as attempts and in `history`, but no `lastReviewedAt` and
+no SRS move — a stage 1 topic due in 6 days stays stage 1, due in 6 days; a mastered topic
+is never due). For a genuinely reviewed topic with **at least 3 attempts in the review
+block**, the SRS state moves (100% = every one of those attempts correct):
 
 | current           | result | next                                                                                                                                |
 | ----------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------- |

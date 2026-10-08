@@ -1,10 +1,11 @@
 // Answer text normalisation (docs/stage-3-spec.md §3).
 
 // Leading/trailing punctuation around a single token: full stops, commas, bangs,
-// question marks, semicolons, colons, ellipsis dots, guillemets, quotes, brackets and
-// hyphens — but only at the very edge of the token. A hyphen or apostrophe between two
-// letters (chama-se, d'água) is never at the edge of its own token, so it survives.
-const EDGE_PUNCTUATION = /^[.,!?;:…«»"“”'’‘()[\]-]+|[.,!?;:…«»"“”'’‘()[\]-]+$/gu;
+// question marks (also inverted ¿ ¡), semicolons, colons, ellipsis dots, guillemets,
+// quotes (also low „ ‚), brackets, hyphens and em/en dashes — but only at the very edge
+// of the token. A hyphen or apostrophe between two letters (chama-se, d'água) is never at
+// the edge of its own token, so it survives.
+const EDGE_PUNCTUATION = /^[.,!?;:…«»"“”„'’‘‚()[\]¿¡—–-]+|[.,!?;:…«»"“”„'’‘‚()[\]¿¡—–-]+$/gu;
 
 /** The trailing wrapper characters (closing quotes/guillemets/brackets) before a final mark. */
 const TRAILING_WRAP = /[»”’'"\])]+$/u;
@@ -23,12 +24,7 @@ export function stripTokenPunctuation(token: string): string {
  * token, because every punctuation mark in a sentence sits at the edge of some word.
  */
 export function stripPunctuation(value: string): string {
-  return value
-    .split(/\s+/u)
-    .filter(Boolean)
-    .map(stripTokenPunctuation)
-    .filter(Boolean)
-    .join(' ');
+  return value.split(/\s+/u).filter(Boolean).map(stripTokenPunctuation).filter(Boolean).join(' ');
 }
 
 /**

@@ -154,8 +154,10 @@ function applySrs(row: TopicProgress, perfect: boolean, now: number): void {
 
 /**
  * End-of-session bookkeeping: one history entry per touched topic, `lastReviewedAt` for
- * topics that were already completed and appeared in the review block, and SRS
+ * topics that were already completed, were due when the session started
+ * (`nextReviewAt <= sessionStartedAt`) and appeared in the review block, and SRS
  * transitions for those topics when they got at least three review-block attempts.
+ * Review-block items on a topic that was not due are extra practice only.
  *
  * Topics completed *during* this session, and topics still `learning`, are skipped:
  * when nothing is due, `plan.ts` fills the review block from the current topic, so a
@@ -200,9 +202,15 @@ export function finishSession(
     const completedThisSession =
       existing.firstCompletedAt !== undefined && existing.firstCompletedAt >= sessionStartedAt;
     const wasCompleted = !completedThisSession && COMPLETED_STATUSES.has(existing.status);
-    if (reviewed && wasCompleted) row.lastReviewedAt = now;
+    // ...and only a topic that was *due* when the session started. When nothing is due,
+    // planning fills the review block from a random completed topic: those items are
+    // extra practice (recorded as attempts) and must not advance a schedule that is not
+    // up yet, nor set lastReviewedAt.
+    const wasDue = existing.nextReviewAt !== undefined && existing.nextReviewAt <= sessionStartedAt;
+    const countsAsReview = wasCompleted && wasDue;
+    if (reviewed && countsAsReview) row.lastReviewedAt = now;
 
-    const srsApplied = wasCompleted && reviewAttempts.length >= MIN_REVIEW_ATTEMPTS;
+    const srsApplied = countsAsReview && reviewAttempts.length >= MIN_REVIEW_ATTEMPTS;
     if (srsApplied) {
       applySrs(
         row,
