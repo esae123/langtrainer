@@ -479,6 +479,30 @@ describe('checkContent — find_error invariants', () => {
       true
     );
   });
+
+  it('rejects a correction that differs from the wrong token only by accents (review item 11)', () => {
+    const bad: FindErrorExercise = {
+      ...validFindError,
+      sentence: ['Tu', 'nao', 'falas', 'português.'],
+      wrongIndex: 1,
+      correction: 'não',
+      options: ['não', 'nunca', 'sempre'],
+    };
+    expect(has(checkContent(programWithTopic([bad])).problems, 'only by accents')).toBe(true);
+  });
+
+  it('accepts a correction that differs from the wrong token by more than accents (positive)', () => {
+    expect(has(checkContent(programWithTopic([validFindError])).problems, 'only by accents')).toBe(false);
+  });
+
+  it('rejects two options that differ only by accents (review item 11)', () => {
+    const bad: FindErrorExercise = {
+      ...validFindError,
+      options: ['de', 'é', 'e'],
+      correction: 'de',
+    };
+    expect(has(checkContent(programWithTopic([bad])).problems, 'only by accents')).toBe(true);
+  });
 });
 
 describe('checkContent — number_sequence invariants', () => {

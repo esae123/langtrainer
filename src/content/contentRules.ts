@@ -85,6 +85,20 @@ function normalizeToken(s: string): string {
     .toLowerCase();
 }
 
+/**
+ * Strips accents/cedilla (NFD decomposition + drop combining marks U+0300-U+036F): "é"/"e",
+ * "ç"/"c", "não"/"nao" all normalise the same. The app's answer-checking ignores accents, so an
+ * `options`/`correction` pair that differs only this way tests nothing (review item 11).
+ */
+function stripAccents(s: string): string {
+  return s.normalize('NFD').replace(/[̀-ͯ]/g, '');
+}
+
+/** "same word, ignoring case/punctuation/accents" — stricter than normalizeToken alone. */
+function normalizeTokenIgnoringAccents(s: string): string {
+  return stripAccents(normalizeToken(s));
+}
+
 /** Common invariants shared by every exercise type (docs/content-authoring.md §4, "Common"). */
 function checkCommon(exercise: Exercise, containerId: string, path: string, problems: ContentProblem[]): void {
   const idPattern = new RegExp(`^${escapeRegExp(containerId)}-\\d{2,}$`);
@@ -256,6 +270,19 @@ function checkFindError(e: FindErrorExercise, path: string, problems: ContentPro
   const wrongToken = e.sentence[e.wrongIndex];
   if (wrongToken !== undefined && e.correction === wrongToken) {
     problems.push({ path: `${path}.correction`, message: 'correction must differ from sentence[wrongIndex]' });
+  } else if (
+    wrongToken !== undefined &&
+    normalizeTokenIgnoringAccents(e.correction) === normalizeTokenIgnoringAccents(wrongToken)
+  ) {
+    // An accent-only "error" (es/és, nao/não...) tests nothing: the app ignores accents when
+    // checking answers, so the learner can "fix" it by typing the exact same letters back.
+    problems.push({
+      path: `${path}.correction`,
+      message: `correction "${e.correction}" differs from sentence[wrongIndex] "${wrongToken}" only by accents — the app ignores accents, so this tests nothing`,
+      // Warning, not error: existing authored content may have this issue and content:check
+      // must stay green without a language-review pass rewriting it (review item 11).
+      severity: 'warning',
+    });
   }
   if (e.options.length < 3 || e.options.length > 4) {
     problems.push({ path: `${path}.options`, message: `options must have 3-4 items (has ${e.options.length})` });
@@ -265,6 +292,19 @@ function checkFindError(e: FindErrorExercise, path: string, problems: ContentPro
   }
   if (wrongToken !== undefined && e.options.includes(wrongToken)) {
     problems.push({ path: `${path}.options`, message: 'options must not include sentence[wrongIndex]' });
+  }
+  for (let i = 0; i < e.options.length; i++) {
+    for (let j = i + 1; j < e.options.length; j++) {
+      const a = e.options[i];
+      const b = e.options[j];
+      if (a !== b && normalizeTokenIgnoringAccents(a) === normalizeTokenIgnoringAccents(b)) {
+        problems.push({
+          path: `${path}.options`,
+          message: `options "${a}" and "${b}" differ only by accents — the app ignores accents, so one is not a real distractor`,
+          severity: 'warning',
+        });
+      }
+    }
   }
 }
 
