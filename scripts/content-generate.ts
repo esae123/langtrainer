@@ -13,12 +13,17 @@
 //   node scripts/content-generate.ts --program pt-PT-A1 --phrases everyday-2
 //   node scripts/content-generate.ts --program en-b2 --module m1 --dry-run
 //   node scripts/content-generate.ts --program pt-PT-A1 --topic m3-daily-routine --provider openai
+//   node scripts/content-generate.ts --program pt-PT-A1 --topic m3-daily-routine  (resumes _draft-m3-daily-routine.json)
+//   node scripts/content-generate.ts --program pt-PT-A1 --topic m2-family-pets --add 20
 // Flags: --program <id> (default pt-PT-A1), --module <id>, --topic <id>, --phrases <id>,
-//        --force (regenerate even if the file already exists), --dry-run (print prompts only,
-//        no API calls, no API key required), --provider <gemini|openai> (default gemini, or
-//        AI_PROVIDER in .env), --model <name>, --thinking <low|high|medium> (gemini: thinking
-//        level; openai: reasoning_effort), --count <n>, --sleep <ms> (default 2000, pause
-//        between sequential calls).
+//        --force (regenerate even if the file already exists), --fresh (ignore an existing
+//        _draft-<id>.json instead of resuming from it — see docs/content-generation.md §6),
+//        --add <n> (topic-only: append n new exercises after the highest existing id instead of
+//        regenerating the whole topic — see docs/content-generation.md §7), --dry-run (print
+//        prompts only, no API calls, no API key required), --provider <gemini|openai> (default
+//        gemini, or AI_PROVIDER in .env), --model <name>, --thinking <low|high|medium> (gemini:
+//        thinking level; openai: reasoning_effort), --count <n>, --sleep <ms> (default 2000,
+//        pause between sequential calls).
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -109,6 +114,13 @@ export interface Cli {
   topic?: string;
   phrases?: string;
   force: boolean;
+  /** Ignore an existing `_draft-<id>.json` (and overwrite it on a later failure) instead of
+   *  resuming from it — the default is to resume (see `resumeAndRepair`). */
+  fresh: boolean;
+  /** `--add <n>`: append n new exercises to an existing topic (never touching the existing
+   *  ones) instead of generating a whole topic/phrase set. Topic-only; requires `--topic` and
+   *  the final topic file to already exist. */
+  add?: number;
   dryRun: boolean;
   provider: Provider;
   /** Empty string when the active provider has no usable model (e.g. openai with no
@@ -155,6 +167,7 @@ export function parseArgs(argv: string[]): Cli {
   };
   const countRaw = get('--count');
   const sleepRaw = get('--sleep');
+  const addRaw = get('--add');
   const provider = normalizeProvider(get('--provider') ?? process.env.AI_PROVIDER);
   const model =
     get('--model') ??
@@ -174,6 +187,8 @@ export function parseArgs(argv: string[]): Cli {
     topic: get('--topic'),
     phrases: get('--phrases'),
     force: argv.includes('--force'),
+    fresh: argv.includes('--fresh'),
+    add: parseIntFlag('--add', addRaw),
     dryRun: argv.includes('--dry-run'),
     provider,
     model: model ?? '',
@@ -196,6 +211,9 @@ export interface TopicJob {
   brief: string;
   known?: string;
   avoid?: string;
+  /** Set by `--add`: the number of exercises the topic already had before this run (`count` is
+   *  the new target total). Drives the append flow in `runJob`. */
+  appendFrom?: number;
 }
 
 export interface PhraseJob {
@@ -270,6 +288,33 @@ interface PhraseSetPlanEntry {
 /** Builds the list of generation jobs for one CLI invocation (may be more than one for --module). */
 export function buildJobs(cli: Cli): Job[] {
   const jobs: Job[] = [];
+
+  if (cli.add !== undefined) {
+    if (cli.module || cli.phrases) {
+      throw new Error('--add only works with --topic (not --module or --phrases)');
+    }
+    if (!cli.topic) throw new Error('--add requires --topic <id>');
+    const moduleId = findModuleIdForTopic(cli.program, cli.topic);
+    if (!moduleId)
+      throw new Error(
+        `topic "${cli.topic}" was not found in any module of program "${cli.program}"`
+      );
+    const brief = findModuleTopicBrief(cli.program, moduleId, cli.topic);
+    if (!brief)
+      throw new Error(
+        `topic "${cli.topic}" was not found in any module of program "${cli.program}"`
+      );
+    const topicPath = path.join(programRoot(cli.program), 'topics', `${brief.id}.json`);
+    if (!fileExists(topicPath)) {
+      throw new Error(
+        `--add requires an existing topic file: ${topicPath} (generate it first without --add)`
+      );
+    }
+    const existingCount = exercisesOf(readJson(topicPath)).length;
+    const job = briefToJob(cli.program, moduleId, brief, existingCount + cli.add);
+    job.appendFrom = existingCount;
+    return [job];
+  }
 
   if (cli.topic) {
     const moduleId = findModuleIdForTopic(cli.program, cli.topic);
@@ -370,6 +415,20 @@ function isObject(v: unknown): v is Record<string, unknown> {
 /** `<containerId>-NN`, 1-based. */
 export function exerciseIdFor(container: string, n: number): string {
   return `${container}-${String(n).padStart(2, '0')}`;
+}
+
+/** The trailing `-NN` of an exercise id, or +Infinity when it doesn't match (sorts it last). */
+function idNumber(id: unknown): number {
+  if (typeof id !== 'string') return Number.POSITIVE_INFINITY;
+  const m = /-(\d+)$/.exec(id);
+  return m ? Number(m[1]) : Number.POSITIVE_INFINITY;
+}
+
+/** Splits an id list into groups of at most `size`, preserving order. */
+function chunkIds(ids: string[], size: number): string[][] {
+  const out: string[][] = [];
+  for (let i = 0; i < ids.length; i += size) out.push(ids.slice(i, i + size));
+  return out;
 }
 
 function exercisesOf(obj: Record<string, unknown>): Record<string, unknown>[] {
@@ -540,6 +599,61 @@ export function buildUserPrompt(
   return lines.join('\n');
 }
 
+/**
+ * User prompt for resume/append generation: asks for an explicit (possibly non-contiguous) list
+ * of exercise ids instead of a numeric range, since the missing ids after dropping a few invalid
+ * draft exercises — or the ids appended after an existing topic — need not be one contiguous
+ * block. `opts.needsHeader` is true only when the topic/phrase-set header itself still needs to
+ * be (re)written (draft lost/invalid); `opts.previous` carries the context/keyItems and already
+ * used sentences the same way a continuation chunk of `buildUserPrompt` does.
+ */
+export function buildUserPromptForIds(
+  job: Job,
+  ids: string[],
+  opts: { needsHeader: boolean; previous?: ChunkContext }
+): string {
+  const lines: string[] = [
+    job.kind === 'topic' ? 'Write one Topic JSON.' : 'Write one PhraseSet JSON.',
+  ];
+  lines.push(...jobDescriptionLines(job));
+  const idList = ids.join(', ');
+  const count = ids.length;
+
+  if (opts.previous?.header) {
+    lines.push(
+      '',
+      'The earlier part of this JSON already defines (keep using exactly this material):'
+    );
+    lines.push(...headerSummary(opts.previous.header));
+  }
+  if (opts.previous && opts.previous.sentences.length > 0) {
+    lines.push(
+      '',
+      'Target sentences already used by other exercises (do NOT repeat or trivially rephrase them):'
+    );
+    lines.push(...opts.previous.sentences.map((sentence) => `- ${sentence}`));
+  }
+
+  if (opts.needsHeader) {
+    lines.push(
+      '',
+      job.kind === 'topic'
+        ? 'Return the full Topic JSON (id, moduleId, title, kind, context, keyItems) with exactly these exercises:'
+        : 'Return the full PhraseSet JSON (id, title, phrases) with exactly these exercises:',
+      `${idList} (exactly ${count} exercises, using exactly these ids).`
+    );
+  } else {
+    lines.push(
+      '',
+      `Write exactly these exercises of the same ${job.kind === 'topic' ? 'topic' : 'phrase set'}, do not repeat`,
+      'sentences already used. Return ONLY {"exercises": [...]} with exactly these exercises:',
+      `${idList} (exactly ${count} exercises, using exactly these ids).`
+    );
+  }
+  lines.push('Return only the JSON.');
+  return lines.join('\n');
+}
+
 /** What one repair round asks for. */
 export interface RepairRequest {
   /** Existing exercises to fix, by id. */
@@ -558,19 +672,27 @@ export interface RepairRequest {
  */
 export type TaggedProblem = ContentProblem & { kind?: 'missing' };
 
-/** Problems grouped into a repair request: exercise problems by id, everything else is header-level. */
+/**
+ * Problems grouped into a repair request: exercise problems by id, everything else is
+ * header-level. `allowedFixIds`, when given, restricts `fixIds` to that set (used by the append
+ * flow — §Feature B — to never ask the model to touch an already-published exercise, even if a
+ * (pre-existing) problem happens to reference its id).
+ */
 export function repairRequestFor(
   merged: Record<string, unknown>,
   problems: TaggedProblem[],
-  missingIds: string[]
+  missingIds: string[],
+  allowedFixIds?: string[]
 ): RepairRequest {
   const existing = new Set(exercisesOf(merged).map((e) => e.id));
+  const allowed = allowedFixIds ? new Set(allowedFixIds) : undefined;
   const fixIds: string[] = [];
   let fixHeader = false;
   for (const problem of problems) {
     if (problem.severity === 'warning') continue;
     if (problem.kind === 'missing') continue; // a lost chunk, not a header problem
     if (problem.exerciseId && existing.has(problem.exerciseId)) {
+      if (allowed && !allowed.has(problem.exerciseId)) continue;
       if (!fixIds.includes(problem.exerciseId)) fixIds.push(problem.exerciseId);
     } else if (!problem.exerciseId) {
       fixHeader = true;
@@ -686,6 +808,36 @@ export function spliceRepair(
     base = { ...merged, ...header };
   }
   return normalizeMerged(job, { ...base, exercises: next });
+}
+
+/**
+ * Matches a resume/append chunk's reply against the ids it was asked for (same matching rule as
+ * `spliceRepair`: exact id match first, then any leftover replies fill the still-unmatched
+ * requested ids in order). Ids the reply never covered are simply dropped — the caller's next
+ * `missingExerciseIds`/repair pass picks them up again.
+ */
+function assignRequestedIds(
+  ids: string[],
+  returned: Record<string, unknown>[]
+): Record<string, unknown>[] {
+  const pending = [...ids];
+  const placed = new Map<string, Record<string, unknown>>();
+  const unmatched: Record<string, unknown>[] = [];
+  for (const exercise of returned) {
+    const idx = typeof exercise.id === 'string' ? pending.indexOf(exercise.id) : -1;
+    if (idx === -1) {
+      unmatched.push(exercise);
+      continue;
+    }
+    placed.set(pending[idx], exercise);
+    pending.splice(idx, 1);
+  }
+  for (const exercise of unmatched) {
+    const id = pending.shift();
+    if (!id) break;
+    placed.set(id, exercise);
+  }
+  return ids.filter((id) => placed.has(id)).map((id) => ({ ...placed.get(id), id }));
 }
 
 // ---------- Gemini REST call ----------
@@ -1272,6 +1424,308 @@ export function validateMerged(job: Job, merged: Record<string, unknown>): Conte
   }
 }
 
+// ---------- resuming from a draft / appending to a topic ----------
+
+/**
+ * Drops any exercise that fails structural or content validation on its own (checked via
+ * `validateMerged` against a container holding only the exercises still under consideration —
+ * so one broken exercise never hides another's problem, and a dropped exercise can also clear a
+ * duplicate-sentence problem against one that stays). Bounded by `current.length` rounds, which
+ * is always enough since each round drops at least one exercise whenever it loops again.
+ * Cross-exercise problems with no single `exerciseId` (none expected here, but just in case) stop
+ * the loop rather than spin forever.
+ */
+function dropInvalidDraftExercises(
+  job: Job,
+  header: Record<string, unknown>,
+  exercises: Record<string, unknown>[]
+): { kept: Record<string, unknown>[]; dropped: { id: string; message: string }[] } {
+  let current = exercises;
+  const dropped: { id: string; message: string }[] = [];
+  for (let round = 0; round < exercises.length + 1 && current.length > 0; round++) {
+    const problems = validateMerged(job, { ...header, exercises: current }).filter(
+      (p) => p.severity !== 'warning'
+    );
+    if (problems.length === 0) break;
+    const badIds = new Set(
+      problems
+        .filter((p): p is ContentProblem & { exerciseId: string } => !!p.exerciseId)
+        .map((p) => p.exerciseId)
+    );
+    if (badIds.size === 0) break; // a header-level problem, not an exercise one — leave it to the header repair
+    current = current.filter((e) => {
+      if (typeof e.id === 'string' && badIds.has(e.id)) {
+        const message = problems.find((p) => p.exerciseId === e.id)?.message ?? 'invalid';
+        dropped.push({ id: e.id, message });
+        return false;
+      }
+      return true;
+    });
+  }
+  return { kept: current, dropped };
+}
+
+/** Reads `_draft-<id>.json` if present, otherwise undefined (never throws on a missing file). */
+function loadDraftRaw(job: Job): Record<string, unknown> | undefined {
+  const p = draftPath(job);
+  return fileExists(p) ? readJson(p) : undefined;
+}
+
+interface ResumeState {
+  header: Record<string, unknown>;
+  headerValid: boolean;
+  /** Exercises known good already, sorted by id number — never resent to the model as "to fix". */
+  kept: Record<string, unknown>[];
+  dropped: { id: string; message: string }[];
+  /** `01`..`NN` ids not covered by `kept`, in ascending order. */
+  missingIds: string[];
+}
+
+/** `exerciseCount(job)` ids not present (by id) in `exercises`, ascending. */
+function missingAmong(job: Job, exercises: Record<string, unknown>[]): string[] {
+  const have = new Set(exercises.map((e) => e.id));
+  const out: string[] = [];
+  for (let n = 1; n <= exerciseCount(job); n++) {
+    const id = exerciseIdFor(containerId(job), n);
+    if (!have.has(id)) out.push(id);
+  }
+  return out;
+}
+
+function buildResumeState(job: Job, draftRaw: Record<string, unknown>): ResumeState {
+  const { exercises: rawExercises, ...header } = draftRaw;
+  const candidates = (Array.isArray(rawExercises) ? rawExercises.filter(isObject) : []).sort(
+    (a, b) => idNumber(a.id) - idNumber(b.id)
+  );
+  const { kept, dropped } = dropInvalidDraftExercises(job, header, candidates);
+  const headerValid = validateMerged(job, { ...header, exercises: [] }).length === 0;
+  return { header, headerValid, kept, dropped, missingIds: missingAmong(job, kept) };
+}
+
+/**
+ * Generates the exercises of `ids` not yet covered by `state.kept` (chunked by `CHUNK_SIZE`,
+ * continuation-style — draft/existing context + already-used sentences passed to the model),
+ * writing the topic/phrase-set header too when `state.headerValid` is false. Shared by
+ * `resumeAndRepair` (Feature A) and the `--add` append flow (Feature B); never throws except
+ * `StopRunError`.
+ */
+async function generateMissingIds(
+  job: Job,
+  cli: Cli,
+  apiKey: string,
+  systemPrompt: string,
+  state: Pick<ResumeState, 'header' | 'headerValid' | 'kept' | 'missingIds'>
+): Promise<{ merged: Record<string, unknown>; fatal: ContentProblem | null }> {
+  const id = containerId(job);
+  let exercises = [...state.kept];
+  let header = state.header;
+  let headerValid = state.headerValid;
+  let fatal: ContentProblem | null = null;
+  const groups = chunkIds(state.missingIds, CHUNK_SIZE);
+
+  for (let i = 0; i < groups.length; i++) {
+    const ids = groups[i];
+    const needsHeader = i === 0 && !headerValid;
+    const previous: ChunkContext = {
+      header: needsHeader ? undefined : header,
+      sentences: usedSentences(exercises),
+    };
+    const userPrompt = buildUserPromptForIds(job, ids, { needsHeader, previous });
+
+    if (cli.dryRun) {
+      console.log(`\n=== ${id} — resume chunk ${i + 1}/${groups.length} (ids ${ids.join(', ')}) ===`);
+      console.log('--- system prompt ---');
+      console.log(systemPrompt);
+      console.log('--- user prompt ---');
+      console.log(userPrompt);
+      continue;
+    }
+
+    let reply: Record<string, unknown> | null;
+    try {
+      reply = await callForJson(
+        cli,
+        apiKey,
+        systemPrompt,
+        userPrompt,
+        `${id} resume-chunk ${i + 1}/${groups.length}`
+      );
+    } catch (err) {
+      if (err instanceof StopRunError) throw err;
+      fatal = { path: id, message: `generation stopped: ${errorMessage(err)}`, severity: 'error' };
+      break;
+    }
+    if (reply) {
+      const placed = assignRequestedIds(ids, exercisesOf(reply));
+      exercises = [...exercises, ...placed];
+      if (needsHeader) {
+        const { exercises: _ex, ...replyHeader } = reply;
+        header = { ...header, ...replyHeader };
+        headerValid = true; // optimistic — the final validateMerged call still checks it for real
+      }
+    }
+    if (i < groups.length - 1) await sleep(cli.sleepMs);
+  }
+
+  exercises.sort((a, b) => idNumber(a.id) - idNumber(b.id));
+  const merged = cli.dryRun ? {} : normalizeMerged(job, { ...header, exercises });
+  return { merged, fatal };
+}
+
+/**
+ * Feature A — resume from `_draft-<id>.json` instead of starting a topic/phrase set from
+ * scratch. Keeps every draft exercise that still validates on its own, drops and reports the
+ * rest, regenerates the header too when it is missing/invalid, generates only the ids still
+ * missing out of `01`..`exerciseCount(job)` (continuation-style chunks of `CHUNK_SIZE`), then
+ * merges/validates/repairs exactly like `generateAndRepair`.
+ */
+export async function resumeAndRepair(
+  job: Job,
+  cli: Cli,
+  apiKey: string,
+  systemPrompt: string,
+  validate: (merged: Record<string, unknown>) => ContentProblem[],
+  draftRaw: Record<string, unknown>
+): Promise<GenerateResult & { keptCount: number; droppedCount: number; generatingIds: string[] }> {
+  const state = buildResumeState(job, draftRaw);
+  const range =
+    state.missingIds.length > 0
+      ? ` (ids ${state.missingIds[0]}–${state.missingIds[state.missingIds.length - 1]})`
+      : '';
+  console.log(
+    `Resuming from draft: ${state.kept.length} valid exercise(s) kept, generating ${state.missingIds.length}${range}`
+  );
+  if (state.dropped.length > 0) {
+    console.log(`  Dropped ${state.dropped.length} invalid draft exercise(s):`);
+    for (const d of state.dropped) console.log(`    - ${d.id}: ${d.message}`);
+  }
+
+  const { merged, fatal } = await generateMissingIds(job, cli, apiKey, systemPrompt, state);
+  if (cli.dryRun) {
+    return {
+      merged: {},
+      problems: [],
+      repairRounds: 0,
+      keptCount: state.kept.length,
+      droppedCount: state.dropped.length,
+      generatingIds: state.missingIds,
+    };
+  }
+  const result = await repairToCompletion(job, cli, apiKey, systemPrompt, merged, fatal, validate);
+  return {
+    ...result,
+    keptCount: state.kept.length,
+    droppedCount: state.dropped.length,
+    generatingIds: state.missingIds,
+  };
+}
+
+/** Strips top-level `$`-prefixed keys (e.g. an append draft's `$targetCount`/`$existingCount`) before a final write. */
+function stripDollarKeys(obj: Record<string, unknown>): Record<string, unknown> {
+  return Object.fromEntries(Object.entries(obj).filter(([k]) => !k.startsWith('$')));
+}
+
+/**
+ * Feature B — `--add <n>`: appends n new exercises after a topic's current highest id, never
+ * touching the existing ones (their ids are how the app keys learner progress). On success,
+ * writes old + new exercises to the real topic file. On failure, writes `_draft-<id>.json`
+ * containing old + whatever new exercises validated, tagged with `$targetCount`/`$existingCount`
+ * so a later run (without `--fresh`) resumes the same append instead of starting a fresh topic.
+ */
+async function runAppendJob(
+  job: TopicJob,
+  cli: Cli,
+  apiKey: string,
+  systemPrompt: string
+): Promise<boolean> {
+  const existingCount = job.appendFrom ?? 0;
+  const targetCount = job.count;
+  const outPath = outputPath(job);
+  const existingFile = readJson(outPath);
+  const { exercises: existingRaw, ...existingHeader } = existingFile;
+  const existingExercises = (Array.isArray(existingRaw) ? existingRaw.filter(isObject) : []).sort(
+    (a, b) => idNumber(a.id) - idNumber(b.id)
+  );
+
+  const draft = !cli.fresh ? loadDraftRaw(job) : undefined;
+  let header: Record<string, unknown> = existingHeader;
+  let oldExercises = existingExercises;
+  let newKept: Record<string, unknown>[] = [];
+  if (draft && typeof draft.$targetCount === 'number') {
+    const { $targetCount: _t, $existingCount: draftExistingCount, exercises: draftExercises, ...draftHeader } =
+      draft;
+    header = draftHeader;
+    const allDraftExercises = (
+      Array.isArray(draftExercises) ? draftExercises.filter(isObject) : []
+    ).sort((a, b) => idNumber(a.id) - idNumber(b.id));
+    const splitAt = typeof draftExistingCount === 'number' ? draftExistingCount : existingCount;
+    oldExercises = allDraftExercises.slice(0, splitAt);
+    const { kept } = dropInvalidDraftExercises(job, header, allDraftExercises.slice(splitAt));
+    newKept = kept;
+  }
+
+  const kept = [...oldExercises, ...newKept];
+  const missingIds = missingAmong(job, kept);
+  console.log(
+    `Appending to "${job.topicId}": ${oldExercises.length} existing exercise(s), ${newKept.length} ` +
+      `new valid exercise(s) kept, generating ${missingIds.length} more (target ${targetCount}).`
+  );
+
+  const { merged, fatal } = await generateMissingIds(job, cli, apiKey, systemPrompt, {
+    header,
+    headerValid: true,
+    kept,
+    missingIds,
+  });
+  if (cli.dryRun) return true;
+
+  const newIds: string[] = [];
+  for (let n = existingCount + 1; n <= targetCount; n++) newIds.push(exerciseIdFor(job.topicId, n));
+  const result = await repairToCompletion(
+    job,
+    cli,
+    apiKey,
+    systemPrompt,
+    merged,
+    fatal,
+    (m) => validateMerged(job, m),
+    newIds
+  );
+
+  if (hasBlockingProblems(result.problems)) {
+    await writeDraft(
+      job,
+      { ...result.merged, $targetCount: targetCount, $existingCount: existingCount },
+      result.problems,
+      `append still failing after ${result.repairRounds} repair round(s)`
+    );
+    return false;
+  }
+
+  const finalObj = stripDollarKeys(result.merged);
+  mkdirSync(path.dirname(outPath), { recursive: true });
+  writeFileSync(outPath, await formatJson(finalObj), 'utf8');
+  console.log(`\nWrote ${path.relative(REPO_ROOT, outPath)}`);
+  const oldDraft = draftPath(job);
+  if (fileExists(oldDraft)) rmSync(oldDraft);
+
+  const allExercises = exercisesOf(finalObj);
+  const newExercises = allExercises.filter((e) => typeof e.id === 'string' && newIds.includes(e.id));
+  console.log('  New exercises:');
+  printTopicStats(job, { exercises: newExercises });
+  console.log('  Whole topic:');
+  printTopicStats(job, finalObj);
+  if (result.problems.length > 0) {
+    console.log('  (non-blocking warnings remain — review before shipping:)');
+    for (const p of result.problems) console.log(`    - ${p.path}: ${p.message}`);
+  }
+  console.log(
+    `Next steps: review the language of the ${newIds.length} new exercise(s), then run ` +
+      '`npm run content:build` once happy.'
+  );
+  return true;
+}
+
 // ---------- Prettier formatting (devDependency already installed, no new runtime dependency) ----------
 
 async function formatJson(obj: unknown): Promise<string> {
@@ -1434,6 +1888,28 @@ export async function generateAndRepair(
 
   if (cli.dryRun) return { merged: {}, problems: [], repairRounds: 0 };
 
+  return repairToCompletion(job, cli, apiKey, systemPrompt, merged, fatal, validate);
+}
+
+/**
+ * Shared tail of `generateAndRepair`/`resumeAndRepair`/the append flow: validates, then runs up
+ * to `MAX_REPAIR_ROUNDS` targeted repair calls while there is a blocking problem or missing
+ * exercises. `allowedFixIds`, when given, is forwarded to `repairRequestFor` so a repair round
+ * never asks the model to touch an exercise outside that set (the append flow's "never change an
+ * existing exercise" rule).
+ */
+async function repairToCompletion(
+  job: Job,
+  cli: Cli,
+  apiKey: string,
+  systemPrompt: string,
+  initialMerged: Record<string, unknown>,
+  fatal: ContentProblem | null,
+  validate: (merged: Record<string, unknown>) => ContentProblem[],
+  allowedFixIds?: string[]
+): Promise<GenerateResult> {
+  const id = containerId(job);
+  let merged = initialMerged;
   const check = (): TaggedProblem[] => {
     const missing = missingExerciseIds(job, merged);
     const problems = validate(merged);
@@ -1447,7 +1923,12 @@ export async function generateAndRepair(
   while (hasBlockingProblems(problems) && round < MAX_REPAIR_ROUNDS) {
     round++;
     await sleep(cli.sleepMs);
-    const request = repairRequestFor(merged, problems, missingExerciseIds(job, merged));
+    const request = repairRequestFor(
+      merged,
+      problems,
+      missingExerciseIds(job, merged),
+      allowedFixIds
+    );
     const repairPrompt = buildRepairPrompt(job, merged, problems, request);
     let reply: Record<string, unknown> | null;
     try {
@@ -1522,9 +2003,34 @@ export async function runJob(
     typeof meta.targetLanguage === 'string' ? meta.targetLanguage : '?'
   );
 
+  // Feature B: --add appends to an existing topic file; it has its own write/draft handling
+  // (old exercises are never touched, and a failure keeps the final file untouched) and returns
+  // directly rather than falling through to the fresh/resume path below.
+  if (job.kind === 'topic' && job.appendFrom !== undefined) {
+    try {
+      return await runAppendJob(job, cli, apiKey, systemPrompt);
+    } catch (err) {
+      if (err instanceof StopRunError) throw err;
+      await writeDraft(
+        job,
+        { exercises: [] },
+        [{ path: containerId(job), message: errorMessage(err) }],
+        'append crashed'
+      );
+      return false;
+    }
+  }
+
+  // Feature A: resume from `_draft-<id>.json` when the final file doesn't exist yet (the normal
+  // case for a job buildJobs queued) and one is sitting there from an earlier failed attempt —
+  // unless --fresh asks to ignore it.
+  const draftRaw = !cli.fresh && !fileExists(outputPath(job)) ? loadDraftRaw(job) : undefined;
+
   let result: GenerateResult;
   try {
-    result = await generateAndRepair(job, cli, apiKey, systemPrompt, (m) => validateMerged(job, m));
+    result = draftRaw
+      ? await resumeAndRepair(job, cli, apiKey, systemPrompt, (m) => validateMerged(job, m), draftRaw)
+      : await generateAndRepair(job, cli, apiKey, systemPrompt, (m) => validateMerged(job, m));
   } catch (err) {
     // StopRunError must stop the whole run (caller's loop), not just this job — never swallow it.
     if (err instanceof StopRunError) throw err;
@@ -1597,11 +2103,12 @@ async function main(): Promise<void> {
     return;
   }
 
-  if (!cli.module && !cli.topic && !cli.phrases) {
+  if (!cli.module && !cli.topic && !cli.phrases && cli.add === undefined) {
     console.error(
       'Usage: node scripts/content-generate.ts --program <id> (--module <id> | --topic <id> | --phrases <id>) ' +
-        '[--force] [--dry-run] [--provider <gemini|openai>] [--model <name>] [--thinking <low|high|medium>] ' +
-        '[--count <n>] [--sleep <ms>]'
+        '[--force] [--fresh] [--dry-run] [--provider <gemini|openai>] [--model <name>] ' +
+        '[--thinking <low|high|medium>] [--count <n>] [--sleep <ms>]\n' +
+        '   or: node scripts/content-generate.ts --program <id> --topic <id> --add <n>'
     );
     process.exitCode = 1;
     return;

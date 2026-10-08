@@ -99,6 +99,12 @@ Other flags:
 - `--force` — regenerate even if the topic/phrase-set file already exists. Without it,
   `--module`, `--topic` and `--phrases` all skip anything that already has a file, so a
   reviewed topic is never overwritten by accident.
+- `--fresh` — ignore an existing `_draft-<id>.json` and generate the topic/phrase set from
+  scratch instead of resuming from it (and overwrite the draft if this run fails too). See
+  §6 "Resuming after a failure" — this is the default behaviour's opt-out, not something you
+  normally need.
+- `--add <n>` — append `n` new exercises to an existing topic instead of (re)generating the whole
+  thing. See §7 "Adding exercises to a topic".
 - `--dry-run` — print the system + user prompts for every chunk without calling the API (no API
   key required — use this to sanity-check a new module's briefs).
 - `--provider <gemini|openai>` — which API to call (default `gemini`, or `AI_PROVIDER` in `.env`;
@@ -208,10 +214,74 @@ written for a topic that was never attempted:
 5. `npm run content:build -- --program <id>` — assembles `content/<programId>/**` into one
    course JSON: `src/content/programs/<programId>.json` (generated, committed) for a bundled
    course (one imported by `src/content/programs/index.ts`), otherwise
-   `dist-courses/<programId>.json` (gitignored) — an importable course file (§7).
+   `dist-courses/<programId>.json` (gitignored) — an importable course file (§9).
 6. Commit the new/updated files and push.
 
-## 6. Manual alternative
+## 6. Resuming after a failure
+
+By default, a failed generation already leaves a `content/<programId>/topics/_draft-<topicId>.json`
+(or `phrases/_draft-<phraseSetId>.json`) next to where the final file would have gone — see §3
+step 4. The **next time you run the same command** (same `--topic`/`--module`/`--phrases`, no
+`--force`), the script notices the final file is still missing but the draft is there, and
+**resumes from it** instead of starting over:
+
+```sh
+npm run content:generate -- --program pt-PT-A1 --topic m3-daily-routine
+# Resuming from draft: 20 valid exercise(s) kept, generating 20 (ids m3-daily-routine-21–m3-daily-routine-40)
+```
+
+What resuming does:
+
+1. Every exercise already in the draft is re-validated on its own (schema + content rules). Any
+   that still passes is **kept as-is** (and never resent to the model); any that doesn't is
+   dropped and printed (`Dropped N invalid draft exercise(s): …`).
+2. If the draft's header (`context`/`keyItems`, or a phrase set's `phrases`) is missing or
+   invalid, it is regenerated as part of the first request for the missing ids — not a separate
+   call.
+3. Only the ids not covered by a kept exercise are generated, in the usual chunks of 20, as a
+   continuation of the topic/phrase set (the kept header/keyItems and every already-used sentence
+   are passed to the model, exactly like a normal continuation chunk, so it doesn't repeat
+   itself).
+4. From there it's the normal flow: merge, validate, up to 2 repair rounds, write the final file
+   and delete the draft on success. **If it fails again, the draft is rewritten** with whatever is
+   now known-good — kept exercises are never lost across repeated failed attempts.
+
+Pass **`--fresh`** to ignore an existing draft and generate the topic/phrase set from scratch
+(and overwrite the draft, not resume it, if this run fails too):
+
+```sh
+npm run content:generate -- --program pt-PT-A1 --topic m3-daily-routine --fresh
+```
+
+`--force` keeps its original meaning (regenerate even though the *final* file already exists) and
+is unrelated to drafts.
+
+## 7. Adding exercises to a topic
+
+`--topic <id> --add <n>` appends `n` brand-new exercises after a topic's current highest exercise
+id, **without ever changing an existing exercise** — exercise ids are how the app keys a learner's
+per-exercise progress, so `m2-family-pets-07` must always mean the same exercise. Requires the
+final topic file to already exist (generate the topic normally first); `--add` with `--module` or
+`--phrases` is a clear error (topic-only).
+
+```sh
+npm run content:generate -- --program pt-PT-A1 --topic m2-family-pets --add 20
+# Appending to "m2-family-pets": 40 existing exercise(s), 0 new valid exercise(s) kept, generating 20 more (target 60).
+```
+
+The model is given the topic's context/keyItems and every sentence already used (old **and** any
+new ones already generated this run), so the new exercises don't repeat the old ones, and follow
+the same pedagogy mix rules as a fresh topic. On success the file is rewritten with the old
+exercises untouched, followed by the new ones; the script prints the type mix/difficulty stats for
+the new exercises and for the whole topic.
+
+If generation fails, the **final file is left exactly as it was** and a
+`_draft-<topicId>.json` is written instead, containing the old exercises plus whatever new ones
+already validated. Running the same `--add` command again (without `--fresh`) resumes that draft
+and continues generating toward the original target count — it does not ask you to pass `--add`
+with a different `n`.
+
+## 8. Manual alternative
 
 You don't need this script at all: `docs/content-prompt-pack.md` has the same system prompt
 (Block A) and a fill-in-the-blanks topic brief (Block B) for pasting into any chat model by hand
@@ -219,7 +289,7 @@ You don't need this script at all: `docs/content-prompt-pack.md` has the same sy
 `content/<programId>/topics/<topicId>.json`, run `npm run content:check`, and iterate on any
 printed problems the same way the script's repair loop does.
 
-## 7. Getting a built course onto a phone
+## 9. Getting a built course onto a phone
 
 - **Bundled course** (`pt-PT-A1`): `npm run content:build` writes
   `src/content/programs/pt-PT-A1.json`; commit and push, and it ships with the next app build.

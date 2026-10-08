@@ -35,6 +35,7 @@ function fakeCli(overrides: Partial<Cli> = {}): Cli {
   return {
     program: 'pt-PT-A1',
     force: false,
+    fresh: false,
     dryRun: false,
     provider: 'gemini',
     model: 'test-model',
@@ -1509,5 +1510,352 @@ describe('value flags do not swallow a following flag (nit)', () => {
     const cli = parseArgs(['--topic', 'x', '--model', '--dry-run']);
     expect(cli.model).toBe(DEFAULT_MODEL);
     expect(cli.dryRun).toBe(true);
+  });
+});
+
+// ---------- Feature A: resume from a draft, and Feature B: --add ----------
+
+/** A valid topic/phrase-set header (context + keyItems) for hand-written draft/final fixtures. */
+function validHeader(id: string, moduleId = 'm2') {
+  return {
+    id,
+    moduleId,
+    title: 'T',
+    kind: 'vocabulary' as const,
+    context: 'c'.repeat(10),
+    keyItems: [{ target: 'x', support: 'y' }],
+  };
+}
+
+function topicPathFor(id: string): string {
+  return path.join(REPO_ROOT, `content/pt-PT-A1/topics/${id}.json`);
+}
+
+function silenceConsole() {
+  vi.spyOn(console, 'log').mockImplementation(() => {});
+  vi.spyOn(console, 'error').mockImplementation(() => {});
+}
+
+describe('Feature A — resume from draft (default behaviour)', () => {
+  it('keeps valid draft exercises and requests only the missing ids', async () => {
+    const id = 'm2-zz-resume-keep-test';
+    const job = fakeTopicJob({ topicId: id, count: 40 });
+    silenceConsole();
+    writeFileSync(
+      draftPath(job),
+      JSON.stringify({ ...validHeader(id), exercises: validExercises(id, 1, 20) }),
+      'utf8'
+    );
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(geminiOk({ exercises: validExercises(id, 21, 40) }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(true);
+      expect(fetchMock).toHaveBeenCalledTimes(1); // only one chunk for the 20 missing ids
+      const prompt = userPromptOf(fetchMock, 0);
+      expect(prompt).toContain(`${id}-21`);
+      expect(prompt).toContain(`${id}-40`);
+      expect(prompt).not.toContain(`${id}-05`); // the kept exercises are never resent
+
+      const written = JSON.parse(readFileSync(topicPathFor(id), 'utf8')) as {
+        exercises: { id: string }[];
+      };
+      expect(written.exercises).toHaveLength(40);
+      expect(written.exercises.map((e) => e.id)[0]).toBe(`${id}-01`);
+      expect(written.exercises.map((e) => e.id)[39]).toBe(`${id}-40`);
+      expect(existsSync(draftPath(job))).toBe(false);
+    } finally {
+      rmSync(draftPath(job), { force: true });
+      rmSync(topicPathFor(id), { force: true });
+    }
+  });
+
+  it('drops invalid draft exercises and regenerates only those', async () => {
+    const id = 'm2-zz-resume-drop-test';
+    const job = fakeTopicJob({ topicId: id, count: 20 });
+    silenceConsole();
+    const exercises = validExercises(id, 1, 20);
+    exercises[13] = { ...exercises[13], prompt: '' }; // id "<id>-14" is now invalid (empty prompt)
+    writeFileSync(
+      draftPath(job),
+      JSON.stringify({ ...validHeader(id), exercises }),
+      'utf8'
+    );
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(geminiOk({ exercises: validExercises(id, 14, 14) }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(true);
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      const prompt = userPromptOf(fetchMock, 0);
+      expect(prompt).toContain(`${id}-14`);
+      expect(prompt).not.toContain(`${id}-13`);
+
+      const written = JSON.parse(readFileSync(topicPathFor(id), 'utf8')) as {
+        exercises: { id: string; prompt: string }[];
+      };
+      expect(written.exercises).toHaveLength(20);
+      expect(written.exercises[13].prompt).not.toBe('');
+    } finally {
+      rmSync(draftPath(job), { force: true });
+      rmSync(topicPathFor(id), { force: true });
+    }
+  });
+
+  it('regenerates the header as part of the first request when it is missing/invalid', async () => {
+    const id = 'm2-zz-resume-header-test';
+    const job = fakeTopicJob({ topicId: id, count: 20 });
+    silenceConsole();
+    // No context/keyItems at all — structurally invalid header.
+    writeFileSync(
+      draftPath(job),
+      JSON.stringify({ id, moduleId: 'm2', exercises: validExercises(id, 1, 10) }),
+      'utf8'
+    );
+    const fetchMock = vi.fn().mockResolvedValue(
+      geminiOk({
+        id,
+        moduleId: 'm2',
+        title: 'T',
+        kind: 'vocabulary',
+        context: 'brand new context'.padEnd(20, '.'),
+        keyItems: [{ target: 'a', support: 'b' }],
+        exercises: validExercises(id, 11, 20),
+      })
+    );
+    vi.stubGlobal('fetch', fetchMock);
+
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(true);
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      const prompt = userPromptOf(fetchMock, 0);
+      expect(prompt).toContain('Return the full Topic JSON');
+      expect(prompt).toContain(`${id}-11`);
+      expect(prompt).toContain(`${id}-20`);
+
+      const written = JSON.parse(readFileSync(topicPathFor(id), 'utf8')) as {
+        context: string;
+        exercises: unknown[];
+      };
+      expect(written.context).toContain('brand new context');
+      expect(written.exercises).toHaveLength(20);
+    } finally {
+      rmSync(draftPath(job), { force: true });
+      rmSync(topicPathFor(id), { force: true });
+    }
+  });
+
+  it('rewrites the draft on a further failure without losing the exercises already kept', async () => {
+    const id = 'm2-zz-resume-fail-test';
+    const job = fakeTopicJob({ topicId: id, count: 40 });
+    silenceConsole();
+    writeFileSync(
+      draftPath(job),
+      JSON.stringify({ ...validHeader(id), exercises: validExercises(id, 1, 20) }),
+      'utf8'
+    );
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(geminiError(400)));
+
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(false);
+      expect(existsSync(topicPathFor(id))).toBe(false);
+      const draft = JSON.parse(readFileSync(draftPath(job), 'utf8')) as {
+        exercises: { id: string }[];
+      };
+      expect(draft.exercises).toHaveLength(20); // the 20 valid kept exercises were never lost
+      expect(draft.exercises[0].id).toBe(`${id}-01`);
+    } finally {
+      rmSync(draftPath(job), { force: true });
+      rmSync(topicPathFor(id), { force: true });
+    }
+  });
+
+  it('--fresh ignores an existing draft and generates from scratch', async () => {
+    const id = 'm2-zz-resume-fresh-test';
+    const job = fakeTopicJob({ topicId: id, count: 20 });
+    silenceConsole();
+    writeFileSync(
+      draftPath(job),
+      JSON.stringify({ ...validHeader(id), exercises: validExercises(id, 1, 20) }),
+      'utf8'
+    );
+    const fetchMock = vi.fn().mockResolvedValue(
+      geminiOk({ ...validHeader(id), exercises: validExercises(id, 1, 20) })
+    );
+    vi.stubGlobal('fetch', fetchMock);
+
+    try {
+      const ok = await runJob(job, fakeCli({ fresh: true }), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(true);
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      const prompt = userPromptOf(fetchMock, 0);
+      // The normal (non-resume) first-chunk wording, proving the draft was never consulted.
+      expect(prompt).toContain('Return the full Topic JSON');
+      expect(prompt).toContain(`${id}-01..${id}-20`);
+    } finally {
+      rmSync(draftPath(job), { force: true });
+      rmSync(topicPathFor(id), { force: true });
+    }
+  });
+});
+
+describe('Feature B — buildJobs --add', () => {
+  it('errors when --add is combined with --module or --phrases', () => {
+    expect(() =>
+      buildJobs(fakeCli({ topic: 'm2-family-pets', add: 10, module: 'm2' }))
+    ).toThrow(/--add only works with --topic/);
+    expect(() =>
+      buildJobs(fakeCli({ topic: 'm2-family-pets', add: 10, phrases: 'everyday-2' }))
+    ).toThrow(/--add only works with --topic/);
+  });
+
+  it('errors when the final topic file does not exist yet', () => {
+    expect(() => buildJobs(fakeCli({ topic: 'm7-near-synonyms-suffix', add: 10 }))).toThrow(
+      /--add requires an existing topic file/
+    );
+  });
+
+  it('builds a job with appendFrom = existing exercise count and count = existing + n', () => {
+    const jobs = buildJobs(fakeCli({ topic: 'm2-family-pets', add: 10 }));
+    expect(jobs).toHaveLength(1);
+    const job = jobs[0] as TopicJob;
+    expect(job.appendFrom).toBeGreaterThan(0);
+    expect(job.count).toBe((job.appendFrom ?? 0) + 10);
+  });
+});
+
+describe('Feature B — append to an existing topic (runJob end to end)', () => {
+  it('appends new exercises after the highest existing id, never touching 01..40, and dedupes sentences', async () => {
+    const id = 'm2-zz-append-test';
+    const job: TopicJob = { ...fakeTopicJob({ topicId: id, count: 60 }), appendFrom: 40 };
+    silenceConsole();
+    const original = { ...validHeader(id), exercises: validExercises(id, 1, 40) };
+    writeFileSync(topicPathFor(id), JSON.stringify(original), 'utf8');
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(geminiOk({ exercises: validExercises(id, 41, 60) }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(true);
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      const prompt = userPromptOf(fetchMock, 0);
+      expect(prompt).toContain(`${id}-41`);
+      expect(prompt).toContain(`${id}-60`);
+      expect(prompt).toContain('Sentence with **word01** in it.'); // old sentences passed to dedupe
+
+      const written = JSON.parse(readFileSync(topicPathFor(id), 'utf8')) as {
+        exercises: Record<string, unknown>[];
+      };
+      expect(written.exercises).toHaveLength(60);
+      expect(written.exercises.slice(0, 40)).toEqual(original.exercises);
+      expect(existsSync(draftPath(job))).toBe(false);
+    } finally {
+      rmSync(topicPathFor(id), { force: true });
+      rmSync(draftPath(job), { force: true });
+    }
+  });
+
+  it('writes a draft (old + valid new) and leaves the final file untouched on failure', async () => {
+    const id = 'm2-zz-append-fail-test';
+    const job: TopicJob = { ...fakeTopicJob({ topicId: id, count: 60 }), appendFrom: 40 };
+    silenceConsole();
+    const original = { ...validHeader(id), exercises: validExercises(id, 1, 40) };
+    writeFileSync(topicPathFor(id), JSON.stringify(original), 'utf8');
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(geminiError(400)));
+
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(false);
+      const untouched = JSON.parse(readFileSync(topicPathFor(id), 'utf8')) as {
+        exercises: unknown[];
+      };
+      expect(untouched.exercises).toHaveLength(40); // final file left exactly as it was
+      const draft = JSON.parse(readFileSync(draftPath(job), 'utf8')) as {
+        exercises: unknown[];
+        $targetCount: number;
+      };
+      expect(draft.exercises).toHaveLength(40);
+      expect(draft.$targetCount).toBe(60);
+    } finally {
+      rmSync(topicPathFor(id), { force: true });
+      rmSync(draftPath(job), { force: true });
+    }
+  });
+
+  it('resumes an append draft (continuing to the target count) instead of starting over', async () => {
+    const id = 'm2-zz-append-resume-test';
+    const job: TopicJob = { ...fakeTopicJob({ topicId: id, count: 60 }), appendFrom: 40 };
+    silenceConsole();
+    const original = { ...validHeader(id), exercises: validExercises(id, 1, 40) };
+    writeFileSync(topicPathFor(id), JSON.stringify(original), 'utf8');
+    writeFileSync(
+      draftPath(job),
+      JSON.stringify({
+        ...validHeader(id),
+        exercises: [...validExercises(id, 1, 40), ...validExercises(id, 41, 50)],
+        $targetCount: 60,
+        $existingCount: 40,
+      }),
+      'utf8'
+    );
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(geminiOk({ exercises: validExercises(id, 51, 60) }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(true);
+      expect(fetchMock).toHaveBeenCalledTimes(1); // only the remaining 10 (51..60) were requested
+      const prompt = userPromptOf(fetchMock, 0);
+      expect(prompt).toContain(`${id}-51`);
+      expect(prompt).toContain(`${id}-60`);
+      expect(prompt).not.toContain(`${id}-45`);
+
+      const written = JSON.parse(readFileSync(topicPathFor(id), 'utf8')) as {
+        exercises: unknown[];
+        $targetCount?: number;
+      };
+      expect(written.exercises).toHaveLength(60);
+      expect(written.$targetCount).toBeUndefined(); // the $ marker is stripped before the final write
+      expect(existsSync(draftPath(job))).toBe(false);
+    } finally {
+      rmSync(topicPathFor(id), { force: true });
+      rmSync(draftPath(job), { force: true });
+    }
   });
 });
