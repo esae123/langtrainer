@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import {
   ChartLine,
   ChevronDown,
@@ -126,6 +126,8 @@ function TopicRow({ topic, locale }: { topic: TopicStat; locale: string }) {
 }
 
 const expandedKey = (programId: string) => `langtrainer:progress:expanded:${programId}`;
+/** The module last opened automatically because it held the current topic. */
+const autoExpandedKey = (programId: string) => `langtrainer:progress:autoExpanded:${programId}`;
 
 function readExpanded(programId: string): string[] | null {
   try {
@@ -138,18 +140,45 @@ function readExpanded(programId: string): string[] | null {
   }
 }
 
-function writeExpanded(programId: string, moduleIds: string[]): void {
+function readAutoExpanded(programId: string): string | null {
+  try {
+    return localStorage.getItem(autoExpandedKey(programId));
+  } catch {
+    return null;
+  }
+}
+
+function writeExpanded(programId: string, moduleIds: string[], autoModuleId?: string): void {
   try {
     localStorage.setItem(expandedKey(programId), JSON.stringify(moduleIds));
+    if (autoModuleId !== undefined) localStorage.setItem(autoExpandedKey(programId), autoModuleId);
   } catch {
     // storage disabled — the expanded modules just won't be remembered
   }
 }
 
+interface ExpandedState {
+  expanded: string[];
+  /** The module of the current topic that was last expanded automatically. */
+  auto: string | null;
+}
+
+/** Opens the current topic's module once each time it changes (a new module reached). */
+function withCurrentModule(state: ExpandedState, currentModuleId: string | undefined) {
+  if (!currentModuleId || currentModuleId === state.auto) return state;
+  return {
+    expanded: state.expanded.includes(currentModuleId)
+      ? state.expanded
+      : [...state.expanded, currentModuleId],
+    auto: currentModuleId,
+  };
+}
+
 /**
  * Topics grouped under collapsible module headers (docs/stage-6-spec.md §3). By default
  * only the module of the current topic is open (the first module when there is none);
- * the learner's choice is remembered per course in localStorage.
+ * the learner's choice is remembered per course in localStorage. When the current topic
+ * moves on to a new module, that module is opened once, even over a saved choice.
  */
 function TopicsByModule({
   programId,
@@ -163,15 +192,32 @@ function TopicsByModule({
   locale: string;
 }) {
   const t = useT();
-  const [expanded, setExpanded] = useState<string[]>(
-    () => readExpanded(programId) ?? (defaultModuleId ? [defaultModuleId] : [])
-  );
+  const [state, setState] = useState<ExpandedState>(() => {
+    const saved = readExpanded(programId);
+    if (saved === null) {
+      return { expanded: defaultModuleId ? [defaultModuleId] : [], auto: defaultModuleId ?? null };
+    }
+    return withCurrentModule(
+      { expanded: saved, auto: readAutoExpanded(programId) },
+      defaultModuleId
+    );
+  });
+  // The current module can also change while the screen is open (live data).
+  const adjusted = withCurrentModule(state, defaultModuleId);
+  if (adjusted !== state) setState(adjusted);
+  const { expanded } = adjusted;
+
+  // Remember an automatic expansion, so it happens only once per module.
+  useEffect(() => {
+    if (state.auto === null || readAutoExpanded(programId) === state.auto) return;
+    writeExpanded(programId, state.expanded, state.auto);
+  }, [programId, state]);
 
   function toggle(moduleId: string) {
     const next = expanded.includes(moduleId)
       ? expanded.filter((id) => id !== moduleId)
       : [...expanded, moduleId];
-    setExpanded(next);
+    setState({ ...adjusted, expanded: next });
     writeExpanded(programId, next);
   }
 

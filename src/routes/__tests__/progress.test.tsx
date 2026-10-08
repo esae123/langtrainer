@@ -132,6 +132,37 @@ describe('Progress screen', () => {
     );
   });
 
+  it('opens the module of a newly reached current topic once, over a saved choice', async () => {
+    await seed();
+    // Module 1 was open (and auto-expanded); the learner has since moved on to Module 2.
+    localStorage.setItem('langtrainer:progress:expanded:pt-PT-A1', JSON.stringify(['m1']));
+    localStorage.setItem('langtrainer:progress:autoExpanded:pt-PT-A1', 'm1');
+    await db.topicProgress.bulkPut([
+      makeProgress('t1', { status: 'review', nextReviewAt: Date.now() + DAY_MS }),
+      makeProgress('t2', { status: 'review', nextReviewAt: Date.now() + DAY_MS }),
+    ]);
+    window.location.hash = '#/progress';
+    const { unmount } = render(<App />);
+
+    const m2 = await screen.findByRole('button', { name: /Module 2/ });
+    expect(m2).toHaveAttribute('aria-expanded', 'true');
+    expect(screen.getByRole('button', { name: /Module 1/ })).toHaveAttribute(
+      'aria-expanded',
+      'true'
+    );
+    expect(localStorage.getItem('langtrainer:progress:autoExpanded:pt-PT-A1')).toBe('m2');
+
+    // Collapsing it sticks: the automatic expansion happens only once per module.
+    fireEvent.click(m2);
+    expect(m2).toHaveAttribute('aria-expanded', 'false');
+    unmount();
+    render(<App />);
+    expect(await screen.findByRole('button', { name: /Module 2/ })).toHaveAttribute(
+      'aria-expanded',
+      'false'
+    );
+  });
+
   it('starts a focus session from a Needs work row', async () => {
     await seed();
     window.location.hash = '#/progress';

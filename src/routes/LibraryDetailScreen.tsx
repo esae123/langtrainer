@@ -95,7 +95,7 @@ export function LibraryDetailScreen() {
           className="flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-accent px-4 text-base font-semibold text-accent-ink shadow-sm active:opacity-90"
         >
           <Target size={20} strokeWidth={2} aria-hidden />
-          {t('library.practise')}
+          {t(phraseSet ? 'library.practisePhrases' : 'library.practise')}
         </button>
       )}
 

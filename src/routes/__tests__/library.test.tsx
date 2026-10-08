@@ -51,7 +51,19 @@ vi.mock('../../content/programs', () => {
         id: 'everyday-1',
         title: 'Everyday phrases 1',
         phrases: [{ target: 'Parabéns!', support: 'Congratulations!', register: 'neutral' }],
-        exercises: [],
+        exercises: [
+          {
+            id: 'everyday-1-01',
+            type: 'build_phrase',
+            topicId: 'everyday-1',
+            difficulty: 1,
+            allowedModes: ['tiles'],
+            prompt: 'Congratulate a friend.',
+            explanation: 'Parabéns is always plural.',
+            answer: ['Parabéns!'],
+            distractors: ['Obrigado'],
+          },
+        ],
       },
     ],
   };
@@ -74,7 +86,7 @@ describe('Content library — list', () => {
     expect(screen.getByText('Greetings and politeness')).toBeInTheDocument();
     expect(screen.getByText('Situation · 1 exercises')).toBeInTheDocument();
     expect(screen.getByText('Everyday phrases 1')).toBeInTheDocument();
-    expect(screen.getByText('0 exercises')).toBeInTheDocument();
+    expect(screen.getByText('1 exercises')).toBeInTheDocument();
   });
 });
 
@@ -96,5 +108,15 @@ describe('Content library — topic detail', () => {
     expect(screen.getByText('Say hello to Ana.')).toBeInTheDocument();
     await waitFor(() => expect(screen.getByText('Correct answer: Olá Ana!')).toBeInTheDocument());
     expect(screen.getByText('Olá is used at any time of day.')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Practise this topic' })).toBeInTheDocument();
+  });
+
+  it('labels the focus button of a phrase set "Practise these phrases"', async () => {
+    window.location.hash = '#/library/everyday-1';
+    render(<App />);
+
+    expect(await screen.findByRole('heading', { name: /everyday phrases 1/i })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Practise these phrases' })).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Practise this topic' })).not.toBeInTheDocument();
   });
 });

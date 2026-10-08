@@ -284,6 +284,7 @@
   "library.notFoundTitle": "Not found",
   "library.notFoundBody": "This topic or phrase set isn't in any installed course.",
   "library.practise": "Practise this topic",
+  "library.practisePhrases": "Practise these phrases",
   "library.coursesEmpty": "No courses installed.",
   "library.mode.tiles": "Tiles",
   "library.mode.letters": "Letters",

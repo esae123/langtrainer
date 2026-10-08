@@ -284,6 +284,7 @@
   "library.notFoundTitle": "Не найдено",
   "library.notFoundBody": "Этой темы или набора фраз нет ни в одном установленном курсе.",
   "library.practise": "Practise this topic",
+  "library.practisePhrases": "Practise these phrases",
   "library.coursesEmpty": "Нет установленных курсов.",
   "library.mode.tiles": "Плитки",
   "library.mode.letters": "Буквы",
