@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import type { ContentProblem } from '../../src/content/contentRules.ts';
@@ -9,6 +9,7 @@ import {
   buildUserPrompt,
   callGemini,
   callOpenAI,
+  DEFAULT_MODEL,
   draftPath,
   generateAndRepair,
   hasBlockingProblems,
@@ -20,6 +21,7 @@ import {
   openAiModelError,
   parseArgs,
   parseModelJson,
+  repairRequestFor,
   REPO_ROOT,
   retryDelayMs,
   runJob,
@@ -87,6 +89,33 @@ function fakeExercises(id: string, from: number, to: number, extra: Record<strin
       topicId: id,
       sentence: `Sentence ${nn}.`,
       ...extra,
+    });
+  }
+  return out;
+}
+
+/**
+ * Fully schema-valid `translate_word` exercises (unlike `fakeExercises`, which is only good
+ * enough for tests that stub out `validate`) — for tests that exercise the real
+ * `runJob`/`validateMerged` path end to end and need it to succeed.
+ */
+function validExercises(id: string, from: number, to: number, difficulty = 1) {
+  const out: Record<string, unknown>[] = [];
+  for (let n = from; n <= to; n++) {
+    const nn = String(n).padStart(2, '0');
+    out.push({
+      id: `${id}-${nn}`,
+      type: 'translate_word',
+      topicId: id,
+      difficulty,
+      allowedModes: ['tiles'],
+      prompt: `Translate word ${nn}.`,
+      explanation: `Explanation ${nn}.`,
+      direction: 'toTarget',
+      sentence: `Sentence with **word${nn}** in it.`,
+      word: `word${nn}`,
+      answer: `resposta${nn}`,
+      options: [`resposta${nn}`, `a${nn}`, `b${nn}`, `c${nn}`],
     });
   }
   return out;
@@ -1119,5 +1148,366 @@ describe('no empty draft is written (review: Task C)', () => {
     } finally {
       rmSync(draft, { force: true });
     }
+  });
+});
+
+describe('repairRequestFor ignores missing-chunk problems for fixHeader (review item 1)', () => {
+  const id = 'm2-classroom-objects';
+
+  it('does not set fixHeader when the only problem is a lost/short chunk', () => {
+    const job = fakeTopicJob({ count: 20 });
+    const merged = normalizeMerged(job, { exercises: fakeExercises(id, 1, 10) });
+    const missingIds = [`${id}-11`, `${id}-12`];
+    const missingProblem: ContentProblem & { kind?: 'missing' } = {
+      path: `${id}.exercises`,
+      message: '2 exercise(s) missing',
+      severity: 'error',
+      kind: 'missing',
+    };
+    const request = repairRequestFor(merged, [missingProblem], missingIds);
+    expect(request.fixHeader).toBe(false);
+    expect(request.missingIds).toEqual(missingIds);
+  });
+
+  it('still sets fixHeader for a real header-level problem (no exerciseId, no kind)', () => {
+    const job = fakeTopicJob({ count: 20 });
+    const merged = normalizeMerged(job, { exercises: fakeExercises(id, 1, 20) });
+    const request = repairRequestFor(
+      merged,
+      [{ path: `${id}.context`, message: 'context is empty', severity: 'error' }],
+      []
+    );
+    expect(request.fixHeader).toBe(true);
+  });
+});
+
+describe('deletes a stale draft after a successful write (review item 2)', () => {
+  it('removes _draft-<id>.json once the real file is written', async () => {
+    const job = fakeTopicJob({ topicId: 'm2-zz-draft-cleanup-test', count: 20 });
+    const draft = draftPath(job);
+    const outPath = path.join(
+      REPO_ROOT,
+      'content/pt-PT-A1/topics/m2-zz-draft-cleanup-test.json'
+    );
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    writeFileSync(draft, '{}\n', 'utf8');
+    vi.stubGlobal(
+      'fetch',
+      vi.fn().mockResolvedValue(
+        geminiOk({
+          id: 'm2-zz-draft-cleanup-test',
+          context: 'c'.repeat(10),
+          keyItems: [{ target: 'x', support: 'y' }],
+          exercises: validExercises('m2-zz-draft-cleanup-test', 1, 20),
+        })
+      )
+    );
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(true);
+      expect(existsSync(draft)).toBe(false);
+    } finally {
+      rmSync(draft, { force: true });
+      rmSync(outPath, { force: true });
+    }
+  });
+});
+
+describe('DEFAULT_MODEL (review item 3)', () => {
+  it('is gemini-3.6-flash', () => {
+    expect(DEFAULT_MODEL).toBe('gemini-3.6-flash');
+  });
+});
+
+describe('parseArgs — empty GEMINI_MODEL/OPENAI_MODEL count as unset (review item 4)', () => {
+  it('falls back to DEFAULT_MODEL when GEMINI_MODEL is an empty string', () => {
+    const prev = process.env.GEMINI_MODEL;
+    process.env.GEMINI_MODEL = '';
+    try {
+      const cli = parseArgs(['--topic', 'x']);
+      expect(cli.model).toBe(DEFAULT_MODEL);
+    } finally {
+      if (prev === undefined) delete process.env.GEMINI_MODEL;
+      else process.env.GEMINI_MODEL = prev;
+    }
+  });
+
+  it('leaves the model empty (missing-model condition) when OPENAI_MODEL is an empty string', () => {
+    const prev = process.env.OPENAI_MODEL;
+    process.env.OPENAI_MODEL = '';
+    try {
+      const cli = parseArgs(['--provider', 'openai', '--topic', 'x']);
+      expect(cli.model).toBe('');
+    } finally {
+      if (prev === undefined) delete process.env.OPENAI_MODEL;
+      else process.env.OPENAI_MODEL = prev;
+    }
+  });
+});
+
+describe('parseArgs — provider validation (review item 5)', () => {
+  it('lowercases a mixed-case provider', () => {
+    const cli = parseArgs(['--provider', 'Gemini', '--topic', 'x']);
+    expect(cli.provider).toBe('gemini');
+  });
+
+  it('throws a clear error for an unknown provider', () => {
+    expect(() => parseArgs(['--provider', 'claude', '--topic', 'x'])).toThrow(
+      /must be "gemini" or "openai"/
+    );
+  });
+});
+
+describe('504 is retried (review item 6)', () => {
+  it('callGemini retries a 504', async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(geminiError(504))
+      .mockResolvedValueOnce(geminiOk({ exercises: [] }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await callGemini({
+      model: 'm',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+      sleepFn: async () => {},
+    });
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+
+  it('callOpenAI retries a 504', async () => {
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(openAiError(504))
+      .mockResolvedValueOnce(openAiOk({ exercises: [] }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await callOpenAI({
+      model: 'gpt-x',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+      sleepFn: async () => {},
+    });
+    expect(fetchMock).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe('retryDelayMs reads retry-after-ms before retry-after (review item 7)', () => {
+  it('prefers retry-after-ms (already milliseconds) over retry-after (seconds)', () => {
+    expect(retryDelayMs('7', '', 0, Date.now(), '1500')).toBe(1500);
+  });
+
+  it('falls back to retry-after when retry-after-ms is absent/blank', () => {
+    expect(retryDelayMs('7', '', 0, Date.now(), null)).toBe(7000);
+    expect(retryDelayMs('7', '', 0, Date.now(), '')).toBe(7000);
+  });
+
+  it('callOpenAI passes the retry-after-ms header through to the wait', async () => {
+    const waits: number[] = [];
+    const res429 = {
+      ok: false,
+      status: 429,
+      headers: {
+        get: (k: string) => {
+          const lower = k.toLowerCase();
+          if (lower === 'retry-after-ms') return '250';
+          if (lower === 'retry-after') return '99';
+          return null;
+        },
+      } as unknown as Headers,
+      json: async () => ({}),
+      text: async () => JSON.stringify({ error: { type: 'rate_limit_exceeded' } }),
+    } as unknown as Response;
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValueOnce(res429)
+      .mockResolvedValueOnce(openAiOk({ exercises: [] }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await callOpenAI({
+      model: 'gpt-x',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+      sleepFn: async (ms) => {
+        waits.push(ms);
+      },
+    });
+    expect(waits).toEqual([250]);
+  });
+});
+
+describe('GEMINI_MAX_OUTPUT_TOKENS override (review item 8)', () => {
+  it('callGemini uses maxOutputTokens from options when given', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(geminiOk({ exercises: [] }));
+    vi.stubGlobal('fetch', fetchMock);
+
+    await callGemini({
+      model: 'gemini-x',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+      maxOutputTokens: 8192,
+    });
+    const body = requestBody(fetchMock, 0) as { generationConfig: { maxOutputTokens: number } };
+    expect(body.generationConfig.maxOutputTokens).toBe(8192);
+  });
+
+  it('generateAndRepair reads GEMINI_MAX_OUTPUT_TOKENS from the environment', async () => {
+    const id = 'm2-classroom-objects';
+    const prev = process.env.GEMINI_MAX_OUTPUT_TOKENS;
+    process.env.GEMINI_MAX_OUTPUT_TOKENS = '8192';
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(geminiOk({ id, exercises: fakeExercises(id, 1, 20) }));
+    vi.stubGlobal('fetch', fetchMock);
+    try {
+      await generateAndRepair(fakeTopicJob({ count: 20 }), fakeCli(), 'key', 'sys', () => []);
+      const body = requestBody(fetchMock, 0) as {
+        generationConfig: { maxOutputTokens: number };
+      };
+      expect(body.generationConfig.maxOutputTokens).toBe(8192);
+    } finally {
+      if (prev === undefined) delete process.env.GEMINI_MAX_OUTPUT_TOKENS;
+      else process.env.GEMINI_MAX_OUTPUT_TOKENS = prev;
+    }
+  });
+});
+
+describe('topic stats printed after a successful write (review item 9)', () => {
+  it('prints a WARN when build_phrase/question_for_answer are under the pedagogy minimum', async () => {
+    const job = fakeTopicJob({ topicId: 'm2-zz-stats-test', count: 20 });
+    const outPath = path.join(REPO_ROOT, 'content/pt-PT-A1/topics/m2-zz-stats-test.json');
+    const logs: string[] = [];
+    vi.spyOn(console, 'log').mockImplementation((msg: string) => {
+      logs.push(String(msg));
+    });
+    vi.stubGlobal(
+      'fetch',
+      vi.fn().mockResolvedValue(
+        geminiOk({
+          id: 'm2-zz-stats-test',
+          context: 'c'.repeat(10),
+          keyItems: [{ target: 'x', support: 'y' }],
+          // All translate_word (0 build_phrase, 0 question_for_answer) — both WARN thresholds trip.
+          exercises: validExercises('m2-zz-stats-test', 1, 20),
+        })
+      )
+    );
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(true);
+      expect(logs.some((l) => /WARN.*build_phrase/.test(l))).toBe(true);
+      expect(logs.some((l) => /WARN.*question_for_answer/.test(l))).toBe(true);
+    } finally {
+      rmSync(outPath, { force: true });
+    }
+  });
+});
+
+describe('OpenAI content null with finish_reason "length" is a cut-off, not fatal (nit)', () => {
+  it('callOpenAI returns an empty text + finishReason "length" instead of throwing', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: { get: () => null } as unknown as Headers,
+      json: async () => ({
+        choices: [{ message: { content: null }, finish_reason: 'length' }],
+      }),
+      text: async () => '',
+    } as unknown as Response);
+    vi.stubGlobal('fetch', fetchMock);
+
+    const result = await callOpenAI({ model: 'gpt-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' });
+    expect(result.finishReason).toBe('length');
+    expect(result.text).toBe('');
+  });
+
+  it('still throws when content is null and finish_reason is not "length"', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: { get: () => null } as unknown as Headers,
+      json: async () => ({
+        choices: [{ message: { content: null }, finish_reason: 'stop' }],
+      }),
+      text: async () => '',
+    } as unknown as Response);
+    vi.stubGlobal('fetch', fetchMock);
+
+    await expect(
+      callOpenAI({ model: 'gpt-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' })
+    ).rejects.toThrow(/no message content/);
+  });
+});
+
+describe('drafts are Prettier-formatted (nit)', () => {
+  it('writeDraft (via runJob) writes a draft with 2-space indentation, not compact JSON', async () => {
+    const job = fakeTopicJob({ topicId: 'm2-zz-draft-format-test', count: 40 });
+    const draft = draftPath(job);
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    vi.stubGlobal(
+      'fetch',
+      vi
+        .fn()
+        .mockResolvedValueOnce(
+          geminiOk({ id: 'm2-zz-draft-format-test', exercises: fakeExercises('x', 1, 20) })
+        )
+        .mockResolvedValueOnce(geminiError(400))
+    );
+    try {
+      const ok = await runJob(job, fakeCli(), 'key', () => ({
+        title: 'T',
+        targetLanguage: 'pt-PT',
+      }));
+      expect(ok).toBe(false);
+      const text = readFileSync(draft, 'utf8');
+      expect(text).toContain('\n  "id"');
+    } finally {
+      rmSync(draft, { force: true });
+    }
+  });
+});
+
+describe('--topic + --module for the same topic is queued only once (nit)', () => {
+  it('does not duplicate a topic that is both --topic and inside --module', () => {
+    const jobs = buildJobs(
+      fakeCli({ topic: 'm2-family-pets', module: 'm2', force: true })
+    );
+    const matches = jobs.filter((j) => j.kind === 'topic' && j.topicId === 'm2-family-pets');
+    expect(matches).toHaveLength(1);
+  });
+});
+
+describe('--count/--sleep must be numeric (nit)', () => {
+  it('throws a clear error for a non-numeric --count', () => {
+    expect(() => parseArgs(['--topic', 'x', '--count', 'abc'])).toThrow(/--count must be a number/);
+  });
+
+  it('throws a clear error for a non-numeric --sleep', () => {
+    expect(() => parseArgs(['--topic', 'x', '--sleep', 'abc'])).toThrow(/--sleep must be a number/);
+  });
+});
+
+describe('value flags do not swallow a following flag (nit)', () => {
+  it('--count immediately followed by another flag is treated as missing, not NaN', () => {
+    const cli = parseArgs(['--topic', 'x', '--count', '--force']);
+    expect(cli.count).toBeUndefined();
+    expect(cli.force).toBe(true);
+  });
+
+  it('--model immediately followed by another flag is treated as missing', () => {
+    const cli = parseArgs(['--topic', 'x', '--model', '--dry-run']);
+    expect(cli.model).toBe(DEFAULT_MODEL);
+    expect(cli.dryRun).toBe(true);
   });
 });

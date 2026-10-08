@@ -19,10 +19,11 @@
 //        AI_PROVIDER in .env), --model <name>, --thinking <low|high|medium> (gemini: thinking
 //        level; openai: reasoning_effort), --count <n>, --sleep <ms> (default 2000, pause
 //        between sequential calls).
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { checkContent, type ContentProblem } from '../src/content/contentRules.ts';
+import { checkContent, computeStats, type ContentProblem } from '../src/content/contentRules.ts';
+import type { Exercise } from '../src/content/types.ts';
 import { validateProgram } from '../src/content/validateProgram.ts';
 import { moduleTopicBriefs, moduleTopicOrder, type ModuleTopicBrief } from './content-lib.ts';
 
@@ -36,20 +37,21 @@ const PROMPT_PARTS_DIR = path.join(SCRIPT_DIR, 'prompt-parts');
  * https://ai.google.dev/gemini-api/docs/models (or the model list in AI Studio) and pass
  * --model / set GEMINI_MODEL, or update this constant.
  */
-export const DEFAULT_MODEL = 'gemini-3.5-flash';
+export const DEFAULT_MODEL = 'gemini-3.6-flash';
 
 export const CHUNK_SIZE = 20;
 export const MAX_REPAIR_ROUNDS = 2;
 /** Generous: a 20-exercise chunk is ~8-10k tokens, and thinking models spend output tokens too. */
 export const MAX_OUTPUT_TOKENS = 65536;
 const DEFAULT_SLEEP_MS = 2000;
-/** Total HTTP attempts per call (first try + retries) on 429/500/503. */
+/** Total HTTP attempts per call (first try + retries) on 429/500/502/503/504. */
 export const MAX_ATTEMPTS = 5;
 /** Upper bound for one backoff wait, whatever the server asks for. */
 export const MAX_RETRY_DELAY_MS = 60_000;
 /** First backoff pause when the API gives no delay; doubles per attempt (10s, 20s, 40s, 60s cap). Overload spikes (503) usually need more than a few seconds. */
 export const BASE_RETRY_DELAY_MS = 10_000;
-const RETRYABLE_STATUSES = new Set([429, 500, 502, 503]);
+/** 504 is included for Gemini: long "thinking" generations can exceed the gateway's own timeout. */
+const RETRYABLE_STATUSES = new Set([429, 500, 502, 503, 504]);
 
 /**
  * Thrown when the whole run must stop immediately — not just the current job/chunk: a Gemini
@@ -119,27 +121,53 @@ export interface Cli {
   sleepMs: number;
 }
 
+/**
+ * Lowercases and validates `--provider`/`AI_PROVIDER` (review item 5): anything other than
+ * "gemini"/"openai" (any case) is a clear configuration mistake, not silently treated as Gemini.
+ * Unset (undefined/empty) defaults to "gemini".
+ */
 function normalizeProvider(value: string | undefined): Provider {
-  return value === 'openai' ? 'openai' : 'gemini';
+  const trimmed = (value ?? '').trim();
+  if (trimmed === '') return 'gemini';
+  const lower = trimmed.toLowerCase();
+  if (lower === 'gemini' || lower === 'openai') return lower;
+  throw new Error(
+    `--provider/AI_PROVIDER must be "gemini" or "openai", got "${value}"`
+  );
+}
+
+/** Parses a CLI integer flag (--count/--sleep): throws a clear error on a non-numeric value. */
+function parseIntFlag(flag: string, raw: string | undefined): number | undefined {
+  if (raw === undefined) return undefined;
+  const n = Number(raw);
+  if (!Number.isFinite(n)) throw new Error(`${flag} must be a number, got "${raw}"`);
+  return n;
 }
 
 export function parseArgs(argv: string[]): Cli {
+  // A value flag at the end of argv, or immediately followed by another flag (e.g. `--count
+  // --force`), has no value — never swallow the next flag's own name as if it were the value.
   const get = (flag: string): string | undefined => {
     const i = argv.indexOf(flag);
-    return i === -1 || i === argv.length - 1 ? undefined : argv[i + 1];
+    if (i === -1 || i === argv.length - 1) return undefined;
+    const next = argv[i + 1];
+    return next.startsWith('--') ? undefined : next;
   };
   const countRaw = get('--count');
   const sleepRaw = get('--sleep');
   const provider = normalizeProvider(get('--provider') ?? process.env.AI_PROVIDER);
   const model =
     get('--model') ??
-    (provider === 'openai' ? process.env.OPENAI_MODEL : process.env.GEMINI_MODEL) ??
+    // `|| undefined`, not `??`: an empty GEMINI_MODEL=/OPENAI_MODEL= in .env must count as unset
+    // (review item 4), not as an (invalid) empty-string model name.
+    (provider === 'openai' ? process.env.OPENAI_MODEL || undefined : process.env.GEMINI_MODEL || undefined) ??
     (provider === 'gemini' ? DEFAULT_MODEL : undefined);
   const thinkingLevel =
     get('--thinking') ??
     ((provider === 'openai'
       ? process.env.OPENAI_REASONING_EFFORT
       : process.env.GEMINI_THINKING_LEVEL) || undefined);
+  const sleepMs = parseIntFlag('--sleep', sleepRaw);
   return {
     program: get('--program') ?? 'pt-PT-A1',
     module: get('--module'),
@@ -150,8 +178,8 @@ export function parseArgs(argv: string[]): Cli {
     provider,
     model: model ?? '',
     thinkingLevel,
-    count: countRaw ? Number(countRaw) : undefined,
-    sleepMs: sleepRaw ? Number(sleepRaw) : DEFAULT_SLEEP_MS,
+    count: parseIntFlag('--count', countRaw),
+    sleepMs: sleepMs ?? DEFAULT_SLEEP_MS,
   };
 }
 
@@ -264,6 +292,9 @@ export function buildJobs(cli: Cli): Job[] {
     const modulePath = path.join(programRoot(cli.program), 'modules', `${cli.module}.json`);
     if (!fileExists(modulePath)) throw new Error(`module file not found: ${modulePath}`);
     for (const brief of moduleTopicBriefs(readJson(modulePath))) {
+      // --topic + --module for the same topic must not queue it twice (nit): --topic above
+      // already added it (or decided to skip it without --force).
+      if (cli.topic === brief.id) continue;
       const topicPath = path.join(programRoot(cli.program), 'topics', `${brief.id}.json`);
       if (fileExists(topicPath) && !cli.force) continue;
       jobs.push(briefToJob(cli.program, cli.module, brief, cli.count));
@@ -519,10 +550,18 @@ export interface RepairRequest {
   fixHeader: boolean;
 }
 
+/**
+ * A problem tagged `kind: 'missing'` is a lost/short chunk (see `missingProblem`), not a broken
+ * header field — `repairRequestFor` must not ask the model to rewrite the header just because a
+ * chunk never came back (review item 1). `ContentProblem` itself (contentRules.ts) is out of
+ * scope here, so the tag is a local, optional extension of it.
+ */
+export type TaggedProblem = ContentProblem & { kind?: 'missing' };
+
 /** Problems grouped into a repair request: exercise problems by id, everything else is header-level. */
 export function repairRequestFor(
   merged: Record<string, unknown>,
-  problems: ContentProblem[],
+  problems: TaggedProblem[],
   missingIds: string[]
 ): RepairRequest {
   const existing = new Set(exercisesOf(merged).map((e) => e.id));
@@ -530,6 +569,7 @@ export function repairRequestFor(
   let fixHeader = false;
   for (const problem of problems) {
     if (problem.severity === 'warning') continue;
+    if (problem.kind === 'missing') continue; // a lost chunk, not a header problem
     if (problem.exerciseId && existing.has(problem.exerciseId)) {
       if (!fixIds.includes(problem.exerciseId)) fixIds.push(problem.exerciseId);
     } else if (!problem.exerciseId) {
@@ -670,7 +710,9 @@ interface GeminiCallOptions {
   userPrompt: string;
   /** Gemini 3 `generationConfig.thinkingConfig.thinkingLevel`; not sent when undefined. */
   thinkingLevel?: string;
-  /** Total HTTP attempts on 429/500/503 (default MAX_ATTEMPTS). */
+  /** Overrides MAX_OUTPUT_TOKENS — some older models cap lower (GEMINI_MAX_OUTPUT_TOKENS). */
+  maxOutputTokens?: number;
+  /** Total HTTP attempts on 429/500/502/503/504 (default MAX_ATTEMPTS). */
   maxAttempts?: number;
   /** Injected in tests. */
   sleepFn?: (ms: number) => Promise<void>;
@@ -684,18 +726,24 @@ function parseDurationMs(value: unknown): number | undefined {
 }
 
 /**
- * How long to wait before retrying (review S2): `Retry-After` (delta seconds or an HTTP date),
- * else the body's `error.details[].retryDelay` ("12s"), else exponential backoff. Never NaN,
- * never negative, never more than MAX_RETRY_DELAY_MS.
+ * How long to wait before retrying (review S2): `Retry-After-Ms` (OpenAI sends this — plain
+ * milliseconds, checked first per review item 7), else `Retry-After` (delta seconds or an HTTP
+ * date), else the body's `error.details[].retryDelay` ("12s"), else exponential backoff. Never
+ * NaN, never negative, never more than MAX_RETRY_DELAY_MS.
  */
 export function retryDelayMs(
   retryAfter: string | null,
   bodyText: string,
   attempt: number,
-  now = Date.now()
+  now = Date.now(),
+  retryAfterMs: string | null = null
 ): number {
   let ms: number | undefined;
-  if (retryAfter !== null && retryAfter.trim() !== '') {
+  if (retryAfterMs !== null && retryAfterMs.trim() !== '') {
+    const millis = Number(retryAfterMs);
+    if (Number.isFinite(millis)) ms = millis;
+  }
+  if (ms === undefined && retryAfter !== null && retryAfter.trim() !== '') {
     const seconds = Number(retryAfter);
     if (Number.isFinite(seconds)) ms = seconds * 1000;
     else {
@@ -771,7 +819,7 @@ function geminiDailyQuotaInfo(
   return undefined;
 }
 
-/** Calls the Gemini REST API with `fetch` (no SDK). Retries 429/500/503 with backoff, up to MAX_ATTEMPTS tries. */
+/** Calls the Gemini REST API with `fetch` (no SDK). Retries 429/500/502/503/504 with backoff, up to MAX_ATTEMPTS tries. */
 export async function callGemini(opts: GeminiCallOptions): Promise<GeminiResult> {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${opts.model}:generateContent`;
   const body = JSON.stringify({
@@ -779,7 +827,7 @@ export async function callGemini(opts: GeminiCallOptions): Promise<GeminiResult>
     systemInstruction: { parts: [{ text: opts.systemPrompt }] },
     generationConfig: {
       responseMimeType: 'application/json',
-      maxOutputTokens: MAX_OUTPUT_TOKENS,
+      maxOutputTokens: opts.maxOutputTokens ?? MAX_OUTPUT_TOKENS,
       ...(opts.thinkingLevel ? { thinkingConfig: { thinkingLevel: opts.thinkingLevel } } : {}),
     },
   });
@@ -867,7 +915,7 @@ interface OpenAICallOptions {
   reasoningEffort?: string;
   /** Overrides MAX_OUTPUT_TOKENS — some models cap lower (OPENAI_MAX_COMPLETION_TOKENS). */
   maxCompletionTokens?: number;
-  /** Total HTTP attempts on 429/500/502/503 (default MAX_ATTEMPTS). */
+  /** Total HTTP attempts on 429/500/502/503/504 (default MAX_ATTEMPTS). */
   maxAttempts?: number;
   /** Injected in tests. */
   sleepFn?: (ms: number) => Promise<void>;
@@ -884,7 +932,7 @@ function isInsufficientQuota(bodyText: string): boolean {
 }
 
 /**
- * Calls the OpenAI chat completions REST API with `fetch` (no SDK). Retries 429/500/502/503 with
+ * Calls the OpenAI chat completions REST API with `fetch` (no SDK). Retries 429/500/502/503/504 with
  * the same backoff as `callGemini`, up to `maxAttempts` tries — except a 429 that is
  * `insufficient_quota` (no billing credits), which throws `StopRunError` immediately: every
  * further call would fail the exact same way, so retrying or moving to the next job is pointless.
@@ -922,7 +970,15 @@ export async function callOpenAI(opts: OpenAICallOptions): Promise<OpenAIResult>
         );
       }
       if (RETRYABLE_STATUSES.has(res.status) && attempt < maxAttempts) {
-        const waitMs = retryDelayMs(res.headers.get('retry-after'), errorText, attempt - 1);
+        // OpenAI sends `retry-after-ms` (plain milliseconds) alongside `retry-after` (seconds);
+        // retryDelayMs checks it first (review item 7).
+        const waitMs = retryDelayMs(
+          res.headers.get('retry-after'),
+          errorText,
+          attempt - 1,
+          undefined,
+          res.headers.get('retry-after-ms')
+        );
         console.log(
           `  OpenAI HTTP ${res.status} — retrying in ${Math.round(waitMs / 1000)}s (attempt ${attempt + 1}/${maxAttempts})`
         );
@@ -944,6 +1000,12 @@ export async function callOpenAI(opts: OpenAICallOptions): Promise<OpenAIResult>
     }
     const text = choice?.message?.content;
     if (typeof text !== 'string') {
+      // A reasoning model can hit its token cap before emitting any content: content is then
+      // null with finish_reason "length" — a cut-off reply (handled by callForJson's retry-once
+      // and the repair loop), not a hard failure (nit: do not throw here).
+      if (choice?.finish_reason === 'length') {
+        return { text: '', usage: json.usage, finishReason: 'length' };
+      }
       throw new Error(
         `OpenAI response had no message content (finish_reason: ${choice?.finish_reason ?? 'none'})`
       );
@@ -954,6 +1016,16 @@ export async function callOpenAI(opts: OpenAICallOptions): Promise<OpenAIResult>
 
 function openaiMaxCompletionTokens(): number {
   const raw = process.env.OPENAI_MAX_COMPLETION_TOKENS;
+  const n = raw ? Number(raw) : NaN;
+  return Number.isFinite(n) && n > 0 ? n : MAX_OUTPUT_TOKENS;
+}
+
+/**
+ * Overrides MAX_OUTPUT_TOKENS (65536) for Gemini — some older models cap `maxOutputTokens` as low
+ * as 8192 and reject the default (review item 8).
+ */
+function geminiMaxOutputTokens(): number {
+  const raw = process.env.GEMINI_MAX_OUTPUT_TOKENS;
   const n = raw ? Number(raw) : NaN;
   return Number.isFinite(n) && n > 0 ? n : MAX_OUTPUT_TOKENS;
 }
@@ -998,6 +1070,7 @@ async function callModel(
     apiKey,
     systemPrompt,
     userPrompt,
+    maxOutputTokens: geminiMaxOutputTokens(),
   });
   return {
     text: result.text,
@@ -1225,6 +1298,46 @@ function printUsage(
   );
 }
 
+/** Difficulty-band targets from the pedagogy (`scripts/prompt-parts/pedagogy.md`, ≈8/18/14 of 40). */
+const DIFFICULTY_TARGET: Record<'1' | '2' | '3', number> = { '1': 8, '2': 18, '3': 14 };
+
+/**
+ * Prints the type mix and difficulty stats of a freshly written topic, and WARNs (never fails —
+ * these are informational, a human still reviews the content) when `build_phrase` < 10,
+ * `question_for_answer` < 8, or a difficulty band is off its ≈8/18/14 target by more than 4
+ * (review item 9).
+ */
+function printTopicStats(job: TopicJob, merged: Record<string, unknown>): void {
+  const stats = computeStats(exercisesOf(merged) as unknown as Exercise[]);
+  const typeMix = Object.entries(stats.byType)
+    .map(([type, n]) => `${type}: ${n}`)
+    .join(', ');
+  console.log(`  Type mix — ${typeMix}`);
+  console.log(
+    `  Difficulty — 1: ${stats.byDifficulty['1']}, 2: ${stats.byDifficulty['2']}, 3: ${stats.byDifficulty['3']}`
+  );
+
+  const buildPhrase = stats.byType.build_phrase ?? 0;
+  if (buildPhrase < 10) {
+    console.log(`  WARN: only ${buildPhrase} build_phrase exercise(s) (pedagogy expects >= 10)`);
+  }
+  const questionForAnswer = stats.byType.question_for_answer ?? 0;
+  if (questionForAnswer < 8) {
+    console.log(
+      `  WARN: only ${questionForAnswer} question_for_answer exercise(s) (pedagogy expects >= 8)`
+    );
+  }
+  for (const band of ['1', '2', '3'] as const) {
+    const target = DIFFICULTY_TARGET[band];
+    const actual = stats.byDifficulty[band];
+    if (Math.abs(actual - target) > 4) {
+      console.log(
+        `  WARN: difficulty ${band} has ${actual} exercise(s), more than 4 away from the ≈${target} target`
+      );
+    }
+  }
+}
+
 function outputPath(job: Job): string {
   return job.kind === 'topic'
     ? path.join(programRoot(job.programId), 'topics', `${job.topicId}.json`)
@@ -1238,15 +1351,16 @@ export function draftPath(job: Job): string {
 
 export interface GenerateResult {
   merged: Record<string, unknown>;
-  problems: ContentProblem[];
+  problems: TaggedProblem[];
   repairRounds: number;
 }
 
-function missingProblem(job: Job, missing: string[]): ContentProblem {
+function missingProblem(job: Job, missing: string[]): TaggedProblem {
   return {
     path: `${containerId(job)}.exercises`,
     message: `${missing.length} exercise(s) missing: ${missing[0]}..${missing[missing.length - 1]} (a chunk was lost)`,
     severity: 'error',
+    kind: 'missing',
   };
 }
 
@@ -1320,7 +1434,7 @@ export async function generateAndRepair(
 
   if (cli.dryRun) return { merged: {}, problems: [], repairRounds: 0 };
 
-  const check = (): ContentProblem[] => {
+  const check = (): TaggedProblem[] => {
     const missing = missingExerciseIds(job, merged);
     const problems = validate(merged);
     return missing.length > 0 ? [...problems, missingProblem(job, missing)] : problems;
@@ -1374,12 +1488,12 @@ function hasNoContent(merged: Record<string, unknown>): boolean {
  * with 0 exercises is never useful and just clutters `content/<programId>/` with files for
  * topics that were never really attempted.
  */
-function writeDraft(
+async function writeDraft(
   job: Job,
   merged: Record<string, unknown>,
   problems: ContentProblem[],
   why: string
-): void {
+): Promise<void> {
   if (hasNoContent(merged)) {
     console.error(`\n${containerId(job)}: ${why} — no content was received, not writing a draft`);
     for (const p of problems) console.error(`  - ${p.exerciseId ?? p.path}: ${p.message}`);
@@ -1387,7 +1501,9 @@ function writeDraft(
   }
   const dPath = draftPath(job);
   mkdirSync(path.dirname(dPath), { recursive: true });
-  writeFileSync(dPath, `${JSON.stringify(merged, null, 2)}\n`, 'utf8');
+  // formatJson (Prettier), not a bare JSON.stringify (nit) — drafts are read by a human while
+  // debugging, and should be formatted exactly like a real topic/phrase-set file.
+  writeFileSync(dPath, await formatJson(merged), 'utf8');
   console.error(`\n${containerId(job)}: ${why} — wrote ${path.relative(REPO_ROOT, dPath)}`);
   for (const p of problems) console.error(`  - ${p.exerciseId ?? p.path}: ${p.message}`);
 }
@@ -1413,7 +1529,7 @@ export async function runJob(
     // StopRunError must stop the whole run (caller's loop), not just this job — never swallow it.
     if (err instanceof StopRunError) throw err;
     // Not expected otherwise (API failures are returned as problems), but never lose the run silently.
-    writeDraft(
+    await writeDraft(
       job,
       normalizeMerged(job, {}),
       [{ path: containerId(job), message: errorMessage(err) }],
@@ -1425,7 +1541,7 @@ export async function runJob(
   const { merged, problems, repairRounds } = result;
 
   if (hasBlockingProblems(problems)) {
-    writeDraft(job, merged, problems, `still failing after ${repairRounds} repair round(s)`);
+    await writeDraft(job, merged, problems, `still failing after ${repairRounds} repair round(s)`);
     return false;
   }
 
@@ -1433,6 +1549,11 @@ export async function runJob(
   mkdirSync(path.dirname(outPath), { recursive: true });
   writeFileSync(outPath, await formatJson(merged), 'utf8');
   console.log(`\nWrote ${path.relative(REPO_ROOT, outPath)}`);
+  // The job succeeded: any earlier `_draft-<id>.json` from a previous failed attempt is now
+  // stale and would otherwise sit next to the real file forever (review item 2).
+  const oldDraft = draftPath(job);
+  if (fileExists(oldDraft)) rmSync(oldDraft);
+  if (job.kind === 'topic') printTopicStats(job, merged);
   if (problems.length > 0) {
     console.log('  (non-blocking warnings remain — review before shipping:)');
     for (const p of problems) console.log(`    - ${p.path}: ${p.message}`);
@@ -1467,7 +1588,14 @@ export function openAiModelError(cli: Cli): string | undefined {
 async function main(): Promise<void> {
   // .env must be loaded before parsing: parseArgs falls back to process.env.GEMINI_MODEL/OPENAI_MODEL.
   loadEnvFile();
-  const cli = parseArgs(process.argv.slice(2));
+  let cli: Cli;
+  try {
+    cli = parseArgs(process.argv.slice(2));
+  } catch (err) {
+    console.error(err instanceof Error ? err.message : String(err));
+    process.exitCode = 1;
+    return;
+  }
 
   if (!cli.module && !cli.topic && !cli.phrases) {
     console.error(

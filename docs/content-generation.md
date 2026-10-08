@@ -16,24 +16,27 @@ normalisation, validation, the repair loop, draft files, `--force` guards) is pr
 3. `.env` is gitignored (`.gitignore` already excludes `.env` and `.env.*`, keeping only
    `.env.example`) — **never commit it**. `scripts/content-generate.ts` loads it automatically
    with Node's built-in `process.loadEnvFile()` (no dependency added).
-4. **Choose the Gemini model.** The default is `gemini-3.8-flash` (`DEFAULT_MODEL` at the top of
+4. **Choose the Gemini model.** The default is `gemini-3.6-flash` (`DEFAULT_MODEL` at the top of
    `scripts/content-generate.ts`). Override it with `GEMINI_MODEL=<name>` in `.env` or with
-   `--model <name>` on the command line (the flag wins). **Model names change and old ones are
-   retired** — if a run fails with a 404 or "model not found", look up a current model name in
-   AI Studio (<https://aistudio.google.com>) or at <https://ai.google.dev/gemini-api/docs/models>
-   and pass that instead.
+   `--model <name>` on the command line (the flag wins); an empty `GEMINI_MODEL=` counts as unset
+   and falls back to the default. **Model names change and old ones are retired** — if a run
+   fails with a 404 or "model not found", look up a current model name in AI Studio
+   (<https://aistudio.google.com>) or at <https://ai.google.dev/gemini-api/docs/models> and pass
+   that instead.
 
 ## 1b. Switching to OpenAI
 
 Set the provider with `AI_PROVIDER=openai` in `.env`, or pass `--provider openai` on the command
-line (the flag wins; default is `gemini`). Then:
+line (the flag wins; default is `gemini`). The provider value is lowercased and validated —
+anything other than `gemini`/`openai` (any case) fails with a clear error instead of silently
+falling back to Gemini. Then:
 
 - `OPENAI_API_KEY` — required for any real (non-`--dry-run`) OpenAI call.
 - `OPENAI_MODEL` — **required**, no hardcoded default: OpenAI model ids change, so the script
   refuses to guess one. Check a current "mini"-class model (cheap, fast) on
   <https://platform.openai.com/docs/pricing> and set it here, or pass `--model <name>`. Missing
-  it fails with a clear message before any API call (dry runs are exempt, since they never call
-  the API).
+  it (or an empty `OPENAI_MODEL=`, which counts as unset) fails with a clear message before any
+  API call (dry runs are exempt, since they never call the API).
 - `OPENAI_REASONING_EFFORT` (optional, `low | medium | high`) — sent as `reasoning_effort` for
   reasoning-capable models; same role as `GEMINI_THINKING_LEVEL`, overridden per run with
   `--thinking`.
@@ -48,6 +51,12 @@ AI_PROVIDER=openai
 OPENAI_API_KEY=sk-...
 OPENAI_MODEL=gpt-5-mini   # check platform.openai.com/docs/pricing for the current name
 ```
+
+`OPENAI_MAX_COMPLETION_TOKENS` (optional) overrides `MAX_OUTPUT_TOKENS` (65536) for
+`max_completion_tokens`; some OpenAI models cap lower. A reply whose `finish_reason` is `"length"`
+and whose `message.content` is `null` (some reasoning models hit the cap before emitting any
+content) is treated as a cut-off reply, not a fatal error — same retry-once/repair-loop handling
+as any other `"length"`/`MAX_TOKENS` finish.
 
 ```sh
 npm run content:generate -- --program pt-PT-A1 --topic m3-daily-routine --provider openai
@@ -117,7 +126,8 @@ For each topic/phrase-set that needs generating:
    `docs/content-prompt-pack.md` uses, so the pack and the script never drift apart). User
    prompt = the topic/phrase-set brief (id, title, kind, count, brief, known/avoid grammar) plus
    the exact id range required for that chunk. The API key is sent in the `x-goog-api-key`
-   header (never in the URL); `maxOutputTokens` is 32768.
+   header (never in the URL); `maxOutputTokens` is 65536 (`MAX_OUTPUT_TOKENS`), overridable with
+   `GEMINI_MAX_OUTPUT_TOKENS` for older models that cap lower (e.g. 8192).
 2. **Chunked generation** — exercises are requested in chunks of 20 (ids `<id>-01`..`<id>-20`,
    then `<id>-21`..`<id>-40`), then merged into one Topic/PhraseSet JSON. A continuation chunk
    is given the first chunk's context and key items (or phrase list) and the list of target
@@ -134,15 +144,22 @@ For each topic/phrase-set that needs generating:
 4. **Repair loop** — on any blocking problem (or missing exercises), only the affected
    exercises (by id), the ids still missing and the problem list are sent back — not the whole
    40-exercise JSON — and the returned exercises are spliced back in by id (topic-level fields
-   such as `context` are sent only when they have a problem themselves). Up to **2** repair
-   rounds. If problems remain after that, or an API call fails for good, whatever was generated
-   is written to `content/<programId>/topics/_draft-<id>.json` (or `phrases/_draft-<id>.json`)
-   instead of the real path, and the command exits 1 with the problem list printed — nothing
-   broken is ever written to the real topic file, and no finished chunk is lost. If generation
-   failed before any content at all came back (e.g. the very first call errored), **no draft file
-   is written** — only the failure is printed, so `content/<programId>/` isn't cluttered with
-   empty `_draft-*.json` files for topics that were never really attempted.
-5. On success, the file is written Prettier-formatted, and the script prints the next steps.
+   such as `context` are sent only when they have a problem themselves; a missing/lost chunk never
+   triggers a header rewrite on its own — only a real header-level problem does). Up to **2**
+   repair rounds. If problems remain after that, or an API call fails for good, whatever was
+   generated is written Prettier-formatted to `content/<programId>/topics/_draft-<id>.json` (or
+   `phrases/_draft-<id>.json`) instead of the real path, and the command exits 1 with the problem
+   list printed — nothing broken is ever written to the real topic file, and no finished chunk is
+   lost. If generation failed before any content at all came back (e.g. the very first call
+   errored), **no draft file is written** — only the failure is printed, so
+   `content/<programId>/` isn't cluttered with empty `_draft-*.json` files for topics that were
+   never really attempted.
+5. On success, the file is written Prettier-formatted, any stale `_draft-<id>.json` from an
+   earlier failed attempt at the same topic/phrase set is deleted, and the script prints the next
+   steps. For a topic, it also prints the exercise type mix and difficulty-band counts and WARNs
+   (non-blocking) when `build_phrase` has fewer than 10 exercises, `question_for_answer` fewer
+   than 8, or a difficulty band is off its ≈8/18/14 pedagogy target by more than 4 — a quick
+   sanity check before the language review.
 
 **This script must never be pointed at a real API from an automated/CI run** — there is no key
 committed anywhere, and the unit tests (`scripts/__tests__/content-generate.test.ts`) mock
@@ -156,11 +173,12 @@ Gemini's free tier enforces requests-per-minute **and requests-per-day** limits 
 and change over time — check the current numbers at
 <https://ai.google.dev/gemini-api/docs/rate-limits> before a big generation run. The script is
 rate-limit friendly by design: calls are sequential (never parallel), there's a `--sleep` pause
-(default 2000 ms) between calls, and a 429, 500, 502 or 503 response is retried with backoff
-rather than failing the whole run: the wait comes from `Retry-After` (seconds or an HTTP date) or
-the error body's `retryDelay` (e.g. `"12s"`), otherwise it is exponential; each wait is capped at
-60 s and there are at most 5 tries per call. Token usage is printed after every call so you can
-watch your budget.
+(default 2000 ms) between calls, and a 429, 500, 502, 503 or 504 response is retried with backoff
+rather than failing the whole run (504 included for Gemini, since a long "thinking" generation can
+exceed the gateway's own timeout): the wait comes from OpenAI's `Retry-After-Ms` (milliseconds,
+checked first) or `Retry-After` (seconds or an HTTP date), or the error body's `retryDelay` (e.g.
+`"12s"`), otherwise it is exponential; each wait is capped at 60 s and there are at most 5 tries
+per call. Token usage is printed after every call so you can watch your budget.
 
 Two failures are different: retrying (or moving on to the next topic) would just burn the same
 exhausted quota/credits, so the script **stops the whole run immediately** instead — any topic a

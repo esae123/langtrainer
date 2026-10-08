@@ -15,4 +15,8 @@ live in `docs/content-authoring.md` and `scripts/prompt-parts/*.md`.
 - Greetings: `Bom dia` (until lunch), `Boa tarde`, `Boa noite`. `Olá`, `Tudo bem?`, `Até logo`, `Até amanhã`, `Adeus`.
 - `Obrigado` if the speaker is male, `Obrigada` if female. Exercises must not force one; accept both where relevant.
 - Questions: `Como te chamas?` / `Como se chama?`; the emphatic `é que` is very common: `Onde é que moras?`, `De onde é que és?`. Use both plain and `é que` forms in content.
+- Questions keep European order: question word (+ é que) + verb (+ subject): `Onde moras?`, `Onde é que moras?`, `A que horas é que jantas?`. Never `Onde você mora?` / `Que horas você janta?`.
+- Times of day: `de manhã`, `à tarde`, `à noite` and `de noite` are all correct European Portuguese (`de noite` = at night / by night, `às dez da noite` = at 10 p.m.). Do not teach any of them as wrong.
+- `sempre` normally follows the verb: `Como sempre pão ao pequeno-almoço`, `Levanto-me sempre cedo`. `Nunca` goes before it: `Nunca janto tarde`.
+- Contractions are preposition + article: `a + o = ao`, `a + a = à`, `a + os = aos`, `de + o = do`, `em + o = no`, `por + o = pelo`. `Vou ao café` = `ir a` + `o café`.
 - Keep sentences short and natural, the way people actually speak in Portugal.
