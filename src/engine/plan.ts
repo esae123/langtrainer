@@ -9,6 +9,7 @@ import {
   type SessionMix,
   type SessionMixShares,
 } from '../settings/settings';
+import { RECENT_WINDOW_MS, SECURED_STREAK, type ExerciseHistory } from './history';
 import { MIN_REVIEW_ATTEMPTS } from './progress';
 import { pickWeighted, shuffle, type Rng } from './rng';
 import type { TopicProgress } from './types';
@@ -64,6 +65,12 @@ export interface PlanInput {
   rng: Rng;
   /** Optional explicit session id (otherwise derived from `now` and `rng`). */
   id?: string;
+  /**
+   * Per-exercise answer history of the course (`buildExerciseHistory` over its attempts,
+   * including those of the session being extended). Without it, seen exercises that
+   * were not answered wrong last are picked at random.
+   */
+  history?: ReadonlyMap<string, ExerciseHistory>;
 }
 
 /** Fixed block composition per session length; each row sums to the length. */
@@ -171,30 +178,84 @@ export function pickMode(allowed: InputMode[], shares: InputShares, rng: Rng): I
 }
 
 /**
- * Selection order inside a topic (docs/stage-3b-spec.md §5): unseen exercises first,
- * then the ones whose last regular attempt was wrong, then the rest. The new block is
- * sorted by difficulty ascending inside each group, elsewhere each group is shuffled.
+ * Selection group of an exercise (lower comes first): 0 unseen, 1 last regular answer
+ * wrong, 2 seen and not yet secured (correct streak < 2), 3 secured. Without a history
+ * groups 2 and 3 are one group ("the rest", 2).
+ */
+function selectionGroup(
+  id: string,
+  seen: ReadonlySet<string>,
+  wrong: ReadonlySet<string>,
+  history: ReadonlyMap<string, ExerciseHistory> | undefined
+): 0 | 1 | 2 | 3 {
+  if (!seen.has(id)) return 0;
+  if (wrong.has(id)) return 1;
+  if (!history) return 2;
+  return (history.get(id)?.correctStreak ?? 0) >= SECURED_STREAK ? 3 : 2;
+}
+
+/** Last time an exercise was answered; 0 (= longest ago) without a history entry. */
+function lastSeenAt(id: string, history: ReadonlyMap<string, ExerciseHistory> | undefined) {
+  return history?.get(id)?.lastSeenAt ?? 0;
+}
+
+function isRecent(
+  id: string,
+  history: ReadonlyMap<string, ExerciseHistory> | undefined,
+  now: number
+): boolean {
+  const entry = history?.get(id);
+  return entry !== undefined && now - entry.lastSeenAt < RECENT_WINDOW_MS;
+}
+
+interface PoolContext {
+  seen: ReadonlySet<string>;
+  wrong: ReadonlySet<string>;
+  used: ReadonlySet<string>;
+  history?: ReadonlyMap<string, ExerciseHistory>;
+  now: number;
+  rng: Rng;
+}
+
+/**
+ * Selection order inside a topic (docs/engine.md "Exercise selection"):
+ * (a) unseen, (b) last regular answer wrong, (c) seen, not yet secured (correct streak
+ * < 2), (d) secured. (a) and (b) are sorted by difficulty in the new block and shuffled
+ * elsewhere; (c) and (d) go least recently seen first, ties random. Inside every group an
+ * exercise answered within the last 20 hours goes to the end.
+ *
+ * Without a `history` (c) and (d) are one shuffled group, exactly as before histories
+ * existed.
  */
 function orderedPool(
   exercises: readonly Exercise[],
-  seen: ReadonlySet<string>,
-  wrong: ReadonlySet<string>,
-  used: ReadonlySet<string>,
-  rng: Rng,
+  context: PoolContext,
   sortByDifficulty: boolean
 ): Exercise[] {
-  const available = exercises.filter((exercise) => !used.has(exercise.id));
-  const unseen = available.filter((exercise) => !seen.has(exercise.id));
-  const wrongBefore = available.filter(
-    (exercise) => seen.has(exercise.id) && wrong.has(exercise.id)
-  );
-  const rest = available.filter((exercise) => seen.has(exercise.id) && !wrong.has(exercise.id));
+  const { seen, wrong, used, history, now, rng } = context;
+  const groups: Exercise[][] = [[], [], [], []];
+  for (const exercise of exercises) {
+    if (used.has(exercise.id)) continue;
+    groups[selectionGroup(exercise.id, seen, wrong, history)].push(exercise);
+  }
   const arrange = (list: Exercise[]) =>
-    sortByDifficulty
-      ? [...list].sort((a, b) => a.difficulty - b.difficulty)
-      : // No per-exercise timestamps are kept, so "least recently seen" is random.
-        shuffle(list, rng);
-  return [...arrange(unseen), ...arrange(wrongBefore), ...arrange(rest)];
+    sortByDifficulty ? [...list].sort((a, b) => a.difficulty - b.difficulty) : shuffle(list, rng);
+  if (!history) return [...arrange(groups[0]), ...arrange(groups[1]), ...arrange(groups[2])];
+
+  const recentLast = (list: Exercise[]) => [
+    ...list.filter((exercise) => !isRecent(exercise.id, history, now)),
+    ...list.filter((exercise) => isRecent(exercise.id, history, now)),
+  ];
+  // Shuffle first so the stable sort breaks equal timestamps at random. Sorting by
+  // lastSeenAt already puts the last 20 hours at the end.
+  const leastRecentFirst = (list: Exercise[]) =>
+    shuffle(list, rng).sort((a, b) => lastSeenAt(a.id, history) - lastSeenAt(b.id, history));
+  return [
+    ...recentLast(arrange(groups[0])),
+    ...recentLast(arrange(groups[1])),
+    ...leastRecentFirst(groups[2]),
+    ...leastRecentFirst(groups[3]),
+  ];
 }
 
 interface Candidate {
@@ -229,6 +290,17 @@ function wrongSetFor(progress: TopicProgress[], topicId: string): Set<string> {
   return new Set(row?.wrongExerciseIds ?? []);
 }
 
+function poolContext(input: PlanInput, topicId: string, used: ReadonlySet<string>): PoolContext {
+  return {
+    seen: seenSetFor(input.progress, topicId),
+    wrong: wrongSetFor(input.progress, topicId),
+    used,
+    history: input.history,
+    now: input.now,
+    rng: input.rng,
+  };
+}
+
 interface BuildResult {
   items: PlannedItem[];
 }
@@ -247,14 +319,7 @@ function buildItems(
   const counts: BlockCounts = { ...baseCounts };
 
   const poolFor = (topicId: string, sortByDifficulty: boolean) =>
-    orderedPool(
-      byTopic.get(topicId) ?? [],
-      seenSetFor(progress, topicId),
-      wrongSetFor(progress, topicId),
-      used,
-      rng,
-      sortByDifficulty
-    );
+    orderedPool(byTopic.get(topicId) ?? [], poolContext(input, topicId, used), sortByDifficulty);
 
   // --- review target and due topics ------------------------------------------
   // Everything completed: the new block becomes more review.
@@ -349,12 +414,30 @@ function buildItems(
       phrasePool.push({ exercise, topicId: set.id });
     }
   }
-  // Unseen first across sets, then past mistakes, keeping phraseSet order inside a group.
-  const phraseRank = (candidate: Candidate) => {
-    if (!seenSetFor(progress, candidate.topicId).has(candidate.exercise.id)) return 0;
-    return wrongSetFor(progress, candidate.topicId).has(candidate.exercise.id) ? 1 : 2;
-  };
-  phrasePool.sort((a, b) => phraseRank(a) - phraseRank(b));
+  // The topic order across sets: unseen first, then past mistakes, keeping phraseSet
+  // order inside those groups; with a history, then not-yet-secured and secured phrases,
+  // each least recently seen first across all sets, the last 20 hours at the end.
+  const { history, now } = input;
+  const phraseKeys = new Map<Candidate, [number, number, number]>();
+  for (const candidate of phrasePool) {
+    const id = candidate.exercise.id;
+    const group = selectionGroup(
+      id,
+      seenSetFor(progress, candidate.topicId),
+      wrongSetFor(progress, candidate.topicId),
+      history
+    );
+    phraseKeys.set(candidate, [
+      group,
+      isRecent(id, history, now) ? 1 : 0,
+      group >= 2 ? lastSeenAt(id, history) : 0,
+    ]);
+  }
+  phrasePool.sort((a, b) => {
+    const ka = phraseKeys.get(a) ?? [0, 0, 0];
+    const kb = phraseKeys.get(b) ?? [0, 0, 0];
+    return ka[0] - kb[0] || ka[1] - kb[1] || ka[2] - kb[2];
+  });
   for (const candidate of phrasePool.slice(0, counts.phrases)) {
     phraseCandidates.push(candidate);
     used.add(candidate.exercise.id);
@@ -445,8 +528,8 @@ export function planPractice(
 }
 
 /**
- * Focus items from one topic or phrase set: unseen first, then past mistakes, then the
- * rest (each group shuffled — no per-exercise timestamps are kept), skipping `used`.
+ * Focus items from one topic or phrase set in the usual selection order (`orderedPool`),
+ * skipping `used`.
  */
 function focusItems(
   input: PlanInput,
@@ -455,17 +538,10 @@ function focusItems(
   used: ReadonlySet<string>,
   withContext: boolean
 ): PlannedItem[] {
-  const { program, progress, rng } = input;
+  const { program, rng } = input;
   const topic = orderedTopics(program).find((candidate) => candidate.id === topicId);
   const exercises = exercisesByTopic(program).get(topicId) ?? [];
-  const pool = orderedPool(
-    exercises,
-    seenSetFor(progress, topicId),
-    wrongSetFor(progress, topicId),
-    used,
-    rng,
-    false
-  );
+  const pool = orderedPool(exercises, poolContext(input, topicId, used), false);
   return pool.slice(0, count).map((exercise, i) => {
     const item: PlannedItem = {
       exercise,

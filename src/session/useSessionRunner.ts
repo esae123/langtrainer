@@ -10,7 +10,9 @@ import {
   type ExerciseResponse,
   type SelfGrade,
 } from '../engine/check';
+import { buildExerciseHistory, withAttempt, type ExerciseHistory } from '../engine/history';
 import {
+  exercisesByTopic,
   planFocus,
   planNextCycle,
   planSession,
@@ -84,6 +86,8 @@ export function useSessionRunner(
   const finalizedRef = useRef<string | null>(null);
   const rngRef = useRef<Rng>(mulberry32(1));
   const progressRef = useRef<TopicProgress[]>([]);
+  /** Per-exercise answer history of the course, kept current as answers are recorded. */
+  const historyRef = useRef<ReadonlyMap<string, ExerciseHistory>>(new Map());
 
   const planInput = useCallback(
     (now: number): PlanInput | null =>
@@ -96,6 +100,7 @@ export function useSessionRunner(
             sessionMix: settings.sessionMix,
             now,
             rng: rngRef.current,
+            history: historyRef.current,
           }
         : null,
     [program, settings.sessionLength, settings.inputShares, settings.sessionMix]
@@ -122,6 +127,14 @@ export function useSessionRunner(
         dispatch({ type: 'init', state: initSessionState(practicePlan, now) });
         return;
       }
+
+      // One query for the whole course (topics and phrase sets); planNextCycle on a
+      // resumed open session needs it too, so it is loaded before the resume check.
+      const attempts = await db.attempts
+        .where('topicId')
+        .anyOf([...exercisesByTopic(program).keys()])
+        .toArray();
+      historyRef.current = buildExerciseHistory(attempts);
 
       // Never overwrite an unfinished session silently (Android restores a killed PWA at
       // its last URL, so /session or /session?focus=X can reopen while a snapshot
@@ -172,6 +185,8 @@ export function useSessionRunner(
 
   const record = useCallback(
     async (draft: AttemptDraft, sessionId: string, programId: string, practice: boolean) => {
+      // Synchronously, before any await, so the next cycle's plan already sees it.
+      historyRef.current = withAttempt(historyRef.current, draft);
       await db.attempts.put(toAttemptRow(draft, sessionId, practice));
       const updated = await db.transaction('rw', db.topicProgress, async () => {
         const existing = await db.topicProgress.get(draft.topicId);

@@ -8,6 +8,7 @@ deterministic given its inputs — `now` and an `rng` (`Rng = () => number`, see
 | file          | responsibility                                                        |
 | ------------- | --------------------------------------------------------------------- |
 | `plan.ts`     | what to practise: blocks, topic and exercise selection, input modes   |
+| `history.ts`  | per-exercise answer history (last seen, correct streak) from attempts |
 | `check.ts`    | is the answer right, per exercise type and input mode                 |
 | `progress.ts` | topic progress, topic completion, spaced repetition                   |
 | `stats.ts`    | Progress-screen statistics: streaks, totals, per-topic numbers        |
@@ -82,14 +83,35 @@ split in `blockCountsFor(length, mix)`:
     this open session), one random completed topic; if nothing is completed, more
     current-topic exercises. Such fallback items are **extra practice**: `finishSession`
     only moves the SRS of a topic that was due when the session started (see below).
-- **Phrases block**: exercises from the phrase sets in program order, unseen first.
-- **Exercise selection**: three groups, in order — (1) unseen (not in `seenExerciseIds`),
-  (2) seen but in `wrongExerciseIds` (last regular attempt was wrong), (3) the rest. The
-  new block sorts each group by difficulty ascending, elsewhere each group is shuffled (no
-  per-exercise timestamps are stored, so "least recently seen" is random). An exercise is
-  never repeated inside one session. If a block runs short, the plan tops up from the
-  topics it already uses, so `plannedLength` always matches the real item count (`0` marks
-  an open session).
+- **Phrases block**: exercises from the phrase sets, in the selection order below taken
+  across all sets (unseen and past mistakes keep phrase-set order inside their group).
+- **Exercise history** (`history.ts`): `buildExerciseHistory(attempts)` replays every
+  attempt of the course in time order into `exerciseId → { lastSeenAt, correctStreak,
+attempts }`; `correctStreak` counts the consecutive correct answers ending with the
+  latest one (a wrong answer resets it to 0). **Practice attempts count**: a correct
+  answer in Retry mistakes / Repeat session is real evidence. No schema change — the
+  data is the `attempts` table. The runner loads the attempts of the course's topics and
+  phrase sets once per plan (`where('topicId').anyOf(ids)`), keeps the history in a ref,
+  updates it with every answer as it is recorded (so `planNextCycle` sees the answers of
+  the running session) and passes it as `PlanInput.history`.
+- **Exercise selection** (review, new, phrases and top-up blocks, `planFocus`,
+  `planNextCycle`), four groups in order:
+  1. **unseen** (not in `seenExerciseIds`);
+  2. **last answer wrong** (seen, in `wrongExerciseIds`);
+  3. **not yet secured**: seen, last answer correct, `correctStreak < 2` — least recently
+     seen first (no history entry counts as seen longest ago);
+  4. **secured**: `correctStreak ≥ 2` — least recently seen first.
+
+  Groups 1 and 2 are sorted by difficulty ascending in the new block and shuffled
+  elsewhere; equal `lastSeenAt` in groups 3 and 4 are broken at random (`rng`). Inside
+  every group an exercise answered **within the last 20 hours** goes to the end, so
+  today's and yesterday's items only come back when nothing else is left. With all
+  answers correct, review therefore cycles through a whole topic before repeating an
+  exercise. Without `history` (old callers, tests) groups 3 and 4 are one shuffled group,
+  as before. An exercise is never repeated inside one session. If a block runs short, the
+  plan tops up from the topics it already uses, so `plannedLength` always matches the
+  real item count (`0` marks an open session).
+
 - **Input mode**: drawn at random weighted by `settings.inputShares`; if the drawn mode is
   not in `exercise.allowedModes`, the allowed mode with the highest share wins. Tiles-only
   types therefore always get tiles.
@@ -133,8 +155,8 @@ day keeps its streak and the answers their history. A snapshot without answers i
 cleared. An expired snapshot is recorded with its last save time as `endedAt`.
 
 - `planFocus(input, topicId)` → `SessionPlan` with `kind: 'focus'`, `focusTopicId`, every
-  item in block `'focus'`. Order: unseen first, then `wrongExerciseIds`, then the rest
-  (each group shuffled; no per-exercise timestamps are kept). No exercise repeats. Length
+  item in block `'focus'`. Order: the usual exercise selection (unseen, wrong, not yet
+  secured, secured — see Planning). No exercise repeats. Length
   = `sessionLength` (fewer when the topic runs out); open → cycles of six from the same
   topic via `planNextCycle` until the pool is exhausted, then the session ends. Input
   modes as usual. The context screen precedes the first item of a topic, never a phrase
