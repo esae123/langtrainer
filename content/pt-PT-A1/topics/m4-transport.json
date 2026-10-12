@@ -1,0 +1,746 @@
+{
+  "id": "m4-transport",
+  "moduleId": "m4",
+  "title": "Transport",
+  "kind": "vocabulary",
+  "context": "In this topic, you learn common ways to say how you travel and how to use simple transport questions at a station or ticket office. In European Portuguese, most means of transport use **de + transport**: **de carro, de comboio, de metro, de autocarro, de avião**. Walking is different: **a pé**. For destinations, use **para** (for a short visit you will also hear **a**: *Vou a Coimbra*). To buy a ticket, **Queria...** sounds polite and natural.\n\nExamples:\n- **Vou para Coimbra de comboio.** — I go to Coimbra by train.\n- **Vamos para Lisboa de metro.** — We go to Lisbon by metro.\n- **Ela vai a pé para a escola.** — She goes to school on foot.\n- **Queria um bilhete para Faro.** — I would like a ticket to Faro.\n- **A que horas sai o autocarro?** — What time does the bus leave?\n- **De que plataforma é que sai o comboio?** — Which platform does the train leave from?\n\n**Watch out**\n- Use **a pé**, not *de pé*, for “on foot”.\n- Use **para** for the destination: **um bilhete para Braga**, not *a Braga*.",
+  "keyItems": [
+    {
+      "target": "de carro",
+      "support": "by car"
+    },
+    {
+      "target": "de avião",
+      "support": "by plane"
+    },
+    {
+      "target": "de comboio",
+      "support": "by train"
+    },
+    {
+      "target": "de metro",
+      "support": "by metro"
+    },
+    {
+      "target": "de autocarro",
+      "support": "by bus"
+    },
+    {
+      "target": "a pé",
+      "support": "on foot",
+      "note": "fixed expression"
+    },
+    {
+      "target": "um bilhete",
+      "support": "a ticket"
+    },
+    {
+      "target": "só ida",
+      "support": "one way"
+    },
+    {
+      "target": "ida e volta",
+      "support": "return",
+      "note": "for tickets"
+    },
+    {
+      "target": "Queria...",
+      "support": "I would like...",
+      "note": "polite request"
+    },
+    {
+      "target": "para",
+      "support": "to, towards",
+      "note": "for destinations"
+    },
+    {
+      "target": "A que horas...?",
+      "support": "At what time...?"
+    },
+    {
+      "target": "De que plataforma é que...?",
+      "support": "Which platform ... from?"
+    },
+    {
+      "target": "plataforma",
+      "support": "platform"
+    },
+    {
+      "target": "sai",
+      "support": "leaves / departs"
+    },
+    {
+      "target": "parte",
+      "support": "departs",
+      "note": "common with trains and buses"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m4-transport-01",
+      "type": "translate_word",
+      "topicId": "m4-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "With transport, Portuguese often uses «de»: «de comboio», «de metro», «de autocarro». Walking is the special expression «a pé».",
+      "direction": "toTarget",
+      "sentence": "I go **by train** to Porto.",
+      "word": "by train",
+      "answer": "de comboio",
+      "options": ["de comboio", "de metro", "de autocarro", "a pé"]
+    },
+    {
+      "id": "m4-transport-02",
+      "type": "translate_word",
+      "topicId": "m4-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "For walking, Portuguese uses the fixed expression «a pé». «De pé» means standing up, not travelling on foot.",
+      "direction": "toTarget",
+      "sentence": "We go **on foot** to school.",
+      "word": "on foot",
+      "answer": "a pé",
+      "options": ["a pé", "de carro", "de metro", "de pé"]
+    },
+    {
+      "id": "m4-transport-03",
+      "type": "build_phrase",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I go to Coimbra by bus.",
+      "explanation": "Use «ir para + place» and «de + transport»: «Vou para Coimbra de autocarro.»",
+      "answer": ["Vou", "para", "Coimbra", "de", "autocarro."],
+      "distractors": ["vai", "ao", "metro"],
+      "acceptedAnswers": [
+        "Eu vou para Coimbra de autocarro.",
+        "Vou de autocarro para Coimbra.",
+        "Eu vou de autocarro para Coimbra.",
+        "Vou a Coimbra de autocarro."
+      ]
+    },
+    {
+      "id": "m4-transport-04",
+      "type": "build_phrase",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We go to Lisbon by metro.",
+      "explanation": "Use «para» for the destination and «de metro» for the means of transport. The subject «nós» is often left out in Portuguese.",
+      "answer": ["Vamos", "para", "Lisboa", "de", "metro."],
+      "distractors": ["vão", "ao", "comboio"],
+      "acceptedAnswers": [
+        "Nós vamos para Lisboa de metro.",
+        "Vamos de metro para Lisboa.",
+        "Nós vamos de metro para Lisboa.",
+        "Vamos a Lisboa de metro."
+      ]
+    },
+    {
+      "id": "m4-transport-05",
+      "type": "fill_gaps",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the ticket office, fill the two gaps.",
+      "explanation": "To buy one ticket, say «um bilhete». Use «para» for the destination.",
+      "template": "Queria ___ bilhete ___ Faro, por favor.",
+      "gaps": [
+        {
+          "answer": "um"
+        },
+        {
+          "answer": "para"
+        }
+      ],
+      "wordBank": ["um", "para", "uma", "de", "ao"]
+    },
+    {
+      "id": "m4-transport-06",
+      "type": "question_for_answer",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend is going to the Azores. Ask her (informal) how she is travelling. She answers: «Vou de avião.»",
+      "explanation": "To ask about the means of transport, you can say «Como vais?» or the very common «Como é que vais?».",
+      "givenAnswer": "Vou de avião.",
+      "answer": ["Como", "é", "que", "vais?"],
+      "distractors": ["Onde", "vens?", "moras?"],
+      "acceptedAnswers": [
+        "Como vais?",
+        "Como é que tu vais?",
+        "Como é que vais para lá?",
+        "Como vais para lá?"
+      ]
+    },
+    {
+      "id": "m4-transport-07",
+      "type": "build_phrase",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: She goes to work on foot.",
+      "explanation": "For walking, use the fixed expression «a pé». With a destination, use «para + place».",
+      "answer": ["Ela", "vai", "para", "o", "trabalho", "a", "pé."],
+      "distractors": ["de", "no", "vem"],
+      "acceptedAnswers": ["Ela vai a pé para o trabalho."]
+    },
+    {
+      "id": "m4-transport-08",
+      "type": "fill_gaps",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The train to Braga departs at 8:30 from platform 3. Fill the two gaps.",
+      "explanation": "For departure times, «parte» or «sai» are common. After «plataforma», add the platform number.",
+      "template": "O comboio para Braga ___ às oito e meia e sai da plataforma ___.",
+      "gaps": [
+        {
+          "answer": "parte",
+          "accepted": ["sai"]
+        },
+        {
+          "answer": "três"
+        }
+      ],
+      "wordBank": ["parte", "três", "chega", "quatro", "da"]
+    },
+    {
+      "id": "m4-transport-09",
+      "type": "find_error",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «bilhete», use «para» for the destination: «um bilhete para Aveiro».",
+      "sentence": ["Quero", "um", "bilhete", "a", "Aveiro."],
+      "wrongIndex": 3,
+      "correction": "para",
+      "options": ["para", "em", "por"]
+    },
+    {
+      "id": "m4-transport-10",
+      "type": "question_for_answer",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You are at the station. Ask which platform the train leaves from.",
+      "explanation": "To ask about the platform, use «De que plataforma...?» The common spoken form is «De que plataforma é que sai o comboio?».",
+      "givenAnswer": "Sai da plataforma cinco.",
+      "answer": ["De", "que", "plataforma", "é", "que", "sai", "o", "comboio?"],
+      "distractors": ["A", "horas", "parte", "metro?"],
+      "acceptedAnswers": [
+        "De que plataforma sai o comboio?",
+        "De que plataforma é que parte o comboio?",
+        "De que plataforma parte o comboio?",
+        "De que linha sai o comboio?",
+        "De que linha é que sai o comboio?"
+      ]
+    },
+    {
+      "id": "m4-transport-11",
+      "type": "build_phrase",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I would like a return ticket to Porto.",
+      "explanation": "«Queria» is a polite way to ask for something. «De ida e volta» means a return ticket.",
+      "answer": ["Queria", "um", "bilhete", "de", "ida", "e", "volta", "para", "o", "Porto."],
+      "distractors": ["quero", "no", "comboio"],
+      "acceptedAnswers": ["Eu queria um bilhete de ida e volta para o Porto."]
+    },
+    {
+      "id": "m4-transport-12",
+      "type": "translate_word",
+      "topicId": "m4-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Plataforma» is where you wait for the train or metro (at train stations you will also see «linha» on the boards). «Estação» is the whole station.",
+      "direction": "toTarget",
+      "sentence": "The train leaves from **platform** 4.",
+      "word": "platform",
+      "answer": "plataforma",
+      "options": ["plataforma", "estação", "bilhete", "paragem"]
+    },
+    {
+      "id": "m4-transport-13",
+      "type": "about_me",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Answer with «vou» + transport. For walking, use the special expression «a pé».",
+      "question": "Como vais para o trabalho ou para a escola?",
+      "sampleAnswer": "Vou de autocarro para a escola.",
+      "hints": ["de comboio", "de metro", "a pé", "de carro", "para o centro"]
+    },
+    {
+      "id": "m4-transport-14",
+      "type": "fill_gaps",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask what time the bus to Setúbal leaves. Fill the two gaps.",
+      "explanation": "Use «A que horas» to ask for the time. The destination comes with «para».",
+      "template": "A que horas ___ o autocarro ___ Setúbal?",
+      "gaps": [
+        {
+          "answer": "sai",
+          "accepted": ["parte"]
+        },
+        {
+          "answer": "para"
+        }
+      ],
+      "wordBank": ["sai", "para", "saem", "de", "do"]
+    },
+    {
+      "id": "m4-transport-15",
+      "type": "question_for_answer",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the station, ask what time the train to Aveiro leaves.",
+      "explanation": "Use «A que horas» to ask for a clock time. With transport, both «sai» and «parte» are common for departures.",
+      "givenAnswer": "Sai às nove e vinte.",
+      "answer": ["A", "que", "horas", "sai", "o", "comboio", "para", "Aveiro?"],
+      "distractors": ["chega", "autocarro", "plataforma"],
+      "acceptedAnswers": [
+        "A que horas parte o comboio para Aveiro?",
+        "A que horas é que sai o comboio para Aveiro?",
+        "A que horas é que parte o comboio para Aveiro?"
+      ]
+    },
+    {
+      "id": "m4-transport-16",
+      "type": "build_phrase",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: They go to Faro by plane.",
+      "explanation": "Use «vão» for «they go». The usual pattern is «para + place» and «de + transport».",
+      "answer": ["Vão", "para", "Faro", "de", "avião."],
+      "distractors": ["vai", "ao", "comboio"],
+      "acceptedAnswers": [
+        "Eles vão para Faro de avião.",
+        "Vão de avião para Faro.",
+        "Eles vão de avião para Faro.",
+        "Vão a Faro de avião."
+      ]
+    },
+    {
+      "id": "m4-transport-17",
+      "type": "find_error",
+      "topicId": "m4-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Walking is the fixed expression «a pé». Do not use «de» here.",
+      "sentence": ["Ela", "vai", "de", "pé", "para", "casa."],
+      "wrongIndex": 2,
+      "correction": "a",
+      "options": ["a", "em", "por"]
+    },
+    {
+      "id": "m4-transport-18",
+      "type": "order_dialogue",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "At the ticket office. Put the lines in order.",
+      "explanation": "The clerk often starts with «Faz favor». «Ida e volta» means a return ticket.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Bom dia. Faz favor."
+        },
+        {
+          "speaker": "B",
+          "text": "Bom dia. Queria um bilhete para Aveiro."
+        },
+        {
+          "speaker": "A",
+          "text": "Só ida ou ida e volta?"
+        },
+        {
+          "speaker": "B",
+          "text": "Ida e volta, por favor."
+        },
+        {
+          "speaker": "A",
+          "text": "Muito bem."
+        }
+      ]
+    },
+    {
+      "id": "m4-transport-19",
+      "type": "fill_gaps",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You go by metro, your sister walks and your parents go by car. Fill the three gaps.",
+      "explanation": "Most transport uses «de + transport», but walking is «a pé». Keep the whole chunk together.",
+      "template": "— Como vais para o centro?\n— Vou ___, e a minha irmã vai ___.\n— E os teus pais?\n— Vão ___.",
+      "gaps": [
+        {
+          "answer": "de metro"
+        },
+        {
+          "answer": "a pé"
+        },
+        {
+          "answer": "de carro"
+        }
+      ],
+      "wordBank": ["de metro", "a pé", "de carro", "de avião", "de comboio"]
+    },
+    {
+      "id": "m4-transport-20",
+      "type": "question_for_answer",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the ticket office, the clerk asks one customer (formal) where he is going. The customer answers: «Queria um bilhete para Coimbra.» What did the clerk ask?",
+      "explanation": "For one customer in polite speech, Portuguese often uses the 3rd-person form: «vai». To ask the destination, say «Para onde vai?».",
+      "givenAnswer": "Queria um bilhete para Coimbra.",
+      "answer": ["Para", "onde", "é", "que", "vai?"],
+      "distractors": ["Como", "vem?", "quando", "bilhete?"],
+      "acceptedAnswers": [
+        "Para onde vai?",
+        "Para onde é que o senhor vai?",
+        "Para onde vai o senhor?"
+      ]
+    },
+    {
+      "id": "m4-transport-21",
+      "type": "build_phrase",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I go to work by car.",
+      "explanation": "For most transport, Portuguese uses «de + transport»: «de carro». Use «para» for the destination.",
+      "answer": ["Vou", "para", "o", "trabalho", "de", "carro."],
+      "distractors": ["no", "a", "comboio"],
+      "acceptedAnswers": ["Eu vou para o trabalho de carro.", "Vou de carro para o trabalho."]
+    },
+    {
+      "id": "m4-transport-22",
+      "type": "question_for_answer",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You ask the clerk what time the bus to Leiria leaves. The clerk says: «Parte às nove e um quarto.» What did you ask?",
+      "explanation": "To ask for a departure time, use «A que horas...?». «Parte» is a common verb for buses and trains.",
+      "givenAnswer": "Parte às nove e um quarto.",
+      "answer": ["A", "que", "horas", "parte?"],
+      "distractors": ["onde", "plataforma", "chega?"],
+      "acceptedAnswers": [
+        "A que horas é que parte?",
+        "A que horas sai?",
+        "A que horas é que sai?",
+        "A que horas parte o autocarro para Leiria?",
+        "A que horas sai o autocarro para Leiria?"
+      ]
+    },
+    {
+      "id": "m4-transport-23",
+      "type": "fill_gaps",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps.",
+      "explanation": "Use «para» for the destination and «de» for the means of transport.",
+      "template": "Ao sábado, vamos ___ o aeroporto ___ metro.",
+      "gaps": [
+        {
+          "answer": "para"
+        },
+        {
+          "answer": "de"
+        }
+      ],
+      "wordBank": ["para", "de", "a", "em"]
+    },
+    {
+      "id": "m4-transport-24",
+      "type": "translate_word",
+      "topicId": "m4-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Walking is the fixed expression «a pé». Do not use «de pé» here.",
+      "direction": "toTarget",
+      "sentence": "I go to the station **on foot**.",
+      "word": "on foot",
+      "answer": "a pé",
+      "options": ["a pé", "de pé", "de carro", "de metro"]
+    },
+    {
+      "id": "m4-transport-25",
+      "type": "find_error",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Leaving FROM a place takes «de»: «parte da plataforma» (de + a plataforma). «Na» means «on/at», not «from».",
+      "sentence": ["O", "autocarro", "parte", "na", "plataforma", "cinco."],
+      "wrongIndex": 3,
+      "correction": "da",
+      "options": ["da", "de", "para"]
+    },
+    {
+      "id": "m4-transport-26",
+      "type": "build_phrase",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The bus to Évora leaves at half past seven.",
+      "explanation": "Use «para» with the destination and «às» with the departure time. «Sai» and «parte» are both common for transport.",
+      "answer": ["O", "autocarro", "para", "Évora", "sai", "às", "sete", "e", "meia."],
+      "distractors": ["chega", "de", "comboio"],
+      "acceptedAnswers": ["O autocarro para Évora parte às sete e meia."]
+    },
+    {
+      "id": "m4-transport-27",
+      "type": "question_for_answer",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask your friend (informal) if she goes on foot. She answers: «Não, vou de autocarro.»",
+      "explanation": "For a yes/no question, you can start directly with the verb: «Vais...?». Walking is «a pé».",
+      "givenAnswer": "Não, vou de autocarro.",
+      "answer": ["Vais", "a", "pé?"],
+      "distractors": ["de", "comboio", "vai"],
+      "acceptedAnswers": ["Tu vais a pé?"]
+    },
+    {
+      "id": "m4-transport-28",
+      "type": "fill_gaps",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Rui first walks to the station and then takes the train. Fill the three gaps.",
+      "explanation": "Use «para» before the destination, «a pé» for walking, and «de comboio» for the train.",
+      "template": "O Rui vai ___ estação ___ pé e depois vai ___ comboio.",
+      "gaps": [
+        {
+          "answer": "para a",
+          "accepted": ["à"]
+        },
+        {
+          "answer": "a"
+        },
+        {
+          "answer": "de"
+        }
+      ],
+      "wordBank": ["para a", "a", "de", "na", "em", "ao"]
+    },
+    {
+      "id": "m4-transport-29",
+      "type": "about_me",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "A simple pattern is «Vou de ... para ...». You can talk about work, school, or another place you go to often.",
+      "question": "Como vais para o trabalho ou para a escola?",
+      "sampleAnswer": "Vou de metro para o trabalho.",
+      "hints": ["autocarro", "comboio", "a pé", "carro", "todos os dias", "para casa"]
+    },
+    {
+      "id": "m4-transport-30",
+      "type": "build_phrase",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We are going to Sintra by car.",
+      "explanation": "Use «de carro» for the means of transport and «para» for the destination.",
+      "answer": ["Vamos", "para", "Sintra", "de", "carro."],
+      "distractors": ["em", "comboio", "vou"],
+      "acceptedAnswers": [
+        "Nós vamos para Sintra de carro.",
+        "Vamos de carro para Sintra.",
+        "Vamos a Sintra de carro."
+      ]
+    },
+    {
+      "id": "m4-transport-31",
+      "type": "translate_word",
+      "topicId": "m4-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "At a station or terminal, «plataforma» is where the bus or train leaves from.",
+      "direction": "toTarget",
+      "sentence": "Bus 12 leaves from **platform** 7.",
+      "word": "platform",
+      "answer": "plataforma",
+      "options": ["plataforma", "bagagem", "estação", "bilheteira"]
+    },
+    {
+      "id": "m4-transport-32",
+      "type": "question_for_answer",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the ticket office, you answer: «Quero ida e volta.» What was the question?",
+      "explanation": "Clerks often offer two ticket types with «Só ida ou ida e volta?». «Ida e volta» means a return ticket.",
+      "givenAnswer": "Quero ida e volta.",
+      "answer": ["Só", "ida", "ou", "ida", "e", "volta?"],
+      "distractors": ["bilhete", "para", "vai"],
+      "acceptedAnswers": ["É só ida ou ida e volta?", "Quer só ida ou ida e volta?"]
+    },
+    {
+      "id": "m4-transport-33",
+      "type": "find_error",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Most means of transport use «de»: «de autocarro», «de metro», «de comboio». Only walking is «a pé».",
+      "sentence": ["Ela", "vai", "para", "casa", "a", "autocarro."],
+      "wrongIndex": 4,
+      "correction": "de",
+      "options": ["de", "em", "com"]
+    },
+    {
+      "id": "m4-transport-34",
+      "type": "fill_gaps",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill the two gaps in the short exchange.",
+      "explanation": "After «para», the article changes with the noun: «para o centro», «para a estação».",
+      "template": "— Este autocarro vai ___ centro? — Não, vai ___ estação.",
+      "gaps": [
+        {
+          "answer": "para o",
+          "accepted": ["ao"]
+        },
+        {
+          "answer": "para a",
+          "accepted": ["à"]
+        }
+      ],
+      "wordBank": ["para o", "para a", "do", "na"]
+    },
+    {
+      "id": "m4-transport-35",
+      "type": "build_phrase",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the ticket office, say: I would like two one-way tickets to Braga, please.",
+      "explanation": "«Queria» is a polite request. Use the plural «bilhetes» with «dois», and use «para» before the destination.",
+      "answer": ["Queria", "dois", "bilhetes", "só", "ida", "para", "Braga,", "por", "favor."],
+      "distractors": ["um", "volta", "comboio"],
+      "acceptedAnswers": [
+        "Eu queria dois bilhetes só ida para Braga, por favor.",
+        "Queria dois bilhetes para Braga, só ida, por favor.",
+        "Queria dois bilhetes de ida para Braga, por favor.",
+        "Queria dois bilhetes só de ida para Braga, por favor."
+      ]
+    },
+    {
+      "id": "m4-transport-36",
+      "type": "question_for_answer",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the station, ask where you buy a ticket. Someone answers: «Ali, na máquina.»",
+      "explanation": "Use «Onde é que…?» to ask where something is or where you do something.",
+      "givenAnswer": "Ali, na máquina.",
+      "answer": ["Onde", "é", "que", "compro", "um", "bilhete?"],
+      "distractors": ["plataforma", "sai", "hora"],
+      "acceptedAnswers": [
+        "Onde compro um bilhete?",
+        "Onde é que eu compro um bilhete?",
+        "Onde posso comprar um bilhete?",
+        "Onde é que posso comprar um bilhete?"
+      ]
+    },
+    {
+      "id": "m4-transport-37",
+      "type": "build_phrase",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The bus to Santarém leaves from platform five.",
+      "explanation": "For departure points, say «da plataforma». «Parte» is common in timetable language.",
+      "answer": ["O", "autocarro", "para", "Santarém", "parte", "da", "plataforma", "cinco."],
+      "distractors": ["na", "de", "comboio"],
+      "acceptedAnswers": ["O autocarro para Santarém sai da plataforma cinco."]
+    },
+    {
+      "id": "m4-transport-38",
+      "type": "translate_word",
+      "topicId": "m4-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For ticket types, «só ida» means you go only one way. The return option is «ida e volta».",
+      "direction": "toTarget",
+      "sentence": "Do you want **one way** or return?",
+      "word": "one way",
+      "answer": "só ida",
+      "options": ["só ida", "ida e volta", "um bilhete", "a pé"]
+    },
+    {
+      "id": "m4-transport-39",
+      "type": "fill_gaps",
+      "topicId": "m4-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask about the train to Leiria. Fill the three gaps.",
+      "explanation": "Use «para» with the destination, «às» with the time, and «da plataforma» for the departure point.",
+      "template": "— O comboio ___ Leiria sai ___ dez? — Não, parte às dez e meia e sai ___ plataforma quatro.",
+      "gaps": [
+        {
+          "answer": "para"
+        },
+        {
+          "answer": "às"
+        },
+        {
+          "answer": "da"
+        }
+      ],
+      "wordBank": ["para", "às", "da", "na", "de", "em"]
+    },
+    {
+      "id": "m4-transport-40",
+      "type": "order_dialogue",
+      "topicId": "m4-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "At the ticket office. Put the lines in order.",
+      "explanation": "Start with a polite request using «Queria...». Then the clerk can ask «Só ida ou ida e volta?» before giving the ticket.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Bom dia. Faz favor."
+        },
+        {
+          "speaker": "B",
+          "text": "Bom dia. Queria um bilhete para Leiria, por favor."
+        },
+        {
+          "speaker": "A",
+          "text": "Só ida ou ida e volta?"
+        },
+        {
+          "speaker": "B",
+          "text": "Só ida, por favor."
+        },
+        {
+          "speaker": "A",
+          "text": "Aqui tem."
+        }
+      ]
+    }
+  ]
+}

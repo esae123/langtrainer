@@ -1,0 +1,648 @@
+{
+  "id": "m4-housing",
+  "moduleId": "m4",
+  "title": "Housing",
+  "kind": "vocabulary",
+  "context": "Use these words to describe a home and to understand a very short rental ad. At A1, keep it simple: name the room, say what is in it, and say where things are. In ads, **T1** means one bedroom and **T2** means two bedrooms. **Mobilado** means furnished.\n\n- `A sala é pequena.` — The living room is small.\n- `O sofá está na sala.` — The sofa is in the living room.\n- `A cama está no quarto.` — The bed is in the bedroom.\n- `Há um frigorífico na cozinha.` — There is a fridge in the kitchen.\n- `A máquina de lavar está na casa de banho.` — The washing machine is in the bathroom.\n- `É um apartamento T2.` — It is a two-bedroom flat.\n- `O apartamento está mobilado.` — The flat is furnished.\n\nWatch out:\n- In European Portuguese, say `casa de banho`, not Brazilian `banheiro`.\n- In ads, `mobilado` matches `apartamento` because both are masculine. With a feminine noun like `casa`, you would say `mobilada`.",
+  "keyItems": [
+    {
+      "target": "o apartamento",
+      "support": "flat, apartment"
+    },
+    {
+      "target": "o T1",
+      "support": "one-bedroom flat",
+      "note": "ad code"
+    },
+    {
+      "target": "o T2",
+      "support": "two-bedroom flat",
+      "note": "ad code"
+    },
+    {
+      "target": "mobilado",
+      "support": "furnished",
+      "note": "masculine form, used with «apartamento»"
+    },
+    {
+      "target": "a sala",
+      "support": "living room"
+    },
+    {
+      "target": "o quarto",
+      "support": "bedroom"
+    },
+    {
+      "target": "a cozinha",
+      "support": "kitchen"
+    },
+    {
+      "target": "a casa de banho",
+      "support": "bathroom",
+      "note": "European Portuguese"
+    },
+    {
+      "target": "a cama",
+      "support": "bed"
+    },
+    {
+      "target": "o sofá",
+      "support": "sofa"
+    },
+    {
+      "target": "o frigorífico",
+      "support": "fridge"
+    },
+    {
+      "target": "a máquina de lavar",
+      "support": "washing machine"
+    },
+    {
+      "target": "o anúncio",
+      "support": "ad, listing"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m4-housing-01",
+      "type": "match_pairs",
+      "topicId": "m4-housing",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match the housing words with their meanings.",
+      "explanation": "These are core housing words. Notice that «casa de banho» is the usual European Portuguese expression for bathroom.",
+      "pairs": [
+        {
+          "target": "a sala",
+          "support": "living room"
+        },
+        {
+          "target": "o quarto",
+          "support": "bedroom"
+        },
+        {
+          "target": "a cozinha",
+          "support": "kitchen"
+        },
+        {
+          "target": "a casa de banho",
+          "support": "bathroom"
+        },
+        {
+          "target": "o sofá",
+          "support": "sofa"
+        }
+      ]
+    },
+    {
+      "id": "m4-housing-02",
+      "type": "translate_word",
+      "topicId": "m4-housing",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Cozinha» means kitchen. It is a feminine noun: «a cozinha».",
+      "direction": "toTarget",
+      "sentence": "The **kitchen** is small.",
+      "word": "kitchen",
+      "answer": "cozinha",
+      "options": ["cozinha", "sala", "quarto", "casa de banho"]
+    },
+    {
+      "id": "m4-housing-03",
+      "type": "translate_word",
+      "topicId": "m4-housing",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Cama» means bed. It is feminine: «a cama».",
+      "direction": "toTarget",
+      "sentence": "There is a **bed** in the bedroom.",
+      "word": "bed",
+      "answer": "cama",
+      "options": ["cama", "mesa", "janela", "cadeira"]
+    },
+    {
+      "id": "m4-housing-04",
+      "type": "fill_gaps",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: In the kitchen, there is a fridge and a table.",
+      "explanation": "The articles show gender: «um frigorífico» (masculine), «uma mesa» (feminine). «Há» means «there is».",
+      "template": "Na cozinha, há um ___ e uma ___.",
+      "gaps": [
+        {
+          "answer": "frigorífico"
+        },
+        {
+          "answer": "mesa"
+        }
+      ],
+      "wordBank": ["frigorífico", "mesa", "sofá", "cama"]
+    },
+    {
+      "id": "m4-housing-05",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The fridge is in the kitchen.",
+      "explanation": "Use «estar» for location. «Em + a cozinha» becomes «na cozinha».",
+      "answer": ["O", "frigorífico", "está", "na", "cozinha."],
+      "distractors": ["no", "quarto", "estão"]
+    },
+    {
+      "id": "m4-housing-06",
+      "type": "question_for_answer",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «A cama está no quarto.» Ask where the bed is.",
+      "explanation": "To ask about location, use «Onde» with «estar». The noun keeps its article: «a cama».",
+      "givenAnswer": "A cama está no quarto.",
+      "answer": ["Onde", "está", "a", "cama?"],
+      "distractors": ["Como", "é", "o", "quarto?"],
+      "acceptedAnswers": ["Onde é que está a cama?", "Onde fica a cama?", "Onde é que fica a cama?"]
+    },
+    {
+      "id": "m4-housing-07",
+      "type": "find_error",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Sofá» is masculine, so the article is «o». Use «a» with feminine nouns such as «a cama».",
+      "sentence": ["A", "sofá", "está", "na", "sala."],
+      "wrongIndex": 0,
+      "correction": "O",
+      "options": ["O", "Os", "As"]
+    },
+    {
+      "id": "m4-housing-08",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: This is the bathroom.",
+      "explanation": "«Casa de banho» is feminine, so use «esta». This is the usual European Portuguese word for bathroom.",
+      "answer": ["Esta", "é", "a", "casa", "de", "banho."],
+      "distractors": ["Este", "o", "quarto"]
+    },
+    {
+      "id": "m4-housing-09",
+      "type": "fill_gaps",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the short rental ad: a furnished two-bedroom flat, with a kitchen and a bathroom.",
+      "explanation": "In ads, «T2» means a flat with two bedrooms. «Mobilado» means furnished and matches the masculine noun «apartamento».",
+      "template": "Apartamento ___, ___, com ___ e casa de banho.",
+      "gaps": [
+        {
+          "answer": "T2"
+        },
+        {
+          "answer": "mobilado"
+        },
+        {
+          "answer": "cozinha"
+        }
+      ],
+      "wordBank": ["T2", "mobilado", "cozinha", "T1", "mobilada", "quarto"]
+    },
+    {
+      "id": "m4-housing-10",
+      "type": "question_for_answer",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A classmate answers: «É um apartamento T2 mobilado.» Ask what the flat is like.",
+      "explanation": "Use «Como é ...?» to ask for a simple description. You are asking what the flat is like, not where it is.",
+      "givenAnswer": "É um apartamento T2 mobilado.",
+      "answer": ["Como", "é", "o", "apartamento?"],
+      "distractors": ["Onde", "fica", "este", "T1?"],
+      "acceptedAnswers": [
+        "Como é que é o apartamento?",
+        "Como é o teu apartamento?",
+        "Como é que é o teu apartamento?"
+      ]
+    },
+    {
+      "id": "m4-housing-11",
+      "type": "translate_word",
+      "topicId": "m4-housing",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In a rental ad, «mobilado» means there is furniture inside. With «apartamento», use the masculine form.",
+      "direction": "toTarget",
+      "sentence": "The flat is **furnished**.",
+      "word": "furnished",
+      "answer": "mobilado",
+      "options": ["mobilado", "vazio", "pequeno", "aberto"]
+    },
+    {
+      "id": "m4-housing-12",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The washing machine is in the bathroom.",
+      "explanation": "«Máquina de lavar» is a fixed chunk. For location, use «na casa de banho».",
+      "answer": ["A", "máquina", "de", "lavar", "está", "na", "casa", "de", "banho."],
+      "distractors": ["no", "quarto", "estão"]
+    },
+    {
+      "id": "m4-housing-13",
+      "type": "find_error",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Frigorífico» is a masculine noun. The ending «-o» matches «o frigorífico».",
+      "sentence": ["O", "frigorífica", "está", "na", "cozinha."],
+      "wrongIndex": 1,
+      "correction": "frigorífico",
+      "options": ["frigorífico", "frigoríficos", "frigoríficas"]
+    },
+    {
+      "id": "m4-housing-14",
+      "type": "about_me",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about your own home.",
+      "explanation": "Answer with «sim» or «não» and then add one short detail about your home. You can name rooms with «há».",
+      "question": "Na tua casa, há sala e cozinha?",
+      "sampleAnswer": "Sim, há uma sala e uma cozinha.",
+      "hints": ["não", "quarto", "casa de banho", "sofá", "frigorífico"]
+    },
+    {
+      "id": "m4-housing-15",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The apartment has two bedrooms and a kitchen.",
+      "explanation": "Use «ter» for what a home has. «Dois quartos» means two bedrooms.",
+      "answer": ["O", "apartamento", "tem", "dois", "quartos", "e", "uma", "cozinha."],
+      "distractors": ["um", "sala", "têm"]
+    },
+    {
+      "id": "m4-housing-16",
+      "type": "fill_gaps",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: In the bedroom, the bed is next to the table.",
+      "explanation": "Use furniture words that fit the room. «Ao lado de» tells you where one thing is in relation to another.",
+      "template": "No quarto, a ___ está ao lado da ___.",
+      "gaps": [
+        {
+          "answer": "cama"
+        },
+        {
+          "answer": "mesa"
+        }
+      ],
+      "wordBank": ["cama", "mesa", "sofá", "frigorífico"]
+    },
+    {
+      "id": "m4-housing-17",
+      "type": "question_for_answer",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Na cozinha, há um frigorífico e uma máquina de lavar.» Ask what there is in the kitchen.",
+      "explanation": "Use «O que há ...?» to ask what is in a place. «Há» is the natural way to say that something is there.",
+      "givenAnswer": "Na cozinha, há um frigorífico e uma máquina de lavar.",
+      "answer": ["O", "que", "há", "na", "cozinha?"],
+      "distractors": ["Onde", "ficam", "os", "quartos?"],
+      "acceptedAnswers": ["O que é que há na cozinha?"]
+    },
+    {
+      "id": "m4-housing-18",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe the ad: a furnished one-bedroom flat.",
+      "explanation": "In ads, «T1» means one bedroom. «Mobilado» agrees with the masculine noun «apartamento».",
+      "answer": ["É", "um", "apartamento", "T1", "mobilado."],
+      "distractors": ["uma", "moradia", "mobilada"],
+      "acceptedAnswers": ["É um T1 mobilado."]
+    },
+    {
+      "id": "m4-housing-19",
+      "type": "find_error",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Cozinha» is feminine, so the demonstrative must also be feminine: «esta».",
+      "sentence": ["Este", "é", "a", "cozinha."],
+      "wrongIndex": 0,
+      "correction": "Esta",
+      "options": ["Esta", "Estes", "Estas"]
+    },
+    {
+      "id": "m4-housing-20",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: In the living room, there is a sofa and a table.",
+      "explanation": "Use «há» for what exists in a room. Keep the articles with the nouns: «um sofá», «uma mesa».",
+      "answer": ["Há", "um", "sofá", "e", "uma", "mesa", "na", "sala."],
+      "distractors": ["no", "frigorífico", "estão"],
+      "acceptedAnswers": ["Na sala, há um sofá e uma mesa.", "Na sala há um sofá e uma mesa."]
+    },
+    {
+      "id": "m4-housing-21",
+      "type": "translate_word",
+      "topicId": "m4-housing",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Frigorífico» is the European Portuguese word for fridge (Brazil says «geladeira»). It is masculine: «o frigorífico».",
+      "direction": "toTarget",
+      "sentence": "The **fridge** is new.",
+      "word": "fridge",
+      "answer": "frigorífico",
+      "options": ["frigorífico", "fogão", "sofá", "armário"]
+    },
+    {
+      "id": "m4-housing-22",
+      "type": "translate_word",
+      "topicId": "m4-housing",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In Portugal, the usual word is «casa de banho». It is three words, not one.",
+      "direction": "toTarget",
+      "sentence": "The **bathroom** is next to the bedroom.",
+      "word": "bathroom",
+      "answer": "casa de banho",
+      "options": ["casa de banho", "cozinha", "sala", "quarto"]
+    },
+    {
+      "id": "m4-housing-23",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: It is a furnished two-bedroom flat.",
+      "explanation": "In ads, «T2» means two bedrooms. You can say it without repeating «apartamento».",
+      "answer": ["É", "um", "T2", "mobilado."],
+      "distractors": ["uma", "T1", "mobilada"],
+      "acceptedAnswers": ["É um apartamento T2 mobilado."]
+    },
+    {
+      "id": "m4-housing-24",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: In this flat, there is a living room and two bedrooms.",
+      "explanation": "Use «há» to say what exists. «Neste» is «em + este».",
+      "answer": ["Há", "uma", "sala", "e", "dois", "quartos", "neste", "apartamento."],
+      "distractors": ["tem", "um", "cozinha"],
+      "acceptedAnswers": [
+        "Neste apartamento há uma sala e dois quartos.",
+        "Neste apartamento, há uma sala e dois quartos."
+      ]
+    },
+    {
+      "id": "m4-housing-25",
+      "type": "fill_gaps",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with the correct articles.",
+      "explanation": "Room words have gender: «a sala» but «o quarto». The article must match the noun.",
+      "template": "Esta é ___ sala e este é ___ quarto.",
+      "gaps": [
+        {
+          "answer": "a"
+        },
+        {
+          "answer": "o"
+        }
+      ],
+      "wordBank": ["a", "o", "as", "os"]
+    },
+    {
+      "id": "m4-housing-26",
+      "type": "fill_gaps",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete: In the T2 there are two bedrooms and a living room.",
+      "explanation": "A «T2» has two bedrooms. Use the plural noun «quartos» and the singular «sala».",
+      "template": "No T2 há dois ___ e uma ___.",
+      "gaps": [
+        {
+          "answer": "quartos"
+        },
+        {
+          "answer": "sala"
+        }
+      ],
+      "wordBank": ["quartos", "sala", "quarto", "cozinha"]
+    },
+    {
+      "id": "m4-housing-27",
+      "type": "question_for_answer",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The person answers: «É um T2.» Ask whether the flat is a T1 or a T2.",
+      "explanation": "In ads, «T1» and «T2» are quick codes. A short question is «É T1 ou T2?».",
+      "givenAnswer": "É um T2.",
+      "answer": ["É", "T1", "ou", "T2?"],
+      "distractors": ["um", "tem", "quartos?"],
+      "acceptedAnswers": ["O apartamento é T1 ou T2?", "É um T1 ou um T2?"]
+    },
+    {
+      "id": "m4-housing-28",
+      "type": "question_for_answer",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The answer is: «Na cozinha.» Ask where the fridge is.",
+      "explanation": "To ask about location, use «Onde está...?» or «Onde é que está...?».",
+      "givenAnswer": "Na cozinha.",
+      "answer": ["Onde", "é", "que", "está", "o", "frigorífico?"],
+      "distractors": ["na", "tem", "cozinha?"],
+      "acceptedAnswers": [
+        "Onde está o frigorífico?",
+        "Onde fica o frigorífico?",
+        "Onde é que fica o frigorífico?"
+      ]
+    },
+    {
+      "id": "m4-housing-29",
+      "type": "find_error",
+      "topicId": "m4-housing",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Apartamento» is masculine, so it takes «um». «Uma apartamento» is not correct.",
+      "sentence": ["É", "uma", "apartamento", "T2."],
+      "wrongIndex": 1,
+      "correction": "um",
+      "options": ["um", "uns", "umas"]
+    },
+    {
+      "id": "m4-housing-30",
+      "type": "find_error",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In European Portuguese, the normal word is «casa de banho». «Banheiro» is Brazilian Portuguese.",
+      "sentence": ["A", "casa", "de", "banheiro", "é", "grande."],
+      "wrongIndex": 3,
+      "correction": "banho",
+      "options": ["banho", "cozinha", "quarto"]
+    },
+    {
+      "id": "m4-housing-31",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The washing machine is in this flat.",
+      "explanation": "Use «neste» for «in this». It comes from «em + este».",
+      "answer": ["A", "máquina", "de", "lavar", "está", "neste", "apartamento."],
+      "distractors": ["na", "mobilado", "essa"]
+    },
+    {
+      "id": "m4-housing-32",
+      "type": "fill_gaps",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete with the right demonstratives.",
+      "explanation": "Use «este» with the masculine noun «sofá» and «esta» with the feminine noun «cama».",
+      "template": "___ é o sofá e ___ é a cama.",
+      "gaps": [
+        {
+          "answer": "Este",
+          "accepted": ["este"]
+        },
+        {
+          "answer": "esta",
+          "accepted": ["Esta"]
+        }
+      ],
+      "wordBank": ["Este", "esta", "estes", "estas"]
+    },
+    {
+      "id": "m4-housing-33",
+      "type": "about_me",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «há» to say how many rooms there are. A short answer with the number is fine.",
+      "question": "Quantos quartos há na tua casa?",
+      "sampleAnswer": "Há dois quartos.",
+      "hints": ["um", "quarto", "três", "na", "minha", "casa"]
+    },
+    {
+      "id": "m4-housing-34",
+      "type": "question_for_answer",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The answer is: «Tem um quarto e uma casa de banho.» Ask what the T1 has.",
+      "explanation": "Use «O que é que... tem?» to ask what a flat or a T1 has.",
+      "givenAnswer": "Tem um quarto e uma casa de banho.",
+      "answer": ["O", "que", "é", "que", "o", "T1", "tem?"],
+      "distractors": ["há", "dois", "quartos?"],
+      "acceptedAnswers": ["O que tem o T1?"]
+    },
+    {
+      "id": "m4-housing-35",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: There is a sofa in this flat.",
+      "explanation": "Use «há» for what exists. «Neste» means «in this».",
+      "answer": ["Há", "um", "sofá", "neste", "apartamento."],
+      "distractors": ["na", "uma", "cozinha"],
+      "acceptedAnswers": ["Neste apartamento há um sofá.", "Neste apartamento, há um sofá."]
+    },
+    {
+      "id": "m4-housing-36",
+      "type": "fill_gaps",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete: the ad says it is a two-bedroom flat and that it is furnished.",
+      "explanation": "The code tells you the number of bedrooms, and «mobilado» says the flat has furniture.",
+      "template": "O anúncio diz que é um ___ e que está ___.",
+      "gaps": [
+        {
+          "answer": "T2"
+        },
+        {
+          "answer": "mobilado"
+        }
+      ],
+      "wordBank": ["T2", "mobilado", "T1", "mobilada"]
+    },
+    {
+      "id": "m4-housing-37",
+      "type": "about_me",
+      "topicId": "m4-housing",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "To describe a room, you can use «é» with a simple adjective like «grande» or «pequeno».",
+      "question": "O teu quarto é grande ou pequeno?",
+      "sampleAnswer": "É pequeno.",
+      "hints": ["grande.", "muito", "o", "meu", "tem", "janela"]
+    },
+    {
+      "id": "m4-housing-38",
+      "type": "question_for_answer",
+      "topicId": "m4-housing",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You point at a room on the flat plan. The answer is: «É a cozinha.» Ask which room this is.",
+      "explanation": "«Divisão» is the word for a room of a house in general. «Que divisão é esta?» asks which room you are pointing at.",
+      "givenAnswer": "É a cozinha.",
+      "answer": ["Que", "divisão", "é", "esta?"],
+      "distractors": ["isto", "o", "quarto?"],
+      "acceptedAnswers": ["Qual é esta divisão?"]
+    },
+    {
+      "id": "m4-housing-39",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say about your flat: I have a bedroom and a bathroom.",
+      "explanation": "European Portuguese often drops «eu». «Tenho» is enough in a simple sentence.",
+      "answer": ["Tenho", "um", "quarto", "e", "uma", "casa", "de", "banho."],
+      "distractors": ["há", "duas", "cozinha"],
+      "acceptedAnswers": ["Eu tenho um quarto e uma casa de banho."]
+    },
+    {
+      "id": "m4-housing-40",
+      "type": "build_phrase",
+      "topicId": "m4-housing",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: This ad is for a furnished flat.",
+      "explanation": "Use «anúncio» for an ad or listing. «De» links the ad to the flat.",
+      "answer": ["Este", "anúncio", "é", "de", "um", "apartamento", "mobilado."],
+      "distractors": ["da", "uma", "T2"],
+      "acceptedAnswers": ["É um anúncio de um apartamento mobilado."]
+    }
+  ]
+}

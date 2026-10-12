@@ -1,0 +1,692 @@
+{
+  "id": "m4-comparatives-prepositions",
+  "moduleId": "m4",
+  "title": "Comparatives and prepositions of movement",
+  "kind": "grammar",
+  "context": "This topic joins two very useful ideas: comparing things and talking about movement. For comparisons, use `mais ... do que` (more ... than) and `menos ... do que` (less ... than). Four common adjectives have special forms: `bom → melhor`, `mau → pior`, `grande → maior`, `pequeno → menor`. For movement, `a` is for a visit or a short trip, `para` is for a destination where you stay longer or for going home (`para casa`), and `por` is for the route or the place you pass through.\n\nContractions are preposition + article: `a + o = ao`, `a + a = à`, `por + o = pelo`, `por + a = pela`, `em + um = num`, `em + uma = numa`.\n\n- `O comboio é mais rápido do que o autocarro.` — The train is faster than the bus.\n- `A minha casa é maior do que a tua.` — My house is bigger than yours.\n- `Vou a Braga amanhã.` — I’m going to Braga tomorrow (a visit).\n- `Vamos para casa agora.` — We’re going home now.\n- `Passamos pelo centro.` — We go through the centre.\n- `Vens comigo?` — Are you coming with me?\n- `Moro num apartamento pequeno.` — I live in a small flat.\n\n**Watch out:**\n- Never say `mais bom`: the comparative of `bom` is `melhor`. In Portugal, `mais pequeno` is as common as `menor`.\n- After `com`, use `comigo / contigo / connosco`, not `com eu / com tu / com nós`. For `vocês`, say `convosco` (or `com vocês`).",
+  "keyItems": [
+    {
+      "target": "mais ... do que",
+      "support": "more ... than"
+    },
+    {
+      "target": "menos ... do que",
+      "support": "less ... than"
+    },
+    {
+      "target": "melhor",
+      "support": "better",
+      "note": "irregular comparative"
+    },
+    {
+      "target": "pior",
+      "support": "worse",
+      "note": "irregular comparative"
+    },
+    {
+      "target": "maior",
+      "support": "bigger",
+      "note": "irregular comparative"
+    },
+    {
+      "target": "menor",
+      "support": "smaller",
+      "note": "irregular comparative; «mais pequeno» is also common in Portugal"
+    },
+    {
+      "target": "ir a",
+      "support": "go to",
+      "note": "a visit or short trip"
+    },
+    {
+      "target": "ir para",
+      "support": "go to / head for",
+      "note": "destination where you stay; «para casa»"
+    },
+    {
+      "target": "passar por",
+      "support": "go through / pass by"
+    },
+    {
+      "target": "comigo",
+      "support": "with me"
+    },
+    {
+      "target": "contigo",
+      "support": "with you"
+    },
+    {
+      "target": "connosco",
+      "support": "with us"
+    },
+    {
+      "target": "convosco",
+      "support": "with you all"
+    },
+    {
+      "target": "ao / à",
+      "support": "to the",
+      "note": "`a + o / a + a`"
+    },
+    {
+      "target": "pelo / pela",
+      "support": "through the / by the",
+      "note": "`por + o / a`"
+    },
+    {
+      "target": "num / numa",
+      "support": "in a",
+      "note": "`em + um / uma`"
+    },
+    {
+      "target": "Por onde…?",
+      "support": "Which way…? / Through where…?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m4-comparatives-prepositions-01",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I'm going to Porto this weekend.",
+      "explanation": "Porto takes the article «o». With «para» you say «para o Porto»; with «a» it contracts: «ao Porto» (a + o). Both are correct here.",
+      "answer": ["Vou", "para", "o", "Porto", "este", "fim", "de", "semana."],
+      "distractors": ["a", "pela", "comigo"],
+      "acceptedAnswers": [
+        "Eu vou para o Porto este fim de semana.",
+        "Vou ao Porto este fim de semana.",
+        "Eu vou ao Porto este fim de semana."
+      ]
+    },
+    {
+      "id": "m4-comparatives-prepositions-02",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The bus is less comfortable than the train.",
+      "explanation": "To compare with less, use `menos ... do que`.",
+      "answer": ["O", "autocarro", "é", "menos", "confortável", "do", "que", "o", "comboio."],
+      "distractors": ["mais", "para", "pior"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-03",
+      "type": "fill_gaps",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: Tomorrow I’m going to Braga (just for the day), I pass through Famalicão and then I go back home.",
+      "explanation": "«Por» marks the place you pass through. «A» suits a short visit (Braga for the day), and «para casa» is the usual way to say you are going home.",
+      "template": "Amanhã, vou ___ Braga, passo ___ Famalicão e depois volto ___ casa.",
+      "gaps": [
+        {
+          "answer": "a",
+          "accepted": ["para"]
+        },
+        {
+          "answer": "por"
+        },
+        {
+          "answer": "para",
+          "accepted": ["a"]
+        }
+      ],
+      "wordBank": ["a", "para", "por", "com", "de", "em"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-04",
+      "type": "question_for_answer",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Vou para casa.» Ask him (informal) where he is going.",
+      "explanation": "A destination can be asked with `para onde`. In European Portuguese, `é que` is also very common.",
+      "givenAnswer": "Vou para casa.",
+      "answer": ["Para", "onde", "vais?"],
+      "distractors": ["Quando", "moras?", "vem?"],
+      "acceptedAnswers": [
+        "Para onde é que vais?",
+        "Para onde é que tu vais?",
+        "Onde vais?",
+        "Onde é que vais?",
+        "Onde é que tu vais?"
+      ]
+    },
+    {
+      "id": "m4-comparatives-prepositions-05",
+      "type": "find_error",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "`Por + o` contracts to `pelo`. Because it is `o parque`, `pela` is wrong here.",
+      "sentence": ["Passo", "pela", "parque", "todos", "os", "dias."],
+      "wrongIndex": 1,
+      "correction": "pelo",
+      "options": ["pelo", "por", "para"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-06",
+      "type": "translate_word",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "With `com`, Portuguese uses a special pronoun: `comigo`, not `com eu`.",
+      "direction": "toTarget",
+      "sentence": "Are you coming **with me** tomorrow?",
+      "word": "with me",
+      "answer": "comigo",
+      "options": ["comigo", "contigo", "connosco", "convosco"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-07",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: My house is bigger than yours.",
+      "explanation": "`Maior` is the irregular comparative of `grande`.",
+      "answer": ["A", "minha", "casa", "é", "maior", "do", "que", "a", "tua."],
+      "distractors": ["menor", "mais", "para"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-08",
+      "type": "fill_gaps",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: For me, the train is better than the bus, but the taxi is worse than the metro for the environment.",
+      "explanation": "`Melhor` and `pior` already express comparison, so you do not add `mais` or `menos` before them here.",
+      "template": "O comboio é ___ do que o autocarro para mim, mas o táxi é ___ do que o metro para o ambiente.",
+      "gaps": [
+        {
+          "answer": "melhor"
+        },
+        {
+          "answer": "pior"
+        }
+      ],
+      "wordBank": ["melhor", "pior", "maior", "menor"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-09",
+      "type": "question_for_answer",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Passo pelo banco.» Ask him (informal) which way he goes.",
+      "explanation": "Use `por onde` to ask about the route or the place someone goes through.",
+      "givenAnswer": "Passo pelo banco.",
+      "answer": ["Por", "onde", "passas?"],
+      "distractors": ["Para", "vais?", "moras?"],
+      "acceptedAnswers": ["Por onde é que passas?", "Por onde é que tu passas?"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-10",
+      "type": "find_error",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«O Pedro e eu» means «nós», so «with us» is «connosco». «Convosco» means «with you» (plural).",
+      "sentence": ["O", "Pedro", "e", "eu", "vamos", "ao", "cinema.", "Vens", "convosco?"],
+      "wrongIndex": 8,
+      "correction": "connosco?",
+      "options": ["connosco?", "contigo?", "consigo?"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-11",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: Do you want to come with us?",
+      "explanation": "With `com`, `nós` changes to `connosco`.",
+      "answer": ["Queres", "vir", "connosco?"],
+      "distractors": ["convosco", "quer", "vão?"],
+      "acceptedAnswers": ["Tu queres vir connosco?"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-12",
+      "type": "translate_word",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Because it is «o parque», «por + o» becomes «pelo».",
+      "direction": "toTarget",
+      "sentence": "We walk **through the** park every day.",
+      "word": "through the",
+      "answer": "pelo",
+      "options": ["pelo", "pela", "por", "para"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-13",
+      "type": "fill_gaps",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps with «em + um» or «em + uma» (in a …).",
+      "explanation": "`Em + um` contracts to `num`, and `em + uma` contracts to `numa`.",
+      "template": "A Mariana mora ___ apartamento pequeno, mas o irmão mora ___ casa maior.",
+      "gaps": [
+        {
+          "answer": "num"
+        },
+        {
+          "answer": "numa"
+        }
+      ],
+      "wordBank": ["num", "numa", "pelo", "pela", "com"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-14",
+      "type": "question_for_answer",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Someone says: «O João vai para Faro.» Ask where João is going.",
+      "explanation": "Use `para onde` to ask about a destination.",
+      "givenAnswer": "O João vai para Faro.",
+      "answer": ["Para", "onde", "vai", "o", "João?"],
+      "distractors": ["Quando", "chega", "a", "Rita?"],
+      "acceptedAnswers": [
+        "Para onde é que o João vai?",
+        "Para onde é que vai o João?",
+        "Onde vai o João?"
+      ]
+    },
+    {
+      "id": "m4-comparatives-prepositions-15",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The blue suitcase is smaller than the black one.",
+      "explanation": "`Menor` is the irregular comparative of `pequeno / pequena`.",
+      "answer": ["A", "mala", "azul", "é", "menor", "do", "que", "a", "preta."],
+      "distractors": ["maior", "pela", "mais"],
+      "acceptedAnswers": ["A mala azul é mais pequena do que a preta."]
+    },
+    {
+      "id": "m4-comparatives-prepositions-16",
+      "type": "find_error",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Bom» has an irregular comparative: «melhor» (better). Never say «mais bom».",
+      "sentence": ["O", "comboio", "é", "bom", "do", "que", "o", "autocarro."],
+      "wrongIndex": 3,
+      "correction": "melhor",
+      "options": ["melhor", "bem", "boa"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-17",
+      "type": "about_me",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "You can say how you go somewhere with `de` for transport and `a pé` for walking.",
+      "question": "Vais para a escola a pé ou de autocarro?",
+      "sampleAnswer": "Vou de autocarro.",
+      "hints": ["a", "pé", "para", "comboio", "metro", "hoje"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-18",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We go through the centre and go to the station.",
+      "explanation": "Use `pelo` for the route through a masculine place (`o centro`) and `para` for the destination.",
+      "answer": ["Passamos", "pelo", "centro", "e", "vamos", "para", "a", "estação."],
+      "distractors": ["pela", "vem", "contigo"],
+      "acceptedAnswers": [
+        "Nós passamos pelo centro e vamos para a estação.",
+        "Passamos pelo centro e vamos à estação.",
+        "Nós passamos pelo centro e vamos à estação."
+      ]
+    },
+    {
+      "id": "m4-comparatives-prepositions-19",
+      "type": "fill_gaps",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: Are you going to the cinema today? Not me; I’m going home.",
+      "explanation": "«Ao» is «a + o» (ir a + o cinema). «Para casa» is the usual way to say you are going home, with no article before «casa».",
+      "template": "Tu vais ___ cinema hoje? Eu não; vou ___ casa.",
+      "gaps": [
+        {
+          "answer": "ao"
+        },
+        {
+          "answer": "para"
+        }
+      ],
+      "wordBank": ["ao", "para", "pelo", "no", "de"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-20",
+      "type": "question_for_answer",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friends answer: «Vamos com o Pedro.» Ask them (plural) who they are going with.",
+      "explanation": "Use «Com quem...?» to ask who someone goes with. With «vocês», the verb is «vão».",
+      "givenAnswer": "Vamos com o Pedro.",
+      "answer": ["Com", "quem", "vão?"],
+      "distractors": ["Para", "onde", "vais?"],
+      "acceptedAnswers": ["Com quem é que vão?", "Com quem é que vocês vão?", "Com quem vão vocês?"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-21",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the room is smaller than Ana's room.",
+      "explanation": "Portuguese often uses «do que» after a comparison. «Menor» is a common one-word comparative for size.",
+      "answer": ["O", "quarto", "é", "menor", "do", "que", "o", "quarto", "da", "Ana."],
+      "distractors": ["maior", "mais", "na"],
+      "acceptedAnswers": ["O quarto é mais pequeno do que o quarto da Ana."]
+    },
+    {
+      "id": "m4-comparatives-prepositions-22",
+      "type": "fill_gaps",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill the three gaps with the right movement words.",
+      "explanation": "Here «para a» is a natural destination form, «pela» shows the route, and «num» is the contraction of «em + um».",
+      "template": "Vamos ___ praia cedo, passamos ___ ponte e almoçamos ___ restaurante simples.",
+      "gaps": [
+        {
+          "answer": "para a",
+          "accepted": ["à"]
+        },
+        {
+          "answer": "pela"
+        },
+        {
+          "answer": "num"
+        }
+      ],
+      "wordBank": ["para a", "pela", "num", "a", "pelo", "numa"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-23",
+      "type": "question_for_answer",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Vou com a Sofia.» Ask her (informal) who she is going to the cinema with.",
+      "explanation": "To ask about a person after «com», use «Com quem...?». The destination stays the same: «ao cinema».",
+      "givenAnswer": "Vou com a Sofia.",
+      "answer": ["Com", "quem", "vais", "ao", "cinema?"],
+      "distractors": ["onde", "vão", "pela", "praia"],
+      "acceptedAnswers": ["Com quem é que vais ao cinema?"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-24",
+      "type": "translate_word",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For basic comparisons, Portuguese normally uses the irregular form «melhor».",
+      "direction": "toTarget",
+      "sentence": "This café is **better** than the other one.",
+      "word": "better",
+      "answer": "melhor",
+      "options": ["melhor", "pior", "maior", "menor"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-25",
+      "type": "find_error",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Rua» is feminine, so with «por» you need the contraction «pela».",
+      "sentence": ["O", "autocarro", "passa", "pelo", "rua", "principal."],
+      "wrongIndex": 3,
+      "correction": "pela",
+      "options": ["pela", "para", "pelos"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-26",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the metro is faster than walking.",
+      "explanation": "Regular comparisons use «mais ... do que». For transport versus walking, «ir a pé» is a natural phrase.",
+      "answer": ["O", "metro", "é", "mais", "rápido", "do", "que", "ir", "a", "pé."],
+      "distractors": ["menos", "melhor", "para"],
+      "acceptedAnswers": ["O metro é mais rápido do que andar a pé."]
+    },
+    {
+      "id": "m4-comparatives-prepositions-27",
+      "type": "fill_gaps",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps with «em + um» or «em + uma» (in a …).",
+      "explanation": "«Num» is «em + um» and «numa» is «em + uma». Use them before singular nouns with an indefinite article.",
+      "template": "O Rui dorme ___ quarto pequeno e a Joana trabalha ___ loja grande.",
+      "gaps": [
+        {
+          "answer": "num"
+        },
+        {
+          "answer": "numa"
+        }
+      ],
+      "wordBank": ["num", "numa", "pelo", "pela"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-28",
+      "type": "question_for_answer",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friends answer: «Passamos pela ponte.» Ask them (plural) which route they take to the island.",
+      "explanation": "To ask about the route, use «Por onde...?». «Vão» is the «vocês» form, and the destination takes «para».",
+      "givenAnswer": "Passamos pela ponte.",
+      "answer": ["Por", "onde", "vão", "para", "a", "ilha?"],
+      "distractors": ["quando", "vamos", "pelo", "centro"],
+      "acceptedAnswers": [
+        "Por onde é que vão para a ilha?",
+        "Por onde vão até à ilha?",
+        "Por onde é que vão até à ilha?",
+        "Por onde é que vocês vão para a ilha?"
+      ]
+    },
+    {
+      "id": "m4-comparatives-prepositions-29",
+      "type": "about_me",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "After «com», Portuguese uses special forms like «comigo» and «contigo». You can also answer with a noun phrase like «com a minha mãe».",
+      "question": "Com quem vais para a escola?",
+      "sampleAnswer": "Vou com a minha mãe.",
+      "hints": ["contigo", "connosco", "sozinho", "de carro", "a pé"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-30",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that Ana is going to Sintra with us.",
+      "explanation": "With many towns and cities, «ir a» is very common, and «with us» is the special form «connosco».",
+      "answer": ["A", "Ana", "vai", "a", "Sintra", "connosco."],
+      "distractors": ["para", "comigo", "convosco"],
+      "acceptedAnswers": [
+        "Ana vai a Sintra connosco.",
+        "A Ana vai para Sintra connosco.",
+        "Ana vai para Sintra connosco."
+      ]
+    },
+    {
+      "id": "m4-comparatives-prepositions-31",
+      "type": "fill_gaps",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: My room is bigger than yours, but your desk is better than mine.",
+      "explanation": "Some common adjectives use one-word comparatives. Here the usual choices are «maior» for size and «melhor» for quality.",
+      "template": "O meu quarto é ___ do que o teu, mas a tua secretária é ___ do que a minha.",
+      "gaps": [
+        {
+          "answer": "maior"
+        },
+        {
+          "answer": "melhor"
+        }
+      ],
+      "wordBank": ["maior", "melhor", "menor", "pior", "mais"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-32",
+      "type": "question_for_answer",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Vou pelo jardim.» Ask him (informal) which route he takes to go home.",
+      "explanation": "Use «por» to talk about the way through a place, and ask it with «Por onde...?». «Pelo» is «por + o».",
+      "givenAnswer": "Vou pelo jardim.",
+      "answer": ["Por", "onde", "vais", "para", "casa?"],
+      "distractors": ["quando", "vens", "pelo", "centro"],
+      "acceptedAnswers": ["Por onde é que vais para casa?"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-33",
+      "type": "translate_word",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Praça» is feminine, so «por + a» becomes «pela».",
+      "direction": "toTarget",
+      "sentence": "We go **through the** square and then to the market.",
+      "word": "through the",
+      "answer": "pela",
+      "options": ["pela", "pelo", "para", "à"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-34",
+      "type": "find_error",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «mais» and «menos», the standard comparison pattern is «do que».",
+      "sentence": ["O", "teu", "saco", "é", "mais", "leve", "de", "que", "o", "meu."],
+      "wrongIndex": 6,
+      "correction": "do",
+      "options": ["do", "para", "por"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-35",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We are going to the museum through the old street.",
+      "explanation": "Use «para» for the destination and «pela» for the route through a feminine noun: «pela rua».",
+      "answer": ["Vamos", "para", "o", "museu", "pela", "rua", "antiga."],
+      "distractors": ["pelo", "ao", "contigo"],
+      "acceptedAnswers": [
+        "Nós vamos para o museu pela rua antiga.",
+        "Vamos ao museu pela rua antiga.",
+        "Nós vamos ao museu pela rua antiga."
+      ]
+    },
+    {
+      "id": "m4-comparatives-prepositions-36",
+      "type": "fill_gaps",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill the two gaps with the right contractions.",
+      "explanation": "«Num» contracts «em + um». Here «à» is a very common contraction of «a + a» with «ir a».",
+      "template": "Estou ___ café pequeno e depois vou ___ biblioteca.",
+      "gaps": [
+        {
+          "answer": "num"
+        },
+        {
+          "answer": "à",
+          "accepted": ["para a"]
+        }
+      ],
+      "wordBank": ["num", "à", "numa", "ao", "para"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-37",
+      "type": "question_for_answer",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Este caminho é pior do que o outro.» Ask him (informal) which route is worse: this one or the other one.",
+      "explanation": "To choose between two options, ask «Qual é ...?». «Pior» is the usual irregular comparative for something worse.",
+      "givenAnswer": "Este caminho é pior do que o outro.",
+      "answer": ["Qual", "é", "pior,", "este", "caminho", "ou", "o", "outro?"],
+      "distractors": ["onde", "melhor", "pela", "vamos"],
+      "acceptedAnswers": [
+        "Qual é que é pior: este caminho ou o outro?",
+        "Qual é pior: este caminho ou o outro?",
+        "Que caminho é pior?"
+      ]
+    },
+    {
+      "id": "m4-comparatives-prepositions-38",
+      "type": "find_error",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Before a feminine singular noun with an indefinite article, «em + uma» contracts to «numa». «Num» is for masculine nouns.",
+      "sentence": ["Moro", "num", "casa", "antiga."],
+      "wrongIndex": 1,
+      "correction": "numa",
+      "options": ["numa", "nuns", "numas"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-39",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that this exercise is less difficult than the other one.",
+      "explanation": "Use «menos ... do que» to compare a lower degree. The pattern still needs «do que» after the adjective.",
+      "answer": ["Este", "exercício", "é", "menos", "difícil", "do", "que", "o", "outro."],
+      "distractors": ["mais", "melhor", "de"]
+    },
+    {
+      "id": "m4-comparatives-prepositions-40",
+      "type": "build_phrase",
+      "topicId": "m4-comparatives-prepositions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the teachers are going with you all to the museum.",
+      "explanation": "With «vocês», the form after «com» is «convosco». «Ao» is the contraction of «a + o».",
+      "answer": ["Os", "professores", "vão", "convosco", "ao", "museu."],
+      "distractors": ["connosco", "contigo", "para"],
+      "acceptedAnswers": [
+        "Os professores vão ao museu convosco.",
+        "Os professores vão convosco para o museu.",
+        "Os professores vão com vocês ao museu."
+      ]
+    }
+  ]
+}

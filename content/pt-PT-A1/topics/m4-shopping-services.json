@@ -1,0 +1,661 @@
+{
+  "id": "m4-shopping-services",
+  "moduleId": "m4",
+  "title": "Shopping, money and services",
+  "kind": "vocabulary",
+  "context": "Shopping and simple services often need a few fixed patterns: ask the price, name clothes and colours, say your size, and do very basic tasks at the bank or post office. In this topic you will practise useful shop words and short service phrases, plus bigger numbers up to **mil** and simple percentages.\n\n- **Quanto custa o casaco azul?** — How much is the blue coat?\n- **A mala custa doze euros e cinquenta cêntimos.** — The bag costs 12 euros and 50 cents.\n- **Calço o número trinta e nove.** — I wear size 39.\n- **Quero levantar cem euros.** — I want to withdraw 100 euros.\n- **Quero depositar cinquenta euros na conta.** — I want to deposit 50 euros into the account.\n- **Preciso de um selo para esta carta.** — I need a stamp for this letter.\n- **O desconto é de cinquenta por cento.** — The discount is fifty percent.\n\nWatch out:\n- Clothes normally take **o / a / os / as**: **o casaco**, **a saia**, **as botas**.\n- After the number, use **por cento** for percentages. For 1000, say **mil**, not *um mil*.",
+  "keyItems": [
+    {
+      "target": "a camisa",
+      "support": "shirt",
+      "note": "feminine"
+    },
+    {
+      "target": "a saia",
+      "support": "skirt",
+      "note": "feminine"
+    },
+    {
+      "target": "as calças",
+      "support": "trousers",
+      "note": "plural"
+    },
+    {
+      "target": "o casaco",
+      "support": "coat / jacket",
+      "note": "masculine"
+    },
+    {
+      "target": "as botas",
+      "support": "boots",
+      "note": "plural"
+    },
+    {
+      "target": "os sapatos",
+      "support": "shoes",
+      "note": "plural"
+    },
+    {
+      "target": "o tamanho",
+      "support": "size"
+    },
+    {
+      "target": "o número",
+      "support": "shoe size / number"
+    },
+    {
+      "target": "custar",
+      "support": "to cost"
+    },
+    {
+      "target": "o euro",
+      "support": "euro"
+    },
+    {
+      "target": "o cêntimo",
+      "support": "cent"
+    },
+    {
+      "target": "o troco",
+      "support": "change"
+    },
+    {
+      "target": "levantar dinheiro",
+      "support": "to withdraw money"
+    },
+    {
+      "target": "depositar dinheiro",
+      "support": "to deposit money"
+    },
+    {
+      "target": "a conta",
+      "support": "account"
+    },
+    {
+      "target": "o selo",
+      "support": "stamp"
+    },
+    {
+      "target": "o correio",
+      "support": "post office / mail"
+    },
+    {
+      "target": "a encomenda",
+      "support": "parcel"
+    },
+    {
+      "target": "o desconto",
+      "support": "discount"
+    },
+    {
+      "target": "por cento",
+      "support": "percent"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m4-shopping-services-01",
+      "type": "translate_word",
+      "topicId": "m4-shopping-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Camisa» means shirt. The other options are different clothes.",
+      "direction": "toTarget",
+      "sentence": "I need a blue **shirt**.",
+      "word": "shirt",
+      "answer": "camisa",
+      "options": ["camisa", "calças", "saia", "casaco"]
+    },
+    {
+      "id": "m4-shopping-services-02",
+      "type": "translate_word",
+      "topicId": "m4-shopping-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Botas» are boots. «Sapatos» are shoes, but not necessarily boots.",
+      "direction": "toTarget",
+      "sentence": "These **boots** are black.",
+      "word": "boots",
+      "answer": "botas",
+      "options": ["botas", "sapatos", "meias", "luvas"]
+    },
+    {
+      "id": "m4-shopping-services-03",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask in the shop: How much is the coat?",
+      "explanation": "To ask the price of one thing, use «Quanto custa ...?». «Casaco» is masculine, so it takes «o».",
+      "answer": ["Quanto", "custa", "o", "casaco?"],
+      "distractors": ["custam", "a", "camisola"],
+      "acceptedAnswers": ["Quanto é que custa o casaco?"]
+    },
+    {
+      "id": "m4-shopping-services-04",
+      "type": "fill_gaps",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about price and colour.",
+      "explanation": "Use «custar» for price and «ser» for a basic colour description. Here both nouns are singular.",
+      "template": "A saia ___ vinte euros e a camisola ___ azul.",
+      "gaps": [
+        {
+          "answer": "custa"
+        },
+        {
+          "answer": "é"
+        }
+      ],
+      "wordBank": ["custa", "é", "custam", "está"]
+    },
+    {
+      "id": "m4-shopping-services-05",
+      "type": "question_for_answer",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «A carteira custa quinze euros.» Ask how much the wallet costs.",
+      "explanation": "Ask the price with «Quanto custa ...?». Because «carteira» is singular, the verb is «custa».",
+      "givenAnswer": "A carteira custa quinze euros.",
+      "answer": ["Quanto", "custa", "a", "carteira?"],
+      "distractors": ["custam", "as", "moedas"],
+      "acceptedAnswers": ["Quanto é que custa a carteira?"]
+    },
+    {
+      "id": "m4-shopping-services-06",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say your shoe size: 40.",
+      "explanation": "In Portuguese, shoe size is often said with «Calço o número ...». Put the number word after «número».",
+      "answer": ["Calço", "o", "número", "quarenta."],
+      "distractors": ["calças", "numa", "quatro"],
+      "acceptedAnswers": ["Eu calço o número quarenta."]
+    },
+    {
+      "id": "m4-shopping-services-07",
+      "type": "translate_word",
+      "topicId": "m4-shopping-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "At the post office, a «selo» is a stamp. «Morada» means address.",
+      "direction": "toTarget",
+      "sentence": "I need a **stamp** for this letter.",
+      "word": "stamp",
+      "answer": "selo",
+      "options": ["selo", "encomenda", "morada", "troco"]
+    },
+    {
+      "id": "m4-shopping-services-08",
+      "type": "fill_gaps",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the post office, complete the request.",
+      "explanation": "Use «enviar» for sending letters and «selo» for what goes on the envelope. The other options belong to money, not mailing.",
+      "template": "No correio, quero ___ uma carta para Faro e preciso de um ___.",
+      "gaps": [
+        {
+          "answer": "enviar"
+        },
+        {
+          "answer": "selo"
+        }
+      ],
+      "wordBank": ["enviar", "selo", "levantar", "troco"]
+    },
+    {
+      "id": "m4-shopping-services-09",
+      "type": "question_for_answer",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the bank, the customer answers: «Quero levantar cem euros.» What did the clerk ask? (formal: how much the customer wants to withdraw)",
+      "explanation": "With formal singular, the verb is in the 3rd person: «quer». Use «levantar dinheiro» for withdrawing cash.",
+      "givenAnswer": "Quero levantar cem euros.",
+      "answer": ["Quanto", "quer", "levantar?"],
+      "distractors": ["depositar", "precisa", "abrir"],
+      "acceptedAnswers": [
+        "Quanto é que quer levantar?",
+        "Quanto dinheiro quer levantar?",
+        "Quanto é que o senhor quer levantar?",
+        "Quanto é que a senhora quer levantar?"
+      ]
+    },
+    {
+      "id": "m4-shopping-services-10",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say the price: The bag costs 12 euros and 50 cents.",
+      "explanation": "Prices can use «euros» and «cêntimos». With one item, use singular «custa».",
+      "answer": ["A", "mala", "custa", "doze", "euros", "e", "cinquenta", "cêntimos."],
+      "distractors": ["custam", "treze", "moedas"]
+    },
+    {
+      "id": "m4-shopping-services-11",
+      "type": "find_error",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Saia» is feminine, so the demonstrative must also be feminine: «esta saia».",
+      "sentence": ["Este", "saia", "é", "vermelha."],
+      "wrongIndex": 0,
+      "correction": "Esta",
+      "options": ["Esta", "Estas", "Estes"]
+    },
+    {
+      "id": "m4-shopping-services-12",
+      "type": "fill_gaps",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the banking sentence.",
+      "explanation": "At the bank, «levantar dinheiro» means withdraw money and «depositar dinheiro» means put money into an account.",
+      "template": "No banco, quero ___ duzentos euros e ___ cinquenta euros na conta.",
+      "gaps": [
+        {
+          "answer": "levantar"
+        },
+        {
+          "answer": "depositar"
+        }
+      ],
+      "wordBank": ["levantar", "depositar", "enviar", "calçar"]
+    },
+    {
+      "id": "m4-shopping-services-13",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The discount is 50 percent.",
+      "explanation": "Use «por cento» after the number. In Portuguese, 50% is «cinquenta por cento».",
+      "answer": ["O", "desconto", "é", "de", "cinquenta", "por", "cento."],
+      "distractors": ["descontos", "cem", "com"],
+      "acceptedAnswers": ["O desconto é cinquenta por cento."]
+    },
+    {
+      "id": "m4-shopping-services-14",
+      "type": "question_for_answer",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The shop assistant answers: «As botas custam cento e vinte euros.» Ask how much the boots cost.",
+      "explanation": "With plural items, use «custam». «Botas» is plural feminine, so it takes «as».",
+      "givenAnswer": "As botas custam cento e vinte euros.",
+      "answer": ["Quanto", "custam", "as", "botas?"],
+      "distractors": ["custa", "os", "casacos"],
+      "acceptedAnswers": ["Quanto é que custam as botas?"]
+    },
+    {
+      "id": "m4-shopping-services-15",
+      "type": "about_me",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "For clothes sizes, say «Uso o tamanho + letter». «Usar» is a regular -ar verb: «uso».",
+      "question": "Que tamanho usas?",
+      "sampleAnswer": "Uso o tamanho M.",
+      "hints": ["S", "L", "XL", "normalmente", "camisola", "calças"]
+    },
+    {
+      "id": "m4-shopping-services-16",
+      "type": "find_error",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Casaco» is singular, so the verb must also be singular: «custa». Use «custam» only with plural nouns.",
+      "sentence": ["Quanto", "custam", "o", "casaco", "verde?"],
+      "wrongIndex": 1,
+      "correction": "custa",
+      "options": ["custa", "custo", "custas"]
+    },
+    {
+      "id": "m4-shopping-services-17",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the cash desk, say: I need change, please.",
+      "explanation": "Use «troco» for change after paying. «Preciso de ...» is a simple way to ask for what you need.",
+      "answer": ["Preciso", "de", "troco", "por", "favor."],
+      "distractors": ["moedas", "selo", "quero"],
+      "acceptedAnswers": ["Eu preciso de troco por favor."]
+    },
+    {
+      "id": "m4-shopping-services-18",
+      "type": "number_sequence",
+      "topicId": "m4-shopping-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Which number is missing? Write it as a word.",
+      "explanation": "The sequence goes up by 200 each time. After 800 comes 1000, which is «mil».",
+      "sequence": [200, 400, 600, 800, null],
+      "answerWords": ["mil"],
+      "options": ["novecentos", "mil", "setecentos", "oitocentos"]
+    },
+    {
+      "id": "m4-shopping-services-19",
+      "type": "question_for_answer",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «O correio fica na praça.» Ask where the post office is.",
+      "explanation": "Ask for a place with «Onde fica ...?». The version with «é que» is also very common in Portugal.",
+      "givenAnswer": "O correio fica na praça.",
+      "answer": ["Onde", "fica", "o", "correio?"],
+      "distractors": ["Quando", "abre", "banco"],
+      "acceptedAnswers": ["Onde é que fica o correio?"]
+    },
+    {
+      "id": "m4-shopping-services-20",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the post office, say: I want to send this parcel.",
+      "explanation": "Use «Quero + infinitive» for a simple request. «Encomenda» is a parcel, while «carta» is a letter.",
+      "answer": ["Quero", "enviar", "esta", "encomenda."],
+      "distractors": ["carta", "comprar", "esse"],
+      "acceptedAnswers": ["Eu quero enviar esta encomenda."]
+    },
+    {
+      "id": "m4-shopping-services-21",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say the price of the brown trousers: 60 euros.",
+      "explanation": "Clothes normally take an article: «as calças». Because the subject is plural, use «custam», not «custa».",
+      "answer": ["As", "calças", "castanhas", "custam", "sessenta", "euros."],
+      "distractors": ["custa", "saia", "castanha"]
+    },
+    {
+      "id": "m4-shopping-services-22",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell the shop assistant your size: M.",
+      "explanation": "In European Portuguese, possessives before a noun usually take the article: «o meu tamanho». Use «é» with singular «tamanho».",
+      "answer": ["O", "meu", "tamanho", "é", "M."],
+      "distractors": ["número", "são", "meus"]
+    },
+    {
+      "id": "m4-shopping-services-23",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you have 1000 euros in the account.",
+      "explanation": "For 1000, say «mil», not «um mil». «Na conta» is «em + a conta».",
+      "answer": ["Tenho", "mil", "euros", "na", "conta."],
+      "acceptedAnswers": ["Eu tenho mil euros na conta."],
+      "distractors": ["cem", "no", "cêntimos"]
+    },
+    {
+      "id": "m4-shopping-services-24",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the post office, say you want to buy four stamps.",
+      "explanation": "After «quero», use the infinitive: «comprar». «Selos» is the plural of «selo».",
+      "answer": ["Quero", "comprar", "quatro", "selos."],
+      "acceptedAnswers": ["Eu quero comprar quatro selos."],
+      "distractors": ["preciso", "selo", "enviar"]
+    },
+    {
+      "id": "m4-shopping-services-25",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the till, ask the cashier (formal) if she has change for 20 euros.",
+      "explanation": "Use «troco de + amount» when you need change for a note or coin. In polite service situations, Portuguese often uses the 3rd-person form: «Tem...?».",
+      "answer": ["Tem", "troco", "de", "vinte", "euros?"],
+      "distractors": ["conta", "quarenta", "custa"],
+      "acceptedAnswers": ["Tem troco para vinte euros?"]
+    },
+    {
+      "id": "m4-shopping-services-26",
+      "type": "build_phrase",
+      "topicId": "m4-shopping-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say that you want to pay in cash.",
+      "explanation": "Use «pagar em dinheiro» for paying with cash. European Portuguese often drops «eu», but both forms are possible.",
+      "answer": ["Quero", "pagar", "em", "dinheiro."],
+      "acceptedAnswers": ["Eu quero pagar em dinheiro."],
+      "distractors": ["troco", "na", "custar"]
+    },
+    {
+      "id": "m4-shopping-services-27",
+      "type": "question_for_answer",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the shopping centre, you are looking for the bank. The employee answers: «É no segundo andar.» What did you ask?",
+      "explanation": "Use «Onde fica...?» to ask where a place is. «Onde é que fica...?» is also very common in Portugal.",
+      "givenAnswer": "É no segundo andar.",
+      "answer": ["Onde", "fica", "o", "banco?"],
+      "distractors": ["Quanto", "custa", "correio"],
+      "acceptedAnswers": ["Onde é que fica o banco?"]
+    },
+    {
+      "id": "m4-shopping-services-28",
+      "type": "question_for_answer",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You point at the brown shoes and ask the price. The assistant answers: «São noventa e nove euros.» What did you ask?",
+      "explanation": "With a plural item like «os sapatos», use «quanto custam». «Quanto custa» is singular.",
+      "givenAnswer": "São noventa e nove euros.",
+      "answer": ["Quanto", "custam", "os", "sapatos", "castanhos?"],
+      "distractors": ["custa", "saia", "preta"],
+      "acceptedAnswers": [
+        "Quanto é que custam os sapatos castanhos?",
+        "Quanto custam os sapatos?",
+        "Quanto custam estes sapatos?",
+        "Quanto custam estes sapatos castanhos?",
+        "Quanto é que custam estes sapatos?"
+      ]
+    },
+    {
+      "id": "m4-shopping-services-29",
+      "type": "question_for_answer",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At a shoe shop, the customer answers: «Calço o número quarenta e dois.» What did the assistant ask? (formal)",
+      "explanation": "In shops, formal singular often uses the 3rd-person verb with the subject omitted: «Que número calça?».",
+      "givenAnswer": "Calço o número quarenta e dois.",
+      "answer": ["Que", "número", "calça?"],
+      "distractors": ["tamanho", "calças?", "custam"],
+      "acceptedAnswers": ["Que número é que calça?"]
+    },
+    {
+      "id": "m4-shopping-services-30",
+      "type": "question_for_answer",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "In a shop, you ask the assistant (formal) what discount the coat has. She answers: «Tem vinte por cento de desconto.» What did you ask?",
+      "explanation": "To ask about a discount, use «Que desconto tem ...?». The emphatic form with «é que» is also very common.",
+      "givenAnswer": "Tem vinte por cento de desconto.",
+      "answer": ["Que", "desconto", "tem", "o", "casaco?"],
+      "distractors": ["custa", "cor", "preço"],
+      "acceptedAnswers": [
+        "Que desconto é que o casaco tem?",
+        "Que desconto é que tem o casaco?",
+        "Qual é o desconto do casaco?",
+        "Que desconto tem?"
+      ]
+    },
+    {
+      "id": "m4-shopping-services-31",
+      "type": "fill_gaps",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about the clothes and their prices.",
+      "explanation": "Use «custa» with a singular noun and «custam» with a plural noun.",
+      "template": "A camisa branca ___ trinta euros e as calças pretas ___ setenta euros.",
+      "gaps": [
+        {
+          "answer": "custa"
+        },
+        {
+          "answer": "custam"
+        }
+      ],
+      "wordBank": ["custa", "custam", "custo", "custas"]
+    },
+    {
+      "id": "m4-shopping-services-32",
+      "type": "fill_gaps",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: The coat is size M and the shoes are size 38.",
+      "explanation": "Clothes have a «tamanho» (S, M, L); shoes have a «número». «Do» is «de + o».",
+      "template": "O casaco é do ___ M e os sapatos são do ___ trinta e oito.",
+      "gaps": [
+        {
+          "answer": "tamanho"
+        },
+        {
+          "answer": "número"
+        }
+      ],
+      "wordBank": ["tamanho", "número", "troco", "selo"]
+    },
+    {
+      "id": "m4-shopping-services-33",
+      "type": "fill_gaps",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: I have 15 euros and 20 cents, but I need 20 euros.",
+      "explanation": "Use «cêntimos» for cents and «euros» for euros. The amount tells you which word fits.",
+      "template": "Tenho quinze euros e vinte ___, mas preciso de vinte ___.",
+      "gaps": [
+        {
+          "answer": "cêntimos"
+        },
+        {
+          "answer": "euros"
+        }
+      ],
+      "wordBank": ["cêntimos", "euros", "troco", "número"]
+    },
+    {
+      "id": "m4-shopping-services-34",
+      "type": "fill_gaps",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about the bank account.",
+      "explanation": "After «quero», the next verb stays in the infinitive. Money is «na conta».",
+      "template": "Tenho mil euros na ___ e quero ___ cem euros.",
+      "gaps": [
+        {
+          "answer": "conta"
+        },
+        {
+          "answer": "levantar"
+        }
+      ],
+      "wordBank": ["conta", "levantar", "correio", "custam"]
+    },
+    {
+      "id": "m4-shopping-services-35",
+      "type": "find_error",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The adjective must match the plural noun: «as calças pretas».",
+      "sentence": ["As", "calças", "preta", "custam", "quarenta", "euros."],
+      "wrongIndex": 2,
+      "correction": "pretas",
+      "options": ["pretas", "preto", "pretos"]
+    },
+    {
+      "id": "m4-shopping-services-36",
+      "type": "find_error",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «a conta», «em + a» contracts to «na»: «na conta».",
+      "sentence": ["Quero", "depositar", "cinquenta", "euros", "no", "conta."],
+      "wrongIndex": 4,
+      "correction": "na",
+      "options": ["na", "do", "de"]
+    },
+    {
+      "id": "m4-shopping-services-37",
+      "type": "translate_word",
+      "topicId": "m4-shopping-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "At a shop, «troco» means the money you get back after paying.",
+      "direction": "toTarget",
+      "sentence": "Can you give me some **change**, please?",
+      "word": "change",
+      "answer": "troco",
+      "options": ["troco", "cêntimo", "desconto", "conta"]
+    },
+    {
+      "id": "m4-shopping-services-38",
+      "type": "translate_word",
+      "topicId": "m4-shopping-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Encomenda» is a parcel. It is a common word at the post office.",
+      "direction": "toTarget",
+      "sentence": "I am sending a **parcel** to Faro.",
+      "word": "parcel",
+      "answer": "encomenda",
+      "options": ["encomenda", "selo", "sapato", "conta"]
+    },
+    {
+      "id": "m4-shopping-services-39",
+      "type": "about_me",
+      "topicId": "m4-shopping-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "To talk about shoe size, say «Calço o número + number».",
+      "question": "Que número calças?",
+      "sampleAnswer": "Calço o número quarenta e um.",
+      "hints": ["tamanho", "sapatos", "botas", "trinta e nove", "quarenta e dois", "meu"]
+    },
+    {
+      "id": "m4-shopping-services-40",
+      "type": "number_sequence",
+      "topicId": "m4-shopping-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Which number is missing? Write it as a word.",
+      "explanation": "The sequence goes up by 250 each time: 250, 500, 750, 1000. For 1000, say «mil».",
+      "sequence": [250, 500, null, 1000],
+      "answerWords": ["setecentos e cinquenta"],
+      "options": ["setecentos e cinquenta", "seiscentos", "oitocentos", "novecentos", "mil"]
+    }
+  ]
+}

@@ -1,0 +1,642 @@
+{
+  "id": "m4-irregular-verbs-2",
+  "moduleId": "m4",
+  "title": "More irregular verbs and necessity",
+  "kind": "grammar",
+  "context": "These forms help you talk about what you can do, what you want, what you know, and what you have to do. Several very common verbs are irregular in the present: **vir, poder, querer, dizer, saber**. You also need two useful patterns: **estar a + infinitive** for something happening now, and **ter de / precisar de + infinitive** for obligation or need.\n\n- **Venho amanhã.** — *I’m coming tomorrow.*\n- **Podes abrir a janela?** — *Can you open the window?*\n- **Queremos um café.** — *We want a coffee.*\n- **Digo sempre a verdade.** — *I always tell the truth.*\n- **Sei a resposta.** — *I know the answer.*\n- **Estamos a estudar agora.** — *We are studying now.*\n- **Tenho de sair cedo.** — *I have to leave early.*\n- **Preciso de comprar pão.** — *I need to buy bread.*\n\n**Watch out:** in European Portuguese, the progressive is **estar a + infinitive**: **estou a estudar**, not *estou estudando*. After **ter de** or **precisar de**, use an infinitive: **tenho de fazer**, **precisam de saber**.",
+  "keyItems": [
+    {
+      "target": "venho",
+      "support": "I come / I’m coming",
+      "note": "vir, eu"
+    },
+    {
+      "target": "vens",
+      "support": "you come",
+      "note": "vir, tu"
+    },
+    {
+      "target": "posso",
+      "support": "I can",
+      "note": "poder, eu"
+    },
+    {
+      "target": "podes",
+      "support": "you can",
+      "note": "poder, tu"
+    },
+    {
+      "target": "quero",
+      "support": "I want",
+      "note": "querer, eu"
+    },
+    {
+      "target": "queres",
+      "support": "you want",
+      "note": "querer, tu"
+    },
+    {
+      "target": "digo",
+      "support": "I say / I tell",
+      "note": "dizer, eu"
+    },
+    {
+      "target": "diz",
+      "support": "he/she says",
+      "note": "dizer, 3rd person"
+    },
+    {
+      "target": "sei",
+      "support": "I know",
+      "note": "saber, eu"
+    },
+    {
+      "target": "sabemos",
+      "support": "we know",
+      "note": "saber, nós"
+    },
+    {
+      "target": "estou a estudar",
+      "support": "I am studying",
+      "note": "progressive in European Portuguese"
+    },
+    {
+      "target": "estão a jantar",
+      "support": "they are having dinner",
+      "note": "progressive in European Portuguese"
+    },
+    {
+      "target": "tenho de sair",
+      "support": "I have to leave",
+      "note": "obligation"
+    },
+    {
+      "target": "preciso de comprar pão",
+      "support": "I need to buy bread",
+      "note": "need"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m4-irregular-verbs-2-01",
+      "type": "translate_word",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "With «eu», the verb «poder» becomes «posso». The other forms go with other subjects.",
+      "direction": "toTarget",
+      "sentence": "I **can** come today.",
+      "word": "can",
+      "answer": "posso",
+      "options": ["posso", "podes", "pode", "podem"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-02",
+      "type": "translate_word",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The verb «saber» is irregular: «eu sei». It does not follow a regular ending pattern here.",
+      "direction": "toTarget",
+      "sentence": "I **know** the answer.",
+      "word": "know",
+      "answer": "sei",
+      "options": ["sei", "sabes", "sabe", "sabem"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-03",
+      "type": "fill_gaps",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: use «ter de» for «eu» and «precisar de» for Marta.",
+      "explanation": "Use «ter de» or «precisar de» + infinitive. The subject decides the verb form: «eu tenho», «a Marta precisa».",
+      "template": "Hoje eu ___ de sair cedo e a Marta ___ de comprar pão.",
+      "gaps": [
+        {
+          "answer": "tenho"
+        },
+        {
+          "answer": "precisa"
+        }
+      ],
+      "wordBank": ["tenho", "precisa", "tens", "precisam"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-04",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: I have to leave early. Use «ter de».",
+      "explanation": "Obligation is often «ter de + infinitive»: «tenho de sair». Portuguese often drops «eu».",
+      "answer": ["Tenho", "de", "sair", "cedo."],
+      "distractors": ["tem", "quero", "para"],
+      "acceptedAnswers": ["Eu tenho de sair cedo."]
+    },
+    {
+      "id": "m4-irregular-verbs-2-05",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Ana wants a tea.",
+      "explanation": "«Querer» is irregular: with «a Ana / ela», we use «quer». In Portugal, first names often come with an article: «A Ana».",
+      "answer": ["A", "Ana", "quer", "um", "chá."],
+      "distractors": ["quero", "pede", "uma"],
+      "acceptedAnswers": ["Ana quer um chá."]
+    },
+    {
+      "id": "m4-irregular-verbs-2-06",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Tell your friend: I'm coming tomorrow. Use «vir».",
+      "explanation": "The verb is «vir»: «eu venho». Portuguese often leaves out «eu».",
+      "answer": ["Venho", "amanhã."],
+      "distractors": ["vou", "vens", "vêm"],
+      "acceptedAnswers": ["Eu venho amanhã."]
+    },
+    {
+      "id": "m4-irregular-verbs-2-07",
+      "type": "question_for_answer",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You knock on your friend's door. Your friend answers: «Podes, sim, a porta está aberta.» What did you ask?",
+      "explanation": "To ask permission for yourself, use «posso». The reply changes to «podes» because your friend is speaking to «tu».",
+      "givenAnswer": "Podes, sim, a porta está aberta.",
+      "answer": ["Posso", "entrar?"],
+      "distractors": ["Podes", "ficar?", "entras?"],
+      "acceptedAnswers": ["Eu posso entrar?"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-08",
+      "type": "fill_gaps",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say that we are studying right now. Fill the gaps with the European Portuguese progressive.",
+      "explanation": "In European Portuguese, an action happening now is «estar a + infinitive»: «estamos a estudar».",
+      "template": "Neste momento, nós ___ a ___.",
+      "gaps": [
+        {
+          "answer": "estamos"
+        },
+        {
+          "answer": "estudar"
+        }
+      ],
+      "wordBank": ["estamos", "estudar", "somos", "estudamos"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-09",
+      "type": "find_error",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «tu», «querer» becomes «queres». «Quer» is the form for ele, ela and você.",
+      "sentence": ["Tu", "quer", "vir", "ao", "cinema?"],
+      "wrongIndex": 1,
+      "correction": "queres",
+      "options": ["quero", "queres", "querem"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-10",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: I don't know.",
+      "explanation": "The irregular form with «eu» is «sei». After negation, you say «não sei».",
+      "answer": ["Não", "sei."],
+      "distractors": ["sabes", "quero", "posso"],
+      "acceptedAnswers": ["Eu não sei."]
+    },
+    {
+      "id": "m4-irregular-verbs-2-11",
+      "type": "question_for_answer",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask your friend (informal) what time she is coming. She answers: «Venho às oito.»",
+      "explanation": "To ask for time, use «A que horas». «É que» is very common in European Portuguese.",
+      "givenAnswer": "Venho às oito.",
+      "answer": ["A", "que", "horas", "é", "que", "vens?"],
+      "distractors": ["onde", "vais?", "vem?"],
+      "acceptedAnswers": ["A que horas vens?", "A que horas é que tu vens?"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-12",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Your friends can come today.",
+      "explanation": "With the plural subject «os teus amigos», use «podem». In European Portuguese, possessives normally take the article: «os teus amigos».",
+      "answer": ["Os", "teus", "amigos", "podem", "vir", "hoje."],
+      "distractors": ["podes", "querem", "amanhã", "de"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-13",
+      "type": "about_me",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "After «querer», you can use an infinitive: «quero estudar», «quero descansar».",
+      "question": "O que é que queres fazer hoje?",
+      "sampleAnswer": "Quero descansar em casa.",
+      "hints": ["estudar", "ir", "ao", "cinema", "ver", "televisão"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-14",
+      "type": "question_for_answer",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You see two friends at the table. Ask them what they are doing. They answer: «Estamos a jantar.»",
+      "explanation": "Ask about an action happening now with «O que é que ... estão a fazer?». The answer uses «estar a + infinitive».",
+      "givenAnswer": "Estamos a jantar.",
+      "answer": ["O", "que", "é", "que", "estão", "a", "fazer?"],
+      "distractors": ["onde", "vão?", "jantar?", "agora?"],
+      "acceptedAnswers": [
+        "O que estão a fazer?",
+        "O que é que vocês estão a fazer?",
+        "O que é que estão a fazer agora?",
+        "O que estão a fazer agora?"
+      ]
+    },
+    {
+      "id": "m4-irregular-verbs-2-15",
+      "type": "find_error",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «nós», the correct form is «sabemos». «Sabe» is singular.",
+      "sentence": ["Nós", "sabe", "a", "resposta."],
+      "wrongIndex": 1,
+      "correction": "sabemos",
+      "options": ["sabemos", "sei", "sabem"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-16",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I'm telling the truth. Use the progressive.",
+      "explanation": "For something happening right now, use «estar a + infinitive»: «estou a dizer». «Dizer a verdade» = to tell the truth.",
+      "answer": ["Estou", "a", "dizer", "a", "verdade."],
+      "distractors": ["sou", "dar", "digo", "de"],
+      "acceptedAnswers": ["Eu estou a dizer a verdade."]
+    },
+    {
+      "id": "m4-irregular-verbs-2-17",
+      "type": "fill_gaps",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill both gaps. Same subject, different irregular verbs.",
+      "explanation": "With «tu», both verbs take the «-es» form here: «podes», «queres».",
+      "template": "Tu ___ vir ao cinema ou ___ ficar em casa?",
+      "gaps": [
+        {
+          "answer": "podes"
+        },
+        {
+          "answer": "queres"
+        }
+      ],
+      "wordBank": ["podes", "queres", "podem", "querem"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-18",
+      "type": "about_me",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «ter de + infinitive» to talk about obligation: «tenho de estudar», «tenho de trabalhar».",
+      "question": "O que é que tens de fazer hoje?",
+      "sampleAnswer": "Tenho de trabalhar até às seis.",
+      "hints": ["estudar", "comprar", "pão", "limpar", "o", "quarto"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-19",
+      "type": "question_for_answer",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At a café, ask your friend (informal) what she wants to drink. She answers: «Quero um sumo de laranja.»",
+      "explanation": "To ask what someone wants to drink, use «O que queres beber?». The verb «querer» is irregular: «tu queres».",
+      "givenAnswer": "Quero um sumo de laranja.",
+      "answer": ["O", "que", "queres", "beber?"],
+      "distractors": ["comer?", "podes", "agora?"],
+      "acceptedAnswers": [
+        "O que é que queres beber?",
+        "O que é que tu queres beber?",
+        "O que queres tomar?",
+        "O que é que queres tomar?"
+      ]
+    },
+    {
+      "id": "m4-irregular-verbs-2-20",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: They need to know today. Use «precisar de».",
+      "explanation": "Use «precisar de + infinitive» for need: «precisam de saber». The verb «saber» stays in the infinitive after «de».",
+      "answer": ["Precisam", "de", "saber", "hoje."],
+      "distractors": ["têm", "vêm", "querem"],
+      "acceptedAnswers": ["Eles precisam de saber hoje."]
+    },
+    {
+      "id": "m4-irregular-verbs-2-21",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you know where the station is.",
+      "explanation": "Use «sei» for «eu» with «saber». For places, «onde é» is a natural simple pattern.",
+      "answer": ["Sei", "onde", "é", "a", "estação."],
+      "distractors": ["sabes", "quero", "temos"],
+      "acceptedAnswers": [
+        "Eu sei onde é a estação.",
+        "Sei onde fica a estação.",
+        "Eu sei onde fica a estação."
+      ]
+    },
+    {
+      "id": "m4-irregular-verbs-2-22",
+      "type": "question_for_answer",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask your friend (informal) how she is coming. She answers: «Venho de comboio.»",
+      "explanation": "To ask about the way someone comes, use «como». With «tu», «vir» becomes «vens».",
+      "givenAnswer": "Venho de comboio.",
+      "answer": ["Como", "é", "que", "vens?"],
+      "distractors": ["onde", "vais", "podem"],
+      "acceptedAnswers": ["Como vens?", "Como é que tu vens?"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-23",
+      "type": "fill_gaps",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps about what is happening now.",
+      "explanation": "For actions happening now, European Portuguese uses «estar a + infinitive». The gaps need forms of «estar».",
+      "template": "Agora eu ___ a cozinhar e o Rui ___ a arrumar a cozinha.",
+      "gaps": [
+        {
+          "answer": "estou"
+        },
+        {
+          "answer": "está"
+        }
+      ],
+      "wordBank": ["estou", "está", "sou", "é", "tenho"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-24",
+      "type": "find_error",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «nós», «poder» becomes «podemos». «Pode» is the form for ele/ela/você.",
+      "sentence": ["Nós", "pode", "abrir", "a", "porta."],
+      "wrongIndex": 1,
+      "correction": "podemos",
+      "options": ["podemos", "posso", "podem"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-25",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you want to speak with the teacher.",
+      "explanation": "«Querer» is irregular: «eu quero». After it, use the infinitive: «quero falar».",
+      "answer": ["Quero", "falar", "com", "o", "professor."],
+      "distractors": ["queres", "digo", "para"],
+      "acceptedAnswers": [
+        "Eu quero falar com o professor.",
+        "Quero falar com a professora.",
+        "Eu quero falar com a professora."
+      ]
+    },
+    {
+      "id": "m4-irregular-verbs-2-26",
+      "type": "translate_word",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "With «nós», «saber» becomes «sabemos».",
+      "direction": "toTarget",
+      "sentence": "We **know** the number.",
+      "word": "know",
+      "answer": "sabemos",
+      "options": ["sabemos", "sabem", "sei", "sabes"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-27",
+      "type": "question_for_answer",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask your friend (informal) how she wants to go. She answers: «Quero ir de autocarro.»",
+      "explanation": "To ask about the way someone wants to go, use «como». With «tu», «querer» becomes «queres».",
+      "givenAnswer": "Quero ir de autocarro.",
+      "answer": ["Como", "é", "que", "queres", "ir?"],
+      "distractors": ["onde", "podes", "vais"],
+      "acceptedAnswers": ["Como queres ir?", "Como é que tu queres ir?"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-28",
+      "type": "about_me",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «ter de + infinitive» for obligation. Your answer can be short or longer.",
+      "question": "O que é que tens de fazer hoje?",
+      "sampleAnswer": "Tenho de estudar e limpar o quarto.",
+      "hints": ["trabalhar", "comprar pão", "cozinhar", "agora", "depois"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-29",
+      "type": "fill_gaps",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence.",
+      "explanation": "For ele/ela, «dizer» becomes «diz», but for «eu», «saber» becomes «sei».",
+      "template": "O Pedro ___ «bom dia», mas eu não ___ o nome dele.",
+      "gaps": [
+        {
+          "answer": "diz"
+        },
+        {
+          "answer": "sei"
+        }
+      ],
+      "wordBank": ["diz", "sei", "digo", "sabe", "quero"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-30",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that your sister is coming to the party.",
+      "explanation": "«Vir» is irregular: «ela vem». «À festa» = a + a festa.",
+      "answer": ["A", "minha", "irmã", "vem", "à", "festa."],
+      "distractors": ["vêm", "vamos", "na"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-31",
+      "type": "question_for_answer",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend is not coming to your party. Ask her (informal) why she isn't coming. She answers: «Porque não posso.»",
+      "explanation": "To ask for a reason, use «porque é que». With «tu», «vir» becomes «vens».",
+      "givenAnswer": "Porque não posso.",
+      "answer": ["Porque", "é", "que", "não", "vens?"],
+      "distractors": ["quando", "vem?", "estás"],
+      "acceptedAnswers": ["Porque não vens?", "Porque é que tu não vens?"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-32",
+      "type": "find_error",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In European Portuguese, the progressive is «estar a + infinitive». After «a», use «estudar», not a gerund.",
+      "sentence": ["Eu", "estou", "a", "estudando", "agora."],
+      "wrongIndex": 3,
+      "correction": "estudar",
+      "options": ["estudar", "estuda", "estudo"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-33",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that João needs to study tonight.",
+      "explanation": "After «precisar de», use an infinitive. Here the subject is «o João», so the verb is «precisa».",
+      "answer": ["O", "João", "precisa", "de", "estudar", "esta", "noite."],
+      "distractors": ["tenho", "para", "quer"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-34",
+      "type": "translate_word",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "With «eles/elas», «poder» becomes «podem».",
+      "direction": "toTarget",
+      "sentence": "They **can** stay here.",
+      "word": "can",
+      "answer": "podem",
+      "options": ["podem", "podes", "pode", "podemos"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-35",
+      "type": "fill_gaps",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You have to wash the dishes, but I can help. Fill the two gaps.",
+      "explanation": "After «ter de», use an infinitive: «tens de lavar». The second verb is «poder»: «eu posso».",
+      "template": "Tu ___ de lavar a loiça, mas eu ___ ajudar.",
+      "gaps": [
+        {
+          "answer": "tens"
+        },
+        {
+          "answer": "posso"
+        }
+      ],
+      "wordBank": ["tens", "posso", "tenho", "podes", "quero"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-36",
+      "type": "about_me",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «estar a + infinitive» for what is happening now. Answer with one activity that fits you.",
+      "question": "O que estás a fazer agora?",
+      "sampleAnswer": "Estou a ler em casa.",
+      "hints": ["trabalhar", "jantar", "no café", "com amigos", "descansar"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-37",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you and your friend know the way.",
+      "explanation": "With «nós», «saber» becomes «sabemos».",
+      "answer": ["Sabemos", "o", "caminho."],
+      "distractors": ["sabem", "somos", "queremos"],
+      "acceptedAnswers": ["Nós sabemos o caminho."]
+    },
+    {
+      "id": "m4-irregular-verbs-2-38",
+      "type": "question_for_answer",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask your friend (informal) what she says to the doorman. She answers: «Digo \"bom dia\" ao porteiro.»",
+      "explanation": "To ask about the words someone says, use «o que é que». With «tu», «dizer» becomes «dizes».",
+      "givenAnswer": "Digo «bom dia» ao porteiro.",
+      "answer": ["O", "que", "é", "que", "dizes", "ao", "porteiro?"],
+      "distractors": ["como", "vem", "quer"],
+      "acceptedAnswers": ["O que dizes ao porteiro?", "O que é que tu dizes ao porteiro?"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-39",
+      "type": "find_error",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With two people, the subject is plural, so «vir» becomes «vêm». «Vem» is singular.",
+      "sentence": ["A", "Marta", "e", "o", "João", "vem", "hoje."],
+      "wrongIndex": 5,
+      "correction": "vêm",
+      "options": ["vêm", "vens", "venho"]
+    },
+    {
+      "id": "m4-irregular-verbs-2-40",
+      "type": "build_phrase",
+      "topicId": "m4-irregular-verbs-2",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you can't come because you have to work.",
+      "explanation": "Use «não posso» for «I can't» and «ter de + infinitive» for obligation.",
+      "answer": ["Não", "posso", "vir", "porque", "tenho", "de", "trabalhar."],
+      "distractors": ["quero", "vens", "tens"],
+      "acceptedAnswers": [
+        "Eu não posso vir porque tenho de trabalhar.",
+        "Não posso vir porque preciso de trabalhar."
+      ]
+    }
+  ]
+}

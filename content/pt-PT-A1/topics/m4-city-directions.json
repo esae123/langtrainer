@@ -1,0 +1,702 @@
+{
+  "id": "m4-city-directions",
+  "moduleId": "m4",
+  "title": "In the city and giving directions",
+  "kind": "situation",
+  "context": "When you need help in a city, two very useful patterns are **Onde fica…?** for location and **Como vou para…?** for directions. You will also hear short polite chunks for movement. Learn these as whole phrases.\n\n- **Onde fica a praça?** — “Where is the square?”\n- **Desculpe, onde é que fica a estação?** — “Excuse me, where is the station?”\n- **Siga em frente.** — “Go straight ahead.”\n- **Vire à direita na esquina.** — “Turn right at the corner.”\n- **No semáforo, vire à esquerda.** — “At the traffic light, turn left.”\n- **O banco fica ao lado da farmácia.** — “The bank is next to the pharmacy.”\n- **É perto. / É longe.** — “It’s near. / It’s far.”\n\n**Watch out**\n- Use **à direita / à esquerda** with **à**.\n- Articles matter with places: **o museu**, **a praça**, so you get **do banco**, **da praça**, **na esquina**.",
+  "keyItems": [
+    {
+      "target": "Onde fica…?",
+      "support": "Where is…?"
+    },
+    {
+      "target": "Como vou para…?",
+      "support": "How do I go to…?"
+    },
+    {
+      "target": "Desculpe",
+      "support": "Excuse me"
+    },
+    {
+      "target": "a praça",
+      "support": "the square"
+    },
+    {
+      "target": "a esquina",
+      "support": "the corner"
+    },
+    {
+      "target": "o semáforo",
+      "support": "the traffic light"
+    },
+    {
+      "target": "a estação",
+      "support": "the station"
+    },
+    {
+      "target": "a farmácia",
+      "support": "the pharmacy"
+    },
+    {
+      "target": "o museu",
+      "support": "the museum"
+    },
+    {
+      "target": "Siga em frente",
+      "support": "Go straight ahead",
+      "note": "fixed polite chunk"
+    },
+    {
+      "target": "Vire à direita",
+      "support": "Turn right",
+      "note": "fixed polite chunk"
+    },
+    {
+      "target": "Vire à esquerda",
+      "support": "Turn left",
+      "note": "fixed polite chunk"
+    },
+    {
+      "target": "ao lado de",
+      "support": "next to"
+    },
+    {
+      "target": "em frente de",
+      "support": "opposite / in front of"
+    },
+    {
+      "target": "perto",
+      "support": "near"
+    },
+    {
+      "target": "longe",
+      "support": "far"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m4-city-directions-01",
+      "type": "translate_word",
+      "topicId": "m4-city-directions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Praça» is a town square. It is a feminine noun: «a praça».",
+      "direction": "toTarget",
+      "sentence": "The **square** is near the museum.",
+      "word": "square",
+      "answer": "praça",
+      "options": ["praça", "esquina", "estação", "rua"]
+    },
+    {
+      "id": "m4-city-directions-02",
+      "type": "translate_word",
+      "topicId": "m4-city-directions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For street directions, «semáforo» is the traffic light you look for.",
+      "direction": "toTarget",
+      "sentence": "Turn left at the **traffic light**.",
+      "word": "traffic light",
+      "answer": "semáforo",
+      "options": ["semáforo", "esquina", "praça", "mercado"]
+    },
+    {
+      "id": "m4-city-directions-03",
+      "type": "match_pairs",
+      "topicId": "m4-city-directions",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese phrase with its meaning.",
+      "explanation": "These are very common fixed chunks in the street. Learn them whole, not word by word.",
+      "pairs": [
+        {
+          "target": "Onde fica…?",
+          "support": "Where is…?"
+        },
+        {
+          "target": "Siga em frente.",
+          "support": "Go straight ahead."
+        },
+        {
+          "target": "Vire à direita.",
+          "support": "Turn right."
+        },
+        {
+          "target": "É longe.",
+          "support": "It is far."
+        }
+      ]
+    },
+    {
+      "id": "m4-city-directions-04",
+      "type": "fill_gaps",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask where the pharmacy is. The answer: it is near the bank. Fill the two gaps.",
+      "explanation": "Ask where a place is with «Onde fica…?». «Perto de» + «o banco» gives «perto do banco».",
+      "template": "Onde ___ a farmácia? — Fica ___ do banco.",
+      "gaps": [
+        {
+          "answer": "fica",
+          "accepted": ["é", "está"]
+        },
+        {
+          "answer": "perto"
+        }
+      ],
+      "wordBank": ["fica", "perto", "ficam", "longe", "são"]
+    },
+    {
+      "id": "m4-city-directions-05",
+      "type": "build_phrase",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask: where is the museum?",
+      "explanation": "For places in town, «Onde fica…?» is the normal question. «O museu» is masculine, so keep «o».",
+      "answer": ["Onde", "fica", "o", "museu?"],
+      "distractors": ["ficam", "da"],
+      "acceptedAnswers": ["Onde é que fica o museu?", "Onde está o museu?", "Onde é o museu?"]
+    },
+    {
+      "id": "m4-city-directions-06",
+      "type": "question_for_answer",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend says this about the pharmacy. What did you ask?",
+      "explanation": "Use «Onde fica…?» to ask for the location of a place. «A farmácia» is feminine.",
+      "givenAnswer": "Fica ao lado do banco.",
+      "answer": ["Onde", "fica", "a", "farmácia?"],
+      "distractors": ["ficam", "perto?"],
+      "acceptedAnswers": [
+        "Onde é que fica a farmácia?",
+        "Onde está a farmácia?",
+        "Onde é a farmácia?"
+      ]
+    },
+    {
+      "id": "m4-city-directions-07",
+      "type": "build_phrase",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell someone: Turn right at the corner.",
+      "explanation": "The direction chunk is «à direita». «Na esquina» is «em + a esquina».",
+      "answer": ["Vire", "à", "direita", "na", "esquina."],
+      "distractors": ["ao", "esquerda"],
+      "acceptedAnswers": ["Na esquina, vire à direita."]
+    },
+    {
+      "id": "m4-city-directions-08",
+      "type": "fill_gaps",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the direction.",
+      "explanation": "Two fixed expressions here: «em frente» and «à esquerda». The accent in «à» matters.",
+      "template": "Siga ___ frente e vire ___ esquerda.",
+      "gaps": [
+        {
+          "answer": "em"
+        },
+        {
+          "answer": "à"
+        }
+      ],
+      "wordBank": ["em", "à", "ao", "na", "de"]
+    },
+    {
+      "id": "m4-city-directions-09",
+      "type": "find_error",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Ao lado de» takes «de». With «a praça», «de + a» becomes «da».",
+      "sentence": ["O", "museu", "fica", "ao", "lado", "do", "praça."],
+      "wrongIndex": 5,
+      "correction": "da",
+      "options": ["da", "de", "na"]
+    },
+    {
+      "id": "m4-city-directions-10",
+      "type": "build_phrase",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: It is far from here.",
+      "explanation": "«Daqui» means 'from here'. Distance can be said with «é longe» or «fica longe».",
+      "answer": ["É", "longe", "daqui."],
+      "distractors": ["perto", "ali"],
+      "acceptedAnswers": ["Fica longe daqui."]
+    },
+    {
+      "id": "m4-city-directions-11",
+      "type": "question_for_answer",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You want to go to the station and ask a local how to get there. The local answers. What did you ask?",
+      "explanation": "To ask for directions to a place, a simple A1 pattern is «Como vou para…?». It asks about the route, not only the location.",
+      "givenAnswer": "Vire à esquerda no semáforo.",
+      "answer": ["Como", "vou", "para", "a", "estação?"],
+      "distractors": ["Onde", "fica"],
+      "acceptedAnswers": [
+        "Como é que vou para a estação?",
+        "Como é que eu vou para a estação?",
+        "Como vou à estação?",
+        "Como é que vou à estação?"
+      ]
+    },
+    {
+      "id": "m4-city-directions-12",
+      "type": "about_me",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Answer with «Sim» or «Não», then add a short place sentence. Use «perto da…» for 'near the…'.",
+      "question": "Há um semáforo perto da tua casa?",
+      "sampleAnswer": "Sim, há um semáforo perto da minha casa.",
+      "hints": ["Não,", "longe", "ao", "lado", "esquina", "praça"]
+    },
+    {
+      "id": "m4-city-directions-13",
+      "type": "fill_gaps",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the location sentence.",
+      "explanation": "These are two common place phrases: «em frente de» and «ao lado de». The second one uses «ao», not «à».",
+      "template": "A estação fica ___ frente do hotel, ___ lado da praça.",
+      "gaps": [
+        {
+          "answer": "em"
+        },
+        {
+          "answer": "ao"
+        }
+      ],
+      "wordBank": ["em", "ao", "na", "à", "de"]
+    },
+    {
+      "id": "m4-city-directions-14",
+      "type": "build_phrase",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask politely: where is the bathroom?",
+      "explanation": "Start with «Desculpe» to sound polite. In Portugal, 'bathroom' is «casa de banho».",
+      "answer": ["Desculpe,", "onde", "fica", "a", "casa", "de", "banho?"],
+      "distractors": ["ficam", "rua"],
+      "acceptedAnswers": [
+        "Desculpe, onde é que fica a casa de banho?",
+        "Desculpe, onde é a casa de banho?",
+        "Desculpe, onde está a casa de banho?"
+      ]
+    },
+    {
+      "id": "m4-city-directions-15",
+      "type": "question_for_answer",
+      "topicId": "m4-city-directions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask whether the station is near. What did you ask?",
+      "explanation": "A yes/no question can keep normal word order and rise at the end. «Fica perto?» asks about distance.",
+      "givenAnswer": "Não, fica longe.",
+      "answer": ["A", "estação", "fica", "perto?"],
+      "distractors": ["ficam", "longe?"],
+      "acceptedAnswers": ["A estação é perto?", "Fica perto?", "A estação fica perto daqui?"]
+    },
+    {
+      "id": "m4-city-directions-16",
+      "type": "find_error",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The fixed chunk is «à esquerda» (a + a esquerda). «Esquerda» is feminine, so «ao» is wrong.",
+      "sentence": ["Vire", "ao", "esquerda", "na", "segunda", "rua."],
+      "wrongIndex": 1,
+      "correction": "à",
+      "options": ["à", "na", "de"]
+    },
+    {
+      "id": "m4-city-directions-17",
+      "type": "build_phrase",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The bank is next to the pharmacy.",
+      "explanation": "«Ao lado de» shows position. With feminine «a farmácia», the contraction is «da».",
+      "answer": ["O", "banco", "fica", "ao", "lado", "da", "farmácia."],
+      "distractors": ["do", "perto"],
+      "acceptedAnswers": ["O banco é ao lado da farmácia."]
+    },
+    {
+      "id": "m4-city-directions-18",
+      "type": "fill_gaps",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the directions.",
+      "explanation": "Use the fixed polite chunks «vire à direita» and «siga em frente». They often come one after the other in street directions.",
+      "template": "No semáforo, ___ à direita. Depois, siga ___ frente.",
+      "gaps": [
+        {
+          "answer": "vire"
+        },
+        {
+          "answer": "em"
+        }
+      ],
+      "wordBank": ["vire", "em", "esquerda", "ao", "de"]
+    },
+    {
+      "id": "m4-city-directions-19",
+      "type": "question_for_answer",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You are asking about the hotel. What did you ask?",
+      "explanation": "A location question starts with «Onde fica…?». The answer can then give a street side like «à esquerda».",
+      "givenAnswer": "Fica na segunda rua à esquerda.",
+      "answer": ["Onde", "fica", "o", "hotel?"],
+      "distractors": ["ficam", "longe?"],
+      "acceptedAnswers": ["Onde é que fica o hotel?", "Onde está o hotel?", "Onde é o hotel?"]
+    },
+    {
+      "id": "m4-city-directions-20",
+      "type": "order_dialogue",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "In the street. Put the dialogue in order.",
+      "explanation": "A short street exchange often goes: polite question, direction, follow-up about distance, short answer.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Desculpe, onde fica a praça?"
+        },
+        {
+          "speaker": "B",
+          "text": "Siga em frente e vire à direita."
+        },
+        {
+          "speaker": "A",
+          "text": "É longe?"
+        },
+        {
+          "speaker": "B",
+          "text": "Não, é perto."
+        }
+      ]
+    },
+    {
+      "id": "m4-city-directions-21",
+      "type": "build_phrase",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A tourist needs the bank. Ask politely where it is.",
+      "explanation": "For a place, use «Onde fica…?». «É que» is very common in European Portuguese, and «Desculpe» makes the question polite.",
+      "answer": ["Desculpe,", "onde", "é", "que", "fica", "o", "banco?"],
+      "distractors": ["ficam", "ao", "vais"],
+      "acceptedAnswers": [
+        "Desculpe, onde fica o banco?",
+        "Desculpe, onde é o banco?",
+        "Desculpe, onde está o banco?"
+      ]
+    },
+    {
+      "id": "m4-city-directions-22",
+      "type": "question_for_answer",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A local says: «Fica em frente do hotel.» What did you ask about the café?",
+      "explanation": "To ask for the location of a place, use «Onde fica…?». Use «Como vou para…?» only for directions.",
+      "givenAnswer": "Fica em frente do hotel.",
+      "answer": ["Onde", "é", "que", "fica", "o", "café?"],
+      "distractors": ["Como", "para", "a"],
+      "acceptedAnswers": ["Onde fica o café?", "Onde é o café?", "Onde está o café?"]
+    },
+    {
+      "id": "m4-city-directions-23",
+      "type": "fill_gaps",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the location sentence.",
+      "explanation": "«Ao lado de» means “next to”. With «o museu», «de + o» becomes «do».",
+      "template": "O café fica ___ lado ___ museu.",
+      "gaps": [
+        {
+          "answer": "ao"
+        },
+        {
+          "answer": "do"
+        }
+      ],
+      "wordBank": ["ao", "do", "na", "da", "em"]
+    },
+    {
+      "id": "m4-city-directions-24",
+      "type": "find_error",
+      "topicId": "m4-city-directions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«A estação» is feminine, so after «em frente de» you need «da estação».",
+      "sentence": ["A", "farmácia", "fica", "em", "frente", "do", "estação."],
+      "wrongIndex": 5,
+      "correction": "da",
+      "options": ["da", "de", "na"]
+    },
+    {
+      "id": "m4-city-directions-25",
+      "type": "build_phrase",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the pharmacy is far from the square.",
+      "explanation": "Use «ficar» to say where a place is. After «longe de», «de + a praça» becomes «da praça».",
+      "answer": ["A", "farmácia", "fica", "longe", "da", "praça."],
+      "distractors": ["perto", "do", "ficam"],
+      "acceptedAnswers": ["A farmácia é longe da praça."]
+    },
+    {
+      "id": "m4-city-directions-26",
+      "type": "translate_word",
+      "topicId": "m4-city-directions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In directions you say «à esquerda». The key word is «esquerda».",
+      "direction": "toTarget",
+      "sentence": "At the corner, turn **left**.",
+      "word": "left",
+      "answer": "esquerda",
+      "options": ["esquerda", "direita", "frente", "perto"]
+    },
+    {
+      "id": "m4-city-directions-27",
+      "type": "question_for_answer",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You want to go to the museum and ask a local how to get there. The local says: «Vá em frente até à praça.» What did you ask?",
+      "explanation": "Use «Como vou para…?» when you want the route. «Onde fica…?» asks only for location.",
+      "givenAnswer": "Vá em frente até à praça.",
+      "answer": ["Como", "é", "que", "vou", "para", "o", "museu?"],
+      "distractors": ["Onde", "fica", "a"],
+      "acceptedAnswers": [
+        "Como vou para o museu?",
+        "Como é que eu vou para o museu?",
+        "Como vou ao museu?",
+        "Como é que vou ao museu?"
+      ]
+    },
+    {
+      "id": "m4-city-directions-28",
+      "type": "fill_gaps",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You want to go to the square. Fill the gaps.",
+      "explanation": "For directions, use «como» + «vou para». The article stays: «para a praça».",
+      "template": "Desculpe, ___ é que vou ___ ___ praça?",
+      "gaps": [
+        {
+          "answer": "como"
+        },
+        {
+          "answer": "para"
+        },
+        {
+          "answer": "a"
+        }
+      ],
+      "wordBank": ["como", "para", "a", "onde", "de", "o"]
+    },
+    {
+      "id": "m4-city-directions-29",
+      "type": "about_me",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «há» to say that something exists, and «perto de» to say it is near a place.",
+      "question": "Há uma praça perto da tua casa?",
+      "sampleAnswer": "Sim, há uma praça perto da minha casa.",
+      "hints": ["Não,", "longe", "farmácia", "bairro", "no", "centro"]
+    },
+    {
+      "id": "m4-city-directions-30",
+      "type": "build_phrase",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the pharmacy is opposite the museum.",
+      "explanation": "«Em frente de» means “opposite / in front of”. With «o museu», «de + o» becomes «do».",
+      "answer": ["A", "farmácia", "fica", "em", "frente", "do", "museu."],
+      "distractors": ["ao", "da", "perto"]
+    },
+    {
+      "id": "m4-city-directions-31",
+      "type": "find_error",
+      "topicId": "m4-city-directions",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Directions use «à direita / à esquerda» (a + a = à). Plain «a» without the article is wrong here.",
+      "sentence": ["Vire", "a", "direita", "depois", "do", "semáforo."],
+      "wrongIndex": 1,
+      "correction": "à",
+      "options": ["à", "na", "da"]
+    },
+    {
+      "id": "m4-city-directions-32",
+      "type": "translate_word",
+      "topicId": "m4-city-directions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Perto» is the usual word for “near”. It often appears with «de»: «perto da praça».",
+      "direction": "toTarget",
+      "sentence": "The station is **near** the square.",
+      "word": "near",
+      "answer": "perto",
+      "options": ["perto", "longe", "direita", "esquina"]
+    },
+    {
+      "id": "m4-city-directions-33",
+      "type": "question_for_answer",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You want to go to the bank and ask a local how to get there. The local says: «Vá em frente até ao semáforo.» What did you ask?",
+      "explanation": "Use «Como vou para…?» for the route to a place. The destination here is «o banco».",
+      "givenAnswer": "Vá em frente até ao semáforo.",
+      "answer": ["Como", "vou", "para", "o", "banco?"],
+      "distractors": ["Onde", "fica", "a"],
+      "acceptedAnswers": [
+        "Como é que vou para o banco?",
+        "Como é que eu vou para o banco?",
+        "Como vou ao banco?",
+        "Como é que vou ao banco?"
+      ]
+    },
+    {
+      "id": "m4-city-directions-34",
+      "type": "fill_gaps",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the directions.",
+      "explanation": "Learn «Vá…» as a polite chunk. For direction, Portuguese uses «à esquerda».",
+      "template": "___ até à esquina e depois vire ___ esquerda.",
+      "gaps": [
+        {
+          "answer": "Vá",
+          "accepted": ["Siga"]
+        },
+        {
+          "answer": "à"
+        }
+      ],
+      "wordBank": ["Vá", "à", "Vire", "ao", "de"]
+    },
+    {
+      "id": "m4-city-directions-35",
+      "type": "build_phrase",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that there is a pharmacy opposite the hotel.",
+      "explanation": "Use «há» when you mean that a place exists. «Em frente do hotel» gives its position.",
+      "answer": ["Há", "uma", "farmácia", "em", "frente", "do", "hotel."],
+      "distractors": ["ao", "perto", "está"]
+    },
+    {
+      "id": "m4-city-directions-36",
+      "type": "about_me",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "A simple answer can start with «Vou…». Then add how you go, for example «de autocarro» or «a pé».",
+      "question": "Como vais para o centro da tua cidade?",
+      "sampleAnswer": "Vou de autocarro e depois a pé.",
+      "hints": ["comboio", "metro", "carro", "normalmente", "rua", "centro"]
+    },
+    {
+      "id": "m4-city-directions-37",
+      "type": "find_error",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "For directions you ask «como vou para…?». «Fica» is for location in «Onde fica…?».",
+      "sentence": ["Desculpe,", "como", "é", "que", "fica", "para", "a", "praça?"],
+      "wrongIndex": 4,
+      "correction": "vou",
+      "options": ["vou", "ir", "fico"]
+    },
+    {
+      "id": "m4-city-directions-38",
+      "type": "build_phrase",
+      "topicId": "m4-city-directions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the museum is next to the station.",
+      "explanation": "Use «ao lado de» for “next to”. With «a estação», «de + a» becomes «da».",
+      "answer": ["O", "museu", "fica", "ao", "lado", "da", "estação."],
+      "distractors": ["do", "perto", "na"]
+    },
+    {
+      "id": "m4-city-directions-39",
+      "type": "question_for_answer",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You want to go to the hotel and ask a local how to get there. The local says: «Primeiro, vá em frente. Depois, vire à esquerda.» What did you ask?",
+      "explanation": "A route answer matches the question pattern «Como vou para…?». «Primeiro» and «depois» help order the steps.",
+      "givenAnswer": "Primeiro, vá em frente. Depois, vire à esquerda.",
+      "answer": ["Como", "vou", "para", "o", "hotel?"],
+      "distractors": ["Onde", "fica", "a"],
+      "acceptedAnswers": [
+        "Como é que vou para o hotel?",
+        "Como é que eu vou para o hotel?",
+        "Como vou ao hotel?",
+        "Como é que vou ao hotel?"
+      ]
+    },
+    {
+      "id": "m4-city-directions-40",
+      "type": "fill_gaps",
+      "topicId": "m4-city-directions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The hotel is opposite the museum, and the pharmacy is near here. Fill the three gaps.",
+      "explanation": "Use «em frente de» for opposite, and remember the contraction «do». For short distance, use «perto».",
+      "template": "O hotel fica ___ frente ___ museu e a farmácia fica ___ daqui.",
+      "gaps": [
+        {
+          "answer": "em"
+        },
+        {
+          "answer": "do"
+        },
+        {
+          "answer": "perto"
+        }
+      ],
+      "wordBank": ["em", "do", "perto", "ao", "da", "longe"]
+    }
+  ]
+}
