@@ -203,6 +203,14 @@ function checkFillGaps(e: FillGapsExercise, path: string, problems: ContentProbl
   if (hasDuplicates(e.wordBank)) {
     problems.push({ path: `${path}.wordBank`, message: 'wordBank must not contain duplicates' });
   }
+  // Each word-bank tile can be placed once, so two gaps with the same answer cannot be
+  // solved in tiles mode (the bank holds that word only once).
+  if (e.allowedModes.includes('tiles') && hasDuplicates(gapAnswers)) {
+    problems.push({
+      path: `${path}.gaps`,
+      message: `two gaps have the same answer (${gapAnswers.join(', ')}) — the word bank holds it once, so tiles mode cannot be solved; use different answers or drop "tiles" from allowedModes`,
+    });
+  }
   const distractorCount = e.wordBank.filter((w) => !gapAnswers.includes(w)).length;
   if (distractorCount < 2 || distractorCount > 4) {
     problems.push({

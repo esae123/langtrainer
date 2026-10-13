@@ -553,6 +553,28 @@ describe('checkContent — find_error invariants', () => {
     expect(has(checkContent(programWithTopic([bad])).problems, 'only by accents')).toBe(true);
   });
 
+  it('rejects fill_gaps whose gaps share an answer in tiles mode', () => {
+    const fx = {
+      id: 't1-01',
+      type: 'fill_gaps',
+      topicId: 't1',
+      difficulty: 2,
+      allowedModes: ['tiles', 'typing'],
+      prompt: 'p',
+      explanation: 'e',
+      template: 'Hoje ___ frio e ___ a chover.',
+      gaps: [{ answer: 'está' }, { answer: 'está' }],
+      wordBank: ['está', 'estão', 'é'],
+    } as unknown as Exercise;
+    expect(
+      has(checkContent(programWithTopic([fx])).problems, 'two gaps have the same answer')
+    ).toBe(true);
+    const typingOnly = { ...fx, allowedModes: ['typing'] } as unknown as Exercise;
+    expect(
+      has(checkContent(programWithTopic([typingOnly])).problems, 'two gaps have the same answer')
+    ).toBe(false);
+  });
+
   it('accepts an accent-only contrast when the exercise is tiles-only (exact option must be picked)', () => {
     const tilesOnly: FindErrorExercise = {
       ...validFindError,

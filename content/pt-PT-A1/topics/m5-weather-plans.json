@@ -1,0 +1,645 @@
+{
+  "id": "m5-weather-plans",
+  "moduleId": "m5",
+  "title": "Weather and future plans",
+  "kind": "vocabulary",
+  "context": "Talk about the weather and make simple plans in European Portuguese. For weather, use **Está** with an adjective: **Está frio** (It is cold), **Está calor** (It is hot), and **Está nublado** (It is cloudy). For what is happening now, use **Está a + infinitive**: **Está a chover** (It is raining) and **Está a nevar** (It is snowing). **Faz sol** means “It is sunny”; **há vento** means “It is windy”. In Portugal you also hear **está sol**, **faz vento** and **está muito vento** — all correct.\n\nTo talk about seasons, say **na primavera**, **no verão**, **no outono** and **no inverno**. European Portuguese uses **ir + infinitive** for a near-future plan. The form of **ir** changes, while the next verb stays in the infinitive: **Vou viajar** (I am going to travel), **vais visitar** (you are going to visit), **vamos descansar** (we are going to rest).\n\nExamples:\n- **No verão, vou visitar Faro.** — In summer, I am going to visit Faro.\n- **Amanhã vai estar frio.** — Tomorrow it is going to be cold.\n- **Amanhã vamos passear porque vai fazer sol.** — Tomorrow we are going for a walk because it is going to be sunny.\n- **Está a chover em Lisboa.** — It is raining in Lisbon.\n- **Eles vão viajar na primavera.** — They are going to travel in spring.\n- **No inverno, neva na serra.** — In winter, it snows in the mountains.\n\n**Watch out**\n- Say **está a chover** in Portugal, not *está chovendo*.\n- After **vou/vais/vai/vamos/vão**, use an infinitive: **vou viajar**, not *vou viajo*.",
+  "keyItems": [
+    {
+      "target": "Está a chover",
+      "support": "It is raining"
+    },
+    {
+      "target": "Está a nevar",
+      "support": "It is snowing"
+    },
+    {
+      "target": "Está frio",
+      "support": "It is cold"
+    },
+    {
+      "target": "Está calor",
+      "support": "It is hot"
+    },
+    {
+      "target": "Está nublado",
+      "support": "It is cloudy"
+    },
+    {
+      "target": "Faz sol",
+      "support": "It is sunny"
+    },
+    {
+      "target": "há vento",
+      "support": "it is windy"
+    },
+    {
+      "target": "a primavera",
+      "support": "spring"
+    },
+    {
+      "target": "o verão",
+      "support": "summer"
+    },
+    {
+      "target": "o outono",
+      "support": "autumn"
+    },
+    {
+      "target": "o inverno",
+      "support": "winter"
+    },
+    {
+      "target": "amanhã",
+      "support": "tomorrow"
+    },
+    {
+      "target": "viajar",
+      "support": "to travel"
+    },
+    {
+      "target": "visitar",
+      "support": "to visit"
+    },
+    {
+      "target": "descansar",
+      "support": "to rest"
+    },
+    {
+      "target": "passear",
+      "support": "to go for a walk"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m5-weather-plans-01",
+      "type": "build_phrase",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I am going to travel in summer.",
+      "explanation": "Use «ir» in the present followed by the infinitive to talk about a plan.",
+      "answer": ["Vou", "viajar", "no", "verão."],
+      "distractors": ["vais", "viajo"],
+      "acceptedAnswers": ["Eu vou viajar no verão."]
+    },
+    {
+      "id": "m5-weather-plans-02",
+      "type": "build_phrase",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We are going to visit Faro tomorrow.",
+      "explanation": "Use «ir» in the present followed by the infinitive to talk about a plan.",
+      "answer": ["Vamos", "visitar", "Faro", "amanhã."],
+      "distractors": ["vão", "visitamos"],
+      "acceptedAnswers": ["Nós vamos visitar Faro amanhã."]
+    },
+    {
+      "id": "m5-weather-plans-03",
+      "type": "build_phrase",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Ana is going to rest in winter.",
+      "explanation": "Use «ir» in the present followed by the infinitive to talk about a plan.",
+      "answer": ["A", "Ana", "vai", "descansar", "no", "inverno."],
+      "distractors": ["vais", "descansa"]
+    },
+    {
+      "id": "m5-weather-plans-04",
+      "type": "build_phrase",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: They are going to travel in spring.",
+      "explanation": "Use «ir» in the present followed by the infinitive to talk about a plan.",
+      "answer": ["Vão", "viajar", "na", "primavera."],
+      "distractors": ["vamos", "viajam"],
+      "acceptedAnswers": ["Eles vão viajar na primavera."]
+    },
+    {
+      "id": "m5-weather-plans-05",
+      "type": "build_phrase",
+      "topicId": "m5-weather-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: You (tu) are going to visit Porto in autumn.",
+      "explanation": "Use «ir» in the present followed by the infinitive to talk about a plan.",
+      "answer": ["Vais", "visitar", "o", "Porto", "no", "outono."],
+      "distractors": ["vai", "visitas"],
+      "acceptedAnswers": ["Tu vais visitar o Porto no outono."]
+    },
+    {
+      "id": "m5-weather-plans-06",
+      "type": "build_phrase",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: It is raining in Lisbon today.",
+      "explanation": "For weather happening right now, use «estar a + infinitive»: «está a chover».",
+      "answer": ["Hoje", "está", "a", "chover", "em", "Lisboa."],
+      "distractors": ["estão", "chove"]
+    },
+    {
+      "id": "m5-weather-plans-07",
+      "type": "build_phrase",
+      "topicId": "m5-weather-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We are going for a walk and it is sunny.",
+      "explanation": "Use «vamos + infinitive» for the plan. «Faz sol» is the usual expression for sunny weather.",
+      "answer": ["Vamos", "passear", "e", "faz", "sol."],
+      "distractors": ["vão", "passeamos", "faço"],
+      "acceptedAnswers": ["Nós vamos passear e faz sol."]
+    },
+    {
+      "id": "m5-weather-plans-08",
+      "type": "build_phrase",
+      "topicId": "m5-weather-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Miguel is going to swim because it is hot.",
+      "explanation": "«Vai nadar» is the plan (ir + infinitive); «está calor» describes the weather.",
+      "answer": ["O", "Miguel", "vai", "nadar", "porque", "está", "calor."],
+      "distractors": ["vais", "nada"]
+    },
+    {
+      "id": "m5-weather-plans-09",
+      "type": "build_phrase",
+      "topicId": "m5-weather-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: It is windy and cloudy in Braga.",
+      "explanation": "Say «há vento» for windy weather and «está nublado» for cloudy weather.",
+      "answer": ["Há", "vento", "e", "está", "nublado", "em", "Braga."],
+      "distractors": ["Fazem", "nublam"],
+      "acceptedAnswers": [
+        "Faz vento e está nublado em Braga.",
+        "Está vento e está nublado em Braga."
+      ]
+    },
+    {
+      "id": "m5-weather-plans-10",
+      "type": "build_phrase",
+      "topicId": "m5-weather-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I am going to stay at home because it is cold.",
+      "explanation": "Use «ir» in the present followed by the infinitive to talk about a plan.",
+      "answer": ["Vou", "ficar", "em", "casa", "porque", "está", "frio."],
+      "distractors": ["vais", "fico"],
+      "acceptedAnswers": ["Eu vou ficar em casa porque está frio."]
+    },
+    {
+      "id": "m5-weather-plans-11",
+      "type": "question_for_answer",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask Rita what she is going to do tomorrow.",
+      "explanation": "Use the question word first, then the present form of «ir» and the infinitive.",
+      "givenAnswer": "Vou visitar Coimbra.",
+      "answer": ["O", "que", "vais", "fazer", "amanhã?"],
+      "distractors": ["Onde", "vai", "viajar?"],
+      "acceptedAnswers": ["O que é que vais fazer amanhã?", "O que vais fazer amanhã?"]
+    },
+    {
+      "id": "m5-weather-plans-12",
+      "type": "question_for_answer",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask João where he is going to travel.",
+      "explanation": "Use the question word first, then the present form of «ir» and the infinitive.",
+      "givenAnswer": "Vou viajar para Madrid.",
+      "answer": ["Para", "onde", "vais", "viajar?"],
+      "distractors": ["Quando", "chover?"],
+      "acceptedAnswers": ["Para onde é que vais viajar?"]
+    },
+    {
+      "id": "m5-weather-plans-13",
+      "type": "question_for_answer",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask what the weather is like in Porto.",
+      "explanation": "Ask about the weather with «Como está o tempo?» or «Que tempo faz?».",
+      "givenAnswer": "Está frio e está a chover.",
+      "answer": ["Como", "está", "o", "tempo", "no", "Porto?"],
+      "distractors": ["Onde"],
+      "acceptedAnswers": ["Como é que está o tempo no Porto?", "Que tempo faz no Porto?"]
+    },
+    {
+      "id": "m5-weather-plans-14",
+      "type": "question_for_answer",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask Ana when she is going to visit Faro.",
+      "explanation": "Use the question word first, then the present form of «ir» and the infinitive.",
+      "givenAnswer": "Vou visitar Faro no verão.",
+      "answer": ["Quando", "vais", "visitar", "Faro?"],
+      "distractors": ["Onde"],
+      "acceptedAnswers": ["Quando é que vais visitar Faro?"]
+    },
+    {
+      "id": "m5-weather-plans-15",
+      "type": "question_for_answer",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask if Miguel is going to travel in winter.",
+      "explanation": "Use the question word first, then the present form of «ir» and the infinitive.",
+      "givenAnswer": "Sim, vou viajar no inverno.",
+      "answer": ["Vais", "viajar", "no", "inverno?"],
+      "distractors": ["Vai", "verão?"],
+      "acceptedAnswers": ["Tu vais viajar no inverno?"]
+    },
+    {
+      "id": "m5-weather-plans-16",
+      "type": "question_for_answer",
+      "topicId": "m5-weather-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask your friends what they are going to do on Saturday.",
+      "explanation": "Question word first, then «ir» (vão) + infinitive: «O que vão fazer…?».",
+      "givenAnswer": "Vamos ficar em casa porque vai chover.",
+      "answer": ["O", "que", "vão", "fazer", "no", "sábado?"],
+      "distractors": ["Onde"],
+      "acceptedAnswers": [
+        "O que é que vão fazer no sábado?",
+        "O que é que vocês vão fazer no sábado?"
+      ]
+    },
+    {
+      "id": "m5-weather-plans-17",
+      "type": "question_for_answer",
+      "topicId": "m5-weather-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask Sofia whether it is sunny in Lisbon.",
+      "explanation": "«Faz sol?» asks if it is sunny. A yes/no question keeps the order of a statement.",
+      "givenAnswer": "Sim, faz sol.",
+      "answer": ["Faz", "sol", "em", "Lisboa?"],
+      "distractors": ["Fazem"],
+      "acceptedAnswers": ["Está sol em Lisboa?"]
+    },
+    {
+      "id": "m5-weather-plans-18",
+      "type": "question_for_answer",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask your friend (tu) where they are going to stay.",
+      "explanation": "Use the question word first, then the present form of «ir» and the infinitive.",
+      "givenAnswer": "Vou ficar em casa da Inês.",
+      "answer": ["Onde", "vais", "ficar?"],
+      "distractors": ["Quando"],
+      "acceptedAnswers": ["Onde é que vais ficar?"]
+    },
+    {
+      "id": "m5-weather-plans-19",
+      "type": "translate_word",
+      "topicId": "m5-weather-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "«a chover» is the European Portuguese expression for “raining”.",
+      "direction": "toTarget",
+      "sentence": "It is **raining** in Porto.",
+      "word": "raining",
+      "answer": "a chover",
+      "options": ["a chover", "a nevar", "nublado", "vento"]
+    },
+    {
+      "id": "m5-weather-plans-20",
+      "type": "translate_word",
+      "topicId": "m5-weather-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "«verão» is the European Portuguese expression for “summer”.",
+      "direction": "toTarget",
+      "sentence": "In **summer**, we are going to the beach.",
+      "word": "summer",
+      "answer": "verão",
+      "options": ["verão", "inverno", "outono", "primavera"]
+    },
+    {
+      "id": "m5-weather-plans-21",
+      "type": "translate_word",
+      "topicId": "m5-weather-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "«há vento» is the European Portuguese expression for “windy”.",
+      "direction": "toTarget",
+      "sentence": "It is **windy** today.",
+      "word": "windy",
+      "answer": "há vento",
+      "options": ["há vento", "faz sol", "está frio", "está calor"]
+    },
+    {
+      "id": "m5-weather-plans-22",
+      "type": "translate_word",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "«viajar» is the European Portuguese expression for “travel”.",
+      "direction": "toTarget",
+      "sentence": "They are going to **travel** in spring.",
+      "word": "travel",
+      "answer": "viajar",
+      "options": ["viajar", "viajam", "visitar", "descansar"]
+    },
+    {
+      "id": "m5-weather-plans-23",
+      "type": "translate_word",
+      "topicId": "m5-weather-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "«nublado» is the European Portuguese expression for “cloudy”.",
+      "direction": "toTarget",
+      "sentence": "It is **cloudy** in Coimbra.",
+      "word": "cloudy",
+      "answer": "nublado",
+      "options": ["nublado", "nevar", "calor", "primavera"]
+    },
+    {
+      "id": "m5-weather-plans-24",
+      "type": "translate_word",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "«visitar» is the European Portuguese expression for “visit”.",
+      "direction": "toTarget",
+      "sentence": "I am going to **visit** Faro.",
+      "word": "visit",
+      "answer": "visitar",
+      "options": ["visitar", "viajar", "visito", "passear"]
+    },
+    {
+      "id": "m5-weather-plans-25",
+      "type": "fill_gaps",
+      "topicId": "m5-weather-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the weather sentence.",
+      "explanation": "For an action happening now, use «estar a + infinitive»: «está a chover».",
+      "template": "Hoje ___ a chover em Lisboa.",
+      "gaps": [
+        {
+          "answer": "está"
+        }
+      ],
+      "wordBank": ["está", "estão", "é", "faz"]
+    },
+    {
+      "id": "m5-weather-plans-26",
+      "type": "fill_gaps",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the plan.",
+      "explanation": "Use the present form of «ir» with the infinitive to express a future plan.",
+      "template": "Amanhã, nós ___ visitar o Porto.",
+      "gaps": [
+        {
+          "answer": "vamos"
+        }
+      ],
+      "wordBank": ["vamos", "vão", "visitamos", "vai"]
+    },
+    {
+      "id": "m5-weather-plans-27",
+      "type": "fill_gaps",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the two weather phrases.",
+      "explanation": "Weather in general: «está frio». For snow as a habit in winter use the present «neva».",
+      "template": "No inverno, ___ frio e na serra ___.",
+      "gaps": [
+        {
+          "answer": "está"
+        },
+        {
+          "answer": "neva"
+        }
+      ],
+      "wordBank": ["está", "neva", "estão", "nevam", "é"]
+    },
+    {
+      "id": "m5-weather-plans-28",
+      "type": "fill_gaps",
+      "topicId": "m5-weather-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the plan with the right form and infinitive.",
+      "explanation": "Use the present form of «ir» with the infinitive to express a future plan.",
+      "template": "A Rita ___ viajar na primavera e eu ___ visitar a minha família.",
+      "gaps": [
+        {
+          "answer": "vai"
+        },
+        {
+          "answer": "vou"
+        }
+      ],
+      "wordBank": ["vai", "vou", "vais", "viaja", "visito"]
+    },
+    {
+      "id": "m5-weather-plans-29",
+      "type": "fill_gaps",
+      "topicId": "m5-weather-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the three gaps.",
+      "explanation": "Say «faz sol». For a plan use «vamos» + infinitive.",
+      "template": "No verão, ___ sol e nós ___ visitar Faro.",
+      "gaps": [
+        {
+          "answer": "faz"
+        },
+        {
+          "answer": "vamos"
+        }
+      ],
+      "wordBank": ["faz", "vamos", "há", "vão", "visitamos"]
+    },
+    {
+      "id": "m5-weather-plans-30",
+      "type": "fill_gaps",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the weather report.",
+      "explanation": "Weather: «está nublado» (cloudy), «há vento» (windy).",
+      "template": "Em Braga ___ nublado e ___ vento.",
+      "gaps": [
+        {
+          "answer": "está"
+        },
+        {
+          "answer": "há"
+        }
+      ],
+      "wordBank": ["está", "há", "faz", "estão", "vai"]
+    },
+    {
+      "id": "m5-weather-plans-31",
+      "type": "fill_gaps",
+      "topicId": "m5-weather-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the plan.",
+      "explanation": "With «tu», use «vais»; weather is expressed as «está frio».",
+      "template": "Tu ___ ficar em casa porque ___ frio.",
+      "gaps": [
+        {
+          "answer": "vais"
+        },
+        {
+          "answer": "está"
+        }
+      ],
+      "wordBank": ["vais", "vai", "estás", "está", "estão"]
+    },
+    {
+      "id": "m5-weather-plans-32",
+      "type": "find_error",
+      "topicId": "m5-weather-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "For rain happening now, use «estar a chover».",
+      "sentence": ["Está", "de", "chover", "em", "Faro."],
+      "wrongIndex": 1,
+      "correction": "a",
+      "options": ["a", "em", "para"]
+    },
+    {
+      "id": "m5-weather-plans-33",
+      "type": "find_error",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «nós», the present form of «ir» is «vamos».",
+      "sentence": ["Nós", "vai", "visitar", "Lisboa", "amanhã."],
+      "wrongIndex": 1,
+      "correction": "vamos",
+      "options": ["vamos", "vais", "vão"]
+    },
+    {
+      "id": "m5-weather-plans-34",
+      "type": "find_error",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «vou», use the infinitive «viajar».",
+      "sentence": ["No", "verão,", "vou", "viajo", "para", "o", "Algarve."],
+      "wrongIndex": 3,
+      "correction": "viajar",
+      "options": ["viajar", "viaja", "viajas"]
+    },
+    {
+      "id": "m5-weather-plans-35",
+      "type": "find_error",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «estar a» the verb stays in the infinitive: «vai estar a chover».",
+      "sentence": ["Amanhã", "vai", "estar", "a", "chove."],
+      "wrongIndex": 4,
+      "correction": "chover",
+      "options": ["chover", "chovem", "chova"]
+    },
+    {
+      "id": "m5-weather-plans-36",
+      "type": "find_error",
+      "topicId": "m5-weather-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «vai», keep the second verb in the infinitive: «visitar».",
+      "sentence": ["Amanhã,", "a", "Ana", "vai", "visita", "o", "Porto."],
+      "wrongIndex": 4,
+      "correction": "visitar",
+      "options": ["visitar", "visitas", "visitamos"]
+    },
+    {
+      "id": "m5-weather-plans-37",
+      "type": "about_me",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use your own choice with a weather phrase or a plan using «vou + infinitive».",
+      "question": "Que tempo preferes: frio ou calor?",
+      "sampleAnswer": "Prefiro o verão porque está calor.",
+      "hints": ["prefiro o inverno", "está frio", "faz sol", "há vento"]
+    },
+    {
+      "id": "m5-weather-plans-38",
+      "type": "about_me",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use your own choice with a weather phrase or a plan using «vou + infinitive».",
+      "question": "Para onde vais viajar nas próximas férias?",
+      "sampleAnswer": "Vou viajar para Faro no verão.",
+      "hints": ["para o Porto", "na primavera", "no inverno", "vou visitar"]
+    },
+    {
+      "id": "m5-weather-plans-39",
+      "type": "about_me",
+      "topicId": "m5-weather-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Talk about a habit with the present: «Fico em casa», «Vejo televisão».",
+      "question": "O que fazes quando está a chover?",
+      "sampleAnswer": "Fico em casa e leio um livro.",
+      "hints": ["vejo", "televisão", "vou", "ao", "cinema", "durmo"]
+    },
+    {
+      "id": "m5-weather-plans-40",
+      "type": "match_pairs",
+      "topicId": "m5-weather-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese expression to its meaning.",
+      "explanation": "These are common European Portuguese expressions for weather and seasons.",
+      "pairs": [
+        {
+          "target": "Está a chover",
+          "support": "It is raining"
+        },
+        {
+          "target": "Faz sol",
+          "support": "It is sunny"
+        },
+        {
+          "target": "há vento",
+          "support": "it is windy"
+        },
+        {
+          "target": "o outono",
+          "support": "autumn"
+        },
+        {
+          "target": "o inverno",
+          "support": "winter"
+        }
+      ]
+    }
+  ]
+}
