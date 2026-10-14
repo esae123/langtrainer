@@ -80,9 +80,13 @@ describe('program registry — merging bundled and imported courses', () => {
     await db.programs.update('fr-a2', { importedAt: 1 });
 
     const entries = await loadAllEntries();
-    expect(entries.map((entry) => entry.program.id)).toEqual([BUNDLED_ID, 'fr-a2', 'en-b2']);
+    expect(entries.map((entry) => entry.program.id)).toEqual([
+      ...bundledEntries.map((entry) => entry.program.id),
+      'fr-a2',
+      'en-b2',
+    ]);
     expect(entries[0].source).toBe('bundled');
-    expect(entries[2]).toMatchObject({ source: 'imported', fileName: 'en-b2.json' });
+    expect(entries.at(-1)).toMatchObject({ source: 'imported', fileName: 'en-b2.json' });
   });
 
   it('ignores a stored row whose program is damaged, and one shadowing a bundled id', async () => {
@@ -101,7 +105,9 @@ describe('program registry — merging bundled and imported courses', () => {
     });
 
     const entries = await loadAllEntries();
-    expect(entries.map((entry) => entry.program.id)).toEqual([BUNDLED_ID]);
+    expect(entries.map((entry) => entry.program.id)).toEqual(
+      bundledEntries.map((entry) => entry.program.id)
+    );
     expect(entries[0].source).toBe('bundled');
   });
 });
