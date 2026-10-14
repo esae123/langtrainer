@@ -9,6 +9,7 @@ import type { ExerciseViewProps } from './types';
 export function FindErrorView({
   exercise,
   mode,
+  targetLanguage = 'pt-PT',
   seed,
   onChange,
   onSubmit,
@@ -62,6 +63,7 @@ export function FindErrorView({
       </p>
       <TextAnswerInput
         answer={exercise.correction}
+        targetLanguage={targetLanguage}
         options={exercise.options}
         mode={mode}
         seed={seed}

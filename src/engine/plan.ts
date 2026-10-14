@@ -154,6 +154,18 @@ export function exercisesByTopic(program: Program): Map<string, Exercise[]> {
  */
 export function currentTopicOf(program: Program, progress: TopicProgress[]): Topic | undefined {
   const byId = new Map(progress.map((row) => [row.topicId, row]));
+  if (program.topicCompletionPolicy === 'all-exercises-correct') {
+    return orderedTopics(program).find((topic) => {
+      if (topic.exercises.length === 0) return false;
+      const row = byId.get(topic.id);
+      const seen = new Set(row?.seenExerciseIds ?? []);
+      const allSeen = topic.exercises.every((exercise) => seen.has(exercise.id));
+      // Only the new completion marker proves each item was answered correctly in a
+      // regular test session. Legacy rows cannot distinguish that from practice fixes.
+      const completed = allSeen && Boolean(row?.allExercisesCompletedAt);
+      return !completed;
+    });
+  }
   return orderedTopics(program).find((topic) => {
     const status = byId.get(topic.id)?.status ?? 'new';
     return status === 'new' || status === 'learning';
@@ -492,6 +504,46 @@ function buildItems(
 }
 
 export function planSession(input: PlanInput): SessionPlan {
+  if (input.program.topicCompletionPolicy === 'all-exercises-correct') {
+    const topic = currentTopicOf(input.program, input.progress);
+    if (topic) {
+      const row = input.progress.find((entry) => entry.topicId === topic.id);
+      const seen = new Set(row?.seenExerciseIds ?? []);
+      const wrong = new Set(row?.wrongExerciseIds ?? []);
+      const legacyCompletedWithoutProof =
+        row &&
+        COMPLETED_STATUSES.has(row.status) &&
+        !row.allExercisesCompletedAt &&
+        topic.exercises.every((exercise) => seen.has(exercise.id));
+      const exercises = orderedPool(
+        topic.exercises,
+        poolContext(input, topic.id, new Set()),
+        false
+      ).filter(
+        (exercise) =>
+          legacyCompletedWithoutProof || !seen.has(exercise.id) || wrong.has(exercise.id)
+      );
+      const items = exercises.map((exercise, index) => {
+        const item: PlannedItem = {
+          exercise,
+          mode: pickMode(exercise.allowedModes, input.inputShares, input.rng),
+          block: 'new',
+          topicId: topic.id,
+        };
+        if (index === 0) item.showContextBefore = true;
+        return item;
+      });
+      return {
+        id: input.id ?? `s${input.now.toString(36)}-${Math.floor(input.rng() * 0xffffff).toString(36)}`,
+        programId: input.program.id,
+        plannedLength: items.length,
+        open: false,
+        items,
+        kind: 'regular',
+      };
+    }
+  }
+
   const open = input.sessionLength === 'open';
   const counts = blockCountsFor(input.sessionLength, input.sessionMix);
   const { items } = buildItems(input, counts, new Set(), new Set());
@@ -541,8 +593,19 @@ function focusItems(
   const { program, rng } = input;
   const topic = orderedTopics(program).find((candidate) => candidate.id === topicId);
   const exercises = exercisesByTopic(program).get(topicId) ?? [];
-  const pool = orderedPool(exercises, poolContext(input, topicId, used), false);
-  return pool.slice(0, count).map((exercise, i) => {
+  let pool = orderedPool(exercises, poolContext(input, topicId, used), false);
+  if (
+    program.topicCompletionPolicy === 'all-exercises-correct' &&
+    currentTopicOf(program, input.progress)?.id === topicId
+  ) {
+    const row = input.progress.find((entry) => entry.topicId === topicId);
+    const seen = new Set(row?.seenExerciseIds ?? []);
+    const wrong = new Set(row?.wrongExerciseIds ?? []);
+    pool = pool.filter((exercise) => !seen.has(exercise.id) || wrong.has(exercise.id));
+  } else {
+    pool = pool.slice(0, count);
+  }
+  return pool.map((exercise, i) => {
     const item: PlannedItem = {
       exercise,
       mode: pickMode(exercise.allowedModes, input.inputShares, rng),
@@ -562,7 +625,10 @@ function focusItems(
  * topic until its pool is exhausted (see `planNextCycle`).
  */
 export function planFocus(input: PlanInput, topicId: string): SessionPlan {
-  const open = input.sessionLength === 'open';
+  const isCompletingTopic =
+    input.program.topicCompletionPolicy === 'all-exercises-correct' &&
+    currentTopicOf(input.program, input.progress)?.id === topicId;
+  const open = input.sessionLength === 'open' && !isCompletingTopic;
   const count = input.sessionLength === 'open' ? OPEN_CYCLE_LENGTH : input.sessionLength;
   const items = focusItems(input, topicId, count, new Set(), true);
   return {

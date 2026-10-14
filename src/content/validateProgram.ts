@@ -95,7 +95,10 @@ function validateExerciseBase(v: Record<string, unknown>, path: string) {
     ),
     prompt: str(v.prompt, `${path}.prompt`),
     explanation: str(v.explanation, `${path}.explanation`),
-    tags: v.tags === undefined ? undefined : arr(v.tags, `${path}.tags`).map((t, i) => str(t, `${path}.tags[${i}]`)),
+    tags:
+      v.tags === undefined
+        ? undefined
+        : arr(v.tags, `${path}.tags`).map((t, i) => str(t, `${path}.tags[${i}]`)),
   };
 }
 
@@ -139,7 +142,9 @@ function validateExercise(v: unknown, path: string): Exercise {
                   ),
           };
         }),
-        wordBank: arr(v.wordBank, `${path}.wordBank`).map((x, i) => str(x, `${path}.wordBank[${i}]`)),
+        wordBank: arr(v.wordBank, `${path}.wordBank`).map((x, i) =>
+          str(x, `${path}.wordBank[${i}]`)
+        ),
       };
       return e;
     }
@@ -175,7 +180,9 @@ function validateExercise(v: unknown, path: string): Exercise {
       const e: FindErrorExercise = {
         ...base,
         type,
-        sentence: arr(v.sentence, `${path}.sentence`).map((x, i) => str(x, `${path}.sentence[${i}]`)),
+        sentence: arr(v.sentence, `${path}.sentence`).map((x, i) =>
+          str(x, `${path}.sentence[${i}]`)
+        ),
         wrongIndex: num(v.wrongIndex, `${path}.wrongIndex`),
         correction: str(v.correction, `${path}.correction`),
         options: arr(v.options, `${path}.options`).map((x, i) => str(x, `${path}.options[${i}]`)),
@@ -232,6 +239,12 @@ function validateExercise(v: unknown, path: string): Exercise {
         sentence: str(v.sentence, `${path}.sentence`),
         word: str(v.word, `${path}.word`),
         answer: str(v.answer, `${path}.answer`),
+        acceptedAnswers:
+          v.acceptedAnswers === undefined
+            ? undefined
+            : arr(v.acceptedAnswers, `${path}.acceptedAnswers`).map((x, i) =>
+                str(x, `${path}.acceptedAnswers[${i}]`)
+              ),
         options: arr(v.options, `${path}.options`).map((x, i) => str(x, `${path}.options[${i}]`)),
       };
       return e;
@@ -241,6 +254,37 @@ function validateExercise(v: unknown, path: string): Exercise {
 
 function validateTopic(v: unknown, path: string): Topic {
   if (!isRecord(v)) fail(path, 'expected an object');
+  let coverage: Topic['coverage'];
+  if (v.coverage !== undefined) {
+    if (!isRecord(v.coverage)) fail(`${path}.coverage`, 'expected an object');
+    const items = arr(v.coverage.items, `${path}.coverage.items`).map((item, i) => {
+      if (!isRecord(item)) fail(`${path}.coverage.items[${i}]`, 'expected an object');
+      return {
+        id: str(item.id, `${path}.coverage.items[${i}].id`),
+        phrase: str(item.phrase, `${path}.coverage.items[${i}].phrase`),
+      };
+    });
+    if (items.length === 0) fail(`${path}.coverage.items`, 'expected at least one item');
+    const minimumExercisesPerItem = num(
+      v.coverage.minimumExercisesPerItem,
+      `${path}.coverage.minimumExercisesPerItem`
+    );
+    if (!Number.isInteger(minimumExercisesPerItem) || minimumExercisesPerItem < 1) {
+      fail(`${path}.coverage.minimumExercisesPerItem`, 'expected a positive integer');
+    }
+    let assignments: Record<string, string> | undefined;
+    if (v.coverage.assignments !== undefined) {
+      if (!isRecord(v.coverage.assignments))
+        fail(`${path}.coverage.assignments`, 'expected an object');
+      assignments = Object.fromEntries(
+        Object.entries(v.coverage.assignments).map(([exerciseId, itemId]) => [
+          exerciseId,
+          str(itemId, `${path}.coverage.assignments.${exerciseId}`),
+        ])
+      );
+    }
+    coverage = { items, minimumExercisesPerItem, ...(assignments ? { assignments } : {}) };
+  }
   return {
     id: str(v.id, `${path}.id`),
     moduleId: str(v.moduleId, `${path}.moduleId`),
@@ -248,6 +292,7 @@ function validateTopic(v: unknown, path: string): Topic {
     kind: oneOf(v.kind, ['grammar', 'vocabulary', 'situation'] as const, `${path}.kind`),
     context: str(v.context, `${path}.context`),
     keyItems: validateKeyItems(v.keyItems, `${path}.keyItems`),
+    ...(coverage ? { coverage } : {}),
     exercises: arr(v.exercises, `${path}.exercises`).map((e, i) =>
       validateExercise(e, `${path}.exercises[${i}]`)
     ),
@@ -277,7 +322,11 @@ function validatePhraseSet(v: unknown, path: string): PhraseSet {
         register:
           p.register === undefined
             ? undefined
-            : oneOf(p.register, ['formal', 'informal', 'neutral'] as const, `${path}.phrases[${i}].register`),
+            : oneOf(
+                p.register,
+                ['formal', 'informal', 'neutral'] as const,
+                `${path}.phrases[${i}].register`
+              ),
         situation: optStr(p.situation, `${path}.phrases[${i}].situation`),
       };
     }),
@@ -300,6 +349,10 @@ export function validateProgram(json: unknown): Program {
     targetLanguage: str(json.targetLanguage, '$.targetLanguage'),
     supportLanguage: str(json.supportLanguage, '$.supportLanguage'),
     level: str(json.level, '$.level'),
+    topicCompletionPolicy:
+      json.topicCompletionPolicy === undefined
+        ? undefined
+        : oneOf(json.topicCompletionPolicy, ['all-exercises-correct'] as const, '$.topicCompletionPolicy'),
     modules: arr(json.modules, '$.modules').map((m, i) => validateModule(m, `$.modules[${i}]`)),
     phraseSets: arr(json.phraseSets, '$.phraseSets').map((p, i) =>
       validatePhraseSet(p, `$.phraseSets[${i}]`)

@@ -13,6 +13,7 @@ interface TypingInputProps {
   /** Renders a compact field (used for inline gaps). */
   compact?: boolean;
   autoFocus?: boolean;
+  targetLanguage?: string;
 }
 
 /**
@@ -28,6 +29,7 @@ export function TypingInput({
   placeholder,
   compact,
   autoFocus,
+  targetLanguage = 'pt-PT',
 }: TypingInputProps) {
   const ref = useRef<HTMLInputElement | HTMLTextAreaElement | null>(null);
   const caretRef = useRef<number | null>(null);
@@ -51,7 +53,7 @@ export function TypingInput({
 
   const shared = {
     value,
-    lang: 'pt-PT',
+    lang: targetLanguage,
     autoCapitalize: 'off' as const,
     autoCorrect: 'off',
     autoComplete: 'off',
@@ -88,7 +90,7 @@ export function TypingInput({
         />
       )}
 
-      <AccentBar onInsert={insert} />
+      {targetLanguage.toLowerCase().startsWith('pt') && <AccentBar onInsert={insert} />}
     </div>
   );
 }

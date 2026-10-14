@@ -296,6 +296,12 @@ describe('checkAnswer — translate_word', () => {
     expect(checkAnswer(exercise, 'tiles', { kind: 'text', text: 'trabalho' }).correct).toBe(true);
     expect(checkAnswer(exercise, 'tiles', { kind: 'text', text: 'trabalhas' }).correct).toBe(false);
   });
+
+  it('accepts declared synonymous phrasal-verb answers', () => {
+    const synonymous = { ...exercise, answer: 'doze off', acceptedAnswers: ['nod off'] };
+    expect(checkAnswer(synonymous, 'tiles', { kind: 'text', text: 'doze off' }).correct).toBe(true);
+    expect(checkAnswer(synonymous, 'tiles', { kind: 'text', text: 'nod off' }).correct).toBe(true);
+  });
 });
 
 describe('checkAnswer — number_sequence', () => {

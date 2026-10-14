@@ -15,6 +15,7 @@
   "backup.exportError": "Backup failed",
   "learn.currentTopic": "Current topic",
   "learn.currentTopicMeta": "{seen}/{threshold} exercises answered",
+  "learn.currentTopicMetaAllCorrect": "{seen}/{threshold} exercises answered correctly",
   "learn.currentTopicNone": "All topics completed",
   "learn.currentTopicNoneBody": "Sessions now focus on reviews and everyday phrases.",
   "learn.nextReview": "Next review: {date}",

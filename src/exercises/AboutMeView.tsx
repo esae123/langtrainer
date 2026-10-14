@@ -14,6 +14,7 @@ import type { ExerciseViewProps } from './types';
 export function AboutMeView({
   exercise,
   mode,
+  targetLanguage = 'pt-PT',
   seed,
   onChange,
   onSubmit,
@@ -59,6 +60,7 @@ export function AboutMeView({
           onChange={setText}
           onSubmit={onSubmit}
           multiline
+          targetLanguage={targetLanguage}
           label={t('session.typeAnswer')}
           placeholder={t('session.typeAnswerPlaceholder')}
         />

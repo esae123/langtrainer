@@ -8,6 +8,7 @@ import type { ExerciseViewProps } from './types';
 export function TranslateWordView({
   exercise,
   mode,
+  targetLanguage = 'pt-PT',
   seed,
   onChange,
   onSubmit,
@@ -29,6 +30,7 @@ export function TranslateWordView({
       </div>
       <TextAnswerInput
         answer={exercise.answer}
+        targetLanguage={targetLanguage}
         options={exercise.options}
         mode={mode}
         seed={seed}

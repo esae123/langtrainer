@@ -3,7 +3,7 @@
   "moduleId": "m1",
   "title": "Daily routines, rest and leisure",
   "kind": "situation",
-  "context": "In daily life, we use many phrasal verbs to describe routines, rest, and leisure activities.\n\n### Essential Routines and Rest\n- **wake up**: stop sleeping. *I wake up at 7:00 AM every morning.*\n- **get up**: rise from bed or stand up. *He got up as soon as the alarm rang.*\n- **stay up**: go to bed later than usual. *Don't stay up too late before an exam.*\n- **doze off / nod off**: fall into a light sleep unintentionally. *She dozed off during the movie.*\n- **chill out / kick back**: relax completely. *We decided to kick back and watch television.*\n\n### Time with Others & Free Time\n- **hang out / hang around**: spend leisure time without a specific plan. *They love to hang out at the cafe.*\n- **drop in**: visit someone unexpectedly. *Feel free to drop in whenever you are nearby.*\n- **fool around / goof around / mess around**: waste time doing silly things. *Stop fooling around and finish your work!*\n\nWatch out!\n- Do not confuse **wake up** (opening your eyes) with **get up** (physically stepping out of bed).\n- **Mess up** means to ruin or make dirty, whereas **mess around** means to play or waste time.",
+  "context": "These phrasal verbs describe sleep, free time, routines, and everyday behaviour. Each entry gives the meaning used in this topic and an example.\n\n### Sleep and daily routine\n- **wake up**: stop sleeping. *I woke up at six, but stayed in bed until seven.*\n- **get up**: get out of bed or rise to your feet. *I got up as soon as the alarm rang.*\n- **stay up**: remain awake instead of going to bed. *We stayed up late to watch the final.*\n- **stay out**: remain away from home. *The teenagers stayed out until midnight on Saturday.*\n- **doze off / nod off**: fall into a light sleep unintentionally; these are interchangeable for this meaning. *I nodded off during the film.*\n\n### Rest and leisure\n- **chill out**: relax and take it easy (informal). *We chilled out at home after work.*\n- **kick back**: relax and enjoy your free time (informal). *On Sunday, I kicked back with a book.*\n- **lie around**: recline and do very little. *I lay around all morning on my day off.*\n- **hang out**: spend relaxed, informal time in a place or with people (informal). *They hang out at the café after class.*\n- **hang around**: stay somewhere, often while waiting or passing time (informal). *We hung around outside until the doors opened.*\n\n### Socialising and behaviour\n- **drop in**: visit someone without arranging it in advance. *Feel free to drop in when you are nearby.*\n- **fool around**: waste time doing silly or unimportant things. *Stop fooling around and finish your work.*\n- **goof around**: play or waste time in a silly way (informal; similar to fool around). *The students were goofing around instead of studying.*\n- **mess around**: waste time doing unimportant things; it can also mean handle something carelessly. *They were messing around when they should have been working.*\n- **act up**: misbehave, or (of a machine/body part) cause problems. *The children acted up during the lesson.*\n- **drop out**: leave a school, course, or programme before finishing it. *She dropped out of college in her second year.*\n- **kick out**: force or order someone to leave a place or group. *The club kicked him out for starting a fight.*\n- **hurry up**: do something or move faster. *We hurried up so we would not miss the bus.*\n\n### Calls and practical situations\n- **hang on**: wait briefly, especially on the phone; it can also mean hold tightly. *Hang on while I check the train times.*\n- **hang up**: end a telephone call. *He hung up before I could say goodbye.*\n- **mess up**: make a mistake, spoil a plan, or make a place untidy. *I messed up the booking and had to call the hotel.*\n\nWatch out: **wake up** means stop sleeping, while **get up** means leave your bed or rise to your feet. **Stay up** means remain awake; **stay out** means remain away from home. **Fool around**, **goof around**, and **mess around** can all describe wasting time, but use the specific context to make the intended phrase clear.",
   "keyItems": [
     {
       "target": "act up",
@@ -281,7 +281,8 @@
       "sentence": "The lecture was so boring that many students began to **fall asleep**.",
       "word": "fall asleep",
       "answer": "doze off",
-      "options": ["doze off", "wake up", "stay up", "get up"],
+      "acceptedAnswers": ["nod off"],
+      "options": ["doze off", "nod off", "wake up", "get up"],
       "tags": ["coverage:doze-off"]
     },
     {
@@ -528,7 +529,8 @@
       "sentence": "I was so exhausted that I started to **fall asleep briefly** during the meeting.",
       "word": "fall asleep briefly",
       "answer": "nod off",
-      "options": ["nod off", "wake up", "stay up", "get up"],
+      "acceptedAnswers": ["doze off"],
+      "options": ["nod off", "doze off", "wake up", "stay up"],
       "tags": ["coverage:nod-off"]
     },
     {
@@ -621,6 +623,7 @@
       "explanation": "'Doze off' means to fall into a light sleep unintentionally.",
       "givenAnswer": "I dozed off during the long presentation.",
       "answer": ["Did", "you", "doze", "off", "during", "the", "presentation?"],
+      "acceptedAnswers": ["Did you nod off during the presentation?"],
       "distractors": ["out", "dozing", "dozed"],
       "tags": ["coverage:doze-off"]
     },
@@ -901,7 +904,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Build a sentence saying that teenagers should not stay out late on school nights.",
+      "prompt": "Give a rule for teenagers about what time they should return home on school nights.",
       "explanation": "'Stay out' means to remain away from home instead of returning inside.",
       "tags": ["coverage:stay-out"],
       "answer": ["Teenagers", "should", "not", "stay", "out", "late."],

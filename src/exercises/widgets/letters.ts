@@ -112,7 +112,7 @@ export function isLettersComplete(answer: string, typed: string): boolean {
 }
 
 /** The letter keys: every letter of the answer plus a few plausible distractors. */
-export function letterKeys(answer: string, rng: Rng): string[] {
+export function letterKeys(answer: string, rng: Rng, includeAccentDistractors = true): string[] {
   const needed = new Set(
     letterRows(answer)
       .flat()
@@ -126,9 +126,11 @@ export function letterKeys(answer: string, rng: Rng): string[] {
   };
 
   // Accent twins of letters that really are in the answer make the best distractors.
-  for (const family of LETTER_TWINS) {
-    if (!family.some((char) => needed.has(char))) continue;
-    for (const char of family) add(char);
+  if (includeAccentDistractors) {
+    for (const family of LETTER_TWINS) {
+      if (!family.some((char) => needed.has(char))) continue;
+      for (const char of family) add(char);
+    }
   }
   for (const char of COMMON_LETTERS) add(char);
 

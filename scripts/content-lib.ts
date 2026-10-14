@@ -40,7 +40,10 @@ export function bundledProgramIds(): string[] {
  * (src/content/programs/<id>.json, committed); any other course becomes an importable file
  * in dist-courses/<id>.json (gitignored) to be imported on the phone (docs/courses.md).
  */
-export function buildOutputPath(programId: string, bundledIds: readonly string[] = bundledProgramIds()): string {
+export function buildOutputPath(
+  programId: string,
+  bundledIds: readonly string[] = bundledProgramIds()
+): string {
   return bundledIds.includes(programId)
     ? path.join(REPO_ROOT, 'src', 'content', 'programs', `${programId}.json`)
     : path.join(REPO_ROOT, 'dist-courses', `${programId}.json`);
@@ -99,10 +102,13 @@ export interface ModuleTopicBrief {
   brief?: string;
   known?: string;
   avoid?: string;
+  coverage?: { items: { id: string; phrase: string }[]; minimumExercisesPerItem: number };
 }
 
 function isModuleTopicBrief(v: unknown): v is ModuleTopicBrief {
-  return typeof v === 'object' && v !== null && typeof (v as Record<string, unknown>).id === 'string';
+  return (
+    typeof v === 'object' && v !== null && typeof (v as Record<string, unknown>).id === 'string'
+  );
 }
 
 /** Reads the `topics[]` briefs of a module file, or `[]` if it uses the old topicOrder-only shape. */
@@ -145,7 +151,28 @@ function loadModuleTopics(
       });
       continue;
     }
-    topics.push(readJson(root, topicRelPath));
+    const topic = readJson(root, topicRelPath);
+    const brief = moduleTopicBriefs(moduleJson).find((entry) => entry.id === topicId);
+    const existingCoverage = topic.coverage;
+    const existingAssignments =
+      typeof existingCoverage === 'object' && existingCoverage !== null
+        ? (existingCoverage as Record<string, unknown>).assignments
+        : undefined;
+    topics.push(
+      brief?.coverage
+        ? {
+            ...topic,
+            coverage: {
+              ...brief.coverage,
+              ...(typeof existingAssignments === 'object' &&
+              existingAssignments !== null &&
+              !Array.isArray(existingAssignments)
+                ? { assignments: existingAssignments as Record<string, string> }
+                : {}),
+            },
+          }
+        : topic
+    );
   }
   return topics;
 }
@@ -169,14 +196,26 @@ function allModuleFileIds(root: string): string[] {
  * into `unlistedModules`/`unlistedProblems` (see `LoadResult`) — `content-build` ignores them,
  * `content-check` validates and reports them under their own heading.
  */
-export function loadProgram(allowMissing: boolean, programId: string = DEFAULT_PROGRAM_ID): LoadResult {
+export function loadProgram(
+  allowMissing: boolean,
+  programId: string = DEFAULT_PROGRAM_ID
+): LoadResult {
   const root = contentRootFor(programId);
   const problems: LoadProblem[] = [];
   const missingSeverity: 'error' | 'warning' = allowMissing ? 'warning' : 'error';
 
   if (!fileExists(root, 'program.json')) {
-    problems.push({ path: 'program.json', message: `file not found (content/${programId}/program.json)`, severity: 'error' });
-    return { program: { modules: [], phraseSets: [] }, problems, unlistedModules: [], unlistedProblems: [] };
+    problems.push({
+      path: 'program.json',
+      message: `file not found (content/${programId}/program.json)`,
+      severity: 'error',
+    });
+    return {
+      program: { modules: [], phraseSets: [] },
+      problems,
+      unlistedModules: [],
+      unlistedProblems: [],
+    };
   }
 
   const programMeta = readJson(root, 'program.json');
@@ -240,6 +279,9 @@ export function loadProgram(allowMissing: boolean, programId: string = DEFAULT_P
     targetLanguage: programMeta.targetLanguage,
     supportLanguage: programMeta.supportLanguage,
     level: programMeta.level,
+    ...(programMeta.topicCompletionPolicy === undefined
+      ? {}
+      : { topicCompletionPolicy: programMeta.topicCompletionPolicy }),
     modules,
     phraseSets,
   };

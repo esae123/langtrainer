@@ -444,6 +444,14 @@ function checkTranslateWord(
   if (!e.options.includes(e.answer)) {
     problems.push({ path: `${path}.options`, message: 'options must include answer' });
   }
+  for (const accepted of e.acceptedAnswers ?? []) {
+    if (!e.options.includes(accepted)) {
+      problems.push({
+        path: `${path}.options`,
+        message: `options must include accepted answer "${accepted}"`,
+      });
+    }
+  }
 }
 
 function checkByType(exercise: Exercise, path: string, problems: ContentProblem[]): void {
@@ -579,6 +587,85 @@ export function checkContent(program: Program): ContentCheckResult {
     for (const topic of module.topics) {
       const basePath = `modules.${module.id}.topics.${topic.id}`;
       checkExerciseList(topic.exercises, topic.id, basePath, problems);
+      if (topic.coverage) {
+        const required = topic.coverage.minimumExercisesPerItem;
+        const seenItems = new Set<string>();
+        const validTags = new Set(topic.coverage.items.map((item) => `coverage:${item.id}`));
+        const validItemIds = new Set(topic.coverage.items.map((item) => item.id));
+        const exercisesById = new Map(topic.exercises.map((exercise) => [exercise.id, exercise]));
+        for (const [exerciseId, itemId] of Object.entries(topic.coverage.assignments ?? {})) {
+          const exercise = exercisesById.get(exerciseId);
+          if (!validItemIds.has(itemId) || !exercise) {
+            problems.push({
+              path: `${basePath}.coverage.assignments.${exerciseId}`,
+              message: `coverage assignment must reference an existing exercise and listed item (got "${itemId}")`,
+              ...(exercise ? { exerciseId } : {}),
+            });
+            continue;
+          }
+          const expectedTag = `coverage:${itemId}`;
+          if (exercise.tags?.filter((tag) => tag.startsWith('coverage:')).join() !== expectedTag) {
+            const exerciseIndex = topic.exercises.indexOf(exercise);
+            problems.push({
+              path: `${basePath}.exercises[${exerciseIndex}].tags`,
+              message: `exercise ${exerciseId} must carry its assigned tag "${expectedTag}"`,
+              exerciseId,
+              exerciseNumber: exerciseIndex + 1,
+              exerciseCount: topic.exercises.length,
+            });
+          }
+        }
+        topic.exercises.forEach((exercise, exerciseIndex) => {
+          const coverageTags = (exercise.tags ?? []).filter((tag) => tag.startsWith('coverage:'));
+          if (
+            coverageTags.length > 1 ||
+            coverageTags.some((tag) => !validTags.has(tag)) ||
+            (topic.coverage?.assignments !== undefined &&
+              topic.coverage.assignments[exercise.id] === undefined)
+          ) {
+            problems.push({
+              path: `${basePath}.exercises[${exerciseIndex}].tags`,
+              message:
+                'each exercise must have a saved assignment, at most one coverage tag, and any tag must match a listed coverage item',
+              exerciseId: exercise.id,
+              exerciseNumber: exerciseIndex + 1,
+              exerciseCount: topic.exercises.length,
+            });
+          }
+        });
+        for (const [itemIndex, item] of topic.coverage.items.entries()) {
+          if (!item.id.trim() || !item.phrase.trim() || seenItems.has(item.id)) {
+            problems.push({
+              path: `${basePath}.coverage.items[${itemIndex}]`,
+              message: 'coverage items need unique non-empty ids and phrases',
+            });
+            continue;
+          }
+          seenItems.add(item.id);
+          const count = topic.exercises.filter((exercise) =>
+            exercise.tags?.includes(`coverage:${item.id}`)
+          ).length;
+          if (count < required) {
+            const candidates = topic.exercises
+              .map((exercise, index) => ({ exercise, index }))
+              .filter(({ exercise }) => !exercise.tags?.includes(`coverage:${item.id}`));
+            for (let missing = 0; missing < required - count; missing += 1) {
+              const candidate = candidates[missing % Math.max(candidates.length, 1)];
+              problems.push({
+                path: `${basePath}.coverage.items[${itemIndex}]`,
+                message: `"${item.phrase}" has ${count} tagged exercise(s); requires at least ${required}`,
+                ...(candidate
+                  ? {
+                      exerciseId: candidate.exercise.id,
+                      exerciseNumber: candidate.index + 1,
+                      exerciseCount: topic.exercises.length,
+                    }
+                  : {}),
+              });
+            }
+          }
+        }
+      }
       recordIds(topic.exercises, basePath);
       stats[topic.id] = computeStats(topic.exercises);
     }

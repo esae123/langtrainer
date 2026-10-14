@@ -10,24 +10,25 @@ import { TranslateWordView } from './TranslateWordView';
 import type { ExerciseViewProps } from './types';
 
 /** Picks the renderer for an exercise type. Mount with `key={exercise.id}`. */
-export function ExerciseArea({ exercise, ...rest }: ExerciseViewProps<Exercise>) {
+export function ExerciseArea({ exercise, targetLanguage = 'pt-PT', ...rest }: ExerciseViewProps<Exercise>) {
+  const languageProps = { targetLanguage };
   switch (exercise.type) {
     case 'build_phrase':
     case 'question_for_answer':
-      return <PhraseExerciseView exercise={exercise} {...rest} />;
+      return <PhraseExerciseView exercise={exercise} {...languageProps} {...rest} />;
     case 'fill_gaps':
-      return <FillGapsView exercise={exercise} {...rest} />;
+      return <FillGapsView exercise={exercise} {...languageProps} {...rest} />;
     case 'about_me':
-      return <AboutMeView exercise={exercise} {...rest} />;
+      return <AboutMeView exercise={exercise} {...languageProps} {...rest} />;
     case 'find_error':
-      return <FindErrorView exercise={exercise} {...rest} />;
+      return <FindErrorView exercise={exercise} {...languageProps} {...rest} />;
     case 'number_sequence':
-      return <NumberSequenceView exercise={exercise} {...rest} />;
+      return <NumberSequenceView exercise={exercise} {...languageProps} {...rest} />;
     case 'match_pairs':
-      return <MatchPairsView exercise={exercise} {...rest} />;
+      return <MatchPairsView exercise={exercise} {...languageProps} {...rest} />;
     case 'order_dialogue':
-      return <OrderDialogueView exercise={exercise} {...rest} />;
+      return <OrderDialogueView exercise={exercise} {...languageProps} {...rest} />;
     case 'translate_word':
-      return <TranslateWordView exercise={exercise} {...rest} />;
+      return <TranslateWordView exercise={exercise} {...languageProps} {...rest} />;
   }
 }

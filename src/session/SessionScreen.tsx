@@ -218,6 +218,7 @@ function SessionRun({
       <ExercisePanel
         key={item.exercise.id}
         item={item}
+        targetLanguage={program?.targetLanguage ?? 'pt-PT'}
         index={state.index}
         total={state.plan.plannedLength}
         blockLabel={blockLabel}

@@ -145,6 +145,13 @@ describe('LetterBoard', () => {
     expect(composeLetters('Eu falo inglês.', 'eufaloinglês')).toBe('eu falo inglês');
     expect(letterKeys('Moras aqui?', mulberry32(2))).not.toContain('?');
   });
+
+  it('does not offer Portuguese accent keys for an English course', () => {
+    const keys = letterKeys('hang out', mulberry32(3), false);
+    expect(keys.some((key) => /[áàâãéêíóôõúç]/.test(key))).toBe(false);
+    render(<LetterBoard answer="hang out" typed="" onChange={() => {}} seed={3} targetLanguage="en" />);
+    expect(screen.queryByRole('button', { name: 'ã' })).not.toBeInTheDocument();
+  });
 });
 
 describe('TypingInput', () => {
@@ -175,6 +182,12 @@ describe('TypingInput', () => {
     // — never a scrolling row.
     expect(bar).toHaveClass('grid', 'grid-cols-6', 'min-[560px]:grid-cols-12');
     expect(bar.className).not.toContain('overflow-x-auto');
+  });
+
+  it('uses the target language and hides the Portuguese accent bar for English', () => {
+    render(<TypingInput value="" onChange={() => {}} label="Your answer" targetLanguage="en" />);
+    expect(screen.getByLabelText('Your answer')).toHaveAttribute('lang', 'en');
+    expect(screen.queryByRole('group', { name: 'Accented characters' })).not.toBeInTheDocument();
   });
 });
 

@@ -233,6 +233,49 @@ describe('checkContent — happy path and stats', () => {
   });
 });
 
+describe('checkContent — optional phrase coverage', () => {
+  it('requires distinct exercises to cover each phrase', () => {
+    const exercise = { ...validBuildPhrase, tags: ['coverage:one', 'coverage:two'] };
+    const program = programWithTopic([exercise]);
+    program.modules[0].topics[0].coverage = {
+      items: [
+        { id: 'one', phrase: 'one phrase' },
+        { id: 'two', phrase: 'another phrase' },
+      ],
+      minimumExercisesPerItem: 1,
+    };
+    const { problems } = checkContent(program);
+    expect(has(problems, 'at most one coverage tag')).toBe(true);
+    expect(problems.some((problem) => problem.path.endsWith('.tags'))).toBe(true);
+  });
+
+  it('rejects a coverage tag that differs from the exercise-id assignment', () => {
+    const program = programWithTopic([{ ...validBuildPhrase, tags: ['coverage:two'] }]);
+    program.modules[0].topics[0].coverage = {
+      items: [
+        { id: 'one', phrase: 'one phrase' },
+        { id: 'two', phrase: 'another phrase' },
+      ],
+      minimumExercisesPerItem: 1,
+      assignments: { [`${TOPIC_ID}-01`]: 'one' },
+    };
+    const { problems } = checkContent(program);
+    expect(has(problems, 'must carry its assigned tag "coverage:one"')).toBe(true);
+  });
+
+  it('rejects incomplete saved assignments', () => {
+    const program = programWithTopic([validBuildPhrase]);
+    program.modules[0].topics[0].coverage = {
+      items: [{ id: 'one', phrase: 'one phrase' }],
+      minimumExercisesPerItem: 1,
+      assignments: {},
+    };
+    expect(has(checkContent(program).problems, 'each exercise must have a saved assignment')).toBe(
+      true
+    );
+  });
+});
+
 describe('checkContent — common invariants', () => {
   it('accepts a well-formed id (positive)', () => {
     expect(

@@ -44,25 +44,82 @@ export function applyAttempt(
   exerciseId: string,
   correct: boolean,
   now: number,
-  practice = false
+  practice = false,
+  allCorrectThreshold?: number
 ): TopicProgress {
   if (practice) {
+    // A first-time phrasal-verb topic is completed by a correct answer in the
+    // regular test session. Retry/practice runs may help with later review, but
+    // must not erase the mistake that still needs a correct test answer.
+    if (allCorrectThreshold !== undefined && !row.allExercisesCompletedAt) return row;
     if (!correct) return row;
     const wrong = withoutWrong(row, exerciseId);
-    return wrong.length === (row.wrongExerciseIds?.length ?? 0)
-      ? row
-      : { ...row, wrongExerciseIds: wrong };
+    const next =
+      wrong.length === (row.wrongExerciseIds?.length ?? 0)
+        ? row
+        : { ...row, wrongExerciseIds: wrong };
+    if (
+      allCorrectThreshold !== undefined &&
+      (!next.allExercisesCompletedAt || next.seenExerciseIds.length < allCorrectThreshold) &&
+      next.seenExerciseIds.length >= allCorrectThreshold &&
+      next.wrongExerciseIds.length === 0
+    ) {
+      return {
+        ...next,
+        allExercisesCompletedAt: now,
+        status: 'review',
+        firstCompletedAt: now,
+        reviewStage: 1,
+        nextReviewAt: now + 7 * DAY_MS,
+        failedReviewsInARow: 0,
+      };
+    }
+    return next;
   }
 
-  const seen = row.seenExerciseIds.includes(exerciseId)
-    ? row.seenExerciseIds
-    : [...row.seenExerciseIds, exerciseId];
-  const wrongIds = withoutWrong(row, exerciseId);
+  // Older strict-course progress has no marker proving test-session mastery. If
+  // it was marked completed already, replay the whole topic once under the new rule.
+  const legacyRow =
+    allCorrectThreshold !== undefined &&
+    !row.allExercisesCompletedAt &&
+    COMPLETED_STATUSES.has(row.status) &&
+    row.seenExerciseIds.length >= allCorrectThreshold
+      ? { ...row, status: 'learning' as const, seenExerciseIds: [], wrongExerciseIds: [] }
+      : row;
+  const seen = legacyRow.seenExerciseIds.includes(exerciseId)
+    ? legacyRow.seenExerciseIds
+    : [...legacyRow.seenExerciseIds, exerciseId];
+  const wrongIds = withoutWrong(legacyRow, exerciseId);
   const next: TopicProgress = {
-    ...row,
+    ...legacyRow,
     seenExerciseIds: seen,
     wrongExerciseIds: correct ? wrongIds : [...wrongIds, exerciseId],
   };
+
+  if (
+    allCorrectThreshold !== undefined &&
+    (!next.allExercisesCompletedAt || seen.length < allCorrectThreshold)
+  ) {
+    const complete = seen.length >= allCorrectThreshold && next.wrongExerciseIds.length === 0;
+    if (complete) {
+      next.allExercisesCompletedAt = now;
+      next.status = 'review';
+      next.firstCompletedAt = now;
+      next.reviewStage = 1;
+      next.nextReviewAt = now + 7 * DAY_MS;
+      next.failedReviewsInARow = 0;
+    } else {
+      // Older versions completed this course after 20 attempts. Reopen any such
+      // partially covered topic until every exercise has a correct answer.
+      next.status = 'learning';
+      next.reviewStage = 0;
+      next.failedReviewsInARow = 0;
+      delete next.firstCompletedAt;
+      delete next.lastReviewedAt;
+      delete next.nextReviewAt;
+    }
+    return next;
+  }
 
   if (next.status === 'new') next.status = 'learning';
   if (next.status === 'learning' && seen.length >= COMPLETION_THRESHOLD) {

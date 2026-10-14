@@ -191,7 +191,10 @@ export function checkAnswer(
       );
 
     case 'translate_word':
-      return joined(matchText(textOf(response), exercise.answer, [], mode), expected);
+      return joined(
+        matchText(textOf(response), exercise.answer, exercise.acceptedAnswers ?? [], mode),
+        expected
+      );
 
     case 'number_sequence':
       return joined(

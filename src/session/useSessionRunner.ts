@@ -194,7 +194,18 @@ export function useSessionRunner(
         // mistake; everything else stays exactly as it was.
         if (practice && !existing) return undefined;
         const row = existing ?? emptyTopicProgress(draft.topicId, programId);
-        const next = applyAttempt(row, draft.exerciseId, draft.correct, draft.at, practice);
+        const allCorrectThreshold =
+          program?.topicCompletionPolicy === 'all-exercises-correct'
+            ? (exercisesByTopic(program).get(draft.topicId)?.length ?? undefined)
+            : undefined;
+        const next = applyAttempt(
+          row,
+          draft.exerciseId,
+          draft.correct,
+          draft.at,
+          practice,
+          allCorrectThreshold
+        );
         if (next === row && existing) return existing;
         await db.topicProgress.put(next);
         return next;
@@ -205,7 +216,7 @@ export function useSessionRunner(
         updated,
       ];
     },
-    []
+    [program]
   );
 
   const startExercises = useCallback(() => dispatch({ type: 'showExercise' }), []);

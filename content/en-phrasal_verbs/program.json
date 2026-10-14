@@ -4,6 +4,7 @@
   "targetLanguage": "en",
   "supportLanguage": "en",
   "level": "B2",
+  "topicCompletionPolicy": "all-exercises-correct",
   "moduleOrder": ["m1"],
   "phraseSetOrder": []
 }

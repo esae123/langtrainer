@@ -80,8 +80,18 @@ export function LearnScreen() {
 
   const currentTopic = program ? currentTopicOf(program, progress) : undefined;
   const currentModule = program?.modules.find((m) => m.id === currentTopic?.moduleId);
-  const seenCount =
-    progress.find((row) => row.topicId === currentTopic?.id)?.seenExerciseIds.length ?? 0;
+  const currentTopicProgress = progress.find((row) => row.topicId === currentTopic?.id);
+  const requiresAllCorrect = program?.topicCompletionPolicy === 'all-exercises-correct';
+  const topicThreshold = requiresAllCorrect
+    ? (currentTopic?.exercises.length ?? 0)
+    : COMPLETION_THRESHOLD;
+  const seenCount = requiresAllCorrect && currentTopic
+    ? currentTopic.exercises.filter(
+        (exercise) =>
+          currentTopicProgress?.seenExerciseIds.includes(exercise.id) &&
+          !currentTopicProgress.wrongExerciseIds.includes(exercise.id)
+      ).length
+    : (currentTopicProgress?.seenExerciseIds.length ?? 0);
   const nextReviewAt = progress
     .filter((row) => row.nextReviewAt !== undefined && row.status !== 'mastered')
     .map((row) => row.nextReviewAt as number)
@@ -214,18 +224,18 @@ export function LearnScreen() {
                     <div
                       className="h-full rounded-full bg-accent"
                       style={{
-                        width: `${Math.min(100, Math.round((seenCount / COMPLETION_THRESHOLD) * 100))}%`,
+                        width: `${Math.min(100, Math.round((seenCount / Math.max(topicThreshold, 1)) * 100))}%`,
                       }}
                     />
                   </div>
                   <span className="text-sm font-medium tabular-nums text-muted">
-                    {seenCount}/{COMPLETION_THRESHOLD}
+                    {seenCount}/{topicThreshold}
                   </span>
                 </div>
                 <p className="mt-1 text-xs text-muted">
-                  {t('learn.currentTopicMeta', {
+                  {t(requiresAllCorrect ? 'learn.currentTopicMetaAllCorrect' : 'learn.currentTopicMeta', {
                     seen: seenCount,
-                    threshold: COMPLETION_THRESHOLD,
+                    threshold: topicThreshold,
                   })}
                 </p>
               </>

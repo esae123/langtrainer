@@ -18,6 +18,7 @@ interface TextAnswerInputProps {
   onSubmit?: () => void;
   multiline?: boolean;
   label?: string;
+  targetLanguage?: string;
 }
 
 /**
@@ -33,6 +34,7 @@ export function TextAnswerInput({
   onSubmit,
   multiline,
   label,
+  targetLanguage = 'pt-PT',
 }: TextAnswerInputProps) {
   const t = useT();
   const [selected, setSelected] = useState<string | null>(null);
@@ -63,7 +65,13 @@ export function TextAnswerInput({
   }
   if (mode === 'letters') {
     return (
-      <LetterBoard answer={answer} typed={typedLetters} onChange={setTypedLetters} seed={seed} />
+      <LetterBoard
+        answer={answer}
+        typed={typedLetters}
+        onChange={setTypedLetters}
+        seed={seed}
+        targetLanguage={targetLanguage}
+      />
     );
   }
   return (
@@ -74,6 +82,7 @@ export function TextAnswerInput({
       multiline={multiline}
       label={label ?? t('session.typeAnswer')}
       placeholder={t('session.typeAnswerPlaceholder')}
+      targetLanguage={targetLanguage}
     />
   );
 }

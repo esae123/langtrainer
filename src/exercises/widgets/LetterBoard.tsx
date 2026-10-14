@@ -12,6 +12,7 @@ interface LetterBoardProps {
   typed: string;
   onChange: (typed: string) => void;
   seed: number;
+  targetLanguage?: string;
 }
 
 /**
@@ -19,9 +20,13 @@ interface LetterBoardProps {
  * with a letter keyboard built from the answer's own letters plus a few distractors.
  * Keys never disappear once used; comparison is case-insensitive.
  */
-export function LetterBoard({ answer, typed, onChange, seed }: LetterBoardProps) {
+export function LetterBoard({ answer, typed, onChange, seed, targetLanguage = 'pt-PT' }: LetterBoardProps) {
   const t = useT();
-  const keys = useMemo(() => letterKeys(answer, mulberry32(seed)), [answer, seed]);
+  const includeAccentDistractors = targetLanguage.toLowerCase().startsWith('pt');
+  const keys = useMemo(
+    () => letterKeys(answer, mulberry32(seed), includeAccentDistractors),
+    [answer, seed, includeAccentDistractors]
+  );
   const boxRows = letterBoxes(answer, typed);
   const filled = typed.length;
   const total = boxRows.flat().filter((box) => !box.fixed).length;

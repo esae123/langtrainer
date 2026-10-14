@@ -13,6 +13,7 @@ type PhraseExercise = BuildPhraseExercise | QuestionForAnswerExercise;
 export function PhraseExerciseView({
   exercise,
   mode,
+  targetLanguage = 'pt-PT',
   seed,
   onChange,
   onSubmit,
@@ -56,6 +57,7 @@ export function PhraseExerciseView({
       ) : (
         <TextAnswerInput
           answer={answerText}
+          targetLanguage={targetLanguage}
           mode={mode}
           seed={seed}
           onText={handleText}

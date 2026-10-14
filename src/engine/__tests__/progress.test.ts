@@ -22,6 +22,50 @@ describe('applyAttempt', () => {
     expect(row).toMatchObject({ status: 'learning', seenExerciseIds: ['e1'], reviewStage: 0 });
   });
 
+  it('strict coverage completes only after every distinct exercise is answered correctly', () => {
+    let row = emptyTopicProgress('t1', 'en-phrasal_verbs');
+    row = applyAttempt(row, 'e1', true, NOW, false, 2);
+    row = applyAttempt(row, 'e2', false, NOW + 1, false, 2);
+    expect(row).toMatchObject({ status: 'learning', seenExerciseIds: ['e1', 'e2'], wrongExerciseIds: ['e2'] });
+    row = applyAttempt(row, 'e2', true, NOW + 2, false, 2);
+    expect(row).toMatchObject({
+      status: 'review',
+      wrongExerciseIds: [],
+      allExercisesCompletedAt: NOW + 2,
+      firstCompletedAt: NOW + 2,
+      reviewStage: 1,
+      nextReviewAt: NOW + 2 + 7 * DAY_MS,
+    });
+  });
+
+  it('requires a correct regular-session answer even after a practice retry', () => {
+    let row = emptyTopicProgress('t1', 'en-phrasal_verbs');
+    row = applyAttempt(row, 'e1', false, NOW, false, 2);
+    row = applyAttempt(row, 'e2', true, NOW + 1, false, 2);
+    row = applyAttempt(row, 'e1', true, NOW + 2, true, 2);
+    expect(row).toMatchObject({ status: 'learning', wrongExerciseIds: ['e1'] });
+    expect(row.allExercisesCompletedAt).toBeUndefined();
+    row = applyAttempt(row, 'e1', true, NOW + 3, false, 2);
+    expect(row).toMatchObject({ status: 'review', allExercisesCompletedAt: NOW + 3, wrongExerciseIds: [] });
+  });
+
+  it('replays legacy completed strict topics before accepting the new completion marker', () => {
+    const legacy = makeProgress('t1', {
+      status: 'review',
+      seenExerciseIds: ['e1', 'e2'],
+      reviewStage: 1,
+    });
+    const firstReplay = applyAttempt(legacy, 'e1', true, NOW, false, 2);
+    expect(firstReplay).toMatchObject({
+      status: 'learning',
+      seenExerciseIds: ['e1'],
+      wrongExerciseIds: [],
+    });
+    expect(firstReplay.allExercisesCompletedAt).toBeUndefined();
+    const finished = applyAttempt(firstReplay, 'e2', true, NOW + 1, false, 2);
+    expect(finished.allExercisesCompletedAt).toBe(NOW + 1);
+  });
+
   it('keeps seenExerciseIds a set', () => {
     let row = applyAttempt(emptyTopicProgress('t1', 'p'), 'e1', true, NOW);
     row = applyAttempt(row, 'e1', false, NOW + 1);

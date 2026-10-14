@@ -18,6 +18,7 @@ const GAP = '___';
 export function FillGapsView({
   exercise,
   mode,
+  targetLanguage = 'pt-PT',
   seed,
   onChange,
   onSubmit,
@@ -85,7 +86,7 @@ export function FillGapsView({
           }}
           type="text"
           value={texts[index]}
-          lang="pt-PT"
+          lang={targetLanguage}
           autoCapitalize="off"
           autoCorrect="off"
           autoComplete="off"
@@ -177,11 +178,12 @@ export function FillGapsView({
             typed={typed[active]}
             onChange={(next) => setTyped(typed.map((value, i) => (i === active ? next : value)))}
             seed={seed + active}
+            targetLanguage={targetLanguage}
           />
         </>
       )}
 
-      {mode === 'typing' && (
+      {mode === 'typing' && targetLanguage.toLowerCase().startsWith('pt') && (
         <AccentBar
           onInsert={(char) => {
             const el = inputRefs.current[active];

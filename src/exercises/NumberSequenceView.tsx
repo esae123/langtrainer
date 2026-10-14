@@ -8,6 +8,7 @@ import type { ExerciseViewProps } from './types';
 export function NumberSequenceView({
   exercise,
   mode,
+  targetLanguage = 'pt-PT',
   seed,
   onChange,
   onSubmit,
@@ -39,6 +40,7 @@ export function NumberSequenceView({
       </div>
       <TextAnswerInput
         answer={exercise.answerWords[0] ?? ''}
+        targetLanguage={targetLanguage}
         options={exercise.options}
         mode={mode}
         seed={seed}

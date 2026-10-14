@@ -143,9 +143,7 @@ function normalizeProvider(value: string | undefined): Provider {
   if (trimmed === '') return 'gemini';
   const lower = trimmed.toLowerCase();
   if (lower === 'gemini' || lower === 'openai') return lower;
-  throw new Error(
-    `--provider/AI_PROVIDER must be "gemini" or "openai", got "${value}"`
-  );
+  throw new Error(`--provider/AI_PROVIDER must be "gemini" or "openai", got "${value}"`);
 }
 
 /** Parses a CLI integer flag (--count/--sleep): throws a clear error on a non-numeric value. */
@@ -173,13 +171,16 @@ export function parseArgs(argv: string[]): Cli {
     get('--model') ??
     // `|| undefined`, not `??`: an empty GEMINI_MODEL=/OPENAI_MODEL= in .env must count as unset
     // (review item 4), not as an (invalid) empty-string model name.
-    (provider === 'openai' ? process.env.OPENAI_MODEL || undefined : process.env.GEMINI_MODEL || undefined) ??
+    (provider === 'openai'
+      ? process.env.OPENAI_MODEL || undefined
+      : process.env.GEMINI_MODEL || undefined) ??
     (provider === 'gemini' ? DEFAULT_MODEL : undefined);
   const thinkingLevel =
     get('--thinking') ??
     ((provider === 'openai'
       ? process.env.OPENAI_REASONING_EFFORT
-      : process.env.GEMINI_THINKING_LEVEL) || undefined);
+      : process.env.GEMINI_THINKING_LEVEL) ||
+      undefined);
   const sleepMs = parseIntFlag('--sleep', sleepRaw);
   return {
     program: get('--program') ?? 'pt-PT-A1',
@@ -211,6 +212,8 @@ export interface TopicJob {
   brief: string;
   known?: string;
   avoid?: string;
+  coverage?: ModuleTopicBrief['coverage'];
+  coverageAssignments?: Record<string, string>;
   /** Set by `--add`: the number of exercises the topic already had before this run (`count` is
    *  the new target total). Drives the append flow in `runJob`. */
   appendFrom?: number;
@@ -263,18 +266,78 @@ function briefToJob(
   brief: ModuleTopicBrief,
   countOverride?: number
 ): TopicJob {
-  return {
+  const count =
+    countOverride ??
+    brief.count ??
+    (brief.coverage ? brief.coverage.items.length * brief.coverage.minimumExercisesPerItem : 40);
+  if (
+    brief.coverage &&
+    (!Array.isArray(brief.coverage.items) ||
+      brief.coverage.items.length === 0 ||
+      !Number.isInteger(brief.coverage.minimumExercisesPerItem) ||
+      brief.coverage.minimumExercisesPerItem < 1)
+  ) {
+    throw new Error(
+      `coverage for topic "${brief.id}" must have items and a positive integer minimumExercisesPerItem`
+    );
+  }
+  if (brief.coverage) {
+    const ids = brief.coverage.items.map((item) => item.id);
+    if (
+      brief.coverage.items.some((item) => !item.id.trim() || !item.phrase.trim()) ||
+      new Set(ids).size !== ids.length
+    ) {
+      throw new Error(
+        `coverage items for topic "${brief.id}" need unique non-empty ids and phrases`
+      );
+    }
+  }
+  const minimum = brief.coverage
+    ? brief.coverage.items.length * brief.coverage.minimumExercisesPerItem
+    : 0;
+  if (brief.coverage && count < minimum) {
+    throw new Error(
+      `count ${count} is below mandatory coverage minimum ${minimum} for topic "${brief.id}"`
+    );
+  }
+  const job: TopicJob = {
     kind: 'topic',
     programId,
     moduleId,
     topicId: brief.id,
     title: brief.title ?? brief.id,
     topicKind: brief.kind ?? 'vocabulary',
-    count: countOverride ?? brief.count ?? 40,
+    count,
     brief: brief.brief ?? '',
     known: brief.known,
     avoid: brief.avoid,
+    coverage: brief.coverage,
   };
+  if (job.coverage) job.coverageAssignments = assignCoverage(job, 0, {});
+  return job;
+}
+
+function assignCoverage(
+  job: TopicJob,
+  from: number,
+  existingCounts: Record<string, number>
+): Record<string, string> {
+  const coverage = job.coverage;
+  if (!coverage) return {};
+  const counts = { ...existingCounts };
+  for (const item of coverage.items) counts[item.id] ??= 0;
+  const result: Record<string, string> = {};
+  for (let n = from + 1; n <= job.count; n += 1) {
+    const eligible = coverage.items.filter(
+      (item) => (counts[item.id] ?? 0) < coverage.minimumExercisesPerItem
+    );
+    const pool = eligible.length ? eligible : coverage.items;
+    const item = [...pool].sort((a, b) => (counts[a.id] ?? 0) - (counts[b.id] ?? 0))[0];
+    if (!item) break;
+    result[exerciseIdFor(job.topicId, n)] = item.id;
+    counts[item.id] = (counts[item.id] ?? 0) + 1;
+  }
+  return result;
 }
 
 interface PhraseSetPlanEntry {
@@ -310,9 +373,79 @@ export function buildJobs(cli: Cli): Job[] {
         `--add requires an existing topic file: ${topicPath} (generate it first without --add)`
       );
     }
-    const existingCount = exercisesOf(readJson(topicPath)).length;
+    const existingTopic = readJson(topicPath);
+    const existingExercises = exercisesOf(existingTopic);
+    const existingCount = existingExercises.length;
     const job = briefToJob(cli.program, moduleId, brief, existingCount + cli.add);
     job.appendFrom = existingCount;
+    if (job.coverage) {
+      const existing = existingExercises;
+      const counts: Record<string, number> = {};
+      for (const item of job.coverage.items) {
+        counts[item.id] = existing.filter(
+          (exercise) =>
+            Array.isArray(exercise.tags) && exercise.tags.includes(`coverage:${item.id}`)
+        ).length;
+      }
+      const existingAssignments: Record<string, string> = {};
+      const savedCoverage = isObject(existingTopic.coverage) ? existingTopic.coverage : undefined;
+      const savedAssignments =
+        savedCoverage && isObject(savedCoverage.assignments)
+          ? savedCoverage.assignments
+          : undefined;
+      for (const exercise of existing) {
+        if (typeof exercise.id !== 'string') continue;
+        const exerciseTags = Array.isArray(exercise.tags) ? exercise.tags : [];
+        const coverageTags = exerciseTags.filter(
+          (tag): tag is string => typeof tag === 'string' && tag.startsWith('coverage:')
+        );
+        const savedItemId = savedAssignments?.[exercise.id];
+        if (savedAssignments && savedItemId !== undefined) {
+          const expectedTag = `coverage:${savedItemId}`;
+          if (
+            !job.coverage.items.some((item) => item.id === savedItemId) ||
+            !Array.isArray(exercise.tags) ||
+            coverageTags.length !== 1 ||
+            coverageTags[0] !== expectedTag
+          ) {
+            throw new Error(
+              `Cannot append to "${job.topicId}": existing exercise "${exercise.id}" does not match its saved coverage assignment. Correct or regenerate the topic before using --add.`
+            );
+          }
+          existingAssignments[exercise.id] = savedItemId;
+        } else if (savedAssignments) {
+          throw new Error(
+            `Cannot append to "${job.topicId}": existing exercise "${exercise.id}" has no saved coverage assignment. Correct or regenerate the topic before using --add.`
+          );
+        } else if (!savedAssignments) {
+          if (coverageTags.length > 1) {
+            throw new Error(
+              `Cannot append to "${job.topicId}": existing exercise "${exercise.id}" has multiple coverage tags.`
+            );
+          }
+          const itemId = coverageTags[0]?.slice('coverage:'.length);
+          if (itemId && job.coverage.items.some((item) => item.id === itemId)) {
+            existingAssignments[exercise.id] = itemId;
+          } else if (itemId) {
+            throw new Error(
+              `Cannot append to "${job.topicId}": existing exercise "${exercise.id}" has an unknown coverage tag.`
+            );
+          }
+        }
+      }
+      const deficit = job.coverage.items.reduce(
+        (sum, item) => sum + Math.max(0, job.coverage!.minimumExercisesPerItem - counts[item.id]),
+        0
+      );
+      if (cli.add < deficit)
+        throw new Error(
+          `--add ${cli.add} is below the ${deficit} exercise(s) needed to complete mandatory phrase coverage for "${job.topicId}"`
+        );
+      job.coverageAssignments = {
+        ...existingAssignments,
+        ...assignCoverage(job, existingCount, counts),
+      };
+    }
     return [job];
   }
 
@@ -461,6 +594,14 @@ export function normalizeMerged(
       ...rest,
       title: typeof rest.title === 'string' ? rest.title : job.title,
       kind: typeof rest.kind === 'string' ? rest.kind : job.topicKind,
+      ...(job.coverage
+        ? {
+            coverage: {
+              ...job.coverage,
+              ...(job.coverageAssignments ? { assignments: job.coverageAssignments } : {}),
+            },
+          }
+        : {}),
       exercises,
     };
   }
@@ -516,6 +657,15 @@ function jobDescriptionLines(job: Job): string[] {
     if (job.known) lines.push(`Grammar already known by the learner (may be reused): ${job.known}`);
     if (job.avoid) lines.push(`Grammar NOT yet known (do not use): ${job.avoid}`);
     lines.push(`Total exercise count for the topic: ${job.count}`);
+    if (job.coverage) {
+      lines.push(
+        `Mandatory coverage: at least ${job.coverage.minimumExercisesPerItem} distinct exercises for EACH listed item.`
+      );
+      lines.push(
+        `Every exercise must include exactly the requested coverage tag in tags: ${JSON.stringify(job.coverageAssignments ?? {})}`
+      );
+      lines.push(`Coverage items: ${JSON.stringify(job.coverage.items)}`);
+    }
   } else {
     lines.push(
       `programId: ${job.programId}`,
@@ -999,7 +1149,8 @@ export async function callGemini(opts: GeminiCallOptions): Promise<GeminiResult>
       if (res.status === 429) {
         const quota = geminiDailyQuotaInfo(errorText);
         if (quota) {
-          const resetHint = quota.resetMs !== undefined ? `in ~${formatDuration(quota.resetMs)}` : 'tomorrow';
+          const resetHint =
+            quota.resetMs !== undefined ? `in ~${formatDuration(quota.resetMs)}` : 'tomorrow';
           throw new StopRunError(
             `Gemini daily free-tier quota exhausted for model "${opts.model}"` +
               `${quota.quotaId ? ` (${quota.quotaId})` : ''} — resets ${resetHint}. ` +
@@ -1533,7 +1684,9 @@ async function generateMissingIds(
     const userPrompt = buildUserPromptForIds(job, ids, { needsHeader, previous });
 
     if (cli.dryRun) {
-      console.log(`\n=== ${id} — resume chunk ${i + 1}/${groups.length} (ids ${ids.join(', ')}) ===`);
+      console.log(
+        `\n=== ${id} — resume chunk ${i + 1}/${groups.length} (ids ${ids.join(', ')}) ===`
+      );
       console.log('--- system prompt ---');
       console.log(systemPrompt);
       console.log('--- user prompt ---');
@@ -1652,8 +1805,12 @@ async function runAppendJob(
   let oldExercises = existingExercises;
   let newKept: Record<string, unknown>[] = [];
   if (draft && typeof draft.$targetCount === 'number') {
-    const { $targetCount: _t, $existingCount: draftExistingCount, exercises: draftExercises, ...draftHeader } =
-      draft;
+    const {
+      $targetCount: _t,
+      $existingCount: draftExistingCount,
+      exercises: draftExercises,
+      ...draftHeader
+    } = draft;
     header = draftHeader;
     const allDraftExercises = (
       Array.isArray(draftExercises) ? draftExercises.filter(isObject) : []
@@ -1710,7 +1867,9 @@ async function runAppendJob(
   if (fileExists(oldDraft)) rmSync(oldDraft);
 
   const allExercises = exercisesOf(finalObj);
-  const newExercises = allExercises.filter((e) => typeof e.id === 'string' && newIds.includes(e.id));
+  const newExercises = allExercises.filter(
+    (e) => typeof e.id === 'string' && newIds.includes(e.id)
+  );
   console.log('  New exercises:');
   printTopicStats(job, { exercises: newExercises });
   console.log('  Whole topic:');
@@ -2029,7 +2188,14 @@ export async function runJob(
   let result: GenerateResult;
   try {
     result = draftRaw
-      ? await resumeAndRepair(job, cli, apiKey, systemPrompt, (m) => validateMerged(job, m), draftRaw)
+      ? await resumeAndRepair(
+          job,
+          cli,
+          apiKey,
+          systemPrompt,
+          (m) => validateMerged(job, m),
+          draftRaw
+        )
       : await generateAndRepair(job, cli, apiKey, systemPrompt, (m) => validateMerged(job, m));
   } catch (err) {
     // StopRunError must stop the whole run (caller's loop), not just this job — never swallow it.

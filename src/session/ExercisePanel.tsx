@@ -12,6 +12,7 @@ import type { FeedbackState } from './sessionState';
 
 interface ExercisePanelProps {
   item: PlannedItem;
+  targetLanguage: string;
   /** Zero-based position in the plan. */
   index: number;
   /** Planned length, or 0 for an open-ended session. */
@@ -30,6 +31,7 @@ interface ExercisePanelProps {
 /** The exercise screen: top bar with progress and stop, body, and the Check button. */
 export function ExercisePanel({
   item,
+  targetLanguage,
   index,
   total,
   blockLabel,
@@ -98,6 +100,7 @@ export function ExercisePanel({
           key={item.exercise.id}
           exercise={item.exercise}
           mode={item.mode}
+          targetLanguage={targetLanguage}
           seed={hashString(item.exercise.id)}
           onChange={handleChange}
           onSubmit={submit}

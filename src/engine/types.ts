@@ -14,6 +14,8 @@ export interface TopicProgress {
   programId: string;
   status: TopicStatus;
   firstCompletedAt?: number;
+  /** First time every exercise in a strict-coverage topic was answered correctly. */
+  allExercisesCompletedAt?: number;
   lastReviewedAt?: number;
   nextReviewAt?: number;
   reviewStage: 0 | 1 | 2 | 3;

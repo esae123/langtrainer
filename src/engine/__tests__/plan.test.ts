@@ -90,6 +90,51 @@ describe('planSession block sizes', () => {
   });
 });
 
+describe('all-exercises-correct course policy', () => {
+  it('plans every unanswered exercise in the current topic, including previously wrong ones', () => {
+    const program = { ...makeStandardProgram(), topicCompletionPolicy: 'all-exercises-correct' as const };
+    const exercises = program.modules[0].topics[0].exercises;
+    const progress = [
+      makeProgress('t1', {
+        status: 'learning',
+        seenExerciseIds: [exercises[0].id, exercises[1].id],
+        wrongExerciseIds: [exercises[1].id],
+      }),
+    ];
+    const planned = plan({ program, progress, sessionLength: 5 });
+    const ids = planned.items.map((item) => item.exercise.id);
+
+    expect(ids).toHaveLength(exercises.length - 1);
+    expect(ids).toContain(exercises[1].id);
+    expect(ids).not.toContain(exercises[0].id);
+    expect(new Set(ids).size).toBe(ids.length);
+    expect(planned.items.every((item) => item.topicId === 't1')).toBe(true);
+  });
+
+  it('starts the next topic after every exercise in the current topic is correct', () => {
+    const program = { ...makeStandardProgram(), topicCompletionPolicy: 'all-exercises-correct' as const };
+    const exercises = program.modules[0].topics[0].exercises;
+    const progress = [
+      makeProgress('t1', {
+        status: 'review',
+        allExercisesCompletedAt: NOW,
+        seenExerciseIds: exercises.map((exercise) => exercise.id),
+      }),
+    ];
+    const nextTopicPlan = plan({ program, progress, sessionLength: 10 });
+    expect(nextTopicPlan.items).toHaveLength(40);
+    expect(nextTopicPlan.items.every((item) => item.topicId === 't2')).toBe(true);
+  });
+
+  it('reopens a fully seen legacy topic without the strict completion marker', () => {
+    const program = { ...makeStandardProgram(), topicCompletionPolicy: 'all-exercises-correct' as const };
+    const exercises = program.modules[0].topics[0].exercises;
+    const progress = [makeProgress('t1', { status: 'review', seenExerciseIds: exercises.map((e) => e.id) })];
+    expect(currentTopicOf(program, progress)?.id).toBe('t1');
+    expect(plan({ program, progress, sessionLength: 10 }).items).toHaveLength(40);
+  });
+});
+
 describe('planNextCycle', () => {
   it('appends six more items without repeating an exercise', () => {
     const program = makeStandardProgram();

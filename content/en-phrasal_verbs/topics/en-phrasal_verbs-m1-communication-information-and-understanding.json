@@ -1,0 +1,1822 @@
+{
+  "id": "en-phrasal_verbs-m1-communication-information-and-understanding",
+  "moduleId": "m1",
+  "title": "Communication, information and understanding",
+  "kind": "vocabulary",
+  "context": "Effective communication in English relies heavily on phrasal verbs to share information, hold conversations, exchange opinions, and solve problems.\n\n### Conversations & Speaking\n- **bring up**: raise a topic for discussion. *He brought up the budget during the meeting.*\n- **blurt out**: reveal something impulsively. *She blurted out the answer before thinking.*\n- **butt in**: interrupt rudely. *Don't butt in while others are speaking.*\n- **talk into / talk out of**: persuade someone to do or not do something. *They talked him into joining, but talked her out of leaving.*\n- **talk down to**: speak condescendingly. *Never talk down to junior colleagues.*\n\n### Information, Investigating & Understanding\n- **find out / figure out**: discover facts or solve a problem. *We found out the truth and figured out a solution.*\n- **look into**: investigate an issue. *Management will look into the customer's complaint.*\n- **point out**: highlight an important detail. *The auditor pointed out three major mistakes.*\n- **make out**: discern with difficulty. *I could barely make out the sign in the dark.*\n- **make of**: interpret or form an opinion. *What do you make of the new policy?*\n- **track down**: find after a diligent search. *She tracked down the missing document.*\n\n### Watch out!\n- Do not confuse **bring up** (mention a topic or raise children) with **bring back** (return something or evoke memories).\n- **Make out** refers to perception or comprehension under difficulty, whereas **figure out** involves reasoning and solving a puzzle.\n### Additional high-frequency phrases\n- **call back**: return a phone call. *I’ll call you back after the meeting.*\n- **call for**: require something, or make it appropriate. *This urgent problem calls for a quick response.*\n- **fill in**: complete a form, or give someone missing information. *Please fill in this form; I’ll fill you in on the changes later.*\n- **fill up**: fill a tank/container, or eat enough to feel full. *We filled up the car and filled up on snacks.*\n- **follow up (on)**: take further action or check what happened. *I’ll follow up on your request tomorrow.*\n- **make for**: contribute to a result, or move towards a place. *Good teamwork makes for better results; we made for the exit.*\n- **shut off**: stop a machine or cut off a supply. *Shut off the water before repairing the pipe.*\n- **shut up**: stop speaking (informal, often rude). *The children finally shut up when the film began.*\n- **stand for**: represent, or tolerate (usually in negative statements). *What does BBC stand for? I won’t stand for bullying.*\n- **stand up**: rise to your feet; **stand someone up** means fail to meet them as planned. *We stood up when she entered, but he stood me up on Friday.*\n- **tell apart**: recognize the difference between similar things. *I can’t tell the twins apart.*\n- **tell on**: report someone’s wrongdoing to an authority. *The child told on his brother.*\n",
+  "keyItems": [
+    {
+      "target": "blurt out",
+      "support": "say something impulsively without thinking"
+    },
+    {
+      "target": "bring back",
+      "support": "return an item or evoke memories"
+    },
+    {
+      "target": "bring up",
+      "support": "mention a topic or raise children"
+    },
+    {
+      "target": "butt in",
+      "support": "interrupt a conversation rudely"
+    },
+    {
+      "target": "call back",
+      "support": "return a telephone call"
+    },
+    {
+      "target": "call for",
+      "support": "require, demand, or make necessary"
+    },
+    {
+      "target": "fill in",
+      "support": "complete a form or supply information"
+    },
+    {
+      "target": "fill up",
+      "support": "fill completely with a substance"
+    },
+    {
+      "target": "follow up",
+      "support": "pursue or check on previous actions"
+    },
+    {
+      "target": "point out",
+      "support": "draw attention to a fact or error"
+    },
+    {
+      "target": "shut off",
+      "support": "cut power or disconnect an appliance"
+    },
+    {
+      "target": "shut up",
+      "support": "stop speaking completely (informal)"
+    },
+    {
+      "target": "stand for",
+      "support": "represent a concept or tolerate behavior"
+    },
+    {
+      "target": "stand up",
+      "support": "rise to one's feet or fail to meet a date"
+    },
+    {
+      "target": "talk down to",
+      "support": "speak in a condescending manner"
+    },
+    {
+      "target": "talk into",
+      "support": "persuade someone to do something"
+    },
+    {
+      "target": "talk out of",
+      "support": "dissuade someone from doing something"
+    },
+    {
+      "target": "tell apart",
+      "support": "distinguish differences between two things"
+    },
+    {
+      "target": "figure out",
+      "support": "solve or understand by reasoning"
+    },
+    {
+      "target": "find out",
+      "support": "learn or discover new information"
+    }
+  ],
+  "coverage": {
+    "items": [
+      {
+        "id": "blurt-out",
+        "phrase": "blurt out"
+      },
+      {
+        "id": "bring-back",
+        "phrase": "bring back"
+      },
+      {
+        "id": "bring-up",
+        "phrase": "bring up"
+      },
+      {
+        "id": "butt-in",
+        "phrase": "butt in"
+      },
+      {
+        "id": "call-back",
+        "phrase": "call back"
+      },
+      {
+        "id": "call-for",
+        "phrase": "call for"
+      },
+      {
+        "id": "fill-in",
+        "phrase": "fill in"
+      },
+      {
+        "id": "fill-up",
+        "phrase": "fill up"
+      },
+      {
+        "id": "follow-up",
+        "phrase": "follow up"
+      },
+      {
+        "id": "point-out",
+        "phrase": "point out"
+      },
+      {
+        "id": "shut-off",
+        "phrase": "shut off"
+      },
+      {
+        "id": "shut-up",
+        "phrase": "shut up"
+      },
+      {
+        "id": "stand-for",
+        "phrase": "stand for"
+      },
+      {
+        "id": "stand-up",
+        "phrase": "stand up"
+      },
+      {
+        "id": "talk-down-to",
+        "phrase": "talk down to"
+      },
+      {
+        "id": "talk-into",
+        "phrase": "talk into"
+      },
+      {
+        "id": "talk-out-of",
+        "phrase": "talk out of"
+      },
+      {
+        "id": "tell-apart",
+        "phrase": "tell apart"
+      },
+      {
+        "id": "tell-on",
+        "phrase": "tell on"
+      },
+      {
+        "id": "figure-out",
+        "phrase": "figure out"
+      },
+      {
+        "id": "find-out",
+        "phrase": "find out"
+      },
+      {
+        "id": "look-into",
+        "phrase": "look into"
+      },
+      {
+        "id": "make-for",
+        "phrase": "make for"
+      },
+      {
+        "id": "make-of",
+        "phrase": "make of"
+      },
+      {
+        "id": "make-out",
+        "phrase": "make out"
+      },
+      {
+        "id": "track-down",
+        "phrase": "track down"
+      }
+    ],
+    "minimumExercisesPerItem": 2,
+    "assignments": {
+      "en-phrasal_verbs-m1-communication-information-and-understanding-01": "blurt-out",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-02": "bring-back",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-03": "bring-up",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-04": "butt-in",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-05": "call-back",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-06": "call-for",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-07": "fill-in",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-08": "fill-up",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-09": "follow-up",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-10": "point-out",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-11": "shut-off",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-12": "shut-up",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-13": "stand-for",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-14": "stand-up",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-15": "talk-down-to",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-16": "talk-into",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-17": "talk-out-of",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-18": "tell-apart",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-19": "tell-on",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-20": "figure-out",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-21": "find-out",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-22": "look-into",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-23": "make-for",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-24": "make-of",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-25": "make-out",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-26": "track-down",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-27": "blurt-out",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-28": "bring-back",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-29": "bring-up",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-30": "butt-in",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-31": "call-back",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-32": "call-for",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-33": "fill-in",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-34": "fill-up",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-35": "follow-up",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-36": "point-out",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-37": "shut-off",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-38": "shut-up",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-39": "stand-for",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-40": "stand-up",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-41": "talk-down-to",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-42": "talk-into",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-43": "talk-out-of",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-44": "tell-apart",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-45": "tell-on",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-46": "figure-out",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-47": "find-out",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-48": "look-into",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-49": "make-for",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-50": "make-of",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-51": "make-out",
+      "en-phrasal_verbs-m1-communication-information-and-understanding-52": "track-down"
+    }
+  },
+  "exercises": [
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-01",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Blurt out' means to say something suddenly and tactlessly without thinking about the consequences.",
+      "direction": "toTarget",
+      "sentence": "During the meeting, Mark managed to **say tactlessly** that our project had failed.",
+      "word": "say tactlessly",
+      "answer": "blurt out",
+      "options": [
+        "blurt out",
+        "point out",
+        "bring up",
+        "butt in"
+      ],
+      "tags": [
+        "coverage:blurt-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-02",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about recalling nostalgic memories.",
+      "explanation": "'Bring back' means to evoke memories or feelings from the past.",
+      "template": "Looking at old family photographs will ___ ___ many fond memories.",
+      "gaps": [
+        {
+          "answer": "bring"
+        },
+        {
+          "answer": "back"
+        }
+      ],
+      "wordBank": [
+        "bring",
+        "back",
+        "point",
+        "out",
+        "call"
+      ],
+      "tags": [
+        "coverage:bring-back"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-03",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about introducing a discussion topic.",
+      "explanation": "'Bring up' means to introduce a topic into a conversation. We say 'bring up', not 'bring off'.",
+      "sentence": [
+        "Why",
+        "did",
+        "you",
+        "bring",
+        "off",
+        "that",
+        "unpleasant",
+        "subject?"
+      ],
+      "wrongIndex": 4,
+      "correction": "up",
+      "options": [
+        "up",
+        "out",
+        "in"
+      ],
+      "tags": [
+        "coverage:bring-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-04",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about an unwelcome interruption in a private talk.",
+      "explanation": "'Butt in' means to interrupt a conversation rudely without being invited.",
+      "template": "It is rude to ___ ___ when two colleagues are talking privately.",
+      "gaps": [
+        {
+          "answer": "butt"
+        },
+        {
+          "answer": "in"
+        }
+      ],
+      "wordBank": [
+        "butt",
+        "in",
+        "shut",
+        "off",
+        "tell"
+      ],
+      "tags": [
+        "coverage:butt-in"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-05",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You missed a phone call from a coworker. Ask when you should return their call.",
+      "explanation": "'Call back' means to return a telephone call to someone who contacted you earlier.",
+      "givenAnswer": "You can reach me anytime after three o'clock.",
+      "answer": [
+        "When",
+        "should",
+        "I",
+        "call",
+        "you",
+        "back?"
+      ],
+      "distractors": [
+        "off",
+        "out",
+        "up"
+      ],
+      "acceptedAnswers": [
+        "What time should I call you back?"
+      ],
+      "tags": [
+        "coverage:call-back"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-06",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded word.",
+      "explanation": "'Call for' means to demand, require, or make necessary an action or quality.",
+      "direction": "toTarget",
+      "sentence": "Dealing with angry customers will **require** a great deal of patience.",
+      "word": "require",
+      "answer": "call for",
+      "options": [
+        "call for",
+        "call back",
+        "stand for",
+        "look into"
+      ],
+      "tags": [
+        "coverage:call-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-07",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about completing an official document.",
+      "explanation": "'Fill in' means to write necessary information into the spaces of a form.",
+      "template": "Please ___ ___ this registration form with your contact details.",
+      "gaps": [
+        {
+          "answer": "fill"
+        },
+        {
+          "answer": "in"
+        }
+      ],
+      "wordBank": [
+        "fill",
+        "in",
+        "shut",
+        "up",
+        "stand"
+      ],
+      "tags": [
+        "coverage:fill-in"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-08",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Advise the driver to put petrol in the fuel tank before the long highway drive.",
+      "explanation": "'Fill up' means to fill a container or tank completely.",
+      "answer": [
+        "We",
+        "must",
+        "fill",
+        "up",
+        "the",
+        "tank",
+        "before",
+        "leaving."
+      ],
+      "distractors": [
+        "in",
+        "off",
+        "out"
+      ],
+      "acceptedAnswers": [
+        "We should fill up the tank before leaving."
+      ],
+      "tags": [
+        "coverage:fill-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-09",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about checking on a client's request.",
+      "explanation": "'Follow up on' means to take further action on something that was initiated earlier.",
+      "template": "I need to ___ ___ on that customer inquiry this afternoon.",
+      "gaps": [
+        {
+          "answer": "follow"
+        },
+        {
+          "answer": "up"
+        }
+      ],
+      "wordBank": [
+        "follow",
+        "up",
+        "bring",
+        "back",
+        "look"
+      ],
+      "tags": [
+        "coverage:follow-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-10",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State that the auditor highlighted several accounting errors in the financial report.",
+      "explanation": "'Point out' means to draw attention to important facts, details, or errors.",
+      "answer": [
+        "The",
+        "auditor",
+        "pointed",
+        "out",
+        "several",
+        "errors",
+        "in",
+        "the",
+        "report."
+      ],
+      "distractors": [
+        "down",
+        "off",
+        "up"
+      ],
+      "tags": [
+        "coverage:point-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-11",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the safety instruction about disconnecting the electric supply.",
+      "explanation": "'Shut off' means to cut off the supply of power, water, or gas to an appliance or system.",
+      "template": "Always ___ ___ the power before attempting to repair electrical wiring.",
+      "gaps": [
+        {
+          "answer": "shut"
+        },
+        {
+          "answer": "off"
+        }
+      ],
+      "wordBank": [
+        "shut",
+        "off",
+        "bring",
+        "up",
+        "butt"
+      ],
+      "tags": [
+        "coverage:shut-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-12",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct informal phrasal verb for the bolded words.",
+      "explanation": "'Shut up' is an informal, often blunt expression meaning to stop speaking completely.",
+      "direction": "toTarget",
+      "sentence": "The room became silent when the speaker told the audience to **stop talking**.",
+      "word": "stop talking",
+      "answer": "shut up",
+      "options": [
+        "shut up",
+        "shut off",
+        "stand up",
+        "point out"
+      ],
+      "tags": [
+        "coverage:shut-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-13",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded word.",
+      "explanation": "'Stand for' means to represent or be an abbreviation of a word or phrase.",
+      "direction": "toTarget",
+      "sentence": "Do you know what letters like CEO **represent** in business?",
+      "word": "represent",
+      "answer": "stand for",
+      "options": [
+        "stand for",
+        "stand up",
+        "point out",
+        "bring up"
+      ],
+      "tags": [
+        "coverage:stand-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-14",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about being abandoned for a scheduled date.",
+      "explanation": "'Stand someone up' is an informal idiom meaning to fail to meet someone as agreed. We say 'stood him up', not 'stood him off'.",
+      "sentence": [
+        "She",
+        "was",
+        "furious",
+        "when",
+        "he",
+        "stood",
+        "her",
+        "off",
+        "again."
+      ],
+      "wrongIndex": 7,
+      "correction": "up",
+      "options": [
+        "up",
+        "out",
+        "down"
+      ],
+      "tags": [
+        "coverage:stand-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-15",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about condescending treatment at work.",
+      "explanation": "'Talk down to' means to speak to someone in a patronising way, as if they are less intelligent.",
+      "template": "Nobody enjoys working for a supervisor who will ___ ___ to staff.",
+      "gaps": [
+        {
+          "answer": "talk"
+        },
+        {
+          "answer": "down"
+        }
+      ],
+      "wordBank": [
+        "talk",
+        "down",
+        "tell",
+        "on",
+        "make"
+      ],
+      "tags": [
+        "coverage:talk-down-to"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-16",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State that your friend persuaded you to run the marathon together.",
+      "explanation": "'Talk into' means to convince or persuade someone to do something.",
+      "answer": [
+        "My",
+        "friend",
+        "talked",
+        "me",
+        "into",
+        "joining",
+        "the",
+        "marathon."
+      ],
+      "distractors": [
+        "out",
+        "off",
+        "down"
+      ],
+      "acceptedAnswers": [
+        "My friend talked me into running the marathon."
+      ],
+      "tags": [
+        "coverage:talk-into"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-17",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded word.",
+      "explanation": "'Talk out of' means to persuade someone not to take a particular course of action.",
+      "direction": "toTarget",
+      "sentence": "His parents managed to **dissuade** him from quitting his studies.",
+      "word": "dissuade",
+      "answer": "talk out of",
+      "options": [
+        "talk out of",
+        "talk into",
+        "talk down to",
+        "tell apart"
+      ],
+      "tags": [
+        "coverage:talk-out-of"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-18",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about distinguishing identical twins.",
+      "explanation": "'Tell apart' means to distinguish between two people or things that look alike. The particle is 'apart', not 'away'.",
+      "sentence": [
+        "The",
+        "twins",
+        "look",
+        "identical;",
+        "nobody",
+        "can",
+        "tell",
+        "them",
+        "away."
+      ],
+      "wrongIndex": 8,
+      "correction": "apart",
+      "options": [
+        "apart",
+        "out",
+        "off"
+      ],
+      "tags": [
+        "coverage:tell-apart"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-19",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about a child reporting a sibling's misbehavior.",
+      "explanation": "'Tell on' is an informal expression meaning to report someone's wrongdoing to an authority figure.",
+      "template": "The young boy threatened to ___ ___ his sister to their mother.",
+      "gaps": [
+        {
+          "answer": "tell"
+        },
+        {
+          "answer": "on"
+        }
+      ],
+      "wordBank": [
+        "tell",
+        "on",
+        "talk",
+        "down",
+        "butt"
+      ],
+      "tags": [
+        "coverage:tell-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-20",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State that you finally understood how to solve the problem.",
+      "explanation": "'Figure out' means to discover, solve, or understand something by thinking about it.",
+      "answer": [
+        "I",
+        "finally",
+        "figured",
+        "out",
+        "how",
+        "to",
+        "solve",
+        "it."
+      ],
+      "distractors": [
+        "in",
+        "off",
+        "away"
+      ],
+      "tags": [
+        "coverage:figure-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-21",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about discovering information online.",
+      "explanation": "'Find out' means to learn or become aware of facts or information.",
+      "template": "Check the schedule online to ___ ___ when the train departs.",
+      "gaps": [
+        {
+          "answer": "find"
+        },
+        {
+          "answer": "out"
+        }
+      ],
+      "wordBank": [
+        "find",
+        "out",
+        "figure",
+        "in",
+        "shut"
+      ],
+      "tags": [
+        "coverage:find-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-22",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State that the compliance team will investigate customer complaints immediately.",
+      "explanation": "'Look into' means to examine, research, or investigate an issue or allegation.",
+      "answer": [
+        "Our",
+        "team",
+        "will",
+        "look",
+        "into",
+        "the",
+        "matter",
+        "promptly."
+      ],
+      "distractors": [
+        "up",
+        "out",
+        "off"
+      ],
+      "acceptedAnswers": [
+        "Our team will look into the complaint promptly."
+      ],
+      "tags": [
+        "coverage:look-into"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-23",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Make for' means to lead to or produce a particular result or atmosphere.",
+      "direction": "toTarget",
+      "sentence": "Good communication and mutual respect will **produce** a healthy team atmosphere.",
+      "word": "produce",
+      "answer": "make for",
+      "options": [
+        "make for",
+        "make of",
+        "make out",
+        "look into"
+      ],
+      "tags": [
+        "coverage:make-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-24",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your colleague attended a complex executive presentation. Ask for their opinion on it.",
+      "explanation": "'What do you make of...' is used to ask for someone's opinion or interpretation of something.",
+      "givenAnswer": "I thought the presentation was clear, but the proposed strategy seemed unrealistic.",
+      "answer": [
+        "What",
+        "did",
+        "you",
+        "make",
+        "of",
+        "the",
+        "presentation?"
+      ],
+      "distractors": [
+        "for",
+        "out",
+        "up"
+      ],
+      "acceptedAnswers": [
+        "What did you make of his presentation?"
+      ],
+      "tags": [
+        "coverage:make-of"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-25",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about struggling to decipher blurry handwriting.",
+      "explanation": "'Make out' means to succeed in seeing, reading, or hearing something with difficulty.",
+      "template": "The handwriting is so messy that I cannot ___ ___ this address.",
+      "gaps": [
+        {
+          "answer": "make"
+        },
+        {
+          "answer": "out"
+        }
+      ],
+      "wordBank": [
+        "make",
+        "out",
+        "point",
+        "up",
+        "track"
+      ],
+      "tags": [
+        "coverage:make-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-26",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Explain that the librarian found the rare reference volume after a long search.",
+      "explanation": "'Track down' means to find or locate something after thorough, diligent searching.",
+      "answer": [
+        "The",
+        "librarian",
+        "tracked",
+        "down",
+        "the",
+        "rare",
+        "manuscript."
+      ],
+      "distractors": [
+        "out",
+        "off",
+        "away"
+      ],
+      "tags": [
+        "coverage:track-down"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-27",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State that she accidentally revealed the surprise party secret in front of everyone.",
+      "explanation": "'Blurt out' means to reveal confidential or embarrassing information impulsively.",
+      "answer": [
+        "She",
+        "blurted",
+        "out",
+        "the",
+        "secret",
+        "before",
+        "thinking."
+      ],
+      "distractors": [
+        "in",
+        "off",
+        "away"
+      ],
+      "acceptedAnswers": [
+        "She blurted out the secret before thinking about it."
+      ],
+      "tags": [
+        "coverage:blurt-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-28",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Bring back' means to reintroduce or revive a custom, policy, or style from the past.",
+      "direction": "toTarget",
+      "sentence": "The town council voted to **reintroduce** the traditional summer festival.",
+      "word": "reintroduce",
+      "answer": "bring back",
+      "options": [
+        "bring back",
+        "bring up",
+        "look into",
+        "follow up"
+      ],
+      "tags": [
+        "coverage:bring-back"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-29",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State that your parents raised you in a quiet countryside town.",
+      "explanation": "'Bring up' means to raise and care for a child until they are an adult.",
+      "answer": [
+        "My",
+        "parents",
+        "brought",
+        "me",
+        "up",
+        "in",
+        "the",
+        "countryside."
+      ],
+      "distractors": [
+        "down",
+        "off",
+        "out"
+      ],
+      "tags": [
+        "coverage:bring-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-30",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded word.",
+      "explanation": "'Butt in' means to interrupt rudely or interfere in someone else's conversation or line.",
+      "direction": "toTarget",
+      "sentence": "Please do not **interrupt** while the manager is explaining the new guidelines.",
+      "word": "interrupt",
+      "answer": "butt in",
+      "options": [
+        "butt in",
+        "call back",
+        "fill in",
+        "stand for"
+      ],
+      "tags": [
+        "coverage:butt-in"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-31",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the message promising to return a phone call later.",
+      "explanation": "'Call back' means to telephone someone who has called you previously.",
+      "template": "I am in a meeting now, but I will ___ you ___ soon.",
+      "gaps": [
+        {
+          "answer": "call"
+        },
+        {
+          "answer": "back"
+        }
+      ],
+      "wordBank": [
+        "call",
+        "back",
+        "talk",
+        "into",
+        "track"
+      ],
+      "tags": [
+        "coverage:call-back"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-32",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State that celebrating is appropriate because your team won the contract.",
+      "explanation": "'Call for' means that a situation makes something appropriate, like a celebration.",
+      "answer": [
+        "Winning",
+        "this",
+        "major",
+        "contract",
+        "calls",
+        "for",
+        "a",
+        "celebration."
+      ],
+      "distractors": [
+        "out",
+        "off",
+        "up"
+      ],
+      "tags": [
+        "coverage:call-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-33",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Offer to update your colleague on what happened during the morning conference.",
+      "explanation": "'Fill in' means to provide someone with missing information or news about a situation.",
+      "answer": [
+        "I",
+        "will",
+        "fill",
+        "you",
+        "in",
+        "on",
+        "the",
+        "meeting."
+      ],
+      "distractors": [
+        "out",
+        "off",
+        "back"
+      ],
+      "acceptedAnswers": [
+        "I'll fill you in on the meeting."
+      ],
+      "tags": [
+        "coverage:fill-in"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-34",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about eating too much bread before dinner.",
+      "explanation": "'Fill up on' means to eat so much of something that you become completely full. We say 'fill up', not 'fill off'.",
+      "sentence": [
+        "Do",
+        "not",
+        "fill",
+        "off",
+        "on",
+        "bread",
+        "before",
+        "dinner."
+      ],
+      "wrongIndex": 3,
+      "correction": "up",
+      "options": [
+        "up",
+        "in",
+        "out"
+      ],
+      "tags": [
+        "coverage:fill-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-35",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Follow up' means to take subsequent steps or pursue information after an initial action.",
+      "direction": "toTarget",
+      "sentence": "The doctor promised to **check on progress** after two weeks of therapy.",
+      "word": "check on progress",
+      "answer": "follow up",
+      "options": [
+        "follow up",
+        "point out",
+        "shut off",
+        "stand for"
+      ],
+      "tags": [
+        "coverage:follow-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-36",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about drawing attention to a problem.",
+      "explanation": "'Point out' means to bring information to someone's notice. The particle is 'out', not 'down'.",
+      "sentence": [
+        "She",
+        "wanted",
+        "to",
+        "point",
+        "down",
+        "the",
+        "main",
+        "risk."
+      ],
+      "wrongIndex": 4,
+      "correction": "out",
+      "options": [
+        "out",
+        "up",
+        "in"
+      ],
+      "tags": [
+        "coverage:point-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-37",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Instruct someone to switch off the noisy generator immediately.",
+      "explanation": "'Shut off' means to stop an engine or electrical device from operating.",
+      "answer": [
+        "Please",
+        "shut",
+        "off",
+        "the",
+        "noisy",
+        "engine",
+        "right",
+        "now."
+      ],
+      "distractors": [
+        "down",
+        "out",
+        "up"
+      ],
+      "acceptedAnswers": [
+        "Please shut off the noisy generator right now."
+      ],
+      "tags": [
+        "coverage:shut-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-38",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence expressing frustration with non-stop noise.",
+      "explanation": "'Shut up' means to cease talking, especially when told angrily.",
+      "template": "He talks continuously and never seems to ___ ___ about himself.",
+      "gaps": [
+        {
+          "answer": "shut"
+        },
+        {
+          "answer": "up"
+        }
+      ],
+      "wordBank": [
+        "shut",
+        "up",
+        "tell",
+        "apart",
+        "call"
+      ],
+      "tags": [
+        "coverage:shut-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-39",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State firmly that you will not tolerate dishonest behavior in your team.",
+      "explanation": "'Stand for' in negative sentences means to tolerate, endure, or accept bad behavior.",
+      "answer": [
+        "I",
+        "will",
+        "not",
+        "stand",
+        "for",
+        "dishonesty",
+        "in",
+        "this",
+        "office."
+      ],
+      "distractors": [
+        "up",
+        "out",
+        "off"
+      ],
+      "tags": [
+        "coverage:stand-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-40",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Describe what all attendees do when the magistrate enters the courtroom.",
+      "explanation": "'Stand up' means to rise from a seated position to one's feet.",
+      "answer": [
+        "Everyone",
+        "must",
+        "stand",
+        "up",
+        "when",
+        "the",
+        "judge",
+        "enters."
+      ],
+      "distractors": [
+        "down",
+        "off",
+        "out"
+      ],
+      "tags": [
+        "coverage:stand-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-41",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Talk down to' means to speak condescendingly to someone.",
+      "direction": "toTarget",
+      "sentence": "It is offensive when senior colleagues **patronise** younger team members.",
+      "word": "patronise",
+      "answer": "talk down to",
+      "options": [
+        "talk down to",
+        "talk into",
+        "talk out of",
+        "tell on"
+      ],
+      "tags": [
+        "coverage:talk-down-to"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-42",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about convincing someone to make an investment.",
+      "explanation": "'Talk into' means to successfully persuade someone to agree to a plan.",
+      "template": "She managed to ___ her brother ___ investing in the company.",
+      "gaps": [
+        {
+          "answer": "talk"
+        },
+        {
+          "answer": "into"
+        }
+      ],
+      "wordBank": [
+        "talk",
+        "into",
+        "make",
+        "for",
+        "tell"
+      ],
+      "tags": [
+        "coverage:talk-into"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-43",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Explain that you convinced your friend not to sell his vintage bicycle.",
+      "explanation": "'Talk out of' means to dissuade someone from doing something unwise.",
+      "answer": [
+        "I",
+        "talked",
+        "him",
+        "out",
+        "of",
+        "selling",
+        "his",
+        "bicycle."
+      ],
+      "distractors": [
+        "into",
+        "down",
+        "off"
+      ],
+      "acceptedAnswers": [
+        "I talked him out of selling his bike."
+      ],
+      "tags": [
+        "coverage:talk-out-of"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-44",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about distinguishing between real and fake gems.",
+      "explanation": "'Tell apart' means to recognize the differences between two similar items.",
+      "template": "Only a trained jeweller can ___ genuine diamonds ___ from fakes.",
+      "gaps": [
+        {
+          "answer": "tell"
+        },
+        {
+          "answer": "apart"
+        }
+      ],
+      "wordBank": [
+        "tell",
+        "apart",
+        "bring",
+        "back",
+        "point"
+      ],
+      "tags": [
+        "coverage:tell-apart"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-45",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct informal phrasal verb for the bolded words.",
+      "explanation": "'Tell on' means to inform a parent, teacher, or authority about another person's mistake or rule violation.",
+      "direction": "toTarget",
+      "sentence": "The student promised not to **inform the teacher about** his classmate.",
+      "word": "inform the teacher about",
+      "answer": "tell on",
+      "options": [
+        "tell on",
+        "tell apart",
+        "talk down to",
+        "point out"
+      ],
+      "tags": [
+        "coverage:tell-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-46",
+      "type": "about_me",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Describe what strategies you rely on when you struggle to understand a difficult problem.",
+      "explanation": "'Figure out' means to solve or understand something through thought and effort.",
+      "question": "How do you usually figure out solutions to difficult problems?",
+      "sampleAnswer": "I break complex tasks into smaller parts and ask colleagues.",
+      "hints": [
+        "diagrams",
+        "careful",
+        "research",
+        "patience"
+      ],
+      "tags": [
+        "coverage:figure-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-47",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "A colleague knows the results of the quarterly audit. Ask them how they learned the information.",
+      "explanation": "'Find out' means to discover or obtain knowledge about something.",
+      "givenAnswer": "The director told me during our morning meeting.",
+      "answer": [
+        "How",
+        "did",
+        "you",
+        "find",
+        "out?"
+      ],
+      "distractors": [
+        "in",
+        "off",
+        "up"
+      ],
+      "acceptedAnswers": [
+        "How did you find out about that?"
+      ],
+      "tags": [
+        "coverage:find-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-48",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about investigating a discrepancy.",
+      "explanation": "'Look into' means to examine or investigate a problem. The preposition is 'into', not 'onto'.",
+      "sentence": [
+        "The",
+        "auditors",
+        "promised",
+        "to",
+        "look",
+        "onto",
+        "the",
+        "missing",
+        "funds."
+      ],
+      "wrongIndex": 5,
+      "correction": "into",
+      "options": [
+        "into",
+        "after",
+        "through"
+      ],
+      "tags": [
+        "coverage:look-into"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-49",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State that the hikers rushed towards shelter when the sudden storm began.",
+      "explanation": "'Make for' can mean to move quickly in the direction of a place.",
+      "answer": [
+        "The",
+        "hikers",
+        "made",
+        "for",
+        "the",
+        "wooden",
+        "cabin",
+        "immediately."
+      ],
+      "distractors": [
+        "out",
+        "off",
+        "away"
+      ],
+      "tags": [
+        "coverage:make-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-50",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence expressing confusion over an unexpected remark.",
+      "explanation": "'Make of' refers to one's understanding or opinion of something strange or ambiguous.",
+      "template": "Her behavior was so unusual that I did not know what to ___ ___ it.",
+      "gaps": [
+        {
+          "answer": "make"
+        },
+        {
+          "answer": "of"
+        }
+      ],
+      "wordBank": [
+        "make",
+        "of",
+        "figure",
+        "out",
+        "look"
+      ],
+      "tags": [
+        "coverage:make-of"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-51",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Make out' means to hear, see, or distinguish something despite poor clarity or noise.",
+      "direction": "toTarget",
+      "sentence": "Through the dense sea fog, we could barely **distinguish visually** the distant lighthouse.",
+      "word": "distinguish visually",
+      "answer": "make out",
+      "options": [
+        "make out",
+        "make for",
+        "make of",
+        "figure out"
+      ],
+      "tags": [
+        "coverage:make-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-communication-information-and-understanding-52",
+      "type": "about_me",
+      "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Describe how you locate hard-to-find information or items that you need.",
+      "explanation": "'Track down' means to find something after making an effort to search for it.",
+      "question": "How do you usually track down hard-to-find books or information?",
+      "sampleAnswer": "I search online forums and consult specialized library archives.",
+      "hints": [
+        "catalogues",
+        "curators",
+        "bookmarks",
+        "indices"
+      ],
+      "tags": [
+        "coverage:track-down"
+      ]
+    }
+  ]
+}

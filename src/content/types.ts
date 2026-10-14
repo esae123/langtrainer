@@ -9,6 +9,8 @@ export interface Program {
   targetLanguage: LanguageCode; // 'pt-PT'
   supportLanguage: LanguageCode; // language of explanations, 'en'
   level: string; // 'A1'
+  /** Optional first-pass rule; omitted courses retain the standard session selection. */
+  topicCompletionPolicy?: 'all-exercises-correct';
   modules: Module[];
   phraseSets: PhraseSet[]; // everyday phrases (not tied to modules)
 }
@@ -27,6 +29,13 @@ export interface Topic {
   kind: 'grammar' | 'vocabulary' | 'situation';
   context: string; // short situation/rule text shown before the block (markdown allowed)
   keyItems: { target: string; support: string; note?: string }[]; // key words/phrases
+  /** Optional authoring constraint: require a minimum number of tagged exercises per item. */
+  coverage?: {
+    items: { id: string; phrase: string }[];
+    minimumExercisesPerItem: number;
+    /** Optional exercise-id to item-id mapping used to enforce generated assignments. */
+    assignments?: Record<string, string>;
+  };
   exercises: Exercise[];
 }
 
@@ -126,6 +135,7 @@ export interface TranslateWordExercise extends ExerciseBase {
   sentence: string;
   word: string;
   answer: string;
+  acceptedAnswers?: string[];
   options: string[];
 }
 

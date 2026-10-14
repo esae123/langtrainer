@@ -114,6 +114,11 @@ describe('loadProgram — modules not (yet) in moduleOrder are still loaded sepa
 });
 
 describe('--program (review S8)', () => {
+  it('preserves optional course-level topic completion policy when loading a course', () => {
+    const { program } = loadProgram(true, 'en-phrasal_verbs');
+    expect(program.topicCompletionPolicy).toBe('all-exercises-correct');
+  });
+
   it('defaults to pt-PT-A1 and reads --program <id>', () => {
     expect(programIdFromArgs([])).toBe('pt-PT-A1');
     expect(programIdFromArgs(['--allow-missing'])).toBe('pt-PT-A1');

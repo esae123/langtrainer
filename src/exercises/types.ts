@@ -4,6 +4,8 @@ import type { ExerciseResponse } from '../engine/check';
 export interface ExerciseViewProps<E extends Exercise = Exercise> {
   exercise: E;
   mode: InputMode;
+  /** BCP-47 target language for language-specific input aids. */
+  targetLanguage?: string;
   /** Stable per exercise: seeds tile and letter shuffles so they survive re-renders. */
   seed: number;
   /** `null` while the answer is incomplete, which keeps the Check button disabled. */

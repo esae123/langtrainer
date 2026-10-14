@@ -1,0 +1,994 @@
+{
+  "id": "en-phrasal_verbs-m1-food-personal-care-and-health",
+  "moduleId": "m1",
+  "title": "Food, personal care and health",
+  "kind": "vocabulary",
+  "context": "Phrasal verbs are essential when talking about meals, clothing, personal grooming, and physical health.\n\n### Food & Kitchen\n- **heat up**: make food hotter. *I will heat up the soup in the microwave.*\n- **pig out**: eat large amounts of food greedily. *We pigged out on pizza during the match.*\n- **use up**: consume the entire supply of something. *Don't use up all the milk.*\n\n### Clothing & Appearance\n- **put on / take off**: dress in or remove clothing. *Put on your jacket before leaving, and take off your boots inside.*\n- **try on**: test clothing for fit or style. *You should try on the shirt before buying it.*\n- **dress up**: wear formal clothing or a costume. *Everyone dressed up for the gala.*\n- **grow out of / grow up**: become too big for clothes, stop a habit as you mature, or develop from childhood into adulthood. *Kids grow out of sneakers fast, and many grow out of their fear of the dark.*\n\n### Physical Well-being & Health\n- **warm up**: prepare your muscles before exercise. *Always warm up before running.*\n- **come down with**: start catching an illness. *I am coming down with a cold.*\n- **pass out**: faint or lose consciousness; it can also mean distribute something to a group. *He passed out from the extreme heat.* *The teacher passed out the worksheets.*\n- **pass away**: die (polite euphemism). *Her grandfather passed away peacefully.*\n- **throw up**: vomit. *Bad seafood caused him to throw up.*\n\n### Watch out!\n- Do not confuse **pass out** (to faint) with **pass away** (to die).\n- **Put on** is the opposite of **take off**, but **put on** can also mean gaining weight.",
+  "keyItems": [
+    {
+      "target": "dress up",
+      "support": "wear formal clothes or a costume"
+    },
+    {
+      "target": "grow out of",
+      "support": "become too large or mature for something"
+    },
+    {
+      "target": "grow up",
+      "support": "mature from childhood to adulthood"
+    },
+    {
+      "target": "heat up",
+      "support": "make food or an object hotter"
+    },
+    {
+      "target": "pig out",
+      "support": "eat an excessive amount of food"
+    },
+    {
+      "target": "put on",
+      "support": "wear clothes or gain weight"
+    },
+    {
+      "target": "take off",
+      "support": "remove clothing or depart"
+    },
+    {
+      "target": "try on",
+      "support": "wear clothing to check size and fit"
+    },
+    {
+      "target": "use up",
+      "support": "consume an entire supply of something"
+    },
+    {
+      "target": "warm up",
+      "support": "do gentle preparatory exercises"
+    },
+    {
+      "target": "come down with",
+      "support": "start to suffer from an illness"
+    },
+    {
+      "target": "pass away",
+      "support": "die peacefully (polite euphemism)"
+    },
+    {
+      "target": "pass out",
+      "support": "faint or lose consciousness"
+    },
+    {
+      "target": "throw up",
+      "support": "vomit"
+    }
+  ],
+  "coverage": {
+    "items": [
+      {
+        "id": "dress-up",
+        "phrase": "dress up"
+      },
+      {
+        "id": "grow-out-of",
+        "phrase": "grow out of"
+      },
+      {
+        "id": "grow-up",
+        "phrase": "grow up"
+      },
+      {
+        "id": "heat-up",
+        "phrase": "heat up"
+      },
+      {
+        "id": "pig-out",
+        "phrase": "pig out"
+      },
+      {
+        "id": "put-on",
+        "phrase": "put on"
+      },
+      {
+        "id": "take-off",
+        "phrase": "take off"
+      },
+      {
+        "id": "try-on",
+        "phrase": "try on"
+      },
+      {
+        "id": "use-up",
+        "phrase": "use up"
+      },
+      {
+        "id": "warm-up",
+        "phrase": "warm up"
+      },
+      {
+        "id": "come-down-with",
+        "phrase": "come down with"
+      },
+      {
+        "id": "pass-away",
+        "phrase": "pass away"
+      },
+      {
+        "id": "pass-out",
+        "phrase": "pass out"
+      },
+      {
+        "id": "throw-up",
+        "phrase": "throw up"
+      }
+    ],
+    "minimumExercisesPerItem": 2,
+    "assignments": {
+      "en-phrasal_verbs-m1-food-personal-care-and-health-01": "dress-up",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-02": "grow-out-of",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-03": "grow-up",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-04": "heat-up",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-05": "pig-out",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-06": "put-on",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-07": "take-off",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-08": "try-on",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-09": "use-up",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-10": "warm-up",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-11": "come-down-with",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-12": "pass-away",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-13": "pass-out",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-14": "throw-up",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-15": "dress-up",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-16": "grow-out-of",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-17": "grow-up",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-18": "heat-up",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-19": "pig-out",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-20": "put-on",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-21": "take-off",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-22": "try-on",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-23": "use-up",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-24": "warm-up",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-25": "come-down-with",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-26": "pass-away",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-27": "pass-out",
+      "en-phrasal_verbs-m1-food-personal-care-and-health-28": "throw-up"
+    }
+  },
+  "exercises": [
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-01",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Dress up' means to wear elegant, formal, or special clothes for an occasion.",
+      "direction": "toTarget",
+      "sentence": "Guests are required to **wear formal clothes** for the wedding reception.",
+      "word": "wear formal clothes",
+      "answer": "dress up",
+      "options": [
+        "dress up",
+        "put on",
+        "try on",
+        "grow up"
+      ],
+      "tags": [
+        "coverage:dress-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-02",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about how fast children outgrow footwear.",
+      "explanation": "'Grow out of' means to become too large for an item of clothing or footwear.",
+      "template": "Young children ___ ___ of their shoes within a few months.",
+      "gaps": [
+        {
+          "answer": "grow"
+        },
+        {
+          "answer": "out"
+        }
+      ],
+      "wordBank": [
+        "grow",
+        "out",
+        "warm",
+        "up",
+        "pig"
+      ],
+      "tags": [
+        "coverage:grow-out-of"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-03",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State where you spent your childhood years.",
+      "explanation": "'Grow up' means to develop and mature from childhood into adulthood.",
+      "answer": [
+        "I",
+        "grew",
+        "up",
+        "in",
+        "a",
+        "small",
+        "mountain",
+        "village."
+      ],
+      "distractors": [
+        "out",
+        "off",
+        "away"
+      ],
+      "tags": [
+        "coverage:grow-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-04",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the instruction about reheating cold soup.",
+      "explanation": "'Heat up' means to make something warmer or hot.",
+      "template": "You can ___ ___ the tomato soup in the microwave.",
+      "gaps": [
+        {
+          "answer": "heat"
+        },
+        {
+          "answer": "up"
+        }
+      ],
+      "wordBank": [
+        "heat",
+        "up",
+        "pass",
+        "away",
+        "throw"
+      ],
+      "tags": [
+        "coverage:heat-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-05",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct informal phrasal verb for the bolded words.",
+      "explanation": "'Pig out' is an informal expression meaning to eat a very large amount of food greedily.",
+      "direction": "toTarget",
+      "sentence": "The teenagers love to **eat excessively** when ordering late-night pizza.",
+      "word": "eat excessively",
+      "answer": "pig out",
+      "options": [
+        "pig out",
+        "use up",
+        "heat up",
+        "warm up"
+      ],
+      "tags": [
+        "coverage:pig-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-06",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about dressing warmly before going outdoors.",
+      "explanation": "'Put on' means to dress yourself in an item of clothing.",
+      "template": "Don't forget to ___ ___ your gloves before leaving the house.",
+      "gaps": [
+        {
+          "answer": "put"
+        },
+        {
+          "answer": "on"
+        }
+      ],
+      "wordBank": [
+        "put",
+        "on",
+        "take",
+        "off",
+        "try"
+      ],
+      "tags": [
+        "coverage:put-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-07",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "A guest arrives with wet footwear. Ask them politely to remove their boots.",
+      "explanation": "'Take off' means to remove an item of clothing or shoes from the body.",
+      "givenAnswer": "Of course, I will leave them by the front entrance.",
+      "answer": [
+        "Could",
+        "you",
+        "take",
+        "off",
+        "your",
+        "boots?"
+      ],
+      "distractors": [
+        "on",
+        "out",
+        "away"
+      ],
+      "acceptedAnswers": [
+        "Can you take off your boots?"
+      ],
+      "tags": [
+        "coverage:take-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-08",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Tell the shop assistant that you want to check if the coat fits you.",
+      "explanation": "'Try on' means to put on clothing to see if it fits and looks good before purchasing.",
+      "answer": [
+        "I",
+        "would",
+        "like",
+        "to",
+        "try",
+        "on",
+        "this",
+        "coat."
+      ],
+      "distractors": [
+        "off",
+        "out",
+        "away"
+      ],
+      "acceptedAnswers": [
+        "I'd like to try on this coat."
+      ],
+      "tags": [
+        "coverage:try-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-09",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded phrase.",
+      "explanation": "'Use up' means to exhaust the entire available quantity or supply of something.",
+      "direction": "toTarget",
+      "sentence": "We need another tube of toothpaste because we have **used all of** this one.",
+      "word": "used all of",
+      "answer": "used up",
+      "options": [
+        "used up",
+        "warmed up",
+        "put on",
+        "taken off"
+      ],
+      "tags": [
+        "coverage:use-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-10",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Advise the runners to perform light physical exercises before running the marathon.",
+      "explanation": "'Warm up' means to do gentle physical exercises to prepare muscles for strenuous activity.",
+      "answer": [
+        "Runners",
+        "ought",
+        "to",
+        "warm",
+        "up",
+        "before",
+        "the",
+        "race."
+      ],
+      "distractors": [
+        "down",
+        "off",
+        "out"
+      ],
+      "acceptedAnswers": [
+        "Runners should warm up before the race."
+      ],
+      "tags": [
+        "coverage:warm-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-11",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about developing symptoms of an illness.",
+      "explanation": "'Come down with' means to begin suffering from an illness such as a cold or flu.",
+      "template": "Mark started shivering and thinks he will ___ ___ with something.",
+      "gaps": [
+        {
+          "answer": "come"
+        },
+        {
+          "answer": "down"
+        }
+      ],
+      "wordBank": [
+        "come",
+        "down",
+        "pass",
+        "out",
+        "pig"
+      ],
+      "tags": [
+        "coverage:come-down-with"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-12",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about an elderly relative's death.",
+      "explanation": "'Pass away' is the polite euphemistic phrasal verb meaning to die. 'Pass off' means to take place or pretend.",
+      "sentence": [
+        "His",
+        "grandmother",
+        "passed",
+        "off",
+        "peacefully",
+        "last",
+        "winter."
+      ],
+      "wrongIndex": 3,
+      "correction": "away",
+      "options": [
+        "away",
+        "out",
+        "over"
+      ],
+      "tags": [
+        "coverage:pass-away"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-13",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded word.",
+      "explanation": "'Pass out' means to lose consciousness temporarily from heat, exhaustion, or illness.",
+      "direction": "toTarget",
+      "sentence": "The crowded room was so stuffy that several people began to **faint**.",
+      "word": "faint",
+      "answer": "pass out",
+      "options": [
+        "pass out",
+        "pass away",
+        "throw up",
+        "pig out"
+      ],
+      "tags": [
+        "coverage:pass-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-14",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Explain that eating spoiled seafood caused someone to vomit all night.",
+      "explanation": "'Throw up' is an informal phrasal verb meaning to vomit.",
+      "answer": [
+        "The",
+        "bad",
+        "seafood",
+        "caused",
+        "him",
+        "to",
+        "throw",
+        "up."
+      ],
+      "distractors": [
+        "down",
+        "away",
+        "off"
+      ],
+      "tags": [
+        "coverage:throw-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-15",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State that party guests will wear costumes as fictional characters tonight.",
+      "explanation": "'Dress up as' means to wear a costume representing a particular character or person.",
+      "answer": [
+        "We",
+        "decided",
+        "to",
+        "dress",
+        "up",
+        "as",
+        "pirates",
+        "tonight."
+      ],
+      "distractors": [
+        "down",
+        "out",
+        "off"
+      ],
+      "acceptedAnswers": [
+        "We decided to dress up like pirates tonight."
+      ],
+      "tags": [
+        "coverage:dress-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-16",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about outgrowing a childish habit.",
+      "explanation": "'Grow out of' means to become too mature for an interest or behavior as one gets older.",
+      "sentence": [
+        "He",
+        "will",
+        "soon",
+        "grow",
+        "off",
+        "these",
+        "childish",
+        "tantrums."
+      ],
+      "wrongIndex": 4,
+      "correction": "out",
+      "options": [
+        "out",
+        "up",
+        "away"
+      ],
+      "tags": [
+        "coverage:grow-out-of"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-17",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded phrase.",
+      "explanation": "'Grow up' is used to tell someone to stop behaving immaturely and act like an adult.",
+      "direction": "toTarget",
+      "sentence": "You are acting like a spoiled child; it is time to **act like an adult**!",
+      "word": "act like an adult",
+      "answer": "grow up",
+      "options": [
+        "grow up",
+        "dress up",
+        "pass out",
+        "warm up"
+      ],
+      "tags": [
+        "coverage:grow-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-18",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about heating cold food.",
+      "explanation": "'Heat up' means to make cold food hotter. We say 'heats up', not 'heats off'.",
+      "sentence": [
+        "The",
+        "cook",
+        "heats",
+        "off",
+        "the",
+        "leftover",
+        "stew."
+      ],
+      "wrongIndex": 3,
+      "correction": "up",
+      "options": [
+        "up",
+        "out",
+        "away"
+      ],
+      "tags": [
+        "coverage:heat-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-19",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State that everyone ate too much pizza and snacks during the party.",
+      "explanation": "'Pig out on' is an informal expression meaning to consume large quantities of food.",
+      "answer": [
+        "The",
+        "kids",
+        "pigged",
+        "out",
+        "on",
+        "snacks",
+        "after",
+        "school."
+      ],
+      "distractors": [
+        "away",
+        "off",
+        "down"
+      ],
+      "tags": [
+        "coverage:pig-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-20",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words about body weight.",
+      "explanation": "'Put on' weight means to gain weight.",
+      "direction": "toTarget",
+      "sentence": "Many people tend to **gain weight** when they stop exercising regularly.",
+      "word": "gain weight",
+      "answer": "put on",
+      "options": [
+        "put on",
+        "take off",
+        "grow up",
+        "warm up"
+      ],
+      "tags": [
+        "coverage:put-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-21",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about removing outerwear indoors.",
+      "explanation": "'Take off' means to remove an article of clothing, not 'take down'.",
+      "sentence": [
+        "Please",
+        "take",
+        "down",
+        "your",
+        "wet",
+        "raincoat",
+        "immediately."
+      ],
+      "wrongIndex": 2,
+      "correction": "off",
+      "options": [
+        "off",
+        "out",
+        "away"
+      ],
+      "tags": [
+        "coverage:take-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-22",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence in the clothing boutique.",
+      "explanation": "'Try on' means to wear a garment temporarily to test whether the size and appearance suit you.",
+      "template": "Would you like to ___ ___ this elegant evening dress?",
+      "gaps": [
+        {
+          "answer": "try"
+        },
+        {
+          "answer": "on"
+        }
+      ],
+      "wordBank": [
+        "try",
+        "on",
+        "put",
+        "off",
+        "heat"
+      ],
+      "tags": [
+        "coverage:try-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-23",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about finishing the supply of printer paper.",
+      "explanation": "'Use up' means to consume all of a supply so that nothing remains.",
+      "template": "Be careful not to ___ ___ all the printer paper today.",
+      "gaps": [
+        {
+          "answer": "use"
+        },
+        {
+          "answer": "up"
+        }
+      ],
+      "wordBank": [
+        "use",
+        "up",
+        "grow",
+        "out",
+        "pass"
+      ],
+      "tags": [
+        "coverage:use-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-24",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Warm up' means to do preparatory exercises before athletic activity or performance.",
+      "direction": "toTarget",
+      "sentence": "The coach insisted that every player **prepare physically** with dynamic stretches.",
+      "word": "prepare physically",
+      "answer": "warm up",
+      "options": [
+        "warm up",
+        "dress up",
+        "pig out",
+        "grow up"
+      ],
+      "tags": [
+        "coverage:warm-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-25",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "State that several students caught the seasonal flu this week.",
+      "explanation": "'Come down with' is used when someone begins to suffer from an illness.",
+      "answer": [
+        "Many",
+        "students",
+        "came",
+        "down",
+        "with",
+        "the",
+        "flu",
+        "yesterday."
+      ],
+      "distractors": [
+        "up",
+        "off",
+        "away"
+      ],
+      "tags": [
+        "coverage:come-down-with"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-26",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "A friend mentions that their beloved pet died last year. Inquire politely when it happened.",
+      "explanation": "'Pass away' is a polite way to speak about death.",
+      "givenAnswer": "He passed away peacefully last autumn.",
+      "answer": [
+        "When",
+        "did",
+        "he",
+        "pass",
+        "away?"
+      ],
+      "distractors": [
+        "out",
+        "off",
+        "up"
+      ],
+      "acceptedAnswers": [
+        "When did your pet pass away?"
+      ],
+      "tags": [
+        "coverage:pass-away"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-27",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about distributing event leaflets.",
+      "explanation": "'Pass out' can mean to hand out or distribute items to a group of people.",
+      "template": "Volunteers gathered to ___ ___ flyers to people on the street.",
+      "gaps": [
+        {
+          "answer": "pass"
+        },
+        {
+          "answer": "out"
+        }
+      ],
+      "wordBank": [
+        "pass",
+        "out",
+        "warm",
+        "up",
+        "throw"
+      ],
+      "tags": [
+        "coverage:pass-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-food-personal-care-and-health-28",
+      "type": "about_me",
+      "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Reflect on how you take care of your body when you feel nauseous and want to prevent vomiting.",
+      "explanation": "'Throw up' means to vomit. Rest, quiet, and hydrating liquids help calm nausea.",
+      "question": "What do you do to avoid throwing up when your stomach is upset?",
+      "sampleAnswer": "I sip warm tea and rest quietly in bed.",
+      "hints": [
+        "fresh",
+        "water",
+        "deep",
+        "breathing"
+      ],
+      "tags": [
+        "coverage:throw-up"
+      ]
+    }
+  ]
+}
