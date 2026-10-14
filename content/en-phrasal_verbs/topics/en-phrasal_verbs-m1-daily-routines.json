@@ -1,0 +1,941 @@
+{
+  "id": "en-phrasal_verbs-m1-daily-routines",
+  "moduleId": "m1",
+  "title": "Daily routines, rest and leisure",
+  "kind": "situation",
+  "context": "In daily life, we use many phrasal verbs to describe routines, rest, and leisure activities.\n\n### Essential Routines and Rest\n- **wake up**: stop sleeping. *I wake up at 7:00 AM every morning.*\n- **get up**: rise from bed or stand up. *He got up as soon as the alarm rang.*\n- **stay up**: go to bed later than usual. *Don't stay up too late before an exam.*\n- **doze off / nod off**: fall into a light sleep unintentionally. *She dozed off during the movie.*\n- **chill out / kick back**: relax completely. *We decided to kick back and watch television.*\n\n### Time with Others & Free Time\n- **hang out / hang around**: spend leisure time without a specific plan. *They love to hang out at the cafe.*\n- **drop in**: visit someone unexpectedly. *Feel free to drop in whenever you are nearby.*\n- **fool around / goof around / mess around**: waste time doing silly things. *Stop fooling around and finish your work!*\n\nWatch out!\n- Do not confuse **wake up** (opening your eyes) with **get up** (physically stepping out of bed).\n- **Mess up** means to ruin or make dirty, whereas **mess around** means to play or waste time.",
+  "keyItems": [
+    {
+      "target": "act up",
+      "support": "malfunction or misbehave"
+    },
+    {
+      "target": "chill out",
+      "support": "relax informally"
+    },
+    {
+      "target": "doze off",
+      "support": "fall into a light sleep"
+    },
+    {
+      "target": "drop in",
+      "support": "visit unexpectedly"
+    },
+    {
+      "target": "drop out",
+      "support": "leave a course or school early"
+    },
+    {
+      "target": "fool around",
+      "support": "waste time or play silly games"
+    },
+    {
+      "target": "get up",
+      "support": "rise from bed or stand up"
+    },
+    {
+      "target": "goof around",
+      "support": "waste time doing silly things"
+    },
+    {
+      "target": "hang around",
+      "support": "stay in a place waiting or relaxing"
+    },
+    {
+      "target": "hang on",
+      "support": "hold tightly or wait a moment"
+    },
+    {
+      "target": "hang out",
+      "support": "spend leisure time in a place"
+    },
+    {
+      "target": "hang up",
+      "support": "end a phone call or hang an item"
+    },
+    {
+      "target": "hurry up",
+      "support": "do something faster"
+    },
+    {
+      "target": "kick back",
+      "support": "relax and take it easy"
+    },
+    {
+      "target": "kick out",
+      "support": "force someone to leave"
+    },
+    {
+      "target": "lie around",
+      "support": "recline lazily or be left untidy"
+    },
+    {
+      "target": "mess around",
+      "support": "waste time or handle foolishly"
+    },
+    {
+      "target": "mess up",
+      "support": "ruin a situation or untidy a space"
+    },
+    {
+      "target": "nod off",
+      "support": "fall asleep briefly or unintentionally"
+    },
+    {
+      "target": "stay out",
+      "support": "remain away from home"
+    }
+  ],
+  "coverage": {
+    "items": [
+      {
+        "id": "act-up",
+        "phrase": "act up"
+      },
+      {
+        "id": "chill-out",
+        "phrase": "chill out"
+      },
+      {
+        "id": "doze-off",
+        "phrase": "doze off"
+      },
+      {
+        "id": "drop-in",
+        "phrase": "drop in"
+      },
+      {
+        "id": "drop-out",
+        "phrase": "drop out"
+      },
+      {
+        "id": "fool-around",
+        "phrase": "fool around"
+      },
+      {
+        "id": "get-up",
+        "phrase": "get up"
+      },
+      {
+        "id": "goof-around",
+        "phrase": "goof around"
+      },
+      {
+        "id": "hang-around",
+        "phrase": "hang around"
+      },
+      {
+        "id": "hang-on",
+        "phrase": "hang on"
+      },
+      {
+        "id": "hang-out",
+        "phrase": "hang out"
+      },
+      {
+        "id": "hang-up",
+        "phrase": "hang up"
+      },
+      {
+        "id": "hurry-up",
+        "phrase": "hurry up"
+      },
+      {
+        "id": "kick-back",
+        "phrase": "kick back"
+      },
+      {
+        "id": "kick-out",
+        "phrase": "kick out"
+      },
+      {
+        "id": "lie-around",
+        "phrase": "lie around"
+      },
+      {
+        "id": "mess-around",
+        "phrase": "mess around"
+      },
+      {
+        "id": "mess-up",
+        "phrase": "mess up"
+      },
+      {
+        "id": "nod-off",
+        "phrase": "nod off"
+      },
+      {
+        "id": "stay-out",
+        "phrase": "stay out"
+      },
+      {
+        "id": "stay-up",
+        "phrase": "stay up"
+      },
+      {
+        "id": "wake-up",
+        "phrase": "wake up"
+      }
+    ],
+    "minimumExercisesPerItem": 2,
+    "assignments": {
+      "en-phrasal_verbs-m1-daily-routines-01": "act-up",
+      "en-phrasal_verbs-m1-daily-routines-02": "chill-out",
+      "en-phrasal_verbs-m1-daily-routines-03": "doze-off",
+      "en-phrasal_verbs-m1-daily-routines-04": "drop-in",
+      "en-phrasal_verbs-m1-daily-routines-05": "drop-out",
+      "en-phrasal_verbs-m1-daily-routines-06": "fool-around",
+      "en-phrasal_verbs-m1-daily-routines-07": "get-up",
+      "en-phrasal_verbs-m1-daily-routines-08": "goof-around",
+      "en-phrasal_verbs-m1-daily-routines-09": "hang-around",
+      "en-phrasal_verbs-m1-daily-routines-10": "hang-on",
+      "en-phrasal_verbs-m1-daily-routines-11": "hang-out",
+      "en-phrasal_verbs-m1-daily-routines-12": "hang-up",
+      "en-phrasal_verbs-m1-daily-routines-13": "hurry-up",
+      "en-phrasal_verbs-m1-daily-routines-14": "kick-back",
+      "en-phrasal_verbs-m1-daily-routines-15": "kick-out",
+      "en-phrasal_verbs-m1-daily-routines-16": "lie-around",
+      "en-phrasal_verbs-m1-daily-routines-17": "mess-around",
+      "en-phrasal_verbs-m1-daily-routines-18": "mess-up",
+      "en-phrasal_verbs-m1-daily-routines-19": "nod-off",
+      "en-phrasal_verbs-m1-daily-routines-20": "stay-out",
+      "en-phrasal_verbs-m1-daily-routines-21": "stay-up",
+      "en-phrasal_verbs-m1-daily-routines-22": "wake-up",
+      "en-phrasal_verbs-m1-daily-routines-23": "act-up",
+      "en-phrasal_verbs-m1-daily-routines-24": "chill-out",
+      "en-phrasal_verbs-m1-daily-routines-25": "doze-off",
+      "en-phrasal_verbs-m1-daily-routines-26": "drop-in",
+      "en-phrasal_verbs-m1-daily-routines-27": "drop-out",
+      "en-phrasal_verbs-m1-daily-routines-28": "fool-around",
+      "en-phrasal_verbs-m1-daily-routines-29": "get-up",
+      "en-phrasal_verbs-m1-daily-routines-30": "goof-around",
+      "en-phrasal_verbs-m1-daily-routines-31": "hang-around",
+      "en-phrasal_verbs-m1-daily-routines-32": "hang-on",
+      "en-phrasal_verbs-m1-daily-routines-33": "hang-out",
+      "en-phrasal_verbs-m1-daily-routines-34": "hang-up",
+      "en-phrasal_verbs-m1-daily-routines-35": "hurry-up",
+      "en-phrasal_verbs-m1-daily-routines-36": "kick-back",
+      "en-phrasal_verbs-m1-daily-routines-37": "kick-out",
+      "en-phrasal_verbs-m1-daily-routines-38": "lie-around",
+      "en-phrasal_verbs-m1-daily-routines-39": "mess-around",
+      "en-phrasal_verbs-m1-daily-routines-40": "mess-up",
+      "en-phrasal_verbs-m1-daily-routines-41": "nod-off",
+      "en-phrasal_verbs-m1-daily-routines-42": "stay-out",
+      "en-phrasal_verbs-m1-daily-routines-43": "stay-up",
+      "en-phrasal_verbs-m1-daily-routines-44": "wake-up"
+    }
+  },
+  "exercises": [
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-01",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Find the error in the sentence about a malfunctioning machine.",
+      "explanation": "'Act up' means to malfunction or misbehave. The phrase is 'acting up', not 'acting down'.",
+      "sentence": [
+        "My",
+        "old",
+        "car",
+        "engine",
+        "is",
+        "acting",
+        "down",
+        "again."
+      ],
+      "wrongIndex": 6,
+      "correction": "up",
+      "options": ["up", "off", "out"],
+      "tags": ["coverage:act-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-02",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about weekend relaxation.",
+      "explanation": "'Chill out' means to relax and take it easy, especially after hard work.",
+      "template": "After a long work week, I just want to ___ ___ at home.",
+      "gaps": [
+        {
+          "answer": "chill"
+        },
+        {
+          "answer": "out"
+        }
+      ],
+      "wordBank": ["chill", "out", "wake", "off", "drop"],
+      "tags": ["coverage:chill-out"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-03",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Doze off' means to fall into a light sleep, especially when you should be awake.",
+      "direction": "toTarget",
+      "sentence": "The lecture was so boring that many students began to **fall asleep**.",
+      "word": "fall asleep",
+      "answer": "doze off",
+      "options": ["doze off", "wake up", "stay up", "get up"],
+      "tags": ["coverage:doze-off"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-04",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Invite a friend to visit your home unexpectedly whenever they are nearby.",
+      "explanation": "'Drop in' means to pay a short, unexpected visit to someone.",
+      "answer": ["Feel", "free", "to", "drop", "in", "anytime."],
+      "distractors": ["out", "off", "up"],
+      "tags": ["coverage:drop-in"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-05",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate says: «She left university before finishing her degree.» Ask what made her leave school early.",
+      "explanation": "'Drop out' means to stop attending school, college, or a course before graduating.",
+      "givenAnswer": "She left university before finishing her degree.",
+      "answer": ["Why", "did", "she", "drop", "out?"],
+      "distractors": ["in", "off", "up"],
+      "acceptedAnswers": ["Why did she drop out of university?"],
+      "tags": ["coverage:drop-out"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-06",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell the children to stop wasting time playing foolishly and start studying.",
+      "explanation": "'Fool around' means to waste time doing silly or unproductive things.",
+      "answer": ["Stop", "fooling", "around", "and", "do", "your", "homework."],
+      "distractors": ["up", "out", "off"],
+      "tags": ["coverage:fool-around"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-07",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the conversation about morning routines.",
+      "explanation": "'Get up' means to rise from bed after sleeping.",
+      "template": "What time do you usually ___ ___ on Saturdays?",
+      "gaps": [
+        {
+          "answer": "get"
+        },
+        {
+          "answer": "up"
+        }
+      ],
+      "wordBank": ["get", "up", "stay", "out", "wake"],
+      "tags": ["coverage:get-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-08",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Goof around' is an informal phrase meaning to play silly games or waste time.",
+      "direction": "toTarget",
+      "sentence": "The teenagers like to **waste time playfully** in the park after school.",
+      "word": "waste time playfully",
+      "answer": "goof around",
+      "options": ["goof around", "hang out", "act up", "mess up"],
+      "tags": ["coverage:goof-around"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-09",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Complete the request asking someone to stay while you look for something.",
+      "explanation": "'Hang around' means to stay in a place, often while waiting or passing time.",
+      "template": "Could you ___ ___ for a few minutes while I find my keys?",
+      "gaps": [{ "answer": "hang" }, { "answer": "around" }],
+      "wordBank": ["hang", "around", "stay", "out", "get", "up"],
+      "tags": ["coverage:hang-around"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-10",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You need a moment to check something during a phone call. Ask the caller to wait briefly.",
+      "explanation": "'Hang on' means to wait for a short time, especially during a conversation or phone call.",
+      "givenAnswer": "Sure, I can wait.",
+      "answer": ["Can", "you", "hang", "on?"],
+      "distractors": ["out", "off", "up"],
+      "acceptedAnswers": [
+        "Can you hang on for a moment?",
+        "Could you hang on?"
+      ],
+      "tags": ["coverage:hang-on"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-11",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you and your friends usually spend time together at the local cafe.",
+      "explanation": "'Hang out' means to spend relaxing leisure time in a specific place or with friends.",
+      "answer": ["We", "usually", "hang", "out", "at", "the", "cafe."],
+      "distractors": ["up", "off", "in"],
+      "tags": ["coverage:hang-out"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-12",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about ending a telephone call.",
+      "explanation": "'Hang up' means to end a telephone conversation.",
+      "template": "Don't ___ ___ on me while I am still talking!",
+      "gaps": [
+        {
+          "answer": "hang"
+        },
+        {
+          "answer": "up"
+        }
+      ],
+      "wordBank": ["hang", "up", "get", "out", "doze"],
+      "tags": ["coverage:hang-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-13",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell your friend to move faster so you do not miss the bus.",
+      "explanation": "'Hurry up' means to do something more quickly or move faster.",
+      "answer": ["Hurry", "up", "or", "we", "will", "miss", "the", "bus."],
+      "distractors": ["out", "down", "off"],
+      "tags": ["coverage:hurry-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-14",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Kick back' is an informal phrasal verb meaning to relax and enjoy free time.",
+      "direction": "toTarget",
+      "sentence": "On Friday nights, I like to **relax completely** and watch movies.",
+      "word": "relax completely",
+      "answer": "kick back",
+      "options": ["kick back", "sit down", "slow down", "stay in"],
+      "tags": ["coverage:kick-back"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-15",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Find the incorrect word in this sentence about someone being forced to leave.",
+      "explanation": "'Kick out' means to force or order someone to leave a place or organization.",
+      "sentence": [
+        "He",
+        "was",
+        "kicked",
+        "off",
+        "of",
+        "the",
+        "club",
+        "for",
+        "fighting."
+      ],
+      "wrongIndex": 3,
+      "correction": "out",
+      "options": ["out", "up", "down"],
+      "tags": ["coverage:kick-out"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-16",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe spending your day off resting on the couch without doing chores.",
+      "explanation": "'Lie around' means to recline, rest, and do very little productive activity.",
+      "answer": ["I", "just", "want", "to", "lie", "around", "all", "day."],
+      "distractors": ["out", "up", "off"],
+      "tags": ["coverage:lie-around"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-17",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your coworker is wasting time at their desk. Ask them why they are wasting time instead of working.",
+      "explanation": "'Mess around' means to spend time doing silly or unproductive things.",
+      "givenAnswer": "I was just checking my emails.",
+      "answer": ["Why", "are", "you", "messing", "around?"],
+      "distractors": ["out", "up", "off"],
+      "acceptedAnswers": ["Why are you messing around at your desk?"],
+      "tags": ["coverage:mess-around"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-18",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about making a mistake or creating disorder.",
+      "explanation": "'Mess up' means to ruin a plan, make a big mistake, or create disorganization.",
+      "template": "I am sorry, I really ___ ___ the project schedule.",
+      "gaps": [
+        {
+          "answer": "messed"
+        },
+        {
+          "answer": "up"
+        }
+      ],
+      "wordBank": ["messed", "up", "hung", "out", "kicked"],
+      "tags": ["coverage:mess-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-19",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Nod off' means to fall into a light sleep unintentionally for a short time.",
+      "direction": "toTarget",
+      "sentence": "I was so exhausted that I started to **fall asleep briefly** during the meeting.",
+      "word": "fall asleep briefly",
+      "answer": "nod off",
+      "options": ["nod off", "wake up", "stay up", "get up"],
+      "tags": ["coverage:nod-off"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-20",
+      "type": "about_me",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer the question about your weekend habits.",
+      "explanation": "'Stay out' means to remain away from home during the evening or night.",
+      "question": "How late do you usually stay out on Saturday nights?",
+      "sampleAnswer": "I usually stay out until midnight with my friends.",
+      "hints": ["return", "home", "sleep", "early", "bed"],
+      "tags": ["coverage:stay-out"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-21",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the sentence about late night habits.",
+      "explanation": "'Stay up' means to remain awake and not go to bed until late.",
+      "template": "If you ___ ___ late tonight, you will be exhausted tomorrow.",
+      "gaps": [
+        {
+          "answer": "stay"
+        },
+        {
+          "answer": "up"
+        }
+      ],
+      "wordBank": ["stay", "up", "get", "out", "keep", "down"],
+      "tags": ["coverage:stay-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-22",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the correct English phrasal verb for the word in bold.",
+      "explanation": "'Wake up' means to stop sleeping, whereas 'get up' means to physically get out of bed.",
+      "direction": "toTarget",
+      "sentence": "I usually **open my eyes** as soon as my alarm rings.",
+      "word": "open my eyes",
+      "answer": "wake up",
+      "options": ["wake up", "get up", "stand up", "stay up"],
+      "tags": ["coverage:wake-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-23",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Form a sentence saying that the children always misbehave in class.",
+      "explanation": "'Act up' means to misbehave or cause trouble, especially when referring to children.",
+      "answer": ["The", "children", "always", "act", "up", "in", "class."],
+      "distractors": ["down", "out", "acting"],
+      "tags": ["coverage:act-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-24",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the suggestion to relax after work.",
+      "explanation": "'Chill out' is an informal expression that means to relax and take it easy.",
+      "template": "Let's ___ ___ by the pool this afternoon.",
+      "gaps": [
+        {
+          "answer": "chill"
+        },
+        {
+          "answer": "out"
+        }
+      ],
+      "wordBank": ["chill", "out", "cool", "off", "stay", "up"],
+      "tags": ["coverage:chill-out"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-25",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague says: «I dozed off during the long presentation.» Ask them if they fell asleep during the presentation.",
+      "explanation": "'Doze off' means to fall into a light sleep unintentionally.",
+      "givenAnswer": "I dozed off during the long presentation.",
+      "answer": ["Did", "you", "doze", "off", "during", "the", "presentation?"],
+      "distractors": ["out", "dozing", "dozed"],
+      "tags": ["coverage:doze-off"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-26",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell your friend that they can visit unexpectedly at any time.",
+      "explanation": "'Drop in' means to pay a short, unannounced visit to someone.",
+      "answer": ["You", "can", "drop", "in", "whenever", "you", "want."],
+      "distractors": ["out", "by", "dropping"],
+      "tags": ["coverage:drop-in"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-27",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Find the incorrect word in the sentence.",
+      "explanation": "When leaving a course or school before graduating, the correct phrasal verb is 'drop out of'.",
+      "sentence": [
+        "He",
+        "decided",
+        "to",
+        "drop",
+        "off",
+        "of",
+        "college",
+        "last",
+        "year."
+      ],
+      "wrongIndex": 4,
+      "correction": "out",
+      "options": ["out", "down", "away"],
+      "tags": ["coverage:drop-out"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-28",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the correct phrasal verb for the word in bold.",
+      "explanation": "'Fool around' means to waste time playing or doing silly things.",
+      "direction": "toTarget",
+      "sentence": "Don't **waste time playfully** when you have work to do.",
+      "word": "waste time playfully",
+      "answer": "fool around",
+      "options": ["fool around", "hang around", "stay up", "act up"],
+      "tags": ["coverage:fool-around"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-29",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell someone that you usually rise from bed at seven o'clock.",
+      "explanation": "'Get up' refers to physically getting out of bed, as opposed to 'wake up' which means stopping sleep.",
+      "answer": ["I", "usually", "get", "up", "at", "seven", "o'clock."],
+      "distractors": ["out", "wake", "getting"],
+      "tags": ["coverage:get-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-30",
+      "type": "about_me",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer the question in English about what you do in your free time.",
+      "explanation": "'Goof around' is an informal phrasal verb meaning to spend time doing silly or lighthearted things.",
+      "question": "Do you like to goof around with your friends on weekends?",
+      "sampleAnswer": "Yes, we often goof around in the park.",
+      "hints": ["sometimes", "play", "games", "relax", "together", "outdoors"],
+      "tags": ["coverage:goof-around"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-31",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the gaps to complete the sentence about waiting outside.",
+      "explanation": "'Hang around' means to linger or wait in a place without a specific activity.",
+      "template": "We had to ___ ___ outside the cinema until the doors opened.",
+      "gaps": [
+        {
+          "answer": "hang"
+        },
+        {
+          "answer": "around"
+        }
+      ],
+      "wordBank": ["hang", "around", "stay", "out", "get", "up"],
+      "tags": ["coverage:hang-around"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-32",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell someone on the phone to wait for a moment.",
+      "explanation": "'Hang on' is an informal way to ask someone to wait briefly.",
+      "answer": ["Please", "hang", "on", "for", "a", "moment."],
+      "distractors": ["out", "up", "hanging"],
+      "tags": ["coverage:hang-on"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-33",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the correct English phrasal verb for the word in bold.",
+      "explanation": "'Hang out' means to spend informal, unstructured time with friends.",
+      "direction": "toTarget",
+      "sentence": "Where do teenagers like to **spend leisure time** in this town?",
+      "word": "spend leisure time",
+      "answer": "hang out",
+      "options": ["hang out", "hang up", "kick out", "wake up"],
+      "tags": ["coverage:hang-out"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-34",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend says: «He ended the call during our argument.» Ask why he hung up.",
+      "explanation": "'Hang up' means to end a telephone conversation.",
+      "givenAnswer": "He was angry with me.",
+      "answer": ["Why", "did", "he", "hang", "up?"],
+      "distractors": ["out", "on", "hanging"],
+      "tags": ["coverage:hang-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-35",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell your group that they need to move faster or they will be late.",
+      "explanation": "'Hurry up' means to act or move more quickly.",
+      "answer": [
+        "We",
+        "must",
+        "hurry",
+        "up",
+        "or",
+        "we",
+        "will",
+        "be",
+        "late."
+      ],
+      "distractors": ["down", "out", "hurrying"],
+      "tags": ["coverage:hurry-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-36",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the missing words to describe relaxing after a busy day.",
+      "explanation": "'Kick back' is an informal expression meaning to relax and take it easy.",
+      "template": "After a busy week, I like to ___ ___ and listen to music.",
+      "gaps": [
+        {
+          "answer": "kick"
+        },
+        {
+          "answer": "back"
+        }
+      ],
+      "wordBank": ["kick", "back", "hang", "out", "chill", "off"],
+      "tags": ["coverage:kick-back"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-37",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Find the wrong word in the sentence and select the correct option.",
+      "explanation": "'Kick out' means to force someone to leave a place or venue.",
+      "sentence": [
+        "The",
+        "bouncer",
+        "threatened",
+        "to",
+        "kick",
+        "off",
+        "anyone",
+        "who",
+        "caused",
+        "trouble."
+      ],
+      "wrongIndex": 5,
+      "correction": "out",
+      "options": ["out", "down", "away"],
+      "tags": ["coverage:kick-out"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-38",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you spent Sunday doing nothing productive on the sofa.",
+      "explanation": "'Lie around' means to spend time reclining lazily without doing anything active.",
+      "answer": [
+        "I",
+        "just",
+        "wanted",
+        "to",
+        "lie",
+        "around",
+        "all",
+        "Sunday."
+      ],
+      "distractors": ["out", "down", "lying"],
+      "tags": ["coverage:lie-around"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-39",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friends say they were in the kitchen. Ask why they were wasting time instead of cooking.",
+      "explanation": "'Mess around' means to waste time playing or doing unimportant things.",
+      "givenAnswer": "We were bored, so we were playing silly games instead of cooking.",
+      "answer": ["Why", "were", "you", "messing", "around?"],
+      "distractors": ["out", "up", "messed"],
+      "tags": ["coverage:mess-around"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-40",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell your sister not to disorganize your clean bedroom.",
+      "explanation": "'Mess up' means to make a place dirty or untidy, or to ruin a plan.",
+      "answer": ["Please", "do", "not", "mess", "up", "my", "room."],
+      "distractors": ["out", "around", "messed"],
+      "tags": ["coverage:mess-up"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-41",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "To fall into a light sleep unintentionally, use 'nod off', not 'nod out'.",
+      "tags": ["coverage:nod-off"],
+      "sentence": [
+        "Grandfather",
+        "tends",
+        "to",
+        "nod",
+        "out",
+        "after",
+        "lunch."
+      ],
+      "wrongIndex": 4,
+      "correction": "off",
+      "options": ["off", "up", "away", "down"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-42",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Build a sentence saying that teenagers should not stay out late on school nights.",
+      "explanation": "'Stay out' means to remain away from home instead of returning inside.",
+      "tags": ["coverage:stay-out"],
+      "answer": ["Teenagers", "should", "not", "stay", "out", "late."],
+      "distractors": ["away", "off", "up"],
+      "acceptedAnswers": ["Teenagers shouldn't stay out late."]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-43",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend says: «I stayed up until 3:00 AM finishing my report.» Ask her why she stayed up so late.",
+      "explanation": "'Stay up' means to go to bed later than usual. Form the past question with 'Why did you stay up...?'",
+      "tags": ["coverage:stay-up"],
+      "givenAnswer": "I stayed up until 3:00 AM finishing my report.",
+      "answer": ["Why", "did", "you", "stay", "up", "so", "late?"],
+      "distractors": ["out", "off", "away"],
+      "acceptedAnswers": ["Why did you stay up late?"]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-daily-routines-44",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-daily-routines",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the phrasal verb that means to stop sleeping.",
+      "explanation": "'Wake up' means to stop sleeping, whereas 'get up' means to physically rise from bed.",
+      "tags": ["coverage:wake-up"],
+      "direction": "toTarget",
+      "sentence": "What time do you usually **stop sleeping** on Sundays?",
+      "word": "stop sleeping",
+      "answer": "wake up",
+      "options": ["wake up", "get up", "stay up", "look up"]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id": "en-phrasal_verbs",
+  "title": "English Phrasal Verbs",
+  "targetLanguage": "en",
+  "supportLanguage": "en",
+  "level": "B2",
+  "moduleOrder": ["m1"],
+  "phraseSetOrder": []
+}
