@@ -91,7 +91,14 @@ describe('planSession block sizes', () => {
 });
 
 describe('all-exercises-correct course policy', () => {
-  it('plans every unanswered exercise in the current topic, including previously wrong ones', () => {
+  it.each([5, 20] as const)('caps a new topic session at the selected length (%i)', (length) => {
+    const program = { ...makeStandardProgram(), topicCompletionPolicy: 'all-exercises-correct' as const };
+    const planned = plan({ program, sessionLength: length });
+    expect(planned.items).toHaveLength(length);
+    expect(planned.items.every((item) => item.topicId === 't1')).toBe(true);
+  });
+
+  it('respects the selected session length while prioritizing unanswered exercises', () => {
     const program = { ...makeStandardProgram(), topicCompletionPolicy: 'all-exercises-correct' as const };
     const exercises = program.modules[0].topics[0].exercises;
     const progress = [
@@ -104,11 +111,28 @@ describe('all-exercises-correct course policy', () => {
     const planned = plan({ program, progress, sessionLength: 5 });
     const ids = planned.items.map((item) => item.exercise.id);
 
-    expect(ids).toHaveLength(exercises.length - 1);
-    expect(ids).toContain(exercises[1].id);
+    expect(ids).toHaveLength(5);
+    expect(ids).not.toContain(exercises[1].id);
     expect(ids).not.toContain(exercises[0].id);
     expect(new Set(ids).size).toBe(ids.length);
     expect(planned.items.every((item) => item.topicId === 't1')).toBe(true);
+  });
+
+  it('includes previous mistakes once the unanswered exercises are exhausted', () => {
+    const program = { ...makeStandardProgram(), topicCompletionPolicy: 'all-exercises-correct' as const };
+    const exercises = program.modules[0].topics[0].exercises;
+    const progress = [
+      makeProgress('t1', {
+        status: 'learning',
+        seenExerciseIds: exercises.filter((_, index) => index !== 2).map((exercise) => exercise.id),
+        wrongExerciseIds: [exercises[0].id],
+      }),
+    ];
+    const planned = plan({ program, progress, sessionLength: 5 });
+    expect(planned.items.map((item) => item.exercise.id)).toEqual([
+      exercises[2].id,
+      exercises[0].id,
+    ]);
   });
 
   it('starts the next topic after every exercise in the current topic is correct', () => {
@@ -122,7 +146,7 @@ describe('all-exercises-correct course policy', () => {
       }),
     ];
     const nextTopicPlan = plan({ program, progress, sessionLength: 10 });
-    expect(nextTopicPlan.items).toHaveLength(40);
+    expect(nextTopicPlan.items).toHaveLength(10);
     expect(nextTopicPlan.items.every((item) => item.topicId === 't2')).toBe(true);
   });
 
@@ -131,7 +155,7 @@ describe('all-exercises-correct course policy', () => {
     const exercises = program.modules[0].topics[0].exercises;
     const progress = [makeProgress('t1', { status: 'review', seenExerciseIds: exercises.map((e) => e.id) })];
     expect(currentTopicOf(program, progress)?.id).toBe('t1');
-    expect(plan({ program, progress, sessionLength: 10 }).items).toHaveLength(40);
+    expect(plan({ program, progress, sessionLength: 10 }).items).toHaveLength(10);
   });
 });
 

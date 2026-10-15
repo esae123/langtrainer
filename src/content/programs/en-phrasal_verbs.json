@@ -359,6 +359,11 @@
                 "out",
                 "off",
                 "up"
+              ],
+              "acceptedAnswers": [
+                "Feel free to drop in any time.",
+                "You can drop in any time.",
+                "Please drop in any time."
               ]
             },
             {
@@ -419,6 +424,10 @@
                 "up",
                 "out",
                 "off"
+              ],
+              "acceptedAnswers": [
+                "Stop goofing around and do your homework.",
+                "Stop messing around and do your homework."
               ]
             },
             {
@@ -472,11 +481,15 @@
               "sentence": "The teenagers like to **waste time playfully** in the park after school.",
               "word": "waste time playfully",
               "answer": "goof around",
+              "acceptedAnswers": [
+                "fool around",
+                "mess around"
+              ],
               "options": [
                 "goof around",
-                "hang out",
-                "act up",
-                "mess up"
+                "fool around",
+                "mess around",
+                "hang around"
               ]
             },
             {
@@ -499,7 +512,10 @@
                   "answer": "hang"
                 },
                 {
-                  "answer": "around"
+                  "answer": "around",
+                  "accepted": [
+                    "out"
+                  ]
                 }
               ],
               "wordBank": [
@@ -539,7 +555,9 @@
               ],
               "acceptedAnswers": [
                 "Can you hang on for a moment?",
-                "Could you hang on?"
+                "Could you hang on?",
+                "Can you hold on?",
+                "Could you hold on for a moment?"
               ]
             },
             {
@@ -569,6 +587,9 @@
                 "up",
                 "off",
                 "in"
+              ],
+              "acceptedAnswers": [
+                "We usually hang around at the cafe."
               ]
             },
             {
@@ -750,7 +771,9 @@
                 "off"
               ],
               "acceptedAnswers": [
-                "Why are you messing around at your desk?"
+                "Why are you messing around at your desk?",
+                "Why are you fooling around?",
+                "Why are you goofing around?"
               ]
             },
             {
@@ -822,20 +845,28 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Answer the question about your weekend habits.",
+              "prompt": "Report that Maria remained away from home until midnight on Saturday.",
               "explanation": "'Stay out' means to remain away from home during the evening or night.",
               "tags": [
                 "coverage:stay-out"
               ],
-              "type": "about_me",
-              "question": "How late do you usually stay out on Saturday nights?",
-              "sampleAnswer": "I usually stay out until midnight with my friends.",
-              "hints": [
-                "return",
-                "home",
-                "sleep",
-                "early",
-                "bed"
+              "type": "build_phrase",
+              "answer": [
+                "Maria",
+                "stayed",
+                "out",
+                "until",
+                "midnight",
+                "on",
+                "Saturday."
+              ],
+              "distractors": [
+                "in",
+                "up",
+                "off"
+              ],
+              "acceptedAnswers": [
+                "Maria stayed out until midnight Saturday."
               ]
             },
             {
@@ -965,13 +996,13 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Your colleague says: «I dozed off during the long presentation.» Ask them if they fell asleep during the presentation.",
+              "prompt": "Your colleague says: «I could barely keep my eyes open during the presentation.» Ask whether they briefly fell asleep.",
               "explanation": "'Doze off' means to fall into a light sleep unintentionally.",
               "tags": [
                 "coverage:doze-off"
               ],
               "type": "question_for_answer",
-              "givenAnswer": "I dozed off during the long presentation.",
+              "givenAnswer": "Yes, I did.",
               "answer": [
                 "Did",
                 "you",
@@ -1017,6 +1048,11 @@
                 "out",
                 "by",
                 "dropping"
+              ],
+              "acceptedAnswers": [
+                "You can drop in any time.",
+                "Please drop in any time.",
+                "Feel free to drop in any time."
               ]
             },
             {
@@ -1071,11 +1107,15 @@
               "sentence": "Don't **waste time playfully** when you have work to do.",
               "word": "waste time playfully",
               "answer": "fool around",
+              "acceptedAnswers": [
+                "goof around",
+                "mess around"
+              ],
               "options": [
                 "fool around",
-                "hang around",
-                "stay up",
-                "act up"
+                "goof around",
+                "mess around",
+                "hang around"
               ]
             },
             {
@@ -1115,21 +1155,28 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Answer the question in English about what you do in your free time.",
-              "explanation": "'Goof around' is an informal phrasal verb meaning to spend time doing silly or lighthearted things.",
+              "prompt": "Tell your teacher that you and your friends wasted time playing instead of studying.",
+              "explanation": "'Goof around' is informal and means to waste time doing silly or lighthearted things. 'Fool around' and 'mess around' can be used in the same sense.",
               "tags": [
                 "coverage:goof-around"
               ],
-              "type": "about_me",
-              "question": "Do you like to goof around with your friends on weekends?",
-              "sampleAnswer": "Yes, we often goof around in the park.",
-              "hints": [
-                "sometimes",
-                "play",
-                "games",
-                "relax",
-                "together",
-                "outdoors"
+              "type": "build_phrase",
+              "answer": [
+                "We",
+                "goofed",
+                "around",
+                "instead",
+                "of",
+                "studying."
+              ],
+              "distractors": [
+                "up",
+                "away",
+                "out"
+              ],
+              "acceptedAnswers": [
+                "We fooled around instead of studying.",
+                "We messed around instead of studying."
               ]
             },
             {
@@ -1152,7 +1199,10 @@
                   "answer": "hang"
                 },
                 {
-                  "answer": "around"
+                  "answer": "around",
+                  "accepted": [
+                    "out"
+                  ]
                 }
               ],
               "wordBank": [
@@ -1190,6 +1240,11 @@
                 "out",
                 "up",
                 "hanging"
+              ],
+              "acceptedAnswers": [
+                "Hang on for a moment.",
+                "Hold on for a moment.",
+                "Please hold on for a moment."
               ]
             },
             {
@@ -1211,9 +1266,12 @@
               "sentence": "Where do teenagers like to **spend leisure time** in this town?",
               "word": "spend leisure time",
               "answer": "hang out",
+              "acceptedAnswers": [
+                "hang around"
+              ],
               "options": [
                 "hang out",
-                "hang up",
+                "hang around",
                 "kick out",
                 "wake up"
               ]
@@ -1226,7 +1284,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Your friend says: «He ended the call during our argument.» Ask why he hung up.",
+              "prompt": "Your friend says: «He ended our phone call during the argument.» Ask why he ended the call.",
               "explanation": "'Hang up' means to end a telephone conversation.",
               "tags": [
                 "coverage:hang-up"
@@ -1244,6 +1302,9 @@
                 "out",
                 "on",
                 "hanging"
+              ],
+              "acceptedAnswers": [
+                "Why did he hang up on you?"
               ]
             },
             {
@@ -1399,6 +1460,10 @@
                 "out",
                 "up",
                 "messed"
+              ],
+              "acceptedAnswers": [
+                "Why were you fooling around?",
+                "Why were you goofing around?"
               ]
             },
             {
@@ -1501,13 +1566,13 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Your friend says: «I stayed up until 3:00 AM finishing my report.» Ask her why she stayed up so late.",
+              "prompt": "Your friend says: «I worked until 3:00 AM to finish my report.» Ask why she was awake so late.",
               "explanation": "'Stay up' means to go to bed later than usual. Form the past question with 'Why did you stay up...?'",
               "tags": [
                 "coverage:stay-up"
               ],
               "type": "question_for_answer",
-              "givenAnswer": "I stayed up until 3:00 AM finishing my report.",
+              "givenAnswer": "I had to finish my report.",
               "answer": [
                 "Why",
                 "did",
@@ -2474,7 +2539,7 @@
                 "coverage:pass-away"
               ],
               "type": "question_for_answer",
-              "givenAnswer": "He passed away peacefully last autumn.",
+              "givenAnswer": "He died peacefully last autumn.",
               "answer": [
                 "When",
                 "did",
@@ -2509,7 +2574,11 @@
               "template": "Volunteers gathered to ___ ___ flyers to people on the street.",
               "gaps": [
                 {
-                  "answer": "pass"
+                  "answer": "pass",
+                  "accepted": [
+                    "give",
+                    "hand"
+                  ]
                 },
                 {
                   "answer": "out"
@@ -2531,19 +2600,29 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Reflect on how you take care of your body when you feel nauseous and want to prevent vomiting.",
-              "explanation": "'Throw up' means to vomit. Rest, quiet, and hydrating liquids help calm nausea.",
+              "prompt": "State that the rough boat ride made one passenger vomit.",
+              "explanation": "'Throw up' is an informal phrasal verb meaning to vomit.",
               "tags": [
                 "coverage:throw-up"
               ],
-              "type": "about_me",
-              "question": "What do you do to avoid throwing up when your stomach is upset?",
-              "sampleAnswer": "I sip warm tea and rest quietly in bed.",
-              "hints": [
-                "fresh",
-                "water",
-                "deep",
-                "breathing"
+              "type": "build_phrase",
+              "answer": [
+                "The",
+                "boat",
+                "ride",
+                "made",
+                "one",
+                "passenger",
+                "throw",
+                "up."
+              ],
+              "distractors": [
+                "away",
+                "off",
+                "out"
+              ],
+              "acceptedAnswers": [
+                "One passenger threw up during the rough boat ride."
               ]
             }
           ]
@@ -3001,7 +3080,10 @@
                   "answer": "fill"
                 },
                 {
-                  "answer": "in"
+                  "answer": "in",
+                  "accepted": [
+                    "out"
+                  ]
                 }
               ],
               "wordBank": [
@@ -3126,7 +3208,11 @@
               "template": "Always ___ ___ the power before attempting to repair electrical wiring.",
               "gaps": [
                 {
-                  "answer": "shut"
+                  "answer": "shut",
+                  "accepted": [
+                    "turn",
+                    "switch"
+                  ]
                 },
                 {
                   "answer": "off"
@@ -3903,7 +3989,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Instruct someone to switch off the noisy generator immediately.",
+              "prompt": "Tell someone to stop the noisy generator immediately.",
               "explanation": "'Shut off' means to stop an engine or electrical device from operating.",
               "tags": [
                 "coverage:shut-off"
@@ -3915,7 +4001,7 @@
                 "off",
                 "the",
                 "noisy",
-                "engine",
+                "generator",
                 "right",
                 "now."
               ],
@@ -3925,7 +4011,8 @@
                 "up"
               ],
               "acceptedAnswers": [
-                "Please shut off the noisy generator right now."
+                "Please turn off the noisy generator right now.",
+                "Please switch off the noisy generator right now."
               ]
             },
             {
@@ -4019,6 +4106,9 @@
                 "down",
                 "off",
                 "out"
+              ],
+              "acceptedAnswers": [
+                "Everyone must get up when the judge enters."
               ]
             },
             {
@@ -4178,19 +4268,30 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Describe what strategies you rely on when you struggle to understand a difficult problem.",
-              "explanation": "'Figure out' means to solve or understand something through thought and effort.",
+              "prompt": "Tell your teammate that Maya solved the puzzle after checking every clue.",
+              "explanation": "'Figure out' means to solve or understand something by thinking about it.",
               "tags": [
                 "coverage:figure-out"
               ],
-              "type": "about_me",
-              "question": "How do you usually figure out solutions to difficult problems?",
-              "sampleAnswer": "I break complex tasks into smaller parts and ask colleagues.",
-              "hints": [
-                "diagrams",
-                "careful",
-                "research",
-                "patience"
+              "type": "build_phrase",
+              "answer": [
+                "Maya",
+                "figured",
+                "out",
+                "the",
+                "puzzle",
+                "after",
+                "checking",
+                "every",
+                "clue."
+              ],
+              "distractors": [
+                "in",
+                "off",
+                "away"
+              ],
+              "acceptedAnswers": [
+                "Maya figured the puzzle out after checking every clue."
               ]
             },
             {
@@ -4353,19 +4454,31 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Describe how you locate hard-to-find information or items that you need.",
-              "explanation": "'Track down' means to find something after making an effort to search for it.",
+              "prompt": "State that a detective located the retired pilot after searching for weeks.",
+              "explanation": "'Track down' means to find someone or something after a persistent search.",
               "tags": [
                 "coverage:track-down"
               ],
-              "type": "about_me",
-              "question": "How do you usually track down hard-to-find books or information?",
-              "sampleAnswer": "I search online forums and consult specialized library archives.",
-              "hints": [
-                "catalogues",
-                "curators",
-                "bookmarks",
-                "indices"
+              "type": "build_phrase",
+              "answer": [
+                "The",
+                "detective",
+                "tracked",
+                "down",
+                "the",
+                "pilot",
+                "after",
+                "weeks",
+                "of",
+                "searching."
+              ],
+              "distractors": [
+                "up",
+                "off",
+                "away"
+              ],
+              "acceptedAnswers": [
+                "The detective tracked the pilot down after weeks of searching."
               ]
             }
           ]
@@ -4733,7 +4846,10 @@
               "template": "Bad weather caused the building project to ___ ___ schedule.",
               "gaps": [
                 {
-                  "answer": "fall"
+                  "answer": "fall",
+                  "accepted": [
+                    "get"
+                  ]
                 },
                 {
                   "answer": "behind"
@@ -5174,6 +5290,9 @@
                 "ahead",
                 "off",
                 "away"
+              ],
+              "acceptedAnswers": [
+                "The construction project fell behind schedule this month."
               ]
             },
             {
@@ -5564,6 +5683,9 @@
                 "off",
                 "out",
                 "away"
+              ],
+              "acceptedAnswers": [
+                "He got behind in his university studies."
               ]
             },
             {
@@ -5770,7 +5892,8 @@
                 "over"
               ],
               "acceptedAnswers": [
-                "How do you get along with them?"
+                "How do you get along with them?",
+                "How do you get on with them?"
               ]
             },
             {
@@ -6211,19 +6334,29 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Reflect on how you maintain your composure when minor daily frustrations start bothering you.",
-              "explanation": "'Get to someone' means to annoy or stress someone out.",
+              "prompt": "Explain that constant noise began to annoy Leo.",
+              "explanation": "'Get to someone' means to annoy or upset them, often gradually.",
               "tags": [
                 "coverage:get-to"
               ],
-              "type": "about_me",
-              "question": "What do you do when daily stress starts to get to you?",
-              "sampleAnswer": "I take long walks and listen to relaxing classical music.",
-              "hints": [
-                "deep",
-                "breathing",
-                "fresh",
-                "air"
+              "type": "build_phrase",
+              "answer": [
+                "The",
+                "constant",
+                "noise",
+                "is",
+                "getting",
+                "to",
+                "Leo."
+              ],
+              "distractors": [
+                "down",
+                "over",
+                "away"
+              ],
+              "acceptedAnswers": [
+                "The constant noise started to get to Leo.",
+                "The constant noise got to Leo."
               ]
             },
             {
@@ -6234,19 +6367,29 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Share what favorite activities you enjoy when meeting up with friends.",
-              "explanation": "'Get together' means to gather socially with friends or family.",
+              "prompt": "Say that the neighbors met socially for dinner on Saturday.",
+              "explanation": "'Get together' means to meet and spend time socially with other people.",
               "tags": [
                 "coverage:get-together"
               ],
-              "type": "about_me",
-              "question": "What do you like to do when you get together with old friends?",
-              "sampleAnswer": "We share home-cooked meals and talk about fond memories.",
-              "hints": [
-                "board",
-                "games",
-                "coffee",
-                "shops"
+              "type": "build_phrase",
+              "answer": [
+                "The",
+                "neighbors",
+                "got",
+                "together",
+                "for",
+                "dinner",
+                "on",
+                "Saturday."
+              ],
+              "distractors": [
+                "apart",
+                "away",
+                "over"
+              ],
+              "acceptedAnswers": [
+                "The neighbors got together on Saturday for dinner."
               ]
             }
           ]
@@ -6611,7 +6754,10 @@
                   "answer": "look"
                 },
                 {
-                  "answer": "over"
+                  "answer": "over",
+                  "accepted": [
+                    "at"
+                  ]
                 }
               ],
               "wordBank": [
@@ -6885,7 +7031,10 @@
                   "answer": "stick"
                 },
                 {
-                  "answer": "to"
+                  "answer": "to",
+                  "accepted": [
+                    "with"
+                  ]
                 }
               ],
               "wordBank": [
@@ -6976,7 +7125,10 @@
                   "answer": "stick"
                 },
                 {
-                  "answer": "with"
+                  "answer": "with",
+                  "accepted": [
+                    "to"
+                  ]
                 }
               ],
               "wordBank": [
@@ -7170,7 +7322,7 @@
                 "letters",
                 "typing"
               ],
-              "prompt": "Complete the sentence about taking someone out for dinner to celebrate.",
+              "prompt": "Complete the sentence about treating your parents to a celebratory meal.",
               "explanation": "'Take out' means to accompany someone to a restaurant or entertainment and pay for them.",
               "tags": [
                 "coverage:take-out"
@@ -7643,6 +7795,9 @@
                 "with",
                 "out",
                 "off"
+              ],
+              "acceptedAnswers": [
+                "You should stick with your dietary plan."
               ]
             },
             {
@@ -7975,19 +8130,30 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Reflect on how you manage your responsibilities when you have to assume leadership of a project.",
-              "explanation": "'Take over' means to take charge or control of a task or team.",
+              "prompt": "State that Nia assumed control of the project after her manager left.",
+              "explanation": "'Take over' means to take charge or control of something.",
               "tags": [
                 "coverage:take-over"
               ],
-              "type": "about_me",
-              "question": "How do you prepare when you take over a new project?",
-              "sampleAnswer": "I review project history and discuss priorities with every team member.",
-              "hints": [
-                "schedules",
-                "deadlines",
-                "budget",
-                "goals"
+              "type": "build_phrase",
+              "answer": [
+                "Nia",
+                "took",
+                "over",
+                "the",
+                "project",
+                "after",
+                "her",
+                "manager",
+                "left."
+              ],
+              "distractors": [
+                "up",
+                "off",
+                "apart"
+              ],
+              "acceptedAnswers": [
+                "Nia took the project over after her manager left."
               ]
             },
             {
@@ -7998,19 +8164,29 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Share what interesting invitations or opportunities you like to accept from others.",
-              "explanation": "'Take someone up on' means to accept an offer or opportunity made by another.",
+              "prompt": "Say that you accepted your friend’s offer of a coastal visit.",
+              "explanation": "'Take someone up on an offer' means to accept an offer or opportunity.",
               "tags": [
                 "coverage:take-up-on"
               ],
-              "type": "about_me",
-              "question": "What kind of invitations do you usually take people up on?",
-              "sampleAnswer": "I readily accept invitations to explore historic museums and scenic parks.",
-              "hints": [
-                "weekend",
-                "trips",
-                "concerts",
-                "festivals"
+              "type": "build_phrase",
+              "answer": [
+                "I",
+                "took",
+                "my",
+                "friend",
+                "up",
+                "on",
+                "the",
+                "offer."
+              ],
+              "distractors": [
+                "over",
+                "out",
+                "off"
+              ],
+              "acceptedAnswers": [
+                "I took them up on the offer."
               ]
             }
           ]

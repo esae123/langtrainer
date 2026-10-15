@@ -348,32 +348,21 @@
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about failing to maintain a construction timeline.",
       "explanation": "'Fall behind' schedule means to make slower progress than planned.",
       "template": "Bad weather caused the building project to ___ ___ schedule.",
       "gaps": [
         {
-          "answer": "fall"
+          "answer": "fall",
+          "accepted": ["get"]
         },
         {
           "answer": "behind"
         }
       ],
-      "wordBank": [
-        "fall",
-        "behind",
-        "get",
-        "ahead",
-        "through"
-      ],
-      "tags": [
-        "coverage:fall-behind"
-      ]
+      "wordBank": ["fall", "behind", "get", "ahead", "through"],
+      "tags": ["coverage:fall-behind"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-05",
@@ -779,30 +768,13 @@
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "typing"],
       "prompt": "State that delays in delivery caused the production schedule to lag.",
       "explanation": "'Get behind' means to fail to maintain schedule or fall behind expected speed.",
-      "answer": [
-        "The",
-        "construction",
-        "project",
-        "got",
-        "behind",
-        "schedule",
-        "this",
-        "month."
-      ],
-      "distractors": [
-        "ahead",
-        "off",
-        "away"
-      ],
-      "tags": [
-        "coverage:get-behind"
-      ]
+      "answer": ["The", "construction", "project", "got", "behind", "schedule", "this", "month."],
+      "distractors": ["ahead", "off", "away"],
+      "tags": ["coverage:get-behind"],
+      "acceptedAnswers": ["The construction project fell behind schedule this month."]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-19",
@@ -1170,29 +1142,13 @@
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "typing"],
       "prompt": "Explain that missing three weeks of class caused the student to lag in coursework.",
       "explanation": "'Fall behind in' means to fail to keep up with the expected pace of study or work.",
-      "answer": [
-        "He",
-        "fell",
-        "behind",
-        "in",
-        "his",
-        "university",
-        "studies."
-      ],
-      "distractors": [
-        "off",
-        "out",
-        "away"
-      ],
-      "tags": [
-        "coverage:fall-behind"
-      ]
+      "answer": ["He", "fell", "behind", "in", "his", "university", "studies."],
+      "distractors": ["off", "out", "away"],
+      "tags": ["coverage:fall-behind"],
+      "acceptedAnswers": ["He got behind in his university studies."]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-32",
@@ -1375,31 +1331,14 @@
       "type": "question_for_answer",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "typing"],
       "prompt": "A colleague mentions moving into a shared flat. Ask how they relate with their flatmates.",
       "explanation": "'Get along' refers to living or working harmoniously with someone.",
       "givenAnswer": "Very well; we share cooking and cleaning equally.",
-      "answer": [
-        "How",
-        "do",
-        "you",
-        "get",
-        "along?"
-      ],
-      "distractors": [
-        "ahead",
-        "behind",
-        "over"
-      ],
-      "acceptedAnswers": [
-        "How do you get along with them?"
-      ],
-      "tags": [
-        "coverage:get-along"
-      ]
+      "answer": ["How", "do", "you", "get", "along?"],
+      "distractors": ["ahead", "behind", "over"],
+      "acceptedAnswers": ["How do you get along with them?", "How do you get on with them?"],
+      "tags": ["coverage:get-along"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-39",
@@ -1833,49 +1772,29 @@
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-53",
-      "type": "about_me",
+      "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Reflect on how you maintain your composure when minor daily frustrations start bothering you.",
-      "explanation": "'Get to someone' means to annoy or stress someone out.",
-      "question": "What do you do when daily stress starts to get to you?",
-      "sampleAnswer": "I take long walks and listen to relaxing classical music.",
-      "hints": [
-        "deep",
-        "breathing",
-        "fresh",
-        "air"
-      ],
-      "tags": [
-        "coverage:get-to"
-      ]
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Explain that constant noise began to annoy Leo.",
+      "explanation": "'Get to someone' means to annoy or upset them, often gradually.",
+      "answer": ["The", "constant", "noise", "is", "getting", "to", "Leo."],
+      "distractors": ["down", "over", "away"],
+      "acceptedAnswers": ["The constant noise started to get to Leo.", "The constant noise got to Leo."],
+      "tags": ["coverage:get-to"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-54",
-      "type": "about_me",
+      "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Share what favorite activities you enjoy when meeting up with friends.",
-      "explanation": "'Get together' means to gather socially with friends or family.",
-      "question": "What do you like to do when you get together with old friends?",
-      "sampleAnswer": "We share home-cooked meals and talk about fond memories.",
-      "hints": [
-        "board",
-        "games",
-        "coffee",
-        "shops"
-      ],
-      "tags": [
-        "coverage:get-together"
-      ]
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the neighbors met socially for dinner on Saturday.",
+      "explanation": "'Get together' means to meet and spend time socially with other people.",
+      "answer": ["The", "neighbors", "got", "together", "for", "dinner", "on", "Saturday."],
+      "distractors": ["apart", "away", "over"],
+      "acceptedAnswers": ["The neighbors got together on Saturday for dinner."],
+      "tags": ["coverage:get-together"]
     }
   ]
 }

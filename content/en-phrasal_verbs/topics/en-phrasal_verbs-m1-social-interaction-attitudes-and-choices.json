@@ -342,11 +342,7 @@
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the request asking someone to review a report before submission.",
       "explanation": "'Look over' means to read or inspect something thoroughly and carefully.",
       "template": "Could you please ___ ___ this contract before I sign it?",
@@ -355,19 +351,12 @@
           "answer": "look"
         },
         {
-          "answer": "over"
+          "answer": "over",
+          "accepted": ["at"]
         }
       ],
-      "wordBank": [
-        "look",
-        "over",
-        "stick",
-        "around",
-        "take"
-      ],
-      "tags": [
-        "coverage:look-over"
-      ]
+      "wordBank": ["look", "over", "stick", "around", "take"],
+      "tags": ["coverage:look-over"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-05",
@@ -616,11 +605,7 @@
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the advice about keeping focused on the main agenda during a debate.",
       "explanation": "'Stick to' means to stay focused on a specific topic or adhere to a plan.",
       "template": "Speakers should ___ ___ the scheduled agenda during the debate.",
@@ -629,19 +614,12 @@
           "answer": "stick"
         },
         {
-          "answer": "to"
+          "answer": "to",
+          "accepted": ["with"]
         }
       ],
-      "wordBank": [
-        "stick",
-        "to",
-        "take",
-        "over",
-        "push"
-      ],
-      "tags": [
-        "coverage:stick-to"
-      ]
+      "wordBank": ["stick", "to", "take", "over", "push"],
+      "tags": ["coverage:stick-to"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-14",
@@ -707,11 +685,7 @@
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about choosing to remain loyal to a reliable software brand.",
       "explanation": "'Stick with' means to continue using or supporting something without changing.",
       "template": "I prefer to ___ ___ the reliable software brand I trust.",
@@ -720,19 +694,12 @@
           "answer": "stick"
         },
         {
-          "answer": "with"
+          "answer": "with",
+          "accepted": ["to"]
         }
       ],
-      "wordBank": [
-        "stick",
-        "with",
-        "go",
-        "along",
-        "push"
-      ],
-      "tags": [
-        "coverage:stick-with"
-      ]
+      "wordBank": ["stick", "with", "go", "along", "push"],
+      "tags": ["coverage:stick-with"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-17",
@@ -913,12 +880,8 @@
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
-      "prompt": "Complete the sentence about taking someone out for dinner to celebrate.",
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about treating your parents to a celebratory meal.",
       "explanation": "'Take out' means to accompany someone to a restaurant or entertainment and pay for them.",
       "template": "He offered to ___ his parents ___ for an anniversary meal.",
       "gaps": [
@@ -929,16 +892,8 @@
           "answer": "out"
         }
       ],
-      "wordBank": [
-        "take",
-        "out",
-        "stick",
-        "up",
-        "push"
-      ],
-      "tags": [
-        "coverage:take-out"
-      ]
+      "wordBank": ["take", "out", "stick", "up", "push"],
+      "tags": ["coverage:take-out"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-24",
@@ -1368,29 +1323,13 @@
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "typing"],
       "prompt": "Encourage someone to maintain their healthy diet even when dining out.",
       "explanation": "'Stick to' means to adhere strictly to a routine, rule, or plan.",
-      "answer": [
-        "You",
-        "should",
-        "stick",
-        "to",
-        "your",
-        "dietary",
-        "plan."
-      ],
-      "distractors": [
-        "with",
-        "out",
-        "off"
-      ],
-      "tags": [
-        "coverage:stick-to"
-      ]
+      "answer": ["You", "should", "stick", "to", "your", "dietary", "plan."],
+      "distractors": ["with", "out", "off"],
+      "tags": ["coverage:stick-to"],
+      "acceptedAnswers": ["You should stick with your dietary plan."]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-40",
@@ -1716,49 +1655,29 @@
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-51",
-      "type": "about_me",
+      "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Reflect on how you manage your responsibilities when you have to assume leadership of a project.",
-      "explanation": "'Take over' means to take charge or control of a task or team.",
-      "question": "How do you prepare when you take over a new project?",
-      "sampleAnswer": "I review project history and discuss priorities with every team member.",
-      "hints": [
-        "schedules",
-        "deadlines",
-        "budget",
-        "goals"
-      ],
-      "tags": [
-        "coverage:take-over"
-      ]
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State that Nia assumed control of the project after her manager left.",
+      "explanation": "'Take over' means to take charge or control of something.",
+      "answer": ["Nia", "took", "over", "the", "project", "after", "her", "manager", "left."],
+      "distractors": ["up", "off", "apart"],
+      "acceptedAnswers": ["Nia took the project over after her manager left."],
+      "tags": ["coverage:take-over"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-52",
-      "type": "about_me",
+      "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Share what interesting invitations or opportunities you like to accept from others.",
-      "explanation": "'Take someone up on' means to accept an offer or opportunity made by another.",
-      "question": "What kind of invitations do you usually take people up on?",
-      "sampleAnswer": "I readily accept invitations to explore historic museums and scenic parks.",
-      "hints": [
-        "weekend",
-        "trips",
-        "concerts",
-        "festivals"
-      ],
-      "tags": [
-        "coverage:take-up-on"
-      ]
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you accepted your friend’s offer of a coastal visit.",
+      "explanation": "'Take someone up on an offer' means to accept an offer or opportunity.",
+      "answer": ["I", "took", "my", "friend", "up", "on", "the", "offer."],
+      "distractors": ["over", "out", "off"],
+      "acceptedAnswers": ["I took them up on the offer."],
+      "tags": ["coverage:take-up-on"]
     }
   ]
 }

@@ -136,6 +136,31 @@ export async function putImportedProgram(program: Program, fileName?: string): P
   });
 }
 
+async function deleteProgramProgress(programId: string): Promise<void> {
+  await db.topicProgress.where('programId').equals(programId).delete();
+  await db.customTopics.filter((row) => row.programId === programId).delete();
+  const sessionIds = (await db.sessions.filter((row) => row.programId === programId).toArray()).map(
+    (row) => row.id
+  );
+  if (sessionIds.length > 0) {
+    await db.attempts.where('sessionId').anyOf(sessionIds).delete();
+    await db.sessions.bulkDelete(sessionIds);
+  }
+}
+
+/** Clears only the selected course's progress, session history, attempts and custom topics. */
+export async function resetProgramProgress(programId: string): Promise<void> {
+  await db.transaction(
+    'rw',
+    [db.settings, db.topicProgress, db.sessions, db.attempts, db.customTopics],
+    async () => {
+      const saved = await readActiveSession();
+      if (saved?.state.programId === programId) await clearActiveSession();
+      await deleteProgramProgress(programId);
+    }
+  );
+}
+
 /**
  * Removes an imported course. A saved in-progress session of that course is always
  * dropped (it could never be resumed). `deleteProgress` also drops everything recorded
@@ -154,15 +179,7 @@ export async function removeImportedProgram(
       const saved = await readActiveSession();
       if (saved && saved.state.programId === programId) await clearActiveSession();
       if (!deleteProgress) return;
-      await db.topicProgress.where('programId').equals(programId).delete();
-      await db.customTopics.filter((row) => row.programId === programId).delete();
-      const sessionIds = (
-        await db.sessions.filter((row) => row.programId === programId).toArray()
-      ).map((row) => row.id);
-      if (sessionIds.length > 0) {
-        await db.attempts.where('sessionId').anyOf(sessionIds).delete();
-        await db.sessions.bulkDelete(sessionIds);
-      }
+      await deleteProgramProgress(programId);
     }
   );
 

@@ -909,86 +909,48 @@
       "type": "question_for_answer",
       "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "typing"],
       "prompt": "A friend mentions that their beloved pet died last year. Inquire politely when it happened.",
       "explanation": "'Pass away' is a polite way to speak about death.",
-      "givenAnswer": "He passed away peacefully last autumn.",
-      "answer": [
-        "When",
-        "did",
-        "he",
-        "pass",
-        "away?"
-      ],
-      "distractors": [
-        "out",
-        "off",
-        "up"
-      ],
-      "acceptedAnswers": [
-        "When did your pet pass away?"
-      ],
-      "tags": [
-        "coverage:pass-away"
-      ]
+      "givenAnswer": "He died peacefully last autumn.",
+      "answer": ["When", "did", "he", "pass", "away?"],
+      "distractors": ["out", "off", "up"],
+      "acceptedAnswers": ["When did your pet pass away?"],
+      "tags": ["coverage:pass-away"]
     },
     {
       "id": "en-phrasal_verbs-m1-food-personal-care-and-health-27",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about distributing event leaflets.",
       "explanation": "'Pass out' can mean to hand out or distribute items to a group of people.",
       "template": "Volunteers gathered to ___ ___ flyers to people on the street.",
       "gaps": [
         {
-          "answer": "pass"
+          "answer": "pass",
+          "accepted": ["give", "hand"]
         },
         {
           "answer": "out"
         }
       ],
-      "wordBank": [
-        "pass",
-        "out",
-        "warm",
-        "up",
-        "throw"
-      ],
-      "tags": [
-        "coverage:pass-out"
-      ]
+      "wordBank": ["pass", "out", "warm", "up", "throw"],
+      "tags": ["coverage:pass-out"]
     },
     {
       "id": "en-phrasal_verbs-m1-food-personal-care-and-health-28",
-      "type": "about_me",
+      "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-food-personal-care-and-health",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Reflect on how you take care of your body when you feel nauseous and want to prevent vomiting.",
-      "explanation": "'Throw up' means to vomit. Rest, quiet, and hydrating liquids help calm nausea.",
-      "question": "What do you do to avoid throwing up when your stomach is upset?",
-      "sampleAnswer": "I sip warm tea and rest quietly in bed.",
-      "hints": [
-        "fresh",
-        "water",
-        "deep",
-        "breathing"
-      ],
-      "tags": [
-        "coverage:throw-up"
-      ]
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State that the rough boat ride made one passenger vomit.",
+      "explanation": "'Throw up' is an informal phrasal verb meaning to vomit.",
+      "answer": ["The", "boat", "ride", "made", "one", "passenger", "throw", "up."],
+      "distractors": ["away", "off", "out"],
+      "acceptedAnswers": ["One passenger threw up during the rough boat ride."],
+      "tags": ["coverage:throw-up"]
     }
   ]
 }

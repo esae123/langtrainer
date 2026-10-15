@@ -523,7 +523,11 @@ export function planSession(input: PlanInput): SessionPlan {
         (exercise) =>
           legacyCompletedWithoutProof || !seen.has(exercise.id) || wrong.has(exercise.id)
       );
-      const items = exercises.map((exercise, index) => {
+      // Finite session lengths cap this topic-focused block. Open mode keeps its
+      // existing behavior and plans every remaining exercise in the current topic.
+      const selectedExercises =
+        input.sessionLength === 'open' ? exercises : exercises.slice(0, input.sessionLength);
+      const items = selectedExercises.map((exercise, index) => {
         const item: PlannedItem = {
           exercise,
           mode: pickMode(exercise.allowedModes, input.inputShares, input.rng),

@@ -23,9 +23,9 @@ import { SettingsGroup } from '../components/SettingsGroup';
 import { Toggle } from '../components/Toggle';
 import { ImportCourseButton } from '../courses/ImportCourseButton';
 import { ImportHelpButton } from '../courses/ImportHelp';
+import { resetProgramProgress, useActiveProgram } from '../content/programRegistry';
 import { formatDate } from '../lib/formatDate';
 import { useToast } from '../components/toastStore';
-import { resetAllData } from '../db/reset';
 import { useT, type TranslationKey } from '../i18n';
 import {
   INPUT_PRESETS,
@@ -84,6 +84,7 @@ const MIX_FIELDS: { key: keyof SessionMixShares; labelKey: TranslationKey }[] = 
 export function SettingsScreen() {
   const t = useT();
   const settings = useSettings();
+  const activeProgram = useActiveProgram();
   const showToast = useToast();
   const runExport = useExportBackup();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -175,7 +176,7 @@ export function SettingsScreen() {
 
   async function handleResetConfirm() {
     setResetConfirmOpen(false);
-    await resetAllData();
+    await resetProgramProgress(settings.activeProgramId);
     showToast(t('settings.resetDone'));
   }
 
@@ -516,7 +517,9 @@ export function SettingsScreen() {
       <ConfirmDialog
         open={resetConfirmOpen}
         title={t('settings.resetConfirmTitle')}
-        body={t('settings.resetConfirmBody')}
+        body={t('settings.resetConfirmBody', {
+          course: activeProgram?.title ?? settings.activeProgramId,
+        })}
         confirmLabel={t('settings.resetConfirmOk')}
         cancelLabel={t('settings.resetConfirmCancel')}
         danger

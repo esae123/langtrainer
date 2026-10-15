@@ -295,7 +295,8 @@
       "explanation": "'Drop in' means to pay a short, unexpected visit to someone.",
       "answer": ["Feel", "free", "to", "drop", "in", "anytime."],
       "distractors": ["out", "off", "up"],
-      "tags": ["coverage:drop-in"]
+      "tags": ["coverage:drop-in"],
+      "acceptedAnswers": ["Feel free to drop in any time.", "You can drop in any time.", "Please drop in any time."]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-05",
@@ -321,7 +322,8 @@
       "explanation": "'Fool around' means to waste time doing silly or unproductive things.",
       "answer": ["Stop", "fooling", "around", "and", "do", "your", "homework."],
       "distractors": ["up", "out", "off"],
-      "tags": ["coverage:fool-around"]
+      "tags": ["coverage:fool-around"],
+      "acceptedAnswers": ["Stop goofing around and do your homework.", "Stop messing around and do your homework."]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-07",
@@ -355,8 +357,9 @@
       "sentence": "The teenagers like to **waste time playfully** in the park after school.",
       "word": "waste time playfully",
       "answer": "goof around",
-      "options": ["goof around", "hang out", "act up", "mess up"],
-      "tags": ["coverage:goof-around"]
+      "options": ["goof around", "fool around", "mess around", "hang around"],
+      "tags": ["coverage:goof-around"],
+      "acceptedAnswers": ["fool around", "mess around"]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-09",
@@ -367,7 +370,15 @@
       "prompt": "Complete the request asking someone to stay while you look for something.",
       "explanation": "'Hang around' means to stay in a place, often while waiting or passing time.",
       "template": "Could you ___ ___ for a few minutes while I find my keys?",
-      "gaps": [{ "answer": "hang" }, { "answer": "around" }],
+      "gaps": [
+        {
+          "answer": "hang"
+        },
+        {
+          "answer": "around",
+          "accepted": ["out"]
+        }
+      ],
       "wordBank": ["hang", "around", "stay", "out", "get", "up"],
       "tags": ["coverage:hang-around"]
     },
@@ -384,7 +395,9 @@
       "distractors": ["out", "off", "up"],
       "acceptedAnswers": [
         "Can you hang on for a moment?",
-        "Could you hang on?"
+        "Could you hang on?",
+        "Can you hold on?",
+        "Could you hold on for a moment?"
       ],
       "tags": ["coverage:hang-on"]
     },
@@ -398,7 +411,8 @@
       "explanation": "'Hang out' means to spend relaxing leisure time in a specific place or with friends.",
       "answer": ["We", "usually", "hang", "out", "at", "the", "cafe."],
       "distractors": ["up", "off", "in"],
-      "tags": ["coverage:hang-out"]
+      "tags": ["coverage:hang-out"],
+      "acceptedAnswers": ["We usually hang around at the cafe."]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-12",
@@ -494,7 +508,11 @@
       "givenAnswer": "I was just checking my emails.",
       "answer": ["Why", "are", "you", "messing", "around?"],
       "distractors": ["out", "up", "off"],
-      "acceptedAnswers": ["Why are you messing around at your desk?"],
+      "acceptedAnswers": [
+        "Why are you messing around at your desk?",
+        "Why are you fooling around?",
+        "Why are you goofing around?"
+      ],
       "tags": ["coverage:mess-around"]
     },
     {
@@ -535,16 +553,16 @@
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-20",
-      "type": "about_me",
+      "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Answer the question about your weekend habits.",
+      "prompt": "Report that Maria remained away from home until midnight on Saturday.",
       "explanation": "'Stay out' means to remain away from home during the evening or night.",
-      "question": "How late do you usually stay out on Saturday nights?",
-      "sampleAnswer": "I usually stay out until midnight with my friends.",
-      "hints": ["return", "home", "sleep", "early", "bed"],
-      "tags": ["coverage:stay-out"]
+      "tags": ["coverage:stay-out"],
+      "answer": ["Maria", "stayed", "out", "until", "midnight", "on", "Saturday."],
+      "distractors": ["in", "up", "off"],
+      "acceptedAnswers": ["Maria stayed out until midnight Saturday."]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-21",
@@ -619,9 +637,9 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Your colleague says: «I dozed off during the long presentation.» Ask them if they fell asleep during the presentation.",
+      "prompt": "Your colleague says: «I could barely keep my eyes open during the presentation.» Ask whether they briefly fell asleep.",
       "explanation": "'Doze off' means to fall into a light sleep unintentionally.",
-      "givenAnswer": "I dozed off during the long presentation.",
+      "givenAnswer": "Yes, I did.",
       "answer": ["Did", "you", "doze", "off", "during", "the", "presentation?"],
       "acceptedAnswers": ["Did you nod off during the presentation?"],
       "distractors": ["out", "dozing", "dozed"],
@@ -637,7 +655,8 @@
       "explanation": "'Drop in' means to pay a short, unannounced visit to someone.",
       "answer": ["You", "can", "drop", "in", "whenever", "you", "want."],
       "distractors": ["out", "by", "dropping"],
-      "tags": ["coverage:drop-in"]
+      "tags": ["coverage:drop-in"],
+      "acceptedAnswers": ["You can drop in any time.", "Please drop in any time.", "Feel free to drop in any time."]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-27",
@@ -675,8 +694,9 @@
       "sentence": "Don't **waste time playfully** when you have work to do.",
       "word": "waste time playfully",
       "answer": "fool around",
-      "options": ["fool around", "hang around", "stay up", "act up"],
-      "tags": ["coverage:fool-around"]
+      "options": ["fool around", "goof around", "mess around", "hang around"],
+      "tags": ["coverage:fool-around"],
+      "acceptedAnswers": ["goof around", "mess around"]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-29",
@@ -692,15 +712,15 @@
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-30",
-      "type": "about_me",
+      "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Answer the question in English about what you do in your free time.",
-      "explanation": "'Goof around' is an informal phrasal verb meaning to spend time doing silly or lighthearted things.",
-      "question": "Do you like to goof around with your friends on weekends?",
-      "sampleAnswer": "Yes, we often goof around in the park.",
-      "hints": ["sometimes", "play", "games", "relax", "together", "outdoors"],
+      "prompt": "Tell your teacher that you and your friends wasted time playing instead of studying.",
+      "explanation": "'Goof around' is informal and means to waste time doing silly or lighthearted things. 'Fool around' and 'mess around' can be used in the same sense.",
+      "answer": ["We", "goofed", "around", "instead", "of", "studying."],
+      "distractors": ["up", "away", "out"],
+      "acceptedAnswers": ["We fooled around instead of studying.", "We messed around instead of studying."],
       "tags": ["coverage:goof-around"]
     },
     {
@@ -717,7 +737,8 @@
           "answer": "hang"
         },
         {
-          "answer": "around"
+          "answer": "around",
+          "accepted": ["out"]
         }
       ],
       "wordBank": ["hang", "around", "stay", "out", "get", "up"],
@@ -733,7 +754,8 @@
       "explanation": "'Hang on' is an informal way to ask someone to wait briefly.",
       "answer": ["Please", "hang", "on", "for", "a", "moment."],
       "distractors": ["out", "up", "hanging"],
-      "tags": ["coverage:hang-on"]
+      "tags": ["coverage:hang-on"],
+      "acceptedAnswers": ["Hang on for a moment.", "Hold on for a moment.", "Please hold on for a moment."]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-33",
@@ -747,8 +769,9 @@
       "sentence": "Where do teenagers like to **spend leisure time** in this town?",
       "word": "spend leisure time",
       "answer": "hang out",
-      "options": ["hang out", "hang up", "kick out", "wake up"],
-      "tags": ["coverage:hang-out"]
+      "options": ["hang out", "hang around", "kick out", "wake up"],
+      "tags": ["coverage:hang-out"],
+      "acceptedAnswers": ["hang around"]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-34",
@@ -756,12 +779,13 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Your friend says: «He ended the call during our argument.» Ask why he hung up.",
+      "prompt": "Your friend says: «He ended our phone call during the argument.» Ask why he ended the call.",
       "explanation": "'Hang up' means to end a telephone conversation.",
       "givenAnswer": "He was angry with me.",
       "answer": ["Why", "did", "he", "hang", "up?"],
       "distractors": ["out", "on", "hanging"],
-      "tags": ["coverage:hang-up"]
+      "tags": ["coverage:hang-up"],
+      "acceptedAnswers": ["Why did he hang up on you?"]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-35",
@@ -862,7 +886,8 @@
       "givenAnswer": "We were bored, so we were playing silly games instead of cooking.",
       "answer": ["Why", "were", "you", "messing", "around?"],
       "distractors": ["out", "up", "messed"],
-      "tags": ["coverage:mess-around"]
+      "tags": ["coverage:mess-around"],
+      "acceptedAnswers": ["Why were you fooling around?", "Why were you goofing around?"]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-40",
@@ -917,10 +942,10 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Your friend says: «I stayed up until 3:00 AM finishing my report.» Ask her why she stayed up so late.",
+      "prompt": "Your friend says: «I worked until 3:00 AM to finish my report.» Ask why she was awake so late.",
       "explanation": "'Stay up' means to go to bed later than usual. Form the past question with 'Why did you stay up...?'",
       "tags": ["coverage:stay-up"],
-      "givenAnswer": "I stayed up until 3:00 AM finishing my report.",
+      "givenAnswer": "I had to finish my report.",
       "answer": ["Why", "did", "you", "stay", "up", "so", "late?"],
       "distractors": ["out", "off", "away"],
       "acceptedAnswers": ["Why did you stay up late?"]

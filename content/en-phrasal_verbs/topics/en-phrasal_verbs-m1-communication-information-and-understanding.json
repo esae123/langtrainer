@@ -435,11 +435,7 @@
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about completing an official document.",
       "explanation": "'Fill in' means to write necessary information into the spaces of a form.",
       "template": "Please ___ ___ this registration form with your contact details.",
@@ -448,19 +444,12 @@
           "answer": "fill"
         },
         {
-          "answer": "in"
+          "answer": "in",
+          "accepted": ["out"]
         }
       ],
-      "wordBank": [
-        "fill",
-        "in",
-        "shut",
-        "up",
-        "stand"
-      ],
-      "tags": [
-        "coverage:fill-in"
-      ]
+      "wordBank": ["fill", "in", "shut", "up", "stand"],
+      "tags": ["coverage:fill-in"]
     },
     {
       "id": "en-phrasal_verbs-m1-communication-information-and-understanding-08",
@@ -563,32 +552,21 @@
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the safety instruction about disconnecting the electric supply.",
       "explanation": "'Shut off' means to cut off the supply of power, water, or gas to an appliance or system.",
       "template": "Always ___ ___ the power before attempting to repair electrical wiring.",
       "gaps": [
         {
-          "answer": "shut"
+          "answer": "shut",
+          "accepted": ["turn", "switch"]
         },
         {
           "answer": "off"
         }
       ],
-      "wordBank": [
-        "shut",
-        "off",
-        "bring",
-        "up",
-        "butt"
-      ],
-      "tags": [
-        "coverage:shut-off"
-      ]
+      "wordBank": ["shut", "off", "bring", "up", "butt"],
+      "tags": ["coverage:shut-off"]
     },
     {
       "id": "en-phrasal_verbs-m1-communication-information-and-understanding-12",
@@ -1350,33 +1328,16 @@
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Instruct someone to switch off the noisy generator immediately.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell someone to stop the noisy generator immediately.",
       "explanation": "'Shut off' means to stop an engine or electrical device from operating.",
-      "answer": [
-        "Please",
-        "shut",
-        "off",
-        "the",
-        "noisy",
-        "engine",
-        "right",
-        "now."
-      ],
-      "distractors": [
-        "down",
-        "out",
-        "up"
-      ],
+      "answer": ["Please", "shut", "off", "the", "noisy", "generator", "right", "now."],
+      "distractors": ["down", "out", "up"],
       "acceptedAnswers": [
-        "Please shut off the noisy generator right now."
+        "Please turn off the noisy generator right now.",
+        "Please switch off the noisy generator right now."
       ],
-      "tags": [
-        "coverage:shut-off"
-      ]
+      "tags": ["coverage:shut-off"]
     },
     {
       "id": "en-phrasal_verbs-m1-communication-information-and-understanding-38",
@@ -1446,30 +1407,13 @@
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "typing"],
       "prompt": "Describe what all attendees do when the magistrate enters the courtroom.",
       "explanation": "'Stand up' means to rise from a seated position to one's feet.",
-      "answer": [
-        "Everyone",
-        "must",
-        "stand",
-        "up",
-        "when",
-        "the",
-        "judge",
-        "enters."
-      ],
-      "distractors": [
-        "down",
-        "off",
-        "out"
-      ],
-      "tags": [
-        "coverage:stand-up"
-      ]
+      "answer": ["Everyone", "must", "stand", "up", "when", "the", "judge", "enters."],
+      "distractors": ["down", "off", "out"],
+      "tags": ["coverage:stand-up"],
+      "acceptedAnswers": ["Everyone must get up when the judge enters."]
     },
     {
       "id": "en-phrasal_verbs-m1-communication-information-and-understanding-41",
@@ -1622,26 +1566,16 @@
     },
     {
       "id": "en-phrasal_verbs-m1-communication-information-and-understanding-46",
-      "type": "about_me",
+      "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Describe what strategies you rely on when you struggle to understand a difficult problem.",
-      "explanation": "'Figure out' means to solve or understand something through thought and effort.",
-      "question": "How do you usually figure out solutions to difficult problems?",
-      "sampleAnswer": "I break complex tasks into smaller parts and ask colleagues.",
-      "hints": [
-        "diagrams",
-        "careful",
-        "research",
-        "patience"
-      ],
-      "tags": [
-        "coverage:figure-out"
-      ]
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell your teammate that Maya solved the puzzle after checking every clue.",
+      "explanation": "'Figure out' means to solve or understand something by thinking about it.",
+      "answer": ["Maya", "figured", "out", "the", "puzzle", "after", "checking", "every", "clue."],
+      "distractors": ["in", "off", "away"],
+      "acceptedAnswers": ["Maya figured the puzzle out after checking every clue."],
+      "tags": ["coverage:figure-out"]
     },
     {
       "id": "en-phrasal_verbs-m1-communication-information-and-understanding-47",
@@ -1797,26 +1731,16 @@
     },
     {
       "id": "en-phrasal_verbs-m1-communication-information-and-understanding-52",
-      "type": "about_me",
+      "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-communication-information-and-understanding",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Describe how you locate hard-to-find information or items that you need.",
-      "explanation": "'Track down' means to find something after making an effort to search for it.",
-      "question": "How do you usually track down hard-to-find books or information?",
-      "sampleAnswer": "I search online forums and consult specialized library archives.",
-      "hints": [
-        "catalogues",
-        "curators",
-        "bookmarks",
-        "indices"
-      ],
-      "tags": [
-        "coverage:track-down"
-      ]
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State that a detective located the retired pilot after searching for weeks.",
+      "explanation": "'Track down' means to find someone or something after a persistent search.",
+      "answer": ["The", "detective", "tracked", "down", "the", "pilot", "after", "weeks", "of", "searching."],
+      "distractors": ["up", "off", "away"],
+      "acceptedAnswers": ["The detective tracked the pilot down after weeks of searching."],
+      "tags": ["coverage:track-down"]
     }
   ]
 }
