@@ -88,8 +88,16 @@ describe('App', () => {
         shares: { new: 30, review: 55, phrases: 15 },
       });
     });
+    await waitFor(() =>
+      expect(screen.getByRole('button', { name: /^more review/i })).toHaveAttribute(
+        'aria-pressed',
+        'true'
+      )
+    );
 
-    fireEvent.click(screen.getByRole('button', { name: /set your own split/i }));
+    const customPreset = screen.getByRole('button', { name: /set your own split/i });
+    fireEvent.click(customPreset);
+    await waitFor(() => expect(customPreset).toHaveAttribute('aria-pressed', 'true'));
     const slider = await screen.findByRole('slider', { name: /new topic/i });
     fireEvent.change(slider, { target: { value: '0' } });
     await waitFor(async () => {
