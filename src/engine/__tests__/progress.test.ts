@@ -6,11 +6,14 @@ import {
   DAY_MS,
   emptyTopicProgress,
   finishSession,
+  reconcileStrictTopic,
   type SessionAttemptSummary,
 } from '../progress';
 import type { TopicProgress } from '../types';
 
 const NOW = 1_700_000_000_000;
+/** Exercise ids of a two-exercise strict topic. */
+const IDS = ['e1', 'e2'];
 
 function reviewAttempts(topicId: string, results: boolean[]): SessionAttemptSummary[] {
   return results.map((correct) => ({ topicId, block: 'review' as const, correct }));
@@ -24,10 +27,14 @@ describe('applyAttempt', () => {
 
   it('strict coverage completes only after every distinct exercise is answered correctly', () => {
     let row = emptyTopicProgress('t1', 'en-phrasal_verbs');
-    row = applyAttempt(row, 'e1', true, NOW, false, 2);
-    row = applyAttempt(row, 'e2', false, NOW + 1, false, 2);
-    expect(row).toMatchObject({ status: 'learning', seenExerciseIds: ['e1', 'e2'], wrongExerciseIds: ['e2'] });
-    row = applyAttempt(row, 'e2', true, NOW + 2, false, 2);
+    row = applyAttempt(row, 'e1', true, NOW, false, IDS);
+    row = applyAttempt(row, 'e2', false, NOW + 1, false, IDS);
+    expect(row).toMatchObject({
+      status: 'learning',
+      seenExerciseIds: ['e1', 'e2'],
+      wrongExerciseIds: ['e2'],
+    });
+    row = applyAttempt(row, 'e2', true, NOW + 2, false, IDS);
     expect(row).toMatchObject({
       status: 'review',
       wrongExerciseIds: [],
@@ -40,13 +47,17 @@ describe('applyAttempt', () => {
 
   it('requires a correct regular-session answer even after a practice retry', () => {
     let row = emptyTopicProgress('t1', 'en-phrasal_verbs');
-    row = applyAttempt(row, 'e1', false, NOW, false, 2);
-    row = applyAttempt(row, 'e2', true, NOW + 1, false, 2);
-    row = applyAttempt(row, 'e1', true, NOW + 2, true, 2);
+    row = applyAttempt(row, 'e1', false, NOW, false, IDS);
+    row = applyAttempt(row, 'e2', true, NOW + 1, false, IDS);
+    row = applyAttempt(row, 'e1', true, NOW + 2, true, IDS);
     expect(row).toMatchObject({ status: 'learning', wrongExerciseIds: ['e1'] });
     expect(row.allExercisesCompletedAt).toBeUndefined();
-    row = applyAttempt(row, 'e1', true, NOW + 3, false, 2);
-    expect(row).toMatchObject({ status: 'review', allExercisesCompletedAt: NOW + 3, wrongExerciseIds: [] });
+    row = applyAttempt(row, 'e1', true, NOW + 3, false, IDS);
+    expect(row).toMatchObject({
+      status: 'review',
+      allExercisesCompletedAt: NOW + 3,
+      wrongExerciseIds: [],
+    });
   });
 
   it('replays legacy completed strict topics before accepting the new completion marker', () => {
@@ -55,15 +66,59 @@ describe('applyAttempt', () => {
       seenExerciseIds: ['e1', 'e2'],
       reviewStage: 1,
     });
-    const firstReplay = applyAttempt(legacy, 'e1', true, NOW, false, 2);
+    const firstReplay = applyAttempt(legacy, 'e1', true, NOW, false, IDS);
     expect(firstReplay).toMatchObject({
       status: 'learning',
       seenExerciseIds: ['e1'],
       wrongExerciseIds: [],
     });
     expect(firstReplay.allExercisesCompletedAt).toBeUndefined();
-    const finished = applyAttempt(firstReplay, 'e2', true, NOW + 1, false, 2);
+    const finished = applyAttempt(firstReplay, 'e2', true, NOW + 1, false, IDS);
     expect(finished.allExercisesCompletedAt).toBe(NOW + 1);
+  });
+
+  it('strict completion ignores a stale wrong id of an exercise no longer in the topic', () => {
+    // 'old-e3' was renamed away during a content edit; it must not block completion.
+    let row = makeProgress('t1', {
+      status: 'learning',
+      seenExerciseIds: ['e1', 'old-e3'],
+      wrongExerciseIds: ['old-e3'],
+    });
+    row = applyAttempt(row, 'e2', true, NOW, false, IDS);
+    expect(row).toMatchObject({ status: 'review', allExercisesCompletedAt: NOW, reviewStage: 1 });
+  });
+
+  it('strict completion does not count stale seen ids towards the topic', () => {
+    // Two seen ids, but only one of them is still in the topic: not complete yet.
+    let row = makeProgress('t1', { status: 'learning', seenExerciseIds: ['old-e3'] });
+    row = applyAttempt(row, 'e1', true, NOW, false, IDS);
+    expect(row.status).toBe('learning');
+    expect(row.allExercisesCompletedAt).toBeUndefined();
+    row = applyAttempt(row, 'e2', true, NOW + 1, false, IDS);
+    expect(row.allExercisesCompletedAt).toBe(NOW + 1);
+  });
+
+  it('reconcileStrictTopic completes a stuck topic and leaves the others alone', () => {
+    const stuck = makeProgress('t1', {
+      status: 'learning',
+      seenExerciseIds: ['e1', 'e2', 'old-e3'],
+      wrongExerciseIds: ['old-e3'],
+    });
+    expect(reconcileStrictTopic(stuck, IDS, NOW)).toMatchObject({
+      status: 'review',
+      allExercisesCompletedAt: NOW,
+      firstCompletedAt: NOW,
+      reviewStage: 1,
+      nextReviewAt: NOW + 7 * DAY_MS,
+    });
+    const open = makeProgress('t1', {
+      status: 'learning',
+      seenExerciseIds: ['e1', 'e2'],
+      wrongExerciseIds: ['e2'],
+    });
+    expect(reconcileStrictTopic(open, IDS, NOW)).toBe(open);
+    const legacy = makeProgress('t1', { status: 'review', seenExerciseIds: IDS });
+    expect(reconcileStrictTopic(legacy, IDS, NOW)).toBe(legacy);
   });
 
   it('keeps seenExerciseIds a set', () => {

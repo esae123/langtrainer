@@ -13,13 +13,19 @@ import {
 import { buildExerciseHistory, withAttempt, type ExerciseHistory } from '../engine/history';
 import {
   exercisesByTopic,
+  isStrictCourse,
   planFocus,
   planNextCycle,
   planSession,
   type PlanInput,
   type SessionPlan,
 } from '../engine/plan';
-import { applyAttempt, emptyTopicProgress, type TopicOutcome } from '../engine/progress';
+import {
+  applyAttempt,
+  emptyTopicProgress,
+  reconcileStrictTopic,
+  type TopicOutcome,
+} from '../engine/progress';
 import { mulberry32, type Rng } from '../engine/rng';
 import type { TopicProgress } from '../engine/types';
 import type { Settings } from '../settings/settings';
@@ -120,7 +126,22 @@ export function useSessionRunner(
     void (async () => {
       const now = Date.now();
       rngRef.current = mulberry32(now >>> 0);
-      const rows = await db.topicProgress.where('programId').equals(program.id).toArray();
+      let rows = await db.topicProgress.where('programId').equals(program.id).toArray();
+      if (isStrictCourse(program)) {
+        // A strict topic whose every current exercise is answered correctly but which
+        // never got its completion marker (a stale id used to block it) is completed now.
+        const byTopic = exercisesByTopic(program);
+        const healed = rows.map((row) =>
+          reconcileStrictTopic(
+            row,
+            (byTopic.get(row.topicId) ?? []).map((e) => e.id),
+            now
+          )
+        );
+        const changed = healed.filter((row, i) => row !== rows[i]);
+        if (changed.length > 0) await db.topicProgress.bulkPut(changed);
+        rows = healed;
+      }
       progressRef.current = rows;
 
       if (practicePlan) {
@@ -194,9 +215,10 @@ export function useSessionRunner(
         // mistake; everything else stays exactly as it was.
         if (practice && !existing) return undefined;
         const row = existing ?? emptyTopicProgress(draft.topicId, programId);
-        const allCorrectThreshold =
-          program?.topicCompletionPolicy === 'all-exercises-correct'
-            ? (exercisesByTopic(program).get(draft.topicId)?.length ?? undefined)
+        // Strict courses judge completion on the topic's current exercise ids.
+        const strictExerciseIds =
+          program && isStrictCourse(program)
+            ? (exercisesByTopic(program).get(draft.topicId) ?? []).map((exercise) => exercise.id)
             : undefined;
         const next = applyAttempt(
           row,
@@ -204,7 +226,7 @@ export function useSessionRunner(
           draft.correct,
           draft.at,
           practice,
-          allCorrectThreshold
+          strictExerciseIds
         );
         if (next === row && existing) return existing;
         await db.topicProgress.put(next);

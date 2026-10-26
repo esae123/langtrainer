@@ -92,14 +92,20 @@ describe('planSession block sizes', () => {
 
 describe('all-exercises-correct course policy', () => {
   it.each([5, 20] as const)('caps a new topic session at the selected length (%i)', (length) => {
-    const program = { ...makeStandardProgram(), topicCompletionPolicy: 'all-exercises-correct' as const };
+    const program = {
+      ...makeStandardProgram(),
+      topicCompletionPolicy: 'all-exercises-correct' as const,
+    };
     const planned = plan({ program, sessionLength: length });
     expect(planned.items).toHaveLength(length);
     expect(planned.items.every((item) => item.topicId === 't1')).toBe(true);
   });
 
   it('respects the selected session length while prioritizing unanswered exercises', () => {
-    const program = { ...makeStandardProgram(), topicCompletionPolicy: 'all-exercises-correct' as const };
+    const program = {
+      ...makeStandardProgram(),
+      topicCompletionPolicy: 'all-exercises-correct' as const,
+    };
     const exercises = program.modules[0].topics[0].exercises;
     const progress = [
       makeProgress('t1', {
@@ -119,7 +125,10 @@ describe('all-exercises-correct course policy', () => {
   });
 
   it('includes previous mistakes once the unanswered exercises are exhausted', () => {
-    const program = { ...makeStandardProgram(), topicCompletionPolicy: 'all-exercises-correct' as const };
+    const program = {
+      ...makeStandardProgram(),
+      topicCompletionPolicy: 'all-exercises-correct' as const,
+    };
     const exercises = program.modules[0].topics[0].exercises;
     const progress = [
       makeProgress('t1', {
@@ -129,14 +138,17 @@ describe('all-exercises-correct course policy', () => {
       }),
     ];
     const planned = plan({ program, progress, sessionLength: 5 });
-    expect(planned.items.map((item) => item.exercise.id)).toEqual([
+    expect(planned.items.slice(0, 2).map((item) => item.exercise.id)).toEqual([
       exercises[2].id,
       exercises[0].id,
     ]);
   });
 
   it('starts the next topic after every exercise in the current topic is correct', () => {
-    const program = { ...makeStandardProgram(), topicCompletionPolicy: 'all-exercises-correct' as const };
+    const program = {
+      ...makeStandardProgram(),
+      topicCompletionPolicy: 'all-exercises-correct' as const,
+    };
     const exercises = program.modules[0].topics[0].exercises;
     const progress = [
       makeProgress('t1', {
@@ -151,11 +163,255 @@ describe('all-exercises-correct course policy', () => {
   });
 
   it('reopens a fully seen legacy topic without the strict completion marker', () => {
-    const program = { ...makeStandardProgram(), topicCompletionPolicy: 'all-exercises-correct' as const };
+    const program = {
+      ...makeStandardProgram(),
+      topicCompletionPolicy: 'all-exercises-correct' as const,
+    };
     const exercises = program.modules[0].topics[0].exercises;
-    const progress = [makeProgress('t1', { status: 'review', seenExerciseIds: exercises.map((e) => e.id) })];
+    const progress = [
+      makeProgress('t1', { status: 'review', seenExerciseIds: exercises.map((e) => e.id) }),
+    ];
     expect(currentTopicOf(program, progress)?.id).toBe('t1');
     expect(plan({ program, progress, sessionLength: 10 }).items).toHaveLength(10);
+  });
+});
+
+describe('strict completion courses: session composition', () => {
+  const strictProgram = () => ({
+    ...makeStandardProgram(),
+    topicCompletionPolicy: 'all-exercises-correct' as const,
+  });
+  const idsOf = (program: ReturnType<typeof strictProgram>, topicIndex: number) =>
+    program.modules.flatMap((m) => m.topics)[topicIndex].exercises.map((e) => e.id);
+  const completedRow = (
+    program: ReturnType<typeof strictProgram>,
+    topicIndex: number,
+    topicId: string,
+    nextReviewAt: number
+  ) =>
+    makeProgress(topicId, {
+      status: 'review',
+      reviewStage: 1,
+      allExercisesCompletedAt: NOW - 10 * DAY_MS,
+      firstCompletedAt: NOW - 10 * DAY_MS,
+      nextReviewAt,
+      seenExerciseIds: idsOf(program, topicIndex),
+    });
+
+  it('fills the session with the next topic instead of shrinking near the end of a topic', () => {
+    const program = strictProgram();
+    const t1 = idsOf(program, 0);
+    const progress = [makeProgress('t1', { status: 'learning', seenExerciseIds: t1.slice(0, 38) })];
+    const planned = plan({ program, progress, sessionLength: 10 });
+    expect(planned.items).toHaveLength(10);
+    expect(planned.plannedLength).toBe(10);
+    expect(
+      planned.items
+        .slice(0, 2)
+        .map((i) => i.exercise.id)
+        .sort()
+    ).toEqual(t1.slice(38).sort());
+    expect(planned.items.slice(2).every((i) => i.topicId === 't2' && i.block === 'new')).toBe(true);
+    // The context screen opens the session and introduces t2 mid-session.
+    expect(planned.items[0].showContextBefore).toBe(true);
+    expect(planned.items[2].showContextBefore).toBe(true);
+    expect(planned.items.filter((i) => i.showContextBefore)).toHaveLength(2);
+    // Starting t2 early does not move the current topic: t1 is still being completed.
+    expect(currentTopicOf(program, progress)?.id).toBe('t1');
+  });
+
+  it('starting the next topic early keeps per-topic completion order', () => {
+    const program = strictProgram();
+    const t1 = idsOf(program, 0);
+    let progress = [makeProgress('t1', { status: 'learning', seenExerciseIds: t1.slice(0, 38) })];
+    const planned = plan({ program, progress, sessionLength: 10 });
+    for (const item of planned.items) {
+      const ids = program.modules
+        .flatMap((m) => m.topics)
+        .find((t) => t.id === item.topicId)!
+        .exercises.map((e) => e.id);
+      const row = progress.find((r) => r.topicId === item.topicId) ?? makeProgress(item.topicId);
+      // The last t1 exercise is answered wrong, everything else right.
+      const correct = item.exercise.id !== planned.items[1].exercise.id;
+      const next = applyAttempt(row, item.exercise.id, correct, NOW, false, ids);
+      progress = [...progress.filter((r) => r.topicId !== item.topicId), next];
+    }
+    expect(currentTopicOf(program, progress)?.id).toBe('t1');
+    const again = plan({ program, progress, sessionLength: 5 });
+    expect(again.items[0]).toMatchObject({ topicId: 't1', showContextBefore: true });
+    expect(again.items.slice(1).every((i) => i.topicId === 't2')).toBe(true);
+  });
+
+  it('reviews a due completed topic once the current topic leaves room', () => {
+    const program = strictProgram();
+    const t2 = idsOf(program, 1);
+    const progress = [
+      completedRow(program, 0, 't1', NOW - DAY_MS),
+      makeProgress('t2', { status: 'learning', seenExerciseIds: t2.slice(0, 38) }),
+    ];
+    const planned = plan({ program, progress, sessionLength: 10 });
+    expect(planned.items.map((i) => `${i.topicId}:${i.block}`)).toEqual([
+      't2:new',
+      't2:new',
+      ...Array(MIN_REVIEW_ATTEMPTS).fill('t1:review'),
+      ...Array(10 - 2 - MIN_REVIEW_ATTEMPTS).fill('t3:new'),
+    ]);
+    expect(planned.items[2 + MIN_REVIEW_ATTEMPTS].showContextBefore).toBe(true);
+    // The review counts: finishing it perfectly moves t1 to stage 2.
+    const { rows } = finishSession(
+      progress,
+      planned.items.map((i) => ({ topicId: i.topicId, block: i.block, correct: true })),
+      NOW + 1,
+      NOW
+    );
+    expect(rows.find((r) => r.topicId === 't1')).toMatchObject({ reviewStage: 2 });
+  });
+
+  it('does not review a completed topic that is not due yet', () => {
+    const program = strictProgram();
+    const t2 = idsOf(program, 1);
+    const progress = [
+      completedRow(program, 0, 't1', NOW + DAY_MS),
+      makeProgress('t2', { status: 'learning', seenExerciseIds: t2.slice(0, 38) }),
+    ];
+    const planned = plan({ program, progress, sessionLength: 10 });
+    expect(planned.items.some((i) => i.topicId === 't1')).toBe(false);
+    expect(planned.items).toHaveLength(10);
+  });
+
+  it('a finished course fills with the least recently seen completed exercises', () => {
+    const program = strictProgram();
+    const progress = [
+      completedRow(program, 0, 't1', NOW + DAY_MS),
+      completedRow(program, 1, 't2', NOW + DAY_MS),
+      completedRow(program, 2, 't3', NOW + DAY_MS),
+    ];
+    // Every exercise seen recently except five t2 ones, seen long ago.
+    const all = [0, 1, 2].flatMap((i) => idsOf(program, i));
+    const old = idsOf(program, 1).slice(10, 15);
+    const history = new Map(
+      all.map((id) => [
+        id,
+        {
+          lastSeenAt: old.includes(id) ? NOW - 50 * DAY_MS : NOW - 2 * DAY_MS,
+          correctStreak: 1,
+          attempts: 1,
+        },
+      ])
+    );
+    const planned = planSession({
+      program,
+      progress,
+      sessionLength: 10,
+      inputShares: INPUT_PRESETS.normal,
+      now: NOW,
+      rng: mulberry32(3),
+      history,
+    });
+    expect(planned.items).toHaveLength(10);
+    expect(planned.items.every((i) => i.block === 'review')).toBe(true);
+    expect(
+      planned.items
+        .slice(0, 5)
+        .map((i) => i.exercise.id)
+        .sort()
+    ).toEqual([...old].sort());
+    // Nothing was due, so nothing moves in the SRS.
+    const { outcomes } = finishSession(
+      progress,
+      planned.items.map((i) => ({ topicId: i.topicId, block: i.block, correct: true })),
+      NOW + 1,
+      NOW
+    );
+    expect(outcomes.every((o) => !o.srsApplied)).toBe(true);
+  });
+
+  it('open: the first cycle is the rest of the current topic, then cycles of six', () => {
+    const program = strictProgram();
+    const t1 = idsOf(program, 0);
+    const input = {
+      program,
+      progress: [
+        makeProgress('t1', { status: 'learning', seenExerciseIds: t1.slice(0, 30) }),
+        completedRow(program, 2, 't3', NOW - DAY_MS),
+      ],
+      sessionLength: 'open' as const,
+      inputShares: INPUT_PRESETS.normal,
+      now: NOW,
+      rng: mulberry32(5),
+      id: 'open-strict',
+    };
+    let p = planSession(input);
+    expect(p).toMatchObject({ open: true, plannedLength: 0 });
+    expect(p.items).toHaveLength(10);
+    expect(p.items.every((i) => i.topicId === 't1')).toBe(true);
+    p = planNextCycle(p, input);
+    expect(p.items.slice(10).map((i) => `${i.topicId}:${i.block}`)).toEqual([
+      ...Array(MIN_REVIEW_ATTEMPTS).fill('t3:review'),
+      ...Array(6 - MIN_REVIEW_ATTEMPTS).fill('t2:new'),
+    ]);
+    expect(p.items[10 + MIN_REVIEW_ATTEMPTS].showContextBefore).toBe(true);
+    // t3 already has its reviews in this session: the next cycle is all t2.
+    p = planNextCycle(p, input);
+    expect(p.items.slice(16).every((i) => i.topicId === 't2' && !i.showContextBefore)).toBe(true);
+    expect(new Set(p.items.map((i) => i.exercise.id)).size).toBe(p.items.length);
+  });
+
+  it('a stale wrong id never leaves a topic stuck on an empty session', () => {
+    const program = strictProgram();
+    const progress = [
+      makeProgress('t1', {
+        status: 'learning',
+        seenExerciseIds: [...idsOf(program, 0), 'renamed-away'],
+        wrongExerciseIds: ['renamed-away'],
+      }),
+    ];
+    expect(currentTopicOf(program, progress)?.id).toBe('t2');
+    const planned = plan({ program, progress, sessionLength: 10 });
+    expect(planned.items).toHaveLength(10);
+    expect(planned.items.every((i) => i.topicId === 't2')).toBe(true);
+  });
+
+  it('stale seen ids do not complete a topic early', () => {
+    const program = strictProgram();
+    const t1 = idsOf(program, 0);
+    const stale = Array.from({ length: 5 }, (_, i) => `gone-${i}`);
+    const progress = [
+      makeProgress('t1', { status: 'learning', seenExerciseIds: [...t1.slice(0, 39), ...stale] }),
+    ];
+    expect(currentTopicOf(program, progress)?.id).toBe('t1');
+    expect(plan({ program, progress, sessionLength: 5 }).items[0].exercise.id).toBe(t1[39]);
+  });
+});
+
+describe('planFocus on a strict course', () => {
+  const program = {
+    ...makeStandardProgram(),
+    topicCompletionPolicy: 'all-exercises-correct' as const,
+  };
+  const input = (sessionLength: SessionLength) => ({
+    program,
+    progress: [],
+    sessionLength,
+    inputShares: INPUT_PRESETS.normal,
+    now: NOW,
+    rng: mulberry32(1),
+    id: 'focus-strict',
+  });
+
+  it.each([5, 10] as const)('respects the session length on the current topic (%i)', (n) => {
+    const p = planFocus(input(n), 't1');
+    expect(p.items).toHaveLength(n);
+    expect(p.plannedLength).toBe(n);
+  });
+
+  it('open: cycles of six on the current topic', () => {
+    let p = planFocus(input('open'), 't1');
+    expect(p).toMatchObject({ open: true, plannedLength: 0 });
+    expect(p.items).toHaveLength(6);
+    p = planNextCycle(p, input('open'));
+    expect(p.items).toHaveLength(12);
+    expect(p.items.every((i) => i.topicId === 't1' && i.block === 'focus')).toBe(true);
   });
 });
 

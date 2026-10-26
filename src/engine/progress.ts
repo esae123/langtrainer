@@ -30,6 +30,68 @@ function withoutWrong(row: TopicProgress, exerciseId: string): string[] {
 }
 
 /**
+ * Strict-completion courses (`topicCompletionPolicy: 'all-exercises-correct'`): every
+ * exercise id the topic has *now* was answered and none of them is in
+ * `wrongExerciseIds`. Ids that are no longer in the topic (renamed or removed during
+ * content edits) are ignored on both lists, so a stale id can neither block completion
+ * nor complete a topic early. An empty topic is never complete.
+ */
+export function allCurrentCorrect(
+  row: Pick<TopicProgress, 'seenExerciseIds' | 'wrongExerciseIds'> | undefined,
+  exerciseIds: readonly string[]
+): boolean {
+  if (exerciseIds.length === 0) return false;
+  const seen = new Set(row?.seenExerciseIds ?? []);
+  const wrong = new Set(row?.wrongExerciseIds ?? []);
+  return exerciseIds.every((id) => seen.has(id) && !wrong.has(id));
+}
+
+/** Every exercise id the topic has now is in `seenExerciseIds` (stale ids ignored). */
+export function allCurrentSeen(
+  row: Pick<TopicProgress, 'seenExerciseIds'> | undefined,
+  exerciseIds: readonly string[]
+): boolean {
+  if (exerciseIds.length === 0) return false;
+  const seen = new Set(row?.seenExerciseIds ?? []);
+  return exerciseIds.every((id) => seen.has(id));
+}
+
+/**
+ * A strict row from before the completion marker existed: completed by the old
+ * 20-attempt rule, without proof that every exercise was answered correctly. Such a
+ * topic is replayed once under the strict rule.
+ */
+export function isLegacyStrictRow(row: TopicProgress | undefined): boolean {
+  return row !== undefined && !row.allExercisesCompletedAt && COMPLETED_STATUSES.has(row.status);
+}
+
+function markStrictComplete(row: TopicProgress, now: number): TopicProgress {
+  return {
+    ...row,
+    allExercisesCompletedAt: now,
+    status: 'review',
+    firstCompletedAt: now,
+    reviewStage: 1,
+    nextReviewAt: now + 7 * DAY_MS,
+    failedReviewsInARow: 0,
+  };
+}
+
+/**
+ * Heals a strict topic that is effectively complete — every current exercise answered,
+ * the last regular answer to each correct — but never got its completion marker (a stale
+ * id in `wrongExerciseIds` used to block it). Returns the row unchanged otherwise.
+ */
+export function reconcileStrictTopic(
+  row: TopicProgress,
+  exerciseIds: readonly string[],
+  now: number
+): TopicProgress {
+  if (row.allExercisesCompletedAt || isLegacyStrictRow(row)) return row;
+  return allCurrentCorrect(row, exerciseIds) ? markStrictComplete(row, now) : row;
+}
+
+/**
  * Records one answered exercise: marks it seen, moves `new → learning`, applies the
  * completion rule (≥ 20 distinct exercises → `review`, stage 1, next review in 7 days)
  * and keeps `wrongExerciseIds` up to date (added on a wrong answer, removed on a right
@@ -38,6 +100,10 @@ function withoutWrong(row: TopicProgress, exerciseId: string): string[] {
  * `practice: true` (docs/stage-3b-spec.md §4) makes the attempt inert: nothing is marked
  * seen, no status or SRS field moves. The only effect is that answering a past mistake
  * correctly drops it from `wrongExerciseIds`.
+ *
+ * `strictExerciseIds` (strict-completion courses only): the topic's current exercise ids.
+ * The topic is then completed only once every one of them was answered correctly in a
+ * regular (or focus) session — see `allCurrentCorrect`.
  */
 export function applyAttempt(
   row: TopicProgress,
@@ -45,13 +111,14 @@ export function applyAttempt(
   correct: boolean,
   now: number,
   practice = false,
-  allCorrectThreshold?: number
+  strictExerciseIds?: readonly string[]
 ): TopicProgress {
+  const strict = strictExerciseIds !== undefined;
   if (practice) {
     // A first-time phrasal-verb topic is completed by a correct answer in the
     // regular test session. Retry/practice runs may help with later review, but
     // must not erase the mistake that still needs a correct test answer.
-    if (allCorrectThreshold !== undefined && !row.allExercisesCompletedAt) return row;
+    if (strict && !row.allExercisesCompletedAt) return row;
     if (!correct) return row;
     const wrong = withoutWrong(row, exerciseId);
     const next =
@@ -59,20 +126,11 @@ export function applyAttempt(
         ? row
         : { ...row, wrongExerciseIds: wrong };
     if (
-      allCorrectThreshold !== undefined &&
-      (!next.allExercisesCompletedAt || next.seenExerciseIds.length < allCorrectThreshold) &&
-      next.seenExerciseIds.length >= allCorrectThreshold &&
-      next.wrongExerciseIds.length === 0
+      strict &&
+      (!next.allExercisesCompletedAt || !allCurrentSeen(next, strictExerciseIds)) &&
+      allCurrentCorrect(next, strictExerciseIds)
     ) {
-      return {
-        ...next,
-        allExercisesCompletedAt: now,
-        status: 'review',
-        firstCompletedAt: now,
-        reviewStage: 1,
-        nextReviewAt: now + 7 * DAY_MS,
-        failedReviewsInARow: 0,
-      };
+      return markStrictComplete(next, now);
     }
     return next;
   }
@@ -80,10 +138,7 @@ export function applyAttempt(
   // Older strict-course progress has no marker proving test-session mastery. If
   // it was marked completed already, replay the whole topic once under the new rule.
   const legacyRow =
-    allCorrectThreshold !== undefined &&
-    !row.allExercisesCompletedAt &&
-    COMPLETED_STATUSES.has(row.status) &&
-    row.seenExerciseIds.length >= allCorrectThreshold
+    strict && isLegacyStrictRow(row) && allCurrentSeen(row, strictExerciseIds)
       ? { ...row, status: 'learning' as const, seenExerciseIds: [], wrongExerciseIds: [] }
       : row;
   const seen = legacyRow.seenExerciseIds.includes(exerciseId)
@@ -96,28 +151,17 @@ export function applyAttempt(
     wrongExerciseIds: correct ? wrongIds : [...wrongIds, exerciseId],
   };
 
-  if (
-    allCorrectThreshold !== undefined &&
-    (!next.allExercisesCompletedAt || seen.length < allCorrectThreshold)
-  ) {
-    const complete = seen.length >= allCorrectThreshold && next.wrongExerciseIds.length === 0;
-    if (complete) {
-      next.allExercisesCompletedAt = now;
-      next.status = 'review';
-      next.firstCompletedAt = now;
-      next.reviewStage = 1;
-      next.nextReviewAt = now + 7 * DAY_MS;
-      next.failedReviewsInARow = 0;
-    } else {
-      // Older versions completed this course after 20 attempts. Reopen any such
-      // partially covered topic until every exercise has a correct answer.
-      next.status = 'learning';
-      next.reviewStage = 0;
-      next.failedReviewsInARow = 0;
-      delete next.firstCompletedAt;
-      delete next.lastReviewedAt;
-      delete next.nextReviewAt;
-    }
+  if (strict && (!next.allExercisesCompletedAt || !allCurrentSeen(next, strictExerciseIds))) {
+    if (allCurrentCorrect(next, strictExerciseIds)) return markStrictComplete(next, now);
+    // Older versions completed this course after 20 attempts. Reopen any such
+    // partially covered topic until every exercise has a correct answer.
+    next.status = 'learning';
+    next.reviewStage = 0;
+    next.failedReviewsInARow = 0;
+    delete next.allExercisesCompletedAt;
+    delete next.firstCompletedAt;
+    delete next.lastReviewedAt;
+    delete next.nextReviewAt;
     return next;
   }
 

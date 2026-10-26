@@ -10,7 +10,12 @@ import {
   type SessionMixShares,
 } from '../settings/settings';
 import { RECENT_WINDOW_MS, SECURED_STREAK, type ExerciseHistory } from './history';
-import { MIN_REVIEW_ATTEMPTS } from './progress';
+import {
+  MIN_REVIEW_ATTEMPTS,
+  allCurrentCorrect,
+  allCurrentSeen,
+  isLegacyStrictRow,
+} from './progress';
 import { pickWeighted, shuffle, type Rng } from './rng';
 import type { TopicProgress } from './types';
 
@@ -148,23 +153,40 @@ export function exercisesByTopic(program: Program): Map<string, Exercise[]> {
   return map;
 }
 
+/** The course completes a topic only when every exercise was answered correctly. */
+export function isStrictCourse(program: Program): boolean {
+  return program.topicCompletionPolicy === 'all-exercises-correct';
+}
+
+/**
+ * Strict-completion topic state, judged on the topic's *current* exercise ids (stale ids
+ * in the progress row are ignored):
+ * - with the completion marker: complete while every current exercise has been seen (a
+ *   wrong answer in a later review does not reopen it; a newly added exercise does);
+ * - a legacy row (completed by the old 20-attempt rule, no marker) is not complete — it
+ *   is replayed once;
+ * - otherwise complete when every current exercise was seen and none is in
+ *   `wrongExerciseIds`, even if the marker is missing (a stale wrong id used to block
+ *   it), so the planner never gets stuck on a topic with nothing left to answer.
+ */
+export function isStrictTopicComplete(topic: Topic, row: TopicProgress | undefined): boolean {
+  const ids = topic.exercises.map((exercise) => exercise.id);
+  if (ids.length === 0) return true;
+  if (row?.allExercisesCompletedAt) return allCurrentSeen(row, ids);
+  if (isLegacyStrictRow(row)) return false;
+  return allCurrentCorrect(row, ids);
+}
+
 /**
  * The topic the learner is working through: first in program order whose status is
  * `new` or `learning`. `undefined` once every topic has been completed at least once.
  */
 export function currentTopicOf(program: Program, progress: TopicProgress[]): Topic | undefined {
   const byId = new Map(progress.map((row) => [row.topicId, row]));
-  if (program.topicCompletionPolicy === 'all-exercises-correct') {
-    return orderedTopics(program).find((topic) => {
-      if (topic.exercises.length === 0) return false;
-      const row = byId.get(topic.id);
-      const seen = new Set(row?.seenExerciseIds ?? []);
-      const allSeen = topic.exercises.every((exercise) => seen.has(exercise.id));
-      // Only the new completion marker proves each item was answered correctly in a
-      // regular test session. Legacy rows cannot distinguish that from practice fixes.
-      const completed = allSeen && Boolean(row?.allExercisesCompletedAt);
-      return !completed;
-    });
+  if (isStrictCourse(program)) {
+    return orderedTopics(program).find(
+      (topic) => topic.exercises.length > 0 && !isStrictTopicComplete(topic, byId.get(topic.id))
+    );
   }
   return orderedTopics(program).find((topic) => {
     const status = byId.get(topic.id)?.status ?? 'new';
@@ -503,56 +525,173 @@ function buildItems(
   return { items };
 }
 
-export function planSession(input: PlanInput): SessionPlan {
-  if (input.program.topicCompletionPolicy === 'all-exercises-correct') {
-    const topic = currentTopicOf(input.program, input.progress);
-    if (topic) {
-      const row = input.progress.find((entry) => entry.topicId === topic.id);
-      const seen = new Set(row?.seenExerciseIds ?? []);
-      const wrong = new Set(row?.wrongExerciseIds ?? []);
-      const legacyCompletedWithoutProof =
-        row &&
-        COMPLETED_STATUSES.has(row.status) &&
-        !row.allExercisesCompletedAt &&
-        topic.exercises.every((exercise) => seen.has(exercise.id));
-      const exercises = orderedPool(
-        topic.exercises,
-        poolContext(input, topic.id, new Set()),
-        false
-      ).filter(
-        (exercise) =>
-          legacyCompletedWithoutProof || !seen.has(exercise.id) || wrong.has(exercise.id)
+function sessionId(input: PlanInput, prefix: string): string {
+  return (
+    input.id ??
+    `${prefix}${input.now.toString(36)}-${Math.floor(input.rng() * 0xffffff).toString(36)}`
+  );
+}
+
+/**
+ * What is left to answer in a not-yet-completed strict topic: unseen, then last answer
+ * wrong (the usual selection order); a legacy row replays every exercise.
+ */
+function strictRemaining(input: PlanInput, topic: Topic, used: ReadonlySet<string>): Exercise[] {
+  const row = input.progress.find((entry) => entry.topicId === topic.id);
+  const ids = topic.exercises.map((exercise) => exercise.id);
+  const replay = isLegacyStrictRow(row) && allCurrentSeen(row, ids);
+  const seen = new Set(row?.seenExerciseIds ?? []);
+  const wrong = new Set(row?.wrongExerciseIds ?? []);
+  return orderedPool(topic.exercises, poolContext(input, topic.id, used), false).filter(
+    (exercise) => replay || !seen.has(exercise.id) || wrong.has(exercise.id)
+  );
+}
+
+/**
+ * Session composition for strict-completion courses (docs/engine.md "Strict completion
+ * courses"). Fills `target` items in this order: (a) the current topic's remaining
+ * exercises; (b) due reviews of completed topics, earliest due first, each with at least
+ * MIN_REVIEW_ATTEMPTS items (counting `prior` items of an open session), at most
+ * MAX_REVIEW_TOPICS; (c) the next not-yet-completed topics in course order; (d) once the
+ * course is finished, the least recently seen exercises of completed topics. The session
+ * mix is not used. `currentOnly` plans (a) alone (the first cycle of an open session).
+ */
+function buildStrictItems(
+  input: PlanInput,
+  target: number,
+  used: Set<string>,
+  contextShown: Set<string>,
+  prior: readonly PlannedItem[] = [],
+  currentOnly = false
+): PlannedItem[] {
+  const { program, progress, rng } = input;
+  const byId = new Map(progress.map((row) => [row.topicId, row]));
+  const topics = orderedTopics(program).filter((topic) => topic.exercises.length > 0);
+  const incomplete = topics.filter((topic) => !isStrictTopicComplete(topic, byId.get(topic.id)));
+  const completed = topics.filter((topic) => isStrictTopicComplete(topic, byId.get(topic.id)));
+  const picked: (Candidate & { block: BlockKind })[] = [];
+  const room = () => target - picked.length;
+  const take = (exercise: Exercise, topicId: string, block: BlockKind) => {
+    picked.push({ exercise, topicId, block });
+    used.add(exercise.id);
+  };
+  const takeRemaining = (topic: Topic) => {
+    for (const exercise of strictRemaining(input, topic, used)) {
+      if (room() <= 0) break;
+      take(exercise, topic.id, 'new');
+    }
+  };
+
+  // (a) the current topic.
+  if (incomplete[0]) takeRemaining(incomplete[0]);
+
+  if (!currentOnly) {
+    // (b) due reviews of completed topics.
+    const priorReview = new Map<string, number>();
+    for (const item of prior) {
+      if (item.block === 'review') {
+        priorReview.set(item.topicId, (priorReview.get(item.topicId) ?? 0) + 1);
+      }
+    }
+    const stillNeeded = (topicId: string) =>
+      Math.max(0, MIN_REVIEW_ATTEMPTS - (priorReview.get(topicId) ?? 0));
+    const due = completed
+      .map((topic) => ({ topic, row: byId.get(topic.id) }))
+      .filter(
+        ({ topic, row }) =>
+          row !== undefined &&
+          (row.status === 'review' || row.status === 'maintenance') &&
+          row.nextReviewAt !== undefined &&
+          row.nextReviewAt <= input.now &&
+          stillNeeded(topic.id) > 0
+      )
+      .sort((a, b) => (a.row?.nextReviewAt ?? 0) - (b.row?.nextReviewAt ?? 0));
+    let reviewTopics = 0;
+    for (const { topic } of due) {
+      if (reviewTopics >= MAX_REVIEW_TOPICS) break;
+      const needed = stillNeeded(topic.id);
+      // Fewer slots than finishSession needs to move the SRS: leave the review for a
+      // session with room, rather than spend it as extra practice.
+      if (room() < needed) continue;
+      const pool = orderedPool(topic.exercises, poolContext(input, topic.id, used), false);
+      if (pool.length === 0) continue;
+      for (const exercise of pool.slice(0, needed)) take(exercise, topic.id, 'review');
+      reviewTopics += 1;
+    }
+
+    // (c) the next not-yet-completed topics, in course order.
+    for (const topic of incomplete.slice(1)) {
+      if (room() <= 0) break;
+      takeRemaining(topic);
+    }
+
+    // (d) course finished: least recently seen exercises of completed topics.
+    if (incomplete.length === 0 && room() > 0) {
+      const pool = shuffle(
+        completed.flatMap((topic) =>
+          topic.exercises
+            .filter((exercise) => !used.has(exercise.id))
+            .map((exercise) => ({ exercise, topicId: topic.id }))
+        ),
+        rng
+      ).sort(
+        (a, b) =>
+          lastSeenAt(a.exercise.id, input.history) - lastSeenAt(b.exercise.id, input.history)
       );
-      // Finite session lengths cap this topic-focused block. Open mode keeps its
-      // existing behavior and plans every remaining exercise in the current topic.
-      const selectedExercises =
-        input.sessionLength === 'open' ? exercises : exercises.slice(0, input.sessionLength);
-      const items = selectedExercises.map((exercise, index) => {
-        const item: PlannedItem = {
-          exercise,
-          mode: pickMode(exercise.allowedModes, input.inputShares, input.rng),
-          block: 'new',
-          topicId: topic.id,
-        };
-        if (index === 0) item.showContextBefore = true;
-        return item;
-      });
-      return {
-        id: input.id ?? `s${input.now.toString(36)}-${Math.floor(input.rng() * 0xffffff).toString(36)}`,
-        programId: input.program.id,
-        plannedLength: items.length,
-        open: false,
-        items,
-        kind: 'regular',
-      };
+      for (const candidate of pool.slice(0, room())) {
+        take(candidate.exercise, candidate.topicId, 'review');
+      }
     }
   }
+
+  return picked.map((candidate) => {
+    const item: PlannedItem = {
+      exercise: candidate.exercise,
+      mode: pickMode(candidate.exercise.allowedModes, input.inputShares, rng),
+      block: candidate.block,
+      topicId: candidate.topicId,
+    };
+    if (candidate.block === 'new' && !contextShown.has(candidate.topicId)) {
+      contextShown.add(candidate.topicId);
+      item.showContextBefore = true;
+    }
+    return item;
+  });
+}
+
+function planStrictSession(input: PlanInput): SessionPlan {
+  const used = new Set<string>();
+  const contextShown = new Set<string>();
+  const { sessionLength } = input;
+  const open = sessionLength === 'open';
+  let items: PlannedItem[];
+  if (sessionLength === 'open') {
+    // First cycle: everything left in the current topic; then cycles of six.
+    items = buildStrictItems(input, Infinity, used, contextShown, [], true);
+    if (items.length === 0) {
+      items = buildStrictItems(input, OPEN_CYCLE_LENGTH, used, contextShown);
+    }
+  } else {
+    items = buildStrictItems(input, sessionLength, used, contextShown);
+  }
+  return {
+    id: sessionId(input, 's'),
+    programId: input.program.id,
+    plannedLength: open ? 0 : items.length,
+    open,
+    items,
+    kind: 'regular',
+  };
+}
+
+export function planSession(input: PlanInput): SessionPlan {
+  if (isStrictCourse(input.program)) return planStrictSession(input);
 
   const open = input.sessionLength === 'open';
   const counts = blockCountsFor(input.sessionLength, input.sessionMix);
   const { items } = buildItems(input, counts, new Set(), new Set());
   return {
-    id: input.id ?? `s${input.now.toString(36)}-${Math.floor(input.rng() * 0xffffff).toString(36)}`,
+    id: sessionId(input, 's'),
     programId: input.program.id,
     // 0 marks an open session; otherwise the real length, which can be below the target
     // when the program runs out of exercises (so the UI never promises "1/10" of 3).
@@ -598,17 +737,12 @@ function focusItems(
   const topic = orderedTopics(program).find((candidate) => candidate.id === topicId);
   const exercises = exercisesByTopic(program).get(topicId) ?? [];
   let pool = orderedPool(exercises, poolContext(input, topicId, used), false);
-  if (
-    program.topicCompletionPolicy === 'all-exercises-correct' &&
-    currentTopicOf(program, input.progress)?.id === topicId
-  ) {
-    const row = input.progress.find((entry) => entry.topicId === topicId);
-    const seen = new Set(row?.seenExerciseIds ?? []);
-    const wrong = new Set(row?.wrongExerciseIds ?? []);
-    pool = pool.filter((exercise) => !seen.has(exercise.id) || wrong.has(exercise.id));
-  } else {
-    pool = pool.slice(0, count);
+  const current = isStrictCourse(program) ? currentTopicOf(program, input.progress) : undefined;
+  if (current && current.id === topicId) {
+    // Focus on the strict topic being completed: only what is still left to answer.
+    pool = strictRemaining(input, current, used);
   }
+  pool = pool.slice(0, count);
   return pool.map((exercise, i) => {
     const item: PlannedItem = {
       exercise,
@@ -629,14 +763,12 @@ function focusItems(
  * topic until its pool is exhausted (see `planNextCycle`).
  */
 export function planFocus(input: PlanInput, topicId: string): SessionPlan {
-  const isCompletingTopic =
-    input.program.topicCompletionPolicy === 'all-exercises-correct' &&
-    currentTopicOf(input.program, input.progress)?.id === topicId;
-  const open = input.sessionLength === 'open' && !isCompletingTopic;
-  const count = input.sessionLength === 'open' ? OPEN_CYCLE_LENGTH : input.sessionLength;
+  const { sessionLength } = input;
+  const open = sessionLength === 'open';
+  const count = sessionLength === 'open' ? OPEN_CYCLE_LENGTH : sessionLength;
   const items = focusItems(input, topicId, count, new Set(), true);
   return {
-    id: input.id ?? `f${input.now.toString(36)}-${Math.floor(input.rng() * 0xffffff).toString(36)}`,
+    id: sessionId(input, 'f'),
     programId: input.program.id,
     plannedLength: open ? 0 : items.length,
     open,
@@ -648,8 +780,9 @@ export function planFocus(input: PlanInput, topicId: string): SessionPlan {
 
 /**
  * Appends one more cycle of six to an open-ended plan, never repeating an exercise:
- * split by the session mix for a regular plan, from the same topic for a focus plan
- * (nothing is appended once that topic is exhausted, which ends the session).
+ * split by the session mix for a regular plan (by the strict composition order for a
+ * strict-completion course), from the same topic for a focus plan (nothing is appended
+ * once that topic is exhausted, which ends the session).
  */
 export function planNextCycle(plan: SessionPlan, input: PlanInput): SessionPlan {
   if (plan.kind === 'focus' && plan.focusTopicId) {
@@ -661,6 +794,10 @@ export function planNextCycle(plan: SessionPlan, input: PlanInput): SessionPlan 
   const contextShown = new Set(
     plan.items.filter((item) => item.showContextBefore).map((item) => item.topicId)
   );
+  if (isStrictCourse(input.program)) {
+    const items = buildStrictItems(input, OPEN_CYCLE_LENGTH, used, contextShown, plan.items);
+    return { ...plan, items: [...plan.items, ...items] };
+  }
   const { items } = buildItems(
     input,
     blockCountsFor('open', input.sessionMix),

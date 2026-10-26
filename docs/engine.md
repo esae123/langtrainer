@@ -272,6 +272,48 @@ A perfect review resets `failedReviewsInARow` to 0. `finishSession` also returns
 outcomes (before/after snapshots and counts), which the summary screen turns into lines
 like "→ ready for review in 30 days".
 
+## Strict completion courses
+
+A course with `topicCompletionPolicy: 'all-exercises-correct'` (English Phrasal Verbs)
+completes a topic only when **every exercise was answered correctly** in a regular (or
+focus) session; practice answers never complete it.
+
+- **Completion** is judged on the topic's **current exercise ids**, not on counts: every
+  current id is in `seenExerciseIds` and none is in `wrongExerciseIds`; ids no longer in
+  the topic (renamed or removed in a content edit) are ignored on both lists. The runner
+  passes the ids as `applyAttempt(…, strictExerciseIds)`; completion sets
+  `allExercisesCompletedAt` plus the usual `review` / stage 1 / +7d. Once marked, a
+  topic stays complete until an exercise is added to it (`isStrictTopicComplete`).
+  Legacy rows (completed by the old 20-attempt rule, no marker) are replayed once.
+- **Never stuck**: a row whose current exercises are all answered correctly but that
+  lacks the marker (a stale wrong id used to block it) counts as complete for planning,
+  and the runner marks it complete when it loads the course (`reconcileStrictTopic`).
+  A current topic therefore always has something left to answer.
+- **Session composition** (finite lengths) — the session mix shares are **not used**;
+  the length is filled in this order:
+  1. the current topic's remaining exercises (unseen, then last answer wrong; usual
+     selection order), the first with the context screen;
+  2. due reviews of completed topics — earliest due first, `MIN_REVIEW_ATTEMPTS` (3)
+     items per due topic (skipped when fewer slots are left), at most 2 topics; block
+     `review`, so `finishSession`'s due-only SRS rule applies;
+  3. the next not-yet-completed topics in course order (unseen first), block `new`,
+     each with the context screen before its first item. The current topic stays the
+     first incomplete one: starting the next topic early never skips a topic;
+  4. once the course is finished, the least recently seen exercises of completed
+     topics (block `review`; no SRS move unless the topic was due).
+
+  `plannedLength` is the real item count (shorter only when the course runs out).
+  **Open-ended**: the first cycle is everything left in the current topic; each
+  `planNextCycle` then adds six by the same order (reviews already planned in the
+  session count towards the 3).
+- **Focus** on the current strict topic plans only what is left to answer, capped at the
+  session length; open length runs cycles of six. Focus on any other topic is as usual.
+- **Reset** (Settings → reset course progress, `resetProgramProgress`) deletes the
+  course's topic progress, custom topics, session rows and attempts — the attempts by the
+  course's session ids, by the saved in-progress session id, and by the course's topic /
+  phrase-set ids, so the answers of an unfinished session (written per answer, while its
+  session row is only written at the end) do not survive to skew the history order.
+
 ## Statistics (`stats.ts`)
 
 The Progress screen shows the **active course** only. Its rows are the course's
