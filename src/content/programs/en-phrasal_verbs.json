@@ -341,7 +341,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Invite a friend to visit your home unexpectedly whenever they are nearby.",
+              "prompt": "Tell a friend that they are welcome to visit you without arranging it, any time — start with \"Feel free\" (use a phrasal verb).",
               "explanation": "'Drop in' means to pay a short, unexpected visit to someone.",
               "tags": [
                 "coverage:drop-in"
@@ -374,7 +374,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Your classmate says: «She left university before finishing her degree.» Ask what made her leave school early.",
+              "prompt": "Your classmate says: «She left university before finishing her degree.» Ask what made her leave school early (use a phrasal verb).",
               "explanation": "'Drop out' means to stop attending school, college, or a course before graduating.",
               "tags": [
                 "coverage:drop-out"
@@ -405,7 +405,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell the children to stop wasting time playing foolishly and start studying.",
+              "prompt": "Tell the children to stop wasting time being silly and do their homework (use a phrasal verb).",
               "explanation": "'Fool around' means to waste time doing silly or unproductive things.",
               "tags": [
                 "coverage:fool-around"
@@ -427,7 +427,8 @@
               ],
               "acceptedAnswers": [
                 "Stop goofing around and do your homework.",
-                "Stop messing around and do your homework."
+                "Stop messing around and do your homework.",
+                "Stop fooling around and do your homework!"
               ]
             },
             {
@@ -535,7 +536,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "You need a moment to check something during a phone call. Ask the caller to wait briefly.",
+              "prompt": "You need a moment to check something during a phone call. Ask the caller to wait briefly (use a phrasal verb).",
               "explanation": "'Hang on' means to wait for a short time, especially during a conversation or phone call.",
               "tags": [
                 "coverage:hang-on"
@@ -568,7 +569,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Say that you and your friends usually spend time together at the local cafe.",
+              "prompt": "Say that you and your friends usually spend relaxed time together at the cafe (use a phrasal verb).",
               "explanation": "'Hang out' means to spend relaxing leisure time in a specific place or with friends.",
               "tags": [
                 "coverage:hang-out"
@@ -632,7 +633,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell your friend to move faster so you do not miss the bus.",
+              "prompt": "Tell your friend to move faster, or you will both miss the bus (use a phrasal verb).",
               "explanation": "'Hurry up' means to do something more quickly or move faster.",
               "tags": [
                 "coverage:hurry-up"
@@ -652,6 +653,11 @@
                 "out",
                 "down",
                 "off"
+              ],
+              "acceptedAnswers": [
+                "Hurry up or we'll miss the bus.",
+                "Hurry up, or we will miss the bus.",
+                "Hurry up, or we'll miss the bus."
               ]
             },
             {
@@ -721,7 +727,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Describe spending your day off resting on the couch without doing chores.",
+              "prompt": "Say that you just want to rest and do nothing all day (use a phrasal verb).",
               "explanation": "'Lie around' means to recline, rest, and do very little productive activity.",
               "tags": [
                 "coverage:lie-around"
@@ -741,6 +747,9 @@
                 "out",
                 "up",
                 "off"
+              ],
+              "acceptedAnswers": [
+                "I just want to lie around all day long."
               ]
             },
             {
@@ -751,7 +760,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Your coworker is wasting time at their desk. Ask them why they are wasting time instead of working.",
+              "prompt": "Your coworker is wasting time at their desk. Ask them why they are wasting time instead of working (use a phrasal verb).",
               "explanation": "'Mess around' means to spend time doing silly or unproductive things.",
               "tags": [
                 "coverage:mess-around"
@@ -845,7 +854,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Report that Maria remained away from home until midnight on Saturday.",
+              "prompt": "Report that Maria remained away from home until midnight on Saturday (use a phrasal verb).",
               "explanation": "'Stay out' means to remain away from home during the evening or night.",
               "tags": [
                 "coverage:stay-out"
@@ -935,7 +944,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Form a sentence saying that the children always misbehave in class.",
+              "prompt": "Form a sentence saying that the children always misbehave in class (use a phrasal verb).",
               "explanation": "'Act up' means to misbehave or cause trouble, especially when referring to children.",
               "tags": [
                 "coverage:act-up"
@@ -996,7 +1005,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Your colleague says: «I could barely keep my eyes open during the presentation.» Ask whether they briefly fell asleep.",
+              "prompt": "Your colleague says: «I could barely keep my eyes open during the presentation.» Ask whether they briefly fell asleep (use a phrasal verb).",
               "explanation": "'Doze off' means to fall into a light sleep unintentionally.",
               "tags": [
                 "coverage:doze-off"
@@ -1029,7 +1038,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell your friend that they can visit unexpectedly at any time.",
+              "prompt": "Tell your friend that they can visit unexpectedly at any time (use a phrasal verb).",
               "explanation": "'Drop in' means to pay a short, unannounced visit to someone.",
               "tags": [
                 "coverage:drop-in"
@@ -1051,6 +1060,8 @@
               ],
               "acceptedAnswers": [
                 "You can drop in any time.",
+                "You can drop in anytime.",
+                "You can drop in whenever you like.",
                 "Please drop in any time.",
                 "Feel free to drop in any time."
               ]
@@ -1126,7 +1137,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell someone that you usually rise from bed at seven o'clock.",
+              "prompt": "Tell someone that you usually rise from bed at seven o'clock (use a phrasal verb).",
               "explanation": "'Get up' refers to physically getting out of bed, as opposed to 'wake up' which means stopping sleep.",
               "tags": [
                 "coverage:get-up"
@@ -1155,7 +1166,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell your teacher that you and your friends wasted time playing instead of studying.",
+              "prompt": "Tell your teacher that you and your friends wasted time playing instead of studying (use a phrasal verb).",
               "explanation": "'Goof around' is informal and means to waste time doing silly or lighthearted things. 'Fool around' and 'mess around' can be used in the same sense.",
               "tags": [
                 "coverage:goof-around"
@@ -1222,7 +1233,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell someone on the phone to wait for a moment.",
+              "prompt": "Tell someone on the phone to wait for a moment (use a phrasal verb).",
               "explanation": "'Hang on' is an informal way to ask someone to wait briefly.",
               "tags": [
                 "coverage:hang-on"
@@ -1284,7 +1295,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Your friend says: «He ended our phone call during the argument.» Ask why he ended the call.",
+              "prompt": "Your friend says: «He ended our phone call during the argument.» Ask why he ended the call (use a phrasal verb).",
               "explanation": "'Hang up' means to end a telephone conversation.",
               "tags": [
                 "coverage:hang-up"
@@ -1315,7 +1326,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell your group that they need to move faster or they will be late.",
+              "prompt": "Tell your group that we must move faster or we will be late (use a phrasal verb).",
               "explanation": "'Hurry up' means to act or move more quickly.",
               "tags": [
                 "coverage:hurry-up"
@@ -1336,6 +1347,12 @@
                 "down",
                 "out",
                 "hurrying"
+              ],
+              "acceptedAnswers": [
+                "We must hurry up or we'll be late.",
+                "We have to hurry up or we will be late.",
+                "We have to hurry up or we'll be late.",
+                "We need to hurry up or we will be late."
               ]
             },
             {
@@ -1412,7 +1429,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Say that you spent Sunday doing nothing productive on the sofa.",
+              "prompt": "Say that you just wanted to rest and do nothing all Sunday (use a phrasal verb).",
               "explanation": "'Lie around' means to spend time reclining lazily without doing anything active.",
               "tags": [
                 "coverage:lie-around"
@@ -1432,6 +1449,9 @@
                 "out",
                 "down",
                 "lying"
+              ],
+              "acceptedAnswers": [
+                "I just wanted to lie around all day on Sunday."
               ]
             },
             {
@@ -1442,7 +1462,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Your friends say they were in the kitchen. Ask why they were wasting time instead of cooking.",
+              "prompt": "Your friends say they were in the kitchen. Ask why they were wasting time instead of cooking (use a phrasal verb).",
               "explanation": "'Mess around' means to waste time playing or doing unimportant things.",
               "tags": [
                 "coverage:mess-around"
@@ -1474,7 +1494,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell your sister not to disorganize your clean bedroom.",
+              "prompt": "Politely ask your sister not to make your room untidy (use a phrasal verb).",
               "explanation": "'Mess up' means to make a place dirty or untidy, or to ruin a plan.",
               "tags": [
                 "coverage:mess-up"
@@ -1493,6 +1513,14 @@
                 "out",
                 "around",
                 "messed"
+              ],
+              "acceptedAnswers": [
+                "Please don't mess up my room.",
+                "Please do not mess my room up.",
+                "Please don't mess my room up.",
+                "Don't mess up my room.",
+                "Do not mess up my room.",
+                "Don't mess my room up."
               ]
             },
             {
@@ -1535,7 +1563,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Give a rule for teenagers about what time they should return home on school nights.",
+              "prompt": "State the rule that teenagers should not remain away from home until late (use a phrasal verb).",
               "explanation": "'Stay out' means to remain away from home instead of returning inside.",
               "tags": [
                 "coverage:stay-out"
@@ -1566,7 +1594,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Your friend says: «I worked until 3:00 AM to finish my report.» Ask why she was awake so late.",
+              "prompt": "Your friend says: «I worked until 3:00 AM to finish my report.» Ask her why she was awake so late (use a phrasal verb).",
               "explanation": "'Stay up' means to go to bed later than usual. Form the past question with 'Why did you stay up...?'",
               "tags": [
                 "coverage:stay-up"
@@ -1841,7 +1869,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State where you spent your childhood years.",
+              "prompt": "Say that you spent your childhood in a small mountain village (use a phrasal verb).",
               "explanation": "'Grow up' means to develop and mature from childhood into adulthood.",
               "tags": [
                 "coverage:grow-up"
@@ -1961,7 +1989,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "A guest arrives with wet footwear. Ask them politely to remove their boots.",
+              "prompt": "A guest arrives with wet footwear. Ask them politely to remove their boots (use a phrasal verb).",
               "explanation": "'Take off' means to remove an item of clothing or shoes from the body.",
               "tags": [
                 "coverage:take-off"
@@ -1982,7 +2010,11 @@
                 "away"
               ],
               "acceptedAnswers": [
-                "Can you take off your boots?"
+                "Can you take off your boots?",
+                "Could you take your boots off?",
+                "Can you take your boots off?",
+                "Could you please take off your boots?",
+                "Could you take off your boots, please?"
               ]
             },
             {
@@ -1993,7 +2025,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell the shop assistant that you want to check if the coat fits you.",
+              "prompt": "Tell the shop assistant that you want to check if the coat fits you (use a phrasal verb).",
               "explanation": "'Try on' means to put on clothing to see if it fits and looks good before purchasing.",
               "tags": [
                 "coverage:try-on"
@@ -2015,7 +2047,9 @@
                 "away"
               ],
               "acceptedAnswers": [
-                "I'd like to try on this coat."
+                "I'd like to try on this coat.",
+                "I would like to try this coat on.",
+                "I'd like to try this coat on."
               ]
             },
             {
@@ -2052,7 +2086,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Advise the runners to perform light physical exercises before running the marathon.",
+              "prompt": "Say that runners ought to do some light exercise before the race (use a phrasal verb).",
               "explanation": "'Warm up' means to do gentle physical exercises to prepare muscles for strenuous activity.",
               "tags": [
                 "coverage:warm-up"
@@ -2174,7 +2208,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Explain that eating spoiled seafood caused someone to vomit all night.",
+              "prompt": "Say that the bad seafood caused him to vomit (use a phrasal verb).",
               "explanation": "'Throw up' is an informal phrasal verb meaning to vomit.",
               "tags": [
                 "coverage:throw-up"
@@ -2194,6 +2228,9 @@
                 "down",
                 "away",
                 "off"
+              ],
+              "acceptedAnswers": [
+                "The bad seafood made him throw up."
               ]
             },
             {
@@ -2204,7 +2241,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that party guests will wear costumes as fictional characters tonight.",
+              "prompt": "Say that we decided to wear pirate costumes tonight (use a phrasal verb).",
               "explanation": "'Dress up as' means to wear a costume representing a particular character or person.",
               "tags": [
                 "coverage:dress-up"
@@ -2226,7 +2263,8 @@
                 "off"
               ],
               "acceptedAnswers": [
-                "We decided to dress up like pirates tonight."
+                "We decided to dress up like pirates tonight.",
+                "We've decided to dress up as pirates tonight."
               ]
             },
             {
@@ -2326,7 +2364,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that everyone ate too much pizza and snacks during the party.",
+              "prompt": "Say that the kids ate loads of snacks after school (use a phrasal verb).",
               "explanation": "'Pig out on' is an informal expression meaning to consume large quantities of food.",
               "tags": [
                 "coverage:pig-out"
@@ -2346,6 +2384,10 @@
                 "away",
                 "off",
                 "down"
+              ],
+              "acceptedAnswers": [
+                "The kids pigged out on snacks after school!",
+                "After school, the kids pigged out on snacks."
               ]
             },
             {
@@ -2503,7 +2545,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that several students caught the seasonal flu this week.",
+              "prompt": "Say that many students caught the flu yesterday (use a phrasal verb).",
               "explanation": "'Come down with' is used when someone begins to suffer from an illness.",
               "tags": [
                 "coverage:come-down-with"
@@ -2523,6 +2565,10 @@
                 "up",
                 "off",
                 "away"
+              ],
+              "acceptedAnswers": [
+                "Many students came down with flu yesterday.",
+                "Yesterday many students came down with the flu."
               ]
             },
             {
@@ -2533,7 +2579,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "A friend mentions that their beloved pet died last year. Inquire politely when it happened.",
+              "prompt": "A friend mentions that their beloved pet died last year. Politely ask your friend when he (the pet) died (use a phrasal verb).",
               "explanation": "'Pass away' is a polite way to speak about death.",
               "tags": [
                 "coverage:pass-away"
@@ -2600,7 +2646,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that the rough boat ride made one passenger vomit.",
+              "prompt": "State that the rough boat ride made one passenger vomit (use a phrasal verb).",
               "explanation": "'Throw up' is an informal phrasal verb meaning to vomit.",
               "tags": [
                 "coverage:throw-up"
@@ -2622,6 +2668,7 @@
                 "out"
               ],
               "acceptedAnswers": [
+                "The rough boat ride made one passenger throw up.",
                 "One passenger threw up during the rough boat ride."
               ]
             }
@@ -3009,7 +3056,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "You missed a phone call from a coworker. Ask when you should return their call.",
+              "prompt": "You missed a phone call from a coworker. Ask them when you should return their call (use a phrasal verb).",
               "explanation": "'Call back' means to return a telephone call to someone who contacted you earlier.",
               "tags": [
                 "coverage:call-back"
@@ -3102,7 +3149,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Advise the driver to put petrol in the fuel tank before the long highway drive.",
+              "prompt": "Tell your fellow traveller that we must put petrol in the tank until it is full before leaving (use a phrasal verb).",
               "explanation": "'Fill up' means to fill a container or tank completely.",
               "tags": [
                 "coverage:fill-up"
@@ -3124,6 +3171,9 @@
                 "out"
               ],
               "acceptedAnswers": [
+                "We must fill the tank up before leaving.",
+                "We must fill up the tank before we leave.",
+                "We have to fill up the tank before leaving.",
                 "We should fill up the tank before leaving."
               ]
             },
@@ -3167,7 +3217,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that the auditor highlighted several accounting errors in the financial report.",
+              "prompt": "Say that the auditor drew attention to several errors in the report (use a phrasal verb).",
               "explanation": "'Point out' means to draw attention to important facts, details, or errors.",
               "tags": [
                 "coverage:point-out"
@@ -3351,7 +3401,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that your friend persuaded you to run the marathon together.",
+              "prompt": "Say that your friend persuaded you to join the marathon (use a phrasal verb).",
               "explanation": "'Talk into' means to convince or persuade someone to do something.",
               "tags": [
                 "coverage:talk-into"
@@ -3373,7 +3423,8 @@
                 "down"
               ],
               "acceptedAnswers": [
-                "My friend talked me into running the marathon."
+                "My friend talked me into running the marathon.",
+                "My friend talked me into doing the marathon."
               ]
             },
             {
@@ -3475,7 +3526,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that you finally understood how to solve the problem.",
+              "prompt": "Say that you finally understood how to solve it (use a phrasal verb).",
               "explanation": "'Figure out' means to discover, solve, or understand something by thinking about it.",
               "tags": [
                 "coverage:figure-out"
@@ -3495,6 +3546,10 @@
                 "in",
                 "off",
                 "away"
+              ],
+              "acceptedAnswers": [
+                "I finally figured out how to solve the problem.",
+                "I finally figured it out."
               ]
             },
             {
@@ -3537,7 +3592,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that the compliance team will investigate customer complaints immediately.",
+              "prompt": "Say that our team will investigate the matter promptly (use a phrasal verb).",
               "explanation": "'Look into' means to examine, research, or investigate an issue or allegation.",
               "tags": [
                 "coverage:look-into"
@@ -3559,6 +3614,8 @@
                 "off"
               ],
               "acceptedAnswers": [
+                "Our team'll look into the matter promptly.",
+                "Our team will promptly look into the matter.",
                 "Our team will look into the complaint promptly."
               ]
             },
@@ -3596,7 +3653,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Your colleague attended a complex executive presentation. Ask for their opinion on it.",
+              "prompt": "Your colleague attended a complex executive presentation. Ask for their opinion on it (use a phrasal verb).",
               "explanation": "'What do you make of...' is used to ask for someone's opinion or interpretation of something.",
               "tags": [
                 "coverage:make-of"
@@ -3661,7 +3718,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Explain that the librarian found the rare reference volume after a long search.",
+              "prompt": "Say that the librarian searched for and finally found the rare manuscript (use a phrasal verb).",
               "explanation": "'Track down' means to find or locate something after thorough, diligent searching.",
               "tags": [
                 "coverage:track-down"
@@ -3680,6 +3737,10 @@
                 "out",
                 "off",
                 "away"
+              ],
+              "acceptedAnswers": [
+                "The librarian tracked the rare manuscript down.",
+                "The librarian finally tracked down the rare manuscript."
               ]
             },
             {
@@ -3690,7 +3751,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that she accidentally revealed the surprise party secret in front of everyone.",
+              "prompt": "Say that she suddenly let the secret slip out of her mouth before thinking (use a phrasal verb).",
               "explanation": "'Blurt out' means to reveal confidential or embarrassing information impulsively.",
               "tags": [
                 "coverage:blurt-out"
@@ -3711,7 +3772,9 @@
                 "away"
               ],
               "acceptedAnswers": [
-                "She blurted out the secret before thinking about it."
+                "She blurted the secret out before thinking.",
+                "She blurted out the secret before thinking about it.",
+                "She blurted out the secret without thinking."
               ]
             },
             {
@@ -3748,7 +3811,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that your parents raised you in a quiet countryside town.",
+              "prompt": "Say that your parents raised you in the countryside (use a phrasal verb).",
               "explanation": "'Bring up' means to raise and care for a child until they are an adult.",
               "tags": [
                 "coverage:bring-up"
@@ -3768,6 +3831,9 @@
                 "down",
                 "off",
                 "out"
+              ],
+              "acceptedAnswers": [
+                "My parents brought me up in the country."
               ]
             },
             {
@@ -3836,7 +3902,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that celebrating is appropriate because your team won the contract.",
+              "prompt": "Say that winning this major contract deserves a celebration (use a phrasal verb).",
               "explanation": "'Call for' means that a situation makes something appropriate, like a celebration.",
               "tags": [
                 "coverage:call-for"
@@ -3856,6 +3922,10 @@
                 "out",
                 "off",
                 "up"
+              ],
+              "acceptedAnswers": [
+                "Winning this major contract calls for celebration.",
+                "Winning this big contract calls for a celebration."
               ]
             },
             {
@@ -3866,7 +3936,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Offer to update your colleague on what happened during the morning conference.",
+              "prompt": "Promise your colleague that you will update them on what happened at the meeting (use a phrasal verb).",
               "explanation": "'Fill in' means to provide someone with missing information or news about a situation.",
               "tags": [
                 "coverage:fill-in"
@@ -3888,7 +3958,9 @@
                 "back"
               ],
               "acceptedAnswers": [
-                "I'll fill you in on the meeting."
+                "I'll fill you in on the meeting.",
+                "I'll fill you in about the meeting.",
+                "I will fill you in about the meeting."
               ]
             },
             {
@@ -3989,7 +4061,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell someone to stop the noisy generator immediately.",
+              "prompt": "Politely tell someone to stop the noisy generator right now (use a phrasal verb).",
               "explanation": "'Shut off' means to stop an engine or electrical device from operating.",
               "tags": [
                 "coverage:shut-off"
@@ -4011,6 +4083,9 @@
                 "up"
               ],
               "acceptedAnswers": [
+                "Shut off the noisy generator right now.",
+                "Please shut the noisy generator off right now.",
+                "Shut the noisy generator off right now.",
                 "Please turn off the noisy generator right now.",
                 "Please switch off the noisy generator right now."
               ]
@@ -4055,7 +4130,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State firmly that you will not tolerate dishonest behavior in your team.",
+              "prompt": "Say firmly that you will not tolerate dishonesty in this office (use a phrasal verb).",
               "explanation": "'Stand for' in negative sentences means to tolerate, endure, or accept bad behavior.",
               "tags": [
                 "coverage:stand-for"
@@ -4076,6 +4151,10 @@
                 "up",
                 "out",
                 "off"
+              ],
+              "acceptedAnswers": [
+                "I won't stand for dishonesty in this office.",
+                "I will not stand for dishonesty in this office!"
               ]
             },
             {
@@ -4086,7 +4165,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Describe what all attendees do when the magistrate enters the courtroom.",
+              "prompt": "State the rule that everyone must rise to their feet when the judge enters (use a phrasal verb).",
               "explanation": "'Stand up' means to rise from a seated position to one's feet.",
               "tags": [
                 "coverage:stand-up"
@@ -4108,7 +4187,9 @@
                 "out"
               ],
               "acceptedAnswers": [
-                "Everyone must get up when the judge enters."
+                "Everyone must get up when the judge enters.",
+                "Everyone has to stand up when the judge enters.",
+                "Everybody must stand up when the judge enters."
               ]
             },
             {
@@ -4177,7 +4258,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Explain that you convinced your friend not to sell his vintage bicycle.",
+              "prompt": "Say that you persuaded your friend not to sell his bicycle (refer to your friend as 'him'; use a phrasal verb).",
               "explanation": "'Talk out of' means to dissuade someone from doing something unwise.",
               "tags": [
                 "coverage:talk-out-of"
@@ -4268,7 +4349,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell your teammate that Maya solved the puzzle after checking every clue.",
+              "prompt": "Tell your teammate that Maya solved the puzzle after checking every clue (use a phrasal verb).",
               "explanation": "'Figure out' means to solve or understand something by thinking about it.",
               "tags": [
                 "coverage:figure-out"
@@ -4302,7 +4383,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "A colleague knows the results of the quarterly audit. Ask them how they learned the information.",
+              "prompt": "A colleague knows the results of the quarterly audit. Ask them how they learned the information (use a phrasal verb).",
               "explanation": "'Find out' means to discover or obtain knowledge about something.",
               "tags": [
                 "coverage:find-out"
@@ -4366,7 +4447,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that the hikers rushed towards shelter when the sudden storm began.",
+              "prompt": "Say that the hikers immediately hurried towards the wooden cabin (use a phrasal verb).",
               "explanation": "'Make for' can mean to move quickly in the direction of a place.",
               "tags": [
                 "coverage:make-for"
@@ -4386,6 +4467,9 @@
                 "out",
                 "off",
                 "away"
+              ],
+              "acceptedAnswers": [
+                "The hikers immediately made for the wooden cabin."
               ]
             },
             {
@@ -4454,7 +4538,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that a detective located the retired pilot after searching for weeks.",
+              "prompt": "Say that the detective found the pilot after weeks of searching (use a phrasal verb).",
               "explanation": "'Track down' means to find someone or something after a persistent search.",
               "tags": [
                 "coverage:track-down"
@@ -4807,7 +4891,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that an old pair of leather shoes is disintegrating from wear.",
+              "prompt": "Say that these old leather boots are coming to pieces (use a phrasal verb).",
               "explanation": "'Fall apart' means to break into pieces due to age, wear, or damage.",
               "tags": [
                 "coverage:fall-apart"
@@ -4961,7 +5045,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Describe an old fence collapsing to the ground during strong winds.",
+              "prompt": "Say that the wooden fence toppled to the ground during the storm (use a phrasal verb).",
               "explanation": "'Fall over' means to topple from an upright position onto the ground.",
               "tags": [
                 "coverage:fall-over"
@@ -5023,7 +5107,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that hard work and perseverance help an employee make career progress.",
+              "prompt": "Say that dedicated workers usually make progress and succeed in their careers (use a phrasal verb).",
               "explanation": "'Get ahead' means to achieve success or make tangible progress in one's career or life.",
               "tags": [
                 "coverage:get-ahead"
@@ -5085,7 +5169,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Explain that you finally found the time to file your annual tax returns.",
+              "prompt": "Say that you finally found the time to file your taxes (use a phrasal verb).",
               "explanation": "'Get around to' means to finally do something after delaying or putting it off.",
               "tags": [
                 "coverage:get-around-to"
@@ -5173,7 +5257,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that travelers returned home late last night after their trip.",
+              "prompt": "Say that the travelers returned home late last night (use a phrasal verb).",
               "explanation": "'Get back' means to return to one's home or origin after a journey.",
               "tags": [
                 "coverage:get-back"
@@ -5195,7 +5279,8 @@
                 "off"
               ],
               "acceptedAnswers": [
-                "The travelers got back late last night."
+                "The travelers got back late last night.",
+                "The travellers got back home late last night."
               ]
             },
             {
@@ -5238,7 +5323,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "You need more time to verify contract terms. Ask if you can contact the client later.",
+              "prompt": "You need more time to verify contract terms. Ask the client if you can contact them later (use a phrasal verb).",
               "explanation": "'Get back to someone' means to contact them later with requested information.",
               "tags": [
                 "coverage:get-back-to"
@@ -5270,7 +5355,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that delays in delivery caused the production schedule to lag.",
+              "prompt": "Say that this month the construction project became delayed against its schedule (use a phrasal verb).",
               "explanation": "'Get behind' means to fail to maintain schedule or fall behind expected speed.",
               "tags": [
                 "coverage:get-behind"
@@ -5292,7 +5377,8 @@
                 "away"
               ],
               "acceptedAnswers": [
-                "The construction project fell behind schedule this month."
+                "The construction project fell behind schedule this month.",
+                "This month the construction project got behind schedule."
               ]
             },
             {
@@ -5451,7 +5537,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that you want to complete a dentist appointment quickly to end your dread.",
+              "prompt": "Say that you just want this dental visit you are dreading to be done and finished (use a phrasal verb).",
               "explanation": "'Get it over with' means to finish an unpleasant chore promptly to stop worrying about it.",
               "tags": [
                 "coverage:get-over-with"
@@ -5475,6 +5561,7 @@
                 "through"
               ],
               "acceptedAnswers": [
+                "I want to get this dental visit over with.",
                 "I want to get this appointment over with."
               ]
             },
@@ -5486,7 +5573,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that support from family helped someone survive an ordeal.",
+              "prompt": "Say that her supportive family helped her survive the crisis (use a phrasal verb).",
               "explanation": "'Get someone through' means to help sustain someone through hardship or grief.",
               "tags": [
                 "coverage:get-through"
@@ -5506,6 +5593,10 @@
                 "along",
                 "behind",
                 "away"
+              ],
+              "acceptedAnswers": [
+                "Her supportive family helped her get through the crisis.",
+                "Her supportive family got her through the crisis!"
               ]
             },
             {
@@ -5574,7 +5665,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that the campaign manager is depending on your vote in the election.",
+              "prompt": "Say that the candidate is relying on our support (use a phrasal verb).",
               "explanation": "'Count on' means to expect with confidence that someone will provide support.",
               "tags": [
                 "coverage:count-on"
@@ -5664,7 +5755,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Explain that missing three weeks of class caused the student to lag in coursework.",
+              "prompt": "Say that he lagged in his university studies (past simple; use a phrasal verb).",
               "explanation": "'Fall behind in' means to fail to keep up with the expected pace of study or work.",
               "tags": [
                 "coverage:fall-behind"
@@ -5685,7 +5776,9 @@
                 "away"
               ],
               "acceptedAnswers": [
-                "He got behind in his university studies."
+                "He got behind in his university studies.",
+                "He fell behind with his university studies.",
+                "He fell behind in his studies at university."
               ]
             },
             {
@@ -5696,7 +5789,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Describe how you felt deeply attracted to someone immediately upon meeting.",
+              "prompt": "Say that he became strongly attracted to her the moment they met (use a phrasal verb).",
               "explanation": "'Fall for' means to experience strong romantic attraction to someone.",
               "tags": [
                 "coverage:fall-for"
@@ -5718,7 +5811,8 @@
                 "up"
               ],
               "acceptedAnswers": [
-                "He fell for her when they first met."
+                "He fell for her when they first met.",
+                "He fell for her as soon as they met."
               ]
             },
             {
@@ -5872,7 +5966,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "A colleague mentions moving into a shared flat. Ask how they relate with their flatmates.",
+              "prompt": "A colleague mentions moving into a shared flat. Ask them how their relationship with their flatmates is (use a phrasal verb).",
               "explanation": "'Get along' refers to living or working harmoniously with someone.",
               "tags": [
                 "coverage:get-along"
@@ -5893,7 +5987,9 @@
               ],
               "acceptedAnswers": [
                 "How do you get along with them?",
-                "How do you get on with them?"
+                "How do you get on with them?",
+                "How do you get along with your flatmates?",
+                "How do you get on with your flatmates?"
               ]
             },
             {
@@ -5936,7 +6032,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "A speaker is making subtle criticisms. Inquire directly what point they are attempting to convey.",
+              "prompt": "A speaker is making subtle criticisms. Inquire directly what point they are attempting to convey (use a phrasal verb).",
               "explanation": "'What are you getting at?' asks someone to clarify their implied meaning.",
               "tags": [
                 "coverage:get-at"
@@ -6025,7 +6121,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that seeking revenge on former rivals will not resolve your issues.",
+              "prompt": "Say that trying to take revenge on rivals solves nothing (use a phrasal verb).",
               "explanation": "'Get back at' means to hurt or retaliate against someone in revenge.",
               "tags": [
                 "coverage:get-back-at"
@@ -6146,7 +6242,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Encourage a colleague not to let temporary setbacks make them feel depressed.",
+              "prompt": "Tell a colleague not to let these minor setbacks make them feel low (use a phrasal verb).",
               "explanation": "'Get someone down' means to cause someone to lose spirits or become discouraged.",
               "tags": [
                 "coverage:get-down"
@@ -6180,7 +6276,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that the thrill-seeking skier finds intense excitement in backcountry trails.",
+              "prompt": "Say that he really finds challenging ski slopes thrilling (present simple; informal; use a phrasal verb).",
               "explanation": "'Get off on' means to experience great pleasure or thrill from an activity.",
               "tags": [
                 "coverage:get-off-on"
@@ -6242,7 +6338,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Advise a friend to move past a disappointment and focus on future goals.",
+              "prompt": "Tell a friend that they need to recover from it and move forward (use a phrasal verb).",
               "explanation": "'Get over' means to accept a setback or heartache and proceed forward with life.",
               "tags": [
                 "coverage:get-over"
@@ -6265,7 +6361,8 @@
                 "off"
               ],
               "acceptedAnswers": [
-                "You have to get over it and move forward."
+                "You have to get over it and move forward.",
+                "You need to get over it and move on."
               ]
             },
             {
@@ -6334,7 +6431,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Explain that constant noise began to annoy Leo.",
+              "prompt": "Explain that constant noise began to annoy Leo (use a phrasal verb).",
               "explanation": "'Get to someone' means to annoy or upset them, often gradually.",
               "tags": [
                 "coverage:get-to"
@@ -6356,6 +6453,7 @@
               ],
               "acceptedAnswers": [
                 "The constant noise started to get to Leo.",
+                "The constant noise began to get to Leo.",
                 "The constant noise got to Leo."
               ]
             },
@@ -6367,7 +6465,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Say that the neighbors met socially for dinner on Saturday.",
+              "prompt": "Say that the neighbors met socially for dinner on Saturday (use a phrasal verb).",
               "explanation": "'Get together' means to meet and spend time socially with other people.",
               "tags": [
                 "coverage:get-together"
@@ -6712,7 +6810,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that it is wrong to treat people as inferior because of their background.",
+              "prompt": "Say that nobody should ever treat others as inferior (use a phrasal verb).",
               "explanation": "'Look down on' means to consider someone inferior or less worthy of respect.",
               "tags": [
                 "coverage:look-down-on"
@@ -6808,7 +6906,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that younger siblings deeply admire and respect their older sister.",
+              "prompt": "Say that the children always admire and respect their sister (use a phrasal verb).",
               "explanation": "'Look up to' means to admire and respect an older or more experienced person.",
               "tags": [
                 "coverage:look-up-to"
@@ -6928,7 +7026,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that you will not let aggressive managers intimidate or bully you.",
+              "prompt": "Tell a friend not to let anyone bully them or order them about (use a phrasal verb).",
               "explanation": "'Push around' means to bully someone or tell them what to do in an aggressive way.",
               "tags": [
                 "coverage:push-around"
@@ -6947,6 +7045,11 @@
                 "along",
                 "about",
                 "away"
+              ],
+              "acceptedAnswers": [
+                "Don't let anyone push you around.",
+                "Do not let anybody push you around.",
+                "Don't let anybody push you around."
               ]
             },
             {
@@ -6989,7 +7092,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that his bright yellow coat was very prominent in the crowd.",
+              "prompt": "Say that his bright yellow jacket was really easy to notice (use a phrasal verb).",
               "explanation": "'Stick out' means to be very prominent or noticeably different in appearance.",
               "tags": [
                 "coverage:stick-out"
@@ -7205,7 +7308,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that the young boy resembles his grandfather in personality and humor.",
+              "prompt": "Say that the young boy resembles his grandfather (use a phrasal verb).",
               "explanation": "'Take after' means to resemble an older relative in appearance or character.",
               "tags": [
                 "coverage:take-after"
@@ -7292,7 +7395,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Explain that kindly neighbors gave temporary shelter to the displaced family.",
+              "prompt": "Say that the kind family gave their homeless neighbors a place to live in their home (use a phrasal verb).",
               "explanation": "'Take in' means to provide lodging or refuge to someone in need.",
               "tags": [
                 "coverage:take-in"
@@ -7304,6 +7407,7 @@
                 "family",
                 "took",
                 "in",
+                "their",
                 "homeless",
                 "neighbors."
               ],
@@ -7311,6 +7415,11 @@
                 "out",
                 "off",
                 "back"
+              ],
+              "acceptedAnswers": [
+                "The kind family took their homeless neighbors in.",
+                "The kind family took in their homeless neighbours.",
+                "The kind family took their homeless neighbours in."
               ]
             },
             {
@@ -7411,7 +7520,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that you accepted your friend's generous offer to stay at his holiday home.",
+              "prompt": "Your friend offers to let you stay at his holiday home. Tell him that you will accept that offer (use a phrasal verb).",
               "explanation": "'Take someone up on an offer' means to accept a proposal or invitation.",
               "tags": [
                 "coverage:take-up-on"
@@ -7431,6 +7540,11 @@
                 "over",
                 "out",
                 "off"
+              ],
+              "acceptedAnswers": [
+                "I'll take you up on that offer.",
+                "I will take you up on your offer.",
+                "I'll take you up on your offer."
               ]
             },
             {
@@ -7441,7 +7555,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that you agree with your colleague's proposal for the project.",
+              "prompt": "Your colleague has made a proposal. Say that you will agree to her proposal (use a phrasal verb).",
               "explanation": "'Go along with' means to concur with or support an idea or proposal.",
               "tags": [
                 "coverage:go-along-with"
@@ -7460,6 +7574,9 @@
                 "away",
                 "off",
                 "up"
+              ],
+              "acceptedAnswers": [
+                "I'll go along with her proposal."
               ]
             },
             {
@@ -7554,7 +7671,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that business conditions are improving noticeably this quarter.",
+              "prompt": "Say that financial prospects are finally starting to improve (use a phrasal verb).",
               "explanation": "'Look up' means to show signs of improvement or positive development.",
               "tags": [
                 "coverage:look-up"
@@ -7574,6 +7691,9 @@
                 "down",
                 "over",
                 "away"
+              ],
+              "acceptedAnswers": [
+                "Financial prospects are finally beginning to look up."
               ]
             },
             {
@@ -7668,7 +7788,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that you will collect the parcel from the post office tomorrow.",
+              "prompt": "Say that you will collect the parcel tomorrow (use a phrasal verb).",
               "explanation": "'Pick up' means to collect an item from a designated collection point.",
               "tags": [
                 "coverage:pick-up"
@@ -7687,6 +7807,11 @@
                 "on",
                 "off",
                 "out"
+              ],
+              "acceptedAnswers": [
+                "I will pick the parcel up tomorrow.",
+                "I'll pick up the parcel tomorrow.",
+                "I'll pick the parcel up tomorrow."
               ]
             },
             {
@@ -7723,7 +7848,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "You need a friend to stay at your apartment until the courier arrives. Ask them to remain.",
+              "prompt": "You need your friend to stay at your apartment until the courier arrives. Ask them if they can stay for a while (use a phrasal verb).",
               "explanation": "'Stick around' means to remain in a place for a short time.",
               "tags": [
                 "coverage:stick-around"
@@ -7741,6 +7866,12 @@
                 "away",
                 "off",
                 "together"
+              ],
+              "acceptedAnswers": [
+                "Can you stick around for a while?",
+                "Could you stick around for a while?",
+                "Could you stick around awhile?",
+                "Can you stick around?"
               ]
             },
             {
@@ -7776,7 +7907,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Encourage someone to maintain their healthy diet even when dining out.",
+              "prompt": "Tell someone that they should keep following their dietary plan (use a phrasal verb).",
               "explanation": "'Stick to' means to adhere strictly to a routine, rule, or plan.",
               "tags": [
                 "coverage:stick-to"
@@ -7808,7 +7939,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Tell the team that staying united will guarantee success.",
+              "prompt": "Tell the team that we will succeed if we stay united (use a phrasal verb).",
               "explanation": "'Stick together' means to remain united as a group to support each other.",
               "tags": [
                 "coverage:stick-together"
@@ -7827,6 +7958,11 @@
                 "apart",
                 "around",
                 "away"
+              ],
+              "acceptedAnswers": [
+                "We'll succeed if we stick together.",
+                "If we stick together, we will succeed.",
+                "If we stick together, we'll succeed."
               ]
             },
             {
@@ -7869,7 +8005,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that you decided to remain loyal to your trusted mentor.",
+              "prompt": "Say that you decided to remain loyal to your mentor (use a phrasal verb).",
               "explanation": "'Stick with' means to remain loyal to a person, decision, or method.",
               "tags": [
                 "coverage:stick-with"
@@ -7898,7 +8034,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that you will not let the employer delay making you a firm job offer.",
+              "prompt": "Tell the employer to stop keeping you waiting with false promises and to decide now (use a phrasal verb).",
               "explanation": "'String someone along' means to keep them waiting with false promises.",
               "tags": [
                 "coverage:string-along"
@@ -7917,6 +8053,9 @@
                 "away",
                 "around",
                 "off"
+              ],
+              "acceptedAnswers": [
+                "Stop stringing me along and decide now!"
               ]
             },
             {
@@ -7979,7 +8118,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Explain that the engineer disassembled the malfunctioning engine for repairs.",
+              "prompt": "Say that the engineer dismantled the broken engine (use a phrasal verb).",
               "explanation": "'Take apart' means to dismantle an apparatus or machine into components.",
               "tags": [
                 "coverage:take-apart"
@@ -7998,6 +8137,9 @@
                 "together",
                 "over",
                 "away"
+              ],
+              "acceptedAnswers": [
+                "The engineer took apart the broken engine."
               ]
             },
             {
@@ -8072,8 +8214,8 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Your friend wants to treat their partner to an evening at a restaurant. Ask where they are going.",
-              "explanation": "'Take someone out' means to entertain someone at a venue and cover expenses.",
+              "prompt": "Your friend wants to treat his girlfriend to an evening at a restaurant. Ask him where he is inviting her to go (use a phrasal verb).",
+              "explanation": "'Take someone out' means to invite someone to a restaurant, cinema, etc., usually paying for them: 'Where are you taking her out to?'",
               "tags": [
                 "coverage:take-out"
               ],
@@ -8084,12 +8226,19 @@
                 "are",
                 "you",
                 "taking",
-                "her?"
+                "her",
+                "out",
+                "to?"
               ],
               "distractors": [
                 "over",
                 "in",
                 "after"
+              ],
+              "acceptedAnswers": [
+                "Where are you taking her out?",
+                "Where are you going to take her out?",
+                "Where are you going to take her out to?"
               ]
             },
             {
@@ -8100,7 +8249,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Remind your colleague not to vent bad mood onto the innocent team members.",
+              "prompt": "Tell your colleague not to vent their anger on colleagues (use a phrasal verb).",
               "explanation": "'Take something out on someone' means to treat innocent people poorly because of unrelated frustrations.",
               "tags": [
                 "coverage:take-out-on"
@@ -8120,6 +8269,11 @@
                 "over",
                 "in",
                 "up"
+              ],
+              "acceptedAnswers": [
+                "Don't take your anger out on colleagues.",
+                "Do not take out your anger on colleagues.",
+                "Don't take out your anger on colleagues."
               ]
             },
             {
@@ -8130,7 +8284,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "State that Nia assumed control of the project after her manager left.",
+              "prompt": "State that Nia assumed control of the project after her manager left (use a phrasal verb).",
               "explanation": "'Take over' means to take charge or control of something.",
               "tags": [
                 "coverage:take-over"
@@ -8164,7 +8318,7 @@
                 "tiles",
                 "typing"
               ],
-              "prompt": "Say that you accepted your friend’s offer of a coastal visit.",
+              "prompt": "Say that you accepted your friend’s offer of a coastal visit (use a phrasal verb).",
               "explanation": "'Take someone up on an offer' means to accept an offer or opportunity.",
               "tags": [
                 "coverage:take-up-on"

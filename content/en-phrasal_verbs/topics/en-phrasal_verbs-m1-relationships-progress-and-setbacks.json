@@ -261,37 +261,22 @@
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Count on' means to rely on or depend on someone for help or support.",
       "direction": "toTarget",
       "sentence": "You can always **rely on** your true friends during difficult times.",
       "word": "rely on",
       "answer": "count on",
-      "options": [
-        "count on",
-        "count up",
-        "get along",
-        "fall for"
-      ],
-      "tags": [
-        "coverage:count-on"
-      ]
+      "options": ["count on", "count up", "get along", "fall for"],
+      "tags": ["coverage:count-on"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-02",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about calculating the final election results.",
       "explanation": "'Count up' means to calculate the total number of items or votes.",
       "template": "Officials will ___ ___ all the ballots before announcing the winner.",
@@ -303,45 +288,20 @@
           "answer": "up"
         }
       ],
-      "wordBank": [
-        "count",
-        "up",
-        "fall",
-        "apart",
-        "get"
-      ],
-      "tags": [
-        "coverage:count-up"
-      ]
+      "wordBank": ["count", "up", "fall", "apart", "get"],
+      "tags": ["coverage:count-up"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-03",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that an old pair of leather shoes is disintegrating from wear.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that these old leather boots are coming to pieces (use a phrasal verb).",
       "explanation": "'Fall apart' means to break into pieces due to age, wear, or damage.",
-      "answer": [
-        "These",
-        "old",
-        "leather",
-        "boots",
-        "are",
-        "falling",
-        "apart."
-      ],
-      "distractors": [
-        "behind",
-        "away",
-        "off"
-      ],
-      "tags": [
-        "coverage:fall-apart"
-      ]
+      "answer": ["These", "old", "leather", "boots", "are", "falling", "apart."],
+      "distractors": ["behind", "away", "off"],
+      "tags": ["coverage:fall-apart"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-04",
@@ -369,36 +329,22 @@
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Fall for' means to be deceived or tricked by a story, lie, or scam.",
       "direction": "toTarget",
       "sentence": "I cannot believe you could **be deceived by** such an obvious scam.",
       "word": "be deceived by",
       "answer": "fall for",
-      "options": [
-        "fall for",
-        "fall out",
-        "fall off",
-        "count on"
-      ],
-      "tags": [
-        "coverage:fall-for"
-      ]
+      "options": ["fall for", "fall out", "fall off", "count on"],
+      "tags": ["coverage:fall-for"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-06",
       "type": "find_error",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters"
-      ],
+      "allowedModes": ["tiles", "letters"],
       "prompt": "Find the error in the sentence about declining customer numbers.",
       "explanation": "'Fall off' means to decrease in quality, quantity, or degree. The particle is 'off', not 'away'.",
       "sentence": [
@@ -413,25 +359,15 @@
       ],
       "wrongIndex": 5,
       "correction": "off",
-      "options": [
-        "off",
-        "out",
-        "down"
-      ],
-      "tags": [
-        "coverage:fall-off"
-      ]
+      "options": ["off", "out", "down"],
+      "tags": ["coverage:fall-off"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-07",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about two business partners quarreling.",
       "explanation": "'Fall out over' means to quarrel or have a serious dispute with someone about a matter.",
       "template": "The two co-founders started to ___ ___ over company shares.",
@@ -443,57 +379,27 @@
           "answer": "out"
         }
       ],
-      "wordBank": [
-        "fall",
-        "out",
-        "get",
-        "along",
-        "ahead"
-      ],
-      "tags": [
-        "coverage:fall-out"
-      ]
+      "wordBank": ["fall", "out", "get", "along", "ahead"],
+      "tags": ["coverage:fall-out"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-08",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Describe an old fence collapsing to the ground during strong winds.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the wooden fence toppled to the ground during the storm (use a phrasal verb).",
       "explanation": "'Fall over' means to topple from an upright position onto the ground.",
-      "answer": [
-        "The",
-        "wooden",
-        "fence",
-        "fell",
-        "over",
-        "during",
-        "the",
-        "storm."
-      ],
-      "distractors": [
-        "off",
-        "out",
-        "through"
-      ],
-      "tags": [
-        "coverage:fall-over"
-      ]
+      "answer": ["The", "wooden", "fence", "fell", "over", "during", "the", "storm."],
+      "distractors": ["off", "out", "through"],
+      "tags": ["coverage:fall-over"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-09",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about a property sale failing to complete.",
       "explanation": "'Fall through' means to fail or be cancelled, especially for a deal or plan.",
       "template": "The house sale will ___ ___ if the buyers cannot secure financing.",
@@ -505,57 +411,27 @@
           "answer": "through"
         }
       ],
-      "wordBank": [
-        "fall",
-        "through",
-        "get",
-        "by",
-        "over"
-      ],
-      "tags": [
-        "coverage:fall-through"
-      ]
+      "wordBank": ["fall", "through", "get", "by", "over"],
+      "tags": ["coverage:fall-through"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-10",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that hard work and perseverance help an employee make career progress.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that dedicated workers usually make progress and succeed in their careers (use a phrasal verb).",
       "explanation": "'Get ahead' means to achieve success or make tangible progress in one's career or life.",
-      "answer": [
-        "Dedicated",
-        "workers",
-        "usually",
-        "get",
-        "ahead",
-        "in",
-        "their",
-        "careers."
-      ],
-      "distractors": [
-        "along",
-        "behind",
-        "away"
-      ],
-      "tags": [
-        "coverage:get-ahead"
-      ]
+      "answer": ["Dedicated", "workers", "usually", "get", "ahead", "in", "their", "careers."],
+      "distractors": ["along", "behind", "away"],
+      "tags": ["coverage:get-ahead"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-11",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about having a harmonious relationship with colleagues.",
       "explanation": "'Get along with' means to have a friendly, harmonious relationship with people.",
       "template": "It is important to ___ ___ with your coworkers in an open office.",
@@ -567,83 +443,42 @@
           "answer": "along"
         }
       ],
-      "wordBank": [
-        "get",
-        "along",
-        "fall",
-        "out",
-        "behind"
-      ],
-      "tags": [
-        "coverage:get-along"
-      ]
+      "wordBank": ["get", "along", "fall", "out", "behind"],
+      "tags": ["coverage:get-along"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-12",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Explain that you finally found the time to file your annual tax returns.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you finally found the time to file your taxes (use a phrasal verb).",
       "explanation": "'Get around to' means to finally do something after delaying or putting it off.",
-      "answer": [
-        "I",
-        "finally",
-        "got",
-        "around",
-        "to",
-        "filing",
-        "my",
-        "taxes."
-      ],
-      "distractors": [
-        "away",
-        "ahead",
-        "over"
-      ],
-      "tags": [
-        "coverage:get-around-to"
-      ]
+      "answer": ["I", "finally", "got", "around", "to", "filing", "my", "taxes."],
+      "distractors": ["away", "ahead", "over"],
+      "tags": ["coverage:get-around-to"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-13",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Get at' means to imply or suggest something indirectly.",
       "direction": "toTarget",
       "sentence": "I do not understand what you are trying to **imply indirectly**.",
       "word": "imply indirectly",
       "answer": "get at",
-      "options": [
-        "get at",
-        "get by",
-        "get to",
-        "get down"
-      ],
-      "tags": [
-        "coverage:get-at"
-      ]
+      "options": ["get at", "get by", "get to", "get down"],
+      "tags": ["coverage:get-at"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-14",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about taking a short holiday to relax.",
       "explanation": "'Get away' means to take a break or go on vacation to rest.",
       "template": "After exhausting work deadlines, we need to ___ ___ for the weekend.",
@@ -655,60 +490,31 @@
           "answer": "away"
         }
       ],
-      "wordBank": [
-        "get",
-        "away",
-        "fall",
-        "behind",
-        "ahead"
-      ],
-      "tags": [
-        "coverage:get-away"
-      ]
+      "wordBank": ["get", "away", "fall", "behind", "ahead"],
+      "tags": ["coverage:get-away"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-15",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that travelers returned home late last night after their trip.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the travelers returned home late last night (use a phrasal verb).",
       "explanation": "'Get back' means to return to one's home or origin after a journey.",
-      "answer": [
-        "The",
-        "travelers",
-        "got",
-        "back",
-        "home",
-        "late",
-        "last",
-        "night."
-      ],
-      "distractors": [
-        "ahead",
-        "down",
-        "off"
-      ],
+      "answer": ["The", "travelers", "got", "back", "home", "late", "last", "night."],
+      "distractors": ["ahead", "down", "off"],
       "acceptedAnswers": [
-        "The travelers got back late last night."
+        "The travelers got back late last night.",
+        "The travellers got back home late last night."
       ],
-      "tags": [
-        "coverage:get-back"
-      ]
+      "tags": ["coverage:get-back"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-16",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about seeking revenge against an adversary.",
       "explanation": "'Get back at' means to take revenge on someone for a perceived wrong.",
       "template": "He played a prank to ___ ___ at his teasing roommate.",
@@ -720,48 +526,22 @@
           "answer": "back"
         }
       ],
-      "wordBank": [
-        "get",
-        "back",
-        "fall",
-        "off",
-        "ahead"
-      ],
-      "tags": [
-        "coverage:get-back-at"
-      ]
+      "wordBank": ["get", "back", "fall", "off", "ahead"],
+      "tags": ["coverage:get-back-at"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-17",
       "type": "question_for_answer",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "You need more time to verify contract terms. Ask if you can contact the client later.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You need more time to verify contract terms. Ask the client if you can contact them later (use a phrasal verb).",
       "explanation": "'Get back to someone' means to contact them later with requested information.",
       "givenAnswer": "Sure, send me an email whenever you are ready.",
-      "answer": [
-        "Can",
-        "I",
-        "get",
-        "back",
-        "to",
-        "you?"
-      ],
-      "distractors": [
-        "ahead",
-        "down",
-        "off"
-      ],
-      "acceptedAnswers": [
-        "Could I get back to you?"
-      ],
-      "tags": [
-        "coverage:get-back-to"
-      ]
+      "answer": ["Can", "I", "get", "back", "to", "you?"],
+      "distractors": ["ahead", "down", "off"],
+      "acceptedAnswers": ["Could I get back to you?"],
+      "tags": ["coverage:get-back-to"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-18",
@@ -769,23 +549,22 @@
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "State that delays in delivery caused the production schedule to lag.",
+      "prompt": "Say that this month the construction project became delayed against its schedule (use a phrasal verb).",
       "explanation": "'Get behind' means to fail to maintain schedule or fall behind expected speed.",
       "answer": ["The", "construction", "project", "got", "behind", "schedule", "this", "month."],
       "distractors": ["ahead", "off", "away"],
       "tags": ["coverage:get-behind"],
-      "acceptedAnswers": ["The construction project fell behind schedule this month."]
+      "acceptedAnswers": [
+        "The construction project fell behind schedule this month.",
+        "This month the construction project got behind schedule."
+      ]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-19",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about managing to survive on modest earnings.",
       "explanation": "'Get by on' means to manage with just enough money or resources to survive.",
       "template": "Students often have to ___ ___ on a very tight monthly budget.",
@@ -797,79 +576,45 @@
           "answer": "by"
         }
       ],
-      "wordBank": [
-        "get",
-        "by",
-        "fall",
-        "over",
-        "along"
-      ],
-      "tags": [
-        "coverage:get-by"
-      ]
+      "wordBank": ["get", "by", "fall", "over", "along"],
+      "tags": ["coverage:get-by"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-20",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded word.",
       "explanation": "'Get someone down' means to make them feel discouraged or depressed.",
       "direction": "toTarget",
       "sentence": "Persistent gloomy weather can easily **depress** people during winter.",
       "word": "depress",
       "answer": "get down",
-      "options": [
-        "get down",
-        "get by",
-        "get over",
-        "get through"
-      ],
-      "tags": [
-        "coverage:get-down"
-      ]
+      "options": ["get down", "get by", "get over", "get through"],
+      "tags": ["coverage:get-down"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-21",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct informal phrasal verb for the bolded words.",
       "explanation": "'Get off on' is an informal expression meaning to find something very enjoyable or exhilarating.",
       "direction": "toTarget",
       "sentence": "Adrenaline junkies really **find excitement in** extreme sports like skydiving.",
       "word": "find excitement in",
       "answer": "get off on",
-      "options": [
-        "get off on",
-        "get over with",
-        "get around to",
-        "get back at"
-      ],
-      "tags": [
-        "coverage:get-off-on"
-      ]
+      "options": ["get off on", "get over with", "get around to", "get back at"],
+      "tags": ["coverage:get-off-on"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-22",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about finding an excuse to evade an unpleasant task.",
       "explanation": "'Get out of' means to avoid doing an obligation or responsibility.",
       "template": "He made an excuse to ___ ___ of attending the meeting.",
@@ -881,27 +626,15 @@
           "answer": "out"
         }
       ],
-      "wordBank": [
-        "get",
-        "out",
-        "fall",
-        "apart",
-        "through"
-      ],
-      "tags": [
-        "coverage:get-out-of"
-      ]
+      "wordBank": ["get", "out", "fall", "apart", "through"],
+      "tags": ["coverage:get-out-of"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-23",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about recovering from a respiratory virus.",
       "explanation": "'Get over' means to recover from an illness, loss, or emotional shock.",
       "template": "It took her nearly two weeks to ___ ___ the severe flu.",
@@ -913,80 +646,39 @@
           "answer": "over"
         }
       ],
-      "wordBank": [
-        "get",
-        "over",
-        "fall",
-        "behind",
-        "by"
-      ],
-      "tags": [
-        "coverage:get-over"
-      ]
+      "wordBank": ["get", "over", "fall", "behind", "by"],
+      "tags": ["coverage:get-over"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-24",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that you want to complete a dentist appointment quickly to end your dread.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you just want this dental visit you are dreading to be done and finished (use a phrasal verb).",
       "explanation": "'Get it over with' means to finish an unpleasant chore promptly to stop worrying about it.",
-      "answer": [
-        "I",
-        "just",
-        "want",
-        "to",
-        "get",
-        "this",
-        "dental",
-        "visit",
-        "over",
-        "with."
-      ],
-      "distractors": [
-        "ahead",
-        "off",
-        "through"
-      ],
+      "answer": ["I", "just", "want", "to", "get", "this", "dental", "visit", "over", "with."],
+      "distractors": ["ahead", "off", "through"],
       "acceptedAnswers": [
+        "I want to get this dental visit over with.",
         "I want to get this appointment over with."
       ],
-      "tags": [
-        "coverage:get-over-with"
-      ]
+      "tags": ["coverage:get-over-with"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-25",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that support from family helped someone survive an ordeal.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that her supportive family helped her survive the crisis (use a phrasal verb).",
       "explanation": "'Get someone through' means to help sustain someone through hardship or grief.",
-      "answer": [
-        "Her",
-        "supportive",
-        "family",
-        "got",
-        "her",
-        "through",
-        "the",
-        "crisis."
-      ],
-      "distractors": [
-        "along",
-        "behind",
-        "away"
-      ],
-      "tags": [
-        "coverage:get-through"
+      "answer": ["Her", "supportive", "family", "got", "her", "through", "the", "crisis."],
+      "distractors": ["along", "behind", "away"],
+      "tags": ["coverage:get-through"],
+      "acceptedAnswers": [
+        "Her supportive family helped her get through the crisis.",
+        "Her supportive family got her through the crisis!"
       ]
     },
     {
@@ -994,37 +686,22 @@
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded word.",
       "explanation": "'Get to' can mean to annoy, upset, or irritate someone over time.",
       "direction": "toTarget",
       "sentence": "His persistent complaining is starting to **irritate** his teammates.",
       "word": "irritate",
       "answer": "get to",
-      "options": [
-        "get to",
-        "get through",
-        "get down",
-        "get by"
-      ],
-      "tags": [
-        "coverage:get-to"
-      ]
+      "options": ["get to", "get through", "get down", "get by"],
+      "tags": ["coverage:get-to"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-27",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the invitation to meet socially on the weekend.",
       "explanation": "'Get together' means to meet socially and spend time with someone.",
       "template": "Would you like to ___ ___ for dinner on Friday evening?",
@@ -1036,106 +713,50 @@
           "answer": "together"
         }
       ],
-      "wordBank": [
-        "get",
-        "together",
-        "fall",
-        "apart",
-        "through"
-      ],
-      "tags": [
-        "coverage:get-together"
-      ]
+      "wordBank": ["get", "together", "fall", "apart", "through"],
+      "tags": ["coverage:get-together"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-28",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that the campaign manager is depending on your vote in the election.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the candidate is relying on our support (use a phrasal verb).",
       "explanation": "'Count on' means to expect with confidence that someone will provide support.",
-      "answer": [
-        "The",
-        "candidate",
-        "is",
-        "counting",
-        "on",
-        "our",
-        "support."
-      ],
-      "distractors": [
-        "in",
-        "off",
-        "up"
-      ],
-      "acceptedAnswers": [
-        "The candidate is counting on our vote."
-      ],
-      "tags": [
-        "coverage:count-on"
-      ]
+      "answer": ["The", "candidate", "is", "counting", "on", "our", "support."],
+      "distractors": ["in", "off", "up"],
+      "acceptedAnswers": ["The candidate is counting on our vote."],
+      "tags": ["coverage:count-on"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-29",
       "type": "find_error",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters"
-      ],
+      "allowedModes": ["tiles", "letters"],
       "prompt": "Find the error in the sentence about calculating total cash earnings.",
       "explanation": "'Count up' means to total or tally a sum of money. The preposition is 'up', not 'over'.",
-      "sentence": [
-        "Please",
-        "count",
-        "over",
-        "the",
-        "cash",
-        "in",
-        "the",
-        "drawer."
-      ],
+      "sentence": ["Please", "count", "over", "the", "cash", "in", "the", "drawer."],
       "wrongIndex": 2,
       "correction": "up",
-      "options": [
-        "up",
-        "out",
-        "down"
-      ],
-      "tags": [
-        "coverage:count-up"
-      ]
+      "options": ["up", "out", "down"],
+      "tags": ["coverage:count-up"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-30",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded word.",
       "explanation": "'Fall apart' can mean to collapse emotionally or to fail completely as an agreement.",
       "direction": "toTarget",
       "sentence": "The delicate peace negotiations began to **collapse** after disagreements arose.",
       "word": "collapse",
       "answer": "fall apart",
-      "options": [
-        "fall apart",
-        "fall behind",
-        "fall through",
-        "fall off"
-      ],
-      "tags": [
-        "coverage:fall-apart"
-      ]
+      "options": ["fall apart", "fall behind", "fall through", "fall off"],
+      "tags": ["coverage:fall-apart"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-31",
@@ -1143,56 +764,39 @@
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Explain that missing three weeks of class caused the student to lag in coursework.",
+      "prompt": "Say that he lagged in his university studies (past simple; use a phrasal verb).",
       "explanation": "'Fall behind in' means to fail to keep up with the expected pace of study or work.",
       "answer": ["He", "fell", "behind", "in", "his", "university", "studies."],
       "distractors": ["off", "out", "away"],
       "tags": ["coverage:fall-behind"],
-      "acceptedAnswers": ["He got behind in his university studies."]
+      "acceptedAnswers": [
+        "He got behind in his university studies.",
+        "He fell behind with his university studies.",
+        "He fell behind in his studies at university."
+      ]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-32",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Describe how you felt deeply attracted to someone immediately upon meeting.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that he became strongly attracted to her the moment they met (use a phrasal verb).",
       "explanation": "'Fall for' means to experience strong romantic attraction to someone.",
-      "answer": [
-        "He",
-        "fell",
-        "for",
-        "her",
-        "the",
-        "moment",
-        "they",
-        "met."
-      ],
-      "distractors": [
-        "out",
-        "off",
-        "up"
-      ],
+      "answer": ["He", "fell", "for", "her", "the", "moment", "they", "met."],
+      "distractors": ["out", "off", "up"],
       "acceptedAnswers": [
-        "He fell for her when they first met."
+        "He fell for her when they first met.",
+        "He fell for her as soon as they met."
       ],
-      "tags": [
-        "coverage:fall-for"
-      ]
+      "tags": ["coverage:fall-for"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-33",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about declining product quality.",
       "explanation": "'Fall off' means to decrease or deteriorate in quality or rate.",
       "template": "Customer service began to ___ ___ after the company merged.",
@@ -1204,78 +808,45 @@
           "answer": "off"
         }
       ],
-      "wordBank": [
-        "fall",
-        "off",
-        "count",
-        "up",
-        "get"
-      ],
-      "tags": [
-        "coverage:fall-off"
-      ]
+      "wordBank": ["fall", "off", "count", "up", "get"],
+      "tags": ["coverage:fall-off"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-34",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded word.",
       "explanation": "'Fall out' means to argue or quarrel so that friendly relations cease.",
       "direction": "toTarget",
       "sentence": "The siblings often **quarrel** over who inherits the family estate.",
       "word": "quarrel",
       "answer": "fall out",
-      "options": [
-        "fall out",
-        "fall over",
-        "fall through",
-        "fall off"
-      ],
-      "tags": [
-        "coverage:fall-out"
-      ]
+      "options": ["fall out", "fall over", "fall through", "fall off"],
+      "tags": ["coverage:fall-out"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-35",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Fall all over oneself' means to make an excessive or clumsy effort to please someone.",
       "direction": "toTarget",
       "sentence": "The nervous waiter seemed to **try excessively** to impress the food critic.",
       "word": "try excessively",
       "answer": "fall over",
-      "options": [
-        "fall over",
-        "fall apart",
-        "fall behind",
-        "get ahead"
-      ],
-      "tags": [
-        "coverage:fall-over"
-      ]
+      "options": ["fall over", "fall apart", "fall behind", "get ahead"],
+      "tags": ["coverage:fall-over"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-36",
       "type": "find_error",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters"
-      ],
+      "allowedModes": ["tiles", "letters"],
       "prompt": "Find the error in the sentence about a planned holiday being cancelled.",
       "explanation": "'Fall through' means to fail to happen. The preposition is 'through', not 'down'.",
       "sentence": [
@@ -1291,40 +862,23 @@
       ],
       "wrongIndex": 4,
       "correction": "through",
-      "options": [
-        "through",
-        "off",
-        "out"
-      ],
-      "tags": [
-        "coverage:fall-through"
-      ]
+      "options": ["through", "off", "out"],
+      "tags": ["coverage:fall-through"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-37",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Get ahead' means to make progress and achieve success.",
       "direction": "toTarget",
       "sentence": "Ambition and self-discipline are necessary to **achieve success** in business.",
       "word": "achieve success",
       "answer": "get ahead",
-      "options": [
-        "get ahead",
-        "get along",
-        "get by",
-        "get down"
-      ],
-      "tags": [
-        "coverage:get-ahead"
-      ]
+      "options": ["get ahead", "get along", "get by", "get down"],
+      "tags": ["coverage:get-ahead"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-38",
@@ -1332,12 +886,17 @@
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "A colleague mentions moving into a shared flat. Ask how they relate with their flatmates.",
+      "prompt": "A colleague mentions moving into a shared flat. Ask them how their relationship with their flatmates is (use a phrasal verb).",
       "explanation": "'Get along' refers to living or working harmoniously with someone.",
       "givenAnswer": "Very well; we share cooking and cleaning equally.",
       "answer": ["How", "do", "you", "get", "along?"],
       "distractors": ["ahead", "behind", "over"],
-      "acceptedAnswers": ["How do you get along with them?", "How do you get on with them?"],
+      "acceptedAnswers": [
+        "How do you get along with them?",
+        "How do you get on with them?",
+        "How do you get along with your flatmates?",
+        "How do you get on with your flatmates?"
+      ],
       "tags": ["coverage:get-along"]
     },
     {
@@ -1345,11 +904,7 @@
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about postponing household maintenance.",
       "explanation": "'Get around to' means to manage to find time for a task after a delay.",
       "template": "I hope to ___ ___ to painting the garage this coming weekend.",
@@ -1361,146 +916,70 @@
           "answer": "around"
         }
       ],
-      "wordBank": [
-        "get",
-        "around",
-        "fall",
-        "through",
-        "count"
-      ],
-      "tags": [
-        "coverage:get-around-to"
-      ]
+      "wordBank": ["get", "around", "fall", "through", "count"],
+      "tags": ["coverage:get-around-to"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-40",
       "type": "question_for_answer",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "A speaker is making subtle criticisms. Inquire directly what point they are attempting to convey.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A speaker is making subtle criticisms. Inquire directly what point they are attempting to convey (use a phrasal verb).",
       "explanation": "'What are you getting at?' asks someone to clarify their implied meaning.",
       "givenAnswer": "I mean that we need to restructure the entire department.",
-      "answer": [
-        "What",
-        "are",
-        "you",
-        "getting",
-        "at?"
-      ],
-      "distractors": [
-        "to",
-        "by",
-        "on"
-      ],
-      "acceptedAnswers": [
-        "What exactly are you getting at?"
-      ],
-      "tags": [
-        "coverage:get-at"
-      ]
+      "answer": ["What", "are", "you", "getting", "at?"],
+      "distractors": ["to", "by", "on"],
+      "acceptedAnswers": ["What exactly are you getting at?"],
+      "tags": ["coverage:get-at"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-41",
       "type": "find_error",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters"
-      ],
+      "allowedModes": ["tiles", "letters"],
       "prompt": "Find the error in the sentence about escaping punishment for rule-breaking.",
       "explanation": "'Get away with' means to escape punishment for misbehavior. We say 'get away with', not 'get off with'.",
-      "sentence": [
-        "He",
-        "believes",
-        "he",
-        "can",
-        "get",
-        "off",
-        "with",
-        "cheating."
-      ],
+      "sentence": ["He", "believes", "he", "can", "get", "off", "with", "cheating."],
       "wrongIndex": 5,
       "correction": "away",
-      "options": [
-        "away",
-        "over",
-        "along"
-      ],
-      "tags": [
-        "coverage:get-away"
-      ]
+      "options": ["away", "over", "along"],
+      "tags": ["coverage:get-away"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-42",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded word.",
       "explanation": "'Get back' means to return to a place.",
       "direction": "toTarget",
       "sentence": "What time did you **return** from the international business conference?",
       "word": "return",
       "answer": "get back",
-      "options": [
-        "get back",
-        "get by",
-        "get over",
-        "get to"
-      ],
-      "tags": [
-        "coverage:get-back"
-      ]
+      "options": ["get back", "get by", "get over", "get to"],
+      "tags": ["coverage:get-back"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-43",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that seeking revenge on former rivals will not resolve your issues.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that trying to take revenge on rivals solves nothing (use a phrasal verb).",
       "explanation": "'Get back at' means to hurt or retaliate against someone in revenge.",
-      "answer": [
-        "Trying",
-        "to",
-        "get",
-        "back",
-        "at",
-        "rivals",
-        "solves",
-        "nothing."
-      ],
-      "distractors": [
-        "down",
-        "over",
-        "away"
-      ],
-      "tags": [
-        "coverage:get-back-at"
-      ]
+      "answer": ["Trying", "to", "get", "back", "at", "rivals", "solves", "nothing."],
+      "distractors": ["down", "over", "away"],
+      "tags": ["coverage:get-back-at"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-44",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the professional message promising to reply after consulting records.",
       "explanation": "'Get back to' means to respond to someone at a later time with details.",
       "template": "I will check our inventory and ___ ___ to you before noon.",
@@ -1512,216 +991,99 @@
           "answer": "back"
         }
       ],
-      "wordBank": [
-        "get",
-        "back",
-        "fall",
-        "through",
-        "out"
-      ],
-      "tags": [
-        "coverage:get-back-to"
-      ]
+      "wordBank": ["get", "back", "fall", "through", "out"],
+      "tags": ["coverage:get-back-to"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-45",
       "type": "find_error",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters"
-      ],
+      "allowedModes": ["tiles", "letters"],
       "prompt": "Find the error in the sentence about lagging in academic studies.",
       "explanation": "'Get behind in' means to lag behind one's schedule or cohort. We say 'got behind', not 'got away in'.",
-      "sentence": [
-        "She",
-        "was",
-        "sick",
-        "and",
-        "got",
-        "away",
-        "in",
-        "her",
-        "coursework."
-      ],
+      "sentence": ["She", "was", "sick", "and", "got", "away", "in", "her", "coursework."],
       "wrongIndex": 5,
       "correction": "behind",
-      "options": [
-        "behind",
-        "ahead",
-        "through"
-      ],
-      "tags": [
-        "coverage:get-behind"
-      ]
+      "options": ["behind", "ahead", "through"],
+      "tags": ["coverage:get-behind"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-46",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded word.",
       "explanation": "'Get by' means to survive or manage with minimal funds or support.",
       "direction": "toTarget",
       "sentence": "Even with high living costs, we managed to **survive** on our savings.",
       "word": "survive",
       "answer": "get by",
-      "options": [
-        "get by",
-        "get ahead",
-        "get at",
-        "get off on"
-      ],
-      "tags": [
-        "coverage:get-by"
-      ]
+      "options": ["get by", "get ahead", "get at", "get off on"],
+      "tags": ["coverage:get-by"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-47",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Encourage a colleague not to let temporary setbacks make them feel depressed.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a colleague not to let these minor setbacks make them feel low (use a phrasal verb).",
       "explanation": "'Get someone down' means to cause someone to lose spirits or become discouraged.",
-      "answer": [
-        "Do",
-        "not",
-        "let",
-        "these",
-        "minor",
-        "setbacks",
-        "get",
-        "you",
-        "down."
-      ],
-      "distractors": [
-        "away",
-        "ahead",
-        "behind"
-      ],
-      "acceptedAnswers": [
-        "Don't let these minor setbacks get you down."
-      ],
-      "tags": [
-        "coverage:get-down"
-      ]
+      "answer": ["Do", "not", "let", "these", "minor", "setbacks", "get", "you", "down."],
+      "distractors": ["away", "ahead", "behind"],
+      "acceptedAnswers": ["Don't let these minor setbacks get you down."],
+      "tags": ["coverage:get-down"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-48",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that the thrill-seeking skier finds intense excitement in backcountry trails.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that he really finds challenging ski slopes thrilling (present simple; informal; use a phrasal verb).",
       "explanation": "'Get off on' means to experience great pleasure or thrill from an activity.",
-      "answer": [
-        "He",
-        "really",
-        "gets",
-        "off",
-        "on",
-        "challenging",
-        "ski",
-        "slopes."
-      ],
-      "distractors": [
-        "down",
-        "over",
-        "away"
-      ],
-      "tags": [
-        "coverage:get-off-on"
-      ]
+      "answer": ["He", "really", "gets", "off", "on", "challenging", "ski", "slopes."],
+      "distractors": ["down", "over", "away"],
+      "tags": ["coverage:get-off-on"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-49",
       "type": "find_error",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters"
-      ],
+      "allowedModes": ["tiles", "letters"],
       "prompt": "Find the error in the sentence about dodging mandatory jury service.",
       "explanation": "'Get out of' means to avoid a duty. We say 'get out of', not 'get off of'.",
-      "sentence": [
-        "She",
-        "tried",
-        "to",
-        "get",
-        "off",
-        "of",
-        "jury",
-        "duty."
-      ],
+      "sentence": ["She", "tried", "to", "get", "off", "of", "jury", "duty."],
       "wrongIndex": 4,
       "correction": "out",
-      "options": [
-        "out",
-        "ahead",
-        "through"
-      ],
-      "tags": [
-        "coverage:get-out-of"
-      ]
+      "options": ["out", "ahead", "through"],
+      "tags": ["coverage:get-out-of"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-50",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Advise a friend to move past a disappointment and focus on future goals.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a friend that they need to recover from it and move forward (use a phrasal verb).",
       "explanation": "'Get over' means to accept a setback or heartache and proceed forward with life.",
-      "answer": [
-        "You",
-        "need",
-        "to",
-        "get",
-        "over",
-        "it",
-        "and",
-        "move",
-        "forward."
-      ],
-      "distractors": [
-        "ahead",
-        "down",
-        "off"
-      ],
+      "answer": ["You", "need", "to", "get", "over", "it", "and", "move", "forward."],
+      "distractors": ["ahead", "down", "off"],
       "acceptedAnswers": [
-        "You have to get over it and move forward."
+        "You have to get over it and move forward.",
+        "You need to get over it and move on."
       ],
-      "tags": [
-        "coverage:get-over"
-      ]
+      "tags": ["coverage:get-over"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-51",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence expressing a desire to finish an unpleasant injection quickly.",
       "explanation": "'Get it over with' means to undergo an uncomfortable experience swiftly.",
       "template": "Let's take the medical test now and ___ it ___ with.",
@@ -1733,42 +1095,23 @@
           "answer": "over"
         }
       ],
-      "wordBank": [
-        "get",
-        "over",
-        "fall",
-        "out",
-        "by"
-      ],
-      "tags": [
-        "coverage:get-over-with"
-      ]
+      "wordBank": ["get", "over", "fall", "out", "by"],
+      "tags": ["coverage:get-over-with"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-52",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded word.",
       "explanation": "'Get through' means to complete a large quantity of work, reading, or tasks.",
       "direction": "toTarget",
       "sentence": "We need several hours to **finish** reviewing all these legal documents.",
       "word": "finish",
       "answer": "get through",
-      "options": [
-        "get through",
-        "get along",
-        "get around to",
-        "get by"
-      ],
-      "tags": [
-        "coverage:get-through"
-      ]
+      "options": ["get through", "get along", "get around to", "get by"],
+      "tags": ["coverage:get-through"]
     },
     {
       "id": "en-phrasal_verbs-m1-relationships-progress-and-setbacks-53",
@@ -1776,11 +1119,15 @@
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Explain that constant noise began to annoy Leo.",
+      "prompt": "Explain that constant noise began to annoy Leo (use a phrasal verb).",
       "explanation": "'Get to someone' means to annoy or upset them, often gradually.",
       "answer": ["The", "constant", "noise", "is", "getting", "to", "Leo."],
       "distractors": ["down", "over", "away"],
-      "acceptedAnswers": ["The constant noise started to get to Leo.", "The constant noise got to Leo."],
+      "acceptedAnswers": [
+        "The constant noise started to get to Leo.",
+        "The constant noise began to get to Leo.",
+        "The constant noise got to Leo."
+      ],
       "tags": ["coverage:get-to"]
     },
     {
@@ -1789,7 +1136,7 @@
       "topicId": "en-phrasal_verbs-m1-relationships-progress-and-setbacks",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Say that the neighbors met socially for dinner on Saturday.",
+      "prompt": "Say that the neighbors met socially for dinner on Saturday (use a phrasal verb).",
       "explanation": "'Get together' means to meet and spend time socially with other people.",
       "answer": ["The", "neighbors", "got", "together", "for", "dinner", "on", "Saturday."],
       "distractors": ["apart", "away", "over"],

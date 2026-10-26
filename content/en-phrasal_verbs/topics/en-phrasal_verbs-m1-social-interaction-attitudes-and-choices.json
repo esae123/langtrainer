@@ -255,37 +255,22 @@
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Go along with' means to agree with or accept a decision or policy.",
       "direction": "toTarget",
       "sentence": "I disagree with the budget cuts, but I will **agree with** the board's decision.",
       "word": "agree with",
       "answer": "go along with",
-      "options": [
-        "go along with",
-        "look down on",
-        "stick out",
-        "take over"
-      ],
-      "tags": [
-        "coverage:go-along-with"
-      ]
+      "options": ["go along with", "look down on", "stick out", "take over"],
+      "tags": ["coverage:go-along-with"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-02",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about having a qualified professional inspect your vehicle.",
       "explanation": "'Look at' means to inspect or examine something carefully to diagnose a problem.",
       "template": "You should have an experienced mechanic ___ ___ that strange noise.",
@@ -297,45 +282,20 @@
           "answer": "at"
         }
       ],
-      "wordBank": [
-        "look",
-        "at",
-        "pick",
-        "up",
-        "push"
-      ],
-      "tags": [
-        "coverage:look-at"
-      ]
+      "wordBank": ["look", "at", "pick", "up", "push"],
+      "tags": ["coverage:look-at"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-03",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that it is wrong to treat people as inferior because of their background.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that nobody should ever treat others as inferior (use a phrasal verb).",
       "explanation": "'Look down on' means to consider someone inferior or less worthy of respect.",
-      "answer": [
-        "Nobody",
-        "should",
-        "ever",
-        "look",
-        "down",
-        "on",
-        "others."
-      ],
-      "distractors": [
-        "up",
-        "out",
-        "away"
-      ],
-      "tags": [
-        "coverage:look-down-on"
-      ]
+      "answer": ["Nobody", "should", "ever", "look", "down", "on", "others."],
+      "distractors": ["up", "out", "away"],
+      "tags": ["coverage:look-down-on"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-04",
@@ -363,11 +323,7 @@
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about finding an unfamiliar definition.",
       "explanation": "'Look up' means to search for information in a dictionary or reference resource.",
       "template": "You can ___ ___ the unfamiliar definition in a dictionary.",
@@ -379,89 +335,41 @@
           "answer": "up"
         }
       ],
-      "wordBank": [
-        "look",
-        "up",
-        "take",
-        "in",
-        "push"
-      ],
-      "tags": [
-        "coverage:look-up"
-      ]
+      "wordBank": ["look", "up", "take", "in", "push"],
+      "tags": ["coverage:look-up"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-06",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that younger siblings deeply admire and respect their older sister.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the children always admire and respect their sister (use a phrasal verb).",
       "explanation": "'Look up to' means to admire and respect an older or more experienced person.",
-      "answer": [
-        "The",
-        "children",
-        "always",
-        "look",
-        "up",
-        "to",
-        "their",
-        "sister."
-      ],
-      "distractors": [
-        "down",
-        "off",
-        "out"
-      ],
-      "tags": [
-        "coverage:look-up-to"
-      ]
+      "answer": ["The", "children", "always", "look", "up", "to", "their", "sister."],
+      "distractors": ["down", "off", "out"],
+      "tags": ["coverage:look-up-to"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-07",
       "type": "find_error",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters"
-      ],
+      "allowedModes": ["tiles", "letters"],
       "prompt": "Find the error in the sentence about inventing an excuse for missing class.",
       "explanation": "'Make up' means to invent a fictional story or false excuse. The particle is 'up', not 'over'.",
-      "sentence": [
-        "He",
-        "decided",
-        "to",
-        "make",
-        "over",
-        "an",
-        "elaborate",
-        "excuse."
-      ],
+      "sentence": ["He", "decided", "to", "make", "over", "an", "elaborate", "excuse."],
       "wrongIndex": 4,
       "correction": "up",
-      "options": [
-        "up",
-        "out",
-        "in"
-      ],
-      "tags": [
-        "coverage:make-up"
-      ]
+      "options": ["up", "out", "in"],
+      "tags": ["coverage:make-up"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-08",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about preventing teasing in the school playground.",
       "explanation": "'Pick on' means to repeatedly tease, criticize, or harass someone unfairly.",
       "template": "Older children should never ___ ___ the younger pupils.",
@@ -473,70 +381,39 @@
           "answer": "on"
         }
       ],
-      "wordBank": [
-        "pick",
-        "on",
-        "take",
-        "after",
-        "look"
-      ],
-      "tags": [
-        "coverage:pick-on"
-      ]
+      "wordBank": ["pick", "on", "take", "after", "look"],
+      "tags": ["coverage:pick-on"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-09",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Pick up' means to learn a skill or language easily and naturally.",
       "direction": "toTarget",
       "sentence": "Children usually **acquire naturally** foreign accents very quickly.",
       "word": "acquire naturally",
       "answer": "pick up",
-      "options": [
-        "pick up",
-        "pick on",
-        "take in",
-        "make up"
-      ],
-      "tags": [
-        "coverage:pick-up"
-      ]
+      "options": ["pick up", "pick on", "take in", "make up"],
+      "tags": ["coverage:pick-up"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-10",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that you will not let aggressive managers intimidate or bully you.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a friend not to let anyone bully them or order them about (use a phrasal verb).",
       "explanation": "'Push around' means to bully someone or tell them what to do in an aggressive way.",
-      "answer": [
-        "Do",
-        "not",
-        "let",
-        "anyone",
-        "push",
-        "you",
-        "around."
-      ],
-      "distractors": [
-        "along",
-        "about",
-        "away"
-      ],
-      "tags": [
-        "coverage:push-around"
+      "answer": ["Do", "not", "let", "anyone", "push", "you", "around."],
+      "distractors": ["along", "about", "away"],
+      "tags": ["coverage:push-around"],
+      "acceptedAnswers": [
+        "Don't let anyone push you around.",
+        "Do not let anybody push you around.",
+        "Don't let anybody push you around."
       ]
     },
     {
@@ -544,11 +421,7 @@
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the friendly invitation to stay longer after a gathering.",
       "explanation": "'Stick around' means to remain in a place rather than leave.",
       "template": "Why don't you ___ ___ for lunch after the lecture?",
@@ -560,45 +433,20 @@
           "answer": "around"
         }
       ],
-      "wordBank": [
-        "stick",
-        "around",
-        "push",
-        "out",
-        "take"
-      ],
-      "tags": [
-        "coverage:stick-around"
-      ]
+      "wordBank": ["stick", "around", "push", "out", "take"],
+      "tags": ["coverage:stick-around"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-12",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that his bright yellow coat was very prominent in the crowd.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that his bright yellow jacket was really easy to notice (use a phrasal verb).",
       "explanation": "'Stick out' means to be very prominent or noticeably different in appearance.",
-      "answer": [
-        "His",
-        "bright",
-        "yellow",
-        "jacket",
-        "really",
-        "stuck",
-        "out."
-      ],
-      "distractors": [
-        "up",
-        "off",
-        "down"
-      ],
-      "tags": [
-        "coverage:stick-out"
-      ]
+      "answer": ["His", "bright", "yellow", "jacket", "really", "stuck", "out."],
+      "distractors": ["up", "off", "down"],
+      "tags": ["coverage:stick-out"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-13",
@@ -626,59 +474,29 @@
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Stick together' means to remain united and loyal to one another.",
       "direction": "toTarget",
       "sentence": "During economic crises, family members need to **remain united**.",
       "word": "remain united",
       "answer": "stick together",
-      "options": [
-        "stick together",
-        "stick around",
-        "stick out",
-        "stick to"
-      ],
-      "tags": [
-        "coverage:stick-together"
-      ]
+      "options": ["stick together", "stick around", "stick out", "stick to"],
+      "tags": ["coverage:stick-together"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-15",
       "type": "find_error",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters"
-      ],
+      "allowedModes": ["tiles", "letters"],
       "prompt": "Find the error in the sentence about putting a notice on the public bulletin board.",
       "explanation": "'Stick up' means to post or attach a sign or notice in a visible location. We say 'stick up', not 'stick off'.",
-      "sentence": [
-        "He",
-        "wanted",
-        "to",
-        "stick",
-        "off",
-        "a",
-        "lost",
-        "dog",
-        "poster."
-      ],
+      "sentence": ["He", "wanted", "to", "stick", "off", "a", "lost", "dog", "poster."],
       "wrongIndex": 4,
       "correction": "up",
-      "options": [
-        "up",
-        "out",
-        "in"
-      ],
-      "tags": [
-        "coverage:stick-up"
-      ]
+      "options": ["up", "out", "in"],
+      "tags": ["coverage:stick-up"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-16",
@@ -706,37 +524,22 @@
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'String someone along' means to keep someone hoping or waiting by making promises you do not intend to keep.",
       "direction": "toTarget",
       "sentence": "The dishonest buyer kept **making false promises to** the property seller while delaying the deal.",
       "word": "making false promises to",
       "answer": "string along",
-      "options": [
-        "string along",
-        "suck up to",
-        "stick around",
-        "push around"
-      ],
-      "tags": [
-        "coverage:string-along"
-      ]
+      "options": ["string along", "suck up to", "stick around", "push around"],
+      "tags": ["coverage:string-along"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-18",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about trying to gain favor through false flattery.",
       "explanation": "'Suck up to' is an informal expression meaning to flatter someone in authority servilely.",
       "template": "Ambitious employees should not ___ ___ to the executive board.",
@@ -748,56 +551,27 @@
           "answer": "up"
         }
       ],
-      "wordBank": [
-        "suck",
-        "up",
-        "look",
-        "down",
-        "take"
-      ],
-      "tags": [
-        "coverage:suck-up-to"
-      ]
+      "wordBank": ["suck", "up", "look", "down", "take"],
+      "tags": ["coverage:suck-up-to"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-19",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that the young boy resembles his grandfather in personality and humor.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the young boy resembles his grandfather (use a phrasal verb).",
       "explanation": "'Take after' means to resemble an older relative in appearance or character.",
-      "answer": [
-        "The",
-        "young",
-        "boy",
-        "takes",
-        "after",
-        "his",
-        "grandfather."
-      ],
-      "distractors": [
-        "over",
-        "apart",
-        "back"
-      ],
-      "tags": [
-        "coverage:take-after"
-      ]
+      "answer": ["The", "young", "boy", "takes", "after", "his", "grandfather."],
+      "distractors": ["over", "apart", "back"],
+      "tags": ["coverage:take-after"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-20",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about dismantling a mechanical clock to clean it.",
       "explanation": "'Take apart' means to separate an object into its individual component pieces.",
       "template": "The technician had to ___ ___ the antique clock completely.",
@@ -809,70 +583,39 @@
           "answer": "apart"
         }
       ],
-      "wordBank": [
-        "take",
-        "apart",
-        "stick",
-        "together",
-        "make"
-      ],
-      "tags": [
-        "coverage:take-apart"
-      ]
+      "wordBank": ["take", "apart", "stick", "together", "make"],
+      "tags": ["coverage:take-apart"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-21",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded word.",
       "explanation": "'Take back' means to retract or withdraw an offensive or untrue statement.",
       "direction": "toTarget",
       "sentence": "I deeply regret that insulting remark and **retract** it immediately.",
       "word": "retract",
       "answer": "take back",
-      "options": [
-        "take back",
-        "take over",
-        "take in",
-        "take out"
-      ],
-      "tags": [
-        "coverage:take-back"
-      ]
+      "options": ["take back", "take over", "take in", "take out"],
+      "tags": ["coverage:take-back"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-22",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Explain that kindly neighbors gave temporary shelter to the displaced family.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the kind family gave their homeless neighbors a place to live in their home (use a phrasal verb).",
       "explanation": "'Take in' means to provide lodging or refuge to someone in need.",
-      "answer": [
-        "The",
-        "kind",
-        "family",
-        "took",
-        "in",
-        "homeless",
-        "neighbors."
-      ],
-      "distractors": [
-        "out",
-        "off",
-        "back"
-      ],
-      "tags": [
-        "coverage:take-in"
+      "answer": ["The", "kind", "family", "took", "in", "their", "homeless", "neighbors."],
+      "distractors": ["out", "off", "back"],
+      "tags": ["coverage:take-in"],
+      "acceptedAnswers": [
+        "The kind family took their homeless neighbors in.",
+        "The kind family took in their homeless neighbours.",
+        "The kind family took their homeless neighbours in."
       ]
     },
     {
@@ -900,37 +643,22 @@
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Take out on' means to unfairly vent anger or frustration on someone who is innocent.",
       "direction": "toTarget",
       "sentence": "Do not **vent frustration onto** your family when work is stressful.",
       "word": "vent frustration onto",
       "answer": "take out on",
-      "options": [
-        "take out on",
-        "take up on",
-        "take over",
-        "take after"
-      ],
-      "tags": [
-        "coverage:take-out-on"
-      ]
+      "options": ["take out on", "take up on", "take over", "take after"],
+      "tags": ["coverage:take-out-on"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-25",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about an international company acquiring a local competitor.",
       "explanation": "'Take over' means to assume control or ownership of a company or operation.",
       "template": "A large corporation plans to ___ ___ our family business.",
@@ -942,45 +670,24 @@
           "answer": "over"
         }
       ],
-      "wordBank": [
-        "take",
-        "over",
-        "look",
-        "after",
-        "stick"
-      ],
-      "tags": [
-        "coverage:take-over"
-      ]
+      "wordBank": ["take", "over", "look", "after", "stick"],
+      "tags": ["coverage:take-over"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-26",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that you accepted your friend's generous offer to stay at his holiday home.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend offers to let you stay at his holiday home. Tell him that you will accept that offer (use a phrasal verb).",
       "explanation": "'Take someone up on an offer' means to accept a proposal or invitation.",
-      "answer": [
-        "I",
-        "will",
-        "take",
-        "you",
-        "up",
-        "on",
-        "that",
-        "offer."
-      ],
-      "distractors": [
-        "over",
-        "out",
-        "off"
-      ],
-      "tags": [
-        "coverage:take-up-on"
+      "answer": ["I", "will", "take", "you", "up", "on", "that", "offer."],
+      "distractors": ["over", "out", "off"],
+      "tags": ["coverage:take-up-on"],
+      "acceptedAnswers": [
+        "I'll take you up on that offer.",
+        "I will take you up on your offer.",
+        "I'll take you up on your offer."
       ]
     },
     {
@@ -988,180 +695,92 @@
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that you agree with your colleague's proposal for the project.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague has made a proposal. Say that you will agree to her proposal (use a phrasal verb).",
       "explanation": "'Go along with' means to concur with or support an idea or proposal.",
-      "answer": [
-        "I",
-        "will",
-        "go",
-        "along",
-        "with",
-        "her",
-        "proposal."
-      ],
-      "distractors": [
-        "away",
-        "off",
-        "up"
-      ],
-      "tags": [
-        "coverage:go-along-with"
-      ]
+      "answer": ["I", "will", "go", "along", "with", "her", "proposal."],
+      "distractors": ["away", "off", "up"],
+      "tags": ["coverage:go-along-with"],
+      "acceptedAnswers": ["I'll go along with her proposal."]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-28",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded word.",
       "explanation": "'Look at' can mean to consider or evaluate a situation from a certain viewpoint.",
       "direction": "toTarget",
       "sentence": "From the way we **evaluate** the situation, costs will rise substantially.",
       "word": "evaluate",
       "answer": "look at",
-      "options": [
-        "look at",
-        "look over",
-        "look up",
-        "look down on"
-      ],
-      "tags": [
-        "coverage:look-at"
-      ]
+      "options": ["look at", "look over", "look up", "look down on"],
+      "tags": ["coverage:look-at"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-29",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded word.",
       "explanation": "'Look down on' means to regard someone with contempt or superiority.",
       "direction": "toTarget",
       "sentence": "Arrogant people often **disdain** those from poorer socioeconomic backgrounds.",
       "word": "disdain",
       "answer": "look down on",
-      "options": [
-        "look down on",
-        "look up to",
-        "look over",
-        "go along with"
-      ],
-      "tags": [
-        "coverage:look-down-on"
-      ]
+      "options": ["look down on", "look up to", "look over", "go along with"],
+      "tags": ["coverage:look-down-on"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-30",
       "type": "find_error",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters"
-      ],
+      "allowedModes": ["tiles", "letters"],
       "prompt": "Find the error in the sentence about examining an essay carefully.",
       "explanation": "'Look over' means to read or inspect something carefully. The preposition is 'over', not 'across'.",
-      "sentence": [
-        "The",
-        "professor",
-        "agreed",
-        "to",
-        "look",
-        "across",
-        "my",
-        "draft."
-      ],
+      "sentence": ["The", "professor", "agreed", "to", "look", "across", "my", "draft."],
       "wrongIndex": 5,
       "correction": "over",
-      "options": [
-        "over",
-        "at",
-        "into"
-      ],
-      "tags": [
-        "coverage:look-over"
-      ]
+      "options": ["over", "at", "into"],
+      "tags": ["coverage:look-over"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-31",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that business conditions are improving noticeably this quarter.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that financial prospects are finally starting to improve (use a phrasal verb).",
       "explanation": "'Look up' means to show signs of improvement or positive development.",
-      "answer": [
-        "Financial",
-        "prospects",
-        "are",
-        "finally",
-        "starting",
-        "to",
-        "look",
-        "up."
-      ],
-      "distractors": [
-        "down",
-        "over",
-        "away"
-      ],
-      "tags": [
-        "coverage:look-up"
-      ]
+      "answer": ["Financial", "prospects", "are", "finally", "starting", "to", "look", "up."],
+      "distractors": ["down", "over", "away"],
+      "tags": ["coverage:look-up"],
+      "acceptedAnswers": ["Financial prospects are finally beginning to look up."]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-32",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Look up to' means to hold someone in high esteem and respect them.",
       "direction": "toTarget",
       "sentence": "Young students often **admire and respect** dedicated school teachers.",
       "word": "admire and respect",
       "answer": "look up to",
-      "options": [
-        "look up to",
-        "look down on",
-        "look over",
-        "suck up to"
-      ],
-      "tags": [
-        "coverage:look-up-to"
-      ]
+      "options": ["look up to", "look down on", "look over", "suck up to"],
+      "tags": ["coverage:look-up-to"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-33",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about two friends reconciling after an argument.",
       "explanation": "'Make up' means to forgive and reconcile after a disagreement or quarrel.",
       "template": "After their silly quarrel, they quickly decided to ___ ___.",
@@ -1173,70 +792,39 @@
           "answer": "up"
         }
       ],
-      "wordBank": [
-        "make",
-        "up",
-        "push",
-        "around",
-        "stick"
-      ],
-      "tags": [
-        "coverage:make-up"
-      ]
+      "wordBank": ["make", "up", "push", "around", "stick"],
+      "tags": ["coverage:make-up"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-34",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Pick on' means to harass, tease, or criticize someone repeatedly.",
       "direction": "toTarget",
       "sentence": "It is unfair when managers constantly **harass and criticize** one single employee.",
       "word": "harass and criticize",
       "answer": "pick on",
-      "options": [
-        "pick on",
-        "pick up",
-        "push around",
-        "take after"
-      ],
-      "tags": [
-        "coverage:pick-on"
-      ]
+      "options": ["pick on", "pick up", "push around", "take after"],
+      "tags": ["coverage:pick-on"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-35",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that you will collect the parcel from the post office tomorrow.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you will collect the parcel tomorrow (use a phrasal verb).",
       "explanation": "'Pick up' means to collect an item from a designated collection point.",
-      "answer": [
-        "I",
-        "will",
-        "pick",
-        "up",
-        "the",
-        "parcel",
-        "tomorrow."
-      ],
-      "distractors": [
-        "on",
-        "off",
-        "out"
-      ],
-      "tags": [
-        "coverage:pick-up"
+      "answer": ["I", "will", "pick", "up", "the", "parcel", "tomorrow."],
+      "distractors": ["on", "off", "out"],
+      "tags": ["coverage:pick-up"],
+      "acceptedAnswers": [
+        "I will pick the parcel up tomorrow.",
+        "I'll pick up the parcel tomorrow.",
+        "I'll pick the parcel up tomorrow."
       ]
     },
     {
@@ -1244,53 +832,33 @@
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded word.",
       "explanation": "'Push around' means to bully or treat someone with unfair domineering behavior.",
       "direction": "toTarget",
       "sentence": "Strong leaders never allow bullies to **intimidate** vulnerable workers.",
       "word": "intimidate",
       "answer": "push around",
-      "options": [
-        "push around",
-        "stick around",
-        "string along",
-        "pick on"
-      ],
-      "tags": [
-        "coverage:push-around"
-      ]
+      "options": ["push around", "stick around", "string along", "pick on"],
+      "tags": ["coverage:push-around"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-37",
       "type": "question_for_answer",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "You need a friend to stay at your apartment until the courier arrives. Ask them to remain.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You need your friend to stay at your apartment until the courier arrives. Ask them if they can stay for a while (use a phrasal verb).",
       "explanation": "'Stick around' means to remain in a place for a short time.",
       "givenAnswer": "Sure, I have plenty of free time this morning.",
-      "answer": [
-        "Can",
-        "you",
-        "stick",
-        "around",
-        "awhile?"
-      ],
-      "distractors": [
-        "away",
-        "off",
-        "together"
-      ],
-      "tags": [
-        "coverage:stick-around"
+      "answer": ["Can", "you", "stick", "around", "awhile?"],
+      "distractors": ["away", "off", "together"],
+      "tags": ["coverage:stick-around"],
+      "acceptedAnswers": [
+        "Can you stick around for a while?",
+        "Could you stick around for a while?",
+        "Could you stick around awhile?",
+        "Can you stick around?"
       ]
     },
     {
@@ -1298,22 +866,12 @@
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters"
-      ],
+      "allowedModes": ["tiles", "letters"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Stick out' means to be very noticeable or different from what is around it.",
       "sentence": "One bright yellow coat **was very noticeable** in the crowd.",
-      "options": [
-        "stick out",
-        "stick around",
-        "stick up",
-        "stick with"
-      ],
-      "tags": [
-        "coverage:stick-out"
-      ],
+      "options": ["stick out", "stick around", "stick up", "stick with"],
+      "tags": ["coverage:stick-out"],
       "direction": "toTarget",
       "word": "was very noticeable",
       "answer": "stick out"
@@ -1324,7 +882,7 @@
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Encourage someone to maintain their healthy diet even when dining out.",
+      "prompt": "Tell someone that they should keep following their dietary plan (use a phrasal verb).",
       "explanation": "'Stick to' means to adhere strictly to a routine, rule, or plan.",
       "answer": ["You", "should", "stick", "to", "your", "dietary", "plan."],
       "distractors": ["with", "out", "off"],
@@ -1336,28 +894,16 @@
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Tell the team that staying united will guarantee success.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell the team that we will succeed if we stay united (use a phrasal verb).",
       "explanation": "'Stick together' means to remain united as a group to support each other.",
-      "answer": [
-        "We",
-        "will",
-        "succeed",
-        "if",
-        "we",
-        "stick",
-        "together."
-      ],
-      "distractors": [
-        "apart",
-        "around",
-        "away"
-      ],
-      "tags": [
-        "coverage:stick-together"
+      "answer": ["We", "will", "succeed", "if", "we", "stick", "together."],
+      "distractors": ["apart", "around", "away"],
+      "tags": ["coverage:stick-together"],
+      "acceptedAnswers": [
+        "We'll succeed if we stick together.",
+        "If we stick together, we will succeed.",
+        "If we stick together, we'll succeed."
       ]
     },
     {
@@ -1365,11 +911,7 @@
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the warning about sharp nails protruding from the old floorboard.",
       "explanation": "'Stick up' means to project or protrude upward from a flat surface.",
       "template": "Watch your step because rusty nails ___ ___ from the deck.",
@@ -1381,166 +923,83 @@
           "answer": "up"
         }
       ],
-      "wordBank": [
-        "stick",
-        "up",
-        "take",
-        "back",
-        "look"
-      ],
-      "tags": [
-        "coverage:stick-up"
-      ]
+      "wordBank": ["stick", "up", "take", "back", "look"],
+      "tags": ["coverage:stick-up"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-42",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that you decided to remain loyal to your trusted mentor.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you decided to remain loyal to your mentor (use a phrasal verb).",
       "explanation": "'Stick with' means to remain loyal to a person, decision, or method.",
-      "answer": [
-        "I",
-        "decided",
-        "to",
-        "stick",
-        "with",
-        "my",
-        "mentor."
-      ],
-      "distractors": [
-        "up",
-        "together",
-        "away"
-      ],
-      "tags": [
-        "coverage:stick-with"
-      ]
+      "answer": ["I", "decided", "to", "stick", "with", "my", "mentor."],
+      "distractors": ["up", "together", "away"],
+      "tags": ["coverage:stick-with"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-43",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "State that you will not let the employer delay making you a firm job offer.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell the employer to stop keeping you waiting with false promises and to decide now (use a phrasal verb).",
       "explanation": "'String someone along' means to keep them waiting with false promises.",
-      "answer": [
-        "Stop",
-        "stringing",
-        "me",
-        "along",
-        "and",
-        "decide",
-        "now."
-      ],
-      "distractors": [
-        "away",
-        "around",
-        "off"
-      ],
-      "tags": [
-        "coverage:string-along"
-      ]
+      "answer": ["Stop", "stringing", "me", "along", "and", "decide", "now."],
+      "distractors": ["away", "around", "off"],
+      "tags": ["coverage:string-along"],
+      "acceptedAnswers": ["Stop stringing me along and decide now!"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-44",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Suck up to' means to fawn over or excessively flatter someone in power.",
       "direction": "toTarget",
       "sentence": "It is distasteful when colleagues **flatter servilely** the senior partners.",
       "word": "flatter servilely",
       "answer": "suck up to",
-      "options": [
-        "suck up to",
-        "look up to",
-        "take after",
-        "go along with"
-      ],
-      "tags": [
-        "coverage:suck-up-to"
-      ]
+      "options": ["suck up to", "look up to", "take after", "go along with"],
+      "tags": ["coverage:suck-up-to"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-45",
       "type": "translate_word",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 1,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Choose the correct phrasal verb for the bolded words.",
       "explanation": "'Take after' means to inherit character or behavior traits from a parent or relative.",
       "direction": "toTarget",
       "sentence": "In her stubborn determination, Alice clearly **resembles in character** her mother.",
       "word": "resembles in character",
       "answer": "take after",
-      "options": [
-        "take after",
-        "take over",
-        "take apart",
-        "take back"
-      ],
-      "tags": [
-        "coverage:take-after"
-      ]
+      "options": ["take after", "take over", "take apart", "take back"],
+      "tags": ["coverage:take-after"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-46",
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Explain that the engineer disassembled the malfunctioning engine for repairs.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the engineer dismantled the broken engine (use a phrasal verb).",
       "explanation": "'Take apart' means to dismantle an apparatus or machine into components.",
-      "answer": [
-        "The",
-        "engineer",
-        "took",
-        "the",
-        "broken",
-        "engine",
-        "apart."
-      ],
-      "distractors": [
-        "together",
-        "over",
-        "away"
-      ],
-      "tags": [
-        "coverage:take-apart"
-      ]
+      "answer": ["The", "engineer", "took", "the", "broken", "engine", "apart."],
+      "distractors": ["together", "over", "away"],
+      "tags": ["coverage:take-apart"],
+      "acceptedAnswers": ["The engineer took apart the broken engine."]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-47",
       "type": "fill_gaps",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters",
-        "typing"
-      ],
+      "allowedModes": ["tiles", "letters", "typing"],
       "prompt": "Complete the sentence about returning a defective appliance to the retailer.",
       "explanation": "'Take back' means to return purchased goods to a store for refund or exchange.",
       "template": "She had to ___ the defective toaster ___ to the shop.",
@@ -1552,75 +1011,39 @@
           "answer": "back"
         }
       ],
-      "wordBank": [
-        "take",
-        "back",
-        "look",
-        "over",
-        "pick"
-      ],
-      "tags": [
-        "coverage:take-back"
-      ]
+      "wordBank": ["take", "back", "look", "over", "pick"],
+      "tags": ["coverage:take-back"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-48",
       "type": "find_error",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "letters"
-      ],
+      "allowedModes": ["tiles", "letters"],
       "prompt": "Find the error in the sentence about being deceived by a clever con artist.",
       "explanation": "'Be taken in' means to be fooled or deceived by a trickster. We say 'taken in', not 'taken out'.",
-      "sentence": [
-        "Investors",
-        "were",
-        "completely",
-        "taken",
-        "out",
-        "by",
-        "the",
-        "fraud."
-      ],
+      "sentence": ["Investors", "were", "completely", "taken", "out", "by", "the", "fraud."],
       "wrongIndex": 4,
       "correction": "in",
-      "options": [
-        "in",
-        "over",
-        "off"
-      ],
-      "tags": [
-        "coverage:take-in"
-      ]
+      "options": ["in", "over", "off"],
+      "tags": ["coverage:take-in"]
     },
     {
       "id": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices-49",
       "type": "question_for_answer",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 2,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Your friend wants to treat their partner to an evening at a restaurant. Ask where they are going.",
-      "explanation": "'Take someone out' means to entertain someone at a venue and cover expenses.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend wants to treat his girlfriend to an evening at a restaurant. Ask him where he is inviting her to go (use a phrasal verb).",
+      "explanation": "'Take someone out' means to invite someone to a restaurant, cinema, etc., usually paying for them: 'Where are you taking her out to?'",
       "givenAnswer": "We are going to that new Italian bistro downtown.",
-      "answer": [
-        "Where",
-        "are",
-        "you",
-        "taking",
-        "her?"
-      ],
-      "distractors": [
-        "over",
-        "in",
-        "after"
-      ],
-      "tags": [
-        "coverage:take-out"
+      "answer": ["Where", "are", "you", "taking", "her", "out", "to?"],
+      "distractors": ["over", "in", "after"],
+      "tags": ["coverage:take-out"],
+      "acceptedAnswers": [
+        "Where are you taking her out?",
+        "Where are you going to take her out?",
+        "Where are you going to take her out to?"
       ]
     },
     {
@@ -1628,29 +1051,16 @@
       "type": "build_phrase",
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 3,
-      "allowedModes": [
-        "tiles",
-        "typing"
-      ],
-      "prompt": "Remind your colleague not to vent bad mood onto the innocent team members.",
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell your colleague not to vent their anger on colleagues (use a phrasal verb).",
       "explanation": "'Take something out on someone' means to treat innocent people poorly because of unrelated frustrations.",
-      "answer": [
-        "Do",
-        "not",
-        "take",
-        "your",
-        "anger",
-        "out",
-        "on",
-        "colleagues."
-      ],
-      "distractors": [
-        "over",
-        "in",
-        "up"
-      ],
-      "tags": [
-        "coverage:take-out-on"
+      "answer": ["Do", "not", "take", "your", "anger", "out", "on", "colleagues."],
+      "distractors": ["over", "in", "up"],
+      "tags": ["coverage:take-out-on"],
+      "acceptedAnswers": [
+        "Don't take your anger out on colleagues.",
+        "Do not take out your anger on colleagues.",
+        "Don't take out your anger on colleagues."
       ]
     },
     {
@@ -1659,7 +1069,7 @@
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "State that Nia assumed control of the project after her manager left.",
+      "prompt": "State that Nia assumed control of the project after her manager left (use a phrasal verb).",
       "explanation": "'Take over' means to take charge or control of something.",
       "answer": ["Nia", "took", "over", "the", "project", "after", "her", "manager", "left."],
       "distractors": ["up", "off", "apart"],
@@ -1672,7 +1082,7 @@
       "topicId": "en-phrasal_verbs-m1-social-interaction-attitudes-and-choices",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Say that you accepted your friend’s offer of a coastal visit.",
+      "prompt": "Say that you accepted your friend’s offer of a coastal visit (use a phrasal verb).",
       "explanation": "'Take someone up on an offer' means to accept an offer or opportunity.",
       "answer": ["I", "took", "my", "friend", "up", "on", "the", "offer."],
       "distractors": ["over", "out", "off"],

@@ -234,16 +234,7 @@
       "allowedModes": ["tiles", "letters"],
       "prompt": "Find the error in the sentence about a malfunctioning machine.",
       "explanation": "'Act up' means to malfunction or misbehave. The phrase is 'acting up', not 'acting down'.",
-      "sentence": [
-        "My",
-        "old",
-        "car",
-        "engine",
-        "is",
-        "acting",
-        "down",
-        "again."
-      ],
+      "sentence": ["My", "old", "car", "engine", "is", "acting", "down", "again."],
       "wrongIndex": 6,
       "correction": "up",
       "options": ["up", "off", "out"],
@@ -291,12 +282,16 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Invite a friend to visit your home unexpectedly whenever they are nearby.",
+      "prompt": "Tell a friend that they are welcome to visit you without arranging it, any time — start with \"Feel free\" (use a phrasal verb).",
       "explanation": "'Drop in' means to pay a short, unexpected visit to someone.",
       "answer": ["Feel", "free", "to", "drop", "in", "anytime."],
       "distractors": ["out", "off", "up"],
       "tags": ["coverage:drop-in"],
-      "acceptedAnswers": ["Feel free to drop in any time.", "You can drop in any time.", "Please drop in any time."]
+      "acceptedAnswers": [
+        "Feel free to drop in any time.",
+        "You can drop in any time.",
+        "Please drop in any time."
+      ]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-05",
@@ -304,7 +299,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Your classmate says: «She left university before finishing her degree.» Ask what made her leave school early.",
+      "prompt": "Your classmate says: «She left university before finishing her degree.» Ask what made her leave school early (use a phrasal verb).",
       "explanation": "'Drop out' means to stop attending school, college, or a course before graduating.",
       "givenAnswer": "She left university before finishing her degree.",
       "answer": ["Why", "did", "she", "drop", "out?"],
@@ -318,12 +313,16 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Tell the children to stop wasting time playing foolishly and start studying.",
+      "prompt": "Tell the children to stop wasting time being silly and do their homework (use a phrasal verb).",
       "explanation": "'Fool around' means to waste time doing silly or unproductive things.",
       "answer": ["Stop", "fooling", "around", "and", "do", "your", "homework."],
       "distractors": ["up", "out", "off"],
       "tags": ["coverage:fool-around"],
-      "acceptedAnswers": ["Stop goofing around and do your homework.", "Stop messing around and do your homework."]
+      "acceptedAnswers": [
+        "Stop goofing around and do your homework.",
+        "Stop messing around and do your homework.",
+        "Stop fooling around and do your homework!"
+      ]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-07",
@@ -388,7 +387,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "You need a moment to check something during a phone call. Ask the caller to wait briefly.",
+      "prompt": "You need a moment to check something during a phone call. Ask the caller to wait briefly (use a phrasal verb).",
       "explanation": "'Hang on' means to wait for a short time, especially during a conversation or phone call.",
       "givenAnswer": "Sure, I can wait.",
       "answer": ["Can", "you", "hang", "on?"],
@@ -407,7 +406,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Say that you and your friends usually spend time together at the local cafe.",
+      "prompt": "Say that you and your friends usually spend relaxed time together at the cafe (use a phrasal verb).",
       "explanation": "'Hang out' means to spend relaxing leisure time in a specific place or with friends.",
       "answer": ["We", "usually", "hang", "out", "at", "the", "cafe."],
       "distractors": ["up", "off", "in"],
@@ -440,11 +439,16 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Tell your friend to move faster so you do not miss the bus.",
+      "prompt": "Tell your friend to move faster, or you will both miss the bus (use a phrasal verb).",
       "explanation": "'Hurry up' means to do something more quickly or move faster.",
       "answer": ["Hurry", "up", "or", "we", "will", "miss", "the", "bus."],
       "distractors": ["out", "down", "off"],
-      "tags": ["coverage:hurry-up"]
+      "tags": ["coverage:hurry-up"],
+      "acceptedAnswers": [
+        "Hurry up or we'll miss the bus.",
+        "Hurry up, or we will miss the bus.",
+        "Hurry up, or we'll miss the bus."
+      ]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-14",
@@ -469,17 +473,7 @@
       "allowedModes": ["tiles", "letters"],
       "prompt": "Find the incorrect word in this sentence about someone being forced to leave.",
       "explanation": "'Kick out' means to force or order someone to leave a place or organization.",
-      "sentence": [
-        "He",
-        "was",
-        "kicked",
-        "off",
-        "of",
-        "the",
-        "club",
-        "for",
-        "fighting."
-      ],
+      "sentence": ["He", "was", "kicked", "off", "of", "the", "club", "for", "fighting."],
       "wrongIndex": 3,
       "correction": "out",
       "options": ["out", "up", "down"],
@@ -491,11 +485,12 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Describe spending your day off resting on the couch without doing chores.",
+      "prompt": "Say that you just want to rest and do nothing all day (use a phrasal verb).",
       "explanation": "'Lie around' means to recline, rest, and do very little productive activity.",
       "answer": ["I", "just", "want", "to", "lie", "around", "all", "day."],
       "distractors": ["out", "up", "off"],
-      "tags": ["coverage:lie-around"]
+      "tags": ["coverage:lie-around"],
+      "acceptedAnswers": ["I just want to lie around all day long."]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-17",
@@ -503,7 +498,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Your coworker is wasting time at their desk. Ask them why they are wasting time instead of working.",
+      "prompt": "Your coworker is wasting time at their desk. Ask them why they are wasting time instead of working (use a phrasal verb).",
       "explanation": "'Mess around' means to spend time doing silly or unproductive things.",
       "givenAnswer": "I was just checking my emails.",
       "answer": ["Why", "are", "you", "messing", "around?"],
@@ -557,7 +552,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Report that Maria remained away from home until midnight on Saturday.",
+      "prompt": "Report that Maria remained away from home until midnight on Saturday (use a phrasal verb).",
       "explanation": "'Stay out' means to remain away from home during the evening or night.",
       "tags": ["coverage:stay-out"],
       "answer": ["Maria", "stayed", "out", "until", "midnight", "on", "Saturday."],
@@ -605,7 +600,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Form a sentence saying that the children always misbehave in class.",
+      "prompt": "Form a sentence saying that the children always misbehave in class (use a phrasal verb).",
       "explanation": "'Act up' means to misbehave or cause trouble, especially when referring to children.",
       "answer": ["The", "children", "always", "act", "up", "in", "class."],
       "distractors": ["down", "out", "acting"],
@@ -637,7 +632,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Your colleague says: «I could barely keep my eyes open during the presentation.» Ask whether they briefly fell asleep.",
+      "prompt": "Your colleague says: «I could barely keep my eyes open during the presentation.» Ask whether they briefly fell asleep (use a phrasal verb).",
       "explanation": "'Doze off' means to fall into a light sleep unintentionally.",
       "givenAnswer": "Yes, I did.",
       "answer": ["Did", "you", "doze", "off", "during", "the", "presentation?"],
@@ -651,12 +646,18 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Tell your friend that they can visit unexpectedly at any time.",
+      "prompt": "Tell your friend that they can visit unexpectedly at any time (use a phrasal verb).",
       "explanation": "'Drop in' means to pay a short, unannounced visit to someone.",
       "answer": ["You", "can", "drop", "in", "whenever", "you", "want."],
       "distractors": ["out", "by", "dropping"],
       "tags": ["coverage:drop-in"],
-      "acceptedAnswers": ["You can drop in any time.", "Please drop in any time.", "Feel free to drop in any time."]
+      "acceptedAnswers": [
+        "You can drop in any time.",
+        "You can drop in anytime.",
+        "You can drop in whenever you like.",
+        "Please drop in any time.",
+        "Feel free to drop in any time."
+      ]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-27",
@@ -666,17 +667,7 @@
       "allowedModes": ["tiles", "letters"],
       "prompt": "Find the incorrect word in the sentence.",
       "explanation": "When leaving a course or school before graduating, the correct phrasal verb is 'drop out of'.",
-      "sentence": [
-        "He",
-        "decided",
-        "to",
-        "drop",
-        "off",
-        "of",
-        "college",
-        "last",
-        "year."
-      ],
+      "sentence": ["He", "decided", "to", "drop", "off", "of", "college", "last", "year."],
       "wrongIndex": 4,
       "correction": "out",
       "options": ["out", "down", "away"],
@@ -704,7 +695,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Tell someone that you usually rise from bed at seven o'clock.",
+      "prompt": "Tell someone that you usually rise from bed at seven o'clock (use a phrasal verb).",
       "explanation": "'Get up' refers to physically getting out of bed, as opposed to 'wake up' which means stopping sleep.",
       "answer": ["I", "usually", "get", "up", "at", "seven", "o'clock."],
       "distractors": ["out", "wake", "getting"],
@@ -716,11 +707,14 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Tell your teacher that you and your friends wasted time playing instead of studying.",
+      "prompt": "Tell your teacher that you and your friends wasted time playing instead of studying (use a phrasal verb).",
       "explanation": "'Goof around' is informal and means to waste time doing silly or lighthearted things. 'Fool around' and 'mess around' can be used in the same sense.",
       "answer": ["We", "goofed", "around", "instead", "of", "studying."],
       "distractors": ["up", "away", "out"],
-      "acceptedAnswers": ["We fooled around instead of studying.", "We messed around instead of studying."],
+      "acceptedAnswers": [
+        "We fooled around instead of studying.",
+        "We messed around instead of studying."
+      ],
       "tags": ["coverage:goof-around"]
     },
     {
@@ -750,12 +744,16 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Tell someone on the phone to wait for a moment.",
+      "prompt": "Tell someone on the phone to wait for a moment (use a phrasal verb).",
       "explanation": "'Hang on' is an informal way to ask someone to wait briefly.",
       "answer": ["Please", "hang", "on", "for", "a", "moment."],
       "distractors": ["out", "up", "hanging"],
       "tags": ["coverage:hang-on"],
-      "acceptedAnswers": ["Hang on for a moment.", "Hold on for a moment.", "Please hold on for a moment."]
+      "acceptedAnswers": [
+        "Hang on for a moment.",
+        "Hold on for a moment.",
+        "Please hold on for a moment."
+      ]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-33",
@@ -779,7 +777,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Your friend says: «He ended our phone call during the argument.» Ask why he ended the call.",
+      "prompt": "Your friend says: «He ended our phone call during the argument.» Ask why he ended the call (use a phrasal verb).",
       "explanation": "'Hang up' means to end a telephone conversation.",
       "givenAnswer": "He was angry with me.",
       "answer": ["Why", "did", "he", "hang", "up?"],
@@ -793,21 +791,17 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Tell your group that they need to move faster or they will be late.",
+      "prompt": "Tell your group that we must move faster or we will be late (use a phrasal verb).",
       "explanation": "'Hurry up' means to act or move more quickly.",
-      "answer": [
-        "We",
-        "must",
-        "hurry",
-        "up",
-        "or",
-        "we",
-        "will",
-        "be",
-        "late."
-      ],
+      "answer": ["We", "must", "hurry", "up", "or", "we", "will", "be", "late."],
       "distractors": ["down", "out", "hurrying"],
-      "tags": ["coverage:hurry-up"]
+      "tags": ["coverage:hurry-up"],
+      "acceptedAnswers": [
+        "We must hurry up or we'll be late.",
+        "We have to hurry up or we will be late.",
+        "We have to hurry up or we'll be late.",
+        "We need to hurry up or we will be late."
+      ]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-36",
@@ -860,20 +854,12 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Say that you spent Sunday doing nothing productive on the sofa.",
+      "prompt": "Say that you just wanted to rest and do nothing all Sunday (use a phrasal verb).",
       "explanation": "'Lie around' means to spend time reclining lazily without doing anything active.",
-      "answer": [
-        "I",
-        "just",
-        "wanted",
-        "to",
-        "lie",
-        "around",
-        "all",
-        "Sunday."
-      ],
+      "answer": ["I", "just", "wanted", "to", "lie", "around", "all", "Sunday."],
       "distractors": ["out", "down", "lying"],
-      "tags": ["coverage:lie-around"]
+      "tags": ["coverage:lie-around"],
+      "acceptedAnswers": ["I just wanted to lie around all day on Sunday."]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-39",
@@ -881,7 +867,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Your friends say they were in the kitchen. Ask why they were wasting time instead of cooking.",
+      "prompt": "Your friends say they were in the kitchen. Ask why they were wasting time instead of cooking (use a phrasal verb).",
       "explanation": "'Mess around' means to waste time playing or doing unimportant things.",
       "givenAnswer": "We were bored, so we were playing silly games instead of cooking.",
       "answer": ["Why", "were", "you", "messing", "around?"],
@@ -895,11 +881,19 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 2,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Tell your sister not to disorganize your clean bedroom.",
+      "prompt": "Politely ask your sister not to make your room untidy (use a phrasal verb).",
       "explanation": "'Mess up' means to make a place dirty or untidy, or to ruin a plan.",
       "answer": ["Please", "do", "not", "mess", "up", "my", "room."],
       "distractors": ["out", "around", "messed"],
-      "tags": ["coverage:mess-up"]
+      "tags": ["coverage:mess-up"],
+      "acceptedAnswers": [
+        "Please don't mess up my room.",
+        "Please do not mess my room up.",
+        "Please don't mess my room up.",
+        "Don't mess up my room.",
+        "Do not mess up my room.",
+        "Don't mess my room up."
+      ]
     },
     {
       "id": "en-phrasal_verbs-m1-daily-routines-41",
@@ -910,15 +904,7 @@
       "prompt": "One word is wrong. Tap it and choose the correction.",
       "explanation": "To fall into a light sleep unintentionally, use 'nod off', not 'nod out'.",
       "tags": ["coverage:nod-off"],
-      "sentence": [
-        "Grandfather",
-        "tends",
-        "to",
-        "nod",
-        "out",
-        "after",
-        "lunch."
-      ],
+      "sentence": ["Grandfather", "tends", "to", "nod", "out", "after", "lunch."],
       "wrongIndex": 4,
       "correction": "off",
       "options": ["off", "up", "away", "down"]
@@ -929,7 +915,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Give a rule for teenagers about what time they should return home on school nights.",
+      "prompt": "State the rule that teenagers should not remain away from home until late (use a phrasal verb).",
       "explanation": "'Stay out' means to remain away from home instead of returning inside.",
       "tags": ["coverage:stay-out"],
       "answer": ["Teenagers", "should", "not", "stay", "out", "late."],
@@ -942,7 +928,7 @@
       "topicId": "en-phrasal_verbs-m1-daily-routines",
       "difficulty": 3,
       "allowedModes": ["tiles", "typing"],
-      "prompt": "Your friend says: «I worked until 3:00 AM to finish my report.» Ask why she was awake so late.",
+      "prompt": "Your friend says: «I worked until 3:00 AM to finish my report.» Ask her why she was awake so late (use a phrasal verb).",
       "explanation": "'Stay up' means to go to bed later than usual. Form the past question with 'Why did you stay up...?'",
       "tags": ["coverage:stay-up"],
       "givenAnswer": "I had to finish my report.",
