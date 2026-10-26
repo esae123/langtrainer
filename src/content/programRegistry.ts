@@ -136,27 +136,63 @@ export async function putImportedProgram(program: Program, fileName?: string): P
   });
 }
 
-async function deleteProgramProgress(programId: string): Promise<void> {
+/** The installed course with this id (bundled or imported), read inside a transaction. */
+async function findProgram(programId: string): Promise<Program | undefined> {
+  const bundled = getProgramSync(programId);
+  if (bundled) return bundled;
+  const row = await db.programs.get(programId);
+  return (row && usableProgram(row.program)) ?? undefined;
+}
+
+/**
+ * Deletes everything recorded for a course: topic progress, custom topics, session rows
+ * and attempts. Attempts are written per answer but the session row only at the end, so
+ * an unfinished session's attempts have no session row: they are matched by the course's
+ * topic / phrase-set ids (`contentIds`, plus the ids of its progress rows and custom
+ * topics) and by `extraSessionIds` (the saved in-progress session).
+ */
+async function deleteProgramProgress(
+  programId: string,
+  contentIds: readonly string[],
+  extraSessionIds: readonly string[] = []
+): Promise<void> {
+  const progressTopicIds = (
+    await db.topicProgress.where('programId').equals(programId).toArray()
+  ).map((row) => row.topicId);
+  const customTopics = await db.customTopics.filter((row) => row.programId === programId).toArray();
+  const topicIds = [
+    ...new Set([...contentIds, ...progressTopicIds, ...customTopics.map((row) => row.topic.id)]),
+  ];
   await db.topicProgress.where('programId').equals(programId).delete();
-  await db.customTopics.filter((row) => row.programId === programId).delete();
+  await db.customTopics.bulkDelete(customTopics.map((row) => row.id));
   const sessionIds = (await db.sessions.filter((row) => row.programId === programId).toArray()).map(
     (row) => row.id
   );
-  if (sessionIds.length > 0) {
-    await db.attempts.where('sessionId').anyOf(sessionIds).delete();
-    await db.sessions.bulkDelete(sessionIds);
+  const attemptSessionIds = [...new Set([...sessionIds, ...extraSessionIds])];
+  if (attemptSessionIds.length > 0) {
+    await db.attempts.where('sessionId').anyOf(attemptSessionIds).delete();
   }
+  if (topicIds.length > 0) await db.attempts.where('topicId').anyOf(topicIds).delete();
+  if (sessionIds.length > 0) await db.sessions.bulkDelete(sessionIds);
 }
 
-/** Clears only the selected course's progress, session history, attempts and custom topics. */
+/**
+ * Clears only the selected course's progress, session history, attempts (those of an
+ * unfinished session included) and custom topics.
+ */
 export async function resetProgramProgress(programId: string): Promise<void> {
   await db.transaction(
     'rw',
-    [db.settings, db.topicProgress, db.sessions, db.attempts, db.customTopics],
+    [db.programs, db.settings, db.topicProgress, db.sessions, db.attempts, db.customTopics],
     async () => {
+      const program = await findProgram(programId);
       const saved = await readActiveSession();
-      if (saved?.state.programId === programId) await clearActiveSession();
-      await deleteProgramProgress(programId);
+      const savedSessionIds: string[] = [];
+      if (saved?.state.programId === programId) {
+        savedSessionIds.push(saved.state.sessionId);
+        await clearActiveSession();
+      }
+      await deleteProgramProgress(programId, program ? contentIdsOf(program) : [], savedSessionIds);
     }
   );
 }
@@ -164,8 +200,8 @@ export async function resetProgramProgress(programId: string): Promise<void> {
 /**
  * Removes an imported course. A saved in-progress session of that course is always
  * dropped (it could never be resumed). `deleteProgress` also drops everything recorded
- * for it: topic progress, session rows, the attempts of those sessions and the learner's
- * custom topics of that course.
+ * for it: topic progress, session rows, every attempt on its topics (an unfinished
+ * session's included) and the learner's custom topics of that course.
  */
 export async function removeImportedProgram(
   programId: string,
@@ -175,11 +211,16 @@ export async function removeImportedProgram(
     'rw',
     [db.programs, db.settings, db.topicProgress, db.sessions, db.attempts, db.customTopics],
     async () => {
+      const program = await findProgram(programId);
       await db.programs.delete(programId);
       const saved = await readActiveSession();
-      if (saved && saved.state.programId === programId) await clearActiveSession();
+      const savedSessionIds: string[] = [];
+      if (saved && saved.state.programId === programId) {
+        savedSessionIds.push(saved.state.sessionId);
+        await clearActiveSession();
+      }
       if (!deleteProgress) return;
-      await deleteProgramProgress(programId);
+      await deleteProgramProgress(programId, program ? contentIdsOf(program) : [], savedSessionIds);
     }
   );
 

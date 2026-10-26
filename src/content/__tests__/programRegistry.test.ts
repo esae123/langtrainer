@@ -10,6 +10,7 @@ import {
   programCounts,
   putImportedProgram,
   removeImportedProgram,
+  resetProgramProgress,
   resolveActiveEntry,
 } from '../programRegistry';
 import type { Program } from '../types';
@@ -302,6 +303,49 @@ describe('putImportedProgram / removeImportedProgram', () => {
     await removeImportedProgram('en-b2', false);
 
     expect((await loadSettings()).activeProgramId).toBe('fr-a2');
+  });
+});
+
+describe('resetProgramProgress', () => {
+  const attempt = (id: string, sessionId: string, topicId: string) => ({
+    id,
+    sessionId,
+    exerciseId: `${id}-e`,
+    topicId,
+    mode: 'tiles' as const,
+    correct: true,
+    answer: 'x',
+    at: 1,
+  });
+
+  it("also deletes an unfinished session's attempts, which have no session row yet", async () => {
+    await putImportedProgram(makeCourse('en-b2', ['en-b2-m1-work'], ['en-b2-ps']));
+    await saveActiveSession(savedSessionOf('en-b2'));
+    await db.attempts.bulkPut([
+      // The saved, unfinished session: attempts written per answer, no sessions row.
+      attempt('a-saved', 's-en-b2', 'en-b2-m1-work'),
+      // An older unfinished session that was never recorded: matched by topic id.
+      attempt('a-orphan', 's-lost', 'en-b2-ps'),
+      attempt('a-pt', 's-pt', 'm1-greetings'),
+    ]);
+
+    await resetProgramProgress('en-b2');
+
+    expect(await db.attempts.get('a-saved')).toBeUndefined();
+    expect(await db.attempts.get('a-orphan')).toBeUndefined();
+    expect(await db.attempts.get('a-pt')).toBeDefined();
+    expect(await readActiveSession()).toBeNull();
+  });
+
+  it("keeps another course's saved session and attempts", async () => {
+    await saveActiveSession(savedSessionOf(BUNDLED_ID));
+    await db.attempts.bulkPut([attempt('a-pt', `s-${BUNDLED_ID}`, 'm1-greetings')]);
+    await putImportedProgram(makeCourse('en-b2', ['en-b2-m1-work']));
+
+    await resetProgramProgress('en-b2');
+
+    expect(await db.attempts.get('a-pt')).toBeDefined();
+    expect((await readActiveSession())?.state.programId).toBe(BUNDLED_ID);
   });
 });
 
