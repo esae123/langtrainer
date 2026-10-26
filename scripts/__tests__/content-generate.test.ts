@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import type { ContentProblem } from '../../src/content/contentRules.ts';
@@ -30,6 +30,26 @@ import {
   type Cli,
   type TopicJob,
 } from '../content-generate.ts';
+
+// A topic that has a brief but no file yet, found at run time so these tests do not break as
+// content gets written (pt-PT-A1 is complete; en-b2 briefs are used while they still lack files).
+function topicWithoutFile(): { program: string; topic: string } | undefined {
+  for (const program of ['pt-PT-A1', 'en-b2']) {
+    const modulesDir = path.join(REPO_ROOT, 'content', program, 'modules');
+    if (!existsSync(modulesDir)) continue;
+    for (const file of readdirSync(modulesDir).filter((f) => f.endsWith('.json'))) {
+      const mod = JSON.parse(readFileSync(path.join(modulesDir, file), 'utf8')) as {
+        topics?: { id: string }[];
+      };
+      for (const t of mod.topics ?? []) {
+        if (!existsSync(path.join(REPO_ROOT, 'content', program, 'topics', `${t.id}.json`)))
+          return { program, topic: t.id };
+      }
+    }
+  }
+  return undefined;
+}
+const unwritten = topicWithoutFile();
 
 function fakeCli(overrides: Partial<Cli> = {}): Cli {
   return {
@@ -167,7 +187,11 @@ function geminiDailyQuota429(retryDelay = '7200s'): Response {
 }
 
 /** A minimal well-formed fetch Response for a successful OpenAI chat completions call. */
-function openAiOk(content: unknown, finishReason = 'stop', usage?: Record<string, number>): Response {
+function openAiOk(
+  content: unknown,
+  finishReason = 'stop',
+  usage?: Record<string, number>
+): Response {
   const text = typeof content === 'string' ? content : JSON.stringify(content);
   return {
     ok: true,
@@ -198,7 +222,10 @@ function openAiInsufficientQuota(): Response {
   );
 }
 
-function openAiRequestBody(fetchMock: ReturnType<typeof vi.fn>, call: number): Record<string, unknown> {
+function openAiRequestBody(
+  fetchMock: ReturnType<typeof vi.fn>,
+  call: number
+): Record<string, unknown> {
   return JSON.parse(fetchMock.mock.calls[call][1].body as string) as Record<string, unknown>;
 }
 
@@ -485,14 +512,12 @@ describe('retryDelayMs', () => {
 
 describe('generateAndRepair — repair loop', () => {
   it('does not call the repair prompt when the first validation has no blocking problems', async () => {
-    const fetchMock = vi
-      .fn()
-      .mockResolvedValue(
-        geminiOk({
-          id: 'm2-classroom-objects',
-          exercises: fakeExercises('m2-classroom-objects', 1, 20),
-        })
-      );
+    const fetchMock = vi.fn().mockResolvedValue(
+      geminiOk({
+        id: 'm2-classroom-objects',
+        exercises: fakeExercises('m2-classroom-objects', 1, 20),
+      })
+    );
     vi.stubGlobal('fetch', fetchMock);
     const validate = vi.fn().mockReturnValue([]);
 
@@ -566,7 +591,10 @@ describe('buildJobs — never overwrites without --force (review B2)', () => {
   });
 
   it('still builds a --topic job when there is no file yet', () => {
-    expect(buildJobs(fakeCli({ topic: 'm7-near-synonyms-suffix' }))).toHaveLength(1);
+    if (!unwritten) return; // every briefed topic already has a file
+    expect(buildJobs(fakeCli({ program: unwritten.program, topic: unwritten.topic }))).toHaveLength(
+      1
+    );
   });
 });
 
@@ -886,18 +914,21 @@ describe('callOpenAI', () => {
   });
 
   it('parses choices[0].message.content and usage/finish_reason', async () => {
-    const fetchMock = vi
-      .fn()
-      .mockResolvedValue(
-        openAiOk({ exercises: [{ id: 'x-01' }] }, 'stop', {
-          prompt_tokens: 100,
-          completion_tokens: 50,
-          total_tokens: 150,
-        })
-      );
+    const fetchMock = vi.fn().mockResolvedValue(
+      openAiOk({ exercises: [{ id: 'x-01' }] }, 'stop', {
+        prompt_tokens: 100,
+        completion_tokens: 50,
+        total_tokens: 150,
+      })
+    );
     vi.stubGlobal('fetch', fetchMock);
 
-    const result = await callOpenAI({ model: 'gpt-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' });
+    const result = await callOpenAI({
+      model: 'gpt-x',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+    });
     expect(JSON.parse(result.text)).toEqual({ exercises: [{ id: 'x-01' }] });
     expect(result.finishReason).toBe('stop');
     expect(result.usage).toEqual({ prompt_tokens: 100, completion_tokens: 50, total_tokens: 150 });
@@ -907,7 +938,12 @@ describe('callOpenAI', () => {
     const fetchMock = vi.fn().mockResolvedValue(openAiOk('{"exercises":[', 'length'));
     vi.stubGlobal('fetch', fetchMock);
 
-    const result = await callOpenAI({ model: 'gpt-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' });
+    const result = await callOpenAI({
+      model: 'gpt-x',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+    });
     expect(result.finishReason).toBe('length');
   });
 
@@ -931,7 +967,9 @@ describe('callOpenAI', () => {
   it('retries 429 rate limits that are not insufficient_quota', async () => {
     const fetchMock = vi
       .fn()
-      .mockResolvedValueOnce(openAiError(429, JSON.stringify({ error: { type: 'rate_limit_exceeded' } })))
+      .mockResolvedValueOnce(
+        openAiError(429, JSON.stringify({ error: { type: 'rate_limit_exceeded' } }))
+      )
       .mockResolvedValueOnce(openAiOk({ exercises: [] }));
     vi.stubGlobal('fetch', fetchMock);
 
@@ -1186,10 +1224,7 @@ describe('deletes a stale draft after a successful write (review item 2)', () =>
   it('removes _draft-<id>.json once the real file is written', async () => {
     const job = fakeTopicJob({ topicId: 'm2-zz-draft-cleanup-test', count: 20 });
     const draft = draftPath(job);
-    const outPath = path.join(
-      REPO_ROOT,
-      'content/pt-PT-A1/topics/m2-zz-draft-cleanup-test.json'
-    );
+    const outPath = path.join(REPO_ROOT, 'content/pt-PT-A1/topics/m2-zz-draft-cleanup-test.json');
     vi.spyOn(console, 'log').mockImplementation(() => {});
     writeFileSync(draft, '{}\n', 'utf8');
     vi.stubGlobal(
@@ -1427,7 +1462,12 @@ describe('OpenAI content null with finish_reason "length" is a cut-off, not fata
     } as unknown as Response);
     vi.stubGlobal('fetch', fetchMock);
 
-    const result = await callOpenAI({ model: 'gpt-x', apiKey: 'k', systemPrompt: 's', userPrompt: 'u' });
+    const result = await callOpenAI({
+      model: 'gpt-x',
+      apiKey: 'k',
+      systemPrompt: 's',
+      userPrompt: 'u',
+    });
     expect(result.finishReason).toBe('length');
     expect(result.text).toBe('');
   });
@@ -1481,9 +1521,7 @@ describe('drafts are Prettier-formatted (nit)', () => {
 
 describe('--topic + --module for the same topic is queued only once (nit)', () => {
   it('does not duplicate a topic that is both --topic and inside --module', () => {
-    const jobs = buildJobs(
-      fakeCli({ topic: 'm2-family-pets', module: 'm2', force: true })
-    );
+    const jobs = buildJobs(fakeCli({ topic: 'm2-family-pets', module: 'm2', force: true }));
     const matches = jobs.filter((j) => j.kind === 'topic' && j.topicId === 'm2-family-pets');
     expect(matches).toHaveLength(1);
   });
@@ -1582,11 +1620,7 @@ describe('Feature A — resume from draft (default behaviour)', () => {
     silenceConsole();
     const exercises = validExercises(id, 1, 20);
     exercises[13] = { ...exercises[13], prompt: '' }; // id "<id>-14" is now invalid (empty prompt)
-    writeFileSync(
-      draftPath(job),
-      JSON.stringify({ ...validHeader(id), exercises }),
-      'utf8'
-    );
+    writeFileSync(draftPath(job), JSON.stringify({ ...validHeader(id), exercises }), 'utf8');
     const fetchMock = vi
       .fn()
       .mockResolvedValue(geminiOk({ exercises: validExercises(id, 14, 14) }));
@@ -1699,9 +1733,9 @@ describe('Feature A — resume from draft (default behaviour)', () => {
       JSON.stringify({ ...validHeader(id), exercises: validExercises(id, 1, 20) }),
       'utf8'
     );
-    const fetchMock = vi.fn().mockResolvedValue(
-      geminiOk({ ...validHeader(id), exercises: validExercises(id, 1, 20) })
-    );
+    const fetchMock = vi
+      .fn()
+      .mockResolvedValue(geminiOk({ ...validHeader(id), exercises: validExercises(id, 1, 20) }));
     vi.stubGlobal('fetch', fetchMock);
 
     try {
@@ -1724,18 +1758,19 @@ describe('Feature A — resume from draft (default behaviour)', () => {
 
 describe('Feature B — buildJobs --add', () => {
   it('errors when --add is combined with --module or --phrases', () => {
-    expect(() =>
-      buildJobs(fakeCli({ topic: 'm2-family-pets', add: 10, module: 'm2' }))
-    ).toThrow(/--add only works with --topic/);
+    expect(() => buildJobs(fakeCli({ topic: 'm2-family-pets', add: 10, module: 'm2' }))).toThrow(
+      /--add only works with --topic/
+    );
     expect(() =>
       buildJobs(fakeCli({ topic: 'm2-family-pets', add: 10, phrases: 'everyday-2' }))
     ).toThrow(/--add only works with --topic/);
   });
 
   it('errors when the final topic file does not exist yet', () => {
-    expect(() => buildJobs(fakeCli({ topic: 'm7-near-synonyms-suffix', add: 10 }))).toThrow(
-      /--add requires an existing topic file/
-    );
+    if (!unwritten) return;
+    expect(() =>
+      buildJobs(fakeCli({ program: unwritten.program, topic: unwritten.topic, add: 10 }))
+    ).toThrow(/--add requires an existing topic file/);
   });
 
   it('builds a job with appendFrom = existing exercise count and count = existing + n', () => {

@@ -1,0 +1,668 @@
+{
+  "id": "m6-travel-tourism",
+  "moduleId": "m6",
+  "title": "Travel and tourism",
+  "kind": "vocabulary",
+  "context": "# Travel and Tourism in Portugal\n\nPortugal is one of Europe's top travel destinations, famous for its historic cities, sunny beaches, and cultural heritage. Whether you are booking a room in Lisbon, relaxing on a beach in the Algarve, or exploring castles in Sintra, travel vocabulary is essential.\n\n### Hotels and Accommodation\nWhen arriving at a hotel, you check in at **a receção** (reception) and ask about your reservation:\n- **Tenho uma reserva em nome de Maria.** — I have a reservation under the name of Maria.\n- **Queria um quarto duplo para duas noites.** — I would like a double room for two nights.\n- **O pequeno-almoço está incluído?** — Is breakfast included?\n- **Aqui tem a chave do quarto.** — Here is the room key.\n\n### Sightseeing and Attractions\nTo explore towns and sights, you can visit monuments, take a tour, or admire the view:\n- **Vamos visitar o castelo e o museu.** — We are going to visit the castle and the museum.\n- **Queremos fazer uma visita guiada.** — We want to do a guided tour.\n- **A praia fica perto do hotel.** — The beach is near the hotel.\n- **O miradouro tem uma vista fantástica sobre a cidade.** — The viewpoint has a fantastic view over the city.\n\n**Watch out!**\n1. In Portugal, use **pequeno-almoço** for breakfast, never the Brazilian *café da manhã*.\n2. A scenic viewpoint is called a **miradouro**, a must-know word when visiting Portuguese cities.",
+  "keyItems": [
+    {
+      "target": "as férias",
+      "support": "the holidays / vacation"
+    },
+    {
+      "target": "o hotel",
+      "support": "the hotel"
+    },
+    {
+      "target": "a receção",
+      "support": "the reception desk",
+      "note": "spelled receção in Portugal"
+    },
+    {
+      "target": "a reserva",
+      "support": "the reservation / booking"
+    },
+    {
+      "target": "o quarto individual / duplo",
+      "support": "single / double room"
+    },
+    {
+      "target": "a chave do quarto",
+      "support": "the room key"
+    },
+    {
+      "target": "o pequeno-almoço incluído",
+      "support": "breakfast included",
+      "note": "pequeno-almoço in Portugal"
+    },
+    {
+      "target": "o monumento",
+      "support": "the monument"
+    },
+    {
+      "target": "o castelo",
+      "support": "the castle"
+    },
+    {
+      "target": "a praia",
+      "support": "the beach"
+    },
+    {
+      "target": "o museu",
+      "support": "the museum"
+    },
+    {
+      "target": "a visita guiada",
+      "support": "the guided tour"
+    },
+    {
+      "target": "o miradouro",
+      "support": "the scenic viewpoint",
+      "note": "common in Lisbon and Porto"
+    },
+    {
+      "target": "a vista sobre a cidade",
+      "support": "the view over the city"
+    },
+    {
+      "target": "o bilhete de entrada",
+      "support": "the admission ticket"
+    },
+    {
+      "target": "fazer uma reserva",
+      "support": "to make a reservation"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m6-travel-tourism-01",
+      "type": "translate_word",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Castelo» means castle in Portuguese. It is masculine: «o castelo».",
+      "direction": "toTarget",
+      "sentence": "Tomorrow we want to visit the ancient **castle**.",
+      "word": "castle",
+      "answer": "castelo",
+      "options": ["castelo", "palácio", "museu", "igreja"]
+    },
+    {
+      "id": "m6-travel-tourism-02",
+      "type": "translate_word",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Praia» means beach in Portuguese. It is feminine: «a praia».",
+      "direction": "toTarget",
+      "sentence": "The hotel is right in front of the **beach**.",
+      "word": "beach",
+      "answer": "praia",
+      "options": ["praia", "piscina", "praça", "rua"]
+    },
+    {
+      "id": "m6-travel-tourism-03",
+      "type": "translate_word",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Quarto» is the room in a hotel. It is masculine: «o quarto».",
+      "direction": "toTarget",
+      "sentence": "I have the key to our hotel **room**.",
+      "word": "room",
+      "answer": "quarto",
+      "options": ["quarto", "sala", "cama", "casa"]
+    },
+    {
+      "id": "m6-travel-tourism-04",
+      "type": "translate_word",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Férias» means holidays or vacation, almost always used in the plural: «as férias».",
+      "direction": "toTarget",
+      "sentence": "We are going to Portugal for our summer **vacation**.",
+      "word": "vacation",
+      "answer": "férias",
+      "options": ["férias", "viagem", "trabalho", "fim de semana"]
+    },
+    {
+      "id": "m6-travel-tourism-05",
+      "type": "translate_word",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Miradouro» is a scenic viewpoint overlooking a town or landscape.",
+      "direction": "toTarget",
+      "sentence": "This **viewpoint** offers a stunning panorama of Lisbon.",
+      "word": "viewpoint",
+      "answer": "miradouro",
+      "options": ["miradouro", "monumento", "mercado", "parque"]
+    },
+    {
+      "id": "m6-travel-tourism-06",
+      "type": "fill_gaps",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I have a reservation at the hotel.\"",
+      "explanation": "«Reserva» is feminine (uma reserva) and «hotel» is masculine (no hotel = em + o).",
+      "template": "Tenho ___ reserva ___ hotel.",
+      "gaps": [
+        {
+          "answer": "uma"
+        },
+        {
+          "answer": "no"
+        }
+      ],
+      "wordBank": ["uma", "no", "um", "na", "do"]
+    },
+    {
+      "id": "m6-travel-tourism-07",
+      "type": "fill_gaps",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"We want a double room for two nights.\"",
+      "explanation": "A double room is «um quarto duplo»; «noite» is feminine, so «duas noites» (for two nights = «para duas noites»).",
+      "template": "Queremos um quarto ___ para duas ___.",
+      "gaps": [
+        {
+          "answer": "duplo"
+        },
+        {
+          "answer": "noites"
+        }
+      ],
+      "wordBank": ["duplo", "noites", "individual", "dias", "horas"]
+    },
+    {
+      "id": "m6-travel-tourism-08",
+      "type": "fill_gaps",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Is breakfast included in the reservation?\"",
+      "explanation": "In Portugal, breakfast is «pequeno-almoço». «Incluído» is the masculine adjective.",
+      "template": "O ___ está ___ na reserva?",
+      "gaps": [
+        {
+          "answer": "pequeno-almoço"
+        },
+        {
+          "answer": "incluído"
+        }
+      ],
+      "wordBank": ["pequeno-almoço", "incluído", "almoço", "fechado", "pago"]
+    },
+    {
+      "id": "m6-travel-tourism-09",
+      "type": "fill_gaps",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Tomorrow we are going to visit the historic monument.\"",
+      "explanation": "Near future with «ir + infinitivo»: «vamos visitar o monumento histórico».",
+      "template": "Amanhã nós vamos ___ o ___ histórico.",
+      "gaps": [
+        {
+          "answer": "visitar"
+        },
+        {
+          "answer": "monumento"
+        }
+      ],
+      "wordBank": ["visitar", "monumento", "ver", "museu", "castelos"]
+    },
+    {
+      "id": "m6-travel-tourism-10",
+      "type": "fill_gaps",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The tourists take a guided tour of the castle.\"",
+      "explanation": "A guided tour is «uma visita guiada» (adjective agrees with feminine «visita»); «visita a» + «o castelo» → «ao castelo».",
+      "template": "Os turistas fazem uma visita ___ ao ___.",
+      "gaps": [
+        {
+          "answer": "guiada"
+        },
+        {
+          "answer": "castelo"
+        }
+      ],
+      "wordBank": ["guiada", "castelo", "livre", "hotel", "praia"]
+    },
+    {
+      "id": "m6-travel-tourism-11",
+      "type": "fill_gaps",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"At reception the receptionist gives us the room key.\"",
+      "explanation": "«Na receção» = em + a receção; the room key is «a chave do quarto» (de + o quarto = do quarto).",
+      "template": "Na ___, a rececionista dá-nos a ___ do ___.",
+      "gaps": [
+        {
+          "answer": "receção"
+        },
+        {
+          "answer": "chave"
+        },
+        {
+          "answer": "quarto"
+        }
+      ],
+      "wordBank": ["receção", "chave", "quarto", "entrada", "porta", "hotel"]
+    },
+    {
+      "id": "m6-travel-tourism-12",
+      "type": "fill_gaps",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"From the viewpoint we have a fantastic view over the city.\"",
+      "explanation": "«Do miradouro» = de + o miradouro (from the viewpoint); «uma vista sobre a cidade» is a view over the city.",
+      "template": "Do ___ temos uma ___ fantástica sobre a ___.",
+      "gaps": [
+        {
+          "answer": "miradouro"
+        },
+        {
+          "answer": "vista"
+        },
+        {
+          "answer": "cidade"
+        }
+      ],
+      "wordBank": ["miradouro", "vista", "cidade", "castelo", "casa", "praia"]
+    },
+    {
+      "id": "m6-travel-tourism-13",
+      "type": "build_phrase",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State your vacation plan: \"We are on vacation in the Algarve.\"",
+      "explanation": "«Estar de férias» is the set expression for being on holiday: «Estamos de férias no Algarve».",
+      "answer": ["Estamos", "de", "férias", "no", "Algarve."],
+      "distractors": ["em", "na", "com"],
+      "acceptedAnswers": ["Nós estamos de férias no Algarve."]
+    },
+    {
+      "id": "m6-travel-tourism-14",
+      "type": "build_phrase",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You work at reception. Hand one guest the key: \"Here is the room key.\"",
+      "explanation": "«Aqui tem…» (formal, one person) is the standard phrase when handing something over; «chave» is feminine and «do quarto» = de + o quarto.",
+      "answer": ["Aqui", "tem", "a", "chave", "do", "quarto."],
+      "distractors": ["têm", "o", "da"],
+      "acceptedAnswers": [
+        "Aqui tem a chave do quarto, faz favor.",
+        "Aqui tem a chave do quarto, por favor."
+      ]
+    },
+    {
+      "id": "m6-travel-tourism-15",
+      "type": "build_phrase",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State your arrival: \"I have a reservation under the name of Maria.\"",
+      "explanation": "«Em nome de…» means under the name of; «reserva» is feminine, so «uma reserva».",
+      "answer": ["Tenho", "uma", "reserva", "em", "nome", "de", "Maria."],
+      "distractors": ["um", "no", "do"],
+      "acceptedAnswers": [
+        "Eu tenho uma reserva em nome de Maria.",
+        "Tenho uma reserva em nome da Maria.",
+        "Eu tenho uma reserva em nome da Maria."
+      ]
+    },
+    {
+      "id": "m6-travel-tourism-16",
+      "type": "build_phrase",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask for a room: \"I would like a single room with a sea view.\"",
+      "explanation": "«Quarto individual» is a single room. «Vista para o mar» is a sea view.",
+      "answer": ["Queria", "um", "quarto", "individual", "com", "vista", "para", "o", "mar."],
+      "distractors": ["uma", "duplo", "no"],
+      "acceptedAnswers": ["Eu queria um quarto individual com vista para o mar."]
+    },
+    {
+      "id": "m6-travel-tourism-17",
+      "type": "build_phrase",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe the location: \"The hotel is very close to the beach.\"",
+      "explanation": "«Perto de» takes the contraction «da praia» (de + a = da).",
+      "answer": ["O", "hotel", "fica", "muito", "perto", "da", "praia."],
+      "distractors": ["A", "longe", "do"],
+      "acceptedAnswers": ["O hotel é muito perto da praia."]
+    },
+    {
+      "id": "m6-travel-tourism-18",
+      "type": "build_phrase",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Buy museum tickets: \"We want two tickets for the art museum.\"",
+      "explanation": "«Bilhete» is masculine, so two tickets is «dois bilhetes» (not «duas»); a ticket for something is «bilhete para».",
+      "answer": ["Queremos", "dois", "bilhetes", "para", "o", "museu", "de", "arte."],
+      "distractors": ["duas", "ao", "da"],
+      "acceptedAnswers": ["Nós queremos dois bilhetes para o museu de arte."]
+    },
+    {
+      "id": "m6-travel-tourism-19",
+      "type": "build_phrase",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Explain today's plan: \"Today we are going to visit the castle in Sintra.\"",
+      "explanation": "Near future = «ir» + infinitive: «vamos visitar». With a town name use «em» without an article: «em Sintra».",
+      "answer": ["Hoje", "vamos", "visitar", "o", "castelo", "em", "Sintra."],
+      "distractors": ["vai", "a", "no"],
+      "acceptedAnswers": [
+        "Nós hoje vamos visitar o castelo em Sintra.",
+        "Hoje nós vamos visitar o castelo em Sintra.",
+        "Vamos visitar o castelo em Sintra hoje."
+      ]
+    },
+    {
+      "id": "m6-travel-tourism-20",
+      "type": "build_phrase",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe a tour: \"The guided tour starts at ten in the morning.\"",
+      "explanation": "Clock times take «às» (a + as): «às dez»; «da manhã» marks the morning (10 a.m.). «Visita» is feminine: «a visita guiada».",
+      "answer": ["A", "visita", "guiada", "começa", "às", "dez", "da", "manhã."],
+      "distractors": ["O", "guiado", "nas"]
+    },
+    {
+      "id": "m6-travel-tourism-21",
+      "type": "build_phrase",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a guest the breakfast hours: \"Breakfast is served from seven to ten.\"",
+      "explanation": "\"From … to …\" with clock times is «das … às …» (de + as, a + as): «das sete às dez».",
+      "answer": ["O", "pequeno-almoço", "é", "servido", "das", "sete", "às", "dez."],
+      "distractors": ["A", "almoço", "nos"],
+      "acceptedAnswers": ["O pequeno-almoço é servido entre as sete e as dez."]
+    },
+    {
+      "id": "m6-travel-tourism-22",
+      "type": "build_phrase",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State a sightseeing activity: \"Many tourists take pictures at the viewpoint.\"",
+      "explanation": "«Tirar fotografias» = to take photos; «miradouro» is masculine, so «no miradouro» (em + o).",
+      "answer": ["Muitos", "turistas", "tiram", "fotografias", "no", "miradouro."],
+      "distractors": ["Muitas", "tiras", "na"],
+      "acceptedAnswers": ["Muitos turistas tiram fotos no miradouro."]
+    },
+    {
+      "id": "m6-travel-tourism-23",
+      "type": "build_phrase",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask for recommendations: \"Can you recommend a typical restaurant near the hotel?\" (formal)",
+      "explanation": "Formal requests use the 3rd person: «Pode…?» (not «Podes»); «perto de» + «o hotel» → «perto do hotel».",
+      "answer": ["Pode", "recomendar", "um", "restaurante", "típico", "perto", "do", "hotel?"],
+      "distractors": ["Podes", "uma", "da"],
+      "acceptedAnswers": [
+        "O senhor pode recomendar um restaurante típico perto do hotel?",
+        "Pode recomendar-me um restaurante típico perto do hotel?",
+        "Pode-me recomendar um restaurante típico perto do hotel?"
+      ]
+    },
+    {
+      "id": "m6-travel-tourism-24",
+      "type": "question_for_answer",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The receptionist answers: «Sim, o pequeno-almoço está incluído.» Ask whether breakfast is included.",
+      "explanation": "A yes/no question keeps statement word order with a rising tone: «O pequeno-almoço está incluído?»",
+      "givenAnswer": "Sim, o pequeno-almoço está incluído.",
+      "answer": ["O", "pequeno-almoço", "está", "incluído?"],
+      "distractors": ["A", "reserva", "aberto?"],
+      "acceptedAnswers": ["O pequeno-almoço está incluído no preço?"]
+    },
+    {
+      "id": "m6-travel-tourism-25",
+      "type": "question_for_answer",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The receptionist answers: «O quarto custa oitenta euros por noite.» Ask how much the room costs.",
+      "explanation": "«Quanto custa…?» asks the price of one thing (singular «custa» for «o quarto»).",
+      "givenAnswer": "O quarto custa oitenta euros por noite.",
+      "answer": ["Quanto", "custa", "o", "quarto?"],
+      "distractors": ["Quando", "custam", "a"],
+      "acceptedAnswers": [
+        "Quanto é que custa o quarto?",
+        "Quanto custa o quarto por noite?",
+        "Quanto é que custa o quarto por noite?"
+      ]
+    },
+    {
+      "id": "m6-travel-tourism-26",
+      "type": "question_for_answer",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The guide answers: «O castelo fica no cimo da colina.» Ask where the castle is.",
+      "explanation": "«Onde fica…?» is the usual way to ask where a place is located; «castelo» is masculine: «o castelo».",
+      "givenAnswer": "O castelo fica no cimo da colina.",
+      "answer": ["Onde", "fica", "o", "castelo?"],
+      "distractors": ["Como", "fico", "a"],
+      "acceptedAnswers": [
+        "Onde é que fica o castelo?",
+        "Onde está o castelo?",
+        "Onde é que está o castelo?"
+      ]
+    },
+    {
+      "id": "m6-travel-tourism-27",
+      "type": "question_for_answer",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Vamos ficar quatro noites em Lisboa.» Ask your friend and her partner (vocês) how many nights they are going to stay in Lisbon.",
+      "explanation": "«Noite» is feminine, so «Quantas noites…?»; «vocês» takes the 3rd-person plural «vão».",
+      "givenAnswer": "Vamos ficar quatro noites em Lisboa.",
+      "answer": ["Quantas", "noites", "vão", "ficar", "em", "Lisboa?"],
+      "distractors": ["Quantos", "dias", "vai"],
+      "acceptedAnswers": ["Quantas noites é que vão ficar em Lisboa?"]
+    },
+    {
+      "id": "m6-travel-tourism-28",
+      "type": "question_for_answer",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The ticket seller answers: «A entrada custa dez euros por pessoa.» Ask how much the admission ticket costs.",
+      "explanation": "«Quanto custa…?» asks a price; the admission ticket is «o bilhete de entrada» (masculine).",
+      "givenAnswer": "A entrada custa dez euros por pessoa.",
+      "answer": ["Quanto", "custa", "o", "bilhete", "de", "entrada?"],
+      "distractors": ["Quando", "custam", "a"],
+      "acceptedAnswers": [
+        "Quanto é que custa o bilhete de entrada?",
+        "Quanto custa a entrada?",
+        "Quanto é que custa a entrada?"
+      ]
+    },
+    {
+      "id": "m6-travel-tourism-29",
+      "type": "question_for_answer",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The receptionist answers: «A receção está aberta vinte e quatro horas.» Ask what time reception closes.",
+      "explanation": "«A que horas…?» asks about a clock time; question word first, then verb and subject: «A que horas fecha a receção?»",
+      "givenAnswer": "A receção está aberta vinte e quatro horas.",
+      "answer": ["A", "que", "horas", "fecha", "a", "receção?"],
+      "distractors": ["De", "quando", "abrem", "o"],
+      "acceptedAnswers": ["A que horas é que fecha a receção?"]
+    },
+    {
+      "id": "m6-travel-tourism-30",
+      "type": "question_for_answer",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Amanhã vamos fazer uma visita guiada ao museu.» Ask her what you (both) are going to do tomorrow.",
+      "explanation": "Near future «ir» + infinitive in the «nós» form: «O que vamos fazer amanhã?»",
+      "givenAnswer": "Amanhã vamos fazer uma visita guiada ao museu.",
+      "answer": ["O", "que", "vamos", "fazer", "amanhã?"],
+      "distractors": ["Como", "vai", "visitar", "hoje?"],
+      "acceptedAnswers": ["O que é que vamos fazer amanhã?"]
+    },
+    {
+      "id": "m6-travel-tourism-31",
+      "type": "question_for_answer",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The guide answers: «Temos visitas em português e em inglês.» Ask in which languages there are guided tours.",
+      "explanation": "«Em que…?» asks which one(s) with a preposition in front; «há» = there is / there are.",
+      "givenAnswer": "Temos visitas em português e em inglês.",
+      "answer": ["Em", "que", "línguas", "há", "visitas", "guiadas?"],
+      "distractors": ["De", "qual", "estão", "livres?"],
+      "acceptedAnswers": ["Em que línguas é que há visitas guiadas?"]
+    },
+    {
+      "id": "m6-travel-tourism-32",
+      "type": "question_for_answer",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A local answers: «Pode ir de autocarro ou a pé até à praia.» Ask how you can get to the beach.",
+      "explanation": "«Como posso ir…?» asks how to get somewhere; «posso» is the «eu» form of «poder».",
+      "givenAnswer": "Pode ir de autocarro ou a pé até à praia.",
+      "answer": ["Como", "posso", "ir", "para", "a", "praia?"],
+      "distractors": ["Onde", "pode", "andar", "ao"],
+      "acceptedAnswers": [
+        "Como é que posso ir para a praia?",
+        "Como posso ir à praia?",
+        "Como é que posso ir à praia?",
+        "Como posso chegar à praia?"
+      ]
+    },
+    {
+      "id": "m6-travel-tourism-33",
+      "type": "find_error",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In Portugal a bus is «autocarro»; «ônibus» is Brazilian. Transport takes «de» + singular noun: «de autocarro».",
+      "sentence": ["Vamos", "de", "ônibus", "para", "o", "hotel."],
+      "wrongIndex": 2,
+      "correction": "autocarro",
+      "options": ["autocarro", "autocarros", "carros"]
+    },
+    {
+      "id": "m6-travel-tourism-34",
+      "type": "find_error",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Praia» is feminine: «para a praia», not masculine «para o praia».",
+      "sentence": ["Hoje", "vamos", "todos", "para", "o", "praia."],
+      "wrongIndex": 4,
+      "correction": "a",
+      "options": ["a", "na", "da"]
+    },
+    {
+      "id": "m6-travel-tourism-35",
+      "type": "find_error",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Reserva» is feminine: «uma reserva», not masculine «um reserva».",
+      "sentence": ["Nós", "temos", "um", "reserva", "para", "três", "noites."],
+      "wrongIndex": 2,
+      "correction": "uma",
+      "options": ["uma", "duas", "nossa"]
+    },
+    {
+      "id": "m6-travel-tourism-36",
+      "type": "find_error",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Visita» is feminine singular, so the adjective must agree: «visita guiada», not «guiado».",
+      "sentence": ["Vamos", "fazer", "uma", "visita", "guiado", "ao", "palácio."],
+      "wrongIndex": 4,
+      "correction": "guiada",
+      "options": ["guiada", "guiadas", "guiados"]
+    },
+    {
+      "id": "m6-travel-tourism-37",
+      "type": "find_error",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Portugal's current spelling (1990 Orthographic Agreement) drops the silent «p»: «receção», not «recepção».",
+      "sentence": ["Por", "favor,", "pergunte", "na", "recepção", "do", "hotel."],
+      "wrongIndex": 4,
+      "correction": "receção",
+      "options": ["receção", "receções", "rececionista"]
+    },
+    {
+      "id": "m6-travel-tourism-38",
+      "type": "about_me",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State your travel preference using «Prefiro ir para a praia» or «Prefiro a cidade».",
+      "question": "Nas férias, preferes ir para a praia ou para o campo?",
+      "sampleAnswer": "Prefiro ir para a praia no verão.",
+      "hints": ["campo", "cidade", "montanha", "gosto", "sol"]
+    },
+    {
+      "id": "m6-travel-tourism-39",
+      "type": "about_me",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Describe what you like to visit when traveling, using «Gosto de visitar …».",
+      "question": "O que gostas de visitar quando viajas?",
+      "sampleAnswer": "Gosto de visitar monumentos históricos e museus.",
+      "hints": ["castelos", "parques", "igrejas", "miradouros", "cidades"]
+    },
+    {
+      "id": "m6-travel-tourism-40",
+      "type": "about_me",
+      "topicId": "m6-travel-tourism",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State how many nights you usually spend at a hotel during a trip.",
+      "question": "Quantas noites costumas ficar num hotel durante uma viagem?",
+      "sampleAnswer": "Costumo ficar três ou quatro noites num hotel.",
+      "hints": ["duas", "cinco", "uma", "semana", "pousada"]
+    }
+  ]
+}

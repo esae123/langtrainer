@@ -1,0 +1,670 @@
+{
+  "id": "m5-health-body",
+  "moduleId": "m5",
+  "title": "Health and the body",
+  "kind": "vocabulary",
+  "context": "# Health and the Body in Portugal\n\nWhen you feel unwell in Portugal, you might visit **o médico** (the doctor) at a health centre or consult **o farmacêutico** (the pharmacist) at **a farmácia**.\n\nTo describe physical pain, Portuguese uses the impersonal verb **doer** (to hurt). The body part that hurts is the grammatical subject:\n\n- **Dói-me a cabeça.** — My head hurts. / I have a headache.\n- **Dói-me a garganta.** — My throat hurts.\n- **Doem-me os pés.** — My feet hurt.\n- **O que te dói?** — What hurts?\n\nTo describe symptoms, use **ter** or **estar com** followed by a noun:\n\n- **Estou com febre.** / **Tenho febre.** — I have a fever.\n- **Ele está com tosse.** / **Ele tem tosse.** — He has a cough.\n- **Tenho dor de barriga.** — I have a stomach ache.\n- **Preciso de um medicamento para a constipação.** — I need medicine for a cold.\n\n**Watch out!**\n\n1. **Constipado/a** is a false friend: it means having a cold, never constipated!\n2. With **doer**, use **dói** for a singular body part (*Dói-me o dente*) and **doem** for plural (*Doem-me os dentes*).\n3. In questions with question words, the pronoun precedes the verb: **O que te dói?**, not *O que dói-te?*.",
+  "keyItems": [
+    {
+      "target": "o corpo",
+      "support": "the body"
+    },
+    {
+      "target": "a cabeça",
+      "support": "the head"
+    },
+    {
+      "target": "os olhos",
+      "support": "the eyes"
+    },
+    {
+      "target": "os ouvidos",
+      "support": "the ears"
+    },
+    {
+      "target": "a garganta",
+      "support": "the throat"
+    },
+    {
+      "target": "as costas",
+      "support": "the back"
+    },
+    {
+      "target": "o estômago",
+      "support": "the stomach"
+    },
+    {
+      "target": "a barriga",
+      "support": "the belly / stomach"
+    },
+    {
+      "target": "o braço",
+      "support": "the arm"
+    },
+    {
+      "target": "a perna",
+      "support": "the leg"
+    },
+    {
+      "target": "o pé",
+      "support": "the foot"
+    },
+    {
+      "target": "o dente",
+      "support": "the tooth"
+    },
+    {
+      "target": "Dói-me… / Doem-me…",
+      "support": "My … hurts / My … hurt",
+      "note": "impersonal verb; singular dói, plural doem"
+    },
+    {
+      "target": "a febre",
+      "support": "the fever"
+    },
+    {
+      "target": "a tosse",
+      "support": "the cough"
+    },
+    {
+      "target": "estar constipado / constipada",
+      "support": "to have a cold",
+      "note": "false friend: means having a cold"
+    },
+    {
+      "target": "a farmácia",
+      "support": "the pharmacy"
+    },
+    {
+      "target": "o médico / a médica",
+      "support": "the doctor"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m5-health-body-01",
+      "type": "translate_word",
+      "topicId": "m5-health-body",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Cabeça» is head in Portuguese. It is feminine: «a cabeça».",
+      "direction": "toTarget",
+      "sentence": "My **head** hurts today.",
+      "word": "head",
+      "answer": "cabeça",
+      "options": ["cabeça", "perna", "costas", "barriga"]
+    },
+    {
+      "id": "m5-health-body-02",
+      "type": "translate_word",
+      "topicId": "m5-health-body",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Garganta» means throat in Portuguese. It is feminine: «a garganta».",
+      "direction": "toTarget",
+      "sentence": "I have a sore **throat**.",
+      "word": "throat",
+      "answer": "garganta",
+      "options": ["garganta", "ouvido", "braço", "ombro"]
+    },
+    {
+      "id": "m5-health-body-03",
+      "type": "translate_word",
+      "topicId": "m5-health-body",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Farmácia» is the pharmacy or chemist in Portugal. It is feminine: «a farmácia».",
+      "direction": "toTarget",
+      "sentence": "Where is the nearest **pharmacy**?",
+      "word": "pharmacy",
+      "answer": "farmácia",
+      "options": ["farmácia", "hospital", "escola", "padaria"]
+    },
+    {
+      "id": "m5-health-body-04",
+      "type": "translate_word",
+      "topicId": "m5-health-body",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Febre» means fever or temperature. It is feminine: «a febre».",
+      "direction": "toTarget",
+      "sentence": "The child has a high **fever**.",
+      "word": "fever",
+      "answer": "febre",
+      "options": ["febre", "tosse", "gripe", "dor"]
+    },
+    {
+      "id": "m5-health-body-05",
+      "type": "translate_word",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In Portugal, «constipado» means having a cold (false friend). Feminine is «constipada».",
+      "direction": "toTarget",
+      "sentence": "Maria is in bed because she has a **cold**.",
+      "word": "cold",
+      "answer": "constipada",
+      "options": ["constipada", "cansada", "doente", "ocupada"]
+    },
+    {
+      "id": "m5-health-body-06",
+      "type": "fill_gaps",
+      "topicId": "m5-health-body",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Today my head hurts.\"",
+      "explanation": "«Dói-me» is used with a singular noun like «a cabeça». For plural body parts, use «doem-me».",
+      "template": "Hoje ___ a ___.",
+      "gaps": [
+        {
+          "answer": "dói-me"
+        },
+        {
+          "answer": "cabeça"
+        }
+      ],
+      "wordBank": ["dói-me", "cabeça", "doem-me", "perna", "costas"]
+    },
+    {
+      "id": "m5-health-body-07",
+      "type": "fill_gaps",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"My feet hurt after walking.\"",
+      "explanation": "«Pés» is plural, so the verb «doer» must be plural: «doem-me». The article for masculine plural is «os».",
+      "template": "___ os ___ depois de caminhar.",
+      "gaps": [
+        {
+          "answer": "Doem-me"
+        },
+        {
+          "answer": "pés"
+        }
+      ],
+      "wordBank": ["Doem-me", "pés", "Dói-me", "olhos", "braço"]
+    },
+    {
+      "id": "m5-health-body-08",
+      "type": "fill_gaps",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Tiago has a fever and a cough.\"",
+      "explanation": "In Portuguese, express symptoms with «estar com» + noun: «estar com febre» and «com tosse».",
+      "template": "O Tiago está ___ febre e com ___.",
+      "gaps": [
+        {
+          "answer": "com"
+        },
+        {
+          "answer": "tosse"
+        }
+      ],
+      "wordBank": ["com", "tosse", "de", "gripe", "sem"]
+    },
+    {
+      "id": "m5-health-body-09",
+      "type": "fill_gaps",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Rita goes to the pharmacy to buy medicine.\"",
+      "explanation": "«Farmácia» is feminine (vai à farmácia: a + a = à). «Medicamento» is masculine (um medicamento).",
+      "template": "A Rita vai à ___ comprar um ___.",
+      "gaps": [
+        {
+          "answer": "farmácia"
+        },
+        {
+          "answer": "medicamento"
+        }
+      ],
+      "wordBank": ["farmácia", "medicamento", "clínica", "xarope", "médica"]
+    },
+    {
+      "id": "m5-health-body-10",
+      "type": "fill_gaps",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Does your throat hurt, João?\" (informal)",
+      "explanation": "Informal questions with tu use «te»: «Dói-te a garganta?». «Garganta» is feminine singular.",
+      "template": "___ a ___, João?",
+      "gaps": [
+        {
+          "answer": "Dói-te"
+        },
+        {
+          "answer": "garganta"
+        }
+      ],
+      "wordBank": ["Dói-te", "garganta", "Doem-te", "barriga", "Dói-me"]
+    },
+    {
+      "id": "m5-health-body-11",
+      "type": "fill_gaps",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I feel unwell: my back hurts and I have a fever.\"",
+      "explanation": "«Sinto-me mal» means I feel unwell. «Costas» is plural (doem-me as costas) and fever takes «tenho febre».",
+      "template": "Sinto-me mal: ___ as costas e ___ febre.",
+      "gaps": [
+        {
+          "answer": "doem-me"
+        },
+        {
+          "answer": "tenho"
+        }
+      ],
+      "wordBank": ["doem-me", "tenho", "dói-me", "estou", "sou"]
+    },
+    {
+      "id": "m5-health-body-12",
+      "type": "fill_gaps",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The doctor says Manuel has the flu and needs rest.\"",
+      "explanation": "«O médico» is masculine singular. The expression is «ter gripe» (tem gripe), and rest is «repouso».",
+      "template": "O ___ diz que o Manuel ___ gripe e precisa de ___.",
+      "gaps": [
+        {
+          "answer": "médico"
+        },
+        {
+          "answer": "tem"
+        },
+        {
+          "answer": "repouso"
+        }
+      ],
+      "wordBank": ["médico", "tem", "repouso", "farmacêutico", "está", "febre"]
+    },
+    {
+      "id": "m5-health-body-13",
+      "type": "build_phrase",
+      "topicId": "m5-health-body",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what hurts: \"My head hurts.\"",
+      "explanation": "«Dói-me a cabeça» uses the impersonal verb «doer» with the singular subject «a cabeça».",
+      "answer": ["Dói-me", "a", "cabeça."],
+      "distractors": ["Doem-me", "o", "garganta."],
+      "acceptedAnswers": ["A cabeça dói-me."]
+    },
+    {
+      "id": "m5-health-body-14",
+      "type": "build_phrase",
+      "topicId": "m5-health-body",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State a symptom: \"I have a bad cough.\"",
+      "explanation": "Use «ter» to state symptoms: «Tenho muita tosse». «Tosse» is feminine.",
+      "answer": ["Tenho", "muita", "tosse."],
+      "distractors": ["Tens", "febre.", "com"],
+      "acceptedAnswers": [
+        "Eu tenho muita tosse.",
+        "Estou com muita tosse.",
+        "Eu estou com muita tosse."
+      ]
+    },
+    {
+      "id": "m5-health-body-15",
+      "type": "build_phrase",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what hurts: \"My back hurts a lot.\"",
+      "explanation": "«Costas» (back) is plural in Portuguese, so the verb must be plural: «Doem-me as costas».",
+      "answer": ["Doem-me", "muito", "as", "costas."],
+      "distractors": ["Dói-me", "os", "perna."],
+      "acceptedAnswers": ["As costas doem-me muito."]
+    },
+    {
+      "id": "m5-health-body-16",
+      "type": "build_phrase",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you are unwell: \"I am not feeling well today.\"",
+      "explanation": "With negation «não», the clitic pronoun «me» comes before the verb: «Não me sinto bem».",
+      "answer": ["Não", "me", "sinto", "bem", "hoje."],
+      "distractors": ["sinto-me", "sente", "te"],
+      "acceptedAnswers": ["Eu não me sinto bem hoje.", "Hoje não me sinto bem."]
+    },
+    {
+      "id": "m5-health-body-17",
+      "type": "build_phrase",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what symptom someone has: \"Sofia has a fever today.\"",
+      "explanation": "Express a condition using «estar com»: «A Sofia está com febre hoje».",
+      "answer": ["A", "Sofia", "está", "com", "febre", "hoje."],
+      "distractors": ["O", "estás", "tosse"],
+      "acceptedAnswers": [
+        "A Sofia tem febre hoje.",
+        "Hoje a Sofia está com febre.",
+        "Hoje a Sofia tem febre."
+      ]
+    },
+    {
+      "id": "m5-health-body-18",
+      "type": "build_phrase",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask for help at the pharmacy: \"I need medicine for my throat.\"",
+      "explanation": "«Preciso de» requires «de». «Medicamento» is masculine: «um medicamento».",
+      "answer": ["Preciso", "de", "um", "medicamento", "para", "a", "garganta."],
+      "distractors": ["Precisa", "uma", "com", "tosse."],
+      "acceptedAnswers": ["Eu preciso de um medicamento para a garganta."]
+    },
+    {
+      "id": "m5-health-body-19",
+      "type": "build_phrase",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you have a cold: \"I have a cold and I need to rest.\"",
+      "explanation": "«Estar constipado/a» means having a cold. «Preciso de descansar» uses «precisar de» + infinitive.",
+      "answer": ["Estou", "constipado", "e", "preciso", "de", "descansar."],
+      "distractors": ["constipada", "com", "para"],
+      "acceptedAnswers": [
+        "Estou constipada e preciso de descansar.",
+        "Eu estou constipado e preciso de descansar.",
+        "Eu estou constipada e preciso de descansar."
+      ]
+    },
+    {
+      "id": "m5-health-body-20",
+      "type": "build_phrase",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what hurts after sports: \"My legs and my feet hurt.\"",
+      "explanation": "Since «pernas» and «pés» are plural, use «Doem-me». The nouns take definite articles.",
+      "answer": ["Doem-me", "as", "pernas", "e", "os", "pés."],
+      "distractors": ["Dói-me", "a", "o"],
+      "acceptedAnswers": ["As pernas e os pés doem-me."]
+    },
+    {
+      "id": "m5-health-body-21",
+      "type": "build_phrase",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Report what the (female) doctor says: \"The doctor says I have the flu.\"",
+      "explanation": "«Dizer que» + present reports what someone says. Illnesses take «ter» (or «estar com»): «tenho gripe».",
+      "answer": ["A", "médica", "diz", "que", "tenho", "gripe."],
+      "distractors": ["dizes", "tens", "de"],
+      "acceptedAnswers": [
+        "A médica diz que eu tenho gripe.",
+        "A médica diz que estou com gripe.",
+        "A médica diz que eu estou com gripe."
+      ]
+    },
+    {
+      "id": "m5-health-body-22",
+      "type": "build_phrase",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State pain in a specific area: \"Miguel has a stomach ache and does not eat.\"",
+      "explanation": "«Dor de estômago» is stomach ache. «Não come» means he does not eat.",
+      "answer": ["O", "Miguel", "tem", "dor", "de", "estômago", "e", "não", "come."],
+      "distractors": ["A", "com", "dói", "bebe."],
+      "acceptedAnswers": ["O Miguel está com dor de estômago e não come."]
+    },
+    {
+      "id": "m5-health-body-23",
+      "type": "build_phrase",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe eye fatigue: \"My eyes hurt from working at the computer.\"",
+      "explanation": "«Olhos» is plural: «Doem-me os olhos». «De trabalhar» explains the cause.",
+      "answer": ["Doem-me", "os", "olhos", "de", "trabalhar", "ao", "computador."],
+      "distractors": ["Dói-me", "as", "do"],
+      "acceptedAnswers": ["Os olhos doem-me de trabalhar ao computador."]
+    },
+    {
+      "id": "m5-health-body-24",
+      "type": "question_for_answer",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Dói-me a cabeça.» Ask him (informal) what hurts.",
+      "explanation": "«O que te dói?» asks what hurts. In questions, the pronoun «te» comes before the verb.",
+      "givenAnswer": "Dói-me a cabeça.",
+      "answer": ["O", "que", "te", "dói?"],
+      "distractors": ["Quem", "me", "doem?"],
+      "acceptedAnswers": ["O que é que te dói?"]
+    },
+    {
+      "id": "m5-health-body-25",
+      "type": "question_for_answer",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Não, não tenho febre.» Ask her (informal) if she has a fever.",
+      "explanation": "Ask about fever with the tu form: «Tens febre?».",
+      "givenAnswer": "Não, não tenho febre.",
+      "answer": ["Tens", "febre?"],
+      "distractors": ["Tem", "tosse?", "com"],
+      "acceptedAnswers": ["Tu tens febre?", "Estás com febre?", "Tu estás com febre?"]
+    },
+    {
+      "id": "m5-health-body-26",
+      "type": "question_for_answer",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your colleague answers: «Sinto-me melhor hoje, obrigado.» Ask him (informal) how he feels.",
+      "explanation": "«Como te sentes?» is how you ask someone how they feel (informal).",
+      "givenAnswer": "Sinto-me melhor hoje, obrigado.",
+      "answer": ["Como", "te", "sentes?"],
+      "distractors": ["Onde", "se", "sente?"],
+      "acceptedAnswers": [
+        "Como é que te sentes?",
+        "Tu como te sentes?",
+        "Como te sentes hoje?",
+        "Como é que te sentes hoje?"
+      ]
+    },
+    {
+      "id": "m5-health-body-27",
+      "type": "question_for_answer",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Pedro answers: «Sim, dói-me muito a garganta.» Ask him (informal) if his throat hurts.",
+      "explanation": "With «doer», the body part is the subject and «te» marks the person: «Dói-te a garganta?» (singular «dói»).",
+      "givenAnswer": "Sim, dói-me muito a garganta.",
+      "answer": ["Dói-te", "a", "garganta?"],
+      "distractors": ["Doem-te", "o", "cabeça?"],
+      "acceptedAnswers": ["A garganta dói-te?"]
+    },
+    {
+      "id": "m5-health-body-28",
+      "type": "question_for_answer",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The patient answers: «Estou doente há dois dias.» As the doctor, ask him (formal) how long he has been ill.",
+      "explanation": "«Há quanto tempo…?» asks how long. Formal address uses «está doente».",
+      "givenAnswer": "Estou doente há dois dias.",
+      "answer": ["Há", "quanto", "tempo", "está", "doente?"],
+      "distractors": ["quando", "estás", "tens"],
+      "acceptedAnswers": [
+        "Há quanto tempo é que está doente?",
+        "Há quantos dias está doente?",
+        "Há quantos dias é que está doente?"
+      ]
+    },
+    {
+      "id": "m5-health-body-29",
+      "type": "question_for_answer",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ana answers: «Sim, doem-me os dois ouvidos.» Ask her (informal) if her ears hurt.",
+      "explanation": "«Ouvidos» is plural, so the verb is plural: «Doem-te os ouvidos?».",
+      "givenAnswer": "Sim, doem-me os dois ouvidos.",
+      "answer": ["Doem-te", "os", "ouvidos?"],
+      "distractors": ["Dói-te", "as", "dentes?"],
+      "acceptedAnswers": ["Os ouvidos doem-te?"]
+    },
+    {
+      "id": "m5-health-body-30",
+      "type": "question_for_answer",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The pharmacist answers: «Esta farmácia fecha às oito horas.» Ask what time the pharmacy closes.",
+      "explanation": "«A que horas fecha a farmácia?» asks when the pharmacy closes.",
+      "givenAnswer": "Esta farmácia fecha às oito horas.",
+      "answer": ["A", "que", "horas", "fecha", "a", "farmácia?"],
+      "distractors": ["De", "fecham", "abre", "loja?"],
+      "acceptedAnswers": [
+        "A que horas é que fecha a farmácia?",
+        "A que horas é que a farmácia fecha?",
+        "A que horas fecha esta farmácia?"
+      ]
+    },
+    {
+      "id": "m5-health-body-31",
+      "type": "question_for_answer",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Vou ao médico porque tenho tosse e febre.» Ask him (informal) why he is going to the doctor.",
+      "explanation": "«Porque é que vais ao médico?» asks why someone is going to the doctor.",
+      "givenAnswer": "Vou ao médico porque tenho tosse e febre.",
+      "answer": ["Porque", "é", "que", "vais", "ao", "médico?"],
+      "distractors": ["Porquê", "vai", "à", "médica?"],
+      "acceptedAnswers": ["Porque vais ao médico?"]
+    },
+    {
+      "id": "m5-health-body-32",
+      "type": "question_for_answer",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The pharmacist answers: «Dois comprimidos por dia.» Ask how many pills you take a day.",
+      "explanation": "«Quantos» agrees with the masculine plural «comprimidos»; «tomo» is the eu form of «tomar» (to take medicine).",
+      "givenAnswer": "Dois comprimidos por dia.",
+      "answer": ["Quantos", "comprimidos", "tomo", "por", "dia?"],
+      "distractors": ["Quantas", "medicamentos", "tomas", "comer?"],
+      "acceptedAnswers": ["Quantos comprimidos é que tomo por dia?", "Quantos comprimidos tomo?"]
+    },
+    {
+      "id": "m5-health-body-33",
+      "type": "find_error",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Cabeça» is singular, so the verb is «dói-me», not plural «doem-me».",
+      "sentence": ["Hoje", "doem-me", "a", "cabeça."],
+      "wrongIndex": 1,
+      "correction": "dói-me",
+      "options": ["dói-me", "doe-me", "doem"]
+    },
+    {
+      "id": "m5-health-body-34",
+      "type": "find_error",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Pés» is masculine (o pé / os pés): «os pés», not feminine «as pés».",
+      "sentence": ["Doem-me", "as", "pés", "de", "correr."],
+      "wrongIndex": 1,
+      "correction": "os",
+      "options": ["os", "uns", "dois"]
+    },
+    {
+      "id": "m5-health-body-35",
+      "type": "find_error",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Febre» is a feminine noun in Portuguese: «muita febre», not «muito».",
+      "sentence": ["O", "João", "está", "com", "muito", "febre."],
+      "wrongIndex": 4,
+      "correction": "muita",
+      "options": ["muita", "muitos", "muitas"]
+    },
+    {
+      "id": "m5-health-body-36",
+      "type": "find_error",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Farmácia» is feminine, so «à farmácia» (a + a), not masculine «ao farmácia».",
+      "sentence": ["Vou", "ao", "farmácia", "comprar", "aspirina."],
+      "wrongIndex": 1,
+      "correction": "à",
+      "options": ["à", "na", "para"]
+    },
+    {
+      "id": "m5-health-body-37",
+      "type": "find_error",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Garganta» is feminine singular, so the verb is singular: «Dói-me a garganta», not «Doem-me».",
+      "sentence": ["Doem-me", "a", "garganta", "desde", "ontem."],
+      "wrongIndex": 0,
+      "correction": "Dói-me",
+      "options": ["Dói-me", "Doe-me", "Doer-me"]
+    },
+    {
+      "id": "m5-health-body-38",
+      "type": "about_me",
+      "topicId": "m5-health-body",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State which body part hurts using «Dói-me a/o …» or «Doem-me os/as …».",
+      "question": "O que é que te dói?",
+      "sampleAnswer": "Dói-me a cabeça hoje.",
+      "hints": ["garganta", "perna", "costas", "dente"]
+    },
+    {
+      "id": "m5-health-body-39",
+      "type": "about_me",
+      "topicId": "m5-health-body",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Say how you feel with «Sinto-me» + adjective (cansado/a, mal, triste), which agrees with you.",
+      "question": "Como te sentes quando estás doente?",
+      "sampleAnswer": "Sinto-me cansado e fico na cama.",
+      "hints": ["cansada", "mal", "febre", "tosse", "triste"]
+    },
+    {
+      "id": "m5-health-body-40",
+      "type": "about_me",
+      "topicId": "m5-health-body",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Explain your remedy for a sore throat, such as drinking tea or buying medicine.",
+      "question": "O que fazes quando tens dor de garganta?",
+      "sampleAnswer": "Tomo um chá quente com mel.",
+      "hints": ["vou", "à", "farmácia", "medicamento", "pastilhas"]
+    }
+  ]
+}

@@ -1,0 +1,670 @@
+{
+  "id": "m6-biography-experience",
+  "moduleId": "m6",
+  "title": "Biography and life experience",
+  "kind": "situation",
+  "context": "# Biography and Life Experience\n\nTalking about your life story and personal experiences brings together regular and irregular verbs in the **Pretérito Perfeito Simples (PPS)**.\n\n### Biographical Milestones\n- **Nascer** (to be born): *Nasci em Coimbra em 1996.* / *Onde é que nasceste?*\n- **Crescer** (to grow up): *Cresci numa aldeia perto de Braga.*\n- **Estudar** (to study): *Estudei engenharia na Universidade do Porto.*\n- **Mudar-se** (to move): *Mudei-me para Lisboa há cinco anos.* (Notice the reflexive clitic: *Mudei-me*, but *Quando é que te mudaste?* and *Não me mudei*).\n- **Trabalhar como** (to work as): *Trabalhei como jornalista durante três anos.* (No indefinite article after *como*).\n- **Casar-se / Ter filhos**: *Casei-me em 2018 e tive dois filhos.*\n\n### Asking About and Sharing Life Experiences\nUse **já**, **nunca**, and **ainda não** with the PPS to discuss life experiences:\n- **Já visitaste os Açores?** — Have you ever visited the Azores?\n- **Já estive em Paris duas vezes.** — I have already been to Paris twice.\n- **Nunca andei de metro.** — I have never ridden the underground.\n- **Ainda não terminei o curso.** — I haven't finished my degree yet.\n\n**Watch out!**\n1. Reflexive verbs attach the pronoun with a hyphen in affirmative statements (*Mudei-me*), but question words and negation pull the pronoun before the verb (*Para onde te mudaste?*, *Não me mudei*).\n2. When stating a profession after **como**, do not use an article: *Trabalhei como professor* (not *como um professor*).",
+  "keyItems": [
+    {
+      "target": "nasci em...",
+      "support": "I was born in..."
+    },
+    {
+      "target": "cresci em...",
+      "support": "I grew up in..."
+    },
+    {
+      "target": "mudei-me para...",
+      "support": "I moved to...",
+      "note": "reflexive verb in PPS"
+    },
+    {
+      "target": "estudei na universidade",
+      "support": "I studied at university"
+    },
+    {
+      "target": "terminei o curso",
+      "support": "I finished my degree"
+    },
+    {
+      "target": "comecei a trabalhar",
+      "support": "I started working"
+    },
+    {
+      "target": "trabalhei como...",
+      "support": "I worked as...",
+      "note": "no indefinite article after como"
+    },
+    {
+      "target": "vivi em... / morei em...",
+      "support": "I lived in..."
+    },
+    {
+      "target": "casei-me em...",
+      "support": "I got married in..."
+    },
+    {
+      "target": "tive um filho / uma filha",
+      "support": "I had a son / a daughter"
+    },
+    {
+      "target": "comprei uma casa / um apartamento",
+      "support": "I bought a house / an apartment"
+    },
+    {
+      "target": "viajei por vários países",
+      "support": "I traveled through several countries"
+    },
+    {
+      "target": "conheci muitas pessoas",
+      "support": "I met / got to know many people"
+    },
+    {
+      "target": "já estive em...",
+      "support": "I have already been to..."
+    },
+    {
+      "target": "nunca vivi no estrangeiro",
+      "support": "I have never lived abroad"
+    },
+    {
+      "target": "ainda não visitei...",
+      "support": "I haven't visited ... yet"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m6-biography-experience-01",
+      "type": "translate_word",
+      "topicId": "m6-biography-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Nasci» is the 1st-person singular PPS of «nascer»: «Eu nasci» (I was born).",
+      "direction": "toTarget",
+      "sentence": "I **was born** in Lisbon in 1995.",
+      "word": "was born",
+      "answer": "nasci",
+      "options": ["nasci", "nasceu", "nascer", "nasço"]
+    },
+    {
+      "id": "m6-biography-experience-02",
+      "type": "translate_word",
+      "topicId": "m6-biography-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Cresci» is the 1st-person singular PPS of «crescer»: «Eu cresci» (I grew up).",
+      "direction": "toTarget",
+      "sentence": "I **grew up** in a quiet village in the north of Portugal.",
+      "word": "grew up",
+      "answer": "cresci",
+      "options": ["cresci", "cresceu", "crescer", "cresço"]
+    },
+    {
+      "id": "m6-biography-experience-03",
+      "type": "translate_word",
+      "topicId": "m6-biography-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Estudei» is the 1st-person singular PPS of «estudar» (I studied).",
+      "direction": "toTarget",
+      "sentence": "I **studied** biology at the University of Coimbra.",
+      "word": "studied",
+      "answer": "estudei",
+      "options": ["estudei", "estudou", "estudar", "estudo"]
+    },
+    {
+      "id": "m6-biography-experience-04",
+      "type": "translate_word",
+      "topicId": "m6-biography-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Trabalhei» is the 1st-person singular PPS of «trabalhar» (I worked).",
+      "direction": "toTarget",
+      "sentence": "I **worked** as an architect for five years.",
+      "word": "worked",
+      "answer": "trabalhei",
+      "options": ["trabalhei", "trabalhou", "trabalhar", "trabalho"]
+    },
+    {
+      "id": "m6-biography-experience-05",
+      "type": "translate_word",
+      "topicId": "m6-biography-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Vivi» is the 1st-person singular PPS of «viver» (I lived).",
+      "direction": "toTarget",
+      "sentence": "I **lived** in London for two years before moving to Porto.",
+      "word": "lived",
+      "answer": "vivi",
+      "options": ["vivi", "viveu", "viver", "vivo"]
+    },
+    {
+      "id": "m6-biography-experience-06",
+      "type": "fill_gaps",
+      "topicId": "m6-biography-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I was born in Braga and studied law at university.\"",
+      "explanation": "For «eu», regular -er verb «nascer» becomes «nasci» and -ar verb «estudar» becomes «estudei».",
+      "template": "Eu ___ em Braga e ___ direito na universidade.",
+      "gaps": [
+        {
+          "answer": "nasci"
+        },
+        {
+          "answer": "estudei"
+        }
+      ],
+      "wordBank": ["nasci", "estudei", "nasceu", "estudou", "morou"]
+    },
+    {
+      "id": "m6-biography-experience-07",
+      "type": "fill_gaps",
+      "topicId": "m6-biography-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Maria finished university and started working.\"",
+      "explanation": "With 3rd-person subject «A Maria», regular -ar verbs take «-ou» in the PPS: «terminou» and «começou».",
+      "template": "A Maria ___ a universidade e ___ a trabalhar.",
+      "gaps": [
+        {
+          "answer": "terminou"
+        },
+        {
+          "answer": "começou"
+        }
+      ],
+      "wordBank": ["terminou", "começou", "terminei", "comecei", "começa"]
+    },
+    {
+      "id": "m6-biography-experience-08",
+      "type": "fill_gaps",
+      "topicId": "m6-biography-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Pedro worked as a teacher and learned a lot.\"",
+      "explanation": "Subject «O Pedro» (ele) requires 3rd-person PPS forms: «trabalhou» and «aprendeu».",
+      "template": "O Pedro ___ como professor e ___ muito.",
+      "gaps": [
+        {
+          "answer": "trabalhou"
+        },
+        {
+          "answer": "aprendeu"
+        }
+      ],
+      "wordBank": ["trabalhou", "aprendeu", "trabalhei", "aprendi", "trabalha"]
+    },
+    {
+      "id": "m6-biography-experience-09",
+      "type": "fill_gaps",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I moved to Lisbon and bought a flat.\"",
+      "explanation": "«Mudar-se» in the 1st person affirmative is «mudei-me», followed by «comprei».",
+      "template": "Eu ___ para Lisboa e ___ um apartamento.",
+      "gaps": [
+        {
+          "answer": "mudei-me"
+        },
+        {
+          "answer": "comprei"
+        }
+      ],
+      "wordBank": ["mudei-me", "comprei", "mudou-se", "comprou", "mudei"]
+    },
+    {
+      "id": "m6-biography-experience-10",
+      "type": "fill_gaps",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"They lived in Coimbra, but then they went to Porto.\"",
+      "explanation": "With «eles», «viver» becomes «viveram» and irregular «ir» becomes «foram».",
+      "template": "Eles ___ em Coimbra, mas depois ___ para o Porto.",
+      "gaps": [
+        {
+          "answer": "viveram"
+        },
+        {
+          "answer": "foram"
+        }
+      ],
+      "wordBank": ["viveram", "foram", "viveu", "foi", "vivi"]
+    },
+    {
+      "id": "m6-biography-experience-11",
+      "type": "fill_gaps",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Have you ever been to Spain? And have you visited Madrid?\" (informal)",
+      "explanation": "Tu forms of the PPS end in «-ste»: «estiveste» (estar, irregular) and «visitaste» (visitar, regular).",
+      "template": "Tu já ___ em Espanha? E já ___ Madrid?",
+      "gaps": [
+        {
+          "answer": "estiveste"
+        },
+        {
+          "answer": "visitaste"
+        }
+      ],
+      "wordBank": ["estiveste", "visitaste", "estive", "visitou", "visitei"]
+    },
+    {
+      "id": "m6-biography-experience-12",
+      "type": "fill_gaps",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"We bought a house by the beach and were very happy.\"",
+      "explanation": "In European Portuguese, 1st-person plural PPS of -ar verbs takes an acute accent: «comprámos» and «ficámos».",
+      "template": "Nós ___ uma casa na praia e ___ muito contentes.",
+      "gaps": [
+        {
+          "answer": "comprámos"
+        },
+        {
+          "answer": "ficámos"
+        }
+      ],
+      "wordBank": ["comprámos", "ficámos", "comprou", "ficou", "compraram"]
+    },
+    {
+      "id": "m6-biography-experience-13",
+      "type": "build_phrase",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I was born in Lisbon in 1990.\"",
+      "explanation": "«Nasci em...» expresses place and year of birth. Subject pronoun «Eu» is omitted.",
+      "answer": ["Nasci", "em", "Lisboa", "em", "mil", "novecentos", "e", "noventa."],
+      "distractors": ["Nasceu", "no"],
+      "acceptedAnswers": [
+        "Eu nasci em Lisboa em mil novecentos e noventa.",
+        "Nasci em Lisboa em 1990.",
+        "Eu nasci em Lisboa em 1990."
+      ]
+    },
+    {
+      "id": "m6-biography-experience-14",
+      "type": "build_phrase",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I moved to Porto five years ago.\"",
+      "explanation": "«Mudei-me para...» uses the reflexive pronoun «-me»; «há cinco anos» means five years ago.",
+      "answer": ["Mudei-me", "para", "o", "Porto", "há", "cinco", "anos."],
+      "distractors": ["Mudou-se", "a"],
+      "acceptedAnswers": [
+        "Eu mudei-me para o Porto há cinco anos.",
+        "Há cinco anos mudei-me para o Porto."
+      ]
+    },
+    {
+      "id": "m6-biography-experience-15",
+      "type": "build_phrase",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I worked as a doctor for four years.\"",
+      "explanation": "No article is used after «como» when stating a profession: «trabalhei como médica».",
+      "answer": ["Trabalhei", "como", "médica", "durante", "quatro", "anos."],
+      "distractors": ["Trabalhou", "uma"],
+      "acceptedAnswers": [
+        "Eu trabalhei como médica durante quatro anos.",
+        "Trabalhei como médico durante quatro anos.",
+        "Eu trabalhei como médico durante quatro anos."
+      ]
+    },
+    {
+      "id": "m6-biography-experience-16",
+      "type": "build_phrase",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"We have already visited many monuments in Évora.\"",
+      "explanation": "«Já» precedes the verb to talk about experiences: «Já visitámos...».",
+      "answer": ["Já", "visitámos", "muitos", "monumentos", "em", "Évora."],
+      "distractors": ["visitou", "muito"],
+      "acceptedAnswers": ["Nós já visitámos muitos monumentos em Évora."]
+    },
+    {
+      "id": "m6-biography-experience-17",
+      "type": "build_phrase",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I have never traveled by plane in my life.\"",
+      "explanation": "«Nunca» precedes the verb: «Nunca viajei...». European Portuguese possessives use the definite article: «na minha vida».",
+      "answer": ["Nunca", "viajei", "de", "avião", "na", "minha", "vida."],
+      "distractors": ["viajou", "pela"],
+      "acceptedAnswers": [
+        "Eu nunca viajei de avião na minha vida.",
+        "Nunca andei de avião na minha vida."
+      ]
+    },
+    {
+      "id": "m6-biography-experience-18",
+      "type": "build_phrase",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I got married in Faro last year.\"",
+      "explanation": "«Casar-se» uses reflexive «-me»: «Casei-me em Faro no ano passado».",
+      "answer": ["Casei-me", "em", "Faro", "no", "ano", "passado."],
+      "distractors": ["Casou-se", "na"],
+      "acceptedAnswers": ["Eu casei-me em Faro no ano passado.", "No ano passado casei-me em Faro."]
+    },
+    {
+      "id": "m6-biography-experience-19",
+      "type": "build_phrase",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I studied in Coimbra and met many international friends.\"",
+      "explanation": "Two regular PPS forms for «eu»: «estudei» (-ar) and «conheci» (-er); «conhecer» in the PPS means 'to meet'.",
+      "answer": ["Estudei", "em", "Coimbra", "e", "conheci", "muitos", "amigos", "internacionais."],
+      "distractors": ["Estudou", "conheceu", "muito"],
+      "acceptedAnswers": ["Eu estudei em Coimbra e conheci muitos amigos internacionais."]
+    },
+    {
+      "id": "m6-biography-experience-20",
+      "type": "build_phrase",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"She finished her degree and immediately started working.\"",
+      "explanation": "«Começar a + infinitivo» means to start doing something; «logo» means immediately.",
+      "answer": ["Ela", "terminou", "o", "curso", "e", "começou", "logo", "a", "trabalhar."],
+      "distractors": ["terminaram", "comecei", "de"],
+      "acceptedAnswers": ["Terminou o curso e começou logo a trabalhar."]
+    },
+    {
+      "id": "m6-biography-experience-21",
+      "type": "build_phrase",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"When I arrived in Portugal I immediately started learning Portuguese.\"",
+      "explanation": "Both «cheguei» and «comecei» are regular 1st-person PPS forms (with spelling changes g→gu, ç→c before e); «chegar a Portugal», not «em».",
+      "answer": [
+        "Quando",
+        "cheguei",
+        "a",
+        "Portugal",
+        "comecei",
+        "logo",
+        "a",
+        "aprender",
+        "português."
+      ],
+      "distractors": ["chegou", "começou", "em"],
+      "acceptedAnswers": [
+        "Quando eu cheguei a Portugal comecei logo a aprender português.",
+        "Quando cheguei a Portugal, comecei logo a aprender português."
+      ]
+    },
+    {
+      "id": "m6-biography-experience-22",
+      "type": "build_phrase",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"We lived abroad for ten years and had two children.\"",
+      "explanation": "Regular «vivemos» combined with irregular «tivemos» (ter): «vivemos no estrangeiro e tivemos dois filhos».",
+      "answer": ["Vivemos", "no", "estrangeiro", "dez", "anos", "e", "tivemos", "dois", "filhos."],
+      "distractors": ["Viveram", "tiveram", "duas"],
+      "acceptedAnswers": [
+        "Nós vivemos no estrangeiro dez anos e tivemos dois filhos.",
+        "Vivemos no estrangeiro durante dez anos e tivemos dois filhos."
+      ]
+    },
+    {
+      "id": "m6-biography-experience-23",
+      "type": "build_phrase",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I have never been to the Azores, but I have already visited Madeira.\"",
+      "explanation": "Contrasts «nunca fui aos Açores» with «já visitei a Madeira».",
+      "answer": ["Nunca", "fui", "aos", "Açores,", "mas", "já", "visitei", "a", "Madeira."],
+      "distractors": ["foi", "visita", "para"],
+      "acceptedAnswers": [
+        "Eu nunca fui aos Açores, mas já visitei a Madeira.",
+        "Nunca estive nos Açores, mas já visitei a Madeira."
+      ]
+    },
+    {
+      "id": "m6-biography-experience-24",
+      "type": "question_for_answer",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tiago answers: «Nasci em Coimbra.» Ask him (informal) where he was born.",
+      "explanation": "«Onde nasceste?» asks where you were born (informal tu).",
+      "givenAnswer": "Nasci em Coimbra.",
+      "answer": ["Onde", "nasceste?"],
+      "distractors": ["Como", "nasceu?"],
+      "acceptedAnswers": ["Onde é que nasceste?"]
+    },
+    {
+      "id": "m6-biography-experience-25",
+      "type": "question_for_answer",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Rita answers: «Cresci no Porto.» Ask her (informal) where she grew up.",
+      "explanation": "«Onde cresceste?» or «Onde é que cresceste?» asks where you grew up.",
+      "givenAnswer": "Cresci no Porto.",
+      "answer": ["Onde", "é", "que", "cresceste?"],
+      "distractors": ["Quando", "cresceu?", "quem"],
+      "acceptedAnswers": ["Onde cresceste?"]
+    },
+    {
+      "id": "m6-biography-experience-26",
+      "type": "question_for_answer",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «Estudei engenharia na universidade.» Ask him (informal) what he studied at university.",
+      "explanation": "«O que estudaste na universidade?» asks what subject you studied.",
+      "givenAnswer": "Estudei engenharia na universidade.",
+      "answer": ["O", "que", "estudaste", "na", "universidade?"],
+      "distractors": ["Qual", "estudou", "no"],
+      "acceptedAnswers": ["O que é que estudaste na universidade?"]
+    },
+    {
+      "id": "m6-biography-experience-27",
+      "type": "question_for_answer",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Inês answers: «Mudei-me para Lisboa há dois anos.» Ask her (informal) when she moved to Lisbon.",
+      "explanation": "«Quando te mudaste para Lisboa?» or «Quando é que te mudaste para Lisboa?». The question word pulls «te» before the verb.",
+      "givenAnswer": "Mudei-me para Lisboa há dois anos.",
+      "answer": ["Quando", "é", "que", "te", "mudaste", "para", "Lisboa?"],
+      "distractors": ["Como", "se", "mudou"],
+      "acceptedAnswers": ["Quando te mudaste para Lisboa?"]
+    },
+    {
+      "id": "m6-biography-experience-28",
+      "type": "question_for_answer",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "João answers: «Trabalhei como designer numa agência.» Ask him (informal) what job he did (what he worked as).",
+      "explanation": "«Em que é que trabalhaste?» asks what line of work you worked in.",
+      "givenAnswer": "Trabalhei como designer numa agência.",
+      "answer": ["Em", "que", "é", "que", "trabalhaste?"],
+      "distractors": ["De", "quem", "trabalhou?"],
+      "acceptedAnswers": ["Em que trabalhaste?", "Trabalhaste em quê?"]
+    },
+    {
+      "id": "m6-biography-experience-29",
+      "type": "question_for_answer",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Marta answers: «Já estive em França e em Itália.» Ask her (informal) which countries she has already visited.",
+      "explanation": "«Que países já visitaste?» asks which countries you have already visited.",
+      "givenAnswer": "Já estive em França e em Itália.",
+      "answer": ["Que", "países", "já", "visitaste?"],
+      "distractors": ["Quais", "ainda", "visitou?"],
+      "acceptedAnswers": [
+        "Que países é que já visitaste?",
+        "Em que países já estiveste?",
+        "Em que países é que já estiveste?"
+      ]
+    },
+    {
+      "id": "m6-biography-experience-30",
+      "type": "question_for_answer",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Miguel answers: «Não, nunca andei de barco.» Ask him (informal) if he has ever been on a boat.",
+      "explanation": "«Já andaste de barco?» — «já» + PPS asks about life experience ('Have you ever…?').",
+      "givenAnswer": "Não, nunca andei de barco.",
+      "answer": ["Já", "andaste", "de", "barco?"],
+      "distractors": ["Nunca", "andou", "do"],
+      "acceptedAnswers": ["Já alguma vez andaste de barco?", "Tu já andaste de barco?"]
+    },
+    {
+      "id": "m6-biography-experience-31",
+      "type": "question_for_answer",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ana answers: «Vivi três anos em Londres antes de regressar.» Ask her (informal) how long she lived in London.",
+      "explanation": "«Quanto tempo viveste em Londres?» asks about the duration of living in London.",
+      "givenAnswer": "Vivi três anos em Londres antes de regressar.",
+      "answer": ["Quanto", "tempo", "viveste", "em", "Londres?"],
+      "distractors": ["Quantos", "viveu", "no"],
+      "acceptedAnswers": [
+        "Quanto tempo é que viveste em Londres?",
+        "Durante quanto tempo viveste em Londres?"
+      ]
+    },
+    {
+      "id": "m6-biography-experience-32",
+      "type": "question_for_answer",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Duarte answers: «Comprei um carro novo em maio.» Ask him (informal) what he bought in May.",
+      "explanation": "«O que é que compraste em maio?» asks what you bought in May.",
+      "givenAnswer": "Comprei um carro novo em maio.",
+      "answer": ["O", "que", "é", "que", "compraste", "em", "maio?"],
+      "distractors": ["Qual", "comprou", "no"],
+      "acceptedAnswers": ["O que compraste em maio?"]
+    },
+    {
+      "id": "m6-biography-experience-33",
+      "type": "find_error",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «Eu», the 1st-person PPS form of «nascer» is «nasci», not «nasceu».",
+      "sentence": ["Eu", "nasceu", "em", "Lisboa", "em", "1998."],
+      "wrongIndex": 1,
+      "correction": "nasci",
+      "options": ["nasci", "nasce", "nascer"]
+    },
+    {
+      "id": "m6-biography-experience-34",
+      "type": "find_error",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Past time marker: «no ano passado» (em + o = no), not «em ano passado».",
+      "sentence": ["Eu", "mudei-me", "para", "Braga", "em", "ano", "passado."],
+      "wrongIndex": 4,
+      "correction": "no",
+      "options": ["no", "na", "ao"]
+    },
+    {
+      "id": "m6-biography-experience-35",
+      "type": "find_error",
+      "topicId": "m6-biography-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Subject «O Tiago» is 3rd-person singular (ele), so the PPS is «trabalhou», not «trabalhei».",
+      "sentence": ["O", "Tiago", "trabalhei", "como", "engenheiro", "durante", "dois", "anos."],
+      "wrongIndex": 2,
+      "correction": "trabalhou",
+      "options": ["trabalhou", "trabalha", "trabalhar"]
+    },
+    {
+      "id": "m6-biography-experience-36",
+      "type": "find_error",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With the pronoun «te» (informal tu), the verb form must be 2nd-person singular: «mudaste», not «mudou».",
+      "sentence": ["Quando", "é", "que", "te", "mudou", "para", "o", "Porto?"],
+      "wrongIndex": 4,
+      "correction": "mudaste",
+      "options": ["mudaste", "muda", "mudar"]
+    },
+    {
+      "id": "m6-biography-experience-37",
+      "type": "find_error",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With subject «Nós», the PPS of «estar» is «estivemos», not 1st-person singular «estive».",
+      "sentence": ["Nós", "já", "estive", "nos", "Açores", "duas", "vezes."],
+      "wrongIndex": 2,
+      "correction": "estivemos",
+      "options": ["estivemos", "estiveram", "estamos"]
+    },
+    {
+      "id": "m6-biography-experience-38",
+      "type": "about_me",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State where you were born and where you grew up using «Nasci em … e cresci em …».",
+      "question": "Onde nasceste e onde cresceste?",
+      "sampleAnswer": "Nasci em Lisboa e cresci no Porto.",
+      "hints": ["Coimbra", "Braga", "Faro", "numa", "aldeia", "cidade"]
+    },
+    {
+      "id": "m6-biography-experience-39",
+      "type": "about_me",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State what you studied or what job you did in the past using PPS forms like «Estudei …» or «Trabalhei como …».",
+      "question": "O que estudaste ou em que trabalhaste no passado?",
+      "sampleAnswer": "Estudei línguas e trabalhei como professor.",
+      "hints": ["economia", "direito", "engenheiro", "médico", "empresa", "universidade"]
+    },
+    {
+      "id": "m6-biography-experience-40",
+      "type": "about_me",
+      "topicId": "m6-biography-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State a country or city you have already visited and one you have never visited using «Já visitei … mas nunca estive em …».",
+      "question": "Que lugares já visitaste e onde nunca estiveste?",
+      "sampleAnswer": "Já visitei Espanha, mas nunca estive em Itália.",
+      "hints": ["França", "Açores", "Madeira", "fui", "Inglaterra", "cidade"]
+    }
+  ]
+}

@@ -1,0 +1,642 @@
+{
+  "id": "m5-irregular-verbs-3",
+  "moduleId": "m5",
+  "title": "More irregular verbs",
+  "kind": "grammar",
+  "context": "# More Irregular Verbs in the Present Tense\n\nIn Portuguese, several high-frequency verbs have irregular forms in the present tense (**Presente do Indicativo**). Most changes occur in the first person singular (**eu**), while others are irregular across the whole paradigm:\n\n- **dar** (to give): *eu dou, tu dás, ele dá, nós damos, eles dão*\n  - **Eu dou um presente ao Pedro.** — I give a gift to Pedro.\n- **fazer** (to do / to make): *eu faço, tu fazes, ele faz, nós fazemos, eles fazem*\n  - **O que fazes hoje?** — What are you doing today?\n- **trazer** (to bring): *eu trago, tu trazes, ele traz, nós trazemos, eles trazem*\n  - **Ela traz o almoço para o escritório.** — She brings lunch to the office.\n- **pôr** (to put): *eu ponho, tu pões, ele põe, nós pomos, eles põem*\n  - **Ele põe a mesa antes do jantar.** — He sets the table before dinner.\n- **pedir** (to ask for / order): *eu peço, tu pedes, ele pede, nós pedimos, eles pedem*\n  - **Eu peço uma água, por favor.** — I ask for water, please.\n- **perder** (to lose / miss): *eu perco, tu perdes, ele perde, nós perdemos, eles perdem*\n  - **Nunca perco o autocarro das oito.** — I never miss the eight o'clock bus.\n- **dormir** (to sleep): *eu durmo, tu dormes, ele dorme, nós dormimos, eles dormem*\n  - **Quantas horas dormes por noite?** — How many hours do you sleep per night?\n\n**Watch out!**\n1. Notice the **eu** forms with **-ço** or **-co**: *faço* (fazer), *peço* (pedir), *perco* (perder).\n2. For **dormir**, the vowel changes from **o** to **u** only in the first person: *eu durmo*, but *tu dormes, ele dorme*.",
+  "keyItems": [
+    {
+      "target": "dar (dou, dás, dá, damos, dão)",
+      "support": "to give",
+      "note": "irregular present tense"
+    },
+    {
+      "target": "fazer (faço, fazes, faz, fazemos, fazem)",
+      "support": "to do / make",
+      "note": "eu faço"
+    },
+    {
+      "target": "trazer (trago, trazes, traz, trazemos, trazem)",
+      "support": "to bring",
+      "note": "eu trago"
+    },
+    {
+      "target": "pôr (ponho, pões, põe, pomos, põem)",
+      "support": "to put",
+      "note": "irregular stem with nasal vowel"
+    },
+    {
+      "target": "pedir (peço, pedes, pede, pedimos, pedem)",
+      "support": "to ask for / order",
+      "note": "eu peço"
+    },
+    {
+      "target": "perder (perco, perdes, perde, perdemos, perdem)",
+      "support": "to lose / miss",
+      "note": "eu perco"
+    },
+    {
+      "target": "dormir (durmo, dormes, dorme, dormimos, dormem)",
+      "support": "to sleep",
+      "note": "vowel change: eu durmo"
+    },
+    {
+      "target": "dar um presente",
+      "support": "to give a present"
+    },
+    {
+      "target": "fazer o jantar",
+      "support": "to make dinner"
+    },
+    {
+      "target": "trazer o livro",
+      "support": "to bring the book"
+    },
+    {
+      "target": "pôr a mesa",
+      "support": "to set the table"
+    },
+    {
+      "target": "pedir a conta",
+      "support": "to ask for the bill"
+    },
+    {
+      "target": "perder o autocarro",
+      "support": "to miss the bus"
+    },
+    {
+      "target": "dormir bem / mal",
+      "support": "to sleep well / badly"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m5-irregular-verbs-3-01",
+      "type": "translate_word",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Faço» is the irregular 1st-person present form of «fazer»: «eu faço» (I do / I make).",
+      "direction": "toTarget",
+      "sentence": "I **make** dinner for my family every day.",
+      "word": "make",
+      "answer": "faço",
+      "options": ["faço", "faze", "fazo", "faz"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-02",
+      "type": "translate_word",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Dou» is the irregular 1st-person present form of «dar»: «eu dou» (I give).",
+      "direction": "toTarget",
+      "sentence": "I **give** a book to Maria on her birthday.",
+      "word": "give",
+      "answer": "dou",
+      "options": ["dou", "dás", "damos", "dão"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-03",
+      "type": "translate_word",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Durmo» is the 1st-person form of «dormir», with vowel change o -> u: «eu durmo» (I sleep).",
+      "direction": "toTarget",
+      "sentence": "I **sleep** eight hours every night.",
+      "word": "sleep",
+      "answer": "durmo",
+      "options": ["durmo", "dormo", "dormes", "dorme"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-04",
+      "type": "translate_word",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Põe» is the 3rd-person present form of «pôr»: «ele põe a mesa» (he sets the table).",
+      "direction": "toTarget",
+      "sentence": "He **puts** the glasses on the kitchen table.",
+      "word": "puts",
+      "answer": "põe",
+      "options": ["põe", "pões", "ponho", "pomos"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-05",
+      "type": "translate_word",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Trago» is the irregular 1st-person present form of «trazer»: «eu trago» (I bring).",
+      "direction": "toTarget",
+      "sentence": "I always **bring** an umbrella when it rains.",
+      "word": "bring",
+      "answer": "trago",
+      "options": ["trago", "trazo", "traz", "trazes"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-06",
+      "type": "fill_gaps",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I give a book and you give a pen.\" (informal)",
+      "explanation": "Present tense of «dar»: «eu dou» and «tu dás».",
+      "template": "Eu ___ um livro e tu ___ uma caneta.",
+      "gaps": [
+        {
+          "answer": "dou"
+        },
+        {
+          "answer": "dás"
+        }
+      ],
+      "wordBank": ["dou", "dás", "dá", "damos", "dão"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-07",
+      "type": "fill_gaps",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I ask for the bill and Tiago asks for a coffee.\"",
+      "explanation": "Present tense of «pedir»: «eu peço» (irregular 1st person) and «ele pede».",
+      "template": "Eu ___ a conta e o Tiago ___ um café.",
+      "gaps": [
+        {
+          "answer": "peço"
+        },
+        {
+          "answer": "pede"
+        }
+      ],
+      "wordBank": ["peço", "pede", "pedes", "pedimos", "pedem"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-08",
+      "type": "fill_gaps",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Ana puts the plates and we put the glasses on the table.\"",
+      "explanation": "Present tense of «pôr»: «ela põe» and «nós pomos».",
+      "template": "A Ana ___ os pratos e nós ___ os copos na mesa.",
+      "gaps": [
+        {
+          "answer": "põe"
+        },
+        {
+          "answer": "pomos"
+        }
+      ],
+      "wordBank": ["põe", "pomos", "ponho", "pões", "põem"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-09",
+      "type": "fill_gaps",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I never lose my keys, but you always lose your ticket.\" (informal)",
+      "explanation": "Present tense of «perder»: «eu perco» (with -c-) and «tu perdes».",
+      "template": "Eu nunca ___ as chaves, mas tu ___ sempre o bilhete.",
+      "gaps": [
+        {
+          "answer": "perco"
+        },
+        {
+          "answer": "perdes"
+        }
+      ],
+      "wordBank": ["perco", "perdes", "perde", "perdemos", "perdem"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-10",
+      "type": "fill_gaps",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I sleep badly, but the children sleep very well.\"",
+      "explanation": "«Dormir» changes to «durmo» in the 1st person, while 3rd-person plural is «dormem».",
+      "template": "Eu ___ mal, mas os miúdos ___ muito bem.",
+      "gaps": [
+        {
+          "answer": "durmo"
+        },
+        {
+          "answer": "dormem"
+        }
+      ],
+      "wordBank": ["durmo", "dormem", "dormo", "dorme", "dormimos"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-11",
+      "type": "fill_gaps",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"What do you do when you bring work home?\" (informal)",
+      "explanation": "Informal 2nd-person forms: «fazer» -> «fazes», «trazer» -> «trazes».",
+      "template": "O que ___ tu quando ___ trabalho para casa?",
+      "gaps": [
+        {
+          "answer": "fazes"
+        },
+        {
+          "answer": "trazes"
+        }
+      ],
+      "wordBank": ["fazes", "trazes", "faço", "trago", "faz", "traz"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-12",
+      "type": "fill_gaps",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I make the soup, Sofia brings bread, and they set the table.\"",
+      "explanation": "1st person: «eu faço»; 3rd person singular: «ela traz»; 3rd person plural: «eles põem».",
+      "template": "Eu ___ a sopa, a Sofia ___ o pão e eles ___ a mesa.",
+      "gaps": [
+        {
+          "answer": "faço"
+        },
+        {
+          "answer": "traz"
+        },
+        {
+          "answer": "põem"
+        }
+      ],
+      "wordBank": ["faço", "traz", "põem", "faz", "trago", "põe"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-13",
+      "type": "build_phrase",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what you do: \"I make dinner every evening.\"",
+      "explanation": "«Fazer» in the 1st person is «faço»: «Eu faço o jantar todas as noites».",
+      "answer": ["Eu", "faço", "o", "jantar", "todas", "as", "noites."],
+      "distractors": ["faz", "um", "todos"],
+      "acceptedAnswers": ["Faço o jantar todas as noites."]
+    },
+    {
+      "id": "m5-irregular-verbs-3-14",
+      "type": "build_phrase",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what you bring: \"I bring a cake to the party.\"",
+      "explanation": "«Trazer» in the 1st person is «trago»: «Trago um bolo para a festa».",
+      "answer": ["Trago", "um", "bolo", "para", "a", "festa."],
+      "distractors": ["Traz", "uma", "no"],
+      "acceptedAnswers": ["Eu trago um bolo para a festa."]
+    },
+    {
+      "id": "m5-irregular-verbs-3-15",
+      "type": "build_phrase",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what someone sets: \"Rita sets the table before lunch.\"",
+      "explanation": "«Pôr» with 3rd-person subject Rita is «põe»: «A Rita põe a mesa».",
+      "answer": ["A", "Rita", "põe", "a", "mesa", "antes", "do", "almoço."],
+      "distractors": ["O", "ponho", "da"],
+      "acceptedAnswers": ["A Rita põe a mesa antes de almoçar."]
+    },
+    {
+      "id": "m5-irregular-verbs-3-16",
+      "type": "build_phrase",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say whom you ask for help: \"I ask the doctor at the hospital for help.\"",
+      "explanation": "«Pedir» in the 1st person is «peço»: «Peço ajuda ao médico».",
+      "answer": ["Peço", "ajuda", "ao", "médico", "no", "hospital."],
+      "distractors": ["Pede", "à", "na"],
+      "acceptedAnswers": ["Eu peço ajuda ao médico no hospital."]
+    },
+    {
+      "id": "m5-irregular-verbs-3-17",
+      "type": "build_phrase",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State how someone sleeps: \"Manuel sleeps seven hours every night.\"",
+      "explanation": "«Dormir» with 3rd-person subject is «dorme»: «O Manuel dorme sete horas».",
+      "answer": ["O", "Manuel", "dorme", "sete", "horas", "por", "noite."],
+      "distractors": ["durmo", "oito", "para"],
+      "acceptedAnswers": ["Manuel dorme sete horas por noite."]
+    },
+    {
+      "id": "m5-irregular-verbs-3-18",
+      "type": "build_phrase",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what happens with the bus: \"I never miss the morning bus to work.\"",
+      "explanation": "«Perder» in the 1st person is «perco»: «Nunca perco o autocarro da manhã».",
+      "answer": ["Nunca", "perco", "o", "autocarro", "da", "manhã", "para", "o", "trabalho."],
+      "distractors": ["perde", "a", "do"],
+      "acceptedAnswers": ["Eu nunca perco o autocarro da manhã para o trabalho."]
+    },
+    {
+      "id": "m5-irregular-verbs-3-19",
+      "type": "build_phrase",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what you give: \"We give flowers to grandmother on Sundays.\"",
+      "explanation": "«Dar» with «nós» is «damos»: «Nós damos flores à avó aos domingos».",
+      "answer": ["Nós", "damos", "flores", "à", "avó", "aos", "domingos."],
+      "distractors": ["dão", "ao", "no"],
+      "acceptedAnswers": ["Damos flores à avó aos domingos."]
+    },
+    {
+      "id": "m5-irregular-verbs-3-20",
+      "type": "build_phrase",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe friends' actions: \"They make lunch and bring wine.\"",
+      "explanation": "3rd-person plural forms: «fazer» -> «fazem», «trazer» -> «trazem».",
+      "answer": ["Eles", "fazem", "o", "almoço", "e", "trazem", "vinho."],
+      "distractors": ["fazemos", "trazemos", "um"],
+      "acceptedAnswers": ["Elas fazem o almoço e trazem vinho."]
+    },
+    {
+      "id": "m5-irregular-verbs-3-21",
+      "type": "build_phrase",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State putting clothes away: \"I put the warm coat inside the wardrobe.\"",
+      "explanation": "«Pôr» in the 1st person is «ponho»: «Ponho o casaco quente dentro do armário».",
+      "answer": ["Ponho", "o", "casaco", "quente", "dentro", "do", "armário."],
+      "distractors": ["Põe", "a", "da"],
+      "acceptedAnswers": ["Eu ponho o casaco quente dentro do armário."]
+    },
+    {
+      "id": "m5-irregular-verbs-3-22",
+      "type": "build_phrase",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe a café routine: \"When we go to the café, we order two espressos.\"",
+      "explanation": "«Pedir» with «nós» is «pedimos»: «pedimos duas bicas».",
+      "answer": ["Quando", "vamos", "ao", "café,", "pedimos", "duas", "bicas."],
+      "distractors": ["vão", "à", "peço"],
+      "acceptedAnswers": ["Quando vamos ao café pedimos duas bicas."]
+    },
+    {
+      "id": "m5-irregular-verbs-3-23",
+      "type": "build_phrase",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State weekend sleep habits: \"On Saturday I sleep late because I do not work.\"",
+      "explanation": "1st-person of dormir is «durmo»: «Ao sábado durmo até tarde porque não trabalho».",
+      "answer": ["Ao", "sábado", "durmo", "até", "tarde", "porque", "não", "trabalho."],
+      "distractors": ["Em", "dormo", "trabalha"],
+      "acceptedAnswers": [
+        "Aos sábados durmo até tarde porque não trabalho.",
+        "Ao sábado, durmo até tarde porque não trabalho.",
+        "Ao sábado eu durmo até tarde porque não trabalho."
+      ]
+    },
+    {
+      "id": "m5-irregular-verbs-3-24",
+      "type": "question_for_answer",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Faço o jantar às oito.» Ask her (informal) what time she makes dinner.",
+      "explanation": "«Fazes» is the tu form of «fazer» (eu faço, tu fazes). «A que horas…?» asks for a time.",
+      "givenAnswer": "Faço o jantar às oito.",
+      "answer": ["A", "que", "horas", "fazes", "o", "jantar?"],
+      "distractors": ["Como", "faz", "faço"],
+      "acceptedAnswers": ["A que horas é que fazes o jantar?"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-25",
+      "type": "question_for_answer",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your colleague answers: «Trago fruta e água.» Ask him (informal) what he is bringing.",
+      "explanation": "«O que trazes?» uses the tu form of «trazer» (eu trago, tu trazes).",
+      "givenAnswer": "Trago fruta e água.",
+      "answer": ["O", "que", "trazes?"],
+      "distractors": ["Quem", "traz", "trago"],
+      "acceptedAnswers": ["O que é que trazes?", "O que trazes aí?", "O que é que trazes aí?"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-26",
+      "type": "question_for_answer",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «Dou um presente à mãe.» Ask him (informal) what he gives his mum.",
+      "explanation": "«O que dás à mãe?» uses the 2nd-person form of «dar».",
+      "givenAnswer": "Dou um presente à mãe.",
+      "answer": ["O", "que", "dás", "à", "mãe?"],
+      "distractors": ["Como", "dá", "ao"],
+      "acceptedAnswers": ["O que é que dás à mãe?"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-27",
+      "type": "question_for_answer",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ana answers: «Durmo oito horas por noite.» Ask her (informal) how many hours she sleeps a night.",
+      "explanation": "«Quantas horas dormes?» uses the 2nd-person form of «dormir».",
+      "givenAnswer": "Durmo oito horas por noite.",
+      "answer": ["Quantas", "horas", "dormes", "por", "noite?"],
+      "distractors": ["Quantos", "dias", "dorme"],
+      "acceptedAnswers": ["Quantas horas é que dormes por noite?"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-28",
+      "type": "question_for_answer",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Peço uma água sem gás.» Ask her (informal) what she orders to drink.",
+      "explanation": "«O que pedes?» uses the 2nd-person form of «pedir».",
+      "givenAnswer": "Peço uma água sem gás.",
+      "answer": ["O", "que", "pedes", "para", "beber?"],
+      "distractors": ["Como", "pede", "comer?"],
+      "acceptedAnswers": ["O que é que pedes para beber?"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-29",
+      "type": "question_for_answer",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The passenger answers: «Perco sempre o comboio das sete.» Ask her (informal) which train she always misses.",
+      "explanation": "«Perdes» is the tu form of «perder» (eu perco, tu perdes). «Que comboio…?» asks which train.",
+      "givenAnswer": "Perco sempre o comboio das sete.",
+      "answer": ["Que", "comboio", "perdes", "sempre?"],
+      "distractors": ["Quem", "autocarro", "perde"],
+      "acceptedAnswers": ["Que comboio é que perdes sempre?"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-30",
+      "type": "question_for_answer",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tiago answers: «Ponho as chaves em cima da mesa.» Ask him (informal) where he puts his keys.",
+      "explanation": "«Onde pões as chaves?» uses the 2nd-person form of «pôr».",
+      "givenAnswer": "Ponho as chaves em cima da mesa.",
+      "answer": ["Onde", "pões", "as", "tuas", "chaves?"],
+      "distractors": ["Aonde", "põe", "os"],
+      "acceptedAnswers": [
+        "Onde é que pões as tuas chaves?",
+        "Onde pões as chaves?",
+        "Onde é que pões as chaves?"
+      ]
+    },
+    {
+      "id": "m5-irregular-verbs-3-31",
+      "type": "question_for_answer",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Maria answers: «Trago sobremesa para o jantar de logo.» Ask her (informal) what she is bringing for dinner.",
+      "explanation": "«O que trazes para o jantar?» asks what someone brings for dinner.",
+      "givenAnswer": "Trago sobremesa para o jantar de logo.",
+      "answer": ["O", "que", "trazes", "para", "o", "jantar?"],
+      "distractors": ["Quem", "traz", "a"],
+      "acceptedAnswers": ["O que é que trazes para o jantar?"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-32",
+      "type": "question_for_answer",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The student answers: «Peço ajuda ao professor quando tenho dúvidas.» Ask him (informal) whom he asks for help when he has doubts.",
+      "explanation": "«Pedir ajuda a alguém» → «A quem pedes ajuda?» (tu pedes; eu peço).",
+      "givenAnswer": "Peço ajuda ao professor quando tenho dúvidas.",
+      "answer": ["A", "quem", "pedes", "ajuda", "quando", "tens", "dúvidas?"],
+      "distractors": ["De", "onde", "pede"],
+      "acceptedAnswers": [
+        "A quem é que pedes ajuda quando tens dúvidas?",
+        "A quem pedes ajuda?",
+        "A quem é que pedes ajuda?"
+      ]
+    },
+    {
+      "id": "m5-irregular-verbs-3-33",
+      "type": "find_error",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 1st-person present of «fazer» is irregular: «eu faço», not «eu fazo».",
+      "sentence": ["Eu", "fazo", "o", "almoço", "todos", "os", "dias."],
+      "wrongIndex": 1,
+      "correction": "faço",
+      "options": ["faço", "faz", "fazes"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-34",
+      "type": "find_error",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 1st-person present of «dormir» changes vowel to «u»: «eu durmo», not «dormo».",
+      "sentence": ["Eu", "dormo", "muito", "pouco", "esta", "semana."],
+      "wrongIndex": 1,
+      "correction": "durmo",
+      "options": ["durmo", "dorme", "dormes"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-35",
+      "type": "find_error",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 1st-person present of «pedir» has -ç-: «eu peço a conta», not «eu pedo».",
+      "sentence": ["No", "restaurante,", "eu", "pedo", "sempre", "peixe."],
+      "wrongIndex": 3,
+      "correction": "peço",
+      "options": ["peço", "pede", "pedes"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-36",
+      "type": "find_error",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 3rd-person singular of «pôr» is «põe»: «O Pedro põe», not «pões» (which is tu).",
+      "sentence": ["O", "Pedro", "pões", "a", "mesa", "para", "o", "jantar."],
+      "wrongIndex": 2,
+      "correction": "põe",
+      "options": ["põe", "ponho", "pomos"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-37",
+      "type": "find_error",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 1st-person present of «trazer» is «trago»: «eu trago o bolo», not «trazo».",
+      "sentence": ["Hoje", "eu", "trazo", "o", "bolo", "para", "a", "festa."],
+      "wrongIndex": 2,
+      "correction": "trago",
+      "options": ["trago", "traz", "trazes"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-38",
+      "type": "about_me",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State how many hours you sleep using «Durmo … horas por noite».",
+      "question": "Quantas horas dormes por noite?",
+      "sampleAnswer": "Durmo sete horas por noite.",
+      "hints": ["oito", "seis", "bem", "mal", "pouco"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-39",
+      "type": "about_me",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Say what you do after work with eu forms: «Faço o jantar», «Leio um livro», «Descanso».",
+      "question": "O que fazes depois do trabalho?",
+      "sampleAnswer": "Faço o jantar e vejo televisão.",
+      "hints": ["leio", "um", "livro", "descanso", "passeio"]
+    },
+    {
+      "id": "m5-irregular-verbs-3-40",
+      "type": "about_me",
+      "topicId": "m5-irregular-verbs-3",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Say what you order with «Peço…» (eu peço — irregular 1st person of «pedir»).",
+      "question": "O que pedes normalmente num restaurante?",
+      "sampleAnswer": "Peço peixe grelhado com salada e água.",
+      "hints": ["sopa", "carne", "frango", "vinho", "sobremesa"]
+    }
+  ]
+}

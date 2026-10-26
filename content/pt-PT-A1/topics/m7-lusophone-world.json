@@ -1,0 +1,633 @@
+{
+  "id": "m7-lusophone-world",
+  "moduleId": "m7",
+  "title": "The Portuguese-speaking world",
+  "kind": "vocabulary",
+  "context": "# The Portuguese-Speaking World (O Mundo Lusófono)\n\nPortuguese is an official language across four continents, uniting more than 260 million speakers in the **CPLP** (*Comunidade dos Países de Língua Portuguesa*).\n\n### The Lusophone Countries\n- **Portugal**: Capital *Lisboa*, located in southwestern Europe.\n- **Brasil**: Capital *Brasília*, the largest Portuguese-speaking country in area and population.\n- **Angola**: Capital *Luanda*, rich in music (semba, kizomba) and natural resources.\n- **Moçambique**: Capital *Maputo*, on the Indian Ocean coast of southeastern Africa.\n- **Cabo Verde**: Capital *Praia*, an Atlantic archipelago known for *morna* music.\n- **Guiné-Bissau**: Capital *Bissau*, located in West Africa.\n- **São Tomé e Príncipe**: Capital *São Tomé*, an island nation in the Gulf of Guinea.\n- **Timor-Leste**: Capital *Díli*, in Southeast Asia.\n- **Guiné Equatorial** joined the CPLP in 2014, so the CPLP has **nine** member states.\n\n### Portuguese Vocabulary Variations (pt-PT vs. pt-BR)\nWhile the grammar remains largely shared, everyday words often differ between European Portuguese (**pt-PT**) and Brazilian Portuguese (**pt-BR**):\n- **comboio** (PT) vs. *trem* (BR) — train\n- **autocarro** (PT) vs. *ônibus* (BR) — bus\n- **pequeno-almoço** (PT) vs. *café da manhã* (BR) — breakfast\n- **telemóvel** (PT) vs. *celular* (BR) — mobile phone\n- **sumo** (PT) vs. *suco* (BR) — juice\n- **casa de banho** (PT) vs. *banheiro* (BR) — bathroom\n\n**Watch out!**\n1. In Portugal, continuous actions use **estar a + infinitivo** (*estou a falar*), while in Brazil the gerund is used (*estou falando*).\n2. Informal singular address in Portugal is **tu** with second-person verb endings (*tu falas*), whereas in Brazil **você** is standard for informal speech.\n3. In Portugal, *África* usually has no article: *Angola fica em África* (Brazil: *na África*). *O Brasil* always takes one: *do Brasil, no Brasil*.",
+  "keyItems": [
+    {
+      "target": "a CPLP",
+      "support": "Community of Portuguese Language Countries"
+    },
+    {
+      "target": "o país lusófono",
+      "support": "Portuguese-speaking country"
+    },
+    {
+      "target": "a língua oficial",
+      "support": "official language"
+    },
+    {
+      "target": "Portugal (capital: Lisboa)",
+      "support": "Portugal (Lisbon)"
+    },
+    {
+      "target": "o Brasil (capital: Brasília)",
+      "support": "Brazil (Brasília)"
+    },
+    {
+      "target": "Angola (capital: Luanda)",
+      "support": "Angola (Luanda)"
+    },
+    {
+      "target": "Moçambique (capital: Maputo)",
+      "support": "Mozambique (Maputo)"
+    },
+    {
+      "target": "Cabo Verde (capital: Praia)",
+      "support": "Cape Verde (Praia)"
+    },
+    {
+      "target": "o autocarro (PT)",
+      "support": "bus (European Portuguese)"
+    },
+    {
+      "target": "o comboio (PT)",
+      "support": "train (European Portuguese)"
+    },
+    {
+      "target": "o pequeno-almoço (PT)",
+      "support": "breakfast (European Portuguese)"
+    },
+    {
+      "target": "o telemóvel (PT)",
+      "support": "mobile phone (European Portuguese)"
+    },
+    {
+      "target": "o sumo (PT)",
+      "support": "juice (European Portuguese)"
+    },
+    {
+      "target": "a casa de banho (PT)",
+      "support": "bathroom (European Portuguese)"
+    },
+    {
+      "target": "Timor-Leste (capital: Díli)",
+      "support": "East Timor (Dili)"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m7-lusophone-world-01",
+      "type": "translate_word",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Oficial» means official: «língua oficial» (official language).",
+      "direction": "toTarget",
+      "sentence": "Portuguese is an **official** language in nine countries.",
+      "word": "official",
+      "answer": "oficial",
+      "options": ["oficial", "original", "ocidental", "oral"]
+    },
+    {
+      "id": "m7-lusophone-world-02",
+      "type": "translate_word",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the European Portuguese word for the item in bold.",
+      "explanation": "In European Portuguese, train is «comboio» (in Brazil: «trem»).",
+      "direction": "toTarget",
+      "sentence": "In Portugal, we catch the **train** to go to Porto.",
+      "word": "train",
+      "answer": "comboio",
+      "options": ["comboio", "autocarro", "metro", "carro"]
+    },
+    {
+      "id": "m7-lusophone-world-03",
+      "type": "translate_word",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the European Portuguese word for the item in bold.",
+      "explanation": "In European Portuguese, bus is «autocarro» (in Brazil: «ônibus»).",
+      "direction": "toTarget",
+      "sentence": "I take the city **bus** to university every morning.",
+      "word": "bus",
+      "answer": "autocarro",
+      "options": ["autocarro", "comboio", "elétrico", "táxi"]
+    },
+    {
+      "id": "m7-lusophone-world-04",
+      "type": "translate_word",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the European Portuguese word for the item in bold.",
+      "explanation": "In Portugal, breakfast is «pequeno-almoço» (in Brazil: «café da manhã»).",
+      "direction": "toTarget",
+      "sentence": "I ate a croissant and drank coffee for **breakfast**.",
+      "word": "breakfast",
+      "answer": "pequeno-almoço",
+      "options": ["pequeno-almoço", "almoço", "jantar", "lanche"]
+    },
+    {
+      "id": "m7-lusophone-world-05",
+      "type": "translate_word",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the European Portuguese word for the item in bold.",
+      "explanation": "In European Portuguese, mobile phone is «telemóvel» (in Brazil: «celular»).",
+      "direction": "toTarget",
+      "sentence": "I forgot my **mobile phone** on the kitchen table.",
+      "word": "mobile phone",
+      "answer": "telemóvel",
+      "options": ["telemóvel", "telefone", "computador", "ecrã"]
+    },
+    {
+      "id": "m7-lusophone-world-06",
+      "type": "fill_gaps",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence with the capitals of Portugal and Angola.",
+      "explanation": "Lisbon («Lisboa») is the capital of Portugal, and «Luanda» is the capital of Angola.",
+      "template": "A capital de Portugal é ___ e a capital de Angola é ___.",
+      "gaps": [
+        {
+          "answer": "Lisboa"
+        },
+        {
+          "answer": "Luanda"
+        }
+      ],
+      "wordBank": ["Lisboa", "Luanda", "Porto", "Maputo", "Brasília"]
+    },
+    {
+      "id": "m7-lusophone-world-07",
+      "type": "fill_gaps",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Contrast European and Brazilian vocabulary for 'train'.",
+      "explanation": "Train is «comboio» in European Portuguese and «trem» in Brazilian Portuguese.",
+      "template": "Em Portugal dizemos ___ e no Brasil dizem ___.",
+      "gaps": [
+        {
+          "answer": "comboio"
+        },
+        {
+          "answer": "trem"
+        }
+      ],
+      "wordBank": ["comboio", "trem", "autocarro", "ônibus", "carro"]
+    },
+    {
+      "id": "m7-lusophone-world-08",
+      "type": "fill_gaps",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about the Portuguese language community.",
+      "explanation": "«A língua oficial» (singular, agreeing with «língua»); the nine Portuguese-speaking states form the «CPLP».",
+      "template": "O português é a língua ___ em vários países da ___.",
+      "gaps": [
+        {
+          "answer": "oficial"
+        },
+        {
+          "answer": "CPLP"
+        }
+      ],
+      "wordBank": ["oficial", "CPLP", "oficiais", "Europa", "Ásia"]
+    },
+    {
+      "id": "m7-lusophone-world-09",
+      "type": "fill_gaps",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with European Portuguese food & drink terms.",
+      "explanation": "In Portugal juice is «sumo» (Brazil: «suco»), and in Lisbon an espresso is «uma bica» (feminine). 'At breakfast' is «ao pequeno-almoço».",
+      "template": "Ao pequeno-almoço em Lisboa peço um ___ de laranja e uma ___.",
+      "gaps": [
+        {
+          "answer": "sumo"
+        },
+        {
+          "answer": "bica"
+        }
+      ],
+      "wordBank": ["sumo", "bica", "suco", "café", "leite"]
+    },
+    {
+      "id": "m7-lusophone-world-10",
+      "type": "fill_gaps",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps describing Cape Verde's location and capital.",
+      "explanation": "Cabo Verde lies in the Atlantic Ocean («oceano Atlântico»); its capital is Praia («na Praia», em + a).",
+      "template": "Cabo Verde é um arquipélago no oceano ___ com capital na ___.",
+      "gaps": [
+        {
+          "answer": "Atlântico"
+        },
+        {
+          "answer": "Praia"
+        }
+      ],
+      "wordBank": ["Atlântico", "Praia", "Índico", "Cidade", "Ilha"]
+    },
+    {
+      "id": "m7-lusophone-world-11",
+      "type": "fill_gaps",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps reflecting European Portuguese grammar and vocabulary.",
+      "explanation": "In Portugal friends use «tu» (Brazil: «você»), and the bathroom is «a casa de banho» (Brazil: «banheiro»).",
+      "template": "Em Portugal usamos o pronome ___ com os amigos e dizemos ___ de banho.",
+      "gaps": [
+        {
+          "answer": "tu"
+        },
+        {
+          "answer": "casa"
+        }
+      ],
+      "wordBank": ["tu", "casa", "você", "sala", "senhor"]
+    },
+    {
+      "id": "m7-lusophone-world-12",
+      "type": "fill_gaps",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with the East African Lusophone country and its capital.",
+      "explanation": "«Moçambique» is the Lusophone country on the Indian Ocean coast; its capital is «Maputo» (Luanda is the capital of Angola).",
+      "template": "Na costa do oceano Índico fica ___, e a sua capital é ___.",
+      "gaps": [
+        {
+          "answer": "Moçambique"
+        },
+        {
+          "answer": "Maputo"
+        }
+      ],
+      "wordBank": ["Moçambique", "Maputo", "Angola", "Luanda", "Brasil"]
+    },
+    {
+      "id": "m7-lusophone-world-13",
+      "type": "build_phrase",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Portuguese is spoken across four continents.\"",
+      "explanation": "«O português» takes the article as a language name; «é falado» = is spoken, «em quatro continentes» (Europe, America, Africa, Asia).",
+      "answer": ["O", "português", "é", "falado", "em", "quatro", "continentes."],
+      "distractors": ["são", "cinco"],
+      "acceptedAnswers": ["Português é falado em quatro continentes."]
+    },
+    {
+      "id": "m7-lusophone-world-14",
+      "type": "build_phrase",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"In Portugal we say autocarro and not ônibus.\"",
+      "explanation": "«Portugal» takes no article («em Portugal»); «dizemos» = we say. Bus is «autocarro» in Portugal, «ônibus» in Brazil.",
+      "answer": ["Em", "Portugal", "dizemos", "autocarro", "e", "não", "ônibus."],
+      "distractors": ["dizem", "comboio"],
+      "acceptedAnswers": [
+        "Dizemos autocarro e não ônibus em Portugal.",
+        "Em Portugal nós dizemos autocarro e não ônibus."
+      ]
+    },
+    {
+      "id": "m7-lusophone-world-15",
+      "type": "build_phrase",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Brasília is the capital city of Brazil.\"",
+      "explanation": "«Brasil» always takes the article in Portuguese: de + o Brasil = «do Brasil».",
+      "answer": ["Brasília", "é", "a", "capital", "do", "Brasil."],
+      "distractors": ["de", "cidade"],
+      "acceptedAnswers": ["A capital do Brasil é Brasília."]
+    },
+    {
+      "id": "m7-lusophone-world-16",
+      "type": "build_phrase",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Where is the bathroom?\" (pt-PT)",
+      "explanation": "«Onde fica...?» asks where something is; in European Portuguese the bathroom is «a casa de banho», not «banheiro».",
+      "answer": ["Onde", "fica", "a", "casa", "de", "banho?"],
+      "distractors": ["banheiro?", "no"],
+      "acceptedAnswers": ["Onde é a casa de banho?"]
+    },
+    {
+      "id": "m7-lusophone-world-17",
+      "type": "build_phrase",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I bought an orange juice at the cafe.\" (pt-PT)",
+      "explanation": "In Portugal, juice is «sumo»: «Comprei um sumo de laranja no café».",
+      "answer": ["Comprei", "um", "sumo", "de", "laranja", "no", "café."],
+      "distractors": ["suco", "na"],
+      "acceptedAnswers": ["Eu comprei um sumo de laranja no café."]
+    },
+    {
+      "id": "m7-lusophone-world-18",
+      "type": "build_phrase",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Angola and Mozambique are on the African continent.\"",
+      "explanation": "«Ficar» describes where places are; with two countries the verb is plural: «ficam». «No continente» = em + o continente.",
+      "answer": ["Angola", "e", "Moçambique", "ficam", "no", "continente", "africano."],
+      "distractors": ["fica", "na"],
+      "acceptedAnswers": [
+        "Angola e Moçambique estão no continente africano.",
+        "Angola e Moçambique ficam em África."
+      ]
+    },
+    {
+      "id": "m7-lusophone-world-19",
+      "type": "build_phrase",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"In Portugal we say estar a falar, not falando.\"",
+      "explanation": "European Portuguese uses «estar a + infinitivo» for the progressive aspect.",
+      "answer": ["Em", "Portugal", "dizemos", "estar", "a", "falar,", "não", "falando."],
+      "distractors": ["falou,", "dizem", "para"],
+      "acceptedAnswers": ["Em Portugal usamos estar a falar, não falando."]
+    },
+    {
+      "id": "m7-lusophone-world-20",
+      "type": "build_phrase",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Cabo Verde is famous for traditional morna music.\"",
+      "explanation": "«Ser famoso por»: por + a = «pela» (a música). Cabo Verde is masculine, so «famoso».",
+      "answer": ["Cabo", "Verde", "é", "famoso", "pela", "música", "tradicional", "morna."],
+      "distractors": ["famosa", "pelo", "samba"],
+      "acceptedAnswers": ["Cabo Verde é conhecido pela música tradicional morna."]
+    },
+    {
+      "id": "m7-lusophone-world-21",
+      "type": "build_phrase",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Timor-Leste is a Portuguese-speaking country in Asia.\"",
+      "explanation": "Timor-Leste is the Lusophone country in Asia: «na Ásia» (em + a).",
+      "answer": ["Timor-Leste", "é", "um", "país", "de", "língua", "portuguesa", "na", "Ásia."],
+      "distractors": ["uma", "África.", "no"],
+      "acceptedAnswers": ["O Timor-Leste é um país de língua portuguesa na Ásia."]
+    },
+    {
+      "id": "m7-lusophone-world-22",
+      "type": "build_phrase",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I answered the call on my new mobile phone.\" (pt-PT)",
+      "explanation": "In European Portuguese, mobile phone is «telemóvel».",
+      "answer": ["Atendi", "a", "chamada", "no", "meu", "telemóvel", "novo."],
+      "distractors": ["celular", "na", "atendeu"],
+      "acceptedAnswers": ["Eu atendi a chamada no meu telemóvel novo."]
+    },
+    {
+      "id": "m7-lusophone-world-23",
+      "type": "build_phrase",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"The CPLP unites countries that share the same language.\"",
+      "explanation": "Singular subject «a CPLP» → «une»; plural «países» → «partilham»; «a mesma língua» (feminine).",
+      "answer": ["A", "CPLP", "une", "países", "que", "partilham", "a", "mesma", "língua."],
+      "distractors": ["unem", "partilha", "mesmo"],
+      "acceptedAnswers": ["A CPLP reúne países que partilham a mesma língua."]
+    },
+    {
+      "id": "m7-lusophone-world-24",
+      "type": "question_for_answer",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «A capital de Portugal é Lisboa.» Ask him (informal) what the capital of Portugal is.",
+      "explanation": "«Qual é a capital de Portugal?» asks for the capital city.",
+      "givenAnswer": "A capital de Portugal é Lisboa.",
+      "answer": ["Qual", "é", "a", "capital", "de", "Portugal?"],
+      "distractors": ["Que", "do", "onde"],
+      "acceptedAnswers": ["Qual é a capital portuguesa?"]
+    },
+    {
+      "id": "m7-lusophone-world-25",
+      "type": "question_for_answer",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Rita answers: «A capital de Angola é Luanda.» Ask her what the capital of Angola is.",
+      "explanation": "«Qual é a capital de Angola?» asks for Angola's capital.",
+      "givenAnswer": "A capital de Angola é Luanda.",
+      "answer": ["Qual", "é", "a", "capital", "de", "Angola?"],
+      "distractors": ["Como", "em", "cidade"],
+      "acceptedAnswers": ["Qual é a capital angolana?"]
+    },
+    {
+      "id": "m7-lusophone-world-26",
+      "type": "question_for_answer",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tiago answers: «Dizemos autocarro em Portugal.» Ask how you say «ônibus» in Portugal.",
+      "explanation": "«Como se diz ônibus em Portugal?» asks how to say bus in pt-PT.",
+      "givenAnswer": "Dizemos autocarro em Portugal.",
+      "answer": ["Como", "se", "diz", "ônibus", "em", "Portugal?"],
+      "distractors": ["Quando", "fala", "comboio"],
+      "acceptedAnswers": ["Como é que se diz ônibus em Portugal?"]
+    },
+    {
+      "id": "m7-lusophone-world-27",
+      "type": "question_for_answer",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Sofia answers: «Em Portugal diz-se pequeno-almoço.» Ask how you say «café da manhã» in Portugal.",
+      "explanation": "«Como se diz...?» asks for a word; «café da manhã» (Brazil) is «pequeno-almoço» in Portugal.",
+      "givenAnswer": "Em Portugal diz-se pequeno-almoço.",
+      "answer": ["Como", "se", "diz", "café", "da", "manhã", "em", "Portugal?"],
+      "distractors": ["Qual", "almoço", "quando"],
+      "acceptedAnswers": ["Como é que se diz café da manhã em Portugal?"]
+    },
+    {
+      "id": "m7-lusophone-world-28",
+      "type": "question_for_answer",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "João answers: «Fica no Sudeste Asiático.» Ask where Timor-Leste is.",
+      "explanation": "«Onde fica Timor-Leste?» asks for Timor-Leste's geographic location.",
+      "givenAnswer": "Fica no Sudeste Asiático.",
+      "answer": ["Onde", "fica", "Timor-Leste?"],
+      "distractors": ["Como", "ficam", "África?"],
+      "acceptedAnswers": ["Onde é que fica Timor-Leste?"]
+    },
+    {
+      "id": "m7-lusophone-world-29",
+      "type": "question_for_answer",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Inês answers: «Significa Comunidade dos Países de Língua Portuguesa.» Ask what the acronym CPLP means.",
+      "explanation": "«O que significa a sigla CPLP?» asks for the meaning of the acronym.",
+      "givenAnswer": "Significa Comunidade dos Países de Língua Portuguesa.",
+      "answer": ["O", "que", "significa", "a", "sigla", "CPLP?"],
+      "distractors": ["Qual", "significam", "país"],
+      "acceptedAnswers": ["O que é que significa a sigla CPLP?", "O que significa CPLP?"]
+    },
+    {
+      "id": "m7-lusophone-world-30",
+      "type": "question_for_answer",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Carlos answers: «Dizemos telemóvel e não celular.» Ask how you say «celular» in Portugal (use «é que»).",
+      "explanation": "«Como é que se diz...?» asks for the local word; in Portugal a mobile phone is «telemóvel».",
+      "givenAnswer": "Dizemos telemóvel e não celular.",
+      "answer": ["Como", "é", "que", "se", "diz", "celular", "em", "Portugal?"],
+      "distractors": ["onde", "chama", "telefone"],
+      "acceptedAnswers": [
+        "Como se diz celular em Portugal?",
+        "Como é que dizem celular em Portugal?"
+      ]
+    },
+    {
+      "id": "m7-lusophone-world-31",
+      "type": "question_for_answer",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Marta answers: «São nove países membros oficiais.» Ask how many countries are part of the CPLP.",
+      "explanation": "«Quantos países fazem parte da CPLP?» asks for the count of member countries.",
+      "givenAnswer": "São nove países membros oficiais.",
+      "answer": ["Quantos", "países", "fazem", "parte", "da", "CPLP?"],
+      "distractors": ["Quais", "faz", "no"],
+      "acceptedAnswers": ["Quantos países é que fazem parte da CPLP?"]
+    },
+    {
+      "id": "m7-lusophone-world-32",
+      "type": "question_for_answer",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Duarte answers: «Sim, já estive em Cabo Verde.» Ask him (informal) if he has ever been to Cabo Verde.",
+      "explanation": "«Já estiveste em Cabo Verde?» asks about travel to Lusophone countries.",
+      "givenAnswer": "Sim, já estive em Cabo Verde.",
+      "answer": ["Já", "estiveste", "em", "Cabo", "Verde?"],
+      "distractors": ["esteve", "no", "foste"],
+      "acceptedAnswers": ["Já alguma vez estiveste em Cabo Verde?", "Já foste a Cabo Verde?"]
+    },
+    {
+      "id": "m7-lusophone-world-33",
+      "type": "find_error",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong in European Portuguese. Tap it and choose the correction.",
+      "explanation": "In European Portuguese, train is «comboio», not Brazilian «trem».",
+      "sentence": ["Em", "Lisboa", "apanhei", "o", "trem", "das", "nove."],
+      "wrongIndex": 4,
+      "correction": "comboio",
+      "options": ["comboio", "ônibus", "bonde"]
+    },
+    {
+      "id": "m7-lusophone-world-34",
+      "type": "find_error",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong in European Portuguese. Tap it and choose the correction.",
+      "explanation": "In European Portuguese, juice is «sumo», not Brazilian «suco».",
+      "sentence": ["Bebi", "um", "suco", "de", "laranja", "fresco."],
+      "wrongIndex": 2,
+      "correction": "sumo",
+      "options": ["sumo", "leite", "pão"]
+    },
+    {
+      "id": "m7-lusophone-world-35",
+      "type": "find_error",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong in European Portuguese. Tap it and choose the correction.",
+      "explanation": "In Portugal, mobile phone is «telemóvel», not Brazilian «celular».",
+      "sentence": ["Esqueci", "o", "meu", "celular", "em", "casa."],
+      "wrongIndex": 3,
+      "correction": "telemóvel",
+      "options": ["telemóvel", "telefonema", "telemóveis"]
+    },
+    {
+      "id": "m7-lusophone-world-36",
+      "type": "find_error",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong in European Portuguese. Tap it and choose the correction.",
+      "explanation": "European Portuguese forms the progressive with «estar a + infinitivo»: «estou a falar», not «estou de falar».",
+      "sentence": ["Agora", "eu", "estou", "de", "falar", "com", "ele."],
+      "wrongIndex": 3,
+      "correction": "a",
+      "options": ["a", "em", "no"]
+    },
+    {
+      "id": "m7-lusophone-world-37",
+      "type": "find_error",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is factually wrong. Tap it and choose the correction.",
+      "explanation": "The capital of Brazil is «Brasília», while Luanda is the capital of Angola.",
+      "sentence": ["A", "capital", "oficial", "do", "Brasil", "é", "Luanda."],
+      "wrongIndex": 6,
+      "correction": "Brasília.",
+      "options": ["Brasília.", "Lisboa.", "Maputo."]
+    },
+    {
+      "id": "m7-lusophone-world-38",
+      "type": "about_me",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself regarding countries in the Portuguese-speaking world.",
+      "explanation": "State what Lusophone countries you have already visited or would like to visit.",
+      "question": "Que países de língua portuguesa já visitaste ou queres conhecer?",
+      "sampleAnswer": "Já visitei Portugal e quero muito conhecer o Brasil.",
+      "hints": ["Angola", "Cabo", "Verde", "Moçambique", "viagem", "país"]
+    },
+    {
+      "id": "m7-lusophone-world-39",
+      "type": "about_me",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself regarding vocabulary differences you noticed.",
+      "explanation": "Mention an everyday European Portuguese word you learned like «comboio», «autocarro», or «sumo».",
+      "question": "Que palavras do português europeu achas mais interessantes?",
+      "sampleAnswer": "Acho interessante dizer comboio em vez de trem.",
+      "hints": ["autocarro", "telemóvel", "sumo", "pequeno-almoço", "palavra", "gosto"]
+    },
+    {
+      "id": "m7-lusophone-world-40",
+      "type": "about_me",
+      "topicId": "m7-lusophone-world",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself regarding Lusophone culture.",
+      "explanation": "Mention music, food, or cultural traditions from a Portuguese-speaking country.",
+      "question": "Conheces música ou gastronomia de algum país lusófono?",
+      "sampleAnswer": "Conheço a morna de Cabo Verde e adoro o fado.",
+      "hints": ["Brasil", "samba", "Angola", "comida", "bacalhau", "muito"]
+    }
+  ]
+}

@@ -1,0 +1,675 @@
+{
+  "id": "m7-work-cv-interview",
+  "moduleId": "m7",
+  "title": "Job ads, CV and interview",
+  "kind": "situation",
+  "context": "# Job Ads, CV, and the Job Interview\n\nLooking for a job in Portugal involves reading job advertisements, preparing a curriculum vitae (**CV**), and attending a job interview (**a entrevista de emprego**).\n\n### Reading Job Ads and the CV\n- **O anúncio de emprego**: Job advertisement.\n- **A vaga / o posto de trabalho**: Vacancy / position.\n- **A tempo inteiro / a tempo parcial**: Full-time / part-time.\n- **A experiência profissional**: Work experience.\n- **O currículo (CV) / a carta de apresentação**: Resume / cover letter.\n- **O ordenado / o salário**: Salary.\n- **A candidatura**: Application. A formal email ends with **«Com os melhores cumprimentos»** (Best regards).\n\n### The Job Interview (A Entrevista)\nInterviews in Portugal are conducted in the **formal register** using 3rd-person verb forms and the formal pronoun **si**:\n- **«Fale-me um pouco sobre si.»** — Tell me a little about yourself.\n- **«Quais são os seus pontos fortes?»** — What are your strengths?\n- **«Por que razão quer trabalhar connosco?»** — Why do you want to work with us?\n- **«Tenho experiência na área.»** — I have experience in the field.\n- **«Trabalho bem em equipa e sou pontual.»** — I work well in a team and am punctual.\n\n### Workplace Register: Formal vs. Informal\n- With managers, interviewers, and new clients, use formal address (**o senhor / a senhora / você** forms without overusing the word *você*): *«O senhor diretor pode assinar o contrato?»*\n- With close colleagues of the same level, people speak informally using **tu**: *«A que horas almoças hoje?»*\n\n**Watch out!**\n1. In formal Portuguese, *with you* is **consigo** and *with us* is **connosco**.\n2. Avoid using the word *você* repeatedly in an interview; address the interviewer as *o senhor / a senhora* or simply use 3rd-person verb forms directly.",
+  "keyItems": [
+    {
+      "target": "o anúncio de emprego",
+      "support": "job advertisement"
+    },
+    {
+      "target": "o currículo (CV)",
+      "support": "curriculum vitae / resume"
+    },
+    {
+      "target": "a entrevista de emprego",
+      "support": "job interview"
+    },
+    {
+      "target": "a experiência profissional",
+      "support": "work experience"
+    },
+    {
+      "target": "a tempo inteiro",
+      "support": "full-time"
+    },
+    {
+      "target": "a tempo parcial",
+      "support": "part-time"
+    },
+    {
+      "target": "o ordenado / o salário",
+      "support": "salary"
+    },
+    {
+      "target": "a carta de apresentação",
+      "support": "cover letter"
+    },
+    {
+      "target": "trabalhar em equipa",
+      "support": "to work in a team"
+    },
+    {
+      "target": "Fale-me um pouco sobre si.",
+      "support": "Tell me a little about yourself.",
+      "note": "formal interview question"
+    },
+    {
+      "target": "os pontos fortes / as qualidades",
+      "support": "strengths / qualities"
+    },
+    {
+      "target": "trabalhar connosco",
+      "support": "to work with us",
+      "note": "connosco = with us"
+    },
+    {
+      "target": "o contrato de trabalho",
+      "support": "employment contract"
+    },
+    {
+      "target": "a vaga / o posto de trabalho",
+      "support": "vacancy / position"
+    },
+    {
+      "target": "a candidatura",
+      "support": "job application"
+    },
+    {
+      "target": "Com os melhores cumprimentos",
+      "support": "Best regards (formal email closing)",
+      "note": "formal"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m7-work-cv-interview-01",
+      "type": "translate_word",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Currículo» (or «CV») is the Portuguese term for curriculum vitae or resume.",
+      "direction": "toTarget",
+      "sentence": "I sent my **curriculum vitae** to the company yesterday.",
+      "word": "curriculum vitae",
+      "answer": "currículo",
+      "options": ["currículo", "anúncio", "salário", "contrato"]
+    },
+    {
+      "id": "m7-work-cv-interview-02",
+      "type": "translate_word",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Entrevista» means interview; «entrevista de emprego» is a job interview.",
+      "direction": "toTarget",
+      "sentence": "Tomorrow morning I have an important job **interview**.",
+      "word": "interview",
+      "answer": "entrevista",
+      "options": ["entrevista", "empresa", "reunião", "vaga"]
+    },
+    {
+      "id": "m7-work-cv-interview-03",
+      "type": "translate_word",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "In European Portuguese, full-time is «a tempo inteiro».",
+      "direction": "toTarget",
+      "sentence": "She is looking for a **full-time** job in Porto.",
+      "word": "full-time",
+      "answer": "tempo inteiro",
+      "options": ["tempo inteiro", "tempo parcial", "tempo livre", "meio tempo"]
+    },
+    {
+      "id": "m7-work-cv-interview-04",
+      "type": "translate_word",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Ordenado» (or «salário») is standard in Portugal for salary or wages.",
+      "direction": "toTarget",
+      "sentence": "The director offered a good monthly **salary**.",
+      "word": "salary",
+      "answer": "ordenado",
+      "options": ["ordenado", "horário", "currículo", "anúncio"]
+    },
+    {
+      "id": "m7-work-cv-interview-05",
+      "type": "translate_word",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Experiência» means experience; «experiência profissional» is work experience.",
+      "direction": "toTarget",
+      "sentence": "The candidate has five years of professional **experience**.",
+      "word": "experience",
+      "answer": "experiência",
+      "options": ["experiência", "educação", "qualidade", "empresa"]
+    },
+    {
+      "id": "m7-work-cv-interview-06",
+      "type": "fill_gaps",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence with the correct job application terms.",
+      "explanation": "You read the job ad («o anúncio de emprego») and then send your CV («o meu currículo»).",
+      "template": "Eu li o ___ de emprego e enviei o meu ___.",
+      "gaps": [
+        {
+          "answer": "anúncio"
+        },
+        {
+          "answer": "currículo"
+        }
+      ],
+      "wordBank": ["anúncio", "currículo", "ordenado", "horário", "entrevista"]
+    },
+    {
+      "id": "m7-work-cv-interview-07",
+      "type": "fill_gaps",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the description of the candidate's professional qualities.",
+      "explanation": "«Trabalhar bem em equipa» = to work well in a team (PT says «equipa»); after «é muito» you need an adjective: «pontual».",
+      "template": "O candidato trabalha bem em ___ e é muito ___.",
+      "gaps": [
+        {
+          "answer": "equipa"
+        },
+        {
+          "answer": "pontual"
+        }
+      ],
+      "wordBank": ["equipa", "pontual", "pontualidade", "tempo", "atrasado"]
+    },
+    {
+      "id": "m7-work-cv-interview-08",
+      "type": "fill_gaps",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence describing a job opening.",
+      "explanation": "«Uma vaga» (singular, feminine) is a vacancy; full-time is the fixed phrase «a tempo inteiro».",
+      "template": "A empresa tem uma ___ nova para trabalho a ___ inteiro.",
+      "gaps": [
+        {
+          "answer": "vaga"
+        },
+        {
+          "answer": "tempo"
+        }
+      ],
+      "wordBank": ["vaga", "tempo", "vagas", "hora", "chefe"]
+    },
+    {
+      "id": "m7-work-cv-interview-09",
+      "type": "fill_gaps",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with formal interview phrasing.",
+      "explanation": "After a preposition, formal 'you' is «si» («sobre si»), not informal «ti»; «as suas» needs a feminine plural noun: «qualidades».",
+      "template": "Por favor, fale-me um pouco sobre ___ e sobre as suas ___.",
+      "gaps": [
+        {
+          "answer": "si"
+        },
+        {
+          "answer": "qualidades"
+        }
+      ],
+      "wordBank": ["si", "qualidades", "ti", "defeitos", "consigo"]
+    },
+    {
+      "id": "m7-work-cv-interview-10",
+      "type": "fill_gaps",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with the pronoun and noun in this classic interview question.",
+      "explanation": "'With us' is «connosco» in European Portuguese (Brazil writes «conosco»); «nesta» needs a feminine singular noun: «empresa».",
+      "template": "Por que razão quer trabalhar ___ nesta ___?",
+      "gaps": [
+        {
+          "answer": "connosco"
+        },
+        {
+          "answer": "empresa"
+        }
+      ],
+      "wordBank": ["connosco", "empresa", "conosco", "empresas", "consigo"]
+    },
+    {
+      "id": "m7-work-cv-interview-11",
+      "type": "fill_gaps",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with the interview and employment milestones.",
+      "explanation": "First came the interview («entrevista»), followed by signing the employment agreement («contrato»).",
+      "template": "Ontem tive uma ___ de emprego e hoje assinei o ___.",
+      "gaps": [
+        {
+          "answer": "entrevista"
+        },
+        {
+          "answer": "contrato"
+        }
+      ],
+      "wordBank": ["entrevista", "contrato", "reunião", "anúncio", "salário"]
+    },
+    {
+      "id": "m7-work-cv-interview-12",
+      "type": "fill_gaps",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps contrasting workplace registers.",
+      "explanation": "Colleagues of the same level use the informal register (tu); with management you switch to the formal register (o senhor / a senhora). «Registo» is singular, so the adjective is singular too.",
+      "template": "Entre colegas usamos o registo ___, mas com a administração usamos o registo ___.",
+      "gaps": [
+        {
+          "answer": "informal"
+        },
+        {
+          "answer": "formal"
+        }
+      ],
+      "wordBank": ["informal", "formal", "informais", "formais", "formalmente"]
+    },
+    {
+      "id": "m7-work-cv-interview-13",
+      "type": "build_phrase",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Tell me a little about yourself.\" (formal)",
+      "explanation": "Formal request: «fale» (3rd-person form) + «-me»; formal 'yourself' after a preposition is «si», not «ti».",
+      "answer": ["Fale-me", "um", "pouco", "sobre", "si."],
+      "distractors": ["Fala-me", "ti"],
+      "acceptedAnswers": ["Por favor, fale-me um pouco sobre si."]
+    },
+    {
+      "id": "m7-work-cv-interview-14",
+      "type": "build_phrase",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I have three years of experience in the field.\"",
+      "explanation": "1st person «tenho»; «na área» = em + a área (experience in the field).",
+      "answer": ["Tenho", "três", "anos", "de", "experiência", "na", "área."],
+      "distractors": ["Tem", "no"],
+      "acceptedAnswers": ["Eu tenho três anos de experiência na área."]
+    },
+    {
+      "id": "m7-work-cv-interview-15",
+      "type": "build_phrase",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I work very well in a team.\"",
+      "explanation": "1st-person present «trabalho»; in Portugal a team is «equipa» («em equipa», no article).",
+      "answer": ["Trabalho", "muito", "bem", "em", "equipa."],
+      "distractors": ["Trabalha", "no"],
+      "acceptedAnswers": ["Eu trabalho muito bem em equipa."]
+    },
+    {
+      "id": "m7-work-cv-interview-16",
+      "type": "build_phrase",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I sent my curriculum vitae by email.\"",
+      "explanation": "«Enviei o meu currículo por email». In European Portuguese, possessives take the article.",
+      "answer": ["Enviei", "o", "meu", "currículo", "por", "email."],
+      "distractors": ["Enviou", "para"],
+      "acceptedAnswers": [
+        "Eu enviei o meu currículo por email.",
+        "Enviei o meu currículo por e-mail."
+      ]
+    },
+    {
+      "id": "m7-work-cv-interview-17",
+      "type": "build_phrase",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"When can you start working with us?\" (formal)",
+      "explanation": "«Quando pode começar a trabalhar connosco?» uses 3rd-person formal «pode».",
+      "answer": ["Quando", "pode", "começar", "a", "trabalhar", "connosco?"],
+      "distractors": ["podes", "comigo"],
+      "acceptedAnswers": ["Quando é que pode começar a trabalhar connosco?"]
+    },
+    {
+      "id": "m7-work-cv-interview-18",
+      "type": "build_phrase",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I am looking for a full-time job.\"",
+      "explanation": "«Procurar» = to look for: 1st person «procuro»; full-time is «a tempo inteiro».",
+      "answer": ["Procuro", "um", "emprego", "a", "tempo", "inteiro."],
+      "distractors": ["Procura", "parcial"],
+      "acceptedAnswers": ["Eu procuro um emprego a tempo inteiro."]
+    },
+    {
+      "id": "m7-work-cv-interview-19",
+      "type": "build_phrase",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"In the interview I spoke calmly and explained my qualities.\"",
+      "explanation": "Narrates interview conduct with PPS verbs «falei» and «expliquei».",
+      "answer": [
+        "Na",
+        "entrevista",
+        "falei",
+        "calmamente",
+        "e",
+        "expliquei",
+        "as",
+        "minhas",
+        "qualidades."
+      ],
+      "distractors": ["falou", "explicou", "calmo"],
+      "acceptedAnswers": ["Na entrevista eu falei calmamente e expliquei as minhas qualidades."]
+    },
+    {
+      "id": "m7-work-cv-interview-20",
+      "type": "build_phrase",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"The company offers a good salary and good conditions.\"",
+      "explanation": "Singular subject «a empresa» → «oferece»; «bom ordenado» (masculine) but «boas condições» (feminine plural).",
+      "answer": ["A", "empresa", "oferece", "um", "bom", "ordenado", "e", "boas", "condições."],
+      "distractors": ["oferecem", "mau", "condição"],
+      "acceptedAnswers": ["A empresa oferece um bom salário e boas condições."]
+    },
+    {
+      "id": "m7-work-cv-interview-21",
+      "type": "build_phrase",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Why do you want to work at our company?\" (formal)",
+      "explanation": "Formal 'you want' is 3rd-person «quer» (not «queres»); «empresa» is feminine: «na nossa empresa».",
+      "answer": ["Por", "que", "razão", "quer", "trabalhar", "na", "nossa", "empresa?"],
+      "distractors": ["queres", "no", "nosso"],
+      "acceptedAnswers": [
+        "Por que razão é que quer trabalhar na nossa empresa?",
+        "Porque é que quer trabalhar na nossa empresa?"
+      ]
+    },
+    {
+      "id": "m7-work-cv-interview-22",
+      "type": "build_phrase",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I finished my degree and worked as an accountant for two years.\"",
+      "explanation": "Finished past events in a CV use the PPS, 1st person: «terminei», «trabalhei»; «durante dois anos» = for two years.",
+      "answer": [
+        "Terminei",
+        "o",
+        "curso",
+        "e",
+        "trabalhei",
+        "como",
+        "contabilista",
+        "durante",
+        "dois",
+        "anos."
+      ],
+      "distractors": ["Terminou", "trabalhou", "um"],
+      "acceptedAnswers": [
+        "Eu terminei o curso e trabalhei como contabilista durante dois anos.",
+        "Terminei o curso e trabalhei como contabilista dois anos."
+      ]
+    },
+    {
+      "id": "m7-work-cv-interview-23",
+      "type": "build_phrase",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"With colleagues I speak informally, but with the boss I am formal.\"",
+      "explanation": "1st-person «falo» and «sou»: informal speech («informalmente») with colleagues, formal with the boss.",
+      "answer": [
+        "Com",
+        "colegas",
+        "falo",
+        "informalmente,",
+        "mas",
+        "com",
+        "o",
+        "chefe",
+        "sou",
+        "formal."
+      ],
+      "distractors": ["falas", "és"],
+      "acceptedAnswers": ["Com os colegas falo informalmente, mas com o chefe sou formal."]
+    },
+    {
+      "id": "m7-work-cv-interview-24",
+      "type": "question_for_answer",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The candidate answers: «Procuro um emprego a tempo inteiro.» As the interviewer, ask (formal) what type of job he is looking for.",
+      "explanation": "«Que tipo de emprego procura?» asks what type of work you are looking for.",
+      "givenAnswer": "Procuro um emprego a tempo inteiro.",
+      "answer": ["Que", "tipo", "de", "emprego", "procura?"],
+      "distractors": ["Qual", "procuras?", "no"],
+      "acceptedAnswers": ["Que tipo de emprego é que procura?", "Que tipo de trabalho procura?"]
+    },
+    {
+      "id": "m7-work-cv-interview-25",
+      "type": "question_for_answer",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The candidate answers: «Sim, tenho três anos de experiência.» As the interviewer, ask (formal) whether she has experience in the field.",
+      "explanation": "«Tem experiência na área?» asks whether you have experience in the field.",
+      "givenAnswer": "Sim, tenho três anos de experiência.",
+      "answer": ["Tem", "experiência", "na", "área?"],
+      "distractors": ["Tens", "no", "tempo?"],
+      "acceptedAnswers": ["O senhor tem experiência na área?", "A senhora tem experiência na área?"]
+    },
+    {
+      "id": "m7-work-cv-interview-26",
+      "type": "question_for_answer",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The applicant answers: «Posso começar no próximo mês.» As the interviewer, ask (formal) when he can start.",
+      "explanation": "«Quando pode começar?» asks when the candidate is available to start.",
+      "givenAnswer": "Posso começar no próximo mês.",
+      "answer": ["Quando", "é", "que", "pode", "começar?"],
+      "distractors": ["Como", "podes", "onde"],
+      "acceptedAnswers": ["Quando pode começar?"]
+    },
+    {
+      "id": "m7-work-cv-interview-27",
+      "type": "question_for_answer",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The candidate answers: «Falo português e inglês fluentemente.» As the interviewer, ask (formal) which languages she speaks.",
+      "explanation": "«Que línguas fala?» asks which languages the applicant speaks.",
+      "givenAnswer": "Falo português e inglês fluentemente.",
+      "answer": ["Que", "línguas", "é", "que", "fala?"],
+      "distractors": ["Quais", "falas?", "língua"],
+      "acceptedAnswers": ["Que línguas fala?", "Que idiomas fala?", "Que idiomas é que fala?"]
+    },
+    {
+      "id": "m7-work-cv-interview-28",
+      "type": "question_for_answer",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The candidate answers: «Sou pontual e organizado.» As the interviewer, ask (formal) what his qualities are.",
+      "explanation": "«Quais são as suas qualidades?» asks about the candidate's personal qualities.",
+      "givenAnswer": "Sou pontual e organizado.",
+      "answer": ["Quais", "são", "as", "suas", "qualidades?"],
+      "distractors": ["Qual", "tuas", "é"],
+      "acceptedAnswers": ["Quais são os seus pontos fortes?"]
+    },
+    {
+      "id": "m7-work-cv-interview-29",
+      "type": "question_for_answer",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The applicant answers: «Quero trabalhar convosco porque admiro a empresa.» As the interviewer, ask (formal) why she wants to work with you (the company, 'with us').",
+      "explanation": "«Por que razão quer trabalhar connosco?» asks for the candidate's motivation.",
+      "givenAnswer": "Quero trabalhar convosco porque admiro a empresa.",
+      "answer": ["Por", "que", "razão", "quer", "trabalhar", "connosco?"],
+      "distractors": ["Como", "queres", "comigo"],
+      "acceptedAnswers": [
+        "Por que razão é que quer trabalhar connosco?",
+        "Porque é que quer trabalhar connosco?"
+      ]
+    },
+    {
+      "id": "m7-work-cv-interview-30",
+      "type": "question_for_answer",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The candidate answers: «Enviei a carta de apresentação ontem à tarde.» As the manager, ask (formal) when he sent the cover letter.",
+      "explanation": "«Quando enviou a carta de apresentação?» asks when the cover letter was sent.",
+      "givenAnswer": "Enviei a carta de apresentação ontem à tarde.",
+      "answer": ["Quando", "enviou", "a", "carta", "de", "apresentação?"],
+      "distractors": ["Como", "enviaste", "do"],
+      "acceptedAnswers": ["Quando é que enviou a carta de apresentação?"]
+    },
+    {
+      "id": "m7-work-cv-interview-31",
+      "type": "question_for_answer",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Trabalho nesta agência há quatro anos.» Ask him (informal) how long he has worked at this agency.",
+      "explanation": "«Há quanto tempo trabalhas nesta agência?» asks how long you have worked there.",
+      "givenAnswer": "Trabalho nesta agência há quatro anos.",
+      "answer": ["Há", "quanto", "tempo", "trabalhas", "nesta", "agência?"],
+      "distractors": ["Desde", "trabalha", "neste"],
+      "acceptedAnswers": ["Há quanto tempo é que trabalhas nesta agência?"]
+    },
+    {
+      "id": "m7-work-cv-interview-32",
+      "type": "question_for_answer",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The director answers: «O ordenado inicial é de mil e quinhentos euros.» As the applicant, ask (formal) what the starting salary is.",
+      "explanation": "«Qual é o ordenado inicial?» asks what the starting salary is.",
+      "givenAnswer": "O ordenado inicial é de mil e quinhentos euros.",
+      "answer": ["Qual", "é", "o", "ordenado", "inicial?"],
+      "distractors": ["Quais", "são", "ordenados"],
+      "acceptedAnswers": ["Qual é o salário inicial?", "Quanto é o ordenado inicial?"]
+    },
+    {
+      "id": "m7-work-cv-interview-33",
+      "type": "find_error",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In a formal interview, prepositional address with formal verbs is «sobre si», not informal «sobre ti».",
+      "sentence": ["Fale-me", "um", "pouco", "sobre", "ti."],
+      "wrongIndex": 4,
+      "correction": "si.",
+      "options": ["si.", "tu.", "ele."]
+    },
+    {
+      "id": "m7-work-cv-interview-34",
+      "type": "find_error",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With 1st-person subject «Eu», the present tense form is «trabalho», not «trabalha».",
+      "sentence": ["Eu", "trabalha", "muito", "bem", "em", "equipa."],
+      "wrongIndex": 1,
+      "correction": "trabalho",
+      "options": ["trabalho", "trabalhei", "trabalhar"]
+    },
+    {
+      "id": "m7-work-cv-interview-35",
+      "type": "find_error",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 1st-person singular PPS of regular verb «enviar» is «enviei», not 3rd-person «enviou».",
+      "sentence": ["Ontem", "eu", "enviou", "o", "meu", "currículo."],
+      "wrongIndex": 2,
+      "correction": "enviei",
+      "options": ["enviei", "envio", "enviar"]
+    },
+    {
+      "id": "m7-work-cv-interview-36",
+      "type": "find_error",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Addressing someone formally as «senhor doutor» requires 3rd-person singular «quer», not informal «queres».",
+      "sentence": ["Por", "que", "razão", "queres", "trabalhar", "connosco,", "senhor", "doutor?"],
+      "wrongIndex": 3,
+      "correction": "quer",
+      "options": ["quer", "quere", "quero"]
+    },
+    {
+      "id": "m7-work-cv-interview-37",
+      "type": "find_error",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Formal address with «senhora diretora» requires the 3rd-person possessive «as suas qualidades», not informal «as tuas».",
+      "sentence": ["Quais", "são", "as", "tuas", "qualidades,", "senhora", "diretora?"],
+      "wrongIndex": 3,
+      "correction": "suas",
+      "options": ["suas", "vossas", "seus"]
+    },
+    {
+      "id": "m7-work-cv-interview-38",
+      "type": "about_me",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself in a job interview context.",
+      "explanation": "State what profession or field you work in and how many years of experience you have.",
+      "question": "Qual é a sua profissão e quantos anos de experiência tem?",
+      "sampleAnswer": "Sou engenheiro e tenho cinco anos de experiência profissional.",
+      "hints": ["médico", "professor", "designer", "trabalho", "muita", "empresa"]
+    },
+    {
+      "id": "m7-work-cv-interview-39",
+      "type": "about_me",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself in a job interview context.",
+      "explanation": "Describe your key qualities and how you work with others.",
+      "question": "Quais são os seus pontos fortes no trabalho?",
+      "sampleAnswer": "Trabalho bem em equipa e sou muito pontual.",
+      "hints": ["organizado", "dedicado", "calmo", "responsável", "focado", "bastante"]
+    },
+    {
+      "id": "m7-work-cv-interview-40",
+      "type": "about_me",
+      "topicId": "m7-work-cv-interview",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself in a job interview context.",
+      "explanation": "State what type of position you prefer and when you can begin.",
+      "question": "Prefere um trabalho a tempo inteiro ou parcial, e quando pode começar?",
+      "sampleAnswer": "Prefiro a tempo inteiro e posso começar imediatamente.",
+      "hints": ["parcial", "amanhã", "próximo", "mês", "semana", "segunda-feira"]
+    }
+  ]
+}

@@ -1,0 +1,676 @@
+{
+  "id": "m6-adverbs-superlatives",
+  "moduleId": "m6",
+  "title": "Manner adverbs and the absolute superlative",
+  "kind": "grammar",
+  "context": "# Manner Adverbs and the Absolute Superlative\n\nTo make descriptions more vivid and stories more engaging, European Portuguese uses **manner adverbs ending in -mente** and the **synthetic absolute superlative (-íssimo)**.\n\n### Manner Adverbs (-mente)\nManner adverbs describe *how* an action happens. They are formed by taking the feminine singular form of an adjective and adding **-mente**:\n- **rápido** → *rápida* + *-mente* = **rapidamente** (quickly)\n- **calmo** → *calma* + *-mente* = **calmamente** (calmly)\n- **perfeito** → *perfeita* + *-mente* = **perfeitamente** (perfectly)\n- **claro** → *clara* + *-mente* = **claramente** (clearly)\nAdjectives that do not change for gender just add **-mente**:\n- **feliz** → **felizmente** (fortunately / happily)\n- **fácil** → **facilmente** (easily)\n\n*Note:* When *-mente* is added, any written accent on the base adjective is dropped (*fácil* → *facilmente*, *rápido* → *rapidamente*). When two adverbs are joined by *e*, you can drop *-mente* from the first one (more elegant): *clara e calmamente*.\n\n### The Absolute Superlative (-íssimo / -íssima)\nTo intensify an adjective (\"extremely / very\"), drop the final vowel and add **-íssimo/a/os/as**. It always agrees with the noun:\n- **lindo** → **lindíssimo** / **lindíssima** (gorgeous, extremely beautiful)\n- **quente** → **quentíssimo** / **quentíssima** (extremely hot)\n- **barato** → **baratíssimo** / **caro** → **caríssimo**\n- **divertido** → **divertidíssimo**\n\nA few common adjectives have special forms: **bom** → **ótimo** (excellent), **mau** → **péssimo** (awful), **fácil** → **facílimo** (people also say *facilíssimo*). **Muito** + adjective (*muito fácil*) means the same and is always correct.\n\n**Watch out!**\n1. Always drop written accents on base adjectives before adding *-íssimo* (*rápido* → *rapidíssimo*).\n2. Spelling adjustments preserve sounds: *rico* → *riquíssimo*, *longo* → *longuíssimo*, *feliz* → *felicíssimo*.",
+  "keyItems": [
+    {
+      "target": "rapidamente",
+      "support": "quickly",
+      "note": "manner adverb"
+    },
+    {
+      "target": "lentamente",
+      "support": "slowly",
+      "note": "manner adverb"
+    },
+    {
+      "target": "calmamente",
+      "support": "calmly",
+      "note": "manner adverb"
+    },
+    {
+      "target": "felizmente",
+      "support": "fortunately",
+      "note": "manner adverb"
+    },
+    {
+      "target": "infelizmente",
+      "support": "unfortunately",
+      "note": "manner adverb"
+    },
+    {
+      "target": "facilmente",
+      "support": "easily",
+      "note": "manner adverb"
+    },
+    {
+      "target": "perfeitamente",
+      "support": "perfectly",
+      "note": "manner adverb"
+    },
+    {
+      "target": "claramente",
+      "support": "clearly",
+      "note": "manner adverb"
+    },
+    {
+      "target": "lindíssimo / lindíssima",
+      "support": "extremely beautiful",
+      "note": "absolute superlative"
+    },
+    {
+      "target": "quentíssimo / quentíssima",
+      "support": "extremely hot",
+      "note": "absolute superlative"
+    },
+    {
+      "target": "baratíssimo / baratíssima",
+      "support": "very cheap",
+      "note": "absolute superlative"
+    },
+    {
+      "target": "caríssimo / caríssima",
+      "support": "very expensive",
+      "note": "absolute superlative"
+    },
+    {
+      "target": "cansadíssimo / cansadíssima",
+      "support": "extremely tired",
+      "note": "absolute superlative"
+    },
+    {
+      "target": "divertidíssimo / divertidíssima",
+      "support": "extremely fun",
+      "note": "absolute superlative"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m6-adverbs-superlatives-01",
+      "type": "translate_word",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Rapidamente» is the manner adverb formed from feminine «rápida» + «-mente» (quickly).",
+      "direction": "toTarget",
+      "sentence": "The train arrived **quickly** at the central station.",
+      "word": "quickly",
+      "answer": "rapidamente",
+      "options": ["rapidamente", "rapidíssimo", "rápida", "lentamente"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-02",
+      "type": "translate_word",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Felizmente» means fortunately or luckily (feliz + -mente).",
+      "direction": "toTarget",
+      "sentence": "**Fortunately**, we found the train tickets in my bag.",
+      "word": "Fortunately",
+      "answer": "felizmente",
+      "options": ["felizmente", "infelizmente", "feliz", "facilmente"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-03",
+      "type": "translate_word",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Quentíssimo» is the absolute superlative of «quente», meaning extremely hot.",
+      "direction": "toTarget",
+      "sentence": "The summer day was **extremely hot** in Évora.",
+      "word": "extremely hot",
+      "answer": "quentíssimo",
+      "options": ["quentíssimo", "quente", "quentes", "frio"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-04",
+      "type": "translate_word",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«A vista» is feminine singular, so the absolute superlative agrees: «lindíssima».",
+      "direction": "toTarget",
+      "sentence": "The view from the castle was **extremely beautiful**.",
+      "word": "extremely beautiful",
+      "answer": "lindíssima",
+      "options": ["lindíssima", "linda", "lindíssimo", "bonita"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-05",
+      "type": "translate_word",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Baratíssimo» is the masculine singular superlative of «barato» (very cheap).",
+      "direction": "toTarget",
+      "sentence": "The lunch at the local tavern was **very cheap**.",
+      "word": "very cheap",
+      "answer": "baratíssimo",
+      "options": ["baratíssimo", "barato", "caríssimo", "barata"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-06",
+      "type": "fill_gaps",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Tiago spoke calmly and explained everything clearly.\"",
+      "explanation": "Manner adverbs describe how Tiago spoke and explained: «calmamente» (calmly) and «claramente» (clearly).",
+      "template": "O Tiago falou ___ e explicou tudo ___.",
+      "gaps": [
+        {
+          "answer": "calmamente"
+        },
+        {
+          "answer": "claramente"
+        }
+      ],
+      "wordBank": ["calmamente", "claramente", "calmo", "claro", "rapidamente"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-07",
+      "type": "fill_gaps",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The beach is extremely beautiful and the water was extremely hot.\"",
+      "explanation": "Both «a praia» and «a água» are feminine singular, so they take «lindíssima» and «quentíssima».",
+      "template": "A praia é ___ e a água esteve ___.",
+      "gaps": [
+        {
+          "answer": "lindíssima"
+        },
+        {
+          "answer": "quentíssima"
+        }
+      ],
+      "wordBank": ["lindíssima", "quentíssima", "lindo", "quente", "lindíssimo"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-08",
+      "type": "fill_gaps",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"We solved the problem easily and went back to the hotel quickly.\"",
+      "explanation": "«Facilmente» (easily) and «rapidamente» (quickly) modify the verbs «resolvemos» and «voltámos».",
+      "template": "Nós resolvemos o problema ___ e voltámos ___ para o hotel.",
+      "gaps": [
+        {
+          "answer": "facilmente"
+        },
+        {
+          "answer": "rapidamente"
+        }
+      ],
+      "wordBank": ["facilmente", "rapidamente", "fácil", "rápido", "lento"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-09",
+      "type": "fill_gaps",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Unfortunately, we missed the train, but fortunately we found a taxi.\"",
+      "explanation": "«Infelizmente» introduces misfortune (losing the train), while «felizmente» introduces good fortune (finding a taxi).",
+      "template": "___, perdemos o comboio, mas ___ encontrámos um táxi.",
+      "gaps": [
+        {
+          "answer": "Infelizmente"
+        },
+        {
+          "answer": "felizmente"
+        }
+      ],
+      "wordBank": ["Infelizmente", "felizmente", "Infeliz", "feliz", "facilmente"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-10",
+      "type": "fill_gaps",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The hotel was extremely expensive and the dinner was excellent.\"",
+      "explanation": "Masculine «o hotel» takes «caríssimo» (caro + -íssimo); «ótimo» is the special superlative of «bom» (excellent).",
+      "template": "O hotel foi ___ e o jantar foi ___.",
+      "gaps": [
+        {
+          "answer": "caríssimo"
+        },
+        {
+          "answer": "ótimo"
+        }
+      ],
+      "wordBank": ["caríssimo", "ótimo", "caro", "bom", "caríssima"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-11",
+      "type": "fill_gaps",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"After the walk we were extremely tired and slept deeply.\"",
+      "explanation": "After «ficámos» (nós) the superlative is plural: «cansadíssimos»; the manner adverb «profundamente» (profunda + -mente) describes how we slept.",
+      "template": "Depois da caminhada ficámos ___ e dormimos ___.",
+      "gaps": [
+        {
+          "answer": "cansadíssimos",
+          "accepted": ["cansadíssimas"]
+        },
+        {
+          "answer": "profundamente"
+        }
+      ],
+      "wordBank": ["cansadíssimos", "profundamente", "cansado", "profundo", "cansadíssimo"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-12",
+      "type": "fill_gaps",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Rita drove slowly because the road is very dangerous.\"",
+      "explanation": "«Lentamente» describes how Rita drove, and invariant «muito» intensifies the adjective «perigosa».",
+      "template": "A Rita conduziu ___ porque a estrada é ___ perigosa.",
+      "gaps": [
+        {
+          "answer": "lentamente"
+        },
+        {
+          "answer": "muito"
+        }
+      ],
+      "wordBank": ["lentamente", "muito", "lenta", "muita", "rapidamente"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-13",
+      "type": "build_phrase",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"The trip went perfectly.\"",
+      "explanation": "«Correu perfeitamente» describes the successful outcome of the trip.",
+      "answer": ["A", "viagem", "correu", "perfeitamente."],
+      "distractors": ["perfeito", "correram"],
+      "acceptedAnswers": ["A viagem correu perfeitamente"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-14",
+      "type": "build_phrase",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Yesterday the day was extremely hot in Lisbon.\"",
+      "explanation": "«Quentíssimo» is the absolute superlative agreeing with «o dia».",
+      "answer": ["Ontem", "o", "dia", "foi", "quentíssimo", "em", "Lisboa."],
+      "distractors": ["quente", "na"],
+      "acceptedAnswers": [
+        "Ontem, o dia foi quentíssimo em Lisboa.",
+        "O dia foi quentíssimo ontem em Lisboa.",
+        "Ontem o dia esteve quentíssimo em Lisboa."
+      ]
+    },
+    {
+      "id": "m6-adverbs-superlatives-15",
+      "type": "build_phrase",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"The holiday was extremely fun.\"",
+      "explanation": "«As férias» is feminine plural, so it agrees with «divertidíssimas».",
+      "answer": ["As", "férias", "foram", "divertidíssimas."],
+      "distractors": ["divertido", "foi"],
+      "acceptedAnswers": ["As férias foram divertidíssimas"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-16",
+      "type": "build_phrase",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"He answered the question calmly.\"",
+      "explanation": "«Calmamente» is the manner adverb describing how he responded.",
+      "answer": ["Ele", "respondeu", "calmamente", "à", "pergunta."],
+      "distractors": ["calmo", "na"],
+      "acceptedAnswers": [
+        "Respondeu calmamente à pergunta.",
+        "Ele respondeu à pergunta calmamente."
+      ]
+    },
+    {
+      "id": "m6-adverbs-superlatives-17",
+      "type": "build_phrase",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"The train arrived quickly in Porto.\"",
+      "explanation": "«Rapidamente» modifies «chegou».",
+      "answer": ["O", "comboio", "chegou", "rapidamente", "ao", "Porto."],
+      "distractors": ["rápida", "no"],
+      "acceptedAnswers": ["O comboio chegou ao Porto rapidamente."]
+    },
+    {
+      "id": "m6-adverbs-superlatives-18",
+      "type": "build_phrase",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"We bought very cheap souvenirs at the market.\"",
+      "explanation": "«Lembranças» is feminine plural, agreeing with «baratíssimas».",
+      "answer": ["Comprámos", "lembranças", "baratíssimas", "no", "mercado."],
+      "distractors": ["baratíssimo", "na"],
+      "acceptedAnswers": ["Nós comprámos lembranças baratíssimas no mercado."]
+    },
+    {
+      "id": "m6-adverbs-superlatives-19",
+      "type": "build_phrase",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Fortunately, we found an extremely nice restaurant in the center.\"",
+      "explanation": "«Felizmente» opens the sentence; «simpaticíssimo» agrees with «restaurante».",
+      "answer": [
+        "Felizmente,",
+        "encontrámos",
+        "um",
+        "restaurante",
+        "simpaticíssimo",
+        "no",
+        "centro."
+      ],
+      "distractors": ["Infelizmente,", "simpática", "na"],
+      "acceptedAnswers": [
+        "Felizmente encontrámos um restaurante simpaticíssimo no centro.",
+        "Felizmente, nós encontrámos um restaurante simpaticíssimo no centro.",
+        "Felizmente nós encontrámos um restaurante simpaticíssimo no centro."
+      ]
+    },
+    {
+      "id": "m6-adverbs-superlatives-20",
+      "type": "build_phrase",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"The guide explained the history clearly and calmly.\"",
+      "explanation": "With two manner adverbs joined by «e», the first can drop «-mente»: «clara e calmamente».",
+      "answer": ["O", "guia", "explicou", "clara", "e", "calmamente", "a", "história."],
+      "distractors": ["claro", "explicaram", "do"],
+      "acceptedAnswers": [
+        "O guia explicou a história clara e calmamente.",
+        "O guia explicou claramente e calmamente a história."
+      ]
+    },
+    {
+      "id": "m6-adverbs-superlatives-21",
+      "type": "build_phrase",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"The museum tickets were extremely expensive, but the exhibition was wonderful.\"",
+      "explanation": "«Caríssimos» agrees with «os bilhetes» (masc. pl.) and «maravilhosa» with «a exposição».",
+      "answer": [
+        "Os",
+        "bilhetes",
+        "foram",
+        "caríssimos,",
+        "mas",
+        "a",
+        "exposição",
+        "foi",
+        "maravilhosa."
+      ],
+      "distractors": ["caríssimo", "maravilhoso", "são"],
+      "acceptedAnswers": ["Os bilhetes foram caríssimos mas a exposição foi maravilhosa."]
+    },
+    {
+      "id": "m6-adverbs-superlatives-22",
+      "type": "build_phrase",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Unfortunately, we arrived late and had dinner quickly.\"",
+      "explanation": "«Infelizmente» sets the negative context; «rapidamente» (rápida + -mente) describes how we had dinner.",
+      "answer": ["Infelizmente,", "chegámos", "tarde", "e", "jantámos", "rapidamente."],
+      "distractors": ["Felizmente,", "rápida", "jantaram"],
+      "acceptedAnswers": [
+        "Infelizmente chegámos tarde e jantámos rapidamente.",
+        "Infelizmente, nós chegámos tarde e jantámos rapidamente.",
+        "Infelizmente nós chegámos tarde e jantámos rapidamente."
+      ]
+    },
+    {
+      "id": "m6-adverbs-superlatives-23",
+      "type": "build_phrase",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"After the walk, we were all extremely tired.\"",
+      "explanation": "«Cansadíssimos» agrees in masculine plural with «todos».",
+      "answer": ["Depois", "da", "caminhada,", "ficámos", "todos", "cansadíssimos."],
+      "distractors": ["cansadíssimo", "do", "ficou"],
+      "acceptedAnswers": [
+        "Depois da caminhada ficámos todos cansadíssimos.",
+        "Depois da caminhada, nós ficámos todos cansadíssimos.",
+        "Depois da caminhada nós ficámos todos cansadíssimos.",
+        "Depois da caminhada, ficámos todas cansadíssimas."
+      ]
+    },
+    {
+      "id": "m6-adverbs-superlatives-24",
+      "type": "question_for_answer",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «A viagem correu perfeitamente.» Ask him (informal) how the trip went.",
+      "explanation": "«Como correu a viagem?» asks how the trip went.",
+      "givenAnswer": "A viagem correu perfeitamente.",
+      "answer": ["Como", "correu", "a", "viagem?"],
+      "distractors": ["Quando", "correram", "o"],
+      "acceptedAnswers": ["Como é que correu a viagem?"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-25",
+      "type": "question_for_answer",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ana answers: «O hotel foi baratíssimo.» Ask her (informal) how the hotel was.",
+      "explanation": "«Como foi o hotel?» asks about your opinion of the hotel.",
+      "givenAnswer": "O hotel foi baratíssimo.",
+      "answer": ["Como", "foi", "o", "hotel?"],
+      "distractors": ["Onde", "foram", "a"],
+      "acceptedAnswers": ["Como é que foi o hotel?"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-26",
+      "type": "question_for_answer",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tiago and Rita answer: «Chegámos rapidamente, de táxi.» Ask them (vocês) how they got here.",
+      "explanation": "«Como é que chegaram?» asks how you (vocês) arrived; «chegaram» is the vocês form of the PPS.",
+      "givenAnswer": "Chegámos rapidamente, de táxi.",
+      "answer": ["Como", "é", "que", "chegaram?"],
+      "distractors": ["Quando", "chegou?", "onde"],
+      "acceptedAnswers": ["Como chegaram?", "Como é que vocês chegaram?", "Como chegaram cá?"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-27",
+      "type": "question_for_answer",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Marta lives near the sea. She answers: «A praia é lindíssima.» Ask her (informal) what the beach is like.",
+      "explanation": "«Como é a praia?» asks what the beach is like; «lindíssima» is the superlative of «linda».",
+      "givenAnswer": "A praia é lindíssima.",
+      "answer": ["Como", "é", "a", "praia?"],
+      "distractors": ["Qual", "são", "o"],
+      "acceptedAnswers": ["Como é que é a praia?"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-28",
+      "type": "question_for_answer",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "João answers: «Sim, o teste foi facilíssimo.» Ask him (informal) whether the test was easy.",
+      "explanation": "«O teste foi fácil?» is a yes/no question; «facilíssimo» (or «facílimo») intensifies «fácil».",
+      "givenAnswer": "Sim, o teste foi facilíssimo.",
+      "answer": ["O", "teste", "foi", "fácil?"],
+      "distractors": ["Como", "foram", "difícil?"],
+      "acceptedAnswers": ["O teste foi muito fácil?"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-29",
+      "type": "question_for_answer",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Inês answers: «Falámos calmamente sobre os planos.» Ask her (informal) how they (vocês) talked about the plans.",
+      "explanation": "«Como falaram sobre os planos?» asks how you discussed the plans.",
+      "givenAnswer": "Falámos calmamente sobre os planos.",
+      "answer": ["Como", "falaram", "sobre", "os", "planos?"],
+      "distractors": ["Quando", "falou", "dos"],
+      "acceptedAnswers": ["Como é que falaram sobre os planos?"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-30",
+      "type": "question_for_answer",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Carlos answers: «Os bilhetes foram caríssimos.» Ask him (informal) whether the tickets were expensive.",
+      "explanation": "«Os bilhetes foram caros?» asks whether the tickets were expensive.",
+      "givenAnswer": "Os bilhetes foram caríssimos.",
+      "answer": ["Os", "bilhetes", "foram", "caros?"],
+      "distractors": ["Quanto", "foi", "baratos?"],
+      "acceptedAnswers": ["Os bilhetes foram muito caros?"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-31",
+      "type": "question_for_answer",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Sofia answers: «Sim, o tempo esteve quentíssimo ontem.» Ask her (informal) whether the weather was hot yesterday.",
+      "explanation": "«O tempo esteve quente ontem?» asks if the weather was hot yesterday.",
+      "givenAnswer": "Sim, o tempo esteve quentíssimo ontem.",
+      "answer": ["O", "tempo", "esteve", "quente", "ontem?"],
+      "distractors": ["Como", "está", "frio?"],
+      "acceptedAnswers": ["O tempo esteve muito quente ontem?"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-32",
+      "type": "question_for_answer",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Duarte answers: «Ele explicou o caminho claramente.» Ask him (informal) how the man explained the way.",
+      "explanation": "«Como é que ele explicou o caminho?» asks how he explained the way.",
+      "givenAnswer": "Ele explicou o caminho claramente.",
+      "answer": ["Como", "é", "que", "ele", "explicou", "o", "caminho?"],
+      "distractors": ["Quando", "ela", "explicaram"],
+      "acceptedAnswers": ["Como ele explicou o caminho?"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-33",
+      "type": "find_error",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "An adverb is needed to modify the verb «andou»: «rapidamente», not the adjective «rápida».",
+      "sentence": ["O", "comboio", "andou", "muito", "rápida."],
+      "wrongIndex": 4,
+      "correction": "rapidamente.",
+      "options": ["rapidamente.", "rápidas.", "rapidíssima."]
+    },
+    {
+      "id": "m6-adverbs-superlatives-34",
+      "type": "find_error",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The absolute superlative must agree in gender with feminine «a comida»: «deliciosíssima».",
+      "sentence": ["A", "comida", "deste", "restaurante", "é", "deliciosíssimo."],
+      "wrongIndex": 5,
+      "correction": "deliciosíssima.",
+      "options": ["deliciosíssima.", "deliciosíssimas.", "deliciosos."]
+    },
+    {
+      "id": "m6-adverbs-superlatives-35",
+      "type": "find_error",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Sapatos» is masculine plural, so the superlative must be «caríssimos».",
+      "sentence": ["Nós", "comprámos", "uns", "sapatos", "caríssima."],
+      "wrongIndex": 4,
+      "correction": "caríssimos.",
+      "options": ["caríssimos.", "caríssimas.", "caríssimo."]
+    },
+    {
+      "id": "m6-adverbs-superlatives-36",
+      "type": "find_error",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Adverbs in «-mente» are built on the feminine form: calma + -mente = «calmamente», never «calmomente».",
+      "sentence": ["O", "guia", "falou", "calmomente", "com", "os", "turistas."],
+      "wrongIndex": 3,
+      "correction": "calmamente",
+      "options": ["calmamente", "calmíssimo", "calmas"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-37",
+      "type": "find_error",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Subject «As praias» is feminine plural, so the superlative adjective must be «lindíssimas».",
+      "sentence": ["As", "praias", "do", "Algarve", "são", "lindíssimo."],
+      "wrongIndex": 5,
+      "correction": "lindíssimas.",
+      "options": ["lindíssimas.", "lindíssimos.", "lindíssima."]
+    },
+    {
+      "id": "m6-adverbs-superlatives-38",
+      "type": "about_me",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Describe how you usually do your work or studies using manner adverbs like «calmamente» or «rapidamente».",
+      "question": "Como costumas fazer o teu trabalho?",
+      "sampleAnswer": "Normalmente trabalho calmamente e com muita atenção.",
+      "hints": ["rapidamente", "devagar", "sempre", "foco", "estudo", "silêncio"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-39",
+      "type": "about_me",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Describe a memorable vacation or place using an absolute superlative like «lindíssimo» or «divertidíssimo».",
+      "question": "Como foram as tuas últimas férias?",
+      "sampleAnswer": "As minhas férias foram divertidíssimas no Algarve.",
+      "hints": ["lindíssimo", "ótimo", "hotel", "praia", "calmo", "quentíssimo"]
+    },
+    {
+      "id": "m6-adverbs-superlatives-40",
+      "type": "about_me",
+      "topicId": "m6-adverbs-superlatives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Describe the price or quality of a meal you had recently using a superlative like «baratíssimo» or «deliciosíssimo».",
+      "question": "Como foi a tua última refeição num restaurante?",
+      "sampleAnswer": "O jantar foi baratíssimo e a comida foi ótima.",
+      "hints": ["almoço", "peixe", "delicioso", "caríssimo", "ótimo", "sobremesa"]
+    }
+  ]
+}

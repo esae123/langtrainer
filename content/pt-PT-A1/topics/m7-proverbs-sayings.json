@@ -1,0 +1,662 @@
+{
+  "id": "m7-proverbs-sayings",
+  "moduleId": "m7",
+  "title": "Proverbs and sayings",
+  "kind": "vocabulary",
+  "context": "# Portuguese Proverbs and Sayings (Provérbios e Ditados)\n\nProverbs (*provérbios* or *ditados populares*) are an essential part of Portuguese everyday culture and conversation. They reflect centuries of folk wisdom, humor, and practical philosophy.\n\n### Popular Portuguese Proverbs\n- **Quem não arrisca, não petisca.** — Nothing ventured, nothing gained. (Literally: He who doesn't risk doesn't snack).\n- **Mais vale tarde do que nunca.** — Better late than never.\n- **Grão a grão, a galinha enche o papo.** — Little by little, great things are achieved. (Grain by grain, the hen fills her belly). The traditional word order is also heard: *Grão a grão enche a galinha o papo.*\n- **Devagar se vai ao longe.** — Slow and steady wins the race. (Slowly one goes far).\n- **A cavalo dado não se olha o dente.** — Don't look a gift horse in the mouth.\n- **O saber não ocupa lugar.** — Knowledge is no burden. (Knowledge takes up no space).\n- **Quem tudo quer, tudo perde.** — Grasp all, lose all.\n- **Cão que ladra não morde.** — Barking dogs seldom bite.\n- **Gostos não se discutem.** — There is no accounting for tastes.\n- **Filho de peixe sabe nadar.** — Like father, like son. (A fish's son knows how to swim).\n- **Mais vale um pássaro na mão que dois a voar.** — A bird in the hand is worth two in the bush.\n- **Água mole em pedra dura tanto bate até que fura.** — Constant dripping wears away the stone. (Soft water on hard stone hits until it pierces).\n\n### Using Proverbs in Everyday Conversation\nIn Portugal, people frequently introduce proverbs using phrases like:\n- **«Como se costuma dizer...»** — As the saying goes...\n- **«Há um provérbio português que diz...»** — There is a Portuguese proverb that says...\n\n**Watch out!**\n1. Proverbs are culturally fixed expressions; word order and vocabulary cannot be changed arbitrarily.\n2. In European Portuguese, say **«a voar»** (*dois a voar*), never Brazilian *voando*.",
+  "keyItems": [
+    {
+      "target": "Quem não arrisca, não petisca.",
+      "support": "Nothing ventured, nothing gained."
+    },
+    {
+      "target": "Mais vale tarde do que nunca.",
+      "support": "Better late than never."
+    },
+    {
+      "target": "Grão a grão, a galinha enche o papo.",
+      "support": "Little by little, goals are achieved."
+    },
+    {
+      "target": "Devagar se vai ao longe.",
+      "support": "Slow and steady wins the race."
+    },
+    {
+      "target": "A cavalo dado não se olha o dente.",
+      "support": "Don't look a gift horse in the mouth."
+    },
+    {
+      "target": "O saber não ocupa lugar.",
+      "support": "Knowledge is no burden."
+    },
+    {
+      "target": "Quem tudo quer, tudo perde.",
+      "support": "Grasp all, lose all."
+    },
+    {
+      "target": "Cão que ladra não morde.",
+      "support": "Barking dogs seldom bite."
+    },
+    {
+      "target": "Gostos não se discutem.",
+      "support": "There is no accounting for tastes."
+    },
+    {
+      "target": "Filho de peixe sabe nadar.",
+      "support": "Like father, like son."
+    },
+    {
+      "target": "Mais vale um pássaro na mão que dois a voar.",
+      "support": "A bird in the hand is worth two in the bush."
+    },
+    {
+      "target": "Como se costuma dizer...",
+      "support": "As the saying goes..."
+    },
+    {
+      "target": "o provérbio / o ditado popular",
+      "support": "proverb / popular saying"
+    },
+    {
+      "target": "a sabedoria popular",
+      "support": "folk wisdom"
+    },
+    {
+      "target": "Água mole em pedra dura tanto bate até que fura.",
+      "support": "Constant dripping wears away the stone."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m7-proverbs-sayings-01",
+      "type": "translate_word",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Provérbio» (or «ditado popular») is the Portuguese word for proverb.",
+      "direction": "toTarget",
+      "sentence": "The old Portuguese **proverb** gives good advice.",
+      "word": "proverb",
+      "answer": "provérbio",
+      "options": ["provérbio", "problema", "programa", "projeto"]
+    },
+    {
+      "id": "m7-proverbs-sayings-02",
+      "type": "translate_word",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Galinha» is hen in the famous proverb «Grão a grão, a galinha enche o papo».",
+      "direction": "toTarget",
+      "sentence": "Grain by grain, the **hen** fills her belly.",
+      "word": "hen",
+      "answer": "galinha",
+      "options": ["galinha", "gata", "garça", "gaivota"]
+    },
+    {
+      "id": "m7-proverbs-sayings-03",
+      "type": "translate_word",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "In the proverb «O saber não ocupa lugar», «o saber» is the noun meaning knowledge.",
+      "direction": "toTarget",
+      "sentence": "**Knowledge** takes up no space in your mind.",
+      "word": "Knowledge",
+      "answer": "saber",
+      "options": ["saber", "sabor", "sonho", "segredo"]
+    },
+    {
+      "id": "m7-proverbs-sayings-04",
+      "type": "translate_word",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Cão» is dog in «Cão que ladra não morde».",
+      "direction": "toTarget",
+      "sentence": "A **dog** that barks does not bite.",
+      "word": "dog",
+      "answer": "cão",
+      "options": ["cão", "cavalo", "gato", "peixe"]
+    },
+    {
+      "id": "m7-proverbs-sayings-05",
+      "type": "translate_word",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Petisca» (from «petiscar», to eat snacks/nibble) forms the rhyme in «Quem não arrisca, não petisca».",
+      "direction": "toTarget",
+      "sentence": "He who risks nothing **snacks** nothing.",
+      "word": "snacks",
+      "answer": "petisca",
+      "options": ["petisca", "pesca", "passeia", "perde"]
+    },
+    {
+      "id": "m7-proverbs-sayings-06",
+      "type": "fill_gaps",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the famous proverb: \"Nothing ventured, nothing gained.\"",
+      "explanation": "The fixed proverb rhymes: «arrisca» / «petisca» (petiscar = to nibble tasty snacks). If you take no risks, you get no reward.",
+      "template": "Quem não ___, não ___.",
+      "gaps": [
+        {
+          "answer": "arrisca"
+        },
+        {
+          "answer": "petisca"
+        }
+      ],
+      "wordBank": ["arrisca", "petisca", "arriscas", "perde", "pesca"]
+    },
+    {
+      "id": "m7-proverbs-sayings-07",
+      "type": "fill_gaps",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the proverb: \"Better late than never.\"",
+      "explanation": "«Mais vale tarde do que nunca» means doing something late is better than not doing it at all.",
+      "template": "Mais vale ___ do que ___.",
+      "gaps": [
+        {
+          "answer": "tarde"
+        },
+        {
+          "answer": "nunca"
+        }
+      ],
+      "wordBank": ["tarde", "nunca", "cedo", "sempre", "agora"]
+    },
+    {
+      "id": "m7-proverbs-sayings-08",
+      "type": "fill_gaps",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the proverb: \"Slow and steady wins the race.\"",
+      "explanation": "«Devagar se vai ao longe» encourages patience and persistence.",
+      "template": "Devagar se ___ ao ___.",
+      "gaps": [
+        {
+          "answer": "vai"
+        },
+        {
+          "answer": "longe"
+        }
+      ],
+      "wordBank": ["vai", "longe", "vem", "perto", "anda"]
+    },
+    {
+      "id": "m7-proverbs-sayings-09",
+      "type": "fill_gaps",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the proverb about patient persistence.",
+      "explanation": "«Grão a grão, a galinha enche o papo» means small steady efforts lead to big results.",
+      "template": "Grão a grão, a ___ enche o ___.",
+      "gaps": [
+        {
+          "answer": "galinha"
+        },
+        {
+          "answer": "papo"
+        }
+      ],
+      "wordBank": ["galinha", "papo", "ave", "saco", "peixe"]
+    },
+    {
+      "id": "m7-proverbs-sayings-10",
+      "type": "fill_gaps",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the proverb: \"Don't look a gift horse in the mouth.\"",
+      "explanation": "«A cavalo dado não se olha o dente» means do not criticize a gift.",
+      "template": "A cavalo ___ não se olha o ___.",
+      "gaps": [
+        {
+          "answer": "dado"
+        },
+        {
+          "answer": "dente"
+        }
+      ],
+      "wordBank": ["dado", "dente", "novo", "olho", "comprado"]
+    },
+    {
+      "id": "m7-proverbs-sayings-11",
+      "type": "fill_gaps",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the proverb: \"Barking dogs seldom bite.\"",
+      "explanation": "«Cão que ladra não morde» means people who make threats often take no action.",
+      "template": "Cão que ___ não ___.",
+      "gaps": [
+        {
+          "answer": "ladra"
+        },
+        {
+          "answer": "morde"
+        }
+      ],
+      "wordBank": ["ladra", "morde", "corre", "come", "fala"]
+    },
+    {
+      "id": "m7-proverbs-sayings-12",
+      "type": "fill_gaps",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the proverb warning against greed: \"Grasp all, lose all.\"",
+      "explanation": "«Quem tudo quer, tudo perde» warns that greed often leaves you with nothing.",
+      "template": "Quem tudo ___, tudo ___.",
+      "gaps": [
+        {
+          "answer": "quer"
+        },
+        {
+          "answer": "perde"
+        }
+      ],
+      "wordBank": ["quer", "perde", "tem", "ganha", "vê"]
+    },
+    {
+      "id": "m7-proverbs-sayings-13",
+      "type": "build_phrase",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Nothing ventured, nothing gained.\"",
+      "explanation": "«Quem não arrisca, não petisca» is the classic Portuguese proverb.",
+      "answer": ["Quem", "não", "arrisca,", "não", "petisca."],
+      "distractors": ["arriscar,", "pesca."],
+      "acceptedAnswers": ["Quem não arrisca não petisca."]
+    },
+    {
+      "id": "m7-proverbs-sayings-14",
+      "type": "build_phrase",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Better late than never.\"",
+      "explanation": "«Mais vale X do que Y» = X is better than Y; the second part uses «do que», never «da».",
+      "answer": ["Mais", "vale", "tarde", "do", "que", "nunca."],
+      "distractors": ["cedo", "da"],
+      "acceptedAnswers": ["Mais vale tarde que nunca."]
+    },
+    {
+      "id": "m7-proverbs-sayings-15",
+      "type": "build_phrase",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Slow and steady goes far.\"",
+      "explanation": "A fixed proverb: «se» comes before the verb here (Devagar se vai). Slowly but steadily you reach your goal.",
+      "answer": ["Devagar", "se", "vai", "ao", "longe."],
+      "distractors": ["te", "vem"],
+      "acceptedAnswers": []
+    },
+    {
+      "id": "m7-proverbs-sayings-16",
+      "type": "build_phrase",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Knowledge takes up no room.\"",
+      "explanation": "«O saber» is the infinitive used as a noun (knowledge), with the article; singular subject → «ocupa».",
+      "answer": ["O", "saber", "não", "ocupa", "lugar."],
+      "distractors": ["tempo.", "ocupam"],
+      "acceptedAnswers": []
+    },
+    {
+      "id": "m7-proverbs-sayings-17",
+      "type": "build_phrase",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Tastes are not argued about.\"",
+      "explanation": "«Não se discutem» = are not argued about; plural «gostos» needs the plural verb «discutem».",
+      "answer": ["Gostos", "não", "se", "discutem."],
+      "distractors": ["discute.", "te"],
+      "acceptedAnswers": ["Os gostos não se discutem."]
+    },
+    {
+      "id": "m7-proverbs-sayings-18",
+      "type": "build_phrase",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Like father, like son.\" (A fish's son knows how to swim)",
+      "explanation": "Fixed proverb with no article: «Filho de peixe sabe nadar» — children inherit their parents' skills.",
+      "answer": ["Filho", "de", "peixe", "sabe", "nadar."],
+      "distractors": ["Filha", "sabem"],
+      "acceptedAnswers": []
+    },
+    {
+      "id": "m7-proverbs-sayings-19",
+      "type": "build_phrase",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Grain by grain, the hen fills her belly.\"",
+      "explanation": "Singular subject «a galinha» → «enche»; «o papo» is the bird's crop. Small, steady efforts add up.",
+      "answer": ["Grão", "a", "grão,", "a", "galinha", "enche", "o", "papo."],
+      "distractors": ["pato.", "enchem", "de"],
+      "acceptedAnswers": [
+        "Grão a grão a galinha enche o papo.",
+        "Grão a grão enche a galinha o papo.",
+        "Grão a grão, enche a galinha o papo."
+      ]
+    },
+    {
+      "id": "m7-proverbs-sayings-20",
+      "type": "build_phrase",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Don't look a gift horse in the mouth.\"",
+      "explanation": "«A cavalo dado» = to a horse that is given; impersonal «não se olha» (one doesn't look). Don't criticise a gift.",
+      "answer": ["A", "cavalo", "dado", "não", "se", "olha", "o", "dente."],
+      "distractors": ["olham", "comprado", "te"],
+      "acceptedAnswers": ["A cavalo dado não se olha o dente"]
+    },
+    {
+      "id": "m7-proverbs-sayings-21",
+      "type": "build_phrase",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"A bird in the hand is worth more than two flying.\"",
+      "explanation": "In European Portuguese, progressive is «a voar»: «Mais vale um pássaro na mão que dois a voar».",
+      "answer": ["Mais", "vale", "um", "pássaro", "na", "mão", "que", "dois", "a", "voar."],
+      "distractors": ["três", "voando."],
+      "acceptedAnswers": ["Mais vale um pássaro na mão do que dois a voar."]
+    },
+    {
+      "id": "m7-proverbs-sayings-22",
+      "type": "build_phrase",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"As the saying goes, slow and steady goes far.\"",
+      "explanation": "«Como se costuma dizer...» is the standard conversational opener.",
+      "answer": ["Como", "se", "costuma", "dizer,", "devagar", "se", "vai", "ao", "longe."],
+      "distractors": ["dizendo,", "vem", "te"],
+      "acceptedAnswers": ["Como se costuma dizer devagar se vai ao longe."]
+    },
+    {
+      "id": "m7-proverbs-sayings-23",
+      "type": "build_phrase",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"There is a proverb that says: nothing ventured, nothing gained.\"",
+      "explanation": "«Há um provérbio que diz...» introduces a saying; the proverb itself rhymes «arrisca» / «petisca».",
+      "answer": [
+        "Há",
+        "um",
+        "provérbio",
+        "que",
+        "diz:",
+        "quem",
+        "não",
+        "arrisca,",
+        "não",
+        "petisca."
+      ],
+      "distractors": ["provérbios", "pesca."],
+      "acceptedAnswers": [
+        "Há um provérbio que diz: quem não arrisca não petisca.",
+        "Há um ditado que diz: quem não arrisca, não petisca."
+      ]
+    },
+    {
+      "id": "m7-proverbs-sayings-24",
+      "type": "question_for_answer",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tiago answers: «Significa que devemos ter paciência.» Ask him (informal) what this proverb means.",
+      "explanation": "«O que significa este provérbio?» asks for the meaning of the proverb.",
+      "givenAnswer": "Significa que devemos ter paciência.",
+      "answer": ["O", "que", "significa", "este", "provérbio?"],
+      "distractors": ["Qual", "estes", "ditados"],
+      "acceptedAnswers": [
+        "O que é que significa este provérbio?",
+        "O que significa esse provérbio?"
+      ]
+    },
+    {
+      "id": "m7-proverbs-sayings-25",
+      "type": "question_for_answer",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You tell Rita the English saying 'Better late than never'. She answers: «Diz-se: mais vale tarde do que nunca.» Ask her (use «é que») how you say that in Portuguese.",
+      "explanation": "«Como (é que) se diz...em português?» asks for the Portuguese way to say something; «se diz» is impersonal (one says).",
+      "givenAnswer": "Diz-se: mais vale tarde do que nunca.",
+      "answer": ["Como", "é", "que", "se", "diz", "isso", "em", "português?"],
+      "distractors": ["Quando", "te", "fala?"],
+      "acceptedAnswers": [
+        "Como se diz isso em português?",
+        "Como se diz isto em português?",
+        "Como é que se diz isto em português?"
+      ]
+    },
+    {
+      "id": "m7-proverbs-sayings-26",
+      "type": "question_for_answer",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «Sim, conheço muitos provérbios portugueses.» Ask him (informal) if he knows Portuguese proverbs.",
+      "explanation": "Informal «conheces» (tu) — «conhecer» is used for being familiar with things like proverbs, songs or places.",
+      "givenAnswer": "Sim, conheço muitos provérbios portugueses.",
+      "answer": ["Conheces", "provérbios", "portugueses?"],
+      "distractors": ["Conhece", "ditado", "muito"],
+      "acceptedAnswers": [
+        "Tu conheces provérbios portugueses?",
+        "Conheces alguns provérbios portugueses?"
+      ]
+    },
+    {
+      "id": "m7-proverbs-sayings-27",
+      "type": "question_for_answer",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Sofia answers: «O meu provérbio favorito é “O saber não ocupa lugar”.» Ask her (informal) what her favourite proverb is.",
+      "explanation": "«Qual é...?» asks which one; informal possessive with article: «o teu provérbio».",
+      "givenAnswer": "O meu provérbio favorito é «O saber não ocupa lugar».",
+      "answer": ["Qual", "é", "o", "teu", "provérbio", "favorito?"],
+      "distractors": ["Que", "seu", "favoritos?"],
+      "acceptedAnswers": ["Qual é o provérbio de que mais gostas?"]
+    },
+    {
+      "id": "m7-proverbs-sayings-28",
+      "type": "question_for_answer",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "João answers: «Usa-se quando alguém chega atrasado.» Ask him (use «é que») when this proverb is used.",
+      "explanation": "«Quando (é que) se usa...?» asks in what situation; «se usa» is impersonal (one uses).",
+      "givenAnswer": "Usa-se quando alguém chega atrasado.",
+      "answer": ["Quando", "é", "que", "se", "usa", "este", "provérbio?"],
+      "distractors": ["Como", "te", "usam?"],
+      "acceptedAnswers": [
+        "Quando se usa este provérbio?",
+        "Quando se usa esse provérbio?",
+        "Quando é que se usa esse provérbio?"
+      ]
+    },
+    {
+      "id": "m7-proverbs-sayings-29",
+      "type": "question_for_answer",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Inês answers: «Uso “Cão que ladra não morde”.» Ask her (informal) which proverb she uses in this situation.",
+      "explanation": "«Que provérbio...?» asks which proverb; informal «usas» matches «tu»; «nesta situação» = em + esta.",
+      "givenAnswer": "Uso «Cão que ladra não morde».",
+      "answer": ["Que", "provérbio", "usas", "nesta", "situação?"],
+      "distractors": ["Qual", "usa", "neste"],
+      "acceptedAnswers": ["Que provérbio é que usas nesta situação?"]
+    },
+    {
+      "id": "m7-proverbs-sayings-30",
+      "type": "question_for_answer",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ana answers: «Quer dizer que devemos arriscar para conseguir algo.» Ask her what that saying means (use «quer dizer»).",
+      "explanation": "«Querer dizer» = to mean; the subject is the saying, so 3rd-person «quer dizer», not «queres».",
+      "givenAnswer": "Quer dizer que devemos arriscar para conseguir algo.",
+      "answer": ["O", "que", "quer", "dizer", "esse", "ditado?"],
+      "distractors": ["Qual", "queres", "esses"],
+      "acceptedAnswers": ["O que é que quer dizer esse ditado?", "O que quer dizer este ditado?"]
+    },
+    {
+      "id": "m7-proverbs-sayings-31",
+      "type": "question_for_answer",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Miguel answers: «Porque os provérbios ensinam a sabedoria popular.» Ask him (informal) why he likes proverbs (use «por que razão»).",
+      "explanation": "«Por que razão...?» asks why; «gostar de» + noun, and informal «gostas».",
+      "givenAnswer": "Porque os provérbios ensinam a sabedoria popular.",
+      "answer": ["Por", "que", "razão", "gostas", "de", "provérbios?"],
+      "distractors": ["Como", "gosta", "do"],
+      "acceptedAnswers": [
+        "Por que razão é que gostas de provérbios?",
+        "Porque é que gostas de provérbios?"
+      ]
+    },
+    {
+      "id": "m7-proverbs-sayings-32",
+      "type": "question_for_answer",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Duarte answers: «No meu país existe um provérbio parecido.» Ask him (informal) if a similar proverb exists in his country.",
+      "explanation": "Singular «um provérbio» → «existe»; informal possessive «no teu país» (em + o teu país).",
+      "givenAnswer": "No meu país existe um provérbio parecido.",
+      "answer": ["Existe", "um", "provérbio", "parecido", "no", "teu", "país?"],
+      "distractors": ["Existem", "seu", "na"],
+      "acceptedAnswers": [
+        "Existe um provérbio igual no teu país?",
+        "Há um provérbio parecido no teu país?"
+      ]
+    },
+    {
+      "id": "m7-proverbs-sayings-33",
+      "type": "find_error",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The proverb is «Quem não arrisca, não petisca», from «petiscar» (to snack), not «pescar» (to fish).",
+      "sentence": ["Quem", "não", "arrisca,", "não", "pesca."],
+      "wrongIndex": 4,
+      "correction": "petisca.",
+      "options": ["petisca.", "perde.", "ganha."]
+    },
+    {
+      "id": "m7-proverbs-sayings-34",
+      "type": "find_error",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The saying is «Mais vale tarde do que nunca» (Better late than never), not «sempre».",
+      "sentence": ["Mais", "vale", "tarde", "do", "que", "sempre."],
+      "wrongIndex": 5,
+      "correction": "nunca.",
+      "options": ["nunca.", "cedo.", "agora."]
+    },
+    {
+      "id": "m7-proverbs-sayings-35",
+      "type": "find_error",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The proverb is «Cão que ladra não morde» (Barking dogs seldom bite).",
+      "sentence": ["Cão", "que", "ladra", "não", "come."],
+      "wrongIndex": 4,
+      "correction": "morde.",
+      "options": ["morde.", "dorme.", "corre."]
+    },
+    {
+      "id": "m7-proverbs-sayings-36",
+      "type": "find_error",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The proverb is «Grão a grão, a galinha enche o papo», meaning small steady efforts achieve big results.",
+      "sentence": ["Grão", "a", "grão,", "a", "galinha", "enche", "o", "saco."],
+      "wrongIndex": 7,
+      "correction": "papo.",
+      "options": ["papo.", "estômago.", "prato."]
+    },
+    {
+      "id": "m7-proverbs-sayings-37",
+      "type": "find_error",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The proverb is «Filho de peixe sabe nadar» (Like father, like son).",
+      "sentence": ["Filho", "de", "peixe", "sabe", "correr."],
+      "wrongIndex": 4,
+      "correction": "nadar.",
+      "options": ["nadar.", "andar.", "voar."]
+    },
+    {
+      "id": "m7-proverbs-sayings-38",
+      "type": "about_me",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State what your favorite Portuguese proverb is.",
+      "question": "Qual é o teu provérbio português preferido?",
+      "sampleAnswer": "O meu provérbio preferido é quem não arrisca não petisca.",
+      "hints": ["favorito", "ditado", "saber", "lugar", "tarde", "nunca"]
+    },
+    {
+      "id": "m7-proverbs-sayings-39",
+      "type": "about_me",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State a proverb or piece of popular wisdom you often hear in your family.",
+      "question": "Que provérbio ouves frequentemente na tua família?",
+      "sampleAnswer": "A minha família diz que o saber não ocupa lugar.",
+      "hints": ["ouve", "sempre", "avó", "casa", "muitas", "vezes"]
+    },
+    {
+      "id": "m7-proverbs-sayings-40",
+      "type": "about_me",
+      "topicId": "m7-proverbs-sayings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State whether there are similar proverbs in your native language.",
+      "question": "Existem provérbios semelhantes na tua língua materna?",
+      "sampleAnswer": "Sim, na minha língua existem vários ditados muito parecidos.",
+      "hints": ["iguais", "sempre", "cultura", "país", "conheço", "muitos"]
+    }
+  ]
+}

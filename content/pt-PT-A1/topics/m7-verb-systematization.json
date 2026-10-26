@@ -1,0 +1,651 @@
+{
+  "id": "m7-verb-systematization",
+  "moduleId": "m7",
+  "title": "Present and past tense systematization",
+  "kind": "grammar",
+  "context": "# Present and Past Tense Systematization\n\nThroughout Modules 1 to 6, you learned the two fundamental verb tenses of Portuguese: the **Presente do Indicativo** and the **Pretérito Perfeito Simples (PPS)**. This topic consolidates and contrasts both systems.\n\n### Regular Conjugation Patterns\n| Group | Presente (eu / ele / nós / eles) | PPS (eu / ele / nós / eles) |\n|---|---|---|\n| **-ar** (falar) | falo, fala, falamos, falam | falei, falou, **falámos**, falaram |\n| **-er** (comer) | como, come, comemos, comem | comi, comeu, comemos, comeram |\n| **-ir** (partir) | parto, parte, partimos, partem | parti, partiu, partimos, partiram |\n\n*Note:* In European Portuguese, the 1st-person plural of regular **-ar** verbs takes an acute accent in the PPS (*nós falámos* yesterday) to distinguish it from the present (*nós falamos* today).\n\n### Contrasting Irregular Stems\nSeveral key verbs change completely between present and past:\n- **ir**: *Hoje vou ao mercado.* vs *Ontem fui ao supermercado.*\n- **estar**: *Agora estou em casa.* vs *Ontem estive no escritório.*\n- **ter**: *Hoje tenho aulas.* vs *Na semana passada tive exames.*\n- **fazer**: *Faço sempre o almoço.* vs *Ontem não fiz nada.*\n- **ver**: *Vejo notícias de manhã.* vs *Ontem vi uma exposição.*\n- **vir**: *Ele vem cá todos os dias.* vs *Ontem ele veio tarde.*\n\n### Time Markers\n- **Presente**: *hoje*, *agora*, *normalmente*, *todos os dias*, *sempre*.\n- **PPS**: *ontem*, *ontem à noite*, *anteontem*, *na semana passada*, *no mês passado*, *há dois dias*.\n\n**Watch out!**\n1. **Ir** and **ser** share identical PPS forms (*fui, foste, foi, fomos, foram*), but have very different present forms (*vou / sou*).\n2. Distinguish present *pode* (open 'ó') from PPS *pôde* (closed 'ô' with circumflex accent).",
+  "keyItems": [
+    {
+      "target": "falar (falo / falei)",
+      "support": "to speak (present / PPS)"
+    },
+    {
+      "target": "comer (como / comi)",
+      "support": "to eat (present / PPS)"
+    },
+    {
+      "target": "partir (parto / parti)",
+      "support": "to leave / depart (present / PPS)"
+    },
+    {
+      "target": "ir (vou / fui)",
+      "support": "to go (present / PPS)"
+    },
+    {
+      "target": "ser (sou / fui)",
+      "support": "to be [permanent] (present / PPS)"
+    },
+    {
+      "target": "estar (estou / estive)",
+      "support": "to be [temporary] (present / PPS)"
+    },
+    {
+      "target": "ter (tenho / tive)",
+      "support": "to have (present / PPS)"
+    },
+    {
+      "target": "fazer (faço / fiz)",
+      "support": "to do / make (present / PPS)"
+    },
+    {
+      "target": "ver (vejo / vi)",
+      "support": "to see (present / PPS)"
+    },
+    {
+      "target": "vir (venho / vim)",
+      "support": "to come (present / PPS)"
+    },
+    {
+      "target": "poder (posso / pude)",
+      "support": "to be able / can (present / PPS)"
+    },
+    {
+      "target": "querer (quero / quis)",
+      "support": "to want (present / PPS)"
+    },
+    {
+      "target": "saber (sei / soube)",
+      "support": "to know (present / PPS)"
+    },
+    {
+      "target": "falamos (presente) vs falámos (PPS)",
+      "support": "we speak (today) vs we spoke (yesterday)"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m7-verb-systematization-01",
+      "type": "translate_word",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Fui» is the 1st-person PPS of «ir» (yesterday I went), contrasting with present «vou».",
+      "direction": "toTarget",
+      "sentence": "Today I go to work, but yesterday I **went** to the doctor.",
+      "word": "went",
+      "answer": "fui",
+      "options": ["fui", "vou", "foi", "foste"]
+    },
+    {
+      "id": "m7-verb-systematization-02",
+      "type": "translate_word",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Tive» is the 1st-person PPS of «ter» (I had), contrasting with present «tenho».",
+      "direction": "toTarget",
+      "sentence": "Usually I have time, but last week I **had** a lot of work.",
+      "word": "had",
+      "answer": "tive",
+      "options": ["tive", "tenho", "teve", "tiveram"]
+    },
+    {
+      "id": "m7-verb-systematization-03",
+      "type": "translate_word",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Fiz» is the 1st-person PPS of «fazer» (I made), contrasting with present «faço».",
+      "direction": "toTarget",
+      "sentence": "Every day I make coffee, but yesterday I **made** tea.",
+      "word": "made",
+      "answer": "fiz",
+      "options": ["fiz", "faço", "fez", "fizeste"]
+    },
+    {
+      "id": "m7-verb-systematization-04",
+      "type": "translate_word",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Estive» is the 1st-person PPS of «estar» (I was), contrasting with present «estou».",
+      "direction": "toTarget",
+      "sentence": "Now I am at home, but in the morning I **was** at the office.",
+      "word": "was",
+      "answer": "estive",
+      "options": ["estive", "estou", "esteve", "estiveste"]
+    },
+    {
+      "id": "m7-verb-systematization-05",
+      "type": "translate_word",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Vi» is the 1st-person PPS of «ver» (I saw), contrasting with present «vejo».",
+      "direction": "toTarget",
+      "sentence": "I often see my friends, and yesterday I **saw** Inês at the cafe.",
+      "word": "saw",
+      "answer": "vi",
+      "options": ["vi", "vejo", "viu", "viste"]
+    },
+    {
+      "id": "m7-verb-systematization-06",
+      "type": "fill_gaps",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Contrast present and past: \"Today I eat at home, but yesterday I ate at work.\"",
+      "explanation": "Present «como» contrasts with past «comi» for regular -er verb «comer».",
+      "template": "Hoje eu ___ em casa, mas ontem ___ no trabalho.",
+      "gaps": [
+        {
+          "answer": "como"
+        },
+        {
+          "answer": "comi"
+        }
+      ],
+      "wordBank": ["como", "comi", "come", "comeu", "comemos"]
+    },
+    {
+      "id": "m7-verb-systematization-07",
+      "type": "fill_gaps",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Contrast present and past of 'ir': \"Usually I go by metro, but yesterday I went on foot.\"",
+      "explanation": "«Normalmente» marks a habit → present «vou»; «ontem» marks a finished past event → PPS «fui» (ir).",
+      "template": "Normalmente eu ___ de metro, mas ontem ___ a pé.",
+      "gaps": [
+        {
+          "answer": "vou"
+        },
+        {
+          "answer": "fui"
+        }
+      ],
+      "wordBank": ["vou", "fui", "vai", "foi", "vamos"]
+    },
+    {
+      "id": "m7-verb-systematization-08",
+      "type": "fill_gaps",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Choose the present and PPS forms of 'falar' (nós): \"Every day we talk to Pedro, but yesterday we talked to Ana.\"",
+      "explanation": "«Todos os dias» → present «falamos»; «ontem» → PPS «falámos». In European Portuguese the -ar PPS «nós» form takes an acute accent.",
+      "template": "Todos os dias nós ___ com o Pedro, mas ontem ___ com a Ana.",
+      "gaps": [
+        {
+          "answer": "falamos"
+        },
+        {
+          "answer": "falámos"
+        }
+      ],
+      "wordBank": ["falamos", "falámos", "falam", "falei", "falou"]
+    },
+    {
+      "id": "m7-verb-systematization-09",
+      "type": "fill_gaps",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps contrasting present and past for 3rd-person singular 'beber'.",
+      "explanation": "Subject «Ela» takes present «bebe» (now) and PPS «bebeu» (in the morning).",
+      "template": "Ela agora ___ um café, mas de manhã ___ um chá.",
+      "gaps": [
+        {
+          "answer": "bebe"
+        },
+        {
+          "answer": "bebeu"
+        }
+      ],
+      "wordBank": ["bebe", "bebeu", "bebo", "bebi", "bebem"]
+    },
+    {
+      "id": "m7-verb-systematization-10",
+      "type": "fill_gaps",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Contrast present and past of 'poder': \"Today I can make lunch, but yesterday I could not.\"",
+      "explanation": "«Poder» is irregular: present 1st person «posso», PPS 1st person «pude» («pôde» is the 3rd person).",
+      "template": "Hoje eu ___ fazer o almoço, mas ontem não ___.",
+      "gaps": [
+        {
+          "answer": "posso"
+        },
+        {
+          "answer": "pude"
+        }
+      ],
+      "wordBank": ["posso", "pude", "pode", "pôde", "podemos"]
+    },
+    {
+      "id": "m7-verb-systematization-11",
+      "type": "fill_gaps",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with present and past 3rd-person plural forms of 'ver'.",
+      "explanation": "With «eles», the present of «ver» is «veem» (habit, with «sempre» after the verb) and the PPS is «viram».",
+      "template": "Eles ___ sempre as notícias de manhã, mas ontem ___ um documentário.",
+      "gaps": [
+        {
+          "answer": "veem"
+        },
+        {
+          "answer": "viram"
+        }
+      ],
+      "wordBank": ["veem", "viram", "vê", "viu", "vemos"]
+    },
+    {
+      "id": "m7-verb-systematization-12",
+      "type": "fill_gaps",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Contrast present and past of 'vir' (3rd person singular).",
+      "explanation": "«O Tiago» takes present «vem» (habitual) and PPS «veio» (yesterday).",
+      "template": "O Tiago ___ cá todas as semanas, mas ontem não ___.",
+      "gaps": [
+        {
+          "answer": "vem"
+        },
+        {
+          "answer": "veio"
+        }
+      ],
+      "wordBank": ["vem", "veio", "vêm", "vieram", "venho"]
+    },
+    {
+      "id": "m7-verb-systematization-13",
+      "type": "build_phrase",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Today I have time, but yesterday I had work.\"",
+      "explanation": "«Hoje» → present «tenho»; «ontem» → PPS «tive» (ter is irregular in the PPS).",
+      "answer": ["Hoje", "tenho", "tempo,", "mas", "ontem", "tive", "trabalho."],
+      "distractors": ["tem,", "teve"],
+      "acceptedAnswers": ["Hoje eu tenho tempo, mas ontem tive trabalho."]
+    },
+    {
+      "id": "m7-verb-systematization-14",
+      "type": "build_phrase",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Usually he does sports, but yesterday he did nothing.\"",
+      "explanation": "Contrasts 3rd-person present «faz» with PPS «fez».",
+      "answer": ["Normalmente", "ele", "faz", "desporto,", "mas", "ontem", "não", "fez", "nada."],
+      "distractors": ["fazem", "fiz"],
+      "acceptedAnswers": ["Normalmente faz desporto, mas ontem não fez nada."]
+    },
+    {
+      "id": "m7-verb-systematization-15",
+      "type": "build_phrase",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Now I am at home, but in the morning I was at the beach.\"",
+      "explanation": "1st person: present «estou» (now) vs PPS «estive» (earlier, a finished period).",
+      "answer": ["Agora", "estou", "em", "casa,", "mas", "de", "manhã", "estive", "na", "praia."],
+      "distractors": ["está", "esteve"],
+      "acceptedAnswers": ["Agora estou em casa mas de manhã estive na praia."]
+    },
+    {
+      "id": "m7-verb-systematization-16",
+      "type": "build_phrase",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Yesterday we bought fresh fruit at the market.\" (PPS)",
+      "explanation": "In European Portuguese, PPS of -ar verbs takes an acute accent: «comprámos».",
+      "answer": ["Ontem", "comprámos", "fruta", "fresca", "no", "mercado."],
+      "distractors": ["compramos", "na"],
+      "acceptedAnswers": [
+        "Nós ontem comprámos fruta fresca no mercado.",
+        "Ontem nós comprámos fruta fresca no mercado."
+      ]
+    },
+    {
+      "id": "m7-verb-systematization-17",
+      "type": "build_phrase",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"She wants to study now, but yesterday she wanted to rest.\"",
+      "explanation": "Contrasts 3rd-person present «quer» with PPS «quis».",
+      "answer": ["Ela", "quer", "estudar", "agora,", "mas", "ontem", "quis", "descansar."],
+      "distractors": ["queres", "quiseram"],
+      "acceptedAnswers": ["Quer estudar agora, mas ontem quis descansar."]
+    },
+    {
+      "id": "m7-verb-systematization-18",
+      "type": "build_phrase",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Today they know the answer, but yesterday they couldn't answer.\"",
+      "explanation": "3rd-person plural present «sabem» vs PPS «souberam»; «não souberam responder» = they didn't know how to answer (on that occasion).",
+      "answer": [
+        "Hoje",
+        "eles",
+        "sabem",
+        "a",
+        "resposta,",
+        "mas",
+        "ontem",
+        "não",
+        "souberam",
+        "responder."
+      ],
+      "distractors": ["sabe", "soube"],
+      "acceptedAnswers": ["Hoje sabem a resposta, mas ontem não souberam responder."]
+    },
+    {
+      "id": "m7-verb-systematization-19",
+      "type": "build_phrase",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I always say good morning, but yesterday I said nothing.\"",
+      "explanation": "Contrasts 1st-person present «digo» with PPS «disse» (dizer).",
+      "answer": ["Digo", "sempre", "bom", "dia,", "mas", "ontem", "não", "disse", "nada."],
+      "distractors": ["Diz", "disseste"],
+      "acceptedAnswers": ["Eu digo sempre bom dia, mas ontem não disse nada."]
+    },
+    {
+      "id": "m7-verb-systematization-20",
+      "type": "build_phrase",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Normally we go by train, but yesterday we went by bus.\"",
+      "explanation": "Contrasts present «vamos» with PPS «fomos» (ir).",
+      "answer": [
+        "Normalmente",
+        "vamos",
+        "de",
+        "comboio,",
+        "mas",
+        "ontem",
+        "fomos",
+        "de",
+        "autocarro."
+      ],
+      "distractors": ["vai", "foram"],
+      "acceptedAnswers": ["Normalmente nós vamos de comboio, mas ontem fomos de autocarro."]
+    },
+    {
+      "id": "m7-verb-systematization-21",
+      "type": "build_phrase",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Today you bring the books, but yesterday you brought nothing.\" (informal)",
+      "explanation": "Contrasts informal present «trazes» with PPS «trouxeste» (trazer).",
+      "answer": ["Hoje", "trazes", "os", "livros,", "mas", "ontem", "não", "trouxeste", "nada."],
+      "distractors": ["traz", "trouxe"],
+      "acceptedAnswers": ["Hoje tu trazes os livros, mas ontem não trouxeste nada."]
+    },
+    {
+      "id": "m7-verb-systematization-22",
+      "type": "build_phrase",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"He can help today, but yesterday he could not come.\"",
+      "explanation": "Contrasts present «pode» (open vowel) with PPS «pôde» (closed vowel with circumflex).",
+      "answer": ["Ele", "pode", "ajudar", "hoje,", "mas", "ontem", "não", "pôde", "vir."],
+      "distractors": ["posso", "pude"],
+      "acceptedAnswers": ["Pode ajudar hoje, mas ontem não pôde vir."]
+    },
+    {
+      "id": "m7-verb-systematization-23",
+      "type": "build_phrase",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Today I put the keys here, but yesterday I put them in the bag.\"",
+      "explanation": "1st person of «pôr»: present «ponho», PPS «pus» (3rd person: «põe» / «pôs»).",
+      "answer": ["Hoje", "ponho", "as", "chaves", "aqui,", "mas", "ontem", "pus", "na", "mala."],
+      "distractors": ["põe", "pôs"],
+      "acceptedAnswers": ["Hoje ponho as chaves aqui mas ontem pus na mala."]
+    },
+    {
+      "id": "m7-verb-systematization-24",
+      "type": "question_for_answer",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «Vou ao ginásio todos os dias.» Ask him (informal) how often he goes to the gym.",
+      "explanation": "«Com que frequência...?» asks about a habit, so the verb is in the present: «vais» (ir, tu).",
+      "givenAnswer": "Vou ao ginásio todos os dias.",
+      "answer": ["Com", "que", "frequência", "vais", "ao", "ginásio?"],
+      "distractors": ["vai", "no", "frequências"],
+      "acceptedAnswers": [
+        "Com que frequência é que vais ao ginásio?",
+        "Quantas vezes vais ao ginásio?"
+      ]
+    },
+    {
+      "id": "m7-verb-systematization-25",
+      "type": "question_for_answer",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ana answers: «Fui ao cinema ontem à noite.» Ask her (informal) where she went last night.",
+      "explanation": "«Ontem à noite» is finished past, so use the PPS of «ir» for tu: «foste».",
+      "givenAnswer": "Fui ao cinema ontem à noite.",
+      "answer": ["Onde", "foste", "ontem", "à", "noite?"],
+      "distractors": ["foi", "na", "vais"],
+      "acceptedAnswers": [
+        "Onde é que foste ontem à noite?",
+        "Aonde foste ontem à noite?",
+        "Aonde é que foste ontem à noite?"
+      ]
+    },
+    {
+      "id": "m7-verb-systematization-26",
+      "type": "question_for_answer",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tiago answers: «Sim, já estive no Porto duas vezes.» Ask him (informal) if he has (ever) been to Porto.",
+      "explanation": "«Já» + PPS asks about life experience: «estiveste» (estar, tu).",
+      "givenAnswer": "Sim, já estive no Porto duas vezes.",
+      "answer": ["Já", "estiveste", "no", "Porto?"],
+      "distractors": ["esteve", "estás", "na"],
+      "acceptedAnswers": ["Já alguma vez estiveste no Porto?"]
+    },
+    {
+      "id": "m7-verb-systematization-27",
+      "type": "question_for_answer",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Rita answers: «Ontem comi sopa e peixe grelhado.» Ask her (informal) what she ate yesterday.",
+      "explanation": "PPS of «comer» for tu: «comeste» (not present «comes» or 3rd-person «comeu»).",
+      "givenAnswer": "Ontem comi sopa e peixe grelhado.",
+      "answer": ["O", "que", "comeste", "ontem?"],
+      "distractors": ["comeu", "comes", "qual"],
+      "acceptedAnswers": ["O que é que comeste ontem?"]
+    },
+    {
+      "id": "m7-verb-systematization-28",
+      "type": "question_for_answer",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "João answers: «Fiz o jantar para a família.» Ask him (informal, use «é que») what he did.",
+      "explanation": "«Fazer» has an irregular PPS: tu «fizeste» (eu «fiz», ele «fez»).",
+      "givenAnswer": "Fiz o jantar para a família.",
+      "answer": ["O", "que", "é", "que", "fizeste?"],
+      "distractors": ["fazes?", "fez?", "qual"],
+      "acceptedAnswers": ["O que fizeste?"]
+    },
+    {
+      "id": "m7-verb-systematization-29",
+      "type": "question_for_answer",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Sofia answers: «Normalmente bebo café, mas ontem de manhã bebi chá.» Ask her (informal) what she drank yesterday morning.",
+      "explanation": "«Ontem de manhã» is finished past → PPS of «beber» for tu: «bebeste».",
+      "givenAnswer": "Normalmente bebo café, mas ontem de manhã bebi chá.",
+      "answer": ["O", "que", "bebeste", "ontem", "de", "manhã?"],
+      "distractors": ["bebes", "bebeu", "da"],
+      "acceptedAnswers": ["O que é que bebeste ontem de manhã?"]
+    },
+    {
+      "id": "m7-verb-systematization-30",
+      "type": "question_for_answer",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Miguel answers: «Ontem não pude ir porque estive doente.» Ask him (informal) why he couldn't go (use «por que razão»).",
+      "explanation": "PPS of «poder» for tu is «pudeste» (eu «pude», ele «pôde»).",
+      "givenAnswer": "Ontem não pude ir porque estive doente.",
+      "answer": ["Por", "que", "razão", "não", "pudeste", "ir?"],
+      "distractors": ["podes", "pôde", "razões"],
+      "acceptedAnswers": ["Por que razão é que não pudeste ir?", "Porque é que não pudeste ir?"]
+    },
+    {
+      "id": "m7-verb-systematization-31",
+      "type": "question_for_answer",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Inês answers: «Vi o novo filme português no cinema.» Ask her (informal) which film she saw at the cinema.",
+      "explanation": "PPS of «ver» for tu is «viste» (eu «vi», ele «viu»).",
+      "givenAnswer": "Vi o novo filme português no cinema.",
+      "answer": ["Que", "filme", "viste", "no", "cinema?"],
+      "distractors": ["vês", "viu", "na"],
+      "acceptedAnswers": ["Que filme é que viste no cinema?"]
+    },
+    {
+      "id": "m7-verb-systematization-32",
+      "type": "question_for_answer",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Duarte answers: «Cheguei às oito horas da manhã.» Ask him (informal, use «é que») what time he arrived.",
+      "explanation": "«A que horas...?» asks for the time; PPS of regular «chegar» for tu: «chegaste».",
+      "givenAnswer": "Cheguei às oito horas da manhã.",
+      "answer": ["A", "que", "horas", "é", "que", "chegaste?"],
+      "distractors": ["chegas?", "chegou?", "quando"],
+      "acceptedAnswers": ["A que horas chegaste?"]
+    },
+    {
+      "id": "m7-verb-systematization-33",
+      "type": "find_error",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Ontem» indicates the past, so the PPS form «fui» is required, not present «vou».",
+      "sentence": ["Ontem", "eu", "vou", "ao", "cinema", "com", "amigos."],
+      "wrongIndex": 2,
+      "correction": "fui",
+      "options": ["fui", "foste", "vamos"]
+    },
+    {
+      "id": "m7-verb-systematization-34",
+      "type": "find_error",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Agora» (now) describes the present moment, so use present «estou», not PPS «estive».",
+      "sentence": ["Agora", "eu", "estive", "no", "escritório", "com", "a", "Ana."],
+      "wrongIndex": 2,
+      "correction": "estou",
+      "options": ["estou", "está", "estivemos"]
+    },
+    {
+      "id": "m7-verb-systematization-35",
+      "type": "find_error",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Na semana passada» requires the PPS form «fizemos», not the present «fazemos».",
+      "sentence": ["Na", "semana", "passada", "nós", "fazemos", "um", "bolo."],
+      "wrongIndex": 4,
+      "correction": "fizemos",
+      "options": ["fizemos", "fizeram", "faço"]
+    },
+    {
+      "id": "m7-verb-systematization-36",
+      "type": "find_error",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In European Portuguese, 3rd-person singular PPS of «poder» is «pôde» (with circumflex), distinguishing it from present «pode».",
+      "sentence": ["Ontem", "o", "Pedro", "não", "pode", "vir", "connosco."],
+      "wrongIndex": 4,
+      "correction": "pôde",
+      "options": ["pôde", "pude", "podem"]
+    },
+    {
+      "id": "m7-verb-systematization-37",
+      "type": "find_error",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In European Portuguese, 1st-person plural PPS of regular -ar verbs takes an acute accent: «falámos», distinguishing it from present «falamos».",
+      "sentence": ["Ontem", "nós", "falamos", "com", "o", "senhor", "diretor."],
+      "wrongIndex": 2,
+      "correction": "falámos",
+      "options": ["falámos", "falaram", "falei"]
+    },
+    {
+      "id": "m7-verb-systematization-38",
+      "type": "about_me",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself, contrasting your usual routine with yesterday.",
+      "explanation": "Use the present for what you usually do on Saturdays and the PPS for what you did last Saturday.",
+      "question": "O que costumas fazer aos sábados e o que fizeste no sábado passado?",
+      "sampleAnswer": "Normalmente fico em casa, mas no sábado passado fui passear.",
+      "hints": ["estudo", "trabalhei", "amigos", "cinema", "descansei", "praia"]
+    },
+    {
+      "id": "m7-verb-systematization-39",
+      "type": "about_me",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself, contrasting what you eat today with yesterday.",
+      "explanation": "Contrast your meals using present «como / almoço» and past «comi / almocei».",
+      "question": "O que almoças habitualmente e o que comeste ontem?",
+      "sampleAnswer": "Habitualmente almoço peixe, mas ontem comi uma sopa deliciosa.",
+      "hints": ["carne", "massa", "jantar", "restaurante", "bebi", "água"]
+    },
+    {
+      "id": "m7-verb-systematization-40",
+      "type": "about_me",
+      "topicId": "m7-verb-systematization",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself regarding places you visit.",
+      "explanation": "Use «costumo» + infinitive (or the present) for your usual holidays, and the PPS («estive», «fui») for last year.",
+      "question": "Onde costumas passar férias e onde estiveste no ano passado?",
+      "sampleAnswer": "Costumo ir para o Algarve, mas no ano passado estive nos Açores.",
+      "hints": ["Porto", "Madeira", "Lisboa", "praia", "viajei", "fui"]
+    }
+  ]
+}

@@ -1,0 +1,676 @@
+{
+  "id": "m6-pps-regular",
+  "moduleId": "m6",
+  "title": "Simple past — regular verbs",
+  "kind": "grammar",
+  "context": "# Simple Past (Pretérito Perfeito Simples) — Regular Verbs\n\nThe **Pretérito Perfeito Simples (PPS)** is the most common past tense in Portuguese. It is used to describe completed actions that took place at a specific point in the past.\n\n### Regular Verb Endings\nFor regular verbs, remove the infinitive ending (**-ar**, **-er**, **-ir**) and add the PPS endings:\n\n| Pronoun | -ar (*falar*) | -er (*comer*) | -ir (*partir*) |\n|---|---|---|---|\n| **eu** | fale**i** | com**i** | part**i** |\n| **tu** | fal**aste** | com**este** | part**iste** |\n| **ele/ela/você** | fal**ou** | com**eu** | part**iu** |\n| **nós** | fal**ámos** | com**emos** | part**imos** |\n| **eles/elas/vocês** | fal**aram** | com**eram** | part**iram** |\n\n*Note: In European Portuguese, the **nós** form of **-ar** verbs takes an acute accent (**falámos**, **comprámos**) to distinguish it from the present tense (*falamos*).*\n\n### Common Past Time Expressions\n- **ontem** — yesterday\n- **anteontem** — the day before yesterday\n- **ontem à noite** — last night\n- **na semana passada** — last week\n- **no mês passado** / **no ano passado** — last month / last year\n- **há dois dias** / **há um ano** — two days ago / a year ago\n\n**Watch out!**\n1. Third-person singular endings are distinct: **-ou** for *-ar* (*Ele falou*), **-eu** for *-er* (*Ele comeu*), and **-iu** for *-ir* (*Ele partiu*).\n2. Third-person plural endings end in **-am** (*falaram*, *comeram*, *partiram*).",
+  "keyItems": [
+    {
+      "target": "falar (falei, falaste, falou, falámos, falaram)",
+      "support": "to speak (PPS)",
+      "note": "regular -ar verb"
+    },
+    {
+      "target": "comer (comi, comeste, comeu, comemos, comeram)",
+      "support": "to eat (PPS)",
+      "note": "regular -er verb"
+    },
+    {
+      "target": "partir (parti, partiste, partiu, partimos, partiram)",
+      "support": "to leave / depart (PPS)",
+      "note": "regular -ir verb"
+    },
+    {
+      "target": "comprar",
+      "support": "to buy",
+      "note": "comprei, compraste, comprou"
+    },
+    {
+      "target": "trabalhar",
+      "support": "to work",
+      "note": "trabalhei, trabalhaste, trabalhou"
+    },
+    {
+      "target": "visitar",
+      "support": "to visit",
+      "note": "visitei, visitaste, visitou"
+    },
+    {
+      "target": "abrir",
+      "support": "to open",
+      "note": "abri, abriste, abriu"
+    },
+    {
+      "target": "decidir",
+      "support": "to decide",
+      "note": "decidi, decidiste, decidiu"
+    },
+    {
+      "target": "aprender",
+      "support": "to learn",
+      "note": "aprendi, aprendeste, aprendeu"
+    },
+    {
+      "target": "ontem",
+      "support": "yesterday"
+    },
+    {
+      "target": "anteontem",
+      "support": "the day before yesterday"
+    },
+    {
+      "target": "ontem à noite",
+      "support": "last night / yesterday evening"
+    },
+    {
+      "target": "na semana passada",
+      "support": "last week"
+    },
+    {
+      "target": "no mês passado",
+      "support": "last month"
+    },
+    {
+      "target": "no ano passado",
+      "support": "last year"
+    },
+    {
+      "target": "há dois dias",
+      "support": "two days ago"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m6-pps-regular-01",
+      "type": "translate_word",
+      "topicId": "m6-pps-regular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Comprei» is the 1st-person PPS form of the regular -ar verb «comprar»: «eu comprei» (I bought).",
+      "direction": "toTarget",
+      "sentence": "Yesterday I **bought** a new book in Lisbon.",
+      "word": "bought",
+      "answer": "comprei",
+      "options": ["comprei", "compras", "comprou", "compramos"]
+    },
+    {
+      "id": "m6-pps-regular-02",
+      "type": "translate_word",
+      "topicId": "m6-pps-regular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Ontem» means yesterday and is the most common past time marker.",
+      "direction": "toTarget",
+      "sentence": "Pedro arrived in Porto **yesterday**.",
+      "word": "yesterday",
+      "answer": "ontem",
+      "options": ["ontem", "hoje", "amanhã", "sempre"]
+    },
+    {
+      "id": "m6-pps-regular-03",
+      "type": "translate_word",
+      "topicId": "m6-pps-regular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Comeu» is the 3rd-person PPS form of the regular -er verb «comer»: «ele comeu» (he ate).",
+      "direction": "toTarget",
+      "sentence": "Tiago **ate** grilled fish for lunch.",
+      "word": "ate",
+      "answer": "comeu",
+      "options": ["comeu", "comi", "come", "comeram"]
+    },
+    {
+      "id": "m6-pps-regular-04",
+      "type": "translate_word",
+      "topicId": "m6-pps-regular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Abri» is the 1st-person PPS form of the regular -ir verb «abrir»: «eu abri» (I opened).",
+      "direction": "toTarget",
+      "sentence": "I **opened** the window in the morning.",
+      "word": "opened",
+      "answer": "abri",
+      "options": ["abri", "abro", "abriu", "abriste"]
+    },
+    {
+      "id": "m6-pps-regular-05",
+      "type": "translate_word",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Escreveu» is the 3rd-person PPS form of the regular -er verb «escrever»: «ela escreveu» (she wrote).",
+      "direction": "toTarget",
+      "sentence": "Maria **wrote** a long letter to her grandmother.",
+      "word": "wrote",
+      "answer": "escreveu",
+      "options": ["escreveu", "escrevi", "escreve", "escreveram"]
+    },
+    {
+      "id": "m6-pps-regular-06",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-regular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Yesterday I spoke with Pedro and bought bread.\"",
+      "explanation": "1st-person PPS for -ar verbs ends in -ei: «falei» and «comprei».",
+      "template": "Ontem eu ___ com o Pedro e ___ pão.",
+      "gaps": [
+        {
+          "answer": "falei"
+        },
+        {
+          "answer": "comprei"
+        }
+      ],
+      "wordBank": ["falei", "comprei", "falou", "comprou", "falo"]
+    },
+    {
+      "id": "m6-pps-regular-07",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Last week Tiago worked a lot and wrote a report.\"",
+      "explanation": "3rd-person singular PPS: -ar verbs end in -ou («trabalhou»), -er verbs in -eu («escreveu»).",
+      "template": "Na semana passada o Tiago ___ muito e ___ um relatório.",
+      "gaps": [
+        {
+          "answer": "trabalhou"
+        },
+        {
+          "answer": "escreveu"
+        }
+      ],
+      "wordBank": ["trabalhou", "escreveu", "trabalhei", "escrevi", "trabalha"]
+    },
+    {
+      "id": "m6-pps-regular-08",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Did you drink water and eat the soup yesterday?\" (informal)",
+      "explanation": "2nd-person (tu) PPS: -er verbs end in -este: «bebeste» and «comeste».",
+      "template": "Tu ___ água e ___ a sopa ontem?",
+      "gaps": [
+        {
+          "answer": "bebeste"
+        },
+        {
+          "answer": "comeste"
+        }
+      ],
+      "wordBank": ["bebeste", "comeste", "bebeu", "comeu", "bebi"]
+    },
+    {
+      "id": "m6-pps-regular-09",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The train left at eight and the museum opened at nine.\"",
+      "explanation": "3rd-person PPS of regular -ir verbs ends in -iu: «partiu» and «abriu».",
+      "template": "O comboio ___ às oito e o museu ___ às nove.",
+      "gaps": [
+        {
+          "answer": "partiu"
+        },
+        {
+          "answer": "abriu"
+        }
+      ],
+      "wordBank": ["partiu", "abriu", "parti", "abri", "partem"]
+    },
+    {
+      "id": "m6-pps-regular-10",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Yesterday evening we dined late and drank tea.\"",
+      "explanation": "Past time marker «ontem à noite»; «nós jantámos» (-ar) and «bebemos» (-er).",
+      "template": "Ontem à noite nós ___ tarde e ___ chá.",
+      "gaps": [
+        {
+          "answer": "jantámos"
+        },
+        {
+          "answer": "bebemos"
+        }
+      ],
+      "wordBank": ["jantámos", "bebemos", "jantei", "bebi", "jantam"]
+    },
+    {
+      "id": "m6-pps-regular-11",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Last year the students learned Portuguese and wrote poems.\"",
+      "explanation": "3rd-person plural PPS of -er verbs ends in -eram: «aprenderam» and «escreveram».",
+      "template": "No ano passado os alunos ___ português e ___ poemas.",
+      "gaps": [
+        {
+          "answer": "aprenderam"
+        },
+        {
+          "answer": "escreveram"
+        }
+      ],
+      "wordBank": ["aprenderam", "escreveram", "aprendemos", "aprendeu", "escreveu"]
+    },
+    {
+      "id": "m6-pps-regular-12",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Two days ago I decided to visit the castle and bought a ticket.\"",
+      "explanation": "«Há dois dias» (two days ago); 1st-person PPS: «decidi» (-ir) and «comprei» (-ar).",
+      "template": "___ dois dias eu ___ visitar o castelo e ___ um bilhete.",
+      "gaps": [
+        {
+          "answer": "Há"
+        },
+        {
+          "answer": "decidi"
+        },
+        {
+          "answer": "comprei"
+        }
+      ],
+      "wordBank": ["Há", "decidi", "comprei", "A", "decidiu", "comprou"]
+    },
+    {
+      "id": "m6-pps-regular-13",
+      "type": "build_phrase",
+      "topicId": "m6-pps-regular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State a past action: \"Yesterday I spoke with the teacher.\"",
+      "explanation": "The «eu» form of -ar verbs in the PPS ends in -ei: «falar» → «falei».",
+      "answer": ["Ontem", "falei", "com", "o", "professor."],
+      "distractors": ["falou", "a", "no"],
+      "acceptedAnswers": ["Eu ontem falei com o professor."]
+    },
+    {
+      "id": "m6-pps-regular-14",
+      "type": "build_phrase",
+      "topicId": "m6-pps-regular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State eating in the past: \"Tiago ate a warm soup.\"",
+      "explanation": "The 3rd-person singular PPS of -er verbs ends in -eu: «comer» → «comeu».",
+      "answer": ["O", "Tiago", "comeu", "uma", "sopa", "quente."],
+      "distractors": ["comi", "um", "frio"],
+      "acceptedAnswers": ["Tiago comeu uma sopa quente."]
+    },
+    {
+      "id": "m6-pps-regular-15",
+      "type": "build_phrase",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State a departure: \"The train to Porto left at ten o'clock.\"",
+      "explanation": "The 3rd-person singular PPS of -ir verbs ends in -iu: «partir» → «partiu».",
+      "answer": ["O", "comboio", "para", "o", "Porto", "partiu", "às", "dez", "horas."],
+      "distractors": ["parti", "no", "ao"],
+      "acceptedAnswers": ["O comboio para o Porto partiu às dez."]
+    },
+    {
+      "id": "m6-pps-regular-16",
+      "type": "build_phrase",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State past residence: \"Last year we lived in an apartment in Braga.\"",
+      "explanation": "The «nós» form of -er verbs in the PPS ends in -emos: «vivemos» (same as the present; «no ano passado» shows it is past).",
+      "answer": ["No", "ano", "passado", "vivemos", "num", "apartamento", "em", "Braga."],
+      "distractors": ["Na", "viveram", "da"],
+      "acceptedAnswers": ["Nós no ano passado vivemos num apartamento em Braga."]
+    },
+    {
+      "id": "m6-pps-regular-17",
+      "type": "build_phrase",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State buying something: \"Ana bought a warm jacket at the shopping centre.\"",
+      "explanation": "The 3rd-person singular PPS of -ar verbs ends in -ou: «comprou». In Portugal a mall is «o centro comercial».",
+      "answer": ["A", "Ana", "comprou", "um", "casaco", "quente", "no", "centro", "comercial."],
+      "distractors": ["comprei", "uma", "na"],
+      "acceptedAnswers": ["Ana comprou um casaco quente no centro comercial."]
+    },
+    {
+      "id": "m6-pps-regular-18",
+      "type": "build_phrase",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe a past visit: \"Last week they visited the castle and the museum.\"",
+      "explanation": "The 3rd-person plural PPS of -ar verbs ends in -aram: «visitar» → «visitaram».",
+      "answer": [
+        "Na",
+        "semana",
+        "passada",
+        "eles",
+        "visitaram",
+        "o",
+        "castelo",
+        "e",
+        "o",
+        "museu."
+      ],
+      "distractors": ["No", "visita", "a"],
+      "acceptedAnswers": ["Na semana passada visitaram o castelo e o museu."]
+    },
+    {
+      "id": "m6-pps-regular-19",
+      "type": "build_phrase",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State working late: \"Yesterday I worked until eight at the office.\"",
+      "explanation": "The «eu» form of -ar verbs ends in -ei: «trabalhei». «Até às oito» = until eight.",
+      "answer": ["Ontem", "trabalhei", "até", "às", "oito", "no", "escritório."],
+      "distractors": ["trabalhou", "nas", "ao"],
+      "acceptedAnswers": ["Eu ontem trabalhei até às oito no escritório."]
+    },
+    {
+      "id": "m6-pps-regular-20",
+      "type": "build_phrase",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State learning something: \"The students learned many new words in class yesterday.\"",
+      "explanation": "The 3rd-person plural PPS of -er verbs ends in -eram: «aprender» → «aprenderam».",
+      "answer": [
+        "Ontem",
+        "os",
+        "alunos",
+        "aprenderam",
+        "muitas",
+        "palavras",
+        "novas",
+        "na",
+        "aula."
+      ],
+      "distractors": ["As", "aprendeu", "no"],
+      "acceptedAnswers": ["Os alunos aprenderam muitas palavras novas na aula ontem."]
+    },
+    {
+      "id": "m6-pps-regular-21",
+      "type": "build_phrase",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe a past decision: \"Two days ago Rita decided to change apartments.\"",
+      "explanation": "«Há dois dias» = two days ago; the 3rd-person singular PPS of -ir verbs ends in -iu: «decidiu».",
+      "answer": ["Há", "dois", "dias", "a", "Rita", "decidiu", "mudar", "de", "apartamento."],
+      "distractors": ["O", "decidi", "do"],
+      "acceptedAnswers": ["Há dois dias Rita decidiu mudar de apartamento."]
+    },
+    {
+      "id": "m6-pps-regular-22",
+      "type": "build_phrase",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State writing a message: \"Last night I wrote an email to reception.\"",
+      "explanation": "The «eu» form of -er verbs in the PPS ends in -i: «escrever» → «escrevi».",
+      "answer": ["Ontem", "à", "noite", "escrevi", "um", "email", "à", "receção."],
+      "distractors": ["escreveu", "ao", "uma"],
+      "acceptedAnswers": ["Ontem à noite eu escrevi um email à receção."]
+    },
+    {
+      "id": "m6-pps-regular-23",
+      "type": "build_phrase",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State running in the morning: \"Before breakfast Pedro ran five kilometres.\"",
+      "explanation": "The 3rd-person singular PPS of -er verbs ends in -eu: «correr» → «correu».",
+      "answer": ["Antes", "do", "pequeno-almoço", "o", "Pedro", "correu", "cinco", "quilómetros."],
+      "distractors": ["corri", "da", "para"],
+      "acceptedAnswers": ["Antes do pequeno-almoço Pedro correu cinco quilómetros."]
+    },
+    {
+      "id": "m6-pps-regular-24",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Pedro answers: «Comprei um casaco novo.» Ask him (informal) what he bought.",
+      "explanation": "«O que compraste?» uses the 2nd-person (tu) PPS form of comprar.",
+      "givenAnswer": "Comprei um casaco novo.",
+      "answer": ["O", "que", "compraste?"],
+      "distractors": ["Quem", "comprou?", "onde"],
+      "acceptedAnswers": ["O que é que compraste?"]
+    },
+    {
+      "id": "m6-pps-regular-25",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Sofia answers: «Comi peixe com batatas.» Ask her (informal) what she ate.",
+      "explanation": "«O que comeste?» uses the tu form of the PPS of -er verbs, ending in -este.",
+      "givenAnswer": "Comi peixe com batatas.",
+      "answer": ["O", "que", "comeste?"],
+      "distractors": ["Como", "comeu?", "quando"],
+      "acceptedAnswers": ["O que é que comeste?"]
+    },
+    {
+      "id": "m6-pps-regular-26",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Tiago answers: «Ontem à noite.» Ask him (informal) when he arrived in Lisbon.",
+      "explanation": "«Quando…?» asks when; the tu PPS of -ar verbs ends in -aste: «chegaste». Arriving in a city is «chegar a».",
+      "givenAnswer": "Ontem à noite.",
+      "answer": ["Quando", "chegaste", "a", "Lisboa?"],
+      "distractors": ["Onde", "chegou", "em"],
+      "acceptedAnswers": ["Quando é que chegaste a Lisboa?"]
+    },
+    {
+      "id": "m6-pps-regular-27",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ana answers: «Abri a loja às nove horas.» Ask her (informal) what time she opened the shop.",
+      "explanation": "«A que horas…?» asks the clock time; the tu PPS of -ir verbs ends in -iste: «abriste».",
+      "givenAnswer": "Abri a loja às nove horas.",
+      "answer": ["A", "que", "horas", "abriste", "a", "loja?"],
+      "distractors": ["De", "quando", "abriu", "o"],
+      "acceptedAnswers": ["A que horas é que abriste a loja?"]
+    },
+    {
+      "id": "m6-pps-regular-28",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Trabalhei oito horas ontem.» Ask him (informal) how many hours he worked yesterday.",
+      "explanation": "«Hora» is feminine, so «Quantas horas…?»; the tu PPS of -ar verbs ends in -aste: «trabalhaste».",
+      "givenAnswer": "Trabalhei oito horas ontem.",
+      "answer": ["Quantas", "horas", "trabalhaste", "ontem?"],
+      "distractors": ["Quantos", "dias", "trabalhou"],
+      "acceptedAnswers": [
+        "Quantas horas é que trabalhaste ontem?",
+        "Ontem, quantas horas trabalhaste?"
+      ]
+    },
+    {
+      "id": "m6-pps-regular-29",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friends answer: «Sim, visitámos o museu de arte ontem.» Ask them (vocês) whether they visited the museum yesterday.",
+      "explanation": "«Vocês» takes the 3rd-person plural PPS, ending in -aram: «visitaram».",
+      "givenAnswer": "Sim, visitámos o museu de arte ontem.",
+      "answer": ["Vocês", "visitaram", "o", "museu", "ontem?"],
+      "distractors": ["Eles", "visita", "a"],
+      "acceptedAnswers": [
+        "Visitaram o museu ontem?",
+        "Vocês visitaram o museu de arte ontem?",
+        "Visitaram o museu de arte ontem?"
+      ]
+    },
+    {
+      "id": "m6-pps-regular-30",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Manuel answers: «Decidi viajar para os Açores.» Ask him (informal) what he decided for the holidays.",
+      "explanation": "The tu PPS of -ir verbs ends in -iste: «decidiste».",
+      "givenAnswer": "Decidi viajar para os Açores.",
+      "answer": ["O", "que", "decidiste", "para", "as", "férias?"],
+      "distractors": ["Quem", "decidiu", "no"],
+      "acceptedAnswers": [
+        "O que é que decidiste para as férias?",
+        "O que decidiste fazer nas férias?",
+        "O que é que decidiste fazer nas férias?"
+      ]
+    },
+    {
+      "id": "m6-pps-regular-31",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your flatmate answers: «Sim, limpei a cozinha e a sala.» Ask him (informal) whether he cleaned the house today.",
+      "explanation": "A yes/no question keeps statement order; the tu PPS of -ar verbs ends in -aste: «limpaste».",
+      "givenAnswer": "Sim, limpei a cozinha e a sala.",
+      "answer": ["Limpaste", "a", "casa", "hoje?"],
+      "distractors": ["Limpou", "o", "quarto"],
+      "acceptedAnswers": ["Tu limpaste a casa hoje?"]
+    },
+    {
+      "id": "m6-pps-regular-32",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Rita answers: «Bebi dois litros de água durante a corrida.» Ask her (informal) how much water she drank during the race.",
+      "explanation": "«Água» is feminine, so «Quanta água…?»; the tu PPS of -er verbs ends in -este: «bebeste».",
+      "givenAnswer": "Bebi dois litros de água durante a corrida.",
+      "answer": ["Quanta", "água", "bebeste", "na", "corrida?"],
+      "distractors": ["Quanto", "sumo", "bebeu", "no"],
+      "acceptedAnswers": [
+        "Quanta água é que bebeste na corrida?",
+        "Quanta água bebeste durante a corrida?",
+        "Quanta água é que bebeste durante a corrida?"
+      ]
+    },
+    {
+      "id": "m6-pps-regular-33",
+      "type": "find_error",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 1st-person PPS of regular -ar verbs ends in -ei: «comprei», not present «compro».",
+      "sentence": ["Ontem", "eu", "compro", "um", "livro", "na", "baixa."],
+      "wrongIndex": 2,
+      "correction": "comprei",
+      "options": ["comprei", "comprou", "compra"]
+    },
+    {
+      "id": "m6-pps-regular-34",
+      "type": "find_error",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 3rd-person singular PPS of regular -er verbs ends in -eu: «comeu», not «comou».",
+      "sentence": ["O", "Pedro", "comou", "uma", "maçã", "ao", "lanche."],
+      "wrongIndex": 2,
+      "correction": "comeu",
+      "options": ["comeu", "comi", "come"]
+    },
+    {
+      "id": "m6-pps-regular-35",
+      "type": "find_error",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 2nd-person (tu) PPS of regular -ar verbs ends in -aste: «falaste», not «falou».",
+      "sentence": ["Tu", "falou", "com", "o", "médico", "ontem?"],
+      "wrongIndex": 1,
+      "correction": "falaste",
+      "options": ["falaste", "falei", "falas"]
+    },
+    {
+      "id": "m6-pps-regular-36",
+      "type": "find_error",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 3rd-person PPS of regular -ir verbs ends in -iu: «partiu», not «parti».",
+      "sentence": ["Ontem", "o", "comboio", "parti", "às", "oito."],
+      "wrongIndex": 3,
+      "correction": "partiu",
+      "options": ["partiu", "parte", "partiram"]
+    },
+    {
+      "id": "m6-pps-regular-37",
+      "type": "find_error",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The past time expression for last week uses the feminine adjective «passada»: «na semana passada».",
+      "sentence": ["Na", "semana", "passado", "trabalhei", "todos", "os", "dias."],
+      "wrongIndex": 2,
+      "correction": "passada",
+      "options": ["passada", "passadas", "passados"]
+    },
+    {
+      "id": "m6-pps-regular-38",
+      "type": "about_me",
+      "topicId": "m6-pps-regular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State what you bought yesterday using «Ontem comprei …».",
+      "question": "O que compraste ontem?",
+      "sampleAnswer": "Ontem comprei pão e café no supermercado.",
+      "hints": ["fruta", "leite", "livro", "uma", "revista"]
+    },
+    {
+      "id": "m6-pps-regular-39",
+      "type": "about_me",
+      "topicId": "m6-pps-regular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State what you ate for dinner yesterday using «Comi …» (eu form of «comer» in the PPS).",
+      "question": "O que comeste ao jantar ontem à noite?",
+      "sampleAnswer": "Comi peixe grelhado com legumes e arroz.",
+      "hints": ["sopa", "carne", "massa", "salada", "frango"]
+    },
+    {
+      "id": "m6-pps-regular-40",
+      "type": "about_me",
+      "topicId": "m6-pps-regular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State which city or monument you visited last year using «No ano passado visitei …».",
+      "question": "Que cidade ou monumento visitaste no ano passado?",
+      "sampleAnswer": "No ano passado visitei o castelo de Sintra.",
+      "hints": ["Lisboa", "Porto", "Coimbra", "um", "museu", "palácio"]
+    }
+  ]
+}

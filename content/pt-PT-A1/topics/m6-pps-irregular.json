@@ -1,0 +1,657 @@
+{
+  "id": "m6-pps-irregular",
+  "moduleId": "m6",
+  "title": "Simple past — irregular verbs",
+  "kind": "grammar",
+  "context": "# Simple Past (Pretérito Perfeito Simples) — Irregular Verbs\n\nSeveral essential Portuguese verbs have irregular stems and endings in the **Pretérito Perfeito Simples (PPS)**.\n\n### Key Irregular PPS Paradigms\n- **ir** / **ser** (identical in PPS): *fui, foste, foi, fomos, foram*\n  - **Eu fui a Lisboa.** (I went) / **O filme foi ótimo.** (The movie was great)\n- **estar**: *estive, estiveste, esteve, estivemos, estiveram*\n  - **Estive em casa ontem.** — I was at home yesterday.\n- **ter**: *tive, tiveste, teve, tivemos, tiveram*\n  - **Tive muito trabalho na semana passada.** — I had a lot of work last week.\n- **fazer**: *fiz, fizeste, fez, fizemos, fizeram*\n  - **O que fizeste ontem?** — What did you do yesterday?\n- **ver**: *vi, viste, viu, vimos, viram*\n  - **Já viste o novo museu?** — Have you already seen the new museum?\n- **dar**: *dei, deste, deu, demos, deram*\n  - **Ela deu-me um presente.** — She gave me a gift.\n- **saber**: *soube, soubeste, soube, soubemos, souberam*\n- **poder**: *pude, pudeste, pôde, pudemos, puderam*\n\n### Life Experience and Recent Past\n- **já / ainda não / nunca + PPS**:\n  - **Já foste ao Porto?** — Have you ever been to Porto?\n  - **Ainda não vi esse monumento.** — I haven't seen that monument yet.\n  - **Nunca estive no Algarve.** — I have never been to the Algarve.\n- **acabar de + infinitivo** (to have just done something):\n  - **Acabei de chegar a casa.** — I have just arrived home.\n\n**Watch out!**\n1. **Ir** (to go) and **ser** (to be) have identical forms in the PPS: *Fui ao mercado* (I went) vs *Fui estudante* (I was).\n2. Remember that **não**, **nunca**, and **já** attract pronouns before the verb: *Nunca o vi*, *Já me deste a chave*.",
+  "keyItems": [
+    {
+      "target": "ir / ser (fui, foste, foi, fomos, foram)",
+      "support": "to go / to be (PPS)",
+      "note": "identical in PPS"
+    },
+    {
+      "target": "estar (estive, estiveste, esteve, estivemos, estiveram)",
+      "support": "to be (temporary / location, PPS)"
+    },
+    {
+      "target": "ter (tive, tiveste, teve, tivemos, tiveram)",
+      "support": "to have (PPS)"
+    },
+    {
+      "target": "fazer (fiz, fizeste, fez, fizemos, fizeram)",
+      "support": "to do / make (PPS)"
+    },
+    {
+      "target": "ver (vi, viste, viu, vimos, viram)",
+      "support": "to see (PPS)"
+    },
+    {
+      "target": "dar (dei, deste, deu, demos, deram)",
+      "support": "to give (PPS)"
+    },
+    {
+      "target": "saber (soube, soubeste, soube, soubemos, souberam)",
+      "support": "to know (PPS)"
+    },
+    {
+      "target": "poder (pude, pudeste, pôde, pudemos, puderam)",
+      "support": "to be able / can (PPS)"
+    },
+    {
+      "target": "já + PPS",
+      "support": "already / ever",
+      "note": "life-experience question/statement"
+    },
+    {
+      "target": "ainda não + PPS",
+      "support": "not yet",
+      "note": "life-experience statement"
+    },
+    {
+      "target": "nunca + PPS",
+      "support": "never",
+      "note": "life-experience statement"
+    },
+    {
+      "target": "acabar de + infinitivo",
+      "support": "to have just (done something)",
+      "note": "recent past construction"
+    },
+    {
+      "target": "ter tempo / ter febre",
+      "support": "to have time / to have fever"
+    },
+    {
+      "target": "fazer uma viagem",
+      "support": "to take a trip"
+    },
+    {
+      "target": "estar de férias",
+      "support": "to be on vacation"
+    },
+    {
+      "target": "dar os parabéns",
+      "support": "to congratulate"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m6-pps-irregular-01",
+      "type": "translate_word",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Fui» is the 1st-person PPS of «ir» (and «ser»): «eu fui» (I went / I was).",
+      "direction": "toTarget",
+      "sentence": "Yesterday I **went** to the supermarket in Lisbon.",
+      "word": "went",
+      "answer": "fui",
+      "options": ["fui", "foi", "foste", "vou"]
+    },
+    {
+      "id": "m6-pps-irregular-02",
+      "type": "translate_word",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Fiz» is the 1st-person PPS form of «fazer»: «eu fiz» (I did / I made).",
+      "direction": "toTarget",
+      "sentence": "Last night I **made** a delicious dinner for my friends.",
+      "word": "made",
+      "answer": "fiz",
+      "options": ["fiz", "fez", "faço", "fizeste"]
+    },
+    {
+      "id": "m6-pps-irregular-03",
+      "type": "translate_word",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Teve» is the 3rd-person PPS form of «ter»: «ele teve» (he had).",
+      "direction": "toTarget",
+      "sentence": "Pedro **had** a high fever yesterday.",
+      "word": "had",
+      "answer": "teve",
+      "options": ["teve", "tive", "tem", "tiveram"]
+    },
+    {
+      "id": "m6-pps-irregular-04",
+      "type": "translate_word",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Vi» is the 1st-person PPS form of «ver»: «eu vi» (I saw).",
+      "direction": "toTarget",
+      "sentence": "I **saw** Ana at the bus station yesterday morning.",
+      "word": "saw",
+      "answer": "vi",
+      "options": ["vi", "viu", "vejo", "viste"]
+    },
+    {
+      "id": "m6-pps-irregular-05",
+      "type": "translate_word",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Esteve» is the 3rd-person PPS form of «estar»: «ele esteve» (he was).",
+      "direction": "toTarget",
+      "sentence": "Maria **was** on holiday in the Algarve last month.",
+      "word": "was",
+      "answer": "esteve",
+      "options": ["esteve", "estive", "está", "estiveram"]
+    },
+    {
+      "id": "m6-pps-irregular-06",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Yesterday I went to the cinema and was with friends.\"",
+      "explanation": "«Ir» (eu fui) and «estar» (eu estive): «fui ao cinema e estive com amigos».",
+      "template": "Ontem eu ___ ao cinema e ___ com amigos.",
+      "gaps": [
+        {
+          "answer": "fui"
+        },
+        {
+          "answer": "estive"
+        }
+      ],
+      "wordBank": ["fui", "estive", "foi", "esteve", "vou"]
+    },
+    {
+      "id": "m6-pps-irregular-07",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Have you ever been to Porto? No, I have never been there.\" (informal)",
+      "explanation": "Life experience with «já» and «nunca» + PPS: «Já foste ao Porto? Não, nunca fui lá».",
+      "template": "___ foste ao Porto? Não, ___ fui lá.",
+      "gaps": [
+        {
+          "answer": "Já"
+        },
+        {
+          "answer": "nunca"
+        }
+      ],
+      "wordBank": ["Já", "nunca", "Ainda", "sempre", "ontem"]
+    },
+    {
+      "id": "m6-pps-irregular-08",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"What did you do yesterday? I did the shopping.\" (informal)",
+      "explanation": "PPS of «fazer»: 2nd person «fizeste» and 1st person «fiz».",
+      "template": "O que ___ tu ontem? Eu ___ as compras.",
+      "gaps": [
+        {
+          "answer": "fizeste"
+        },
+        {
+          "answer": "fiz"
+        }
+      ],
+      "wordBank": ["fizeste", "fiz", "fez", "fazes", "faço"]
+    },
+    {
+      "id": "m6-pps-irregular-09",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I have just arrived at the hotel and I gave them my passport.\"",
+      "explanation": "Recent past with «acabar de»: «acabei de chegar»; PPS of dar: «dei o passaporte».",
+      "template": "Eu ___ de chegar ao hotel e ___ o passaporte.",
+      "gaps": [
+        {
+          "answer": "acabei"
+        },
+        {
+          "answer": "dei"
+        }
+      ],
+      "wordBank": ["acabei", "dei", "acaba", "deu", "fui"]
+    },
+    {
+      "id": "m6-pps-irregular-10",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Did you see Pedro? Yes, we saw Pedro at the station.\"",
+      "explanation": "PPS of «ver»: 2nd person «viste» and 1st person plural «vimos».",
+      "template": "Tu ___ o Pedro? Sim, nós ___ o Pedro na estação.",
+      "gaps": [
+        {
+          "answer": "viste"
+        },
+        {
+          "answer": "vimos"
+        }
+      ],
+      "wordBank": ["viste", "vimos", "viu", "vi", "vemos"]
+    },
+    {
+      "id": "m6-pps-irregular-11",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I haven't seen that film yet, but Sofia has already seen it.\"",
+      "explanation": "«Ainda não» + PPS means 'not yet': «ainda não vi». «Já» + PPS means 'already': «a Sofia já o viu» (3rd person of ver).",
+      "template": "Eu ___ não vi esse filme, mas a Sofia já o ___.",
+      "gaps": [
+        {
+          "answer": "ainda"
+        },
+        {
+          "answer": "viu"
+        }
+      ],
+      "wordBank": ["ainda", "viu", "nunca", "vi", "vimos"]
+    },
+    {
+      "id": "m6-pps-irregular-12",
+      "type": "fill_gaps",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Last week we had time, but we couldn't travel.\"",
+      "explanation": "PPS with «nós»: «nós tivemos tempo» (ter) and «não pudemos viajar» (poder).",
+      "template": "Na semana passada nós ___ tempo, mas não ___ viajar.",
+      "gaps": [
+        {
+          "answer": "tivemos"
+        },
+        {
+          "answer": "pudemos"
+        }
+      ],
+      "wordBank": ["tivemos", "pudemos", "tiveram", "puderam", "temos"]
+    },
+    {
+      "id": "m6-pps-irregular-13",
+      "type": "build_phrase",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State an experience: \"I have already been to Sintra.\"",
+      "explanation": "Life experience with «já» and PPS of «ir»: «Já fui a Sintra».",
+      "answer": ["Já", "fui", "a", "Sintra."],
+      "distractors": ["foi", "em", "para"],
+      "acceptedAnswers": ["Eu já fui a Sintra.", "Já estive em Sintra.", "Eu já estive em Sintra."]
+    },
+    {
+      "id": "m6-pps-irregular-14",
+      "type": "build_phrase",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State negative experience: \"I have never been to the Azores.\"",
+      "explanation": "«Nunca estive» expresses that you have never been somewhere.",
+      "answer": ["Nunca", "estive", "nos", "Açores."],
+      "distractors": ["esteve", "nas", "fui"],
+      "acceptedAnswers": [
+        "Eu nunca estive nos Açores.",
+        "Nunca fui aos Açores.",
+        "Eu nunca fui aos Açores."
+      ]
+    },
+    {
+      "id": "m6-pps-irregular-15",
+      "type": "build_phrase",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe a past trip: \"The trip to Portugal was wonderful.\"",
+      "explanation": "PPS of «ser» with 3rd-person subject «a viagem»: «A viagem foi maravilhosa».",
+      "answer": ["A", "viagem", "a", "Portugal", "foi", "maravilhosa."],
+      "distractors": ["O", "fui", "muito"],
+      "acceptedAnswers": ["A viagem para Portugal foi maravilhosa."]
+    },
+    {
+      "id": "m6-pps-irregular-16",
+      "type": "build_phrase",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Express recent past: \"I have just written the report.\"",
+      "explanation": "Recent past: «acabar de» + infinitive, with «acabar» in the PPS: «Acabei de escrever o relatório».",
+      "answer": ["Acabei", "de", "escrever", "o", "relatório."],
+      "distractors": ["Acaba", "escreveu", "um"],
+      "acceptedAnswers": ["Eu acabei de escrever o relatório."]
+    },
+    {
+      "id": "m6-pps-irregular-17",
+      "type": "build_phrase",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State what someone gave: \"Ana gave Pedro a present.\"",
+      "explanation": "3rd-person PPS of «dar» is «deu»: «A Ana deu um presente ao Pedro».",
+      "answer": ["A", "Ana", "deu", "um", "presente", "ao", "Pedro."],
+      "distractors": ["dei", "uma", "à"],
+      "acceptedAnswers": ["Ana deu um presente ao Pedro."]
+    },
+    {
+      "id": "m6-pps-irregular-18",
+      "type": "build_phrase",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State lack of ability: \"Yesterday I couldn't work because I was ill.\"",
+      "explanation": "1st-person PPS of «poder» is «pude» and of «estar» is «estive»: «não pude trabalhar porque estive doente».",
+      "answer": ["Ontem", "não", "pude", "trabalhar", "porque", "estive", "doente."],
+      "distractors": ["pôde", "esteve", "fui"],
+      "acceptedAnswers": [
+        "Eu ontem não pude trabalhar porque estive doente.",
+        "Ontem eu não pude trabalhar porque estive doente.",
+        "Ontem não pude trabalhar porque estava doente."
+      ]
+    },
+    {
+      "id": "m6-pps-irregular-19",
+      "type": "build_phrase",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Explain past action: \"Tiago made a reservation last week.\"",
+      "explanation": "3rd-person PPS of «fazer» is «fez»: «O Tiago fez uma reserva».",
+      "answer": ["Na", "semana", "passada", "o", "Tiago", "fez", "uma", "reserva."],
+      "distractors": ["No", "fiz", "um"],
+      "acceptedAnswers": ["O Tiago fez uma reserva na semana passada."]
+    },
+    {
+      "id": "m6-pps-irregular-20",
+      "type": "build_phrase",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe seeing friends: \"Last night we saw our friends at the restaurant.\"",
+      "explanation": "1st-person plural PPS of «ver» is «vimos»: «Ontem à noite vimos os nossos amigos».",
+      "answer": ["Ontem", "à", "noite", "vimos", "os", "nossos", "amigos", "no", "restaurante."],
+      "distractors": ["viram", "as", "na"],
+      "acceptedAnswers": [
+        "Ontem à noite nós vimos os nossos amigos no restaurante.",
+        "Vimos os nossos amigos no restaurante ontem à noite."
+      ]
+    },
+    {
+      "id": "m6-pps-irregular-21",
+      "type": "build_phrase",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say nobody managed to answer: \"Nobody knew how to answer the difficult question.\"",
+      "explanation": "3rd-person PPS of «saber» is «soube»; «saber responder» = to manage to answer. «responder a» + «a pergunta» → «à pergunta».",
+      "answer": ["Ninguém", "soube", "responder", "à", "pergunta", "difícil."],
+      "distractors": ["souberam", "sabe", "da"]
+    },
+    {
+      "id": "m6-pps-irregular-22",
+      "type": "build_phrase",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State recent eating: \"We have just had lunch with the Portuguese teacher.\"",
+      "explanation": "Recent past: «acabar de» + infinitive. The «nós» PPS form is «acabámos» — written with an accent in European Portuguese.",
+      "answer": ["Acabámos", "de", "almoçar", "com", "o", "professor", "de", "português."],
+      "distractors": ["Acabaram", "a", "no"],
+      "acceptedAnswers": ["Nós acabámos de almoçar com o professor de português."]
+    },
+    {
+      "id": "m6-pps-irregular-23",
+      "type": "build_phrase",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State experience with not yet: \"I haven't visited the ancient castle in Sintra yet.\"",
+      "explanation": "«Ainda não» + PPS of visitar: «Ainda não visitei o castelo antigo em Sintra».",
+      "answer": ["Ainda", "não", "visitei", "o", "castelo", "antigo", "em", "Sintra."],
+      "distractors": ["Nunca", "visite", "no"],
+      "acceptedAnswers": ["Eu ainda não visitei o castelo antigo em Sintra."]
+    },
+    {
+      "id": "m6-pps-irregular-24",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Ontem fui ao cinema com o Pedro.» Ask him (informal) where he went yesterday.",
+      "explanation": "«Onde foste ontem?» uses the 2nd-person (tu) PPS of ir.",
+      "givenAnswer": "Ontem fui ao cinema com o Pedro.",
+      "answer": ["Onde", "foste", "ontem?"],
+      "distractors": ["Como", "foi", "hoje?"],
+      "acceptedAnswers": [
+        "Onde é que foste ontem?",
+        "Aonde foste ontem?",
+        "Aonde é que foste ontem?",
+        "Onde foste tu ontem?"
+      ]
+    },
+    {
+      "id": "m6-pps-irregular-25",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Maria answers: «Sim, já estive em Lisboa.» Ask her (informal) if she has ever been to Lisbon.",
+      "explanation": "Life-experience question: «Já estiveste em Lisboa?»",
+      "givenAnswer": "Sim, já estive em Lisboa.",
+      "answer": ["Já", "estiveste", "em", "Lisboa?"],
+      "distractors": ["Ainda", "esteve", "na"],
+      "acceptedAnswers": ["Tu já estiveste em Lisboa?", "Já alguma vez estiveste em Lisboa?"]
+    },
+    {
+      "id": "m6-pps-irregular-26",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Tiago answers: «Fiz um bolo de chocolate.» Ask him (informal) what he made.",
+      "explanation": "«O que fizeste?» uses «fizeste», the tu form of «fazer» in the PPS.",
+      "givenAnswer": "Fiz um bolo de chocolate.",
+      "answer": ["O", "que", "fizeste?"],
+      "distractors": ["Quem", "fez", "fizeram?"],
+      "acceptedAnswers": ["O que é que fizeste?", "O que fizeste tu?"]
+    },
+    {
+      "id": "m6-pps-irregular-27",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Tive uma reunião longa de manhã.» Ask him (informal) what he had in the morning.",
+      "explanation": "«O que tiveste de manhã?» uses «tiveste», the tu form of «ter» in the PPS.",
+      "givenAnswer": "Tive uma reunião longa de manhã.",
+      "answer": ["O", "que", "tiveste", "de", "manhã?"],
+      "distractors": ["Como", "teve", "da"],
+      "acceptedAnswers": ["O que é que tiveste de manhã?"]
+    },
+    {
+      "id": "m6-pps-irregular-28",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Sofia answers: «Vi o novo filme português ontem à noite.» Ask her (informal) which film she saw last night.",
+      "explanation": "«Que filme viste ontem à noite?» — «viste» is the tu form of «ver»; European Portuguese prefers «que» before a noun.",
+      "givenAnswer": "Vi o novo filme português ontem à noite.",
+      "answer": ["Que", "filme", "viste", "ontem", "à", "noite?"],
+      "distractors": ["Qual", "viu", "na"],
+      "acceptedAnswers": ["Que filme é que viste ontem à noite?"]
+    },
+    {
+      "id": "m6-pps-irregular-29",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The tourists answer: «Fomos a Sintra de comboio.» Ask them (vocês) how they got to Sintra.",
+      "explanation": "«Como foram para Sintra?» — «foram» is the vocês form of «ir» in the PPS.",
+      "givenAnswer": "Fomos a Sintra de comboio.",
+      "answer": ["Como", "foram", "para", "Sintra?"],
+      "distractors": ["Onde", "foi", "em"],
+      "acceptedAnswers": [
+        "Como é que foram para Sintra?",
+        "Como foram a Sintra?",
+        "Como é que foram a Sintra?",
+        "Como é que vocês foram para Sintra?",
+        "Como foram vocês para Sintra?"
+      ]
+    },
+    {
+      "id": "m6-pps-irregular-30",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ana answers: «Soube das notícias ontem na televisão.» Ask her (informal) when she found out about the news.",
+      "explanation": "«Quando soubeste das notícias?» — in the PPS «saber» means 'to find out'; «soubeste» is the tu form.",
+      "givenAnswer": "Soube das notícias ontem na televisão.",
+      "answer": ["Quando", "soubeste", "das", "notícias?"],
+      "distractors": ["Onde", "soube", "dos"],
+      "acceptedAnswers": ["Quando é que soubeste das notícias?"]
+    },
+    {
+      "id": "m6-pps-irregular-31",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «Não pude ir porque não tive tempo.» Ask him (informal) why he couldn't go yesterday.",
+      "explanation": "«Porque não pudeste ir ontem?» — «pudeste» is the tu form of «poder» in the PPS.",
+      "givenAnswer": "Não pude ir porque não tive tempo.",
+      "answer": ["Porque", "não", "pudeste", "ir", "ontem?"],
+      "distractors": ["Porquê", "pôde", "vai"],
+      "acceptedAnswers": [
+        "Porque é que não pudeste ir ontem?",
+        "Porque é que tu não pudeste ir ontem?"
+      ]
+    },
+    {
+      "id": "m6-pps-irregular-32",
+      "type": "question_for_answer",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Rita answers: «Dei-lhe um livro de poesia.» Ask her (informal) what she gave Pedro.",
+      "explanation": "«O que deste ao Pedro?» — «deste» is the tu form of «dar» in the PPS.",
+      "givenAnswer": "Dei-lhe um livro de poesia.",
+      "answer": ["O", "que", "deste", "ao", "Pedro?"],
+      "distractors": ["Quem", "deu", "à"],
+      "acceptedAnswers": ["O que é que deste ao Pedro?"]
+    },
+    {
+      "id": "m6-pps-irregular-33",
+      "type": "find_error",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 1st-person PPS of «fazer» is irregular: «eu fiz», not «eu fazi».",
+      "sentence": ["Ontem", "eu", "fazi", "o", "jantar", "em", "casa."],
+      "wrongIndex": 2,
+      "correction": "fiz",
+      "options": ["fiz", "fez", "faço"]
+    },
+    {
+      "id": "m6-pps-irregular-34",
+      "type": "find_error",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 3rd-person singular PPS of «ter» is «teve»: «Ele teve muito trabalho», not «teveu».",
+      "sentence": ["O", "Tiago", "teveu", "muito", "trabalho", "ontem."],
+      "wrongIndex": 2,
+      "correction": "teve",
+      "options": ["teve", "tive", "tiveram"]
+    },
+    {
+      "id": "m6-pps-irregular-35",
+      "type": "find_error",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The tu form of «ir» in the PPS is «foste»: «Tu foste ao cinema?». «Fostes» is the old «vós» form — a common mistake.",
+      "sentence": ["Tu", "fostes", "ao", "cinema", "no", "sábado?"],
+      "wrongIndex": 1,
+      "correction": "foste",
+      "options": ["foste", "foi", "fui"]
+    },
+    {
+      "id": "m6-pps-irregular-36",
+      "type": "find_error",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 1st-person PPS of «dar» is «dei»: «Ontem eu dei um livro», not «deu» (3rd person).",
+      "sentence": ["Ontem", "eu", "deu", "um", "livro", "ao", "meu", "irmão."],
+      "wrongIndex": 2,
+      "correction": "dei",
+      "options": ["dei", "dou", "deste"]
+    },
+    {
+      "id": "m6-pps-irregular-37",
+      "type": "find_error",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The 1st-person PPS of «poder» is «pude»: «Não pude ir», not «podi».",
+      "sentence": ["Ontem", "eu", "não", "podi", "ir", "ao", "escritório."],
+      "wrongIndex": 3,
+      "correction": "pude",
+      "options": ["pude", "pudeste", "posso"]
+    },
+    {
+      "id": "m6-pps-irregular-38",
+      "type": "about_me",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State whether you have already been to Portugal using «Já fui a …» or «Ainda não fui a …».",
+      "question": "Já foste a Portugal?",
+      "sampleAnswer": "Sim, já fui a Lisboa e adorei.",
+      "hints": ["Porto", "Algarve", "ainda", "não", "nunca"]
+    },
+    {
+      "id": "m6-pps-irregular-39",
+      "type": "about_me",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State what you did yesterday evening using irregular PPS verbs like «fiz», «estive», «vi».",
+      "question": "O que fizeste ontem à noite?",
+      "sampleAnswer": "Ontem à noite vi televisão e descansei.",
+      "hints": ["fiz", "jantar", "estive", "com", "amigos"]
+    },
+    {
+      "id": "m6-pps-irregular-40",
+      "type": "about_me",
+      "topicId": "m6-pps-irregular",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State something you have just done using «Acabei de + infinitivo».",
+      "question": "O que acabaste de fazer agora mesmo?",
+      "sampleAnswer": "Acabei de beber um café quente.",
+      "hints": ["chegar", "casa", "comer", "trabalhar", "estudar"]
+    }
+  ]
+}

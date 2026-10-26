@@ -1,0 +1,668 @@
+{
+  "id": "m5-comparison-pronouns",
+  "moduleId": "m5",
+  "title": "Equal comparisons and object pronouns",
+  "kind": "grammar",
+  "context": "# Equal Comparisons, Indirect Pronouns and Indefinites\n\nIn this topic, you will learn to make equal comparisons, use indirect object pronouns, and express indefinite quantities in European Portuguese.\n\n### Equal Comparisons\n- **tão … como** (+ adjective/adverb):\n  - **O Pedro é tão alto como o Tiago.** — Pedro is as tall as Tiago.\n  - **Ela fala tão depressa como o professor.** — She speaks as fast as the teacher.\n- **tanto / tanta / tantos / tantas … como** (+ noun):\n  - **Tenho tanto trabalho como tu.** — I have as much work as you.\n  - **Eles têm tantos livros como nós.** — They have as many books as we do.\n- **verbo + tanto como**:\n  - **O João dorme tanto como a irmã.** — João sleeps as much as his sister.\n\n### Indirect Object Pronouns\nIndirect pronouns replace the recipient (*a quem?* / to whom): **me** (to me), **te** (to you, informal), **lhe** (to him/her/you formal), **nos** (to us), **vos** (to you, plural), **lhes** (to them / to you, plural):\n- **O médico dá-me a receita.** — The doctor gives me the prescription.\n- **Eu dou-lhe o dinheiro.** — I give him/her the money.\n- Placement: After the verb with a hyphen in positive sentences (*Digo-te a verdade*), but before the verb after negation and question words (*Não lhe digo nada*, *O que me dás?*).\n\n### Indefinite Pronouns\n- **alguém** (someone) vs **ninguém** (nobody): *Está alguém aqui? / Não vejo ninguém.*\n- **tudo** (everything) vs **nada** (nothing): *Ele sabe tudo. / Não quero nada.*\n- **algum/alguma** (some) vs **nenhum/nenhuma** (none / no): *Não tenho nenhum problema.*\n\n**Watch out!**\n1. **Tão** modifies adjectives and adverbs; **tanto/a/os/as** agrees in gender and number with nouns.\n2. In European Portuguese, negation requires the pronoun before the verb: **Não me dás**, never *Não dás-me*. The same with **ninguém**: **Ninguém me telefona.**\n3. Double negation is normal: **Não vejo ninguém**, **Não quero nada**.",
+  "keyItems": [
+    {
+      "target": "tão … como",
+      "support": "as … as (+ adjective/adverb)"
+    },
+    {
+      "target": "tanto … como",
+      "support": "as much … as (+ noun / verb)"
+    },
+    {
+      "target": "tanta … como / tantos … como / tantas … como",
+      "support": "as much/many … as",
+      "note": "agrees with noun"
+    },
+    {
+      "target": "me",
+      "support": "to me",
+      "note": "indirect object pronoun"
+    },
+    {
+      "target": "te",
+      "support": "to you (informal)",
+      "note": "indirect object pronoun"
+    },
+    {
+      "target": "lhe",
+      "support": "to him / to her / to you (formal)",
+      "note": "indirect object pronoun"
+    },
+    {
+      "target": "nos",
+      "support": "to us",
+      "note": "indirect object pronoun"
+    },
+    {
+      "target": "vos",
+      "support": "to you (plural)",
+      "note": "indirect object pronoun"
+    },
+    {
+      "target": "lhes",
+      "support": "to them / to you (plural, formal)",
+      "note": "indirect object pronoun"
+    },
+    {
+      "target": "alguém",
+      "support": "someone / somebody / anyone"
+    },
+    {
+      "target": "ninguém",
+      "support": "nobody / no one"
+    },
+    {
+      "target": "tudo",
+      "support": "everything / all"
+    },
+    {
+      "target": "nada",
+      "support": "nothing / not anything"
+    },
+    {
+      "target": "algum / alguma",
+      "support": "some / any",
+      "note": "agrees with noun"
+    },
+    {
+      "target": "nenhum / nenhuma",
+      "support": "no / none / not any",
+      "note": "agrees with noun"
+    },
+    {
+      "target": "dar a alguém",
+      "support": "to give to someone"
+    },
+    {
+      "target": "pedir a alguém",
+      "support": "to ask someone"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m5-comparison-pronouns-01",
+      "type": "translate_word",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Tão … como» expresses equality with adjectives: «tão alto como» (as tall as).",
+      "direction": "toTarget",
+      "sentence": "Pedro is **as** tall as Tiago.",
+      "word": "as",
+      "answer": "tão",
+      "options": ["tão", "tanto", "mais", "menos"]
+    },
+    {
+      "id": "m5-comparison-pronouns-02",
+      "type": "translate_word",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Tudo» means everything or all as an invariable pronoun.",
+      "direction": "toTarget",
+      "sentence": "Rita knows **everything** about the project.",
+      "word": "everything",
+      "answer": "tudo",
+      "options": ["tudo", "nada", "todos", "alguém"]
+    },
+    {
+      "id": "m5-comparison-pronouns-03",
+      "type": "translate_word",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Nada» means nothing or not anything in Portuguese.",
+      "direction": "toTarget",
+      "sentence": "I want **nothing** to drink right now.",
+      "word": "nothing",
+      "answer": "nada",
+      "options": ["nada", "tudo", "ninguém", "algum"]
+    },
+    {
+      "id": "m5-comparison-pronouns-04",
+      "type": "translate_word",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Ninguém» means nobody or no one.",
+      "direction": "toTarget",
+      "sentence": "There is **nobody** in the classroom today.",
+      "word": "nobody",
+      "answer": "ninguém",
+      "options": ["ninguém", "alguém", "nada", "nenhum"]
+    },
+    {
+      "id": "m5-comparison-pronouns-05",
+      "type": "translate_word",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Lhe» is the indirect object pronoun for to him, to her, or to you (formal).",
+      "direction": "toTarget",
+      "sentence": "I give **him** the house key.",
+      "word": "him",
+      "answer": "lhe",
+      "options": ["lhe", "me", "te", "nos"]
+    },
+    {
+      "id": "m5-comparison-pronouns-06",
+      "type": "fill_gaps",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The soup is as good as the salad.\"",
+      "explanation": "Equality with adjectives uses «tão … como»: «tão boa como».",
+      "template": "A sopa é ___ boa ___ a salada.",
+      "gaps": [
+        {
+          "answer": "tão"
+        },
+        {
+          "answer": "como"
+        }
+      ],
+      "wordBank": ["tão", "como", "tanto", "mais", "do que"]
+    },
+    {
+      "id": "m5-comparison-pronouns-07",
+      "type": "fill_gaps",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"I have as much work as you, Tiago.\" (informal)",
+      "explanation": "With masculine singular nouns like «trabalho», use «tanto … como».",
+      "template": "Eu tenho ___ trabalho ___ tu, Tiago.",
+      "gaps": [
+        {
+          "answer": "tanto"
+        },
+        {
+          "answer": "como"
+        }
+      ],
+      "wordBank": ["tanto", "como", "tanta", "tão", "de"]
+    },
+    {
+      "id": "m5-comparison-pronouns-08",
+      "type": "fill_gaps",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Ana gives me the book and I give you the pen.\" (informal)",
+      "explanation": "Indirect pronouns after verb in affirmative main clauses: «dá-me» and «dou-te».",
+      "template": "A Ana dá-___ o livro e eu dou-___ a caneta.",
+      "gaps": [
+        {
+          "answer": "me"
+        },
+        {
+          "answer": "te"
+        }
+      ],
+      "wordBank": ["me", "te", "lhe", "nos", "lhes"]
+    },
+    {
+      "id": "m5-comparison-pronouns-09",
+      "type": "fill_gaps",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The doctor gives me the prescription and tells him to rest.\"",
+      "explanation": "«me» = to me, «lhe» = to him. In affirmative sentences both attach to the verb with a hyphen: «dá-me», «diz-lhe».",
+      "template": "O médico dá-___ a receita e diz-___ para descansar.",
+      "gaps": [
+        {
+          "answer": "me"
+        },
+        {
+          "answer": "lhe"
+        }
+      ],
+      "wordBank": ["me", "lhe", "te", "lhes", "nos"]
+    },
+    {
+      "id": "m5-comparison-pronouns-10",
+      "type": "fill_gaps",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Is someone at home? No, nobody is here.\"",
+      "explanation": "«Alguém» means someone and «ninguém» means nobody.",
+      "template": "Está ___ em casa? Não, não está ___ aqui.",
+      "gaps": [
+        {
+          "answer": "alguém"
+        },
+        {
+          "answer": "ninguém"
+        }
+      ],
+      "wordBank": ["alguém", "ninguém", "tudo", "nada", "nenhum"]
+    },
+    {
+      "id": "m5-comparison-pronouns-11",
+      "type": "fill_gaps",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Have you got any doubt? I have no doubt.\" (informal)",
+      "explanation": "«Alguma» agrees with feminine «dúvida»; «nenhuma» is no / none.",
+      "template": "Tens ___ dúvida? Não tenho ___ dúvida.",
+      "gaps": [
+        {
+          "answer": "alguma"
+        },
+        {
+          "answer": "nenhuma"
+        }
+      ],
+      "wordBank": ["alguma", "nenhuma", "algum", "nenhum", "nada"]
+    },
+    {
+      "id": "m5-comparison-pronouns-12",
+      "type": "fill_gaps",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"They have as many apples as oranges, but no pears.\"",
+      "explanation": "Feminine plural noun takes «tantas … como»; «nenhuma» means no / not any.",
+      "template": "Eles têm ___ maçãs ___ laranjas, mas ___ pera.",
+      "gaps": [
+        {
+          "answer": "tantas"
+        },
+        {
+          "answer": "como"
+        },
+        {
+          "answer": "nenhuma"
+        }
+      ],
+      "wordBank": ["tantas", "como", "nenhuma", "tantos", "tão", "alguma"]
+    },
+    {
+      "id": "m5-comparison-pronouns-13",
+      "type": "build_phrase",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Make an equal comparison: \"Sofia is as smart as Inês.\"",
+      "explanation": "«Tão … como» compares adjectives equally: «A Sofia é tão inteligente como a Inês».",
+      "answer": ["A", "Sofia", "é", "tão", "inteligente", "como", "a", "Inês."],
+      "distractors": ["tanto", "mais", "do"],
+      "acceptedAnswers": ["Sofia é tão inteligente como Inês."]
+    },
+    {
+      "id": "m5-comparison-pronouns-14",
+      "type": "build_phrase",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State an indefinite fact: \"Nobody knows the answer.\"",
+      "explanation": "«Ninguém» is the subject: «Ninguém sabe a resposta».",
+      "answer": ["Ninguém", "sabe", "a", "resposta."],
+      "distractors": ["Alguém", "o", "sabem"],
+      "acceptedAnswers": ["Ninguém sabe a resposta certa."]
+    },
+    {
+      "id": "m5-comparison-pronouns-15",
+      "type": "build_phrase",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State quantity comparison: \"Pedro eats as much fruit as bread.\"",
+      "explanation": "Feminine noun «fruta» takes «tanta … como»: «tanta fruta como pão».",
+      "answer": ["O", "Pedro", "come", "tanta", "fruta", "como", "pão."],
+      "distractors": ["tanto", "tão", "da"],
+      "acceptedAnswers": ["Pedro come tanta fruta como pão."]
+    },
+    {
+      "id": "m5-comparison-pronouns-16",
+      "type": "build_phrase",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what someone gives you: \"My friend gives me a present.\" (informal)",
+      "explanation": "Clitic pronoun «me» attaches to the affirmative verb: «O meu amigo dá-me um presente».",
+      "answer": ["O", "meu", "amigo", "dá-me", "um", "presente."],
+      "distractors": ["dás-me", "uma", "te"],
+      "acceptedAnswers": ["O meu amigo dá-me uma prenda."]
+    },
+    {
+      "id": "m5-comparison-pronouns-17",
+      "type": "build_phrase",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what you tell someone: \"I tell him the truth about the trip.\"",
+      "explanation": "Indirect pronoun «lhe» means to him: «Digo-lhe a verdade sobre a viagem».",
+      "answer": ["Digo-lhe", "a", "verdade", "sobre", "a", "viagem."],
+      "distractors": ["Digo-te", "o", "da"],
+      "acceptedAnswers": ["Eu digo-lhe a verdade sobre a viagem."]
+    },
+    {
+      "id": "m5-comparison-pronouns-18",
+      "type": "build_phrase",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Compare actions: \"Tiago works as much as his brother every day.\"",
+      "explanation": "Verbs are compared with «tanto como»: «trabalha tanto como o irmão».",
+      "answer": ["O", "Tiago", "trabalha", "tanto", "como", "o", "irmão", "todos", "os", "dias."],
+      "distractors": ["tão", "do", "trabalham"],
+      "acceptedAnswers": ["Tiago trabalha tanto como o irmão todos os dias."]
+    },
+    {
+      "id": "m5-comparison-pronouns-19",
+      "type": "build_phrase",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State negative pronoun placement: \"He does not tell me anything about the meeting.\"",
+      "explanation": "Negation «não» pulls the clitic pronoun before the verb: «Não me diz nada».",
+      "answer": ["Ele", "não", "me", "diz", "nada", "sobre", "a", "reunião."],
+      "distractors": ["diz-me", "tudo", "ao"],
+      "acceptedAnswers": ["Não me diz nada sobre a reunião."]
+    },
+    {
+      "id": "m5-comparison-pronouns-20",
+      "type": "build_phrase",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what the doctor sends: \"The doctor sends us the medical results by email.\"",
+      "explanation": "Indirect pronoun for nós is «nos»: «O médico envia-nos os resultados por email».",
+      "answer": ["O", "médico", "envia-nos", "os", "resultados", "por", "email."],
+      "distractors": ["envia-lhes", "as", "para"],
+      "acceptedAnswers": [
+        "A médica envia-nos os resultados por email.",
+        "O médico envia-nos os resultados por e-mail."
+      ]
+    },
+    {
+      "id": "m5-comparison-pronouns-21",
+      "type": "build_phrase",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State having no problem: \"I do not have any problem with this schedule.\"",
+      "explanation": "Masculine noun «problema» takes «nenhum»: «Não tenho nenhum problema».",
+      "answer": ["Não", "tenho", "nenhum", "problema", "com", "este", "horário."],
+      "distractors": ["nenhuma", "algum", "esta"],
+      "acceptedAnswers": [
+        "Eu não tenho nenhum problema com este horário.",
+        "Não tenho problema nenhum com este horário."
+      ]
+    },
+    {
+      "id": "m5-comparison-pronouns-22",
+      "type": "build_phrase",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Compare plural nouns: \"We have as many books as magazines in the room.\"",
+      "explanation": "Masculine plural noun «livros» takes «tantos … como»: «tantos livros como revistas».",
+      "answer": ["Temos", "tantos", "livros", "como", "revistas", "na", "sala."],
+      "distractors": ["tantas", "tão", "no"],
+      "acceptedAnswers": ["Nós temos tantos livros como revistas na sala."]
+    },
+    {
+      "id": "m5-comparison-pronouns-23",
+      "type": "build_phrase",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Express asking help: \"I ask them for help because they speak good Portuguese.\"",
+      "explanation": "«Lhes» means to them and attaches to the affirmative verb: «Peço-lhes ajuda».",
+      "answer": ["Peço-lhes", "ajuda", "porque", "eles", "falam", "bem", "português."],
+      "distractors": ["Peço-lhe", "falamos", "bom"],
+      "acceptedAnswers": [
+        "Eu peço-lhes ajuda porque eles falam bem português.",
+        "Peço-lhes ajuda porque falam bem português."
+      ]
+    },
+    {
+      "id": "m5-comparison-pronouns-24",
+      "type": "question_for_answer",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Sim, o Pedro é tão alto como o João.» Ask him if Pedro is as tall as João.",
+      "explanation": "A yes/no question keeps statement order: «O Pedro é tão alto como o João?». «Tão» goes with the adjective «alto».",
+      "givenAnswer": "Sim, o Pedro é tão alto como o João.",
+      "answer": ["O", "Pedro", "é", "tão", "alto", "como", "o", "João?"],
+      "distractors": ["tanto", "mais", "Qual"]
+    },
+    {
+      "id": "m5-comparison-pronouns-25",
+      "type": "question_for_answer",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your colleague answers: «Não sei nada sobre isso.» Ask him (informal) what he knows about it.",
+      "explanation": "«O que sabes disso?» asks what you know about it; the answer uses double negation: «Não sei nada».",
+      "givenAnswer": "Não sei nada sobre isso.",
+      "answer": ["O", "que", "sabes", "disso?"],
+      "distractors": ["Quem", "sabe", "tudo?"],
+      "acceptedAnswers": [
+        "O que é que sabes disso?",
+        "O que sabes sobre isso?",
+        "O que é que sabes sobre isso?"
+      ]
+    },
+    {
+      "id": "m5-comparison-pronouns-26",
+      "type": "question_for_answer",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Maria answers: «Não, não está ninguém em casa.» Ask her if someone is at home.",
+      "explanation": "«Está alguém em casa?» asks if someone is at home; in a negative answer «alguém» becomes «ninguém» with double negation.",
+      "givenAnswer": "Não, não está ninguém em casa.",
+      "answer": ["Está", "alguém", "em", "casa?"],
+      "distractors": ["Estão", "ninguém", "na"],
+      "acceptedAnswers": ["Há alguém em casa?"]
+    },
+    {
+      "id": "m5-comparison-pronouns-27",
+      "type": "question_for_answer",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tiago answers: «O Pedro dá-me um livro.» Ask him (informal) what Pedro gives him.",
+      "explanation": "After the question word «O que», the pronoun goes before the verb: «O que te dá o Pedro?», not «dá-te».",
+      "givenAnswer": "O Pedro dá-me um livro.",
+      "answer": ["O", "que", "te", "dá", "o", "Pedro?"],
+      "distractors": ["Quem", "dá-te", "me"],
+      "acceptedAnswers": ["O que é que o Pedro te dá?", "O que te dá?", "O que é que te dá?"]
+    },
+    {
+      "id": "m5-comparison-pronouns-28",
+      "type": "question_for_answer",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ana answers: «Telefona-me às três da tarde.» Ask her (informal) what time he (her boyfriend) calls her.",
+      "explanation": "After a question word the pronoun comes before the verb: «A que horas te telefona?», not «telefona-te».",
+      "givenAnswer": "Telefona-me às três da tarde.",
+      "answer": ["A", "que", "horas", "te", "telefona?"],
+      "distractors": ["De", "quando", "telefona-te"],
+      "acceptedAnswers": [
+        "A que horas é que te telefona?",
+        "A que horas te liga?",
+        "A que horas é que te liga?"
+      ]
+    },
+    {
+      "id": "m5-comparison-pronouns-29",
+      "type": "question_for_answer",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «Não tenho nenhum livro de português.» Ask him (informal) if he has any Portuguese book.",
+      "explanation": "«Tens algum livro de português?» asks if you have any Portuguese book.",
+      "givenAnswer": "Não tenho nenhum livro de português.",
+      "answer": ["Tens", "algum", "livro", "de", "português?"],
+      "distractors": ["Tem", "nenhum", "da"],
+      "acceptedAnswers": ["Tu tens algum livro de português?"]
+    },
+    {
+      "id": "m5-comparison-pronouns-30",
+      "type": "question_for_answer",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The teacher answers: «Digo-lhes que a aula começa agora.» Ask her (formal) what she tells the students.",
+      "explanation": "After «O que» the pronoun goes before the verb: «O que lhes diz?» (lhes = to them).",
+      "givenAnswer": "Digo-lhes que a aula começa agora.",
+      "answer": ["O", "que", "lhes", "diz?"],
+      "distractors": ["Como", "diz-lhes", "lhe"],
+      "acceptedAnswers": [
+        "O que é que lhes diz?",
+        "O que lhes diz na aula?",
+        "O que diz aos alunos?",
+        "O que é que diz aos alunos?"
+      ]
+    },
+    {
+      "id": "m5-comparison-pronouns-31",
+      "type": "question_for_answer",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Sofia answers: «Sim, tenho tantas maçãs como peras no cesto.» Ask her (informal) if she has as many apples as pears.",
+      "explanation": "«Maçãs» is feminine plural, so it takes «tantas … como».",
+      "givenAnswer": "Sim, tenho tantas maçãs como peras no cesto.",
+      "answer": ["Tens", "tantas", "maçãs", "como", "peras", "no", "cesto?"],
+      "distractors": ["tantos", "tão", "Tem"],
+      "acceptedAnswers": [
+        "Tu tens tantas maçãs como peras no cesto?",
+        "Tens tantas maçãs como peras?"
+      ]
+    },
+    {
+      "id": "m5-comparison-pronouns-32",
+      "type": "question_for_answer",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Digo-te tudo amanhã.» Ask her (informal) when she tells you everything.",
+      "explanation": "After «Quando (é que)» the pronoun goes before the verb: «me dizes», not «dizes-me».",
+      "givenAnswer": "Digo-te tudo amanhã.",
+      "answer": ["Quando", "é", "que", "me", "dizes", "tudo?"],
+      "distractors": ["Como", "dizes-me", "te"],
+      "acceptedAnswers": ["Quando me dizes tudo?", "Quando é que me dizes?", "Quando me dizes?"]
+    },
+    {
+      "id": "m5-comparison-pronouns-33",
+      "type": "find_error",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With adjectives, equality is expressed by «tão», not «tanto»: «tão alto como».",
+      "sentence": ["O", "Pedro", "é", "tanto", "alto", "como", "o", "João."],
+      "wrongIndex": 3,
+      "correction": "tão",
+      "options": ["tão", "mais", "menos"]
+    },
+    {
+      "id": "m5-comparison-pronouns-34",
+      "type": "find_error",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With feminine nouns like «fruta», use «tanta», not masculine «tanto».",
+      "sentence": ["A", "Sofia", "come", "tanto", "fruta", "como", "legumes."],
+      "wrongIndex": 3,
+      "correction": "tanta",
+      "options": ["tanta", "tantas", "tão"]
+    },
+    {
+      "id": "m5-comparison-pronouns-35",
+      "type": "find_error",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After negation «não», the clitic pronoun comes before the verb: «Não me dá», not «dá-me».",
+      "sentence": ["O", "Tiago", "não", "dá-me", "o", "livro", "hoje."],
+      "wrongIndex": 3,
+      "correction": "me dá",
+      "options": ["me dá", "dás-me", "me dás"]
+    },
+    {
+      "id": "m5-comparison-pronouns-36",
+      "type": "find_error",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Problema» is a masculine noun: «nenhum problema», not feminine «nenhuma».",
+      "sentence": ["Eu", "não", "tenho", "nenhuma", "problema", "aqui."],
+      "wrongIndex": 3,
+      "correction": "nenhum",
+      "options": ["nenhum", "nenhuns", "nada"]
+    },
+    {
+      "id": "m5-comparison-pronouns-37",
+      "type": "find_error",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After a question word like «O que», the pronoun comes before the verb: «te dá», not «dá-te».",
+      "sentence": ["O", "que", "dá-te", "o", "médico", "na", "consulta?"],
+      "wrongIndex": 2,
+      "correction": "te dá",
+      "options": ["te dá", "dás-te", "te dás"]
+    },
+    {
+      "id": "m5-comparison-pronouns-38",
+      "type": "about_me",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State an equality comparison using «tão … como» or «tanto … como».",
+      "question": "És tão alto como os teus amigos?",
+      "sampleAnswer": "Sou tão alto como o meu amigo João.",
+      "hints": ["baixo", "mais", "menos", "irmão", "pai"]
+    },
+    {
+      "id": "m5-comparison-pronouns-39",
+      "type": "about_me",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Answer whether anyone calls you in the evening using «Ninguém me telefona» or «O meu amigo telefona-me».",
+      "question": "Alguém te telefona à noite?",
+      "sampleAnswer": "Ninguém me telefona à noite.",
+      "hints": ["todos", "ligam", "a minha mãe", "amigos", "sempre"]
+    },
+    {
+      "id": "m5-comparison-pronouns-40",
+      "type": "about_me",
+      "topicId": "m5-comparison-pronouns",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State whether you have any problems or doubts using «Não tenho nenhum problema».",
+      "question": "Tens algum problema com a língua portuguesa?",
+      "sampleAnswer": "Não tenho nenhum problema com a pronúncia.",
+      "hints": ["gramática", "alguma", "dúvida", "pouco", "muito"]
+    }
+  ]
+}

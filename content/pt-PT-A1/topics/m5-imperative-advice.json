@@ -1,0 +1,659 @@
+{
+  "id": "m5-imperative-advice",
+  "moduleId": "m5",
+  "title": "Instructions, recipes and advice",
+  "kind": "grammar",
+  "context": "# Instructions, Recipes and Advice\n\nIn Portuguese, the imperative (**o imperativo**) is used to give instructions, recipes, directions, and advice.\n\n### Informal (*tu*) vs Formal (*você*)\n- For informal commands to friends or family (**tu**), regular verbs drop the final **-s** from the present tense:\n  - **Fala mais devagar!** — Speak more slowly! (from *tu falas*)\n  - **Come a sopa!** — Eat the soup! (from *tu comes*)\n  - **Abre a janela, por favor!** — Open the window, please! (from *tu abres*)\n- For formal instructions to strangers or elders (**você / o senhor / a senhora**), the verb ending switches: **-ar** verbs end in **-e** (*Tome este medicamento*), and **-er / -ir** verbs end in **-a** (*Beba água*).\n- For several people (**vocês**), add **-m** to the formal form: *Tomem*, *Bebam*, *Abram*.\n\n### Giving Advice with *dever*\nTo recommend something gently rather than give a direct command, use **dever + infinitivo**:\n- **Deves descansar hoje.** — You should rest today.\n- **O senhor deve beber dois litros de água.** — You should drink two litres of water.\n\n### Sequencing Instructions\nWhen explaining a recipe or a series of steps, use sequence markers:\n- **Primeiro, corta o pão.** — First, cut the bread.\n- **Depois, mistura o queijo e o fiambre.** — Then, mix the cheese and ham.\n- **Por fim, serve com salada.** — Finally, serve with salad.\n\n**Watch out!**\n1. Some verbs are irregular: **faz / faça** (fazer), **diz / diga** (dizer), **vai / vá** (ir), **traz / traga** (trazer).\n2. Don't keep the **-s** for tu: **Toma!**, not *Tomas!* (that is the present: *tu tomas*).",
+  "keyItems": [
+    {
+      "target": "Primeiro…",
+      "support": "First…"
+    },
+    {
+      "target": "Depois…",
+      "support": "Then… / Afterwards…"
+    },
+    {
+      "target": "A seguir…",
+      "support": "Next…"
+    },
+    {
+      "target": "Por fim… / Finalmente…",
+      "support": "Finally… / In the end…"
+    },
+    {
+      "target": "Toma! / Tome!",
+      "support": "Take! / Drink!",
+      "note": "informal tu / formal você"
+    },
+    {
+      "target": "Come! / Coma!",
+      "support": "Eat!",
+      "note": "informal tu / formal você"
+    },
+    {
+      "target": "Bebe! / Beba!",
+      "support": "Drink!",
+      "note": "informal tu / formal você"
+    },
+    {
+      "target": "Descansa! / Descanse!",
+      "support": "Rest!",
+      "note": "informal tu / formal você"
+    },
+    {
+      "target": "Mistura! / Misture!",
+      "support": "Mix!",
+      "note": "informal tu / formal você"
+    },
+    {
+      "target": "Corta! / Corte!",
+      "support": "Cut! / Slice!",
+      "note": "informal tu / formal você"
+    },
+    {
+      "target": "Abre! / Abra!",
+      "support": "Open!",
+      "note": "informal tu / formal você"
+    },
+    {
+      "target": "Espera! / Espere!",
+      "support": "Wait!",
+      "note": "informal tu / formal você"
+    },
+    {
+      "target": "dever + infinitivo",
+      "support": "should / must + infinitive",
+      "note": "used for advice and obligation"
+    },
+    {
+      "target": "a receita",
+      "support": "the recipe / prescription"
+    },
+    {
+      "target": "os ingredientes",
+      "support": "the ingredients"
+    },
+    {
+      "target": "o conselho",
+      "support": "the advice / tip"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m5-imperative-advice-01",
+      "type": "translate_word",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Primeiro» means first and is used to start a sequence of instructions.",
+      "direction": "toTarget",
+      "sentence": "**First**, wash the fresh apples.",
+      "word": "First",
+      "answer": "Primeiro",
+      "options": ["Primeiro", "Depois", "Sempre", "Nunca"]
+    },
+    {
+      "id": "m5-imperative-advice-02",
+      "type": "translate_word",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Depois» means then or afterwards when giving steps in a recipe.",
+      "direction": "toTarget",
+      "sentence": "**Then**, add the sugar and milk.",
+      "word": "Then",
+      "answer": "Depois",
+      "options": ["Depois", "Primeiro", "Hoje", "Muito"]
+    },
+    {
+      "id": "m5-imperative-advice-03",
+      "type": "translate_word",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Descansa» is the informal imperative (tu) of «descansar»: «descansa!» (rest!).",
+      "direction": "toTarget",
+      "sentence": "**Rest** at home today, Pedro!",
+      "word": "Rest",
+      "answer": "Descansa",
+      "options": ["Descansa", "Trabalha", "Estuda", "Caminha"]
+    },
+    {
+      "id": "m5-imperative-advice-04",
+      "type": "translate_word",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Receita» is recipe or prescription in Portuguese. It is feminine: «a receita».",
+      "direction": "toTarget",
+      "sentence": "This cake **recipe** is very simple.",
+      "word": "recipe",
+      "answer": "receita",
+      "options": ["receita", "refeição", "ementa", "conta"]
+    },
+    {
+      "id": "m5-imperative-advice-05",
+      "type": "translate_word",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Deves» is the 2nd-person (tu) form of «dever», used to give friendly advice: you should.",
+      "direction": "toTarget",
+      "sentence": "You **should** drink more water every day.",
+      "word": "should",
+      "answer": "deves",
+      "options": ["deves", "podes", "queres", "sabes"]
+    },
+    {
+      "id": "m5-imperative-advice-06",
+      "type": "fill_gaps",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"First wash the fruit, then cut the apples.\"",
+      "explanation": "Use «Primeiro» for the first step and «depois» for the next step.",
+      "template": "___ lava a fruta, ___ corta as maçãs.",
+      "gaps": [
+        {
+          "answer": "Primeiro"
+        },
+        {
+          "answer": "depois"
+        }
+      ],
+      "wordBank": ["Primeiro", "depois", "Nunca", "sempre", "agora"]
+    },
+    {
+      "id": "m5-imperative-advice-07",
+      "type": "fill_gaps",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Eat well and drink water, Tiago!\" (informal)",
+      "explanation": "For informal commands (tu), «comer» becomes «come» and «beber» becomes «bebe».",
+      "template": "___ bem e ___ água, Tiago!",
+      "gaps": [
+        {
+          "answer": "Come"
+        },
+        {
+          "answer": "bebe"
+        }
+      ],
+      "wordBank": ["Come", "bebe", "Coma", "beba", "comes"]
+    },
+    {
+      "id": "m5-imperative-advice-08",
+      "type": "fill_gaps",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Take this medicine and rest, Madam.\" (formal)",
+      "explanation": "For formal commands (você / a senhora), -ar verbs end in -e: «tome» and «descanse».",
+      "template": "___ este medicamento e ___, minha senhora.",
+      "gaps": [
+        {
+          "answer": "Tome"
+        },
+        {
+          "answer": "descanse"
+        }
+      ],
+      "wordBank": ["Tome", "descanse", "Toma", "descansa", "tomas"]
+    },
+    {
+      "id": "m5-imperative-advice-09",
+      "type": "fill_gaps",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"You should sleep eight hours per night.\" (informal)",
+      "explanation": "«Dever» + infinitive gives advice: «tu deves dormir» (informal).",
+      "template": "Tu ___ ___ oito horas por noite.",
+      "gaps": [
+        {
+          "answer": "deves"
+        },
+        {
+          "answer": "dormir"
+        }
+      ],
+      "wordBank": ["deves", "dormir", "deve", "dormes", "podes"]
+    },
+    {
+      "id": "m5-imperative-advice-10",
+      "type": "fill_gaps",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Mix the eggs with the sugar in the bowl.\" (informal)",
+      "explanation": "«Mistura» is the informal command. Preposition «com» means with.",
+      "template": "___ os ovos ___ o açúcar na taça.",
+      "gaps": [
+        {
+          "answer": "Mistura"
+        },
+        {
+          "answer": "com"
+        }
+      ],
+      "wordBank": ["Mistura", "com", "Misture", "sem", "de"]
+    },
+    {
+      "id": "m5-imperative-advice-11",
+      "type": "fill_gaps",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"First boil the water, next add the rice, finally serve hot.\"",
+      "explanation": "Sequencing in recipes: «Primeiro» (first), «a seguir» (next), «por fim» (finally).",
+      "template": "___ ferve a água, ___ junta o arroz e ___ serve quente.",
+      "gaps": [
+        {
+          "answer": "Primeiro"
+        },
+        {
+          "answer": "a seguir"
+        },
+        {
+          "answer": "por fim"
+        }
+      ],
+      "wordBank": ["Primeiro", "a seguir", "por fim", "antes", "ontem", "nunca"]
+    },
+    {
+      "id": "m5-imperative-advice-12",
+      "type": "fill_gaps",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"The gentleman should take the pills after lunch.\" (formal)",
+      "explanation": "With «o senhor» use the 3rd-person «deve» + infinitive: «deve tomar». «Comprimidos» is masculine plural: «os comprimidos».",
+      "template": "O senhor ___ ___ os ___ depois do almoço.",
+      "gaps": [
+        {
+          "answer": "deve"
+        },
+        {
+          "answer": "tomar"
+        },
+        {
+          "answer": "comprimidos"
+        }
+      ],
+      "wordBank": ["deve", "tomar", "comprimidos", "deves", "toma", "xaropes"]
+    },
+    {
+      "id": "m5-imperative-advice-13",
+      "type": "build_phrase",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give a simple instruction: \"Drink a lot of water!\" (informal)",
+      "explanation": "For informal tu commands with -er verbs, drop -s: «bebe!». «Muita água» agrees with feminine água.",
+      "answer": ["Bebe", "muita", "água!"],
+      "distractors": ["Beba", "muito", "com"]
+    },
+    {
+      "id": "m5-imperative-advice-14",
+      "type": "build_phrase",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give a friendly order: \"Speak more slowly, please!\" (informal)",
+      "explanation": "«Fala» is the informal command from falar. «Mais devagar» means more slowly.",
+      "answer": ["Fala", "mais", "devagar,", "por", "favor!"],
+      "distractors": ["Fale", "muito", "menos"],
+      "acceptedAnswers": ["Fala mais devagar por favor!"]
+    },
+    {
+      "id": "m5-imperative-advice-15",
+      "type": "build_phrase",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give doctor advice: \"You should rest in bed today.\" (informal)",
+      "explanation": "«Deves» expresses advice with the infinitive: «deves descansar na cama».",
+      "answer": ["Deves", "descansar", "na", "cama", "hoje."],
+      "distractors": ["Deve", "descansas", "no"],
+      "acceptedAnswers": ["Tu deves descansar na cama hoje.", "Hoje deves descansar na cama."]
+    },
+    {
+      "id": "m5-imperative-advice-16",
+      "type": "build_phrase",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give a recipe step: \"Cut the onions into small pieces.\" (informal)",
+      "explanation": "«Corta» is the tu command (tu cortas → corta). «As cebolas» is feminine plural.",
+      "answer": ["Corta", "as", "cebolas", "em", "pedaços", "pequenos."],
+      "distractors": ["Corte", "os", "com"]
+    },
+    {
+      "id": "m5-imperative-advice-17",
+      "type": "build_phrase",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give formal doctor instructions: \"Take this syrup before sleeping.\" (formal)",
+      "explanation": "Formal command for você uses -e for -ar verbs: «Tome este xarope antes de dormir».",
+      "answer": ["Tome", "este", "xarope", "antes", "de", "dormir."],
+      "distractors": ["Toma", "esta", "depois"],
+      "acceptedAnswers": ["O senhor tome este xarope antes de dormir."]
+    },
+    {
+      "id": "m5-imperative-advice-18",
+      "type": "build_phrase",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give sequential instructions: \"First heat the soup and then eat.\" (informal)",
+      "explanation": "Tu commands drop the -s of the present: «aquece» (tu aqueces), «come» (tu comes). «Primeiro… depois…» orders the steps.",
+      "answer": ["Primeiro", "aquece", "a", "sopa", "e", "depois", "come."],
+      "distractors": ["aqueça", "o", "coma"],
+      "acceptedAnswers": [
+        "Primeiro aquece a sopa, depois come.",
+        "Primeiro, aquece a sopa e depois come."
+      ]
+    },
+    {
+      "id": "m5-imperative-advice-19",
+      "type": "build_phrase",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give health advice: \"If you have a fever, you should call the doctor.\" (informal)",
+      "explanation": "«Se tens febre» (if you have a fever), «deves ligar ao médico» (you should call the doctor).",
+      "answer": ["Se", "tens", "febre,", "deves", "ligar", "ao", "médico."],
+      "distractors": ["tem", "deve", "à"],
+      "acceptedAnswers": ["Se tens febre deves ligar ao médico."]
+    },
+    {
+      "id": "m5-imperative-advice-20",
+      "type": "build_phrase",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Explain recipe steps: \"Mix the flour with the milk and add the eggs.\" (informal)",
+      "explanation": "Tu commands of -ar verbs end in -a: «mistura», «junta» (not formal «misture», «junte»).",
+      "answer": ["Mistura", "a", "farinha", "com", "o", "leite", "e", "junta", "os", "ovos."],
+      "distractors": ["Misture", "do", "junte"],
+      "acceptedAnswers": ["Mistura a farinha com leite e junta os ovos."]
+    },
+    {
+      "id": "m5-imperative-advice-21",
+      "type": "build_phrase",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give formal pharmacy instructions: \"Drink this tea hot with lemon and honey.\" (formal)",
+      "explanation": "Formal command for beber is «beba»: «Beba este chá quente com limão e mel».",
+      "answer": ["Beba", "este", "chá", "quente", "com", "limão", "e", "mel."],
+      "distractors": ["Bebe", "esta", "frio"],
+      "acceptedAnswers": ["A senhora beba este chá quente com limão e mel."]
+    },
+    {
+      "id": "m5-imperative-advice-22",
+      "type": "build_phrase",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give advice to a friend: \"You should not walk so much when your leg hurts.\" (informal)",
+      "explanation": "Negative advice: «Não deves» + infinitive. With «doer» the person is a pronoun, placed before the verb after «quando»: «quando te dói a perna».",
+      "answer": ["Não", "deves", "caminhar", "tanto", "quando", "te", "dói", "a", "perna."],
+      "distractors": ["deve", "caminhas", "doem"],
+      "acceptedAnswers": ["Tu não deves caminhar tanto quando te dói a perna."]
+    },
+    {
+      "id": "m5-imperative-advice-23",
+      "type": "build_phrase",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give sequence instructions: \"Finally, open the oven and serve the dish.\" (informal)",
+      "explanation": "«Por fim» marks the final step. «Abre» is the tu command from abrir.",
+      "answer": ["Por", "fim,", "abre", "o", "forno", "e", "serve", "o", "prato."],
+      "distractors": ["abra", "a", "serves"],
+      "acceptedAnswers": ["Por fim abre o forno e serve o prato."]
+    },
+    {
+      "id": "m5-imperative-advice-24",
+      "type": "question_for_answer",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The doctor answers: «Deve tomar dois comprimidos.» Ask the doctor (formal) what you should take.",
+      "explanation": "«O que devo tomar?» asks what I should take.",
+      "givenAnswer": "Deve tomar dois comprimidos.",
+      "answer": ["O", "que", "devo", "tomar?"],
+      "distractors": ["Como", "deves", "beber?"],
+      "acceptedAnswers": ["O que é que devo tomar?"]
+    },
+    {
+      "id": "m5-imperative-advice-25",
+      "type": "question_for_answer",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Deves descansar em casa hoje.» Ask her what you should do.",
+      "explanation": "«O que devo fazer?» asks what I should do.",
+      "givenAnswer": "Deves descansar em casa hoje.",
+      "answer": ["O", "que", "devo", "fazer?"],
+      "distractors": ["Quem", "pode", "comer?"],
+      "acceptedAnswers": [
+        "O que é que devo fazer?",
+        "O que devo fazer hoje?",
+        "O que é que devo fazer hoje?"
+      ]
+    },
+    {
+      "id": "m5-imperative-advice-26",
+      "type": "question_for_answer",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The chef answers: «Primeiro corta as batatas em rodelas.» Ask him how you start the recipe.",
+      "explanation": "«Como começo…?» asks how to do something; the answer gives the first step with a tu command: «corta».",
+      "givenAnswer": "Primeiro corta as batatas em rodelas.",
+      "answer": ["Como", "começo", "a", "receita?"],
+      "distractors": ["Quando", "acaba", "o"],
+      "acceptedAnswers": ["Como é que começo a receita?"]
+    },
+    {
+      "id": "m5-imperative-advice-27",
+      "type": "question_for_answer",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The pharmacist answers: «Sim, deve tomar com água.» Ask the pharmacist if you should take it with water.",
+      "explanation": "A yes/no question with «dever» keeps statement order: «Devo tomar com água?» (should I…?).",
+      "givenAnswer": "Sim, deve tomar com água.",
+      "answer": ["Devo", "tomar", "com", "água?"],
+      "distractors": ["Deves", "sem", "leite?"],
+      "acceptedAnswers": ["Eu devo tomar com água?", "Devo tomar isto com água?"]
+    },
+    {
+      "id": "m5-imperative-advice-28",
+      "type": "question_for_answer",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The doctor answers: «Deve ficar de repouso três dias.» Ask the doctor how many days you should rest.",
+      "explanation": "«Quantos dias devo descansar?» asks how many days I should rest.",
+      "givenAnswer": "Deve ficar de repouso três dias.",
+      "answer": ["Quantos", "dias", "devo", "descansar?"],
+      "distractors": ["Quantas", "horas", "deves"],
+      "acceptedAnswers": [
+        "Quantos dias é que devo descansar?",
+        "Quantos dias devo ficar de repouso?",
+        "Quantos dias é que devo ficar de repouso?"
+      ]
+    },
+    {
+      "id": "m5-imperative-advice-29",
+      "type": "question_for_answer",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ana answers: «Depois junta o queijo e mistura tudo.» Ask her (informal) what you do next.",
+      "explanation": "«O que faço a seguir?» asks what I do next; «a seguir» means next.",
+      "givenAnswer": "Depois junta o queijo e mistura tudo.",
+      "answer": ["O", "que", "faço", "a", "seguir?"],
+      "distractors": ["Como", "fazes", "de"],
+      "acceptedAnswers": ["O que é que faço a seguir?"]
+    },
+    {
+      "id": "m5-imperative-advice-30",
+      "type": "question_for_answer",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The doctor answers: «Tome o medicamento às oito horas da manhã.» Ask the doctor what time you should take the medicine.",
+      "explanation": "«A que horas devo tomar o medicamento?» asks the time to take medicine.",
+      "givenAnswer": "Tome o medicamento às oito horas da manhã.",
+      "answer": ["A", "que", "horas", "devo", "tomar", "o", "medicamento?"],
+      "distractors": ["De", "quando", "toma", "um"],
+      "acceptedAnswers": [
+        "A que horas é que devo tomar o medicamento?",
+        "A que horas tomo o medicamento?",
+        "Quando devo tomar o medicamento?"
+      ]
+    },
+    {
+      "id": "m5-imperative-advice-31",
+      "type": "question_for_answer",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Deves comer sopa de legumes e fruta.» Ask her what you should eat today.",
+      "explanation": "«O que devo comer?» asks for advice with «dever» + infinitive (what should I eat?).",
+      "givenAnswer": "Deves comer sopa de legumes e fruta.",
+      "answer": ["O", "que", "devo", "comer", "hoje?"],
+      "distractors": ["Quem", "deves", "beber"],
+      "acceptedAnswers": ["O que é que devo comer hoje?", "Hoje, o que devo comer?"]
+    },
+    {
+      "id": "m5-imperative-advice-32",
+      "type": "question_for_answer",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The pharmacist answers: «Não, não deve tomar este xarope em jejum.» Ask if you can take this syrup on an empty stomach.",
+      "explanation": "«Posso tomar este xarope em jejum?» asks if I can take it on an empty stomach.",
+      "givenAnswer": "Não, não deve tomar este xarope em jejum.",
+      "answer": ["Posso", "tomar", "este", "xarope", "em", "jejum?"],
+      "distractors": ["Pode", "esta", "com"],
+      "acceptedAnswers": [
+        "Eu posso tomar este xarope em jejum?",
+        "Devo tomar este xarope em jejum?"
+      ]
+    },
+    {
+      "id": "m5-imperative-advice-33",
+      "type": "find_error",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "For informal commands (tu) with -ar verbs, drop -s: «Toma este chá», not «Tomas».",
+      "sentence": ["Tomas", "este", "chá", "bem", "quente,", "Tiago!"],
+      "wrongIndex": 0,
+      "correction": "Toma",
+      "options": ["Toma", "Tome", "Tomem"]
+    },
+    {
+      "id": "m5-imperative-advice-34",
+      "type": "find_error",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Dever» is followed by an infinitive: «deves descansar», not conjugated «descansas».",
+      "sentence": ["Tu", "deves", "descansas", "o", "dia", "todo."],
+      "wrongIndex": 2,
+      "correction": "descansar",
+      "options": ["descansar", "descansa", "descanse"]
+    },
+    {
+      "id": "m5-imperative-advice-35",
+      "type": "find_error",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "For informal commands with -er verbs, drop -s: «bebe», not «bebes».",
+      "sentence": ["Bebes", "dois", "litros", "de", "água,", "Pedro!"],
+      "wrongIndex": 0,
+      "correction": "Bebe",
+      "options": ["Bebe", "Beba", "Bebam"]
+    },
+    {
+      "id": "m5-imperative-advice-36",
+      "type": "find_error",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The sequencing word is «Primeiro» (first), not «Primeira».",
+      "sentence": ["Primeira", "mistura", "os", "ovos", "com", "açúcar."],
+      "wrongIndex": 0,
+      "correction": "Primeiro",
+      "options": ["Primeiro", "Primeiros", "Primeiras"]
+    },
+    {
+      "id": "m5-imperative-advice-37",
+      "type": "find_error",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Formal address (o senhor) takes 3rd-person «deve»: «O senhor deve tomar», not «deves».",
+      "sentence": ["O", "senhor", "deves", "tomar", "este", "comprimido."],
+      "wrongIndex": 2,
+      "correction": "deve",
+      "options": ["deve", "devo", "devem"]
+    },
+    {
+      "id": "m5-imperative-advice-38",
+      "type": "about_me",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Give advice to a friend using «Deves …» or an imperative like «Bebe …».",
+      "question": "Que conselho tens para um amigo constipado?",
+      "sampleAnswer": "Bebe chá quente e descansa.",
+      "hints": ["deves", "ficar", "na", "cama", "água"]
+    },
+    {
+      "id": "m5-imperative-advice-39",
+      "type": "about_me",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Explain a step in your routine using «Primeiro … e depois …».",
+      "question": "O que fazes primeiro ao pequeno-almoço?",
+      "sampleAnswer": "Primeiro bebo café e depois como pão.",
+      "hints": ["faço", "um", "sumo", "fruta", "chá"]
+    },
+    {
+      "id": "m5-imperative-advice-40",
+      "type": "about_me",
+      "topicId": "m5-imperative-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Describe healthy habits using «Devemos …» or «Não devemos …».",
+      "question": "O que devemos fazer para ter boa saúde?",
+      "sampleAnswer": "Devemos comer legumes e caminhar todos os dias.",
+      "hints": ["beber", "muita", "água", "dormir", "bem"]
+    }
+  ]
+}

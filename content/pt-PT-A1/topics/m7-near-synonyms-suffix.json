@@ -1,0 +1,631 @@
+{
+  "id": "m7-near-synonyms-suffix",
+  "moduleId": "m7",
+  "title": "Near-synonyms and the -ção suffix",
+  "kind": "grammar",
+  "context": "# Near-Synonyms and the -ção Suffix\n\nAt the end of level A1, refining your word choices makes your Portuguese much more precise and natural. This topic focuses on two key areas: distinguishing near-synonym verb pairs and understanding how the suffix **-ção** forms nouns from verbs.\n\n### Distinguishing Close Verb Pairs\n1. **Conhecer vs. Saber**:\n   - **conhecer**: To be acquainted with a person, place, or thing: *Conheço o Pedro.* / *Conheces Lisboa?*\n   - **saber**: To know facts, information, or how to do something (*saber + infinitivo*): *Sei a resposta.* / *Sei falar português.*\n2. **Olhar vs. Ver**:\n   - **olhar (para)**: To look, direct your gaze intentionally: *Olha para aquele monumento!* / *Olhei pela janela.*\n   - **ver**: To see, perceive with your eyes: *Vejo o rio dali.* / *Ontem vi um filme.*\n3. **Escutar vs. Ouvir**:\n   - **escutar**: To listen attentively: *Gosto de escutar música com atenção.* / *Escuta o que o professor diz.*\n   - **ouvir**: To hear, perceive sound: *Ouço um barulho na rua.* / *Não ouvi o telemóvel.* In everyday speech **ouvir** is also normal for music and radio (*ouço música*, *ouço rádio*); **escutar** stresses attention.\n\n### The Noun-Forming Suffix -ção\nThe suffix **-ção** (plural **-ções**) is added to verb stems to form abstract nouns describing actions or results. Nouns formed with **-ção** are **feminine**:\n- **informar** → **a informação** (information)\n- **explicar** → **a explicação** (explanation)\n- **apresentar** → **a apresentação** (presentation)\n- **conversar** → **a conversação** (conversation practice, e.g. *aulas de conversação*; an everyday chat is *a conversa*)\n- **organizar** → **a organização** (organization)\n- **preparar** → **a preparação** (preparation)\n- **inscrever** → **a inscrição** (enrollment / registration)\n\n**Watch out!**\n1. Never say *«conheço falar português»*; skills always use **saber** (*sei falar português*).\n2. Nouns formed from verbs with **-ção** are feminine: use **a** / **uma** (*uma boa explicação*, *a informação correta*). (*O coração*, heart, is a rare masculine word that is not formed from a verb.)",
+  "keyItems": [
+    {
+      "target": "conhecer (pessoas / lugares)",
+      "support": "to know / be familiar with (people / places)"
+    },
+    {
+      "target": "saber (factos / como fazer)",
+      "support": "to know (facts / how to do)"
+    },
+    {
+      "target": "olhar para...",
+      "support": "to look at... (intentional gaze)"
+    },
+    {
+      "target": "ver (perceber com os olhos)",
+      "support": "to see / watch"
+    },
+    {
+      "target": "escutar (com atenção)",
+      "support": "to listen (attentively)"
+    },
+    {
+      "target": "ouvir (sons / barulhos)",
+      "support": "to hear (sounds / noises)"
+    },
+    {
+      "target": "a informação",
+      "support": "information (from informar)",
+      "note": "feminine noun in -ção"
+    },
+    {
+      "target": "a explicação",
+      "support": "explanation (from explicar)",
+      "note": "feminine noun in -ção"
+    },
+    {
+      "target": "a apresentação",
+      "support": "presentation (from apresentar)",
+      "note": "feminine noun in -ção"
+    },
+    {
+      "target": "a conversação",
+      "support": "conversation (practice) (from conversar)",
+      "note": "feminine noun in -ção; a chat = a conversa"
+    },
+    {
+      "target": "a organização",
+      "support": "organization (from organizar)",
+      "note": "feminine noun in -ção"
+    },
+    {
+      "target": "a preparação",
+      "support": "preparation (from preparar)",
+      "note": "feminine noun in -ção"
+    },
+    {
+      "target": "a educação",
+      "support": "education (from educar)",
+      "note": "feminine noun in -ção"
+    },
+    {
+      "target": "a inscrição",
+      "support": "registration / enrollment (from inscrever)",
+      "note": "feminine noun in -ção"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m7-near-synonyms-suffix-01",
+      "type": "translate_word",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Conhecer» is used for knowing or being acquainted with people: «Conheces o Pedro?».",
+      "direction": "toTarget",
+      "sentence": "Do you **know** Pedro from the office?",
+      "word": "know",
+      "answer": "conheces",
+      "options": ["conheces", "sabes", "ouves", "olhas"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-02",
+      "type": "translate_word",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Saber» (+ infinitivo) expresses knowledge of skills or languages: «Sei falar português».",
+      "direction": "toTarget",
+      "sentence": "I **know** how to speak Portuguese very well.",
+      "word": "know",
+      "answer": "sei",
+      "options": ["sei", "conheço", "vejo", "ouço"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-03",
+      "type": "translate_word",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Informação» is the feminine noun derived from «informar» with suffix «-ção».",
+      "direction": "toTarget",
+      "sentence": "The tourist office gave us useful **information**.",
+      "word": "information",
+      "answer": "informação",
+      "options": ["informação", "informar", "explicação", "inscrição"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-04",
+      "type": "translate_word",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Ouvir» (eu ouço) means to perceive sounds passively, contrasting with active listening («escutar»).",
+      "direction": "toTarget",
+      "sentence": "I can **hear** a strange noise outside in the street.",
+      "word": "hear",
+      "answer": "ouço",
+      "options": ["ouço", "escuto", "vejo", "olho"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-05",
+      "type": "translate_word",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the word in bold.",
+      "explanation": "«Explicação» is the feminine noun formed from «explicar» with «-ção».",
+      "direction": "toTarget",
+      "sentence": "The teacher gave a very clear **explanation** of the rule.",
+      "word": "explanation",
+      "answer": "explicação",
+      "options": ["explicação", "explicar", "conversação", "organização"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-06",
+      "type": "fill_gaps",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Contrast 'conhecer' and 'saber': \"I don't know Pedro, but I know where he lives.\"",
+      "explanation": "Use «conheço» for being acquainted with a person and «sei» for knowing a factual detail (where he lives).",
+      "template": "Eu não ___ o Pedro, mas ___ onde ele mora.",
+      "gaps": [
+        {
+          "answer": "conheço"
+        },
+        {
+          "answer": "sei"
+        }
+      ],
+      "wordBank": ["conheço", "sei", "sabe", "conhece", "vejo"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-07",
+      "type": "fill_gaps",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps contrasting 'olhar' (look) and 'ver' (see).",
+      "explanation": "«Olha para o céu» directs intentional gaze, while «vê aquele pássaro» perceives the sight.",
+      "template": "___ para o céu e ___ aquele pássaro lindo!",
+      "gaps": [
+        {
+          "answer": "Olha"
+        },
+        {
+          "answer": "vê"
+        }
+      ],
+      "wordBank": ["Olha", "vê", "Ouve", "escuta", "Sabe"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-08",
+      "type": "fill_gaps",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with the -ção nouns: explanation and organization.",
+      "explanation": "After the article you need a noun, not the verb: «a explicação», «na organização» (em + a) — both feminine «-ção» nouns.",
+      "template": "A ___ do professor ajudou na ___ do projeto.",
+      "gaps": [
+        {
+          "answer": "explicação"
+        },
+        {
+          "answer": "organização"
+        }
+      ],
+      "wordBank": ["explicação", "organização", "explicar", "organizar", "explicações"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-09",
+      "type": "fill_gaps",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Contrast active listening ('escutar') with passive hearing ('ouvir').",
+      "explanation": "«Escutar» denotes attentive listening, while «ouvir» denotes auditory perception.",
+      "template": "Tu ___ música clássica com atenção ou só ___ o rádio?",
+      "gaps": [
+        {
+          "answer": "escutas"
+        },
+        {
+          "answer": "ouves"
+        }
+      ],
+      "wordBank": ["escutas", "ouves", "olhas", "vês", "sabes"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-10",
+      "type": "fill_gaps",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with the feminine -ção nouns: education and preparation.",
+      "explanation": "«Educação» (from educar) and «preparação» (from preparar) are feminine, so «na» (em + a) comes before them.",
+      "template": "Ele trabalha na ___ porque é professor, e ajuda os alunos na ___ para os exames.",
+      "gaps": [
+        {
+          "answer": "educação"
+        },
+        {
+          "answer": "preparação"
+        }
+      ],
+      "wordBank": ["educação", "preparação", "educar", "preparar", "informação"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-11",
+      "type": "fill_gaps",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Contrast 'conhecer' (familiar with a city) and 'saber' (knowing a specific fact).",
+      "explanation": "«Conhecemos Lisboa» expresses familiarity with the city; «sabemos onde fica» expresses knowing factual location.",
+      "template": "Nós já ___ Lisboa, mas não ___ onde fica este museu.",
+      "gaps": [
+        {
+          "answer": "conhecemos"
+        },
+        {
+          "answer": "sabemos"
+        }
+      ],
+      "wordBank": ["conhecemos", "sabemos", "vemos", "olhamos", "ouvimos"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-12",
+      "type": "fill_gaps",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with the nouns 'inscrição' (enrollment) and 'informação' (information).",
+      "explanation": "«A minha inscrição» (from inscrever) = my registration; «a informação» (from informar) = the information. Both are feminine.",
+      "template": "Fiz a minha ___ no curso depois de ver a ___ no cartaz.",
+      "gaps": [
+        {
+          "answer": "inscrição"
+        },
+        {
+          "answer": "informação"
+        }
+      ],
+      "wordBank": ["inscrição", "informação", "inscrever", "informar", "explicação"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-13",
+      "type": "build_phrase",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I know how to speak European Portuguese very well.\"",
+      "explanation": "«Saber + infinitivo» expresses acquired language ability: «Sei falar português europeu muito bem».",
+      "answer": ["Sei", "falar", "português", "europeu", "muito", "bem."],
+      "distractors": ["Conheço", "fala"],
+      "acceptedAnswers": ["Eu sei falar português europeu muito bem."]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-14",
+      "type": "build_phrase",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Do you know Lisbon well?\" (informal)",
+      "explanation": "«Conhecer» is used for places and cities: «Conheces bem a cidade de Lisboa?».",
+      "answer": ["Conheces", "bem", "a", "cidade", "de", "Lisboa?"],
+      "distractors": ["Sabes", "do"],
+      "acceptedAnswers": ["Tu conheces bem a cidade de Lisboa?", "Conheces bem Lisboa?"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-15",
+      "type": "build_phrase",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Look at that beautiful monument over there!\"",
+      "explanation": "«Olhar para» = to look at, on purpose; the informal command is «Olha para...!».",
+      "answer": ["Olha", "para", "aquele", "monumento", "bonito", "ali!"],
+      "distractors": ["Vê", "no"],
+      "acceptedAnswers": ["Olha para aquele monumento bonito ali"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-16",
+      "type": "build_phrase",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"From the window I can see the river Tejo.\"",
+      "explanation": "«Ver» = to see/perceive, 1st person «vejo»; «da janela» = de + a janela (from the window).",
+      "answer": ["Da", "janela", "vejo", "o", "rio", "Tejo."],
+      "distractors": ["vês", "do"],
+      "acceptedAnswers": ["Da janela eu vejo o rio Tejo."]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-17",
+      "type": "build_phrase",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I listen to music attentively while I study.\"",
+      "explanation": "«Escutar» stresses attentive listening («com atenção»); 1st person «escuto».",
+      "answer": ["Escuto", "música", "com", "atenção", "enquanto", "estudo."],
+      "distractors": ["Escuta", "na"],
+      "acceptedAnswers": ["Eu escuto música com atenção enquanto estudo."]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-18",
+      "type": "build_phrase",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"Did you hear that loud noise in the street?\" (informal)",
+      "explanation": "«Ouvir» = to hear a sound (not on purpose); PPS for tu: «ouviste».",
+      "answer": ["Ouviste", "aquele", "barulho", "forte", "na", "rua?"],
+      "distractors": ["Escutaste", "no"],
+      "acceptedAnswers": ["Tu ouviste aquele barulho forte na rua?"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-19",
+      "type": "build_phrase",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"The presentation was clear and the explanation was excellent.\"",
+      "explanation": "Both «apresentação» and «explicação» are feminine nouns ending in «-ção».",
+      "answer": ["A", "apresentação", "foi", "clara", "e", "a", "explicação", "foi", "excelente."],
+      "distractors": ["O", "claro", "excelentes"],
+      "acceptedAnswers": ["A apresentação foi clara e a explicação foi ótima."]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-20",
+      "type": "build_phrase",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"I know Pedro, but I don't know his number.\"",
+      "explanation": "Contrasts «conheço» (person) with «não sei» (factual number).",
+      "answer": ["Conheço", "o", "Pedro,", "mas", "não", "sei", "o", "número", "dele."],
+      "distractors": ["Sabe", "conhece", "dela"],
+      "acceptedAnswers": ["Eu conheço o Pedro, mas não sei o número dele."]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-21",
+      "type": "build_phrase",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"She looked at the clock and saw the time.\"",
+      "explanation": "«Olhou para» = she directed her eyes (on purpose); «viu» = she perceived the result.",
+      "answer": ["Ela", "olhou", "para", "o", "relógio", "e", "viu", "as", "horas."],
+      "distractors": ["olha", "vê"],
+      "acceptedAnswers": [
+        "Olhou para o relógio e viu as horas.",
+        "Ela olhou para o relógio e viu a hora."
+      ]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-22",
+      "type": "build_phrase",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"The organization of the conference gave us all the information.\"",
+      "explanation": "«A organização» and «a informação» are feminine, so «toda a informação» (not «todo»); singular subject → «deu-nos».",
+      "answer": ["A", "organização", "da", "conferência", "deu-nos", "toda", "a", "informação."],
+      "distractors": ["O", "todo", "deram-nos"],
+      "acceptedAnswers": ["A organização da conferência deu-nos toda a informação necessária."]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-23",
+      "type": "build_phrase",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Put the words in order: \"He listens carefully, but cannot hear well.\"",
+      "explanation": "«Escutar» = to listen on purpose («com atenção»); «ouvir» = the ability to hear sounds.",
+      "answer": ["Ele", "escuta", "com", "atenção,", "mas", "não", "consegue", "ouvir", "bem."],
+      "distractors": ["ouve", "escutar", "bom"],
+      "acceptedAnswers": ["Escuta com atenção, mas não consegue ouvir bem."]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-24",
+      "type": "question_for_answer",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «Sim, conheço a nova colega de trabalho.» Ask him (informal) if he knows the new colleague.",
+      "explanation": "«Conheces a nova colega?» asks if you know the person.",
+      "givenAnswer": "Sim, conheço a nova colega de trabalho.",
+      "answer": ["Conheces", "a", "nova", "colega?"],
+      "distractors": ["Sabes", "o", "novo"],
+      "acceptedAnswers": ["Tu conheces a nova colega?"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-25",
+      "type": "question_for_answer",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ana answers: «Sei falar português e inglês.» Ask her (informal) which languages she can speak.",
+      "explanation": "Skills and languages use «saber + infinitivo»: «sabes falar», never «conheces falar».",
+      "givenAnswer": "Sei falar português e inglês.",
+      "answer": ["Que", "línguas", "sabes", "falar?"],
+      "distractors": ["conheces", "língua", "qual"],
+      "acceptedAnswers": ["Que línguas é que sabes falar?", "Que idiomas sabes falar?"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-26",
+      "type": "question_for_answer",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tiago answers: «Olhei para o mapa para encontrar a rua.» Ask him (informal, use «é que») what he looked at (where he directed his eyes).",
+      "explanation": "«Olhar para» keeps its preposition in questions: «Para onde olhaste?» (PPS, tu).",
+      "givenAnswer": "Olhei para o mapa para encontrar a rua.",
+      "answer": ["Para", "onde", "é", "que", "olhaste?"],
+      "distractors": ["viste?", "como", "de"],
+      "acceptedAnswers": ["Para onde olhaste?"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-27",
+      "type": "question_for_answer",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Inês answers: «Vi o castelo no topo da colina.» Ask her (informal, use «é que») what she saw.",
+      "explanation": "«Ver» takes a direct object, so «O que viste?» (PPS, tu) — not «olhaste», which needs «para».",
+      "givenAnswer": "Vi o castelo no topo da colina.",
+      "answer": ["O", "que", "é", "que", "viste?"],
+      "distractors": ["olhaste?", "qual", "como"],
+      "acceptedAnswers": ["O que viste?"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-28",
+      "type": "question_for_answer",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "João answers: «Sim, ouvi um barulho estranho.» Ask him (informal) if he heard any noise.",
+      "explanation": "Hearing a sound without trying is «ouvir»: «Ouviste algum barulho?» (PPS, tu).",
+      "givenAnswer": "Sim, ouvi um barulho estranho.",
+      "answer": ["Ouviste", "algum", "barulho?"],
+      "distractors": ["Escutaste", "alguma", "som?"],
+      "acceptedAnswers": ["Tu ouviste algum barulho?"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-29",
+      "type": "question_for_answer",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Sofia answers: «Gosto de escutar podcasts em português.» Ask her (informal) what she likes listening to (use «escutar»).",
+      "explanation": "«Gostar de» + infinitive: «gostas de escutar»; «escutar» = to listen (with attention).",
+      "givenAnswer": "Gosto de escutar podcasts em português.",
+      "answer": ["O", "que", "gostas", "de", "escutar?"],
+      "distractors": ["escutas?", "qual", "como"],
+      "acceptedAnswers": ["O que é que gostas de escutar?", "O que gostas de ouvir?"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-30",
+      "type": "question_for_answer",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Carlos answers: «A apresentação começa às dez horas.» Ask him what time the presentation starts.",
+      "explanation": "«A que horas começa a apresentação?» asks about the scheduled time.",
+      "givenAnswer": "A apresentação começa às dez horas.",
+      "answer": ["A", "que", "horas", "começa", "a", "apresentação?"],
+      "distractors": ["quando", "o", "explicar"],
+      "acceptedAnswers": ["A que horas é que começa a apresentação?"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-31",
+      "type": "question_for_answer",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Marta answers: «Pedi mais informação na receção do hotel.» Ask her (informal, use «é que») where she asked for information.",
+      "explanation": "«Onde pediste informação?» asks where you requested information.",
+      "givenAnswer": "Pedi mais informação na receção do hotel.",
+      "answer": ["Onde", "é", "que", "pediste", "informação?"],
+      "distractors": ["como", "pediu", "explicação"],
+      "acceptedAnswers": ["Onde pediste informação?"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-32",
+      "type": "question_for_answer",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Duarte answers: «A inscrição custa vinte euros.» Ask how much the registration costs (use «é que»).",
+      "explanation": "«Quanto custa a inscrição?» asks for the fee.",
+      "givenAnswer": "A inscrição custa vinte euros.",
+      "answer": ["Quanto", "é", "que", "custa", "a", "inscrição?"],
+      "distractors": ["qual", "custam", "o"],
+      "acceptedAnswers": ["Quanto custa a inscrição?"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-33",
+      "type": "find_error",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "For skills and languages, use «saber»: «sei falar», never «conheço falar».",
+      "sentence": ["Eu", "conheço", "falar", "três", "línguas", "diferentes."],
+      "wrongIndex": 1,
+      "correction": "sei",
+      "options": ["sei", "sabes", "sabem"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-34",
+      "type": "find_error",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Nouns ending in «-ção» are feminine: «A informação», not «O informação».",
+      "sentence": ["O", "informação", "no", "site", "está", "muito", "clara."],
+      "wrongIndex": 0,
+      "correction": "A",
+      "options": ["A", "As", "Os"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-35",
+      "type": "find_error",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Watching a film uses «ver»: «vi um filme», not «olhei um filme».",
+      "sentence": ["Ontem", "eu", "olhei", "um", "filme", "maravilhoso."],
+      "wrongIndex": 2,
+      "correction": "vi",
+      "options": ["vi", "viste", "viu"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-36",
+      "type": "find_error",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Being acquainted with a person requires «conhecer»: «conheces o Pedro?», not «sabes».",
+      "sentence": ["Tu", "sabes", "o", "Pedro", "da", "nossa", "turma?"],
+      "wrongIndex": 1,
+      "correction": "conheces",
+      "options": ["conheces", "conhece", "conhecem"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-37",
+      "type": "find_error",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Explicação» is feminine, so the adjective must agree: «uma boa explicação».",
+      "sentence": ["O", "professor", "deu", "uma", "bom", "explicação."],
+      "wrongIndex": 4,
+      "correction": "boa",
+      "options": ["boa", "ótimo", "belo"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-38",
+      "type": "about_me",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself regarding what languages you speak and who you know.",
+      "explanation": "Use «sei falar …» for languages and «conheço …» for people.",
+      "question": "Que línguas sabes falar e que pessoas portuguesas conheces?",
+      "sampleAnswer": "Sei falar inglês e conheço algumas pessoas em Lisboa.",
+      "hints": ["português", "francês", "espanhol", "Porto", "família", "muitas"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-39",
+      "type": "about_me",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself regarding what you like listening to.",
+      "explanation": "Use «escutar» or «ouvir» to talk about music, podcasts, or the sounds of your environment.",
+      "question": "Que tipo de música ou programas gostas de escutar?",
+      "sampleAnswer": "Gosto de escutar música clássica e podcasts informativos.",
+      "hints": ["rock", "fado", "rádio", "notícias", "todos", "dias"]
+    },
+    {
+      "id": "m7-near-synonyms-suffix-40",
+      "type": "about_me",
+      "topicId": "m7-near-synonyms-suffix",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself regarding an event or course you registered for.",
+      "explanation": "Use nouns with the «-ção» suffix like «inscrição», «apresentação», or «preparação».",
+      "question": "Já fizeste a inscrição para algum curso ou apresentação?",
+      "sampleAnswer": "Fiz a inscrição para o exame com antecedência.",
+      "hints": ["curso", "conferência", "aula", "tempo", "muita", "preparação"]
+    }
+  ]
+}

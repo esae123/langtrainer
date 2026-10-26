@@ -1,0 +1,659 @@
+{
+  "id": "m6-holidays-traditions",
+  "moduleId": "m6",
+  "title": "Holidays and traditions",
+  "kind": "situation",
+  "context": "# Holidays and Traditions in Portugal\n\nPortugal has rich cultural traditions and festivals celebrated throughout the year with family, food, and music.\n\n### Key Holidays and Celebrations\n- **O Natal** (Christmas): Families gather on Christmas Eve (*a Consoada*) to eat boiled cod (*bacalhau*) and traditional cake (*bolo-rei*), and exchange gifts (*abrir os presentes*).\n- **O Ano Novo / A passagem de ano** (New Year): People celebrate with fireworks and eat twelve raisins (*doze passas*) at midnight for good luck.\n- **A Páscoa** (Easter): Celebrated with family meals and traditional sweet bread called *folar*.\n- **Os Santos Populares** (Popular Saints): In June, Lisbon celebrates *Santo António* and Porto celebrates *São João* with street parties, grilled sardines (*sardinhas assadas*), and basil pots with poems (*manjericos*).\n\n### Festive Greetings and Giving Gifts\n- **Feliz Natal!** / **Boas Festas!** — Merry Christmas! / Happy Holidays!\n- **Bom Ano Novo!** — Happy New Year!\n- **Boa Páscoa!** — Happy Easter!\n- **Parabéns!** / **Feliz aniversário!** — Congratulations! / Happy birthday!\n- **Muitas felicidades!** — Best wishes!\n- **Um presente para ti!** (informal) / **Um presente para si!** (formal) — A present for you!\n\n**Watch out!**\n1. Say **Obrigado** if you are male, and **Obrigada** if you are female when receiving gifts or congratulations.\n2. In Portugal, New Year's Eve is called **a passagem de ano**, and people eat **passas** (raisins), not grapes.",
+  "keyItems": [
+    {
+      "target": "o Natal",
+      "support": "Christmas"
+    },
+    {
+      "target": "a Consoada",
+      "support": "Christmas Eve dinner",
+      "note": "celebrated on 24 December"
+    },
+    {
+      "target": "o bolo-rei",
+      "support": "King Cake (traditional Christmas fruitcake)"
+    },
+    {
+      "target": "o Ano Novo / a passagem de ano",
+      "support": "New Year / New Year's Eve"
+    },
+    {
+      "target": "as passas",
+      "support": "the raisins",
+      "note": "eaten at midnight on New Year's Eve"
+    },
+    {
+      "target": "a Páscoa",
+      "support": "Easter"
+    },
+    {
+      "target": "os Santos Populares",
+      "support": "Popular Saints festivals",
+      "note": "Santo António in Lisbon, São João in Porto"
+    },
+    {
+      "target": "as sardinhas assadas",
+      "support": "grilled sardines"
+    },
+    {
+      "target": "o aniversário",
+      "support": "birthday / anniversary"
+    },
+    {
+      "target": "Feliz Natal! / Boas Festas!",
+      "support": "Merry Christmas! / Happy Holidays!"
+    },
+    {
+      "target": "Bom Ano Novo!",
+      "support": "Happy New Year!"
+    },
+    {
+      "target": "Boa Páscoa!",
+      "support": "Happy Easter!"
+    },
+    {
+      "target": "Parabéns! / Feliz aniversário!",
+      "support": "Happy birthday! / Congratulations!"
+    },
+    {
+      "target": "Muitas felicidades!",
+      "support": "Best wishes! / Many happy returns!"
+    },
+    {
+      "target": "o presente",
+      "support": "the present / gift"
+    },
+    {
+      "target": "abrir os presentes",
+      "support": "to open the presents"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "m6-holidays-traditions-01",
+      "type": "translate_word",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Presente» means gift or present in Portuguese. It is masculine: «o presente».",
+      "direction": "toTarget",
+      "sentence": "This birthday **present** is for you, Ana.",
+      "word": "present",
+      "answer": "presente",
+      "options": ["presente", "postal", "bolo", "convite"]
+    },
+    {
+      "id": "m6-holidays-traditions-02",
+      "type": "translate_word",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Natal» is Christmas in Portuguese: «o Natal» or «Feliz Natal!» (Merry Christmas!).",
+      "direction": "toTarget",
+      "sentence": "We celebrate **Christmas** with the whole family.",
+      "word": "Christmas",
+      "answer": "Natal",
+      "options": ["Natal", "Páscoa", "Carnaval", "Ano Novo"]
+    },
+    {
+      "id": "m6-holidays-traditions-03",
+      "type": "translate_word",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Páscoa» means Easter in Portuguese. It is feminine: «a Páscoa».",
+      "direction": "toTarget",
+      "sentence": "At **Easter** we eat sweet bread and almonds.",
+      "word": "Easter",
+      "answer": "Páscoa",
+      "options": ["Páscoa", "Natal", "Santos", "Férias"]
+    },
+    {
+      "id": "m6-holidays-traditions-04",
+      "type": "translate_word",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Tradição» means tradition. It is feminine: «a tradição».",
+      "direction": "toTarget",
+      "sentence": "Eating codfish on Christmas Eve is an old **tradition**.",
+      "word": "tradition",
+      "answer": "tradição",
+      "options": ["tradição", "refeição", "canção", "estação"]
+    },
+    {
+      "id": "m6-holidays-traditions-05",
+      "type": "translate_word",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Feriado» means public holiday or bank holiday: «um feriado nacional».",
+      "direction": "toTarget",
+      "sentence": "Next Monday is a national **holiday** in Portugal.",
+      "word": "holiday",
+      "answer": "feriado",
+      "options": ["feriado", "fim de semana", "aniversário", "festival"]
+    },
+    {
+      "id": "m6-holidays-traditions-06",
+      "type": "fill_gaps",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Merry Christmas and Happy New Year!\"",
+      "explanation": "Standard seasonal wishes: «Feliz Natal» and «Bom Ano Novo».",
+      "template": "___ Natal e ___ Ano Novo!",
+      "gaps": [
+        {
+          "answer": "Feliz"
+        },
+        {
+          "answer": "Bom"
+        }
+      ],
+      "wordBank": ["Feliz", "Bom", "Boa", "Muitas", "Grande"]
+    },
+    {
+      "id": "m6-holidays-traditions-07",
+      "type": "fill_gaps",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Congratulations on your birthday! Much happiness!\"",
+      "explanation": "«Parabéns pelo teu aniversário!» and «Muitas felicidades!» are set formulas.",
+      "template": "___ pelo teu aniversário! Muitas ___!",
+      "gaps": [
+        {
+          "answer": "Parabéns"
+        },
+        {
+          "answer": "felicidades"
+        }
+      ],
+      "wordBank": ["Parabéns", "felicidades", "Obrigado", "festas", "noites"]
+    },
+    {
+      "id": "m6-holidays-traditions-08",
+      "type": "fill_gaps",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Here is a birthday present for you, Pedro!\" (informal)",
+      "explanation": "«Um presente» (a gift) «para ti» (for you, informal).",
+      "template": "Aqui está um ___ de anos ___ ti, Pedro!",
+      "gaps": [
+        {
+          "answer": "presente"
+        },
+        {
+          "answer": "para"
+        }
+      ],
+      "wordBank": ["presente", "para", "bolo", "de", "com"]
+    },
+    {
+      "id": "m6-holidays-traditions-09",
+      "type": "fill_gaps",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"At New Year we eat twelve raisins at midnight.\"",
+      "explanation": "«Na passagem de ano» (at New Year), eat «doze passas» (twelve raisins).",
+      "template": "Na ___ de ano comemos doze ___ à meia-noite.",
+      "gaps": [
+        {
+          "answer": "passagem"
+        },
+        {
+          "answer": "passas"
+        }
+      ],
+      "wordBank": ["passagem", "passas", "festa", "uvas", "noite"]
+    },
+    {
+      "id": "m6-holidays-traditions-10",
+      "type": "fill_gaps",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"In June, Lisbon celebrates Saint Anthony with grilled sardines.\"",
+      "explanation": "Lisbon celebrates «Santo António» with «sardinhas assadas».",
+      "template": "Em junho, Lisboa celebra o Santo ___ com sardinhas ___.",
+      "gaps": [
+        {
+          "answer": "António"
+        },
+        {
+          "answer": "assadas"
+        }
+      ],
+      "wordBank": ["António", "assadas", "João", "fritas", "cozidas"]
+    },
+    {
+      "id": "m6-holidays-traditions-11",
+      "type": "fill_gaps",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"On Christmas Eve the family gathers for dinner and opens presents.\"",
+      "explanation": "«Reunir-se» is reflexive, with the pronoun after the verb: «reúne-se»; «a ceia» is the evening meal, and «os presentes» are opened.",
+      "template": "Na Consoada a família reúne-se para a ___ e abre os ___.",
+      "gaps": [
+        {
+          "answer": "ceia"
+        },
+        {
+          "answer": "presentes"
+        }
+      ],
+      "wordBank": ["ceia", "presentes", "mesa", "bolos", "pratos"]
+    },
+    {
+      "id": "m6-holidays-traditions-12",
+      "type": "fill_gaps",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: \"Happy Easter to all the family, and have a good (public) holiday!\"",
+      "explanation": "«Páscoa» is feminine, so «Boa Páscoa»; a public holiday is «um feriado», so «bom feriado».",
+      "template": "___ Páscoa a toda a família e bom ___!",
+      "gaps": [
+        {
+          "answer": "Boa"
+        },
+        {
+          "answer": "feriado"
+        }
+      ],
+      "wordBank": ["Boa", "feriado", "Bom", "fim de semana", "presente"]
+    },
+    {
+      "id": "m6-holidays-traditions-13",
+      "type": "build_phrase",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Offer a seasonal greeting: \"Happy Holidays to everyone!\"",
+      "explanation": "«Festas» is feminine plural, so «Boas Festas»; «a todos» = to everyone.",
+      "answer": ["Boas", "Festas", "a", "todos!"],
+      "distractors": ["Bons", "Boa", "aos"],
+      "acceptedAnswers": ["Boas Festas para todos!"]
+    },
+    {
+      "id": "m6-holidays-traditions-14",
+      "type": "build_phrase",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Offer a present: \"A small present for you, Rita!\" (informal)",
+      "explanation": "With a friend use «para ti» (informal); «presente» is masculine, so «um pequeno presente».",
+      "answer": ["Um", "pequeno", "presente", "para", "ti!"],
+      "distractors": ["Uma", "pequena", "si!"]
+    },
+    {
+      "id": "m6-holidays-traditions-15",
+      "type": "build_phrase",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what is eaten at Christmas: \"At Christmas we always eat King Cake.\"",
+      "explanation": "«No Natal» = em + o Natal; «sempre» normally goes after the verb: «comemos sempre».",
+      "answer": ["No", "Natal", "comemos", "sempre", "bolo-rei."],
+      "distractors": ["Na", "come", "pão"],
+      "acceptedAnswers": [
+        "Nós no Natal comemos sempre bolo-rei.",
+        "No Natal nós comemos sempre bolo-rei."
+      ]
+    },
+    {
+      "id": "m6-holidays-traditions-16",
+      "type": "build_phrase",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say when gifts are opened: \"The children open the presents at midnight.\"",
+      "explanation": "«Os miúdos» (the kids) takes the plural verb «abrem»; «à meia-noite» = a + a meia-noite.",
+      "answer": ["Os", "miúdos", "abrem", "os", "presentes", "à", "meia-noite."],
+      "distractors": ["As", "abre", "na"],
+      "acceptedAnswers": ["As crianças abrem os presentes à meia-noite."]
+    },
+    {
+      "id": "m6-holidays-traditions-17",
+      "type": "build_phrase",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Congratulate someone warmly: \"Happy birthday and many years of life!\"",
+      "explanation": "«Aniversário» is masculine, so «Feliz aniversário»; «muitos anos de vida» is the traditional wish for a long life.",
+      "answer": ["Feliz", "aniversário", "e", "muitos", "anos", "de", "vida!"],
+      "distractors": ["Bom", "muitas", "da"],
+      "acceptedAnswers": ["Parabéns e muitos anos de vida!"]
+    },
+    {
+      "id": "m6-holidays-traditions-18",
+      "type": "build_phrase",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe a popular festival: \"In Porto people celebrate Saint John in June.\"",
+      "explanation": "«No Porto» (the city name takes an article: o Porto → em + o = no); the saint is «São João», not «Santo João».",
+      "answer": ["No", "Porto", "as", "pessoas", "festejam", "o", "São", "João", "em", "junho."],
+      "distractors": ["Na", "festeja", "Santo"],
+      "acceptedAnswers": [
+        "No Porto festeja-se o São João em junho.",
+        "Em junho, no Porto as pessoas festejam o São João."
+      ]
+    },
+    {
+      "id": "m6-holidays-traditions-19",
+      "type": "build_phrase",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Explain Christmas Eve dinner: \"On Christmas Eve we eat cod with cabbage and potatoes.\"",
+      "explanation": "The traditional Consoada dinner: «Na Consoada comemos bacalhau com couve e batatas».",
+      "answer": ["Na", "Consoada", "comemos", "bacalhau", "com", "couve", "e", "batatas."],
+      "distractors": ["No", "come", "de"],
+      "acceptedAnswers": ["Na ceia de Natal comemos bacalhau com couve e batatas."]
+    },
+    {
+      "id": "m6-holidays-traditions-20",
+      "type": "build_phrase",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe New Year customs: \"At midnight we drink sparkling wine and eat twelve raisins.\"",
+      "explanation": "«À meia-noite bebemos espumante e comemos doze passas».",
+      "answer": ["À", "meia-noite", "bebemos", "espumante", "e", "comemos", "doze", "passas."],
+      "distractors": ["Na", "bebe", "uvas."],
+      "acceptedAnswers": ["À meia-noite nós bebemos espumante e comemos doze passas."]
+    },
+    {
+      "id": "m6-holidays-traditions-21",
+      "type": "build_phrase",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State Easter customs: \"At Easter godparents give almonds and sweet bread to godchildren.\"",
+      "explanation": "«Os padrinhos» takes the plural «dão»; «dar a» + «os afilhados» → «aos afilhados».",
+      "answer": [
+        "Na",
+        "Páscoa",
+        "os",
+        "padrinhos",
+        "dão",
+        "amêndoas",
+        "e",
+        "folar",
+        "aos",
+        "afilhados."
+      ],
+      "distractors": ["No", "dá", "bolo"],
+      "acceptedAnswers": ["Na Páscoa os padrinhos dão folar e amêndoas aos afilhados."]
+    },
+    {
+      "id": "m6-holidays-traditions-22",
+      "type": "build_phrase",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Thank someone for a gift: \"I like the present very much, thank you!\" (female speaker)",
+      "explanation": "A female speaker says «obrigada»: «Gosto muito do presente, muito obrigada!».",
+      "answer": ["Gosto", "muito", "do", "presente,", "muito", "obrigada!"],
+      "distractors": ["da", "obrigado!", "com"],
+      "acceptedAnswers": ["Gosto muito do presente muito obrigada!"]
+    },
+    {
+      "id": "m6-holidays-traditions-23",
+      "type": "build_phrase",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Describe the June festivals: \"At the June festivals there is music and grilled sardines.\"",
+      "explanation": "«Há» means there is / there are (never «têm» in this sense); «nas festas» = em + as festas.",
+      "answer": ["Nas", "festas", "de", "junho", "há", "música", "e", "sardinhas", "assadas."],
+      "distractors": ["Nos", "têm", "fritas."],
+      "acceptedAnswers": ["Nas festas populares há música e sardinhas assadas."]
+    },
+    {
+      "id": "m6-holidays-traditions-24",
+      "type": "question_for_answer",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Faço anos em maio.» Ask her (informal) when her birthday is.",
+      "explanation": "In Portugal «fazer anos» = to have one's birthday: «Quando fazes anos?» (tu form «fazes»).",
+      "givenAnswer": "Faço anos em maio.",
+      "answer": ["Quando", "fazes", "anos?"],
+      "distractors": ["Como", "faz", "dias?"],
+      "acceptedAnswers": ["Quando é que fazes anos?"]
+    },
+    {
+      "id": "m6-holidays-traditions-25",
+      "type": "question_for_answer",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The host answers: «Costumamos passar o Natal em família.» Ask the family (vocês) how they spend Christmas.",
+      "explanation": "«Como…?» asks how; «vocês» takes the 3rd-person plural «passam».",
+      "givenAnswer": "Costumamos passar o Natal em família.",
+      "answer": ["Como", "passam", "o", "Natal?"],
+      "distractors": ["Onde", "passa", "a"],
+      "acceptedAnswers": [
+        "Como é que passam o Natal?",
+        "Como costumam passar o Natal?",
+        "Como é que costumam passar o Natal?"
+      ]
+    },
+    {
+      "id": "m6-holidays-traditions-26",
+      "type": "question_for_answer",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Sofia answers: «Comemos bacalhau cozido na Consoada.» Ask her what her family (vocês) eats on Christmas Eve.",
+      "explanation": "«O que…?» asks what; «vocês» takes «comem», and «a Consoada» → «na Consoada».",
+      "givenAnswer": "Comemos bacalhau cozido na Consoada.",
+      "answer": ["O", "que", "comem", "na", "Consoada?"],
+      "distractors": ["Quem", "come", "no"],
+      "acceptedAnswers": [
+        "O que é que comem na Consoada?",
+        "O que comem vocês na Consoada?",
+        "O que é que vocês comem na Consoada?"
+      ]
+    },
+    {
+      "id": "m6-holidays-traditions-27",
+      "type": "question_for_answer",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Tiago answers: «Sim, recebemos muitos presentes de Natal.» Ask whether his family (vocês) gets presents at Christmas.",
+      "explanation": "A yes/no question keeps statement order; «vocês» takes «recebem», and «o Natal» → «no Natal».",
+      "givenAnswer": "Sim, recebemos muitos presentes de Natal.",
+      "answer": ["Recebem", "presentes", "no", "Natal?"],
+      "distractors": ["Recebe", "bolos", "na"],
+      "acceptedAnswers": ["Vocês recebem presentes no Natal?"]
+    },
+    {
+      "id": "m6-holidays-traditions-28",
+      "type": "question_for_answer",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «A festa do Santo António é no dia treze de junho.» Ask when the Santo António festival is.",
+      "explanation": "«Quando é…?» asks the date of an event; «festa» is feminine: «a festa do Santo António».",
+      "givenAnswer": "A festa do Santo António é no dia treze de junho.",
+      "answer": ["Quando", "é", "a", "festa", "do", "Santo", "António?"],
+      "distractors": ["Como", "são", "o"],
+      "acceptedAnswers": ["Quando é que é a festa do Santo António?"]
+    },
+    {
+      "id": "m6-holidays-traditions-29",
+      "type": "question_for_answer",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «Ofereço um livro e uma camisola ao meu pai.» Ask him (informal) what he is giving his father.",
+      "explanation": "«Oferecer a» + «o teu pai» → «ao teu pai»; the possessive keeps its article («o teu pai»).",
+      "givenAnswer": "Ofereço um livro e uma camisola ao meu pai.",
+      "answer": ["O", "que", "ofereces", "ao", "teu", "pai?"],
+      "distractors": ["Quem", "oferece", "à"],
+      "acceptedAnswers": ["O que é que ofereces ao teu pai?"]
+    },
+    {
+      "id": "m6-holidays-traditions-30",
+      "type": "question_for_answer",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Maria answers: «Passamos a passagem de ano em Lisboa a ver o fogo de artifício.» Ask where she and her friends (vocês) spend New Year's Eve.",
+      "explanation": "«Onde…?» asks where; «vocês» takes the 3rd-person plural «passam».",
+      "givenAnswer": "Passamos a passagem de ano em Lisboa a ver o fogo de artifício.",
+      "answer": ["Onde", "passam", "a", "passagem", "de", "ano?"],
+      "distractors": ["Como", "passa", "o"],
+      "acceptedAnswers": ["Onde é que passam a passagem de ano?"]
+    },
+    {
+      "id": "m6-holidays-traditions-31",
+      "type": "question_for_answer",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A local answers: «A tradição do bolo-rei é comer uma fatia com a família.» Ask what the bolo-rei tradition is.",
+      "explanation": "«Qual é…?» asks which/what something is when choosing or identifying; «bolo-rei» is masculine: «do bolo-rei».",
+      "givenAnswer": "A tradição do bolo-rei é comer uma fatia com a família.",
+      "answer": ["Qual", "é", "a", "tradição", "do", "bolo-rei?"],
+      "distractors": ["Como", "são", "da"],
+      "acceptedAnswers": ["Qual é a tradição do bolo-rei em Portugal?"]
+    },
+    {
+      "id": "m6-holidays-traditions-32",
+      "type": "question_for_answer",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ana answers: «Compro o manjerico no mercado de rua em junho.» Ask her (informal) where she buys the manjerico.",
+      "explanation": "«Onde…?» asks where; with «tu» the verb is «compras».",
+      "givenAnswer": "Compro o manjerico no mercado de rua em junho.",
+      "answer": ["Onde", "compras", "o", "manjerico?"],
+      "distractors": ["Quando", "compra", "a"],
+      "acceptedAnswers": [
+        "Onde é que compras o manjerico?",
+        "Onde compras o manjerico para as festas?",
+        "Onde é que compras o manjerico para as festas?"
+      ]
+    },
+    {
+      "id": "m6-holidays-traditions-33",
+      "type": "find_error",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The traditional festive wish is «Boas Festas» with feminine plural «Boas», not «Bons».",
+      "sentence": ["Desejo", "a", "todos", "Bons", "Festas."],
+      "wrongIndex": 3,
+      "correction": "Boas",
+      "options": ["Boas", "Bom", "Boa"]
+    },
+    {
+      "id": "m6-holidays-traditions-34",
+      "type": "find_error",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Ano Novo» is masculine, so the wish is «Bom Ano Novo», not «Boa».",
+      "sentence": ["Feliz", "Natal", "e", "Boa", "Ano", "Novo!"],
+      "wrongIndex": 3,
+      "correction": "Bom",
+      "options": ["Bom", "Bons", "Ótima"]
+    },
+    {
+      "id": "m6-holidays-traditions-35",
+      "type": "find_error",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Páscoa» is feminine in Portuguese: «Boa Páscoa», not masculine «Bom Páscoa».",
+      "sentence": ["Desejamos", "uma", "Bom", "Páscoa", "a", "todos."],
+      "wrongIndex": 2,
+      "correction": "Boa",
+      "options": ["Boa", "Bons", "Boas"]
+    },
+    {
+      "id": "m6-holidays-traditions-36",
+      "type": "find_error",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "A female speaker must say «obrigada»: «Muito obrigada», not «obrigado».",
+      "sentence": ["A", "Maria", "diz:", "«Muito", "obrigado", "pelo", "presente!»"],
+      "wrongIndex": 4,
+      "correction": "obrigada",
+      "options": ["obrigada", "obrigadas", "obrigados"]
+    },
+    {
+      "id": "m6-holidays-traditions-37",
+      "type": "find_error",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Congratulations are «parabéns por» + «o teu aniversário» → «pelo teu aniversário»; in Portugal the possessive keeps its article.",
+      "sentence": ["Muitos", "parabéns", "por", "teu", "aniversário,", "Rita!"],
+      "wrongIndex": 2,
+      "correction": "pelo",
+      "options": ["pelo", "pela", "do"]
+    },
+    {
+      "id": "m6-holidays-traditions-38",
+      "type": "about_me",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State your favourite holiday using «A minha festa preferida é …».",
+      "question": "Qual é a tua festa ou tradição preferida?",
+      "sampleAnswer": "A minha festa preferida é o Natal com a família.",
+      "hints": ["Páscoa", "Ano", "Novo", "Santos", "Populares", "amigos"]
+    },
+    {
+      "id": "m6-holidays-traditions-39",
+      "type": "about_me",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Explain what you usually do on New Year's Eve using «Costumo …».",
+      "question": "O que costumas fazer na passagem de ano?",
+      "sampleAnswer": "Costumo comer doze passas e brindar com amigos.",
+      "hints": ["jantar", "família", "ver", "fogo", "artifício", "festa"]
+    },
+    {
+      "id": "m6-holidays-traditions-40",
+      "type": "about_me",
+      "topicId": "m6-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "State what gifts you like to give your friends on their birthday, using «Gosto de oferecer …».",
+      "question": "Que presentes gostas de oferecer no aniversário aos teus amigos?",
+      "sampleAnswer": "Gosto de oferecer livros, chocolates e música.",
+      "hints": ["roupa", "jogos", "flores", "um", "perfume", "bom"]
+    }
+  ]
+}
