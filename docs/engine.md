@@ -226,6 +226,46 @@ Per type:
 | `order_dialogue`                      | the placed order equals the natural order                                                                                        |
 | `about_me`                            | not graded automatically: the learner's self-grade (Yes/Mostly = correct) and `selfGraded: true` on the attempt                  |
 
+## AI check (`src/ai/`)
+
+Optional OpenAI check of typed answers (docs/stage-7-spec.md). The engine itself is
+untouched: the AI only replaces the verdict that `checkAnswer` (or the about_me self-grade)
+would have given, and the result feeds the normal flow (`applyAttempt`, history, strict
+completion, SRS; practice sessions stay practice).
+
+- **When** (`aiRoute` in `openaiCheck.ts`) — all of: `aiCheckEnabled` is on **and**
+  `openaiApiKey` is non-empty; the answer was typed (`mode === 'typing'`); the type is
+  `build_phrase`, `question_for_answer` or `about_me`; the local check returned not correct
+  (about_me: always). Then `navigator.onLine` and no suspension → call OpenAI; otherwise
+  → **fallback** (model answer + "Did you get it right? Yes / Mostly / No", Yes/Mostly =
+  correct). When the switch is off or there is no key nothing changes and no request is
+  ever made.
+- **Request** — `POST https://api.openai.com/v1/chat/completions`, `Bearer` key,
+  `response_format: json_object`, `max_completion_tokens: 400`, `reasoning_effort: "low"`,
+  no temperature, 15 s timeout. The system prompt (`buildSystemPrompt`) is a fair teacher
+  grading one answer in the course's target language (pt-PT: European Portuguese only);
+  the user message carries the exercise (prompt, type, model answer + accepted answers, or
+  question / sample answer / hints), the topic title and exercise tags, and the answer.
+- **Verdict** — `correct` / `almost` / `incorrect` + correction + one-line explanation.
+  `almost` counts as **correct**. Anything that doesn't parse into a known verdict is
+  treated as unavailable (fallback), never as a verdict.
+- **Errors** — 401 / invalid key → suspended until the key or model changes, toast
+  "AI check: the API key is not valid". 429 `insufficient_quota` (billing) → suspended until
+  the next app start or a settings change, toast "AI check: no OpenAI credit left". 429 rate
+  limit, 5xx, timeout, network → one retry after 2 s, then fallback for that answer only.
+  The suspension is in memory (`aiState.ts`), keyed by a hash of key + model.
+- **While waiting** the feedback sheet shows "Checking your answer…" with a spinner and a
+  "Skip — grade myself" link (aborts the request, switches to the fallback). A session
+  snapshot saved mid-check resumes as the fallback.
+- **Recording** — attempts carry `gradedBy: 'local' | 'ai' | 'self'` and, for AI grades,
+  `aiVerdict`. AI-graded attempts have no `diacriticsOk`.
+- **Usage** — every AI verdict adds one check and `usage.total_tokens` to the
+  `aiUsage` row of the `settings` table (`{ month: 'YYYY-MM', checks, tokens }`), which
+  reads as zero once the calendar month changes. Shown in Settings → AI.
+- **Privacy** — the key lives only in this device's settings, goes only into the
+  Authorization header, is never logged, and is stripped from backups (import keeps the
+  device's key and switch).
+
 ## Typing hints (`hint.ts`)
 
 With `settings.typingHint` on (the default), typing mode shows a skeleton of the expected

@@ -231,6 +231,7 @@ function SessionRun({
         onSubmit={runner.submit}
         onContinue={runner.next}
         onSelfGrade={runner.selfGrade}
+        onSkipAi={runner.skipAi}
         onStop={() => setStopOpen(true)}
       />
       <ConfirmDialog

@@ -1,4 +1,5 @@
 // Session state machine (docs/stage-3-spec.md §5). Pure reducer: no React, no Dexie.
+import type { AiVerdict } from '../ai/openaiCheck';
 import type { InputMode } from '../content/types';
 import type { CheckResult, ExerciseResponse } from '../engine/check';
 import type { BlockKind, PlannedItem, SessionPlan } from '../engine/plan';
@@ -17,6 +18,16 @@ export interface AttemptDraft {
   answer: string;
   at: number;
   selfGraded?: boolean;
+  /** Who decided the verdict (docs/stage-7-spec.md §5). */
+  gradedBy?: 'local' | 'ai' | 'self';
+  aiVerdict?: AiVerdict;
+}
+
+/** What the AI check said about an answer, for the feedback sheet. */
+export interface AiFeedback {
+  verdict: AiVerdict;
+  correction: string;
+  explanation: string;
 }
 
 export interface FeedbackState {
@@ -27,6 +38,12 @@ export interface FeedbackState {
   response?: ExerciseResponse;
   /** about_me: the sheet shows the sample answer and waits for a self-grade. */
   awaitingSelfGrade: boolean;
+  /** The AI check is running: the sheet shows a spinner and a "grade myself" link. */
+  aiPending?: boolean;
+  /** The self-grade replaces an AI check that could not run (offline, error, skipped). */
+  aiFallback?: boolean;
+  /** The AI verdict, once there is one. */
+  ai?: AiFeedback;
 }
 
 export interface SessionState {
@@ -45,8 +62,17 @@ export interface SessionState {
 export type SessionAction =
   | { type: 'init'; state: SessionState }
   | { type: 'showExercise' }
-  | { type: 'submit'; draft: AttemptDraft; result: CheckResult; response?: ExerciseResponse }
-  | { type: 'awaitSelfGrade'; result: CheckResult; answer: string }
+  | {
+      type: 'submit';
+      draft: AttemptDraft;
+      result: CheckResult;
+      response?: ExerciseResponse;
+      ai?: AiFeedback;
+    }
+  | { type: 'awaitSelfGrade'; result: CheckResult; answer: string; aiFallback?: boolean }
+  | { type: 'awaitAi'; result: CheckResult; answer: string }
+  /** The pending AI check failed or was skipped: fall back to the self-grade. */
+  | { type: 'aiUnavailable' }
   | { type: 'appendItems'; items: PlannedItem[] }
   | { type: 'next'; now: number }
   | { type: 'stop'; now: number };
@@ -69,6 +95,20 @@ export function initSessionState(plan: SessionPlan, now: number): SessionState {
     interrupted: false,
     feedback: null,
   };
+}
+
+function settlePendingAi(state: SessionState): SessionState {
+  if (!state.feedback?.aiPending) return state;
+  const { aiPending: _pending, ...feedback } = state.feedback;
+  return { ...state, feedback: { ...feedback, awaitingSelfGrade: true, aiFallback: true } };
+}
+
+/**
+ * A snapshot saved while an AI check was running has no request behind it any more
+ * (the app was closed or reloaded): resume it as the self-grade fallback.
+ */
+export function settleResumedState(state: SessionState): SessionState {
+  return settlePendingAi(state);
 }
 
 export function currentItem(state: SessionState): PlannedItem | undefined {
@@ -99,6 +139,7 @@ export function sessionReducer(
           answer: action.draft.answer,
           ...(action.response ? { response: action.response } : {}),
           awaitingSelfGrade: false,
+          ...(action.ai ? { ai: action.ai } : {}),
         },
       };
     }
@@ -107,8 +148,28 @@ export function sessionReducer(
       return {
         ...state,
         phase: 'feedback',
-        feedback: { result: action.result, answer: action.answer, awaitingSelfGrade: true },
+        feedback: {
+          result: action.result,
+          answer: action.answer,
+          awaitingSelfGrade: true,
+          ...(action.aiFallback ? { aiFallback: true } : {}),
+        },
       };
+
+    case 'awaitAi':
+      return {
+        ...state,
+        phase: 'feedback',
+        feedback: {
+          result: action.result,
+          answer: action.answer,
+          awaitingSelfGrade: false,
+          aiPending: true,
+        },
+      };
+
+    case 'aiUnavailable':
+      return state.feedback?.aiPending ? settlePendingAi(state) : state;
 
     case 'appendItems':
       return {

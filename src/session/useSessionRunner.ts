@@ -1,12 +1,14 @@
 // Wires the pure session reducer to Dexie: plan/resume, record attempts and topic
 // progress, persist the in-progress state, finalise at the summary.
 import { useCallback, useEffect, useReducer, useRef, useState } from 'react';
+import { useAiCheck } from '../ai/useAiCheck';
 import type { Program } from '../content/types';
 import { db, type AttemptRow } from '../db/db';
 import {
   checkAnswer,
   expectedAnswerText,
   responseToText,
+  selfGradedResult,
   type ExerciseResponse,
   type SelfGrade,
 } from '../engine/check';
@@ -41,9 +43,11 @@ import {
   currentItem,
   initSessionState,
   sessionReducer,
+  settleResumedState,
   type AttemptDraft,
   type SessionState,
 } from './sessionState';
+import { topicInfo } from './topicLookup';
 
 export interface SessionRunner {
   state: SessionState | null;
@@ -52,6 +56,8 @@ export interface SessionRunner {
   startExercises: () => void;
   submit: (response: ExerciseResponse) => void;
   selfGrade: (grade: SelfGrade) => void;
+  /** "Skip — grade myself" while the AI check is running. */
+  skipAi: () => void;
   next: () => void;
   stop: () => void;
 }
@@ -66,6 +72,8 @@ function toAttemptRow(draft: AttemptDraft, sessionId: string, practice: boolean)
     correct: draft.correct,
     ...(draft.diacriticsOk !== null ? { diacriticsOk: draft.diacriticsOk } : {}),
     ...(draft.selfGraded ? { selfGraded: true } : {}),
+    ...(draft.gradedBy ? { gradedBy: draft.gradedBy } : {}),
+    ...(draft.aiVerdict ? { aiVerdict: draft.aiVerdict } : {}),
     ...(practice ? { practice: true } : {}),
     block: draft.block,
     answer: draft.answer,
@@ -94,6 +102,9 @@ export function useSessionRunner(
   const progressRef = useRef<TopicProgress[]>([]);
   /** Per-exercise answer history of the course, kept current as answers are recorded. */
   const historyRef = useRef<ReadonlyMap<string, ExerciseHistory>>(new Map());
+  const ai = useAiCheck(settings);
+  /** Draft id of the answer whose AI check is in flight, or null. */
+  const pendingAiRef = useRef<string | null>(null);
 
   const planInput = useCallback(
     (now: number): PlanInput | null =>
@@ -168,7 +179,7 @@ export function useSessionRunner(
           resume ||
           (resumesSnapshot(stored, focusTopicId) && stored.state.programId === program.id)
         ) {
-          dispatch({ type: 'init', state: stored.state });
+          dispatch({ type: 'init', state: settleResumedState(stored.state) });
           return;
         }
         await discardActiveSession(stored);
@@ -249,21 +260,81 @@ export function useSessionRunner(
       const item = currentItem(state);
       if (!item || state.phase !== 'exercise') return;
       const answer = responseToText(response);
+      const aboutMe = item.exercise.type === 'about_me' && response.kind !== 'selfGrade';
+      const result = aboutMe ? null : checkAnswer(item.exercise, item.mode, response);
+      const pendingResult = {
+        correct: false,
+        diacriticsOk: null,
+        expected: expectedAnswerText(item.exercise),
+      };
 
-      if (item.exercise.type === 'about_me' && response.kind !== 'selfGrade') {
-        dispatch({
-          type: 'awaitSelfGrade',
-          answer,
-          result: {
-            correct: false,
-            diacriticsOk: null,
-            expected: expectedAnswerText(item.exercise),
-          },
-        });
+      // The AI only ever runs when switched on with a key, for a typed open answer the
+      // local check did not accept (docs/stage-7-spec.md §2).
+      const route = ai.route({
+        mode: item.mode,
+        exerciseType: item.exercise.type,
+        locallyCorrect: result?.correct ?? false,
+      });
+
+      if (route === 'fallback') {
+        dispatch({ type: 'awaitSelfGrade', answer, result: pendingResult, aiFallback: true });
         return;
       }
 
-      const result = checkAnswer(item.exercise, item.mode, response);
+      if (route === 'ai') {
+        const draftId = `${state.sessionId}-${item.exercise.id}`;
+        const { sessionId, programId } = state;
+        const practice = state.plan.kind === 'practice';
+        pendingAiRef.current = draftId;
+        dispatch({ type: 'awaitAi', answer, result: pendingResult });
+        ai.start(
+          {
+            targetLanguage: program?.targetLanguage ?? 'pt-PT',
+            topicTitle: topicInfo(program, item.topicId).title,
+            exercise: item.exercise,
+            learnerAnswer: answer,
+          },
+          (outcome) => {
+            if (pendingAiRef.current !== draftId) return;
+            pendingAiRef.current = null;
+            if (outcome.kind !== 'verdict') {
+              dispatch({ type: 'aiUnavailable' });
+              return;
+            }
+            const { verdict, correction, explanation } = outcome.result;
+            // "almost" counts as correct.
+            const correct = verdict !== 'incorrect';
+            const draft: AttemptDraft = {
+              id: draftId,
+              exerciseId: item.exercise.id,
+              topicId: item.topicId,
+              mode: item.mode,
+              block: item.block,
+              correct,
+              diacriticsOk: null,
+              answer,
+              at: Date.now(),
+              gradedBy: 'ai',
+              aiVerdict: verdict,
+            };
+            dispatch({
+              type: 'submit',
+              draft,
+              result: { ...pendingResult, correct },
+              response,
+              ai: { verdict, correction, explanation },
+            });
+            void record(draft, sessionId, programId, practice);
+          }
+        );
+        return;
+      }
+
+      if (!result) {
+        dispatch({ type: 'awaitSelfGrade', answer, result: pendingResult });
+        return;
+      }
+
       const draft: AttemptDraft = {
         id: `${state.sessionId}-${item.exercise.id}`,
         exerciseId: item.exercise.id,
@@ -274,15 +345,25 @@ export function useSessionRunner(
         diacriticsOk: result.diacriticsOk,
         answer,
         at: Date.now(),
+        gradedBy: 'local',
       };
       dispatch({ type: 'submit', draft, result, response });
       void record(draft, state.sessionId, state.programId, state.plan.kind === 'practice');
     },
-    [state, record]
+    [state, record, ai, program]
   );
+
+  const skipAi = useCallback(() => {
+    if (!pendingAiRef.current) return;
+    pendingAiRef.current = null;
+    ai.cancel();
+    dispatch({ type: 'aiUnavailable' });
+  }, [ai]);
 
   const next = useCallback(() => {
     if (!state) return;
+    pendingAiRef.current = null;
+    ai.cancel();
     const now = Date.now();
     if (state.plan.open && state.index + 1 >= state.plan.items.length) {
       const input = planInput(now);
@@ -293,7 +374,7 @@ export function useSessionRunner(
       }
     }
     dispatch({ type: 'next', now });
-  }, [state, planInput]);
+  }, [state, planInput, ai]);
 
   const selfGrade = useCallback(
     (grade: SelfGrade) => {
@@ -301,11 +382,7 @@ export function useSessionRunner(
       const item = currentItem(state);
       if (!item) return;
       const answer = state.feedback.answer;
-      const result = checkAnswer(item.exercise, item.mode, {
-        kind: 'selfGrade',
-        text: answer,
-        grade,
-      });
+      const result = selfGradedResult(item.exercise, grade);
       const draft: AttemptDraft = {
         id: `${state.sessionId}-${item.exercise.id}`,
         exerciseId: item.exercise.id,
@@ -317,6 +394,7 @@ export function useSessionRunner(
         answer,
         at: Date.now(),
         selfGraded: true,
+        gradedBy: 'self',
       };
       dispatch({ type: 'submit', draft, result });
       void record(draft, state.sessionId, state.programId, state.plan.kind === 'practice');
@@ -326,7 +404,11 @@ export function useSessionRunner(
     [state, record, next]
   );
 
-  const stop = useCallback(() => dispatch({ type: 'stop', now: Date.now() }), []);
+  const stop = useCallback(() => {
+    pendingAiRef.current = null;
+    ai.cancel();
+    dispatch({ type: 'stop', now: Date.now() });
+  }, [ai]);
 
-  return { state, outcomes, startExercises, submit, selfGrade, next, stop };
+  return { state, outcomes, startExercises, submit, selfGrade, skipAi, next, stop };
 }

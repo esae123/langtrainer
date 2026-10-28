@@ -25,6 +25,7 @@ interface ExercisePanelProps {
   onSubmit: (response: ExerciseResponse) => void;
   onContinue: () => void;
   onSelfGrade: (grade: SelfGrade) => void;
+  onSkipAi: () => void;
   onStop: () => void;
 }
 
@@ -40,6 +41,7 @@ export function ExercisePanel({
   onSubmit,
   onContinue,
   onSelfGrade,
+  onSkipAi,
   onStop,
 }: ExercisePanelProps) {
   const t = useT();
@@ -125,6 +127,7 @@ export function ExercisePanel({
           feedback={feedback}
           onContinue={onContinue}
           onSelfGrade={onSelfGrade}
+          onSkipAi={onSkipAi}
         />
       )}
     </div>

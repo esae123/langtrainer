@@ -140,21 +140,41 @@ route ultimately loads the same `index.html`.
    completion count never move. Exercises you got wrong are offered first in later
    regular sessions until you answer them correctly.
 
+## AI check of typed answers (optional)
+
+When a typed answer to an open exercise (build a phrase, question for an answer,
+about me) isn't accepted by the app's own check, an OpenAI model can judge it
+instead: correct, almost right (counts as correct) or not quite, with a
+correction and a one-line explanation. It is off by default; without it the
+app works exactly as before.
+
+1. Create an API key at [platform.openai.com](https://platform.openai.com/api-keys)
+   (the account needs a little prepaid credit).
+2. Settings → AI: paste the key, keep the default model (`gpt-5.4-mini` — a
+   mini-class model is enough), tap **Test connection**, then switch on
+   **Check typed answers with AI**.
+
+Cost: one check is a few hundred tokens, so even hundreds of checks a month cost
+cents on a mini model. Settings shows "AI checks this month: N · ~T tokens".
+The key is stored only on this device and never exported; the typed answers you
+submit for checking are sent to OpenAI. Offline, or if the key is invalid or the
+credit has run out, you grade the answer yourself (Yes / Mostly / No).
+
 ## How backups work
 
 - **Export** (Settings → Backup → Export backup, or the reminder banner on the
   Learn screen): gathers every Dexie table into one JSON file named
   `langtrainer-backup-YYYY-MM-DD.json`. On Android, this uses the Web Share API
   so you can save it to Drive, send it to yourself, etc.; elsewhere it falls
-  back to a normal file download. **The Gemini API key is never included** —
-  it's stripped from the exported settings and only ever lives in this
+  back to a normal file download. **API keys are never included** —
+  they're stripped from the exported settings and only ever live in this
   device's IndexedDB.
 - **Import** (Settings → Backup → Import backup): pick a previously exported
   `.json` file. After confirming ("this replaces all current data"), the app
   validates the file's shape and schema version, then replaces every table's
-  contents in a single Dexie transaction. Your current device's Gemini API key
-  is always preserved, even if the backup was made without one or on another
-  device.
+  contents in a single Dexie transaction. Your current device's OpenAI API key
+  and AI-check switch are always preserved, even if the backup was made without
+  them or on another device.
 - `lastBackupAt` is recorded in settings and shown in **Settings → Backup**; a
   banner nudges you to back up if you never have, or it's been more than 7
   days.

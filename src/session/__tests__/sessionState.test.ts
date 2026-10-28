@@ -8,6 +8,7 @@ import {
   currentItem,
   initSessionState,
   sessionReducer,
+  settleResumedState,
   type AttemptDraft,
   type SessionState,
 } from '../sessionState';
@@ -133,5 +134,49 @@ describe('sessionReducer', () => {
 
   it('ignores actions before init', () => {
     expect(sessionReducer(null, { type: 'next', now: NOW })).toBeNull();
+  });
+});
+
+describe('AI check states (docs/stage-7-spec.md)', () => {
+  const pending: CheckResult = { correct: false, diacriticsOk: null, expected: 'x' };
+
+  function inExercise(): SessionState {
+    return sessionReducer(initSessionState(makePlan(5), NOW), { type: 'showExercise' })!;
+  }
+
+  it('awaitAi shows a pending feedback without recording anything', () => {
+    const state = sessionReducer(inExercise(), { type: 'awaitAi', result: pending, answer: 'a' })!;
+    expect(state.phase).toBe('feedback');
+    expect(state.feedback).toMatchObject({ aiPending: true, awaitingSelfGrade: false });
+    expect(state.responses).toHaveLength(0);
+  });
+
+  it('aiUnavailable turns a pending check into the self-grade fallback', () => {
+    let state = sessionReducer(inExercise(), { type: 'awaitAi', result: pending, answer: 'a' })!;
+    state = sessionReducer(state, { type: 'aiUnavailable' })!;
+    expect(state.feedback).toMatchObject({ awaitingSelfGrade: true, aiFallback: true });
+    expect(state.feedback?.aiPending).toBeUndefined();
+  });
+
+  it('aiUnavailable is ignored once the verdict is in', () => {
+    let state = inExercise();
+    state = sessionReducer(state, {
+      type: 'submit',
+      draft: { ...draftFor(state, true), gradedBy: 'ai', aiVerdict: 'almost' },
+      result,
+      ai: { verdict: 'almost', correction: 'c', explanation: 'e' },
+    })!;
+    expect(sessionReducer(state, { type: 'aiUnavailable' })).toBe(state);
+    expect(state.feedback?.ai?.verdict).toBe('almost');
+  });
+
+  it('a snapshot saved mid-check resumes as the self-grade fallback', () => {
+    const state = sessionReducer(inExercise(), { type: 'awaitAi', result: pending, answer: 'a' })!;
+    expect(settleResumedState(state).feedback).toMatchObject({
+      awaitingSelfGrade: true,
+      aiFallback: true,
+    });
+    const plain = inExercise();
+    expect(settleResumedState(plain)).toBe(plain);
   });
 });

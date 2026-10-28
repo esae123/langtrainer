@@ -137,6 +137,14 @@ export function expectedAnswerText(exercise: Exercise): string {
   }
 }
 
+/**
+ * The learner's own verdict on any exercise (about_me, or an open answer the AI check
+ * was supposed to grade but could not): Yes/Mostly count as correct.
+ */
+export function selfGradedResult(exercise: Exercise, grade: SelfGrade): CheckResult {
+  return { correct: grade !== 'no', diacriticsOk: null, expected: expectedAnswerText(exercise) };
+}
+
 export interface PairGrade {
   target: string;
   /** What the learner linked to this target, or `undefined` if it stayed unpaired. */
