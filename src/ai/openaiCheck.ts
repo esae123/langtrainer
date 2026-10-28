@@ -7,7 +7,8 @@ import type { Exercise, ExerciseType, InputMode } from '../content/types';
 export type AiVerdict = 'correct' | 'almost' | 'incorrect';
 
 export const OPENAI_CHAT_URL = 'https://api.openai.com/v1/chat/completions';
-export const AI_MAX_COMPLETION_TOKENS = 400;
+// Reasoning tokens count toward this limit on reasoning models; only tokens actually used are billed.
+export const AI_MAX_COMPLETION_TOKENS = 2000;
 export const AI_REASONING_EFFORT = 'low';
 export const AI_TIMEOUT_MS = 15_000;
 export const AI_RETRY_DELAY_MS = 2_000;

@@ -174,7 +174,7 @@ describe('request shape', () => {
     expect(body.model).toBe('gpt-5.4-mini');
     expect(body.response_format).toEqual({ type: 'json_object' });
     expect(body.max_completion_tokens).toBe(AI_MAX_COMPLETION_TOKENS);
-    expect(body.max_completion_tokens).toBe(400);
+    expect(body.max_completion_tokens).toBe(2000);
     expect(body.reasoning_effort).toBe('low');
     expect(body).not.toHaveProperty('temperature');
     expect(body.messages[0]).toEqual({ role: 'system', content: buildSystemPrompt('pt-PT') });

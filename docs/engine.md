@@ -241,7 +241,7 @@ completion, SRS; practice sessions stay practice).
   correct). When the switch is off or there is no key nothing changes and no request is
   ever made.
 - **Request** — `POST https://api.openai.com/v1/chat/completions`, `Bearer` key,
-  `response_format: json_object`, `max_completion_tokens: 400`, `reasoning_effort: "low"`,
+  `response_format: json_object`, `max_completion_tokens: 2000` (reasoning tokens count toward it), `reasoning_effort: "low"`,
   no temperature, 15 s timeout. The system prompt (`buildSystemPrompt`) is a fair teacher
   grading one answer in the course's target language (pt-PT: European Portuguese only);
   the user message carries the exercise (prompt, type, model answer + accepted answers, or
