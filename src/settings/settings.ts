@@ -33,8 +33,16 @@ export interface Settings {
   sessionMix: SessionMix;
   /** Show "first letter + length" under the prompt in typing mode. */
   typingHint: boolean;
-  /** Stored locally only. Never included in backup export; masked in the UI. */
+  /**
+   * Legacy (pre-Stage 7) key: kept in the stored blob untouched but unused and never
+   * shown. Never included in backup export.
+   */
   geminiApiKey: string;
+  /** Check typed answers the local check rejected with OpenAI (docs/stage-7-spec.md). */
+  aiCheckEnabled: boolean;
+  /** Stored locally only. Never included in backup export; masked in the UI. */
+  openaiApiKey: string;
+  openaiModel: string;
   generateOnlyOnWifi: boolean;
   lastBackupAt: number | null;
 }
@@ -58,6 +66,8 @@ export const DEFAULT_SESSION_MIX: SessionMix = {
   shares: SESSION_MIX_PRESETS.balanced,
 };
 
+export const DEFAULT_OPENAI_MODEL = 'gpt-5.4-mini';
+
 export const DEFAULT_SETTINGS: Settings = {
   uiLanguage: 'en',
   theme: 'system',
@@ -71,6 +81,9 @@ export const DEFAULT_SETTINGS: Settings = {
   sessionMix: DEFAULT_SESSION_MIX,
   typingHint: true,
   geminiApiKey: '',
+  aiCheckEnabled: false,
+  openaiApiKey: '',
+  openaiModel: DEFAULT_OPENAI_MODEL,
   generateOnlyOnWifi: true,
   lastBackupAt: null,
 };

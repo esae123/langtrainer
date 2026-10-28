@@ -309,3 +309,65 @@ describe('parseBackup / importBackup rejects malformed input', () => {
     ).toThrow(/generatedExercises/);
   });
 });
+
+describe('AI check settings in backups (docs/stage-7-spec.md §1, §5)', () => {
+  it('never exports the OpenAI API key', async () => {
+    await updateSettings({ openaiApiKey: 'sk-very-secret', aiCheckEnabled: true });
+    const backup = await buildBackup();
+    const settingsRow = backup.data.settings.find((row) => row.key === 'settings');
+    expect(settingsRow?.value).not.toHaveProperty('openaiApiKey');
+    expect(JSON.stringify(backup)).not.toContain('sk-very-secret');
+  });
+
+  it("keeps the current device's key and switch on import", async () => {
+    await updateSettings({ openaiApiKey: 'sk-device-a', aiCheckEnabled: false, uiLanguage: 'ru' });
+    const backup = await buildBackup();
+    // A hand-edited file must not be able to override them either.
+    const row = backup.data.settings.find((entry) => entry.key === 'settings');
+    Object.assign(row?.value as Record<string, unknown>, {
+      openaiApiKey: 'sk-from-file',
+      aiCheckEnabled: true,
+    });
+
+    await clearAllTables();
+    await updateSettings({ openaiApiKey: 'sk-device-b', aiCheckEnabled: true });
+    const file = new File([JSON.stringify(backup)], 'backup.json', { type: 'application/json' });
+    await importBackup(file);
+
+    const settings = await loadSettings();
+    expect(settings.openaiApiKey).toBe('sk-device-b');
+    expect(settings.aiCheckEnabled).toBe(true);
+    expect(settings.uiLanguage).toBe('ru');
+  });
+
+  it('round-trips gradedBy and aiVerdict on attempts', async () => {
+    await db.attempts.put({
+      id: 'ai1',
+      sessionId: 's1',
+      exerciseId: 'e1',
+      topicId: 't1',
+      mode: 'typing',
+      correct: true,
+      answer: 'Eu fala inglês',
+      at: 1,
+      gradedBy: 'ai',
+      aiVerdict: 'almost',
+    });
+    const backup = await buildBackup();
+    await clearAllTables();
+    const file = new File([JSON.stringify(backup)], 'backup.json', { type: 'application/json' });
+    await importBackup(file);
+    expect(await db.attempts.get('ai1')).toMatchObject({ gradedBy: 'ai', aiVerdict: 'almost' });
+  });
+
+  it('migrates settings stored before Stage 7 with the AI defaults', async () => {
+    await db.settings.put({ key: 'settings', value: { uiLanguage: 'ru', geminiApiKey: 'old' } });
+    const settings = await loadSettings();
+    expect(settings).toMatchObject({
+      aiCheckEnabled: false,
+      openaiApiKey: '',
+      openaiModel: 'gpt-5.4-mini',
+      geminiApiKey: 'old',
+    });
+  });
+});

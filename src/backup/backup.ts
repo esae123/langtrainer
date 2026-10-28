@@ -41,10 +41,10 @@ export interface BackupFile {
 
 const SETTINGS_ROW_KEY = 'settings';
 
-/** Removes the Gemini API key from a settings value before it leaves the device. */
+/** Removes every API key (OpenAI and the legacy Gemini one) before settings leave the device. */
 function stripApiKey(value: unknown): unknown {
   if (!isRecord(value)) return value;
-  const { geminiApiKey: _omit, ...rest } = value;
+  const { geminiApiKey: _gemini, openaiApiKey: _openai, ...rest } = value;
   return rest;
 }
 
@@ -79,7 +79,7 @@ export function backupFilename(date = new Date()): string {
 
 export type ExportOutcome = ShareOutcome;
 
-/** Exports all data (minus the API key) via the Web Share API, falling back to a download link. */
+/** Exports all data (minus the API keys) via the Web Share API, falling back to a download link. */
 export async function exportBackup(): Promise<ExportOutcome> {
   const backup = await buildBackup();
   const filename = backupFilename();
@@ -107,8 +107,8 @@ export function parseBackup(json: unknown): BackupFile {
 
 /**
  * Replaces all local data with the contents of a backup file, inside one Dexie
- * transaction. The device's current Gemini API key is preserved regardless of
- * what the backup contains (it is never included in exports in the first place).
+ * transaction. The device's current API keys and AI-check switch are preserved
+ * regardless of what the backup contains (keys are never exported in the first place).
  */
 export async function importBackup(file: File): Promise<void> {
   const text = await file.text();
@@ -144,6 +144,8 @@ export async function importBackup(file: File): Promise<void> {
       ...DEFAULT_SETTINGS,
       ...(isRecord(importedSettingsRow?.value) ? importedSettingsRow.value : {}),
       geminiApiKey: currentSettings.geminiApiKey,
+      openaiApiKey: currentSettings.openaiApiKey,
+      aiCheckEnabled: currentSettings.aiCheckEnabled,
     };
     await db.settings.put({ key: SETTINGS_ROW_KEY, value: merged });
   });

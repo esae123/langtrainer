@@ -1,4 +1,5 @@
 import Dexie, { type EntityTable } from 'dexie';
+import type { AiVerdict } from '../ai/openaiCheck';
 import type { Exercise, InputMode, Program, Topic } from '../content/types';
 import type { BlockKind } from '../engine/plan';
 import type { TopicProgress, TopicStatus } from '../engine/types';
@@ -51,6 +52,13 @@ export interface AttemptRow {
   practice?: boolean;
   /** The plan block it was answered in (`focus` for focus sessions); absent on older rows. */
   block?: BlockKind;
+  /**
+   * Who decided the verdict (docs/stage-7-spec.md §5): the local check, the OpenAI check
+   * or the learner. Absent on older rows. Not indexed, so no schema bump.
+   */
+  gradedBy?: 'local' | 'ai' | 'self';
+  /** The raw AI verdict when `gradedBy` is `ai` ("almost" is recorded as correct). */
+  aiVerdict?: AiVerdict;
 }
 
 export interface CustomTopicRow {

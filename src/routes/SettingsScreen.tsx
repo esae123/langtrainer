@@ -7,6 +7,7 @@ import {
   Languages,
   Library,
   Palette,
+  PlugZap,
   SlidersHorizontal,
   Sparkles,
   Timer,
@@ -16,6 +17,8 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router';
 import pkg from '../../package.json';
+import { clearAiSuspension, useAiUsage } from '../ai/aiState';
+import { testConnection, type ConnectionResult } from '../ai/openaiCheck';
 import { importBackup } from '../backup/backup';
 import { useExportBackup } from '../backup/useExportBackup';
 import { ConfirmDialog } from '../components/ConfirmDialog';
@@ -39,6 +42,7 @@ import {
   type SessionMixPreset,
   type SessionMixShares,
   type Theme,
+  type Settings,
   type UiLanguage,
 } from '../settings/settings';
 import { updateSettings, useSettings } from '../settings/settingsStore';
@@ -81,6 +85,58 @@ const MIX_FIELDS: { key: keyof SessionMixShares; labelKey: TranslationKey }[] = 
   { key: 'phrases', labelKey: 'settings.mixShares.phrases' },
 ];
 
+type DraftField = 'openaiApiKey' | 'openaiModel';
+
+/**
+ * Local draft + persist-on-blur so a text setting doesn't round-trip through IndexedDB
+ * on every keystroke; a ref tracks "dirty" so an edit is still saved if the user
+ * navigates away without blurring the field first. Changing the key or model lifts an
+ * AI suspension (docs/stage-7-spec.md §4).
+ */
+function useDraftSetting(settings: Settings, field: DraftField) {
+  const stored = settings[field];
+  const [draft, setDraft] = useState(stored);
+  const draftRef = useRef(draft);
+  const dirtyRef = useRef(false);
+
+  useEffect(() => {
+    if (dirtyRef.current) return;
+    setDraft(stored);
+    draftRef.current = stored;
+  }, [stored]);
+
+  useEffect(
+    () => () => {
+      if (!dirtyRef.current) return;
+      clearAiSuspension();
+      void updateSettings({ [field]: draftRef.current.trim() });
+    },
+    [field]
+  );
+
+  function change(value: string) {
+    dirtyRef.current = true;
+    draftRef.current = value;
+    setDraft(value);
+  }
+
+  /** Saves a pending edit; resolves once it is written. */
+  async function persist(): Promise<void> {
+    if (!dirtyRef.current) return;
+    dirtyRef.current = false;
+    clearAiSuspension();
+    await updateSettings({ [field]: draftRef.current.trim() });
+  }
+
+  return { draft, change, persist };
+}
+
+type TestStatus =
+  | { kind: 'idle' }
+  | { kind: 'noKey' }
+  | { kind: 'testing' }
+  | { kind: 'done'; result: ConnectionResult };
+
 export function SettingsScreen() {
   const t = useT();
   const settings = useSettings();
@@ -90,41 +146,50 @@ export function SettingsScreen() {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const uiLanguageSelectId = useId();
   const apiKeyInputId = useId();
+  const modelInputId = useId();
+  const apiKeyHelpId = useId();
+  const modelHintId = useId();
+  const aiUsage = useAiUsage();
 
   const [showApiKey, setShowApiKey] = useState(false);
+  const [testStatus, setTestStatus] = useState<TestStatus>({ kind: 'idle' });
   const [pendingImportFile, setPendingImportFile] = useState<File | null>(null);
   const [resetConfirmOpen, setResetConfirmOpen] = useState(false);
 
-  // Local draft + persist-on-blur so the API key doesn't round-trip through
-  // IndexedDB on every keystroke; a ref tracks "dirty" so an edit is still
-  // saved if the user navigates away without blurring the field first.
-  const [apiKeyDraft, setApiKeyDraft] = useState(settings.geminiApiKey);
-  const apiKeyDraftRef = useRef(apiKeyDraft);
-  const apiKeyDirtyRef = useRef(false);
+  const apiKey = useDraftSetting(settings, 'openaiApiKey');
+  const model = useDraftSetting(settings, 'openaiModel');
 
-  useEffect(() => {
-    if (apiKeyDirtyRef.current) return;
-    setApiKeyDraft(settings.geminiApiKey);
-    apiKeyDraftRef.current = settings.geminiApiKey;
-  }, [settings.geminiApiKey]);
-
-  useEffect(
-    () => () => {
-      if (apiKeyDirtyRef.current) void updateSettings({ geminiApiKey: apiKeyDraftRef.current });
-    },
-    []
-  );
-
-  function handleApiKeyChange(value: string) {
-    apiKeyDirtyRef.current = true;
-    apiKeyDraftRef.current = value;
-    setApiKeyDraft(value);
+  async function handleTestConnection() {
+    await Promise.all([apiKey.persist(), model.persist()]);
+    if (apiKey.draft.trim() === '') {
+      setTestStatus({ kind: 'noKey' });
+      return;
+    }
+    setTestStatus({ kind: 'testing' });
+    const result = await testConnection(apiKey.draft, model.draft.trim() || settings.openaiModel);
+    setTestStatus({ kind: 'done', result });
   }
 
-  function persistApiKeyIfDirty() {
-    if (!apiKeyDirtyRef.current) return;
-    apiKeyDirtyRef.current = false;
-    void updateSettings({ geminiApiKey: apiKeyDraftRef.current });
+  function testStatusText(status: TestStatus): string {
+    if (status.kind === 'idle') return '';
+    if (status.kind === 'noKey') return t('settings.aiTestNoKey');
+    if (status.kind === 'testing') return t('settings.aiTesting');
+    const { result } = status;
+    if (result.ok) return t('settings.aiTestOk');
+    switch (result.reason) {
+      case 'invalidKey':
+        return t('settings.aiTestInvalidKey');
+      case 'noCredit':
+        return t('settings.aiTestNoCredit');
+      case 'network':
+        return t('settings.aiTestNetwork');
+      case 'timeout':
+        return t('settings.aiTestTimeout');
+      default:
+        return t('settings.aiTestError', {
+          message: result.message ?? `HTTP ${result.status ?? '?'}`,
+        });
+    }
   }
 
   function handlePresetChange(preset: InputPreset) {
@@ -367,30 +432,108 @@ export function SettingsScreen() {
         title={t('settings.ai')}
         icon={<Sparkles size={14} strokeWidth={2} aria-hidden />}
       >
+        <div className="flex items-center justify-between gap-3 px-4 py-3">
+          <span className="flex min-w-0 flex-col">
+            <span className="break-words text-sm font-medium text-text">
+              {t('settings.aiCheck')}
+            </span>
+            <span className="break-words text-xs text-muted">{t('settings.aiCheckHelp')}</span>
+          </span>
+          <Toggle
+            checked={settings.aiCheckEnabled}
+            onChange={(checked) => {
+              clearAiSuspension();
+              void updateSettings({ aiCheckEnabled: checked });
+            }}
+            label={t('settings.aiCheck')}
+          />
+        </div>
         <div className="flex flex-col gap-2 px-4 py-3">
           <label htmlFor={apiKeyInputId} className="text-sm font-medium text-text">
-            {t('settings.geminiApiKey')}
+            {t('settings.openaiApiKey')}
           </label>
           <div className="flex gap-2">
             <input
               id={apiKeyInputId}
               type={showApiKey ? 'text' : 'password'}
-              value={apiKeyDraft}
-              onChange={(e) => handleApiKeyChange(e.target.value)}
-              onBlur={persistApiKeyIfDirty}
-              placeholder="AIza…"
+              value={apiKey.draft}
+              onChange={(e) => {
+                apiKey.change(e.target.value);
+                setTestStatus({ kind: 'idle' });
+              }}
+              onBlur={() => void apiKey.persist()}
+              placeholder="sk-…"
               autoComplete="off"
-              className="min-h-11 flex-1 rounded-lg border border-line bg-sheet px-3 text-sm text-text"
+              spellCheck={false}
+              aria-describedby={apiKeyHelpId}
+              className="min-h-11 min-w-0 flex-1 rounded-lg border border-line bg-sheet px-3 text-sm text-text"
             />
             <button
               type="button"
               onClick={() => setShowApiKey((v) => !v)}
-              className="min-h-11 rounded-lg border border-line px-3 text-sm font-medium text-muted"
+              className="min-h-11 shrink-0 rounded-lg border border-line px-3 text-sm font-medium text-muted"
             >
-              {showApiKey ? t('settings.geminiApiKeyHide') : t('settings.geminiApiKeyShow')}
+              {showApiKey ? t('settings.apiKeyHide') : t('settings.apiKeyShow')}
             </button>
           </div>
-          <p className="text-xs text-muted">{t('settings.geminiApiKeyHelp')}</p>
+          <p id={apiKeyHelpId} className="break-words text-xs text-muted">
+            {t('settings.openaiApiKeyHelp')}
+          </p>
+        </div>
+        <div className="flex flex-col gap-2 px-4 py-3">
+          <label htmlFor={modelInputId} className="text-sm font-medium text-text">
+            {t('settings.openaiModel')}
+          </label>
+          <input
+            id={modelInputId}
+            type="text"
+            value={model.draft}
+            onChange={(e) => {
+              model.change(e.target.value);
+              setTestStatus({ kind: 'idle' });
+            }}
+            onBlur={() => void model.persist()}
+            autoComplete="off"
+            autoCapitalize="off"
+            spellCheck={false}
+            aria-describedby={modelHintId}
+            className="min-h-11 w-full min-w-0 rounded-lg border border-line bg-sheet px-3 text-sm text-text"
+          />
+          <p id={modelHintId} className="text-xs text-muted">
+            {t('settings.openaiModelHint')}
+          </p>
+        </div>
+        <div className="flex flex-col gap-2 px-4 py-3">
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              disabled={testStatus.kind === 'testing'}
+              onClick={() => void handleTestConnection()}
+              className="flex min-h-11 items-center gap-2 rounded-lg border border-line px-4 text-sm font-semibold text-text disabled:text-muted"
+            >
+              <PlugZap size={18} strokeWidth={2} aria-hidden />
+              {t('settings.aiTest')}
+            </button>
+            <p
+              role="status"
+              aria-live="polite"
+              className={`min-w-0 flex-1 break-words text-sm ${
+                testStatus.kind === 'done' && testStatus.result.ok
+                  ? 'text-ok'
+                  : testStatus.kind === 'done' || testStatus.kind === 'noKey'
+                    ? 'text-bad'
+                    : 'text-muted'
+              }`}
+            >
+              {testStatusText(testStatus)}
+            </p>
+          </div>
+          <p className="text-xs text-muted">
+            {t('settings.aiUsage', {
+              checks: aiUsage?.checks ?? 0,
+              tokens: (aiUsage?.tokens ?? 0).toLocaleString('en'),
+            })}
+          </p>
         </div>
         <div className="flex items-center justify-between gap-3 px-4 py-3">
           <span className="text-sm font-medium text-text">{t('settings.wifiOnly')}</span>

@@ -1,5 +1,5 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import App from '../App';
 import { db } from '../db/db';
 import type { SettingsRow } from '../db/db';
@@ -10,10 +10,10 @@ afterEach(async () => {
   await Promise.all(db.tables.map((table) => table.clear()));
 });
 
-async function readStoredGeminiApiKey(): Promise<string | undefined> {
+async function readStoredOpenaiApiKey(): Promise<string | undefined> {
   const row = (await db.settings.get('settings')) as SettingsRow | undefined;
-  const value = row?.value as { geminiApiKey?: string } | undefined;
-  return value?.geminiApiKey;
+  const value = row?.value as { openaiApiKey?: string } | undefined;
+  return value?.openaiApiKey;
 }
 
 describe('App', () => {
@@ -44,19 +44,47 @@ describe('App', () => {
     window.location.hash = '#/settings';
     render(<App />);
     expect(await screen.findByLabelText(/app language/i)).toBeInTheDocument();
-    expect(screen.getByLabelText(/gemini api key/i)).toBeInTheDocument();
+    expect(screen.getByLabelText(/openai api key/i)).toBeInTheDocument();
+    // Gemini is gone from the UI (docs/stage-7-spec.md §1).
+    expect(screen.queryByText(/gemini/i)).not.toBeInTheDocument();
   });
 
-  it('persists the Gemini API key on blur, not on every keystroke', async () => {
+  it('persists the OpenAI API key on blur, not on every keystroke', async () => {
     window.location.hash = '#/settings';
     render(<App />);
-    const input = await screen.findByLabelText(/gemini api key/i);
+    const input = await screen.findByLabelText(/openai api key/i);
 
-    fireEvent.change(input, { target: { value: 'AIza-test-key' } });
-    expect(await readStoredGeminiApiKey()).not.toBe('AIza-test-key');
+    fireEvent.change(input, { target: { value: 'sk-test-key' } });
+    expect(await readStoredOpenaiApiKey()).not.toBe('sk-test-key');
 
     fireEvent.blur(input);
-    await waitFor(async () => expect(await readStoredGeminiApiKey()).toBe('AIza-test-key'));
+    await waitFor(async () => expect(await readStoredOpenaiApiKey()).toBe('sk-test-key'));
+  });
+
+  it('AI check: off by default, Test connection reports Connected with a mocked fetch', async () => {
+    const fetchMock = vi.fn(async () => new Response('{}', { status: 200 }));
+    vi.stubGlobal('fetch', fetchMock);
+    try {
+      window.location.hash = '#/settings';
+      render(<App />);
+      const toggle = await screen.findByRole('switch', { name: 'Check typed answers with AI' });
+      expect(toggle).toHaveAttribute('aria-checked', 'false');
+      expect(screen.getByLabelText('Model')).toHaveValue('gpt-5.4-mini');
+      expect(screen.getByText('AI checks this month: 0 · ~0 tokens')).toBeInTheDocument();
+
+      fireEvent.click(screen.getByRole('button', { name: 'Test connection' }));
+      expect(await screen.findByText('Enter an API key first')).toBeInTheDocument();
+      expect(fetchMock).not.toHaveBeenCalled();
+
+      fireEvent.change(screen.getByLabelText(/openai api key/i), {
+        target: { value: 'sk-settings-test' },
+      });
+      fireEvent.click(screen.getByRole('button', { name: 'Test connection' }));
+      expect(await screen.findByText('Connected')).toBeInTheDocument();
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+    } finally {
+      vi.unstubAllGlobals();
+    }
   });
 
   it('keeps the backup reminder dismissed for the session across a route change', async () => {

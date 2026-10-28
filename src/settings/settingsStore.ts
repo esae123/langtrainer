@@ -1,7 +1,12 @@
 import { createContext, useContext } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../db/db';
-import { DEFAULT_SETTINGS, sanitizeSessionMix, type Settings } from './settings';
+import {
+  DEFAULT_OPENAI_MODEL,
+  DEFAULT_SETTINGS,
+  sanitizeSessionMix,
+  type Settings,
+} from './settings';
 
 const SETTINGS_ROW_KEY = 'settings';
 
@@ -9,6 +14,12 @@ function mergeWithDefaults(value: unknown): Settings {
   const merged: Settings = { ...DEFAULT_SETTINGS, ...(value as Partial<Settings>) };
   // Nested and added in Stage 5: fill it in (or repair it) instead of trusting the blob.
   merged.sessionMix = sanitizeSessionMix(merged.sessionMix);
+  // Added in Stage 7: repair anything that isn't the expected type.
+  if (typeof merged.aiCheckEnabled !== 'boolean') merged.aiCheckEnabled = false;
+  if (typeof merged.openaiApiKey !== 'string') merged.openaiApiKey = '';
+  if (typeof merged.openaiModel !== 'string' || merged.openaiModel.trim() === '') {
+    merged.openaiModel = DEFAULT_OPENAI_MODEL;
+  }
   return merged;
 }
 
