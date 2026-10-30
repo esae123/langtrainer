@@ -1,0 +1,34 @@
+{
+  "id": "m6",
+  "title": "Unit 7 — Eu e o mundo do trabalho",
+  "description": "Look for work, apply and attend an interview, understand contracts and working conditions, and talk about past work with the Pretérito Perfeito.",
+  "topics": [
+    {
+      "id": "pla-m6-job-search-cv",
+      "title": "Looking for a job, CV and interview",
+      "kind": "vocabulary",
+      "count": 30,
+      "brief": "Job search: procurar emprego, anúncio de trabalho, oferta de emprego, candidatar-se, candidatura, currículo (CV), carta de apresentação, entrevista de trabalho, habilitações académicas, experiência profissional, carta de condução, disponibilidade; interview questions in the formal register (Que experiência tem?, Fala inglês?, Tem disponibilidade para trabalhar ao fim de semana?); nouns from verbs with -ção (candidatar-se → candidatura, inscrever-se → inscrição, marcar → marcação, informar → informação); sectors: construção civil, comércio, restauração e hotelaria, agricultura, indústria, saúde, logística, limpezas.",
+      "known": "Modules 1–5.",
+      "avoid": "past tenses (they start in pla-m6-pps-work-experience), subjunctive, conditional except polite chunks."
+    },
+    {
+      "id": "pla-m6-contracts-conditions",
+      "title": "Contracts and working conditions",
+      "kind": "vocabulary",
+      "count": 30,
+      "brief": "Contracts and conditions: contrato a termo certo / sem termo, período experimental, prestação de serviços (recibos verdes), salário / ordenado / remuneração, salário mínimo, recibo de vencimento, horário de trabalho, part-time / tempo inteiro, turnos, folga, férias, subsídio de refeição, subsídio de Natal e de férias, descontos para a Segurança Social; questions to an employer (Qual é o horário?, Quantos dias de férias tenho?).",
+      "known": "Modules 1–5, pla-m6-job-search-cv.",
+      "avoid": "past tenses, subjunctive, conditional except polite chunks."
+    },
+    {
+      "id": "pla-m6-pps-work-experience",
+      "title": "Talking about past work: Pretérito Perfeito",
+      "kind": "grammar",
+      "count": 30,
+      "brief": "Pretérito Perfeito Simples: regular -ar (trabalhei, trabalhaste, trabalhou, trabalhámos, trabalharam), -er and -ir (aprendi, decidi); spelling changes ficar → fiquei, chegar → cheguei, começar → comecei, pagar → paguei; key irregular verbs fazer (fiz, fez), dizer (disse), ver (vi, viu), vir (vim, veio), dar (dei, deu), ter (tive, teve), ser / ir (fui, foi); time markers ontem, no ano passado, há dois anos, durante três anos; Onde trabalhou antes? — Trabalhei como ajudante de cozinha durante dois anos.",
+      "known": "Modules 1–5, earlier module 6 topics.",
+      "avoid": "Pretérito Imperfeito (comes in module 7), subjunctive, conditional."
+    }
+  ]
+}

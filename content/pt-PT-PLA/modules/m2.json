@@ -1,0 +1,43 @@
+{
+  "id": "m2",
+  "title": "Unit 3 — O dia a dia: routine, family, time and plans",
+  "description": "Describe a daily routine with reflexive and regular -er/-ir verbs, talk about family, tell the time and dates, say what is happening now and future plans.",
+  "topics": [
+    {
+      "id": "pla-m2-daily-routine",
+      "title": "Daily routine and reflexive verbs",
+      "kind": "grammar",
+      "count": 30,
+      "brief": "Daily routine (acordar, levantar-se, tomar banho, vestir-se, tomar o pequeno-almoço, ir para o trabalho, almoçar, jantar, deitar-se); reflexive pronoun placement: after the verb in affirmative sentences (Levanto-me às sete), before it after não, nunca, também, question words (Não me levanto cedo, Também me deito tarde, A que horas te levantas?); regular -er/-ir verbs (viver, escrever, comer, abrir, decidir, partir); costumar + infinitivo; normalmente, sempre (after the verb), nunca.",
+      "known": "Module 1.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m2-family-possessives",
+      "title": "Family and possessives",
+      "kind": "vocabulary",
+      "count": 30,
+      "brief": "Family (pai, mãe, marido, mulher/esposa, filho/filha, irmão/irmã, avós, netos, sogro/sogra, cunhado/a, tio/tia, primo/a); possessives with article (o meu, a tua, o seu, a nossa, os vossos) and o … dele / dela / deles / delas (a casa deles); Tenho dois filhos; Quantos irmãos tem?",
+      "known": "Module 1, pla-m2-daily-routine.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m2-time-calendar",
+      "title": "Time, days, months and time prepositions",
+      "kind": "vocabulary",
+      "count": 30,
+      "brief": "Telling the time (São quatro e meia, É meio-dia, às oito e um quarto, menos dez); days of the week (segunda-feira … domingo), fim de semana, months; time prepositions: às 8h00, na segunda-feira / à segunda-feira (habit), em maio, no fim de semana / ao fim de semana; A que horas…?, Que dia é hoje?",
+      "known": "Module 1, earlier module 2 topics.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m2-now-and-plans",
+      "title": "What is happening now and future plans",
+      "kind": "grammar",
+      "count": 30,
+      "brief": "Estar a + infinitivo for actions happening now (Estou a aprender português, Neste momento estou a trabalhar); ir + infinitivo for plans (No próximo ano vou abrir uma loja, Amanhã vou à Loja do Cidadão); irregular present of ir, ver, ler, sair, fazer; time words agora, neste momento, amanhã, na próxima semana, no próximo ano.",
+      "known": "Module 1, earlier module 2 topics.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    }
+  ]
+}

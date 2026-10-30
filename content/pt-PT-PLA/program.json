@@ -1,0 +1,10 @@
+{
+  "id": "pt-PT-PLA",
+  "title": "Português — PLA (Língua de Acolhimento)",
+  "targetLanguage": "pt-PT",
+  "supportLanguage": "en",
+  "level": "A1–A2",
+  "topicCompletionPolicy": "all-exercises-correct",
+  "moduleOrder": ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8"],
+  "phraseSetOrder": []
+}

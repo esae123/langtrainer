@@ -1,0 +1,34 @@
+{
+  "id": "m5",
+  "title": "Unit 6 — O corpo humano e saúde",
+  "description": "Describe how you feel and your symptoms, deal with the health centre and the pharmacy, and understand medical advice and instructions.",
+  "topics": [
+    {
+      "id": "pla-m5-body-symptoms",
+      "title": "Body, pain and symptoms",
+      "kind": "vocabulary",
+      "count": 30,
+      "brief": "Body parts (cabeça, olhos, nariz, boca, dentes, garganta, pescoço, costas, braço, cotovelo, mão, barriga, perna, joelho, pé); doer with indirect pronouns: dói-me a cabeça / dói-lhe o joelho (one part), doem-me os pés / doem-lhe as costas (plural); sentir-se (Sinto-me mal, Não me sinto bem); symptoms with estar com + noun (estou com febre, com tosse, com gripe) and ter + noun (tenho dores de cabeça, tenho alergia); O que é que sente?",
+      "known": "Modules 1–4.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy",
+      "title": "Health centre, doctor and pharmacy",
+      "kind": "situation",
+      "count": 30,
+      "brief": "Health system: centro de saúde, médico de família, enfermeiro/a, pediatra, utente, número de utente, SNS 24, urgências; marcar / desmarcar uma consulta, receita médica, análises ao sangue, baixa médica; pharmacy: comprimidos, xarope, gotas, pomada, penso, sem receita; doctor's instructions in the formal imperative (Tome estes comprimidos de oito em oito horas, Não se esqueça, Descanse, Beba muita água).",
+      "known": "Modules 1–4, pla-m5-body-symptoms.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice",
+      "title": "Healthy habits and advice",
+      "kind": "grammar",
+      "count": 30,
+      "brief": "Giving and following advice: dever + infinitivo (Deve dormir oito horas), ter de, é melhor + infinitivo; imperative for advice formal and informal (Pratique desporto / Pratica desporto, Coma fruta / Come fruta, Não fume / Não fumes); frequency (todos os dias, duas vezes por semana, de oito em oito horas); healthy food, sleep, stress.",
+      "known": "Modules 1–4, earlier module 5 topics.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "m3",
+  "title": "Unit 4 — Alimentação: food, shops and eating out",
+  "description": "Buy food in shops and markets, order in a café or restaurant politely, and talk about tastes and preferences.",
+  "topics": [
+    {
+      "id": "pla-m3-food-shops",
+      "title": "Food and shops",
+      "kind": "vocabulary",
+      "count": 30,
+      "brief": "Food groups: meat (carne de vaca, frango, peru, borrego, porco), fish and seafood (peixe, bacalhau, dourada, salmão, carapau, polvo, mexilhão, camarão), dairy and groceries (leite, queijo, manteiga, iogurte, arroz, massa, azeite), bread (pão, carcaça, broa, torradas), fruit and vegetables (maçã, laranja, uvas, legumes, salada); shops and counters (talho, peixaria, padaria, charcutaria, frutaria, supermercado, mercado); quantities (um quilo de, meio quilo, uma dúzia, um pacote, uma lata, uma garrafa); Quanto custa o quilo?",
+      "known": "Modules 1–2.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m3-restaurant-cafe",
+      "title": "At the restaurant and café",
+      "kind": "situation",
+      "count": 30,
+      "brief": "Meals and menu (pequeno-almoço, almoço, lanche, jantar, entrada, prato principal, acompanhamento, sobremesa, prato do dia, ementa, a conta); cooking methods (cozido, frito, grelhado, assado, salteado); polite ordering as fixed chunks: Queria uma mesa para duas pessoas, Queria a conta, Preferia perto da janela, Podia trazer…?; waiter's phrases (O que deseja?, Mais alguma coisa?); Eu quero uma dourada grelhada com batatas cozidas.",
+      "known": "Modules 1–2, pla-m3-food-shops.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m3-likes-preferences",
+      "title": "Likes, preferences and modal verbs",
+      "kind": "grammar",
+      "count": 30,
+      "brief": "Tastes and preferences: gostar de (gosto de peixe, gosto de cozinhar), adorar, preferir … a … (prefiro peixe a carne), não gostar nada de, detestar; irregular present of querer, poder, saber, trazer, pôr (quero, posso, sei, trago, ponho); Gostas de…? / Prefere…?",
+      "known": "Modules 1–2, earlier module 3 topics.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    }
+  ]
+}

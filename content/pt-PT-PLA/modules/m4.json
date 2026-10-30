@@ -1,0 +1,43 @@
+{
+  "id": "m4",
+  "title": "Unit 5 — Serviços e estabelecimentos: public services, bank, city and appointments",
+  "description": "Deal with public services and documents, open a bank account and use the post office, find your way in the city and make arrangements.",
+  "topics": [
+    {
+      "id": "pla-m4-public-services-documents",
+      "title": "Public services and documents",
+      "kind": "situation",
+      "count": 30,
+      "brief": "Public services and documents: Finanças (pedir o NIF), Segurança Social (pedir o NISS), Loja do Cidadão, AIMA (autorização / cartão de residência), Junta de Freguesia (atestado de residência), marcar atendimento, tirar senha, esperar a vez, balcão; documents (passaporte, comprovativo de morada, contrato de arrendamento, fotografia); obligation and need: ter de + infinitivo (O senhor tem de renovar o cartão), precisar de + nome / infinitivo (Preciso de um comprovativo de morada), dever + infinitivo for advice.",
+      "known": "Modules 1–3.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m4-bank-post-services",
+      "title": "Bank, post office and other services",
+      "kind": "situation",
+      "count": 30,
+      "brief": "Bank (abrir conta, cartão multibanco, levantar dinheiro, depositar, fazer uma transferência, IBAN, código PIN, extrato), CTT post office (enviar uma carta / uma encomenda, selo, registada, levantar uma encomenda, aviso), pharmacy and petrol station basics; what to bring: Para abrir conta tem de trazer o passaporte e o NIF.",
+      "known": "Modules 1–3, pla-m4-public-services-documents.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m4-city-directions-transport",
+      "title": "Directions, imperative and public transport",
+      "kind": "grammar",
+      "count": 30,
+      "brief": "Asking and giving directions with the imperative: formal (siga, vire, atravesse, apanhe, saia, espere, venha, traga) and informal (segue, vira, atravessa, apanha, sai, espera, vem, traz); seguir em frente, virar à direita / à esquerda, atravessar a rua, na rotunda, ao fundo da rua, perto, longe; movement prepositions a, para, por (vou para casa, passo pela praça); transport: estação de metro, linha verde, paragem de autocarro, bilhete, passe, cartão Navegante, sair no Martim Moniz.",
+      "known": "Modules 1–3, earlier module 4 topics.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m4-invitations-meetings",
+      "title": "Invitations and arranging to meet",
+      "kind": "situation",
+      "count": 30,
+      "brief": "Inviting, accepting and declining (Queres ir tomar um café?, Vamos ao cinema no sábado?, Sim, vamos!, Boa ideia!, Desculpa, não posso, tenho de trabalhar, Fica para a próxima); arranging time and place (A que horas?, Onde nos encontramos?, Pode ser às seis?, Combinado!); formal appointments (Tenho uma marcação às dez, Queria marcar para amanhã).",
+      "known": "Modules 1–3, earlier module 4 topics.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    }
+  ]
+}

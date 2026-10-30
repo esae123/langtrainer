@@ -1,0 +1,34 @@
+{
+  "id": "m8",
+  "title": "Unit 9 — Comunicação e vida em sociedade",
+  "description": "Give opinions, agree and disagree politely, talk about news and community life, and about holidays and traditions in Portugal and in your country.",
+  "topics": [
+    {
+      "id": "pla-m8-opinions-agreement",
+      "title": "Opinions, agreement and disagreement",
+      "kind": "situation",
+      "count": 30,
+      "brief": "Giving opinions: Acho que…, Penso que…, Na minha opinião…, Para mim…; agreeing and disagreeing: Concordo (contigo / com o senhor), Não concordo com…, Tens razão, Não é bem assim, Depende; comparing cultures: No meu país é diferente porque…, Em Portugal as pessoas…, É mais / menos … do que…",
+      "known": "Modules 1–7.",
+      "avoid": "subjunctive (avoid «não acho que + subjuntivo»), conditional except polite chunks."
+    },
+    {
+      "id": "pla-m8-news-community",
+      "title": "News, society and community life",
+      "kind": "vocabulary",
+      "count": 30,
+      "brief": "Media and society: notícia, jornal, artigo, título, gráfico, entrevista; sociedade, comunidade, vizinhos, associação, voluntariado, integração, direitos e deveres, desafios dos migrantes (encontrar casa, aprender a língua, reconhecer diplomas); understanding short news sentences (Segundo a notícia…, O número de… aumentou / diminuiu).",
+      "known": "Modules 1–7.",
+      "avoid": "subjunctive, conditional except polite chunks."
+    },
+    {
+      "id": "pla-m8-holidays-traditions",
+      "title": "Holidays, traditions and celebrations",
+      "kind": "vocabulary",
+      "count": 30,
+      "brief": "Portuguese holidays and traditions: feriados nacionais (25 de Abril, 1.º de Maio, 10 de Junho, 5 de Outubro, 1 de Dezembro, Natal), Santos Populares (Santo António, São João, sardinhas, manjericos), Carnaval, Páscoa, Natal (bacalhau na consoada, bolo-rei); religious and cultural celebrations of learners (Ramadão, Eid, Diwali, Ano Novo Chinês); wishes (Feliz Natal!, Boas Festas!, Feliz Ano Novo!, Bom feriado!); Como se festeja … no teu país?",
+      "known": "Modules 1–7.",
+      "avoid": "subjunctive, conditional except polite chunks."
+    }
+  ]
+}

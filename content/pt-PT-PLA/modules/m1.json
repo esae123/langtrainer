@@ -1,0 +1,43 @@
+{
+  "id": "m1",
+  "title": "Unit 2 — Olá, tudo bem? Greetings, personal data and introductions",
+  "description": "Greet people, introduce yourself formally and informally, give personal data on forms, talk about countries, nationalities and numbers.",
+  "topics": [
+    {
+      "id": "pla-m1-greetings-introductions",
+      "title": "Greetings, introductions and forms of address",
+      "kind": "situation",
+      "count": 30,
+      "brief": "Greetings and politeness (Olá, Bom dia, Boa tarde, Boa noite, Adeus, Até logo, Muito prazer, Com licença, Por favor, Obrigado/a); introducing yourself and others with chamar-se (chamo-me, chama-se), ser, estar, ter; tu vs você / o senhor / a senhora and when to use each; Falas português? — Sim, um pouco.",
+      "known": "Nothing beyond the topics listed earlier in this course.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m1-personal-data-forms",
+      "title": "Personal data and filling in forms",
+      "kind": "vocabulary",
+      "count": 30,
+      "brief": "Personal data on official forms: nome, apelido, idade, data de nascimento, nacionalidade, naturalidade, estado civil (solteiro/a, casado/a, divorciado/a, viúvo/a), morada, código postal, localidade, profissão, telemóvel, e-mail, NIF, NISS; questions officials ask: Qual é o seu nome / apelido / número de telemóvel / NIF?, Onde mora?, Qual é a sua morada?; -ar verbs in the present (morar, trabalhar, falar).",
+      "known": "pla-m1-greetings-introductions.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m1-countries-nationalities",
+      "title": "Countries, nationalities and languages",
+      "kind": "vocabulary",
+      "count": 30,
+      "brief": "Countries and nationalities with gender and number agreement (Portugal/português, Brasil/brasileiro, Índia/indiano, Paquistão/paquistanês, Nepal/nepalês, Ucrânia/ucraniano, China/chinês, Marrocos/marroquino, Cabo Verde/cabo-verdiano, Angola/angolano); languages (falo hindi, inglês, português); articles o/a/os/as, um/uma; de and em with contractions (sou da Índia, do Brasil, de Portugal; moro em Lisboa, no Porto, na Amadora); question words como, quem, de onde, qual, quantos.",
+      "known": "pla-m1-greetings-introductions, pla-m1-personal-data-forms.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    },
+    {
+      "id": "pla-m1-numbers-0-300",
+      "title": "Numbers 0–300: age, phone, prices, addresses",
+      "kind": "vocabulary",
+      "count": 30,
+      "brief": "Numbers 0–300 (zero … vinte e um … cem, cento e um … duzentos, trezentos) with um/uma and dois/duas agreement; ages (Tenho trinta e dois anos), phone numbers read in groups, house numbers and floors (moro no número 120, 3.º esquerdo), postal codes, prices in euros and cêntimos (custa dois euros e cinquenta).",
+      "known": "Module 1 topics so far.",
+      "avoid": "past tenses (Pretérito Perfeito, Imperfeito) except the polite chunks queria/podia/gostava/preferia, subjunctive, conditional, future tense."
+    }
+  ]
+}

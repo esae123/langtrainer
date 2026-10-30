@@ -1,0 +1,34 @@
+{
+  "id": "m7",
+  "title": "Unit 8 — O meu passado e o meu presente",
+  "description": "Describe your past life and habits with the Pretérito Imperfeito, contrast it with completed actions, and compare life then and now, there and here.",
+  "topics": [
+    {
+      "id": "pla-m7-imperfect-past-habits",
+      "title": "Past habits and descriptions: Pretérito Imperfeito",
+      "kind": "grammar",
+      "count": 30,
+      "brief": "Pretérito Imperfeito for past habits and descriptions: regular -ar (morava, trabalhava), -er/-ir (vivia, comia, saía); irregular ser (era), ter (tinha), vir (vinha), pôr (punha); Quando era jovem, vivia no campo e tinha muitos amigos; Antigamente trabalhava numa fábrica; also the polite imperfect already known as chunks (queria, podia, gostava).",
+      "known": "Modules 1–6.",
+      "avoid": "subjunctive, conditional, mais-que-perfeito."
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito",
+      "title": "Pretérito Perfeito vs Imperfeito",
+      "kind": "grammar",
+      "count": 30,
+      "brief": "Choosing the past tense: completed actions with Perfeito (No ano passado mudei-me para Portugal) vs habits, states and background with Imperfeito (Em Kiev trabalhava num banco, Quando cheguei, não falava português); time markers no passado, antigamente, há X anos, na semana passada, em 2020, quando era criança; comparison with the present (hoje em dia, agora, já).",
+      "known": "Modules 1–6, pla-m7-imperfect-past-habits.",
+      "avoid": "subjunctive, conditional, mais-que-perfeito."
+    },
+    {
+      "id": "pla-m7-life-stages-migration",
+      "title": "Life stages, migration and changes",
+      "kind": "situation",
+      "count": 30,
+      "brief": "Life stages and memories (infância, juventude, a minha terra natal, a vida no meu país), emigração and chegada a Portugal, mudanças de vida e hábitos; comparing then and now, there and here (Antigamente…, mas hoje em dia…; No meu país…, em Portugal…); Há cinco anos vivia na Alemanha e não falava a língua, mas hoje moro em Portugal e já compreendo muito bem.",
+      "known": "Modules 1–6, earlier module 7 topics.",
+      "avoid": "subjunctive, conditional, mais-que-perfeito."
+    }
+  ]
+}
