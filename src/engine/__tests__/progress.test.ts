@@ -4,6 +4,7 @@ import {
   applyAttempt,
   COMPLETION_THRESHOLD,
   DAY_MS,
+  completionThresholdFor,
   emptyTopicProgress,
   finishSession,
   reconcileStrictTopic,
@@ -490,5 +491,45 @@ describe('finishSession', () => {
     expect(original.reviewStage).toBe(1);
     expect(original.history).toHaveLength(0);
     expect(updated[1]).toBe(untouched);
+  });
+});
+
+describe('per-course completion threshold', () => {
+  it('completionThresholdFor: default 20, capped at the topic size, "all" = topic size', () => {
+    expect(completionThresholdFor(undefined, 40)).toBe(20);
+    expect(completionThresholdFor(undefined, 12)).toBe(12);
+    expect(completionThresholdFor('all', 40)).toBe(40);
+    expect(completionThresholdFor(30, 40)).toBe(30);
+    expect(completionThresholdFor(50, 40)).toBe(40);
+  });
+
+  it('a topic with threshold 40 stays learning at 20 seen and completes at 40', () => {
+    let row = emptyTopicProgress('t1', 'p');
+    for (let i = 1; i <= 20; i++)
+      row = applyAttempt(row, `t1-${String(i).padStart(2, '0')}`, true, 1000, false, undefined, 40);
+    expect(row.status).toBe('learning');
+    for (let i = 21; i <= 40; i++)
+      row = applyAttempt(
+        row,
+        `t1-${String(i).padStart(2, '0')}`,
+        i % 2 === 0,
+        2000,
+        false,
+        undefined,
+        40
+      );
+    expect(row.status).toBe('review');
+    expect(row.reviewStage).toBe(1);
+  });
+
+  it('an already completed topic is not reopened by a higher threshold', () => {
+    const done = {
+      ...emptyTopicProgress('t1', 'p'),
+      status: 'review' as const,
+      reviewStage: 1 as const,
+      seenExerciseIds: ['t1-01'],
+    };
+    const next = applyAttempt(done, 't1-02', true, 3000, false, undefined, 40);
+    expect(next.status).toBe('review');
   });
 });

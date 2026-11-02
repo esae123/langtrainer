@@ -11,6 +11,11 @@ export interface Program {
   level: string; // 'A1'
   /** Optional first-pass rule; omitted courses retain the standard session selection. */
   topicCompletionPolicy?: 'all-exercises-correct';
+  /**
+   * Standard courses only: distinct exercises a learner must see before a topic counts as
+   * completed. A number (capped at the topic size) or 'all'. Omitted = 20.
+   */
+  completionThreshold?: number | 'all';
   modules: Module[];
   phraseSets: PhraseSet[]; // everyday phrases (not tied to modules)
 }

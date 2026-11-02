@@ -282,6 +282,9 @@ export function loadProgram(
     ...(programMeta.topicCompletionPolicy === undefined
       ? {}
       : { topicCompletionPolicy: programMeta.topicCompletionPolicy }),
+    ...(programMeta.completionThreshold === undefined
+      ? {}
+      : { completionThreshold: programMeta.completionThreshold }),
     modules,
     phraseSets,
   };

@@ -152,7 +152,9 @@ describe('/session happy path', () => {
     });
 
     const progress = await db.topicProgress.get('t1');
-    expect(progress).toMatchObject({ status: 'learning', failedReviewsInARow: 0 });
+    // The fixture topic has 3 exercises; the completion threshold is capped at the topic
+    // size, so seeing all 3 completes it (first review in 7 days).
+    expect(progress).toMatchObject({ status: 'review', reviewStage: 1, failedReviewsInARow: 0 });
     expect(progress?.seenExerciseIds).toHaveLength(3);
     expect(progress?.history).toEqual([expect.objectContaining({ correct: 3, total: 3 })]);
 

@@ -5,6 +5,7 @@
   "targetLanguage": "pt-PT",
   "supportLanguage": "en",
   "level": "A1",
+  "completionThreshold": "all",
   "modules": [
     {
       "id": "m1",

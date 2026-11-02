@@ -5,6 +5,20 @@ import type { TopicProgress, TopicStatus } from './types';
 export const DAY_MS = 24 * 60 * 60 * 1000;
 /** Distinct exercises answered before a topic counts as completed for the first time. */
 export const COMPLETION_THRESHOLD = 20;
+
+/**
+ * Distinct exercises needed to complete a topic in a standard course: the course's
+ * `completionThreshold` ('all' = every exercise of the topic; a number is capped at the
+ * topic size), else COMPLETION_THRESHOLD (also capped, so small topics can complete).
+ */
+export function completionThresholdFor(
+  setting: number | 'all' | undefined,
+  topicExerciseCount: number
+): number {
+  const size = Math.max(1, topicExerciseCount);
+  if (setting === 'all') return size;
+  return Math.min(setting ?? COMPLETION_THRESHOLD, size);
+}
 /** Minimum attempts on a topic in one session before its review moves the SRS stage. */
 export const MIN_REVIEW_ATTEMPTS = 3;
 /** Failed reviews in a row at stage 3 before a topic drops to maintenance. */
@@ -111,7 +125,8 @@ export function applyAttempt(
   correct: boolean,
   now: number,
   practice = false,
-  strictExerciseIds?: readonly string[]
+  strictExerciseIds?: readonly string[],
+  completionThreshold: number = COMPLETION_THRESHOLD
 ): TopicProgress {
   const strict = strictExerciseIds !== undefined;
   if (practice) {
@@ -166,7 +181,7 @@ export function applyAttempt(
   }
 
   if (next.status === 'new') next.status = 'learning';
-  if (next.status === 'learning' && seen.length >= COMPLETION_THRESHOLD) {
+  if (next.status === 'learning' && seen.length >= completionThreshold) {
     next.status = 'review';
     next.reviewStage = 1;
     next.firstCompletedAt = now;

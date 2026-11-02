@@ -282,7 +282,7 @@ its own view.
 `applyAttempt(row, exerciseId, correct, now)` runs after every answer: it adds the
 exercise to `seenExerciseIds` (set semantics), keeps `wrongExerciseIds` current (added on
 a wrong answer, removed on a right one) and moves `new → learning`. A topic is
-**completed** the moment it has **20 distinct answered exercises** — status `review`,
+**completed** the moment it has **N distinct answered exercises**, where N = the course's `completionThreshold` (`"all"` = every exercise of the topic; a number is capped at the topic size; omitted = 20, also capped). pt-PT-A1 uses `"all"`, so all 40 exercises of a topic are seen before the next topic opens; topics already completed are not reopened — status `review`,
 `reviewStage: 1`, `firstCompletedAt = now`, `nextReviewAt = now + 7 days`.
 
 `finishSession(rows, attempts, now, sessionStartedAt)` runs once at the summary. For every

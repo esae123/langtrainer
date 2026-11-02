@@ -24,6 +24,7 @@ import {
 } from '../engine/plan';
 import {
   applyAttempt,
+  completionThresholdFor,
   emptyTopicProgress,
   reconcileStrictTopic,
   type TopicOutcome,
@@ -231,13 +232,15 @@ export function useSessionRunner(
           program && isStrictCourse(program)
             ? (exercisesByTopic(program).get(draft.topicId) ?? []).map((exercise) => exercise.id)
             : undefined;
+        const topicSize = program ? (exercisesByTopic(program).get(draft.topicId)?.length ?? 0) : 0;
         const next = applyAttempt(
           row,
           draft.exerciseId,
           draft.correct,
           draft.at,
           practice,
-          strictExerciseIds
+          strictExerciseIds,
+          completionThresholdFor(program?.completionThreshold, topicSize)
         );
         if (next === row && existing) return existing;
         await db.topicProgress.put(next);

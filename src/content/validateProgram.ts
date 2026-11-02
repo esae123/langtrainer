@@ -341,6 +341,12 @@ function validatePhraseSet(v: unknown, path: string): PhraseSet {
  * Only known fields are read, so unknown keys (e.g. the generated file's leading
  * "$generated" marker) are silently ignored rather than rejected.
  */
+function positiveInt(v: unknown, path: string): number {
+  if (typeof v !== 'number' || !Number.isInteger(v) || v < 1)
+    fail(path, "expected a positive integer or 'all'");
+  return v;
+}
+
 export function validateProgram(json: unknown): Program {
   if (!isRecord(json)) fail('$', 'expected an object');
   return {
@@ -352,7 +358,17 @@ export function validateProgram(json: unknown): Program {
     topicCompletionPolicy:
       json.topicCompletionPolicy === undefined
         ? undefined
-        : oneOf(json.topicCompletionPolicy, ['all-exercises-correct'] as const, '$.topicCompletionPolicy'),
+        : oneOf(
+            json.topicCompletionPolicy,
+            ['all-exercises-correct'] as const,
+            '$.topicCompletionPolicy'
+          ),
+    completionThreshold:
+      json.completionThreshold === undefined
+        ? undefined
+        : json.completionThreshold === 'all'
+          ? 'all'
+          : positiveInt(json.completionThreshold, '$.completionThreshold'),
     modules: arr(json.modules, '$.modules').map((m, i) => validateModule(m, `$.modules[${i}]`)),
     phraseSets: arr(json.phraseSets, '$.phraseSets').map((p, i) =>
       validatePhraseSet(p, `$.phraseSets[${i}]`)

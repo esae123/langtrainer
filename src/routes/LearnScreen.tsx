@@ -10,7 +10,7 @@ import { CoursesSheet } from '../courses/CoursesSheet';
 import { CourseSourceBadge } from '../courses/CourseMeta';
 import { db } from '../db/db';
 import { currentTopicOf } from '../engine/plan';
-import { COMPLETION_THRESHOLD } from '../engine/progress';
+import { completionThresholdFor } from '../engine/progress';
 import { useT } from '../i18n';
 import { formatDate } from '../lib/formatDate';
 import { discardActiveSession, useActiveSession } from '../session/activeSession';
@@ -84,14 +84,15 @@ export function LearnScreen() {
   const requiresAllCorrect = program?.topicCompletionPolicy === 'all-exercises-correct';
   const topicThreshold = requiresAllCorrect
     ? (currentTopic?.exercises.length ?? 0)
-    : COMPLETION_THRESHOLD;
-  const seenCount = requiresAllCorrect && currentTopic
-    ? currentTopic.exercises.filter(
-        (exercise) =>
-          currentTopicProgress?.seenExerciseIds.includes(exercise.id) &&
-          !currentTopicProgress.wrongExerciseIds.includes(exercise.id)
-      ).length
-    : (currentTopicProgress?.seenExerciseIds.length ?? 0);
+    : completionThresholdFor(program?.completionThreshold, currentTopic?.exercises.length ?? 0);
+  const seenCount =
+    requiresAllCorrect && currentTopic
+      ? currentTopic.exercises.filter(
+          (exercise) =>
+            currentTopicProgress?.seenExerciseIds.includes(exercise.id) &&
+            !currentTopicProgress.wrongExerciseIds.includes(exercise.id)
+        ).length
+      : (currentTopicProgress?.seenExerciseIds.length ?? 0);
   const nextReviewAt = progress
     .filter((row) => row.nextReviewAt !== undefined && row.status !== 'mastered')
     .map((row) => row.nextReviewAt as number)
@@ -233,10 +234,15 @@ export function LearnScreen() {
                   </span>
                 </div>
                 <p className="mt-1 text-xs text-muted">
-                  {t(requiresAllCorrect ? 'learn.currentTopicMetaAllCorrect' : 'learn.currentTopicMeta', {
-                    seen: seenCount,
-                    threshold: topicThreshold,
-                  })}
+                  {t(
+                    requiresAllCorrect
+                      ? 'learn.currentTopicMetaAllCorrect'
+                      : 'learn.currentTopicMeta',
+                    {
+                      seen: seenCount,
+                      threshold: topicThreshold,
+                    }
+                  )}
                 </p>
               </>
             ) : (
