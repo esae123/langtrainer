@@ -1,0 +1,537 @@
+{
+  "id": "pla-m4-bank-post-services",
+  "moduleId": "m4",
+  "title": "Bank, post office and other services",
+  "kind": "situation",
+  "context": "At the bank, at **CTT** and in other everyday services, short ready-made phrases help a lot. You usually say what you want, what you need, or what document you have. Staff often answer with short instructions.\n\n- **Queria abrir uma conta.** — *I would like to open an account.*\n- **Tem de trazer o passaporte e o NIF.** — *You have to bring your passport and tax number.*\n- **Quero levantar dinheiro no multibanco.** — *I want to withdraw cash at the cash machine.*\n- **Preciso do meu IBAN para fazer uma transferência.** — *I need my IBAN to make a transfer.*\n- **Queria enviar esta carta registada.** — *I would like to send this registered letter.*\n- **Tenho um aviso para levantar uma encomenda.** — *I have a notice to collect a parcel.*\n- **Na farmácia, preciso de um medicamento.** — *At the pharmacy, I need some medicine.*\n- **Queria vinte euros de gasóleo, por favor.** — *I’d like twenty euros of diesel, please.*\n\n**Watch out:** in Portugal people normally say **levantar dinheiro** and **cartão multibanco**.\n\n**Watch out:** staff often use **tem de + infinitive** for instructions: **Tem de trazer o passaporte e o NIF.** Learn this as a useful chunk.",
+  "keyItems": [
+    {
+      "target": "abrir conta",
+      "support": "open an account",
+      "note": "bank phrase"
+    },
+    {
+      "target": "cartão multibanco",
+      "support": "bank card",
+      "note": "common PT term"
+    },
+    {
+      "target": "levantar dinheiro",
+      "support": "withdraw cash"
+    },
+    {
+      "target": "depositar dinheiro",
+      "support": "deposit cash"
+    },
+    {
+      "target": "fazer uma transferência",
+      "support": "make a transfer"
+    },
+    {
+      "target": "IBAN",
+      "support": "IBAN / bank account number",
+      "note": "bank term"
+    },
+    {
+      "target": "código PIN",
+      "support": "PIN code",
+      "note": "secret number"
+    },
+    {
+      "target": "extrato",
+      "support": "bank statement"
+    },
+    {
+      "target": "enviar uma carta",
+      "support": "send a letter"
+    },
+    {
+      "target": "enviar uma encomenda",
+      "support": "send a parcel"
+    },
+    {
+      "target": "selo",
+      "support": "stamp"
+    },
+    {
+      "target": "carta registada",
+      "support": "registered letter",
+      "note": "fixed phrase"
+    },
+    {
+      "target": "aviso",
+      "support": "collection notice / slip"
+    },
+    {
+      "target": "levantar uma encomenda",
+      "support": "collect a parcel",
+      "note": "fixed phrase"
+    },
+    {
+      "target": "farmácia",
+      "support": "pharmacy"
+    },
+    {
+      "target": "medicamento",
+      "support": "medicine"
+    },
+    {
+      "target": "gasóleo",
+      "support": "diesel",
+      "note": "petrol station"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m4-bank-post-services-01",
+      "type": "translate_word",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In a bank context, «conta» means an account. With «abrir», it forms the common phrase for opening a bank account.",
+      "direction": "toTarget",
+      "sentence": "I would like to open a bank **account**.",
+      "word": "account",
+      "answer": "conta",
+      "options": ["conta", "carta", "transferência", "encomenda"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-02",
+      "type": "translate_word",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "At the post office, «selo» is the stamp you put on a letter. It is not the notice slip or a bank document.",
+      "direction": "toTarget",
+      "sentence": "I need a **stamp** for this letter.",
+      "word": "stamp",
+      "answer": "selo",
+      "options": ["selo", "aviso", "extrato", "balcão"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-03",
+      "type": "translate_word",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Código PIN» is the secret number you type. It is not the card itself («cartão multibanco») or the account number (IBAN).",
+      "direction": "toTarget",
+      "sentence": "Please enter your **PIN code** before you use the card.",
+      "word": "PIN code",
+      "answer": "código PIN",
+      "options": ["código PIN", "cartão multibanco", "IBAN", "extrato"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-04",
+      "type": "match_pairs",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese phrase with its meaning.",
+      "explanation": "These are common service chunks. Learn them as ready-made phrases because you hear them exactly like this.",
+      "pairs": [
+        {
+          "target": "abrir conta",
+          "support": "open an account"
+        },
+        {
+          "target": "cartão multibanco",
+          "support": "bank card"
+        },
+        {
+          "target": "levantar dinheiro",
+          "support": "withdraw cash"
+        },
+        {
+          "target": "fazer uma transferência",
+          "support": "make a transfer"
+        },
+        {
+          "target": "carta registada",
+          "support": "registered letter"
+        },
+        {
+          "target": "levantar uma encomenda",
+          "support": "collect a parcel"
+        }
+      ]
+    },
+    {
+      "id": "pla-m4-bank-post-services-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the bank, the clerk speaks to you formally. Fill the gap in the clerk's instruction: you have to bring the passport and the NIF.",
+      "explanation": "In service language, «tem de + infinitive» gives an instruction. Here the clerk is addressing one person formally.",
+      "template": "Para abrir uma conta, ___ de trazer o passaporte e o NIF.",
+      "gaps": [
+        {
+          "answer": "tem"
+        }
+      ],
+      "wordBank": ["tem", "tens", "tenho", "está"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the bank, say you need your IBAN to make a transfer. Fill the two gaps.",
+      "explanation": "The «IBAN» is the account number used for bank operations, and «transferência» is the transfer itself.",
+      "template": "Preciso do meu ___ para fazer uma ___.",
+      "gaps": [
+        {
+          "answer": "IBAN"
+        },
+        {
+          "answer": "transferência"
+        }
+      ],
+      "wordBank": ["IBAN", "transferência", "PIN", "extrato"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At CTT, say you want to send this letter registered and you also need a stamp. Fill the two gaps.",
+      "explanation": "«Carta registada» is a fixed post-office chunk, and «selo» is what you put on the envelope.",
+      "template": "Queria enviar esta carta ___. Preciso também de um ___.",
+      "gaps": [
+        {
+          "answer": "registada"
+        },
+        {
+          "answer": "selo"
+        }
+      ],
+      "wordBank": ["registada", "selo", "aviso", "extrato"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps: first at the pharmacy, then at the petrol station. At the station, you want diesel.",
+      "explanation": "«Medicamento» is what you ask for at the pharmacy. At the petrol station, «gasóleo» means diesel.",
+      "template": "Na farmácia, preciso de um ___. Na bomba, queria vinte euros de ___.",
+      "gaps": [
+        {
+          "answer": "medicamento"
+        },
+        {
+          "answer": "gasóleo"
+        }
+      ],
+      "wordBank": ["medicamento", "gasóleo", "gasolina", "aviso"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-09",
+      "type": "build_phrase",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the bank, say politely: I would like to open an account.",
+      "explanation": "«Queria» is a polite fixed chunk for service situations. «Abrir conta» and «abrir uma conta» are both common.",
+      "answer": ["Queria", "abrir", "uma", "conta."],
+      "distractors": ["queres", "fechar", "encomenda"],
+      "acceptedAnswers": [
+        "Eu queria abrir uma conta.",
+        "Queria abrir conta.",
+        "Eu queria abrir conta."
+      ]
+    },
+    {
+      "id": "pla-m4-bank-post-services-10",
+      "type": "build_phrase",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You are the bank clerk. Tell a customer formally: You have to bring the passport and the NIF.",
+      "explanation": "Staff often use «tem de + infinitive» for instructions. Portuguese can leave out the subject: «(O senhor) tem de trazer...».",
+      "answer": ["Tem", "de", "trazer", "o", "passaporte", "e", "o", "NIF."],
+      "distractors": ["levantar", "cartão", "somos"],
+      "acceptedAnswers": [
+        "Para abrir conta, tem de trazer o passaporte e o NIF.",
+        "O senhor tem de trazer o passaporte e o NIF."
+      ]
+    },
+    {
+      "id": "pla-m4-bank-post-services-11",
+      "type": "build_phrase",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I want to withdraw money at the cash machine.",
+      "explanation": "In Portugal, the common chunk is «levantar dinheiro». «No multibanco» tells you where.",
+      "answer": ["Quero", "levantar", "dinheiro", "no", "multibanco."],
+      "distractors": ["depositar", "carta", "correio"],
+      "acceptedAnswers": ["Eu quero levantar dinheiro no multibanco."]
+    },
+    {
+      "id": "pla-m4-bank-post-services-12",
+      "type": "build_phrase",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the post office, say: I need a stamp for this letter.",
+      "explanation": "Use «precisar de» for what you need. «Selo» is the stamp for a letter.",
+      "answer": ["Preciso", "de", "um", "selo", "para", "esta", "carta."],
+      "distractors": ["aviso", "encomenda", "precisa"],
+      "acceptedAnswers": ["Eu preciso de um selo para esta carta."]
+    },
+    {
+      "id": "pla-m4-bank-post-services-13",
+      "type": "build_phrase",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the post office, say: I have a notice to collect a parcel.",
+      "explanation": "«Aviso» is the slip you receive, and «levantar uma encomenda» means collect a parcel at the counter.",
+      "answer": ["Tenho", "um", "aviso", "para", "levantar", "uma", "encomenda."],
+      "distractors": ["selo", "enviar", "medicamento"],
+      "acceptedAnswers": ["Eu tenho um aviso para levantar uma encomenda."]
+    },
+    {
+      "id": "pla-m4-bank-post-services-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The bank clerk answers: «Tem de trazer o passaporte e o NIF.» Ask (formal) which documents you need to bring to open an account.",
+      "explanation": "To ask about required papers, use «Que documentos...?». The question is about what you need, so the verb is in the first person: «tenho de trazer».",
+      "givenAnswer": "Tem de trazer o passaporte e o NIF.",
+      "answer": ["Que", "documentos", "tenho", "de", "trazer", "para", "abrir", "conta?"],
+      "distractors": ["onde", "leva", "cartão"],
+      "acceptedAnswers": [
+        "Que documentos é que tenho de trazer para abrir conta?",
+        "Que documentos tenho de trazer para abrir uma conta?",
+        "Que documentos é que tenho de trazer para abrir uma conta?"
+      ]
+    },
+    {
+      "id": "pla-m4-bank-post-services-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «No multibanco.» Ask him (informal) where he withdraws money.",
+      "explanation": "Use «onde» for place. With «tu», the verb is «levantas».",
+      "givenAnswer": "No multibanco.",
+      "answer": ["Onde", "levantas", "dinheiro?"],
+      "distractors": ["vais", "manda", "banco"],
+      "acceptedAnswers": ["Onde é que levantas dinheiro?", "Onde é que tu levantas dinheiro?"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The clerk answers: «É para levantar uma encomenda.» Show the paper and ask (formal) what this notice is for.",
+      "explanation": "To ask the purpose of something, Portuguese often uses «para quê?». Here the noun comes first: «Este aviso...».",
+      "givenAnswer": "É para levantar uma encomenda.",
+      "answer": ["Este", "aviso", "é", "para", "quê?"],
+      "distractors": ["isso", "balcão", "leva"],
+      "acceptedAnswers": ["Para que é este aviso?"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The employee answers: «É gasóleo.» Point to the pump and ask (formal) if it is diesel or petrol.",
+      "explanation": "At a petrol station, «gasóleo» is diesel and «gasolina» is petrol. An alternative question with «ou» is natural here.",
+      "givenAnswer": "É gasóleo.",
+      "answer": ["Isto", "é", "gasóleo", "ou", "gasolina?"],
+      "distractors": ["bomba", "leva", "são"],
+      "acceptedAnswers": ["É gasóleo ou gasolina?"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-18",
+      "type": "find_error",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «tu», regular -ar verbs end in «-as»: «tu precisas». «Precisa» is the form for ele/ela/você.",
+      "sentence": ["Tu", "precisa", "de", "um", "selo?"],
+      "wrongIndex": 1,
+      "correction": "precisas",
+      "options": ["precisas", "preciso", "precisam"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-19",
+      "type": "find_error",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «ir», Portuguese uses the preposition «a»: «ir a». «A + o banco» contracts to «ao banco».",
+      "sentence": ["Vou", "no", "banco", "abrir", "conta."],
+      "wrongIndex": 1,
+      "correction": "ao",
+      "options": ["ao", "do", "na"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-20",
+      "type": "about_me",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «precisar de + infinitive» to say what you need to do. Answer with the documents that are true for you.",
+      "question": "O que precisas de levar para abrir conta?",
+      "sampleAnswer": "Preciso de levar o passaporte e o NIF.",
+      "hints": ["documentos", "abrir", "conta", "cartão", "multibanco", "também"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-21",
+      "type": "build_phrase",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the bank, say politely: you would like a statement of the account.",
+      "explanation": "Use the polite chunk «Queria» + noun phrase. «Extrato» is the word for a bank statement.",
+      "answer": ["Queria", "um", "extrato", "da", "conta."],
+      "distractors": ["selo", "IBAN", "abrir"],
+      "acceptedAnswers": ["Eu queria um extrato da conta."]
+    },
+    {
+      "id": "pla-m4-bank-post-services-22",
+      "type": "build_phrase",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the post office, say: you want to send this parcel to Brazil.",
+      "explanation": "Use the fixed phrase «enviar uma encomenda». The country is «o Brasil», so you say «para o Brasil».",
+      "answer": ["Quero", "enviar", "esta", "encomenda", "para", "o", "Brasil."],
+      "distractors": ["carta", "no", "levantar"],
+      "acceptedAnswers": ["Eu quero enviar esta encomenda para o Brasil."]
+    },
+    {
+      "id": "pla-m4-bank-post-services-23",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the bank, your friend answers: «Quero depositar dinheiro.» Ask him (informal) what he wants to do there.",
+      "explanation": "To ask about an action, use «O que» + verb. In European Portuguese, both «O que queres fazer...?» and «O que é que queres fazer...?» are common.",
+      "givenAnswer": "Quero depositar dinheiro.",
+      "answer": ["O", "que", "queres", "fazer", "no", "banco?"],
+      "distractors": ["onde", "trazer", "CTT"],
+      "acceptedAnswers": ["O que é que queres fazer no banco?"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-24",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the petrol station, the customer answers: «Quero pagar com o cartão multibanco.» Ask him/her (formal) how they want to pay.",
+      "explanation": "With formal singular, use the 3rd-person form: «quer». For manner, ask with «Como»: «Como quer pagar?».",
+      "givenAnswer": "Quero pagar com o cartão multibanco.",
+      "answer": ["Como", "quer", "pagar?"],
+      "distractors": ["onde", "queres", "gasóleo"],
+      "acceptedAnswers": ["Como é que quer pagar?"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-25",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the bank, say you want to deposit money and ask for a statement of the account. Fill the gaps.",
+      "explanation": "You «depositar dinheiro» into an account, and a bank statement is an «extrato».",
+      "template": "No banco, quero ___ dinheiro e pedir um ___ da conta.",
+      "gaps": [
+        {
+          "answer": "depositar"
+        },
+        {
+          "answer": "extrato"
+        }
+      ],
+      "wordBank": ["depositar", "extrato", "levantar", "aviso", "selo"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-26",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the pharmacy you want a medicine for the allergy, and at the petrol station you pay with your bank card. Fill the gaps.",
+      "explanation": "At the pharmacy you ask for a «medicamento». To pay with your bank card, say «pago com o cartão multibanco».",
+      "template": "Na farmácia, quero um ___ para a alergia e, na bomba, pago com o ___.",
+      "gaps": [
+        {
+          "answer": "medicamento"
+        },
+        {
+          "answer": "cartão multibanco"
+        }
+      ],
+      "wordBank": ["medicamento", "cartão multibanco", "IBAN", "extrato", "selo"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-27",
+      "type": "find_error",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «tu», the verb is «queres». «Quer» is the form for ele/ela/você.",
+      "sentence": ["Tu", "quer", "depositar", "dinheiro?"],
+      "wrongIndex": 1,
+      "correction": "queres",
+      "options": ["queres", "quero", "queremos"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-28",
+      "type": "find_error",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In European Portuguese, possessives before a noun normally take the article: «o meu IBAN». With «de + o», you get «do»: «Preciso do meu IBAN.»",
+      "sentence": ["Preciso", "de", "meu", "IBAN."],
+      "wrongIndex": 1,
+      "correction": "do",
+      "options": ["do", "para", "com"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-29",
+      "type": "translate_word",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "At the bank, an account statement is an «extrato». «Aviso» is a notice and «selo» is a stamp.",
+      "direction": "toTarget",
+      "sentence": "At the bank I ask for a **statement** of the account.",
+      "word": "statement",
+      "answer": "extrato",
+      "options": ["extrato", "aviso", "selo", "medicamento"]
+    },
+    {
+      "id": "pla-m4-bank-post-services-30",
+      "type": "about_me",
+      "topicId": "pla-m4-bank-post-services",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "At the pharmacy, you can say what you want with «Quero» or what you need with «Preciso de». Keep the answer short and practical.",
+      "question": "O que queres comprar na farmácia?",
+      "sampleAnswer": "Quero um medicamento para a tosse.",
+      "hints": ["preciso de", "pomada", "dor", "febre", "vitaminas"]
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "id": "pla-m1-personal-data-forms",
+  "moduleId": "m1",
+  "title": "Personal data and filling in forms",
+  "kind": "vocabulary",
+  "context": "In Portugal, many forms at **AIMA**, **Finanças**, the **Centro de Saúde** or the **Loja do Cidadão** ask for the same personal data. Learn the field names and the ready-made questions officials use.\n\n- **Nome**: *O meu nome é Raj.* — My first name is Raj.\n- **Apelido**: *O meu apelido é Khan.* — My surname is Khan.\n- **Data de nascimento**: *A minha data de nascimento é 12/05/1990.* — My date of birth is 12/05/1990.\n- **Nacionalidade / naturalidade**: *Sou nepalesa. A minha naturalidade é Catmandu.* — I am Nepalese. My place of birth is Kathmandu.\n- **Morada / código postal / localidade**: *A minha morada é Rua Nova, 8.* — My address is Rua Nova, 8.\n- Officials ask: *Qual é o seu nome? Qual é a sua morada? Onde mora?* — What is your name? What is your address? Where do you live?\n- With **-ar** verbs: *Moro em Faro. Trabalho numa loja. Falo português.* — I live in Faro. I work in a shop. I speak Portuguese.\n\n**Watch out:** **NIF** and **NISS** are different numbers. Also, in European Portuguese, use the article with possessives: *o seu nome, a sua morada*.",
+  "keyItems": [
+    {
+      "target": "nome",
+      "support": "first name"
+    },
+    {
+      "target": "apelido",
+      "support": "surname"
+    },
+    {
+      "target": "idade",
+      "support": "age"
+    },
+    {
+      "target": "data de nascimento",
+      "support": "date of birth"
+    },
+    {
+      "target": "nacionalidade",
+      "support": "nationality"
+    },
+    {
+      "target": "naturalidade",
+      "support": "place of birth"
+    },
+    {
+      "target": "estado civil",
+      "support": "marital status"
+    },
+    {
+      "target": "morada",
+      "support": "address"
+    },
+    {
+      "target": "código postal",
+      "support": "postcode"
+    },
+    {
+      "target": "localidade",
+      "support": "town / city"
+    },
+    {
+      "target": "profissão",
+      "support": "profession"
+    },
+    {
+      "target": "número de telemóvel",
+      "support": "mobile number"
+    },
+    {
+      "target": "e-mail",
+      "support": "email"
+    },
+    {
+      "target": "NIF",
+      "support": "tax number",
+      "note": "Número de Identificação Fiscal"
+    },
+    {
+      "target": "NISS",
+      "support": "social security number",
+      "note": "Número de Identificação da Segurança Social"
+    },
+    {
+      "target": "solteiro/a",
+      "support": "single"
+    },
+    {
+      "target": "casado/a",
+      "support": "married"
+    },
+    {
+      "target": "divorciado/a",
+      "support": "divorced"
+    },
+    {
+      "target": "viúvo/a",
+      "support": "widowed"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m1-personal-data-forms-01",
+      "type": "translate_word",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "On Portuguese forms, **apelido** is the family name or surname. **Nome** is the first name.",
+      "direction": "toTarget",
+      "sentence": "Please write your **surname** here.",
+      "word": "surname",
+      "answer": "apelido",
+      "options": ["apelido", "nome", "idade", "morada"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-02",
+      "type": "translate_word",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "**Código postal** is the postcode field on a form. It is usually written next to the address.",
+      "direction": "toTarget",
+      "sentence": "On this form, write your **postcode**.",
+      "word": "postcode",
+      "answer": "código postal",
+      "options": ["código postal", "estado civil", "número de telemóvel", "e-mail"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-03",
+      "type": "translate_word",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "**Naturalidade** is the place of birth on a form. Do not confuse it with **nacionalidade**, which means nationality.",
+      "direction": "toTarget",
+      "sentence": "On the form, **place of birth** is this field.",
+      "word": "place of birth",
+      "answer": "naturalidade",
+      "options": ["naturalidade", "nacionalidade", "localidade", "profissão"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-04",
+      "type": "match_pairs",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each form field with its meaning.",
+      "explanation": "These are common personal-data fields on Portuguese forms. Learn them as fixed labels because they appear often.",
+      "pairs": [
+        {
+          "target": "nome",
+          "support": "first name"
+        },
+        {
+          "target": "apelido",
+          "support": "surname"
+        },
+        {
+          "target": "morada",
+          "support": "address"
+        },
+        {
+          "target": "localidade",
+          "support": "town / city"
+        },
+        {
+          "target": "estado civil",
+          "support": "marital status"
+        }
+      ]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ana is married and Pedro is single. Fill the gaps.",
+      "explanation": "These adjectives change for masculine and feminine. Use the form that matches the person: **casada** for Ana, **solteiro** for Pedro.",
+      "template": "No formulário: estado civil. A Ana é ___ e o Pedro é ___.",
+      "gaps": [
+        {
+          "answer": "casada"
+        },
+        {
+          "answer": "solteiro"
+        }
+      ],
+      "wordBank": ["casada", "solteiro", "casado", "solteira"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Raj lives in Faro and works in a hotel. Fill the gaps.",
+      "explanation": "With most city names, use **em**: **em Faro**. With **um hotel**, Portuguese often contracts **em + um** to **num**.",
+      "template": "Moro ___ Faro e trabalho ___ hotel.",
+      "gaps": [
+        {
+          "answer": "em"
+        },
+        {
+          "answer": "num"
+        }
+      ],
+      "wordBank": ["em", "num", "na", "de"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "An official is checking language and address. Fill the gaps.",
+      "explanation": "With **a senhora**, the verb stays in the 3rd person singular: **mora**, **fala**.",
+      "template": "A senhora ___ em Lisboa e ___ português.",
+      "gaps": [
+        {
+          "answer": "mora"
+        },
+        {
+          "answer": "fala"
+        }
+      ],
+      "wordBank": ["mora", "fala", "moram", "falo"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The official asks for your mobile number and then your tax number. Fill the gaps.",
+      "explanation": "**Número de telemóvel** is a fixed phrase. **NIF** is the tax number, while **NISS** is the social security number.",
+      "template": "Qual é o seu ___ de telemóvel? E qual é o seu ___?",
+      "gaps": [
+        {
+          "answer": "número"
+        },
+        {
+          "answer": "NIF"
+        }
+      ],
+      "wordBank": ["número", "NIF", "NISS", "apelido"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-09",
+      "type": "build_phrase",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say on the form: I live in Setúbal.",
+      "explanation": "For most city names, use **morar em**. In Portuguese, the subject **eu** is often omitted.",
+      "answer": ["Moro", "em", "Setúbal."],
+      "distractors": ["no", "sou", "trabalha"],
+      "acceptedAnswers": ["Eu moro em Setúbal."]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-10",
+      "type": "build_phrase",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say on the form: I live in Porto.",
+      "explanation": "The city is usually **o Porto**, so **em + o** contracts to **no**: **no Porto**.",
+      "answer": ["Moro", "no", "Porto."],
+      "distractors": ["em", "na", "trabalho"],
+      "acceptedAnswers": ["Eu moro no Porto."]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-11",
+      "type": "build_phrase",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I work in a bakery.",
+      "explanation": "Use **trabalho** for **eu**. Portuguese often contracts **em + uma** to **numa**.",
+      "answer": ["Trabalho", "numa", "padaria."],
+      "distractors": ["na", "mora", "falas"],
+      "acceptedAnswers": ["Eu trabalho numa padaria."]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-12",
+      "type": "build_phrase",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I speak Portuguese and Arabic.",
+      "explanation": "For **eu**, the verb **falar** becomes **falo**. The subject pronoun is usually not needed.",
+      "answer": ["Falo", "português", "e", "árabe."],
+      "distractors": ["falas", "moro", "ou"],
+      "acceptedAnswers": ["Eu falo português e árabe."]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-13",
+      "type": "build_phrase",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask a woman formally: What is your address?",
+      "explanation": "In formal Portuguese, use 3rd-person forms and keep the article with the possessive: **a sua morada**.",
+      "answer": ["Qual", "é", "a", "sua", "morada?"],
+      "distractors": ["o", "seu", "nome", "NIF"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At a service desk, a man answers: «O meu nome é Ahmed.» Ask him formally what his name is.",
+      "explanation": "A common formal question is **Qual é o seu nome?** In European Portuguese, the possessive needs the article: **o seu nome**.",
+      "givenAnswer": "O meu nome é Ahmed.",
+      "answer": ["Qual", "é", "o", "seu", "nome?"],
+      "distractors": ["a", "sua", "morada", "apelido"],
+      "acceptedAnswers": ["Como se chama?"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the office, a woman answers: «O meu apelido é Li.» Ask her formally what her surname is.",
+      "explanation": "**Apelido** means surname or family name. In formal questions, use **o seu apelido**.",
+      "givenAnswer": "O meu apelido é Li.",
+      "answer": ["Qual", "é", "o", "seu", "apelido?"],
+      "distractors": ["a", "sua", "morada", "nome"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At reception, a man answers: «O meu número de telemóvel é 912 345 678.» Ask him formally what his mobile number is.",
+      "explanation": "**Número de telemóvel** is the usual full phrase on forms and in official questions.",
+      "givenAnswer": "O meu número de telemóvel é 912 345 678.",
+      "answer": ["Qual", "é", "o", "seu", "número", "de", "telemóvel?"],
+      "distractors": ["a", "sua", "morada", "NIF"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "An official needs to know where a woman lives. She answers: «Moro em Loures.» Ask her formally where she lives.",
+      "explanation": "Use **Onde mora?** to ask where someone lives. You can also say **Onde é que mora?**.",
+      "givenAnswer": "Moro em Loures.",
+      "answer": ["Onde", "mora?"],
+      "distractors": ["Qual", "a", "sua", "morada"],
+      "acceptedAnswers": ["Onde é que mora?", "Onde mora a senhora?", "Onde é que a senhora mora?"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-18",
+      "type": "find_error",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With **tu**, regular **-ar** verbs end in **-as**: **tu trabalhas**. **Trabalha** is for ele/ela/você.",
+      "sentence": ["Tu", "trabalha", "num", "supermercado."],
+      "wrongIndex": 1,
+      "correction": "trabalhas",
+      "options": ["trabalhas", "trabalho", "trabalham"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-19",
+      "type": "find_error",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The city is usually **o Porto**, so with **morar em** you say **no Porto**.",
+      "sentence": ["O", "Raj", "mora", "na", "Porto."],
+      "wrongIndex": 3,
+      "correction": "no",
+      "options": ["no", "do", "ao"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-20",
+      "type": "about_me",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "A simple way to say your job is **Sou + profissão**. You can use your real profession or practise with an example.",
+      "question": "Qual é a tua profissão?",
+      "sampleAnswer": "Sou motorista.",
+      "hints": ["trabalho", "como", "cozinheiro", "empregada", "professor"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-21",
+      "type": "translate_word",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "On official forms, «estado civil» is the field for being single, married, divorced or widowed.",
+      "direction": "toTarget",
+      "sentence": "On this form, write your **marital status**.",
+      "word": "marital status",
+      "answer": "estado civil",
+      "options": ["estado civil", "naturalidade", "profissão", "morada"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-22",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the explanation about two numbers on Portuguese forms.",
+      "explanation": "«NIF» is the tax number. «NISS» is the social security number from Segurança Social.",
+      "template": "Em Portugal, o ___ é o número dos impostos e o ___ é o número da Segurança Social.",
+      "gaps": [
+        {
+          "answer": "NIF"
+        },
+        {
+          "answer": "NISS"
+        }
+      ],
+      "wordBank": ["NIF", "NISS", "nome", "apelido"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill the three form fields in this order: nationality, place of birth, profession.",
+      "explanation": "These field names are feminine, so Portuguese uses «a sua»: «a sua nacionalidade», «a sua naturalidade», «a sua profissão».",
+      "template": "No formulário, o senhor escreve a sua ___, a sua ___ e a sua ___.",
+      "gaps": [
+        {
+          "answer": "nacionalidade"
+        },
+        {
+          "answer": "naturalidade"
+        },
+        {
+          "answer": "profissão"
+        }
+      ],
+      "wordBank": ["nacionalidade", "naturalidade", "profissão", "morada", "idade", "apelido"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-24",
+      "type": "build_phrase",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the health centre, say: My date of birth is 03/11/1988.",
+      "explanation": "«Data» is feminine, so use «a minha data». The fixed field name is «data de nascimento».",
+      "answer": ["A", "minha", "data", "de", "nascimento", "é", "03/11/1988."],
+      "distractors": ["o", "são", "morada"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-25",
+      "type": "build_phrase",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that João lives in Braga and works in a factory.",
+      "explanation": "With a named subject, -ar verbs take the 3rd-person form: «mora», «trabalha». «Em uma» contracts to «numa».",
+      "answer": ["O", "João", "mora", "em", "Braga", "e", "trabalha", "numa", "fábrica."],
+      "distractors": ["na", "fala", "do"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-26",
+      "type": "build_phrase",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "On the form, write: My address is Avenida da Liberdade, 25.",
+      "explanation": "«Morada» is a feminine noun, so Portuguese says «a minha morada». Addresses are often written as a full short sentence on forms.",
+      "answer": ["A", "minha", "morada", "é", "Avenida", "da", "Liberdade,", "25."],
+      "distractors": ["o", "do", "são"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-27",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At AIMA, a woman answers: «Sou ucraniana.» Ask her formally what her nationality is.",
+      "explanation": "To ask for a field on a form, use «Qual é a / o sua / seu ...?». «Nacionalidade» is feminine, so it takes «a sua».",
+      "givenAnswer": "Sou ucraniana.",
+      "answer": ["Qual", "é", "a", "sua", "nacionalidade?"],
+      "distractors": ["o", "apelido?", "mora?"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-28",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Sou eletricista.» Ask him (informal) what his profession is.",
+      "explanation": "For informal singular, use «a tua». The noun «profissão» is feminine: «Qual é a tua profissão?».",
+      "givenAnswer": "Sou eletricista.",
+      "answer": ["Qual", "é", "a", "tua", "profissão?"],
+      "distractors": ["teu", "nome?", "moras?"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-29",
+      "type": "find_error",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Profissão» is feminine. In European Portuguese, use the article and the matching possessive: «a sua profissão».",
+      "sentence": ["A", "seu", "profissão", "é", "cozinheira."],
+      "wrongIndex": 1,
+      "correction": "sua",
+      "options": ["sua", "seus", "suas"]
+    },
+    {
+      "id": "pla-m1-personal-data-forms-30",
+      "type": "about_me",
+      "topicId": "pla-m1-personal-data-forms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "For personal data, you can answer with a short sentence like «Sou solteiro/a», or say politely that you prefer not to answer.",
+      "question": "Qual é o seu estado civil?",
+      "sampleAnswer": "Sou solteira.",
+      "hints": ["casado", "casada", "divorciado", "viúvo", "prefiro não dizer"]
+    }
+  ]
+}

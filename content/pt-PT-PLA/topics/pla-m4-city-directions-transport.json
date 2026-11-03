@@ -1,0 +1,510 @@
+{
+  "id": "pla-m4-city-directions-transport",
+  "moduleId": "m4",
+  "title": "Directions, imperative and public transport",
+  "kind": "grammar",
+  "context": "Giving directions in Portugal requires choosing between formal (*o senhor / a senhora*) and informal (*tu*) imperative forms.\n\n**Formal imperative (polite / strangers / service desks):**\n- *Siga em frente.* (Go straight ahead.)\n- *Vire à direita / à esquerda.* (Turn right / left.)\n- *Atravesse a rua na passadeira.* (Cross the street at the zebra crossing.)\n- *Apanhe o autocarro vinte e oito.* (Take bus 28.)\n- *Saia na estação do Rossio.* (Get off at Rossio station.)\n- *Espere na paragem.* (Wait at the bus stop.)\n- *Venha por aqui.* (Come this way.)\n- *Traga o seu passe.* (Bring your pass.)\n\n**Informal imperative (friends / family / colleagues):**\n- *Segue em frente.* (Go straight ahead.)\n- *Vira à direita.* (Turn right.)\n- *Atravessa a rua.* (Cross the street.)\n- *Apanha o metro.* (Take the metro.)\n- *Sai no Martim Moniz.* (Get off at Martim Moniz.)\n- *Espera aqui.* (Wait here.)\n- *Vem comigo.* (Come with me.)\n- *Traz o bilhete.* (Bring the ticket.)\n\n**Movement Prepositions:**\n- **para**: direction / destination (*Vou para casa.*)\n- **por / pelo / pela**: passage through a place (*Passo pela praça.*)\n- **a / ao / à**: movement to a point (*Vou à estação de metro.*)\n\n*Watch out:* In European Portuguese, formal imperatives use forms like *siga*, *vire*, *saia*, whereas informal imperatives use *segue*, *vira*, *sai*. Always use polite forms with officials, doctors, and strangers on the street!",
+  "keyItems": [
+    {
+      "target": "Siga em frente",
+      "support": "Go straight ahead (formal)"
+    },
+    {
+      "target": "Segue em frente",
+      "support": "Go straight ahead (informal)"
+    },
+    {
+      "target": "Vire à direita",
+      "support": "Turn right (formal)"
+    },
+    {
+      "target": "Vira à esquerda",
+      "support": "Turn left (informal)"
+    },
+    {
+      "target": "Atravesse a rua",
+      "support": "Cross the street (formal)"
+    },
+    {
+      "target": "Apanhe o metro",
+      "support": "Take the metro (formal)"
+    },
+    {
+      "target": "Saia na estação",
+      "support": "Get off at the station (formal)"
+    },
+    {
+      "target": "Paragem de autocarro",
+      "support": "Bus stop"
+    },
+    {
+      "target": "Cartão Navegante",
+      "support": "Navegante transit card"
+    },
+    {
+      "target": "Passar pela praça",
+      "support": "To go through the square"
+    },
+    {
+      "target": "Ao fundo da rua",
+      "support": "At the end of the street"
+    },
+    {
+      "target": "Na rotunda",
+      "support": "At the roundabout"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m4-city-directions-transport-01",
+      "type": "translate_word",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Siga em frente» means 'go straight ahead' in European Portuguese.",
+      "direction": "toTarget",
+      "sentence": "Go **straight ahead** and turn right.",
+      "word": "straight ahead",
+      "answer": "em frente",
+      "options": ["em frente", "à direita", "à esquerda", "ao fundo"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-02",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the gaps with the formal imperative forms (o senhor / a senhora).",
+      "explanation": "In formal directions, the verbs «virar» and «atravessar» become «vire» and «atravesse».",
+      "template": "Por favor, ___ à esquerda na rotunda e ___ na passadeira.",
+      "gaps": [
+        {
+          "answer": "vire"
+        },
+        {
+          "answer": "atravesse"
+        }
+      ],
+      "wordBank": ["vire", "atravesse", "vira", "atravessa", "virar", "atravessar"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-03",
+      "type": "build_phrase",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a visitor formally: 'Take the green line at the metro station.'",
+      "explanation": "The formal imperative of «apanhar» is «apanhe». Transit lines use the feminine «linha verde».",
+      "answer": ["Apanhe", "a", "linha", "verde", "na", "estação", "de", "metro."],
+      "distractors": ["Apanha", "no", "do"],
+      "acceptedAnswers": ["Apanhe a linha verde na estação do metro."]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-04",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You need the bus stop. Ask a passerby formally where the bus stop is located.",
+      "explanation": "Use «Onde fica...?» to ask where a specific location is situated in town.",
+      "givenAnswer": "Fica ao fundo da rua, à esquerda.",
+      "answer": ["Onde", "fica", "a", "paragem", "de", "autocarro?"],
+      "distractors": ["Como", "vai", "quando"],
+      "acceptedAnswers": [
+        "Onde é que fica a paragem de autocarro?",
+        "Onde é a paragem de autocarro?",
+        "Onde é que é a paragem de autocarro?"
+      ]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-05",
+      "type": "find_error",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "To say you go through or via a place, use «passar por»: «passo por Coimbra». Coimbra takes no article, so it stays «por» (with an article: «pela praça», «pelo parque»).",
+      "sentence": ["Para", "ir", "ao", "Porto,", "passo", "para", "Coimbra."],
+      "wrongIndex": 5,
+      "correction": "por",
+      "options": ["por", "pela", "de"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-06",
+      "type": "build_phrase",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Instruct your friend informally: 'Get off at Martim Moniz.'",
+      "explanation": "The informal imperative of «sair» (tu) is «sai». Preposition «em + o» becomes «no».",
+      "answer": ["Sai", "no", "Martim", "Moniz."],
+      "distractors": ["Saia", "em", "na"],
+      "acceptedAnswers": ["Sai em Martim Moniz."]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Choose the prepositions: you go home (destination) and pass through the park.",
+      "explanation": "«Ir para casa» indicates destination; «passar pelo parque» (por + o) indicates passing through.",
+      "template": "Hoje vou ___ casa de metro e passo ___ parque.",
+      "gaps": [
+        {
+          "answer": "para",
+          "accepted": ["a"]
+        },
+        {
+          "answer": "pelo"
+        }
+      ],
+      "wordBank": ["para", "pelo", "por", "a", "do", "ao"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-08",
+      "type": "match_pairs",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each direction or transport phrase with its English meaning.",
+      "explanation": "Key Portuguese expressions for navigating around a city.",
+      "pairs": [
+        {
+          "target": "seguir em frente",
+          "support": "to go straight ahead"
+        },
+        {
+          "target": "virar à direita",
+          "support": "to turn right"
+        },
+        {
+          "target": "estação de metro",
+          "support": "metro station"
+        },
+        {
+          "target": "paragem de autocarro",
+          "support": "bus stop"
+        },
+        {
+          "target": "cartão Navegante",
+          "support": "Navegante transit card"
+        }
+      ]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-09",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You want to know if the pharmacy is far. Ask a passerby: 'Is the pharmacy far?'",
+      "explanation": "Ask «A farmácia fica longe?» or «A farmácia é longe?» to inquire about distance.",
+      "givenAnswer": "Não, fica muito perto daqui.",
+      "answer": ["A", "farmácia", "fica", "longe?"],
+      "distractors": ["perto", "onde", "vai"],
+      "acceptedAnswers": ["A farmácia é longe?", "A farmácia fica longe daqui?"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-10",
+      "type": "translate_word",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In Portugal, a public transport subscription pass is called a «passe».",
+      "direction": "toTarget",
+      "sentence": "Do you have a monthly **pass** for the bus?",
+      "word": "pass",
+      "answer": "passe",
+      "options": ["passe", "bilhete", "cartão", "recibo"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-11",
+      "type": "find_error",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Addressing someone formally («Senhor Silva») requires the formal polite imperative «siga», not informal «segue».",
+      "sentence": ["Senhor", "Silva,", "segue", "em", "frente", "por", "favor."],
+      "wrongIndex": 2,
+      "correction": "siga",
+      "options": ["siga", "sigas", "seguido"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-12",
+      "type": "build_phrase",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a tourist formally: 'Cross the street and wait at the bus stop.'",
+      "explanation": "Formal polite imperative forms for «atravessar» and «esperar» are «atravesse» and «espere».",
+      "answer": ["Atravesse", "a", "rua", "e", "espere", "na", "paragem."],
+      "distractors": ["Atravessa", "espera", "no", "em"],
+      "acceptedAnswers": ["Atravesse a rua e espere na paragem de autocarro."]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-13",
+      "type": "about_me",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about where you take the bus.",
+      "explanation": "Use «apanho» (from apanhar) + «o autocarro» / «o metro» and say where: «na paragem», «na estação».",
+      "question": "Onde é que apanhas o autocarro?",
+      "sampleAnswer": "Apanho o autocarro na paragem perto de casa.",
+      "hints": ["metro", "estação", "praça", "ao fundo da rua", "linha"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask a station agent formally: 'At which station do I get off?'",
+      "explanation": "«Em que estação é que saio?» is the natural way to ask where to get off.",
+      "givenAnswer": "Tem de sair na estação do Rossio.",
+      "answer": ["Em", "que", "estação", "é", "que", "saio?"],
+      "distractors": ["onde", "como", "apanho"],
+      "acceptedAnswers": [
+        "Em que estação saio?",
+        "Em que estação tenho de sair?",
+        "Em que estação é que tenho de sair?"
+      ]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-15",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the imperative forms for an informal instruction (tu).",
+      "explanation": "The informal imperatives (tu) for irregular verbs «trazer» and «vir» are «traz» and «vem».",
+      "template": "Pedro, ___ o bilhete e ___ aqui!",
+      "gaps": [
+        {
+          "answer": "traz"
+        },
+        {
+          "answer": "vem"
+        }
+      ],
+      "wordBank": ["traz", "vem", "traga", "venha", "trazer", "vir"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-16",
+      "type": "build_phrase",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell someone formally: 'Bring the Navegante card and come to the station.'",
+      "explanation": "Formal imperatives: «traga» (trazer) and «venha» (vir). Direction to a place uses «à» (a + a).",
+      "answer": ["Traga", "o", "cartão", "Navegante", "e", "venha", "à", "estação."],
+      "distractors": ["Traz", "vem", "na", "para"],
+      "acceptedAnswers": ["Traga o cartão Navegante e venha para a estação."]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-17",
+      "type": "find_error",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Direction terms take feminine adjective forms: «à direita» (to the right) or «à esquerda» (to the left).",
+      "sentence": ["Para", "ir", "ao", "hospital,", "vire", "à", "direto", "na", "rotunda."],
+      "wrongIndex": 6,
+      "correction": "direita",
+      "options": ["direita", "direito", "direitos"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-18",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You need to know which metro line to take. Ask your colleague (informal): 'Which line do I take?'",
+      "explanation": "«Que linha é que apanho?» asks which transit line to take.",
+      "givenAnswer": "Deves apanhar a linha verde.",
+      "answer": ["Que", "linha", "é", "que", "apanho?"],
+      "distractors": ["onde", "como", "apanhas"],
+      "acceptedAnswers": [
+        "Que linha apanho?",
+        "Que linha devo apanhar?",
+        "Que linha tenho de apanhar?"
+      ]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-19",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the formal imperative forms for taking public transit.",
+      "explanation": "Polite formal instructions use «apanhe» (take) and «saia» (get off).",
+      "template": "Desculpe, ___ o autocarro vinte e oito e ___ na quarta paragem.",
+      "gaps": [
+        {
+          "answer": "apanhe"
+        },
+        {
+          "answer": "saia"
+        }
+      ],
+      "wordBank": ["apanhe", "saia", "apanha", "sai", "apanhar", "sair"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-20",
+      "type": "build_phrase",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: 'The health center is near the roundabout.'",
+      "explanation": "«Perto de» combines with feminine «a rotunda» to form «perto da rotunda».",
+      "answer": ["O", "centro", "de", "saúde", "fica", "perto", "da", "rotunda."],
+      "distractors": ["longe", "do", "na"],
+      "acceptedAnswers": ["O centro de saúde é perto da rotunda."]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-21",
+      "type": "build_phrase",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a friend (informal) to come with you and bring the Navegante card.",
+      "explanation": "With «tu», the informal imperative forms are «vem» (from vir) and «traz» (from trazer).",
+      "answer": ["Vem", "comigo", "e", "traz", "o", "cartão", "Navegante."],
+      "distractors": ["Venha", "traga", "do"],
+      "acceptedAnswers": ["Vem comigo e traz o cartão Navegante!"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-22",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Fica ao fundo da rua.» Ask him (informal) where the pharmacy is.",
+      "explanation": "Ask where a place is located using «Onde fica...?» or «Onde é que fica...?».",
+      "givenAnswer": "Fica ao fundo da rua.",
+      "answer": ["Onde", "fica", "a", "farmácia?"],
+      "distractors": ["Como", "vai", "do"],
+      "acceptedAnswers": ["Onde é que fica a farmácia?"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the correct prepositions for movement and passage.",
+      "explanation": "«Ir a + o» contracts to «ao» (movement to a destination), while «passar por + a» becomes «pela» (passing through).",
+      "template": "Eu vou ___ centro de saúde e passo ___ rua principal.",
+      "gaps": [
+        {
+          "answer": "ao",
+          "accepted": ["para o"]
+        },
+        {
+          "answer": "pela"
+        }
+      ],
+      "wordBank": ["ao", "pela", "para", "pelo", "à", "da"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-24",
+      "type": "find_error",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Addressing someone formally as «Dona Ana» requires the formal imperative «vire», not informal «vira».",
+      "sentence": ["Dona", "Ana,", "vira", "à", "esquerda", "na", "rotunda."],
+      "wrongIndex": 2,
+      "correction": "vire",
+      "options": ["vire", "virar", "vires"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-25",
+      "type": "build_phrase",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a passenger (formal) to get off at the next station and take the bus.",
+      "explanation": "Formal commands use «saia» (from sair) and «apanhe» (from apanhar) when directing someone politely.",
+      "answer": ["Saia", "na", "próxima", "estação", "e", "apanhe", "o", "autocarro."],
+      "distractors": ["Sai", "apanha", "no"],
+      "acceptedAnswers": ["Saia na próxima estação e apanhe o autocarro!"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-26",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A commuter answers: «Apanho o autocarro na praça.» Ask her (formal) where she takes the bus.",
+      "explanation": "Ask a formal question using the 3rd person singular verb form «apanha» with «Onde é que...».",
+      "givenAnswer": "Apanho o autocarro na praça.",
+      "answer": ["Onde", "é", "que", "apanha", "o", "autocarro?"],
+      "distractors": ["apanhas", "Como", "quando"],
+      "acceptedAnswers": ["Onde apanha o autocarro?"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-27",
+      "type": "translate_word",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the bold word.",
+      "explanation": "«Atravessar» means to cross (for example, «atravessar a rua» = to cross the street).",
+      "direction": "toTarget",
+      "sentence": "You need to **cross** the street at the zebra crossing.",
+      "word": "cross",
+      "answer": "atravessar",
+      "options": ["atravessar", "virar", "seguir", "apanhar"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-28",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the formal directions given at the information desk.",
+      "explanation": "Formal directions use the formal imperative: «siga» (seguir) and «vire» (virar).",
+      "template": "___ em frente até à rotunda e ___ à direita.",
+      "gaps": [
+        {
+          "answer": "Siga"
+        },
+        {
+          "answer": "vire"
+        }
+      ],
+      "wordBank": ["Siga", "vire", "Segue", "vira", "Saia", "saia"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-29",
+      "type": "about_me",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about how you travel to work or school.",
+      "explanation": "Use «Vou de + transport» (e.g. autocarro, metro) and mention your stop or route.",
+      "question": "Como é que vais para o trabalho ou para a escola?",
+      "sampleAnswer": "Vou de autocarro e saio no centro.",
+      "hints": ["metro", "comboio", "a pé", "passo", "pela", "linha", "estação"]
+    },
+    {
+      "id": "pla-m4-city-directions-transport-30",
+      "type": "build_phrase",
+      "topicId": "pla-m4-city-directions-transport",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a tourist (formal) to go straight ahead and wait at the bus stop.",
+      "explanation": "For formal directions, use «siga» (from seguir) and «espere» (from esperar).",
+      "answer": ["Siga", "em", "frente", "e", "espere", "na", "paragem", "de", "autocarro."],
+      "distractors": ["Segue", "espera", "no"],
+      "acceptedAnswers": ["Siga em frente e espere na paragem de autocarro!"]
+    }
+  ]
+}

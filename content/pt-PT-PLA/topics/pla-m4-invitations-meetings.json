@@ -1,0 +1,530 @@
+{
+  "id": "pla-m4-invitations-meetings",
+  "moduleId": "m4",
+  "title": "Invitations and arranging to meet",
+  "kind": "situation",
+  "context": "In this topic you learn useful chunks for inviting someone, answering an invitation, arranging a time and place, and talking about formal appointments. These are very practical phrases for life in Portugal with friends, classmates, neighbours and at service desks.\n\n- «Queres ir tomar um café?» = “Do you want to go for a coffee?”\n- «Vamos ao cinema no sábado?» = “Shall we go to the cinema on Saturday?”\n- «Sim, vamos!» / «Boa ideia!» = “Yes, let’s go!” / “Good idea!”\n- «Desculpa, não posso. Tenho de trabalhar.» = “Sorry, I can’t. I have to work.”\n- «A que horas nos encontramos?» = “What time do we meet?”\n- «Onde é que nos encontramos?» = “Where do we meet?”\n- «Tenho uma marcação às dez.» = “I have an appointment at ten.”\n- «Queria marcar para amanhã.» = “I would like to book for tomorrow.”\n\n**Watch out:**\n- Learn «Queria...» and «Pode ser...?» as polite ready-made chunks. You do not need new grammar yet.\n- Notice the contractions: «ao cinema», «na estação», «às seis», «da estação».",
+  "keyItems": [
+    {
+      "target": "Queres ir tomar um café?",
+      "support": "Do you want to go for a coffee?",
+      "note": "informal"
+    },
+    {
+      "target": "Vamos ao cinema no sábado?",
+      "support": "Shall we go to the cinema on Saturday?",
+      "note": "informal / neutral"
+    },
+    {
+      "target": "Sim, vamos!",
+      "support": "Yes, let's go!",
+      "note": "informal"
+    },
+    {
+      "target": "Boa ideia!",
+      "support": "Good idea!",
+      "note": "neutral"
+    },
+    {
+      "target": "Desculpa, não posso.",
+      "support": "Sorry, I can't.",
+      "note": "informal"
+    },
+    {
+      "target": "Tenho de trabalhar.",
+      "support": "I have to work.",
+      "note": "neutral"
+    },
+    {
+      "target": "Fica para a próxima.",
+      "support": "Maybe another time.",
+      "note": "fixed chunk"
+    },
+    {
+      "target": "A que horas?",
+      "support": "What time?",
+      "note": "time question"
+    },
+    {
+      "target": "Onde nos encontramos?",
+      "support": "Where do we meet?",
+      "note": "informal"
+    },
+    {
+      "target": "Pode ser às seis?",
+      "support": "Would six work?",
+      "note": "fixed chunk"
+    },
+    {
+      "target": "Combinado!",
+      "support": "It's settled!",
+      "note": "neutral"
+    },
+    {
+      "target": "Tenho uma marcação às dez.",
+      "support": "I have an appointment at ten.",
+      "note": "formal / neutral"
+    },
+    {
+      "target": "Queria marcar para amanhã.",
+      "support": "I would like to book for tomorrow.",
+      "note": "polite fixed chunk"
+    },
+    {
+      "target": "na estação de metro",
+      "support": "at the metro station",
+      "note": "place"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m4-invitations-meetings-01",
+      "type": "translate_word",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For a booked time at a service or office, Portuguese often uses «marcação». This is the usual word in phrases like «Tenho uma marcação às dez».",
+      "direction": "toTarget",
+      "sentence": "I have an **appointment** at AIMA at ten.",
+      "word": "appointment",
+      "answer": "marcação",
+      "options": ["marcação", "consulta", "reunião", "estação"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-02",
+      "type": "translate_word",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Amanhã» means “tomorrow”. It is very common in short practical questions such as «Pode ser amanhã?».",
+      "direction": "toTarget",
+      "sentence": "Can it be **tomorrow** for the appointment?",
+      "word": "tomorrow",
+      "answer": "amanhã",
+      "options": ["amanhã", "hoje", "agora", "depois"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-03",
+      "type": "translate_word",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In «Onde nos encontramos?», the verb form for «nós» is «encontramos». The pronoun «nos» is separate from the verb in a question.",
+      "direction": "toTarget",
+      "sentence": "Where do we **meet** after work?",
+      "word": "meet",
+      "answer": "encontramos",
+      "options": ["encontramos", "encontras", "encontro", "encontram"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-04",
+      "type": "match_pairs",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese phrase with its meaning.",
+      "explanation": "These are high-value chunks for everyday invitations and appointments. Several are best learned as whole phrases, not word by word.",
+      "pairs": [
+        {
+          "target": "Queres ir tomar um café?",
+          "support": "Do you want to go for a coffee?"
+        },
+        {
+          "target": "Boa ideia!",
+          "support": "Good idea!"
+        },
+        {
+          "target": "Fica para a próxima.",
+          "support": "Maybe another time."
+        },
+        {
+          "target": "Combinado!",
+          "support": "It's settled!"
+        },
+        {
+          "target": "Tenho uma marcação às dez.",
+          "support": "I have an appointment at ten."
+        }
+      ]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Decline an invitation: say you can't today because you have a Portuguese class. Fill the two gaps.",
+      "explanation": "To say you cannot do something, use «não posso». To give a reason about your own situation, use «tenho».",
+      "template": "Hoje não ___, ___ aula de português.",
+      "gaps": [
+        {
+          "answer": "posso"
+        },
+        {
+          "answer": "tenho"
+        }
+      ],
+      "wordBank": ["posso", "tenho", "podes", "tem", "quero"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gap with the common fixed phrase.",
+      "explanation": "«Fica para a próxima» is a ready-made way to say “maybe another time”. Learn it as one useful chunk.",
+      "template": "Hoje não posso. ___ para a próxima.",
+      "gaps": [
+        {
+          "answer": "Fica"
+        }
+      ],
+      "wordBank": ["Fica", "Fico", "Ficamos", "Vai"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At an office, say you have an appointment at ten. Fill the gap.",
+      "explanation": "For an official booked time, use «marcação». This is the natural word in places like AIMA or Loja do Cidadão.",
+      "template": "Tenho uma ___ às dez na Loja do Cidadão.",
+      "gaps": [
+        {
+          "answer": "marcação"
+        }
+      ],
+      "wordBank": ["marcação", "consulta", "estação", "reunião"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Two friends are fixing a time and place. Fill the two gaps.",
+      "explanation": "Use «às» for clock times, and «da» in «o café da estação» because «de + a = da».",
+      "template": "Pode ser ___ cinco no café ___ estação?",
+      "gaps": [
+        {
+          "answer": "às"
+        },
+        {
+          "answer": "da"
+        }
+      ],
+      "wordBank": ["às", "da", "ao", "do", "de"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-09",
+      "type": "build_phrase",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say to your friend: \"Do you want to go for a coffee this afternoon?\"",
+      "explanation": "With a friend, use the informal singular form «queres». «Esta tarde» means “this afternoon”.",
+      "answer": ["Queres", "ir", "tomar", "um", "café", "esta", "tarde?"],
+      "distractors": ["vamos", "domingo", "ao"],
+      "acceptedAnswers": ["Tu queres ir tomar um café esta tarde?"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-10",
+      "type": "build_phrase",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Invite your friend: \"Shall we go to the cinema on Saturday?\"",
+      "explanation": "A common suggestion is «Vamos ...?». Use the contractions «ao cinema» and «no sábado».",
+      "answer": ["Vamos", "ao", "cinema", "no", "sábado?"],
+      "distractors": ["na", "domingo", "queres"],
+      "acceptedAnswers": ["Nós vamos ao cinema no sábado?"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-11",
+      "type": "build_phrase",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At a service desk, say politely: \"I would like to book for tomorrow.\"",
+      "explanation": "«Queria» is a polite fixed chunk very often used at desks and offices. Here the infinitive after it is «marcar».",
+      "answer": ["Queria", "marcar", "para", "amanhã."],
+      "distractors": ["posso", "hoje", "consulta"],
+      "acceptedAnswers": ["Eu queria marcar para amanhã."]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-12",
+      "type": "build_phrase",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say to your friend: \"Sorry, I can't, because I have to work.\"",
+      "explanation": "Use «não posso» to decline, and «tenho de + infinitive» for obligation. «Porque» introduces the reason.",
+      "answer": ["Desculpa,", "não", "posso", "porque", "tenho", "de", "trabalhar."],
+      "distractors": ["vamos", "podes", "amanhã"],
+      "acceptedAnswers": [
+        "Desculpa, não posso, porque tenho de trabalhar.",
+        "Desculpa, não posso porque eu tenho de trabalhar."
+      ]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-13",
+      "type": "build_phrase",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"Let's meet at the metro station at six.\"",
+      "explanation": "In an affirmative main clause, the pronoun goes after the verb: «Encontramo-nos». Also note «na estação» and «às seis».",
+      "answer": ["Encontramo-nos", "na", "estação", "de", "metro", "às", "seis."],
+      "distractors": ["ao", "temos", "onde"],
+      "acceptedAnswers": [
+        "Nós encontramo-nos na estação de metro às seis.",
+        "Vamos encontrar-nos na estação de metro às seis."
+      ]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Sim, vamos!» Ask him (informal) if he wants to go to the cinema on Saturday.",
+      "explanation": "To ask a friend, use the informal form «queres». The place and day need the contractions «ao» and «no».",
+      "givenAnswer": "Sim, vamos!",
+      "answer": ["Queres", "ir", "ao", "cinema", "no", "sábado?"],
+      "distractors": ["quer", "quando", "tomar", "gostas"],
+      "acceptedAnswers": ["Tu queres ir ao cinema no sábado?"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Às seis.» Ask her (informal) what time to meet.",
+      "explanation": "For clock time, ask with «A que horas». After a question expression, the pronoun comes before the verb: «nos encontramos».",
+      "givenAnswer": "Às seis.",
+      "answer": ["A", "que", "horas", "nos", "encontramos?"],
+      "distractors": ["onde", "pode", "ser", "amanhã"],
+      "acceptedAnswers": [
+        "A que horas é que nos encontramos?",
+        "A que horas é que nós nos encontramos?"
+      ]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Na estação de metro.» Ask him (informal) where to meet.",
+      "explanation": "Ask about place with «Onde?» or «Onde é que ...?». In questions like this, Portuguese uses «nos encontramos».",
+      "givenAnswer": "Na estação de metro.",
+      "answer": ["Onde", "nos", "encontramos?"],
+      "distractors": ["quando", "vamos", "metro", "ficamos"],
+      "acceptedAnswers": ["Onde é que nos encontramos?", "Onde é que nós nos encontramos?"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the desk, the clerk answers: «Sim, pode ser.» Ask formally if tomorrow is possible for the appointment.",
+      "explanation": "«Pode ser ...?» is a very common polite chunk for checking if a day or time works. Learn it as a whole phrase.",
+      "givenAnswer": "Sim, pode ser.",
+      "answer": ["Pode", "ser", "para", "amanhã?"],
+      "distractors": ["marcar", "horas", "onde", "quero"],
+      "acceptedAnswers": ["Pode ser amanhã?"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-18",
+      "type": "find_error",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After a question word, the clitic goes before the verb. For “we”, the correct pronoun is «nos»: «Onde nos encontramos?».",
+      "sentence": ["Onde", "se", "encontramos?"],
+      "wrongIndex": 1,
+      "correction": "nos",
+      "options": ["nos", "me", "vos"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-19",
+      "type": "find_error",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «ir a» + «o cinema», Portuguese makes the contraction «ao». So the natural phrase is «Vamos ao cinema».",
+      "sentence": ["Vamos", "na", "cinema", "no", "sábado?"],
+      "wrongIndex": 1,
+      "correction": "ao",
+      "options": ["ao", "à", "do"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-20",
+      "type": "about_me",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use a short natural reply to accept or decline, and you can add a time. For example: «Sim, pode ser às seis.» or «Desculpa, não posso.»",
+      "question": "Queres ir tomar um café amanhã?",
+      "sampleAnswer": "Sim, pode ser às seis.",
+      "hints": ["desculpa", "não", "domingo", "à", "tarde", "combinado"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-21",
+      "type": "translate_word",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Combinado!» closes an arrangement: “Agreed! / It’s settled!”. Use it once the time and place are fixed.",
+      "direction": "toTarget",
+      "sentence": "Six o'clock at the station? **Agreed**!",
+      "word": "Agreed",
+      "answer": "Combinado",
+      "options": ["Combinado", "Desculpa", "Obrigado", "Até logo"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-22",
+      "type": "build_phrase",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Invite your classmate (informal) to have lunch with you tomorrow.",
+      "explanation": "For an informal invitation, Portuguese often uses «Queres + infinitive?». Here the activity is «almoçar» and «comigo» means “with me”.",
+      "answer": ["Queres", "almoçar", "comigo", "amanhã?"],
+      "distractors": ["Vamos", "jantar", "connosco"],
+      "acceptedAnswers": ["Tu queres almoçar comigo amanhã?"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-23",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The receptionist answers: «No balcão 3.» Ask her (formal) at which desk you have the appointment.",
+      "explanation": "To ask about the desk number, use «Em que balcão...?». The formal setting is in the situation, but the question is about you, so it uses «tenho».",
+      "givenAnswer": "No balcão 3.",
+      "answer": ["Em", "que", "balcão", "tenho", "a", "marcação?"],
+      "distractors": ["gabinete", "fica", "consulta"],
+      "acceptedAnswers": [
+        "Em que balcão é que tenho a marcação?",
+        "Em que balcão é a minha marcação?"
+      ]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-24",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Arrange a place to meet. Fill the two gaps.",
+      "explanation": "Use contractions with place nouns: «à porta» = a + a, and «da biblioteca» = de + a.",
+      "template": "Podemos encontrar-nos ___ porta ___ biblioteca às cinco.",
+      "gaps": [
+        {
+          "answer": "à"
+        },
+        {
+          "answer": "da"
+        }
+      ],
+      "wordBank": ["à", "da", "ao", "na", "do"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-25",
+      "type": "build_phrase",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the health centre desk, say politely: \"I would like to change my appointment to Monday.\"",
+      "explanation": "«Queria...» is a polite fixed chunk for requests. To say the new day, use «para» + day: «para segunda-feira».",
+      "answer": ["Queria", "mudar", "a", "minha", "marcação", "para", "segunda-feira."],
+      "distractors": ["marcar", "amanhã", "tenho"],
+      "acceptedAnswers": ["Eu queria mudar a minha marcação para segunda-feira."]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-26",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Às oito e meia, no restaurante.» Ask her (informal) where and at what time the dinner is.",
+      "explanation": "You can ask for place and time in one question. In Portuguese, it is also natural to ask the time first and the place second.",
+      "givenAnswer": "Às oito e meia, no restaurante.",
+      "answer": ["Onde", "e", "a", "que", "horas", "é", "o", "jantar?"],
+      "distractors": ["fica", "vamos", "amanhã"],
+      "acceptedAnswers": [
+        "A que horas e onde é o jantar?",
+        "Onde e a que horas é que é o jantar?",
+        "Onde é o jantar e a que horas começa?"
+      ]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-27",
+      "type": "find_error",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With this institution, Portuguese normally uses «nas Finanças» («em + as»). «No Finanças» is not the correct contraction.",
+      "sentence": ["Tenho", "uma", "marcação", "no", "Finanças", "amanhã."],
+      "wrongIndex": 3,
+      "correction": "nas",
+      "options": ["nas", "na", "nos"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-28",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the desk, explain that you have an appointment but you cannot come at three. Fill the gaps.",
+      "explanation": "Use «tenho» for something you have booked. To say you cannot come at that time, use «não posso».",
+      "template": "Bom dia. ___ uma marcação, mas ___ posso às três.",
+      "gaps": [
+        {
+          "answer": "Tenho"
+        },
+        {
+          "answer": "não"
+        }
+      ],
+      "wordBank": ["Tenho", "não", "Queria", "de", "sou"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-29",
+      "type": "about_me",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "A simple answer is «Posso...» + time or day. You can also answer «Não posso...» and add a reason.",
+      "question": "Quando podes?",
+      "sampleAnswer": "Posso depois das seis.",
+      "hints": ["segunda-feira", "sexta-feira", "de manhã", "à noite", "não posso"]
+    },
+    {
+      "id": "pla-m4-invitations-meetings-30",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-invitations-meetings",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Porque tenho turnos ao sábado.» Ask him (informal) why he cannot come on Saturday.",
+      "explanation": "To ask for a reason, use «Porque...?». The version with «é que» is also very common in Portugal.",
+      "givenAnswer": "Porque tenho turnos ao sábado.",
+      "answer": ["Porque", "não", "podes", "vir", "no", "sábado?"],
+      "distractors": ["queres", "cinema", "amanhã"],
+      "acceptedAnswers": ["Porque é que não podes vir no sábado?"]
+    }
+  ]
+}

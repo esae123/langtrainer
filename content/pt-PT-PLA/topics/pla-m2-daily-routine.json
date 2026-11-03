@@ -1,0 +1,508 @@
+{
+  "id": "pla-m2-daily-routine",
+  "moduleId": "m2",
+  "title": "Daily routine and reflexive verbs",
+  "kind": "grammar",
+  "context": "Daily routine is very useful in Portugal: in class, at work, and in small talk, people often ask about times and habits. In this topic, you practise common routine verbs and a key grammar point: **reflexive pronouns**.\n\nIn a normal affirmative sentence, the pronoun usually goes **after** the verb with a hyphen:\n- **Levanto-me às sete.** = I get up at seven.\n- **Deito-me tarde.** = I go to bed late.\n\nAfter words like **não**, **nunca**, **também** and after **question words**, the pronoun goes **before** the verb:\n- **Não me levanto cedo.** = I do not get up early.\n- **Também me deito tarde.** = I also go to bed late.\n- **A que horas te levantas?** = What time do you get up?\n\nYou also revise some regular **-er** and **-ir** verbs:\n- **Vivo em Lisboa.** = I live in Lisbon.\n- **Escreve emails de manhã.** = She writes emails in the morning.\n- **Como pão ao pequeno-almoço.** = I eat bread for breakfast.\n\nWatch out:\n- **sempre** normally comes **after** the verb: **Janto sempre em casa.**\n- **costumar** is followed directly by an infinitive: **Costumo jantar cedo.**",
+  "keyItems": [
+    {
+      "target": "acordar",
+      "support": "to wake up"
+    },
+    {
+      "target": "levantar-se",
+      "support": "to get up",
+      "note": "reflexive"
+    },
+    {
+      "target": "tomar banho",
+      "support": "to take a shower / bathe"
+    },
+    {
+      "target": "vestir-se",
+      "support": "to get dressed",
+      "note": "reflexive"
+    },
+    {
+      "target": "tomar o pequeno-almoço",
+      "support": "to have breakfast"
+    },
+    {
+      "target": "ir para o trabalho",
+      "support": "to go to work"
+    },
+    {
+      "target": "almoçar",
+      "support": "to have lunch"
+    },
+    {
+      "target": "jantar",
+      "support": "to have dinner"
+    },
+    {
+      "target": "deitar-se",
+      "support": "to go to bed",
+      "note": "reflexive"
+    },
+    {
+      "target": "costumar + infinitivo",
+      "support": "to usually do something"
+    },
+    {
+      "target": "normalmente",
+      "support": "normally"
+    },
+    {
+      "target": "sempre",
+      "support": "always",
+      "note": "normally after the verb"
+    },
+    {
+      "target": "nunca",
+      "support": "never",
+      "note": "normally before the verb"
+    },
+    {
+      "target": "A que horas...?",
+      "support": "At what time...?"
+    },
+    {
+      "target": "Também me deito tarde.",
+      "support": "I also go to bed late.",
+      "note": "pronoun before the verb after «também»"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m2-daily-routine-01",
+      "type": "build_phrase",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I always get up at seven.",
+      "explanation": "With reflexive verbs in an affirmative sentence, the pronoun goes after the verb with a hyphen: «levanto-me». In European Portuguese, «sempre» normally comes after the verb.",
+      "answer": ["Levanto-me", "sempre", "às", "sete."],
+      "distractors": ["Deito-me", "nunca", "ao"],
+      "acceptedAnswers": ["Eu levanto-me sempre às sete."]
+    },
+    {
+      "id": "pla-m2-daily-routine-02",
+      "type": "build_phrase",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that Raj does not get dressed early.",
+      "explanation": "After «não», reflexive pronouns go before the verb: «não se veste». The verb is 3rd person singular with «Raj».",
+      "answer": ["O", "Raj", "não", "se", "veste", "cedo."],
+      "distractors": ["te", "vestem", "tarde"],
+      "acceptedAnswers": ["Raj não se veste cedo."]
+    },
+    {
+      "id": "pla-m2-daily-routine-03",
+      "type": "build_phrase",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I usually have breakfast at home. Use «costumar + infinitive».",
+      "explanation": "«Costumar» is followed directly by an infinitive: «costumo tomar». For meals at home, use «em casa».",
+      "answer": ["Costumo", "tomar", "o", "pequeno-almoço", "em", "casa."],
+      "distractors": ["costumas", "ao", "jantar"],
+      "acceptedAnswers": ["Eu costumo tomar o pequeno-almoço em casa."]
+    },
+    {
+      "id": "pla-m2-daily-routine-04",
+      "type": "build_phrase",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that Sunita and Ahmed go to work (use «ir para»).",
+      "explanation": "In Portugal first names usually take the article: «a Sunita», «o Ahmed». For a destination use «ir para»; two people → plural «vão».",
+      "answer": ["A", "Sunita", "e", "o", "Ahmed", "vão", "para", "o", "trabalho."],
+      "distractors": ["vai", "na", "de"],
+      "acceptedAnswers": ["Sunita e Ahmed vão para o trabalho."]
+    },
+    {
+      "id": "pla-m2-daily-routine-05",
+      "type": "build_phrase",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I also go to bed late.",
+      "explanation": "After «também», the reflexive pronoun comes before the verb: «também me deito». This is different from a simple affirmative sentence without a trigger word.",
+      "answer": ["Também", "me", "deito", "tarde."],
+      "distractors": ["deito-me", "cedo", "nunca"],
+      "acceptedAnswers": ["Eu também me deito tarde."]
+    },
+    {
+      "id": "pla-m2-daily-routine-06",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Às seis e meia.» Ask her (informal) what time she wakes up.",
+      "explanation": "Use «A que horas» for clock time. «Acordar» here is not reflexive, so the question is «acordas», not «te acordas».",
+      "givenAnswer": "Às seis e meia.",
+      "answer": ["A", "que", "horas", "acordas?"],
+      "distractors": ["Quando", "te", "deitas?"],
+      "acceptedAnswers": ["A que horas é que acordas?"]
+    },
+    {
+      "id": "pla-m2-daily-routine-07",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Tomo banho de manhã.» Ask him (informal) when he takes a shower.",
+      "explanation": "Use «Quando» to ask about part of the day or another moment. «Tomar banho» is a fixed everyday expression.",
+      "givenAnswer": "Tomo banho de manhã.",
+      "answer": ["Quando", "tomas", "banho?"],
+      "distractors": ["Acordas", "onde", "vestes-te"],
+      "acceptedAnswers": ["Quando é que tomas banho?"]
+    },
+    {
+      "id": "pla-m2-daily-routine-08",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Não, nunca me deito tarde.» Ask her (informal) if she goes to bed late.",
+      "explanation": "In a yes/no question, you can begin with the verb: «Deitas-te...?» In an affirmative question form, the reflexive pronoun stays after the verb.",
+      "givenAnswer": "Não, nunca me deito tarde.",
+      "answer": ["Deitas-te", "tarde?"],
+      "distractors": ["cedo", "levantas-te", "também"],
+      "acceptedAnswers": ["Tu deitas-te tarde?"]
+    },
+    {
+      "id": "pla-m2-daily-routine-09",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Vivo em Faro.» Ask him (informal) where he lives, using «viver».",
+      "explanation": "Use «Onde» to ask where someone lives. With «tu», regular -er verbs end in «-es»: «vives».",
+      "givenAnswer": "Vivo em Faro.",
+      "answer": ["Onde", "vives?"],
+      "distractors": ["moras", "como", "vive"],
+      "acceptedAnswers": ["Onde é que vives?"]
+    },
+    {
+      "id": "pla-m2-daily-routine-10",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A neighbour answers: «Deito-me às onze.» Ask her (formal) what time she goes to bed.",
+      "explanation": "With formal «a senhora / você», the verb is 3rd person singular: «deita». After the question phrase, the reflexive pronoun comes before the verb: «se deita».",
+      "givenAnswer": "Deito-me às onze.",
+      "answer": ["A", "que", "horas", "se", "deita?"],
+      "distractors": ["te", "levantas", "quando"],
+      "acceptedAnswers": [
+        "A que horas é que se deita?",
+        "A que horas se deita a senhora?",
+        "A que horas é que a senhora se deita?"
+      ]
+    },
+    {
+      "id": "pla-m2-daily-routine-11",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: I wake up at seven and then I get up straight away. Fill the two gaps.",
+      "explanation": "«Acordar» is not reflexive here, but «levantar-se» is. In an affirmative sentence, the reflexive pronoun is attached after the verb: «levanto-me».",
+      "template": "Eu ___ às sete e depois ___ logo.",
+      "gaps": [
+        {
+          "answer": "acordo"
+        },
+        {
+          "answer": "levanto-me"
+        }
+      ],
+      "wordBank": ["acordo", "levanto-me", "acordas", "me levanto"]
+    },
+    {
+      "id": "pla-m2-daily-routine-12",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps with the correct «tu» forms.",
+      "explanation": "With «tu», regular -er and -ir verbs usually end in «-es»: «comes», «abres».",
+      "template": "Tu ___ pão ao pequeno-almoço e ___ a janela do quarto.",
+      "gaps": [
+        {
+          "answer": "comes"
+        },
+        {
+          "answer": "abres"
+        }
+      ],
+      "wordBank": ["comes", "abres", "come", "abro"]
+    },
+    {
+      "id": "pla-m2-daily-routine-13",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about Oksana.",
+      "explanation": "For ela / a Oksana, regular -er and -ir verbs take 3rd person singular: «vive», «escreve», «decide».",
+      "template": "A Oksana ___ em Lisboa, ___ emails no trabalho e ___ tudo depressa.",
+      "gaps": [
+        {
+          "answer": "vive"
+        },
+        {
+          "answer": "escreve"
+        },
+        {
+          "answer": "decide"
+        }
+      ],
+      "wordBank": ["vive", "escreve", "decide", "vives", "escrevem", "decido"]
+    },
+    {
+      "id": "pla-m2-daily-routine-14",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: I don't go to bed early, but I always have breakfast at home. Fill the gaps.",
+      "explanation": "After «não», the reflexive pronoun comes before the verb: «não me deito». «Sempre» normally comes after the verb: «tomo sempre».",
+      "template": "Não ___ cedo, mas ___ sempre o pequeno-almoço em casa.",
+      "gaps": [
+        {
+          "answer": "me deito"
+        },
+        {
+          "answer": "tomo"
+        }
+      ],
+      "wordBank": ["me deito", "tomo", "deito-me", "tomas", "me levanto"]
+    },
+    {
+      "id": "pla-m2-daily-routine-15",
+      "type": "find_error",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «tu», the verb needs the ending «-as»: «levantas-te». «Levanta-se» would be for ele, ela, o senhor or a senhora.",
+      "sentence": ["Tu", "levanta-te", "às", "seis?"],
+      "wrongIndex": 1,
+      "correction": "levantas-te",
+      "options": ["levantas-te", "levanto-me", "levanta-se"]
+    },
+    {
+      "id": "pla-m2-daily-routine-16",
+      "type": "find_error",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «nunca», the pronoun goes before the verb, so the correct pattern is «nunca te deitas». Do not keep an extra «-te» on the verb.",
+      "sentence": ["Nunca", "te", "deitas-te", "tarde."],
+      "wrongIndex": 2,
+      "correction": "deitas",
+      "options": ["deitas", "deita-te", "deitas-se"]
+    },
+    {
+      "id": "pla-m2-daily-routine-17",
+      "type": "find_error",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «os comboios» (they), the present form of «partir» is «partem». «Parte» is singular.",
+      "sentence": ["Os", "comboios", "parte", "às", "seis."],
+      "wrongIndex": 2,
+      "correction": "partem",
+      "options": ["partem", "partes", "parto"]
+    },
+    {
+      "id": "pla-m2-daily-routine-18",
+      "type": "translate_word",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Deitar-se» is reflexive. In a normal affirmative sentence with «eu», the pronoun is attached after the verb: «deito-me».",
+      "direction": "toTarget",
+      "sentence": "I usually **go to bed** at midnight.",
+      "word": "go to bed",
+      "answer": "deito-me",
+      "options": ["deito-me", "deitas-te", "levanto-me", "visto-me"]
+    },
+    {
+      "id": "pla-m2-daily-routine-19",
+      "type": "translate_word",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For «they», regular -er verbs usually end in «-em»: «escrevem».",
+      "direction": "toTarget",
+      "sentence": "They **write** emails every morning.",
+      "word": "write",
+      "answer": "escrevem",
+      "options": ["escrevem", "escreve", "escreves", "escrevo"]
+    },
+    {
+      "id": "pla-m2-daily-routine-20",
+      "type": "about_me",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use a time after «A que horas». With «levantar-se», keep the reflexive form: «levanto-me».",
+      "question": "A que horas te levantas?",
+      "sampleAnswer": "Levanto-me às sete nos dias de trabalho.",
+      "hints": ["acordo", "cedo", "tarde", "ao fim de semana", "normalmente"]
+    },
+    {
+      "id": "pla-m2-daily-routine-21",
+      "type": "build_phrase",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I never get up at six on Sundays.",
+      "explanation": "With «nunca», the reflexive pronoun comes before the verb: «me levanto». For repeated days, Portuguese often uses «aos domingos».",
+      "answer": ["Nunca", "me", "levanto", "às", "seis", "aos", "domingos."],
+      "distractors": ["se", "levantas", "ao"],
+      "acceptedAnswers": ["Eu nunca me levanto às seis aos domingos."]
+    },
+    {
+      "id": "pla-m2-daily-routine-22",
+      "type": "build_phrase",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: We usually have lunch at one.",
+      "explanation": "«Costumar» is followed by an infinitive, not a conjugated verb. With «nós», the verb is «costumamos».",
+      "answer": ["Costumamos", "almoçar", "à", "uma."],
+      "distractors": ["costumam", "almoço", "ao"],
+      "acceptedAnswers": ["Nós costumamos almoçar à uma."]
+    },
+    {
+      "id": "pla-m2-daily-routine-23",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Levanto-me às seis e meia.» Ask him (informal) at what time he gets up.",
+      "explanation": "After «A que horas», the reflexive pronoun goes before the verb: «te levantas». In Portugal, the version with «é que» is also very common.",
+      "givenAnswer": "Levanto-me às seis e meia.",
+      "answer": ["A", "que", "horas", "te", "levantas?"],
+      "distractors": ["Quando", "se", "levanta"],
+      "acceptedAnswers": ["A que horas é que te levantas?"]
+    },
+    {
+      "id": "pla-m2-daily-routine-24",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Costumo jantar às sete e meia.» Ask him (informal) at what time he usually has dinner.",
+      "explanation": "To ask about a usual time, you can use «A que horas» with «costumar + infinitive». With «tu», the form is «costumas».",
+      "givenAnswer": "Costumo jantar às sete e meia.",
+      "answer": ["A", "que", "horas", "costumas", "jantar?"],
+      "distractors": ["Quando", "costuma", "almoçar"],
+      "acceptedAnswers": ["A que horas é que costumas jantar?"]
+    },
+    {
+      "id": "pla-m2-daily-routine-25",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "A woman at work answers: «Almoço ao meio-dia.» Ask her (formal) at what time she has lunch.",
+      "explanation": "For formal singular, Portuguese uses the 3rd-person verb form: «almoça». «A que horas» asks for the exact time.",
+      "givenAnswer": "Almoço ao meio-dia.",
+      "answer": ["A", "que", "horas", "almoça?"],
+      "distractors": ["Quando", "janta", "almoçam"],
+      "acceptedAnswers": [
+        "A que horas é que almoça?",
+        "A que horas almoça a senhora?",
+        "A que horas é que a senhora almoça?"
+      ]
+    },
+    {
+      "id": "pla-m2-daily-routine-26",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps about a weekend routine.",
+      "explanation": "In an affirmative sentence, the reflexive pronoun goes after the verb with a hyphen: «levantamo-nos». «Tomar banho» is a fixed everyday expression.",
+      "template": "Ao sábado, nós ___ tarde e depois ___ banho em casa.",
+      "gaps": [
+        {
+          "answer": "levantamo-nos"
+        },
+        {
+          "answer": "tomamos"
+        }
+      ],
+      "wordBank": ["levantamo-nos", "tomamos", "levantamos-nos", "toma", "tomam"]
+    },
+    {
+      "id": "pla-m2-daily-routine-27",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Li never gets dressed quickly, and I also get dressed slowly. Fill the two gaps.",
+      "explanation": "After «nunca» and «também», the reflexive pronoun comes before the verb: «se veste», «me visto». This is different from normal affirmative sentences like «visto-me».",
+      "template": "A Li ___ depressa e eu ___ devagar.",
+      "gaps": [
+        {
+          "answer": "nunca se veste"
+        },
+        {
+          "answer": "também me visto"
+        }
+      ],
+      "wordBank": ["nunca se veste", "também me visto", "veste-se", "também visto-me"]
+    },
+    {
+      "id": "pla-m2-daily-routine-28",
+      "type": "find_error",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «costumo», Portuguese uses an infinitive: «costumo jantar». A conjugated form like «janto» does not fit here.",
+      "sentence": ["Eu", "costumo", "janto", "às", "oito."],
+      "wrongIndex": 2,
+      "correction": "jantar",
+      "options": ["jantar", "janta", "jantamos"]
+    },
+    {
+      "id": "pla-m2-daily-routine-29",
+      "type": "translate_word",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Abrir» is a regular -ir verb. For «eu», the form is «abro».",
+      "direction": "toTarget",
+      "sentence": "I **open** the shop at nine every day.",
+      "word": "open",
+      "answer": "abro",
+      "options": ["abro", "abres", "abre", "abrimos"]
+    },
+    {
+      "id": "pla-m2-daily-routine-30",
+      "type": "about_me",
+      "topicId": "pla-m2-daily-routine",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use the present tense to talk about your daily routine. «A que horas» is the normal way to ask about the time of a habit.",
+      "question": "A que horas almoças?",
+      "sampleAnswer": "Almoço ao meio-dia.",
+      "hints": ["uma", "duas", "em casa", "no trabalho", "normalmente"]
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+{
+  "id": "pla-m2-family-possessives",
+  "moduleId": "m2",
+  "title": "Family and possessives",
+  "kind": "vocabulary",
+  "context": "In this topic you learn family words and two very common ways to show possession. In European Portuguese, a possessive before a noun normally comes with the definite article: **o meu pai**, **a tua irmã**, **os nossos avós**. You use these forms when you talk about relatives, children and family members. You also learn **dele / dela / deles / delas** after the noun: **a casa deles**, **o carro dela**.\n\nExamples:\n- **A minha mãe mora em Braga.** — My mother lives in Braga.\n- **O teu irmão trabalha no hospital?** — Does your brother work at the hospital?\n- **Os nossos avós vivem em Faro.** — Our grandparents live in Faro.\n- **A sua filha chama-se Inês.** — Your daughter is called Inês. / His or her daughter is called Inês.\n- **Tenho dois filhos.** — I have two children / two sons, depending on the context.\n- **A casa deles é pequena.** — Their house is small.\n- **Quantos irmãos tem?** — How many brothers and sisters do you have? (formal)\n\nWatch out:\n- In Portugal, do not drop the article before a possessive noun: say **a minha mãe**, not **minha mãe**.\n- After the noun, use **dele / dela / deles / delas**: **o filho dela**, **a casa deles**.",
+  "keyItems": [
+    {
+      "target": "pai",
+      "support": "father"
+    },
+    {
+      "target": "mãe",
+      "support": "mother"
+    },
+    {
+      "target": "irmão / irmã",
+      "support": "brother / sister"
+    },
+    {
+      "target": "marido",
+      "support": "husband"
+    },
+    {
+      "target": "mulher / esposa",
+      "support": "wife",
+      "note": "both are used"
+    },
+    {
+      "target": "filho / filha",
+      "support": "son / daughter"
+    },
+    {
+      "target": "avós",
+      "support": "grandparents"
+    },
+    {
+      "target": "netos",
+      "support": "grandchildren"
+    },
+    {
+      "target": "sogro / sogra",
+      "support": "father-in-law / mother-in-law"
+    },
+    {
+      "target": "cunhado / cunhada",
+      "support": "brother-in-law / sister-in-law"
+    },
+    {
+      "target": "tio / tia",
+      "support": "uncle / aunt"
+    },
+    {
+      "target": "primo / prima",
+      "support": "male cousin / female cousin"
+    },
+    {
+      "target": "o meu / a minha",
+      "support": "my",
+      "note": "used before a noun with an article"
+    },
+    {
+      "target": "o teu / a tua",
+      "support": "your",
+      "note": "informal singular"
+    },
+    {
+      "target": "o seu / a sua",
+      "support": "your / his / her",
+      "note": "formal singular or 3rd person"
+    },
+    {
+      "target": "o nosso / a nossa",
+      "support": "our"
+    },
+    {
+      "target": "os vossos / as vossas",
+      "support": "your",
+      "note": "plural"
+    },
+    {
+      "target": "dele / dela / deles / delas",
+      "support": "his / hers / theirs",
+      "note": "used after the noun or after «ser»"
+    },
+    {
+      "target": "Tenho dois filhos.",
+      "support": "I have two children / two sons."
+    },
+    {
+      "target": "Quantos irmãos tens? / Quantos irmãos tem?",
+      "support": "How many brothers and sisters do you have?",
+      "note": "informal / formal"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m2-family-possessives-01",
+      "type": "translate_word",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Family words have fixed forms. «Mãe» means «mother».",
+      "direction": "toTarget",
+      "sentence": "My **mother** lives in Coimbra.",
+      "word": "mother",
+      "answer": "mãe",
+      "options": ["mãe", "filha", "irmã", "avó"]
+    },
+    {
+      "id": "pla-m2-family-possessives-02",
+      "type": "translate_word",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Irmão» is the masculine form for «brother». «Irmã» is «sister».",
+      "direction": "toTarget",
+      "sentence": "João has one **brother** and two sisters.",
+      "word": "brother",
+      "answer": "irmão",
+      "options": ["irmão", "cunhado", "pai", "filho"]
+    },
+    {
+      "id": "pla-m2-family-possessives-03",
+      "type": "translate_word",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Marido» means «husband». For «wife», Portuguese often uses «mulher» or «esposa».",
+      "direction": "toTarget",
+      "sentence": "Her **husband** works at the hospital.",
+      "word": "husband",
+      "answer": "marido",
+      "options": ["marido", "mulher", "filha", "sogro"]
+    },
+    {
+      "id": "pla-m2-family-possessives-04",
+      "type": "match_pairs",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match the family words with their meanings.",
+      "explanation": "Some family words change by gender and number, for example «cunhado / cunhada» and «netos / netas».",
+      "pairs": [
+        {
+          "target": "sogra",
+          "support": "mother-in-law"
+        },
+        {
+          "target": "cunhado",
+          "support": "brother-in-law"
+        },
+        {
+          "target": "netos",
+          "support": "grandchildren"
+        },
+        {
+          "target": "tio",
+          "support": "uncle"
+        },
+        {
+          "target": "prima",
+          "support": "female cousin"
+        }
+      ]
+    },
+    {
+      "id": "pla-m2-family-possessives-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ahmed is talking about his children. Fill the two gaps.",
+      "explanation": "After «dois» you need a masculine plural noun, and after «uma» you need a feminine singular noun.",
+      "template": "O Ahmed tem dois ___ e uma ___.",
+      "gaps": [
+        {
+          "answer": "filhos"
+        },
+        {
+          "answer": "filha"
+        }
+      ],
+      "wordBank": ["filhos", "filha", "irmãos", "irmã"]
+    },
+    {
+      "id": "pla-m2-family-possessives-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You are talking about your own parents. Complete with the right possessive. The article is already there.",
+      "explanation": "In European Portuguese, the possessive comes after the article and agrees with the noun: «a minha mãe», «o meu pai».",
+      "template": "A ___ mãe mora em Aveiro e o ___ pai trabalha no Porto.",
+      "gaps": [
+        {
+          "answer": "minha"
+        },
+        {
+          "answer": "meu"
+        }
+      ],
+      "wordBank": ["minha", "meu", "tua", "teu", "sua", "seu"]
+    },
+    {
+      "id": "pla-m2-family-possessives-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You are speaking formally to a woman about her family. Complete the sentence.",
+      "explanation": "With formal singular, Portuguese uses the 3rd-person possessives «seu / sua». They still agree with the noun.",
+      "template": "A ___ filha chama-se Inês e o ___ marido chama-se Raj.",
+      "gaps": [
+        {
+          "answer": "sua"
+        },
+        {
+          "answer": "seu"
+        }
+      ],
+      "wordBank": ["sua", "seu", "tua", "teu", "nossa", "nosso"]
+    },
+    {
+      "id": "pla-m2-family-possessives-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete: the house belongs to them (men or a mixed group), and the car belongs to her.",
+      "explanation": "After the noun or after «ser», use «dele / dela / deles / delas» to show possession.",
+      "template": "A casa é ___ e o carro é ___.",
+      "gaps": [
+        {
+          "answer": "deles"
+        },
+        {
+          "answer": "dela"
+        }
+      ],
+      "wordBank": ["deles", "dela", "dele", "delas", "seu", "sua"]
+    },
+    {
+      "id": "pla-m2-family-possessives-09",
+      "type": "build_phrase",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say, while showing a photo: This is my mother.",
+      "explanation": "Before a noun, European Portuguese normally uses the article with the possessive: «a minha mãe».",
+      "answer": ["Esta", "é", "a", "minha", "mãe."],
+      "distractors": ["teu", "são", "os"],
+      "acceptedAnswers": ["É a minha mãe.", "Ela é a minha mãe."]
+    },
+    {
+      "id": "pla-m2-family-possessives-10",
+      "type": "build_phrase",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say that Raj has two sons.",
+      "explanation": "Use «tem» for «has». After «dois», the noun is plural: «filhos».",
+      "answer": ["Raj", "tem", "dois", "filhos."],
+      "distractors": ["filhas", "uma", "tens"],
+      "acceptedAnswers": ["O Raj tem dois filhos."]
+    },
+    {
+      "id": "pla-m2-family-possessives-11",
+      "type": "build_phrase",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Our grandparents live in Faro.",
+      "explanation": "The possessive and the noun are both plural here: «os nossos avós».",
+      "answer": ["Os", "nossos", "avós", "moram", "em", "Faro."],
+      "distractors": ["nosso", "vossas", "na"],
+      "acceptedAnswers": ["Os nossos avós vivem em Faro."]
+    },
+    {
+      "id": "pla-m2-family-possessives-12",
+      "type": "build_phrase",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Their house (those men or a mixed group) is small.",
+      "explanation": "When possession comes after the noun, use «deles» for «their» with a masculine or mixed plural group.",
+      "answer": ["A", "casa", "deles", "é", "pequena."],
+      "distractors": ["delas", "seu", "grande"]
+    },
+    {
+      "id": "pla-m2-family-possessives-13",
+      "type": "build_phrase",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: João is my brother-in-law.",
+      "explanation": "Use «cunhado» for «brother-in-law». With a noun, Portuguese normally keeps the article before the possessive: «o meu cunhado».",
+      "answer": ["O", "João", "é", "o", "meu", "cunhado."],
+      "distractors": ["tua", "está", "sogra"],
+      "acceptedAnswers": ["João é o meu cunhado."]
+    },
+    {
+      "id": "pla-m2-family-possessives-14",
+      "type": "build_phrase",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Her son is ten years old.",
+      "explanation": "Age uses «ter»: «tem dez anos». For possession after the noun, use «dela».",
+      "answer": ["O", "filho", "dela", "tem", "dez", "anos."],
+      "distractors": ["dele", "está", "filha"],
+      "acceptedAnswers": ["O filho dela tem 10 anos.", "O seu filho tem dez anos."]
+    },
+    {
+      "id": "pla-m2-family-possessives-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Tenho uma irmã e dois irmãos.» Ask him (informal) how many brothers and sisters he has. Use the common question with «irmãos».",
+      "explanation": "In everyday Portuguese, «irmãos» can mean siblings in general. With «tu», the verb is «tens».",
+      "givenAnswer": "Tenho uma irmã e dois irmãos.",
+      "answer": ["Quantos", "irmãos", "tens?"],
+      "distractors": ["tem", "sua", "onde"],
+      "acceptedAnswers": ["Quantos irmãos é que tens?"]
+    },
+    {
+      "id": "pla-m2-family-possessives-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your neighbour answers: «A minha irmã chama-se Mariana.» Ask him (formal) what his sister is called. Use «chamar-se».",
+      "explanation": "In a formal question, keep the 3rd-person form: «se chama». The possessive still takes an article: «a sua irmã».",
+      "givenAnswer": "A minha irmã chama-se Mariana.",
+      "answer": ["Como", "se", "chama", "a", "sua", "irmã?"],
+      "distractors": ["teu", "Quantos", "mora"],
+      "acceptedAnswers": ["Como é que se chama a sua irmã?", "Como é que a sua irmã se chama?"]
+    },
+    {
+      "id": "pla-m2-family-possessives-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «O meu pai mora em Braga.» Ask her (informal) where her father lives. Use «morar».",
+      "explanation": "Ask about place with «Onde». Keep European Portuguese order: question word + verb + subject.",
+      "givenAnswer": "O meu pai mora em Braga.",
+      "answer": ["Onde", "mora", "o", "teu", "pai?"],
+      "distractors": ["vive", "sua", "Quem"],
+      "acceptedAnswers": ["Onde é que mora o teu pai?", "Onde é que o teu pai mora?"]
+    },
+    {
+      "id": "pla-m2-family-possessives-18",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pointing to a building, your classmate answers: «É a casa deles.» Ask informally whose house it is. Use exactly the words «a casa» in the question.",
+      "explanation": "To ask about possession, use «De quem». You can also hear the emphatic pattern with «é que».",
+      "givenAnswer": "É a casa deles.",
+      "answer": ["De", "quem", "é", "a", "casa?"],
+      "distractors": ["deles", "onde", "teu"],
+      "acceptedAnswers": ["De quem é que é a casa?"]
+    },
+    {
+      "id": "pla-m2-family-possessives-19",
+      "type": "find_error",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The possessive must agree with the noun. «Mãe» is feminine, so we say «a minha mãe».",
+      "sentence": ["A", "meu", "mãe", "trabalha", "aqui."],
+      "wrongIndex": 1,
+      "correction": "minha",
+      "options": ["minha", "minhas", "meus"]
+    },
+    {
+      "id": "pla-m2-family-possessives-20",
+      "type": "about_me",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "You can answer with «Tenho...» and then add the family words you need.",
+      "question": "Tens irmãos?",
+      "sampleAnswer": "Tenho um irmão e uma irmã.",
+      "hints": ["dois", "três", "primos", "avós", "não", "filhos"]
+    },
+    {
+      "id": "pla-m2-family-possessives-21",
+      "type": "translate_word",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Tio» is the masculine family word for an uncle. «Tia» is an aunt.",
+      "direction": "toTarget",
+      "sentence": "My **uncle** lives in Santarém.",
+      "word": "uncle",
+      "answer": "tio",
+      "options": ["tio", "tia", "primo", "cunhado"]
+    },
+    {
+      "id": "pla-m2-family-possessives-22",
+      "type": "translate_word",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Sogro» means father-in-law. It is a family relation by marriage.",
+      "direction": "toTarget",
+      "sentence": "Her **father-in-law** works near the station.",
+      "word": "father-in-law",
+      "answer": "sogro",
+      "options": ["sogro", "sogra", "cunhado", "marido"]
+    },
+    {
+      "id": "pla-m2-family-possessives-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Raj is talking about his family. Fill the two gaps.",
+      "explanation": "Before a noun, Portuguese normally uses article + possessive. The form changes with the gender of the noun: «o seu tio», «a sua prima».",
+      "template": "O Raj fala com ___ tio e com ___ prima ao domingo.",
+      "gaps": [
+        {
+          "answer": "o seu"
+        },
+        {
+          "answer": "a sua"
+        }
+      ],
+      "wordBank": ["o seu", "a sua", "os seus", "as suas"]
+    },
+    {
+      "id": "pla-m2-family-possessives-24",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Mariana is presenting the family. Fill the three gaps.",
+      "explanation": "Use article + possessive before the noun: «o meu irmão», «a sua mulher». After the noun, use «deles / delas»: «os filhos deles».",
+      "template": "___ irmão chama-se Tiago, ___ mulher é médica e os filhos ___ estudam no Porto.",
+      "gaps": [
+        {
+          "answer": "O meu"
+        },
+        {
+          "answer": "a sua"
+        },
+        {
+          "answer": "deles"
+        }
+      ],
+      "wordBank": ["O meu", "a sua", "deles", "A minha", "o seu", "delas"]
+    },
+    {
+      "id": "pla-m2-family-possessives-25",
+      "type": "build_phrase",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Our son studies in Porto.",
+      "explanation": "Before a noun, «nosso» needs the article in European Portuguese: «o nosso filho». «Porto» usually takes the article too: «no Porto».",
+      "answer": ["O", "nosso", "filho", "estuda", "no", "Porto."],
+      "distractors": ["nossa", "na", "moram"]
+    },
+    {
+      "id": "pla-m2-family-possessives-26",
+      "type": "build_phrase",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say about Raj and Ahmed: Their aunt is Brazilian.",
+      "explanation": "After the noun, use «deles» for possession of Raj and Ahmed. The adjective agrees with «tia», so it is «brasileira».",
+      "answer": ["A", "tia", "deles", "é", "brasileira."],
+      "distractors": ["primo", "dela", "são"]
+    },
+    {
+      "id": "pla-m2-family-possessives-27",
+      "type": "build_phrase",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say to two friends: Your female cousins live in Braga.",
+      "explanation": "For more than one person, use the plural possessive «as vossas». It agrees with the feminine plural noun «primas».",
+      "answer": ["As", "vossas", "primas", "moram", "em", "Braga."],
+      "distractors": ["vosso", "vive", "no"],
+      "acceptedAnswers": ["As vossas primas vivem em Braga."]
+    },
+    {
+      "id": "pla-m2-family-possessives-28",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "A couple answers: «Temos três filhos.» Ask them (plural) how many children they have.",
+      "explanation": "To ask more than one person, use the plural verb «têm». «Quantos» is used with the masculine plural noun «filhos».",
+      "givenAnswer": "Temos três filhos.",
+      "answer": ["Quantos", "filhos", "têm?"],
+      "distractors": ["Quantas", "irmãs", "moram?"],
+      "acceptedAnswers": ["Quantos filhos é que têm?"]
+    },
+    {
+      "id": "pla-m2-family-possessives-29",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Mr Silva answers: «Sim, a minha esposa trabalha aqui.» Ask him (formal) if his wife, «a sua esposa», works here.",
+      "explanation": "In the formal singular, use «a sua» + noun and the verb in the 3rd person: «trabalha».",
+      "givenAnswer": "Sim, a minha esposa trabalha aqui.",
+      "answer": ["A", "sua", "esposa", "trabalha", "aqui?"],
+      "distractors": ["o", "seu", "marido?"]
+    },
+    {
+      "id": "pla-m2-family-possessives-30",
+      "type": "find_error",
+      "topicId": "pla-m2-family-possessives",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With the masculine plural noun «netos», the possessive must also be masculine plural: «vossos». In European Portuguese, the article stays: «os vossos netos».",
+      "sentence": ["Os", "vossa", "netos", "estudam", "aqui."],
+      "wrongIndex": 1,
+      "correction": "vossos",
+      "options": ["vossos", "vossas", "vosso"]
+    }
+  ]
+}

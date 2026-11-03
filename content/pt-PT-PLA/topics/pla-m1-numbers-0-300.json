@@ -1,0 +1,503 @@
+{
+  "id": "pla-m1-numbers-0-300",
+  "moduleId": "m1",
+  "title": "Numbers 0–300: age, phone, prices, addresses",
+  "kind": "vocabulary",
+  "context": "In Portugal, numbers are used daily for ages, phone numbers, prices, and addresses. Remember that **um** and **dois** change gender before feminine nouns: *um euro* / *uma mesa*, *dois euros* / *duas casas*. Hundreds also agree with gender: *duzentos euros* (masculine) vs. *duzentas pessoas* (feminine).\n\nFor 100, use **cem** when exact (*cem euros*), but **cento** when followed by another number (*cento e um*, *cento e vinte*).\n\nExamples:\n- *Tenho trinta e dois anos.* (I am 32 years old.)\n- *O meu número de telemóvel é 912 345 678.* (My mobile number is 912 345 678.)\n- *Custa dois euros e cinquenta cêntimos.* (It costs two euros and fifty cents.)\n- *Moro no número 120, 3.º esquerdo.* (I live at number 120, 3rd floor left.)\n\nWatch out:\n- In European Portuguese, 14 is **catorze** and 16 is **dezasseis**.\n- Grams are masculine: *duzentos gramas* (two hundred grams).",
+  "keyItems": [
+    {
+      "target": "cem",
+      "support": "one hundred (exact)"
+    },
+    {
+      "target": "cento e um",
+      "support": "one hundred and one"
+    },
+    {
+      "target": "duzentos / duzentas",
+      "support": "two hundred"
+    },
+    {
+      "target": "trezentos / trezentas",
+      "support": "three hundred"
+    },
+    {
+      "target": "catorze",
+      "support": "fourteen"
+    },
+    {
+      "target": "dezasseis",
+      "support": "sixteen"
+    },
+    {
+      "target": "dois euros e cinquenta",
+      "support": "two euros and fifty"
+    },
+    {
+      "target": "no número...",
+      "support": "at number..."
+    },
+    {
+      "target": "terceiro esquerdo",
+      "support": "third floor left"
+    },
+    {
+      "target": "código postal",
+      "support": "postal code"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m1-numbers-0-300-01",
+      "type": "translate_word",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese word for thirty.",
+      "explanation": "In European Portuguese, 'thirty' is 'trinta'.",
+      "direction": "toTarget",
+      "sentence": "I am **thirty** years old.",
+      "word": "thirty",
+      "answer": "trinta",
+      "options": ["trinta", "treze", "trezentos", "três"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-02",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill in the numbers: I live at number 100 and I have 2 daughters.",
+      "explanation": "Exact 100 is 'cem'. 'Filhas' is feminine plural, so 2 is 'duas'.",
+      "template": "Moro no número ___ e tenho ___ filhas.",
+      "gaps": [
+        {
+          "answer": "cem"
+        },
+        {
+          "answer": "duas"
+        }
+      ],
+      "wordBank": ["cem", "duas", "cento", "dois", "três"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-03",
+      "type": "number_sequence",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Which number is missing in this sequence? Write it as words.",
+      "explanation": "Counting by 50s: 100, 150, 200, 250, 300. 250 is 'duzentos e cinquenta'.",
+      "sequence": [100, 150, 200, null, 300],
+      "answerWords": ["duzentos e cinquenta"],
+      "options": ["duzentos e cinquenta", "duzentos e vinte", "trezentos", "cento e cinquenta"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-04",
+      "type": "build_phrase",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you are 22 years old.",
+      "explanation": "Age is expressed with the verb 'ter': 'Tenho vinte e dois anos.'",
+      "answer": ["Tenho", "vinte", "e", "dois", "anos."],
+      "distractors": ["sou", "duas", "com"],
+      "acceptedAnswers": ["Eu tenho vinte e dois anos."]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-05",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Tenho trinta e quatro anos.» Ask him (informal) how old he is.",
+      "explanation": "Ask age informally using 'Quantos anos tens?' or 'Quantos anos é que tens?'.",
+      "givenAnswer": "Tenho trinta e quatro anos.",
+      "answer": ["Quantos", "anos", "tens?"],
+      "distractors": ["Como", "tem?", "Onde"],
+      "acceptedAnswers": ["Quantos anos é que tens?"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-06",
+      "type": "match_pairs",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese number word with its digits.",
+      "explanation": "'Cem' is 100, 'cento e um' is 101, 'duzentos' is 200, 'trezentos' is 300, and 'dezasseis' is 16.",
+      "pairs": [
+        {
+          "target": "cem",
+          "support": "100"
+        },
+        {
+          "target": "cento e um",
+          "support": "101"
+        },
+        {
+          "target": "duzentos",
+          "support": "200"
+        },
+        {
+          "target": "trezentos",
+          "support": "300"
+        },
+        {
+          "target": "dezasseis",
+          "support": "16"
+        }
+      ]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill in the price: 200 euros and 50 cents.",
+      "explanation": "'Euros' is masculine, so 200 is 'duzentos'. 50 is 'cinquenta'.",
+      "template": "Este casaco custa ___ euros e ___ cêntimos.",
+      "gaps": [
+        {
+          "answer": "duzentos"
+        },
+        {
+          "answer": "cinquenta"
+        }
+      ],
+      "wordBank": ["duzentos", "cinquenta", "duzentas", "quarenta", "cento"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-08",
+      "type": "build_phrase",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I live on the third floor on the left.",
+      "explanation": "Floors are ordinal numbers: 'terceiro esquerdo' (3rd floor left) with 'em + o = no'.",
+      "answer": ["Moro", "no", "terceiro", "esquerdo."],
+      "distractors": ["na", "três", "direita"],
+      "acceptedAnswers": ["Eu moro no terceiro esquerdo."]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-09",
+      "type": "find_error",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "'Páginas' is feminine plural, so 'duzentos' must change to 'duzentas'.",
+      "sentence": ["O", "livro", "tem", "duzentos", "páginas."],
+      "wrongIndex": 3,
+      "correction": "duzentas",
+      "options": ["duzentas", "dois", "cento"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-10",
+      "type": "translate_word",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese word for sixteen.",
+      "explanation": "In European Portuguese, 16 is spelled 'dezasseis'.",
+      "direction": "toTarget",
+      "sentence": "Take bus number **sixteen**.",
+      "word": "sixteen",
+      "answer": "dezasseis",
+      "options": ["dezasseis", "dezesseis", "catorze", "dezanove"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-11",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The waiter answers: «Custa dois euros e dez cêntimos.» Ask him how much the coffee costs.",
+      "explanation": "Price is asked with 'Quanto custa...' or 'Quanto é que custa...'.",
+      "givenAnswer": "Custa dois euros e dez cêntimos.",
+      "answer": ["Quanto", "custa", "o", "café?"],
+      "distractors": ["Como", "é", "onde"],
+      "acceptedAnswers": ["Quanto é que custa o café?"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-12",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete with 'two' (feminine) and 'sixteen'.",
+      "explanation": "'Filhas' is feminine so 'duas' is required. 16 is 'dezasseis' in European Portuguese.",
+      "template": "A Sunita tem ___ filhas e um filho de ___ anos.",
+      "gaps": [
+        {
+          "answer": "duas"
+        },
+        {
+          "answer": "dezasseis"
+        }
+      ],
+      "wordBank": ["duas", "dois", "dezasseis", "dezesseis", "três"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-13",
+      "type": "build_phrase",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "State your phone number: My number is 912 300 100.",
+      "explanation": "In European Portuguese, possessives take the definite article: 'O meu número é...'.",
+      "answer": ["O", "meu", "número", "é", "912", "300", "100."],
+      "distractors": ["de", "está", "a"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The clerk answers: «É o número 150.» Ask her what your ticket number is.",
+      "explanation": "To ask 'which is my number', use 'Qual é o meu número?'.",
+      "givenAnswer": "É o número 150.",
+      "answer": ["Qual", "é", "o", "meu", "número?"],
+      "distractors": ["Como", "de", "onde"],
+      "acceptedAnswers": ["Qual é que é o meu número?"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-15",
+      "type": "find_error",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Your sister is 14. One word is wrong. Tap it and choose the correction.",
+      "explanation": "In Portugal, 14 is spelled 'catorze', not 'quatorze'.",
+      "sentence": ["A", "minha", "irmã", "tem", "quatorze", "anos."],
+      "wrongIndex": 4,
+      "correction": "catorze",
+      "options": ["catorze", "dezasseis", "quinze"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-16",
+      "type": "translate_word",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese word for two hundred (feminine).",
+      "explanation": "'Páginas' is feminine, so 200 becomes 'duzentas'.",
+      "direction": "toTarget",
+      "sentence": "I have **two hundred** pages to read.",
+      "word": "two hundred",
+      "answer": "duzentas",
+      "options": ["duzentas", "duzentos", "cem", "trezentas"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-17",
+      "type": "build_phrase",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you would like two hundred grams of cheese.",
+      "explanation": "'Gramas' (grams) is a masculine noun in Portuguese: 'duzentos gramas'. Use fixed polite phrase 'Queria'.",
+      "answer": ["Queria", "duzentos", "gramas", "de", "queijo."],
+      "distractors": ["duzentas", "quer", "em"],
+      "acceptedAnswers": ["Eu queria duzentos gramas de queijo."]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-18",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill in the ticket price (3 euros) and queue number (101).",
+      "explanation": "'Três' is 3; 101 is 'cento e um' (not cem e um).",
+      "template": "O bilhete custa ___ euros e a senha é o número ___.",
+      "gaps": [
+        {
+          "answer": "três"
+        },
+        {
+          "answer": "cento e um"
+        }
+      ],
+      "wordBank": ["três", "cento e um", "cem e um", "terceiro", "duas"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-19",
+      "type": "about_me",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself: What is your age?",
+      "explanation": "Answer with 'Tenho [number] anos.'",
+      "question": "Quantos anos é que tens?",
+      "sampleAnswer": "Tenho trinta e dois anos.",
+      "hints": ["vinte", "quarenta", "cinquenta", "sou", "moro"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-20",
+      "type": "build_phrase",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that the postal code is 1000-001 Lisboa.",
+      "explanation": "Postal codes in Portugal are called 'código postal' and written with 4 digits, a hyphen, and 3 digits.",
+      "answer": ["O", "código", "postal", "é", "1000-001", "Lisboa."],
+      "distractors": ["do", "em", "número"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-21",
+      "type": "build_phrase",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you live on the 2nd floor right.",
+      "explanation": "In Portuguese floor descriptions, use «no» + ordinal number: «no segundo direito».",
+      "answer": ["Moro", "no", "segundo", "direito."],
+      "distractors": ["na", "segunda", "esquerda"],
+      "acceptedAnswers": ["Eu moro no segundo direito."]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-22",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «A bicicleta custa duzentos euros.» Ask him (informal) how much the bicycle costs.",
+      "explanation": "Ask price using «Quanto custa...?» or «Quanto é que custa...?».",
+      "givenAnswer": "A bicicleta custa duzentos euros.",
+      "answer": ["Quanto", "custa", "a", "bicicleta?"],
+      "distractors": ["Como", "quantos", "custam"],
+      "acceptedAnswers": ["Quanto é que custa a bicicleta?"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill the gaps: 200 grams of ham and 2 bottles of juice.",
+      "explanation": "Grams («gramas») are masculine, so use «duzentos». «Garrafas» is feminine, so use «duas».",
+      "template": "Queria ___ gramas de presunto e ___ garrafas de sumo.",
+      "gaps": [
+        {
+          "answer": "duzentos"
+        },
+        {
+          "answer": "duas"
+        }
+      ],
+      "wordBank": ["duzentos", "duas", "duzentas", "dois", "trezentas", "três"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-24",
+      "type": "find_error",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Since «anos» is masculine plural, use «dois» (cinquenta e dois anos), not «duas».",
+      "sentence": ["A", "minha", "mãe", "tem", "cinquenta", "e", "duas", "anos."],
+      "wrongIndex": 6,
+      "correction": "dois",
+      "options": ["dois", "duo", "segundo", "duzentos"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-25",
+      "type": "translate_word",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese translation for the bold phrase.",
+      "explanation": "In European Portuguese, 116 is written «cento e dezasseis» (using «cento» and PT spelling «dezasseis»).",
+      "direction": "toTarget",
+      "sentence": "The room key is number **one hundred and sixteen**.",
+      "word": "one hundred and sixteen",
+      "answer": "cento e dezasseis",
+      "options": [
+        "cento e dezasseis",
+        "cem e dezasseis",
+        "cento e dezesseis",
+        "duzentos e dezasseis"
+      ]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-26",
+      "type": "about_me",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself: State your postal code.",
+      "explanation": "In Portugal, postal codes have four digits, a hyphen, and three digits (e.g. 1500-001).",
+      "question": "Qual é o teu código postal?",
+      "sampleAnswer": "O meu código postal é 1500-001.",
+      "hints": ["moro", "em", "Lisboa", "número", "freguesia"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-27",
+      "type": "build_phrase",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: My mobile number is 961 234 567.",
+      "explanation": "Possessive «o meu» is required before «número de telemóvel».",
+      "answer": ["O", "meu", "número", "de", "telemóvel", "é", "961 234 567."],
+      "distractors": ["A", "minha", "são", "do"],
+      "acceptedAnswers": ["O meu telemóvel é 961 234 567."]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-28",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A customer answers: «Moro no número trezentos.» Ask him (formal) what house number he lives at.",
+      "explanation": "Use formal 3rd-person verb form «mora»: «Em que número é que mora?».",
+      "givenAnswer": "Moro no número trezentos.",
+      "answer": ["Em", "que", "número", "é", "que", "mora?"],
+      "distractors": ["Onde", "moras", "qual"],
+      "acceptedAnswers": [
+        "Em que número mora?",
+        "Qual é o seu número?",
+        "Em que número é que o senhor mora?"
+      ]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-29",
+      "type": "number_sequence",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Which number is missing? Write it as a word.",
+      "explanation": "Counting by twos: dez, doze, catorze, dezasseis, dezoito. In European Portuguese, 16 is «dezasseis».",
+      "sequence": [10, 12, 14, null, 18],
+      "answerWords": ["dezasseis"],
+      "options": ["dezasseis", "dezesseis", "quinze", "dezassete", "dezoito"]
+    },
+    {
+      "id": "pla-m1-numbers-0-300-30",
+      "type": "match_pairs",
+      "topicId": "pla-m1-numbers-0-300",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese phrase with its English translation.",
+      "explanation": "«Cento e dez» is 110, «duzentas páginas» agrees in feminine with pages, «três euros e vinte» is 3.20€.",
+      "pairs": [
+        {
+          "target": "cento e dez",
+          "support": "one hundred and ten"
+        },
+        {
+          "target": "duzentas páginas",
+          "support": "two hundred pages"
+        },
+        {
+          "target": "três euros e vinte",
+          "support": "three euros and twenty"
+        },
+        {
+          "target": "primeiro andar",
+          "support": "first floor"
+        }
+      ]
+    }
+  ]
+}

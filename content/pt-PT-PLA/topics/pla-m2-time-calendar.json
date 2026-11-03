@@ -1,0 +1,536 @@
+{
+  "id": "pla-m2-time-calendar",
+  "moduleId": "m2",
+  "title": "Time, days, months and time prepositions",
+  "kind": "vocabulary",
+  "context": "In Portuguese, clock time usually uses **ser**: **É uma hora** but **São duas horas**. You can say **e meia** (half past), **e um quarto** (quarter past) and **menos dez** (ten to). Before a clock time, use **às**: **às oito**. With one o’clock, use **à**: **à uma**.\n\nDays, months and time expressions are very useful for classes, work, appointments and transport. Use **na segunda-feira** for one specific Monday, but **à segunda-feira** for a habit or routine. With months, use **em**: **em maio**. For weekend, **no fim de semana** often means one weekend or a planned weekend, and **ao fim de semana** means a regular habit.\n\n- **São quatro e meia.** — It is four thirty.\n- **É meio-dia.** — It is noon.\n- **A aula começa às oito e um quarto.** — The class starts at 8:15.\n- **Tenho consulta na terça-feira.** — I have an appointment on Tuesday.\n- **Trabalho à segunda-feira.** — I work on Mondays.\n- **Faço compras ao fim de semana.** — I shop at weekends.\n\n**Watch out**\n- Days and months are normally written with lower-case letters: **segunda-feira, maio**.\n- In these basic patterns, do not use **em** before a weekday: use **na terça-feira** or **à terça-feira**, depending on the meaning.",
+  "keyItems": [
+    {
+      "target": "É uma hora.",
+      "support": "It is one o'clock.",
+      "note": "singular"
+    },
+    {
+      "target": "São duas horas.",
+      "support": "It is two o'clock."
+    },
+    {
+      "target": "e meia",
+      "support": "half past"
+    },
+    {
+      "target": "e um quarto",
+      "support": "quarter past"
+    },
+    {
+      "target": "menos dez",
+      "support": "ten to"
+    },
+    {
+      "target": "meio-dia",
+      "support": "noon"
+    },
+    {
+      "target": "meia-noite",
+      "support": "midnight"
+    },
+    {
+      "target": "segunda-feira",
+      "support": "Monday"
+    },
+    {
+      "target": "fim de semana",
+      "support": "weekend"
+    },
+    {
+      "target": "maio",
+      "support": "May"
+    },
+    {
+      "target": "às oito",
+      "support": "at eight o'clock"
+    },
+    {
+      "target": "à uma",
+      "support": "at one o'clock",
+      "note": "singular"
+    },
+    {
+      "target": "na terça-feira",
+      "support": "on Tuesday",
+      "note": "one occasion"
+    },
+    {
+      "target": "à segunda-feira",
+      "support": "on Mondays",
+      "note": "habit"
+    },
+    {
+      "target": "em novembro",
+      "support": "in November"
+    },
+    {
+      "target": "no fim de semana",
+      "support": "at the weekend / this weekend",
+      "note": "one weekend or a planned occasion"
+    },
+    {
+      "target": "ao fim de semana",
+      "support": "at weekends",
+      "note": "habit"
+    },
+    {
+      "target": "Que dia é hoje?",
+      "support": "What day is it today?"
+    },
+    {
+      "target": "A que horas...?",
+      "support": "At what time...?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m2-time-calendar-01",
+      "type": "translate_word",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The basic expression is the chunk «fim de semana». You can then combine it with prepositions like «no» or «ao».",
+      "direction": "toTarget",
+      "sentence": "I work at the café at the **weekend**.",
+      "word": "weekend",
+      "answer": "fim de semana",
+      "options": ["fim de semana", "segunda-feira", "maio", "meio-dia"]
+    },
+    {
+      "id": "pla-m2-time-calendar-02",
+      "type": "translate_word",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "From Monday to Friday, weekdays usually end in «-feira». Thursday is «quinta-feira».",
+      "direction": "toTarget",
+      "sentence": "The Portuguese class is on **Thursday**.",
+      "word": "Thursday",
+      "answer": "quinta-feira",
+      "options": ["quinta-feira", "quarta-feira", "terça-feira", "sexta-feira"]
+    },
+    {
+      "id": "pla-m2-time-calendar-03",
+      "type": "translate_word",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Month names are normally written in lower-case in Portuguese. «May» is «maio».",
+      "direction": "toTarget",
+      "sentence": "My course starts in **May**.",
+      "word": "May",
+      "answer": "maio",
+      "options": ["maio", "março", "junho", "julho"]
+    },
+    {
+      "id": "pla-m2-time-calendar-04",
+      "type": "match_pairs",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese word or expression with its meaning.",
+      "explanation": "This topic mixes clock words and calendar words. Remember that days and months are usually lower-case in Portuguese.",
+      "pairs": [
+        {
+          "target": "meio-dia",
+          "support": "noon"
+        },
+        {
+          "target": "meia-noite",
+          "support": "midnight"
+        },
+        {
+          "target": "segunda-feira",
+          "support": "Monday"
+        },
+        {
+          "target": "novembro",
+          "support": "November"
+        },
+        {
+          "target": "fim de semana",
+          "support": "weekend"
+        }
+      ]
+    },
+    {
+      "id": "pla-m2-time-calendar-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Sunita talks about today and tomorrow. Fill the gap.",
+      "explanation": "Use the weekday sequence: if tomorrow is Wednesday, today is Tuesday.",
+      "template": "Hoje é ___ e amanhã é quarta-feira.",
+      "gaps": [
+        {
+          "answer": "terça-feira"
+        }
+      ],
+      "wordBank": ["terça-feira", "segunda-feira", "quinta-feira", "sábado"]
+    },
+    {
+      "id": "pla-m2-time-calendar-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps: one specific day and one clock time.",
+      "explanation": "For one specific weekday, use «na». Before a clock time, use «às».",
+      "template": "Tenho aula de português ___ terça-feira ___ nove.",
+      "gaps": [
+        {
+          "answer": "na"
+        },
+        {
+          "answer": "às"
+        }
+      ],
+      "wordBank": ["na", "às", "à", "em"]
+    },
+    {
+      "id": "pla-m2-time-calendar-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Li is talking about a month and a habit. Fill the two gaps.",
+      "explanation": "Use «em» with months. For a regular weekend habit, use «ao fim de semana».",
+      "template": "A Li estuda português ___ abril e descansa ___ fim de semana.",
+      "gaps": [
+        {
+          "answer": "em"
+        },
+        {
+          "answer": "ao"
+        }
+      ],
+      "wordBank": ["em", "ao", "no", "na", "às"]
+    },
+    {
+      "id": "pla-m2-time-calendar-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gap with the correct time preposition.",
+      "explanation": "With one o'clock, Portuguese uses the singular form: «à uma», not «às uma».",
+      "template": "A consulta é ___ uma e meia.",
+      "gaps": [
+        {
+          "answer": "à"
+        }
+      ],
+      "wordBank": ["à", "às", "em", "ao"]
+    },
+    {
+      "id": "pla-m2-time-calendar-09",
+      "type": "build_phrase",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: It is half past four.",
+      "explanation": "For four o'clock, Portuguese uses plural «são». «E meia» means half past.",
+      "answer": ["São", "quatro", "e", "meia."],
+      "distractors": ["é", "quarto", "menos"]
+    },
+    {
+      "id": "pla-m2-time-calendar-10",
+      "type": "find_error",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Meio-dia» takes singular «é»: «Agora é meio-dia».",
+      "sentence": ["Agora", "são", "meio-dia."],
+      "wrongIndex": 1,
+      "correction": "é",
+      "options": ["é", "está", "fica"]
+    },
+    {
+      "id": "pla-m2-time-calendar-11",
+      "type": "build_phrase",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The class starts at eight fifteen.",
+      "explanation": "Before a clock time, use «às». «E um quarto» means quarter past.",
+      "answer": ["A", "aula", "começa", "às", "oito", "e", "um", "quarto."],
+      "distractors": ["à", "meia", "menos"],
+      "acceptedAnswers": ["A aula começa às oito e quinze."]
+    },
+    {
+      "id": "pla-m2-time-calendar-12",
+      "type": "build_phrase",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We have Portuguese every Monday at nine.",
+      "explanation": "For a habit on Mondays, use «à segunda-feira». The time phrase is «às nove».",
+      "answer": ["Temos", "português", "à", "segunda-feira", "às", "nove."],
+      "distractors": ["na", "ao", "maio"],
+      "acceptedAnswers": [
+        "Nós temos português à segunda-feira às nove.",
+        "Temos português às segundas-feiras às nove."
+      ]
+    },
+    {
+      "id": "pla-m2-time-calendar-13",
+      "type": "build_phrase",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Raj works on Saturday night (one specific Saturday, not a habit).",
+      "explanation": "For one specific day, use «no sábado». «À noite» is a common way to say “at night”.",
+      "answer": ["O", "Raj", "trabalha", "no", "sábado", "à", "noite."],
+      "distractors": ["na", "ao", "domingo"],
+      "acceptedAnswers": ["Raj trabalha no sábado à noite."]
+    },
+    {
+      "id": "pla-m2-time-calendar-14",
+      "type": "build_phrase",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: My appointment is at one thirty.",
+      "explanation": "With one o'clock, the preposition is singular: «à uma». «E meia» gives the half hour.",
+      "answer": ["A", "minha", "marcação", "é", "à", "uma", "e", "meia."],
+      "distractors": ["às", "meio-dia", "menos"],
+      "acceptedAnswers": ["A minha consulta é à uma e meia."]
+    },
+    {
+      "id": "pla-m2-time-calendar-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Às sete e meia.» Ask him (informal) what time he gets up.",
+      "explanation": "Use «A que horas» for clock time. With «tu», the verb is «levantas-te», and after a question word the clitic comes before: «te levantas».",
+      "givenAnswer": "Às sete e meia.",
+      "answer": ["A", "que", "horas", "te", "levantas?"],
+      "distractors": ["Quando", "onde", "é"],
+      "acceptedAnswers": ["A que horas é que te levantas?"]
+    },
+    {
+      "id": "pla-m2-time-calendar-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your classmate answers: «É terça-feira.» Ask her (informal) what day it is today.",
+      "explanation": "The fixed question for the day is «Que dia é hoje?».",
+      "givenAnswer": "É terça-feira.",
+      "answer": ["Que", "dia", "é", "hoje?"],
+      "distractors": ["mês", "hora", "onde"],
+      "acceptedAnswers": ["Que dia é que é hoje?"]
+    },
+    {
+      "id": "pla-m2-time-calendar-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Em novembro.» Ask him (informal) in which month the course starts.",
+      "explanation": "To ask about a month, use «Em que mês...?». Months normally come with the preposition «em».",
+      "givenAnswer": "Em novembro.",
+      "answer": ["Em", "que", "mês", "começa", "o", "curso?"],
+      "distractors": ["quando", "dia", "às"],
+      "acceptedAnswers": ["Em que mês é que começa o curso?"]
+    },
+    {
+      "id": "pla-m2-time-calendar-18",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your colleague answers: «Ao fim de semana.» Ask her (informal) when she studies Portuguese, talking about a habit.",
+      "explanation": "For a routine, «ao fim de semana» means “at weekends”. The natural question word here is «Quando».",
+      "givenAnswer": "Ao fim de semana.",
+      "answer": ["Quando", "estudas", "português?"],
+      "distractors": ["Onde", "qual", "mês"],
+      "acceptedAnswers": ["Quando é que estudas português?"]
+    },
+    {
+      "id": "pla-m2-time-calendar-19",
+      "type": "find_error",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Talk about one specific Tuesday. One word is wrong.",
+      "explanation": "For one specific weekday, use «na»: «Temos aula na terça-feira». «À terça-feira» is for a habit.",
+      "sentence": ["Temos", "aula", "em", "terça-feira."],
+      "wrongIndex": 2,
+      "correction": "na",
+      "options": ["na", "à", "no"]
+    },
+    {
+      "id": "pla-m2-time-calendar-20",
+      "type": "about_me",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "To say your birthday month, use «em» with the month: «Faço anos em agosto».",
+      "question": "Em que mês fazes anos?",
+      "sampleAnswer": "Faço anos em agosto.",
+      "hints": ["janeiro", "fevereiro", "abril", "junho", "dezembro"]
+    },
+    {
+      "id": "pla-m2-time-calendar-21",
+      "type": "translate_word",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Months are normally written with lower-case letters in Portuguese: «novembro». With months, you usually use «em»: «em novembro».",
+      "direction": "toTarget",
+      "sentence": "The interview is in **November**.",
+      "word": "November",
+      "answer": "novembro",
+      "options": ["novembro", "dezembro", "terça-feira", "fim de semana"]
+    },
+    {
+      "id": "pla-m2-time-calendar-22",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ahmed has football practice this Friday (one specific day) at seven. Fill the gaps.",
+      "explanation": "For one specific day, use «na sexta-feira». Before a clock time, use «às sete».",
+      "template": "O Ahmed treina futebol ___ sexta-feira ___ sete.",
+      "gaps": [
+        {
+          "answer": "na"
+        },
+        {
+          "answer": "às"
+        }
+      ],
+      "wordBank": ["na", "às", "à", "ao", "em"]
+    },
+    {
+      "id": "pla-m2-time-calendar-23",
+      "type": "build_phrase",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say the time in Portuguese with «menos»: 5:50.",
+      "explanation": "For times before the next hour, Portuguese often uses «menos»: 5:50 = «seis menos dez».",
+      "answer": ["São", "seis", "menos", "dez."],
+      "distractors": ["meia", "quarto", "é"],
+      "acceptedAnswers": ["São seis horas menos dez."]
+    },
+    {
+      "id": "pla-m2-time-calendar-24",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Na quarta-feira.» Ask him (informal) on which day the meeting is.",
+      "explanation": "To ask for the day of an event, «Em que dia…?» is clear and specific. The answer «na quarta-feira» gives one particular day.",
+      "givenAnswer": "Na quarta-feira.",
+      "answer": ["Em", "que", "dia", "é", "a", "reunião?"],
+      "distractors": ["quando", "consulta", "fica"],
+      "acceptedAnswers": [
+        "Que dia é a reunião?",
+        "Quando é a reunião?",
+        "Em que dia é que é a reunião?"
+      ]
+    },
+    {
+      "id": "pla-m2-time-calendar-25",
+      "type": "find_error",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "For one specific weekday, use «na terça-feira». In this basic pattern, «em terça-feira» is not correct.",
+      "sentence": ["A", "reunião", "é", "em", "terça-feira."],
+      "wrongIndex": 3,
+      "correction": "na",
+      "options": ["na", "no", "ao"]
+    },
+    {
+      "id": "pla-m2-time-calendar-26",
+      "type": "build_phrase",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I have dinner at home at weekends. Use the habit expression for weekend.",
+      "explanation": "For a regular habit at weekends, use «ao fim de semana». «No fim de semana» usually means one specific weekend.",
+      "answer": ["Janto", "em", "casa", "ao", "fim", "de", "semana."],
+      "distractors": ["no", "às", "trabalho"],
+      "acceptedAnswers": ["Eu janto em casa ao fim de semana."]
+    },
+    {
+      "id": "pla-m2-time-calendar-27",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: the course ends in November, and the exam is on Friday.",
+      "explanation": "Use «em» with months: «em novembro». For one specific weekday, use «na sexta-feira».",
+      "template": "O curso termina ___ novembro e o exame é ___ sexta-feira.",
+      "gaps": [
+        {
+          "answer": "em"
+        },
+        {
+          "answer": "na"
+        }
+      ],
+      "wordBank": ["em", "na", "ao", "às", "à"]
+    },
+    {
+      "id": "pla-m2-time-calendar-28",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The receptionist answers: «À uma.» Ask her (formal) at what time the office closes.",
+      "explanation": "To ask about clock time, use «A que horas…?». With schedules, Portuguese often says simply «fecha o escritório».",
+      "givenAnswer": "À uma.",
+      "answer": ["A", "que", "horas", "fecha", "o", "escritório?"],
+      "distractors": ["abre", "onde", "consulta"],
+      "acceptedAnswers": ["A que horas é que fecha o escritório?"]
+    },
+    {
+      "id": "pla-m2-time-calendar-29",
+      "type": "about_me",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «às» before a clock time: «às sete». For half past, add «e meia».",
+      "question": "A que horas jantas?",
+      "sampleAnswer": "Janto às sete e meia.",
+      "hints": ["almoço", "deito-me", "nove", "dez", "casa"]
+    },
+    {
+      "id": "pla-m2-time-calendar-30",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-time-calendar",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Às nove e meia.» Ask him (informal) at what time the train leaves.",
+      "explanation": "«A que horas…?» asks for a clock time. For transport, «parte» and «sai» are both common.",
+      "givenAnswer": "Às nove e meia.",
+      "answer": ["A", "que", "horas", "parte", "o", "comboio?"],
+      "distractors": ["chega", "onde", "autocarro"],
+      "acceptedAnswers": [
+        "A que horas é que parte o comboio?",
+        "A que horas sai o comboio?",
+        "A que horas é que sai o comboio?"
+      ]
+    }
+  ]
+}

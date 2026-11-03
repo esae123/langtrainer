@@ -1,0 +1,545 @@
+{
+  "id": "pla-m1-countries-nationalities",
+  "moduleId": "m1",
+  "title": "Countries, nationalities and languages",
+  "kind": "vocabulary",
+  "context": "Use **ser de** to say where someone is from, and **ser** + nationality to say nationality. Use **falar** for languages.\n\n- *Sou da Índia.* — I am from India.\n- *Sou de Portugal.* — I am from Portugal.\n- *O João é português.* — João is Portuguese.\n- *A Sunita é indiana e fala hindi.* — Sunita is Indian and speaks Hindi.\n- *Moro no Porto.* — I live in Porto.\n- *Moro na Amadora.* — I live in Amadora.\n- *De onde é que és?* — Where are you from?\n- *Qual é a tua nacionalidade?* — What is your nationality?\n\nSome country names take an article, so **de** and **em** contract: *do Brasil, da Ucrânia, no Porto, na Amadora*. But with *Portugal* we normally say *de Portugal*. Nationalities agree with gender: *brasileiro / brasileira*, *ucraniano / ucraniana*. **Watch out:** after *falar*, language names usually come with no article: *Falo português e inglês.* **Watch out:** do not say *em o Porto* or *de o Brasil*; use *no Porto* and *do Brasil*.",
+  "keyItems": [
+    {
+      "target": "Portugal — português / portuguesa",
+      "support": "Portugal — Portuguese",
+      "note": "nationality changes for gender"
+    },
+    {
+      "target": "Brasil — brasileiro / brasileira",
+      "support": "Brazil — Brazilian",
+      "note": "nationality changes for gender"
+    },
+    {
+      "target": "Índia — indiano / indiana",
+      "support": "India — Indian",
+      "note": "nationality changes for gender"
+    },
+    {
+      "target": "Paquistão — paquistanês / paquistanesa",
+      "support": "Pakistan — Pakistani",
+      "note": "nationality changes for gender"
+    },
+    {
+      "target": "Nepal — nepalês / nepalesa",
+      "support": "Nepal — Nepalese",
+      "note": "nationality changes for gender"
+    },
+    {
+      "target": "Ucrânia — ucraniano / ucraniana",
+      "support": "Ukraine — Ukrainian",
+      "note": "nationality changes for gender"
+    },
+    {
+      "target": "China — chinês / chinesa",
+      "support": "China — Chinese",
+      "note": "nationality changes for gender"
+    },
+    {
+      "target": "Marrocos — marroquino / marroquina",
+      "support": "Morocco — Moroccan",
+      "note": "nationality changes for gender"
+    },
+    {
+      "target": "Cabo Verde — cabo-verdiano / cabo-verdiana",
+      "support": "Cape Verde — Cape Verdean",
+      "note": "nationality changes for gender"
+    },
+    {
+      "target": "Angola — angolano / angolana",
+      "support": "Angola — Angolan",
+      "note": "nationality changes for gender"
+    },
+    {
+      "target": "português",
+      "support": "Portuguese language",
+      "note": "also a nationality/adjective form"
+    },
+    {
+      "target": "inglês",
+      "support": "English language"
+    },
+    {
+      "target": "hindi",
+      "support": "Hindi"
+    },
+    {
+      "target": "sou de Portugal",
+      "support": "I am from Portugal",
+      "note": "Portugal normally has no article here"
+    },
+    {
+      "target": "sou do Brasil",
+      "support": "I am from Brazil",
+      "note": "de + o = do"
+    },
+    {
+      "target": "moro no Porto",
+      "support": "I live in Porto",
+      "note": "em + o = no"
+    },
+    {
+      "target": "moro na Amadora",
+      "support": "I live in Amadora",
+      "note": "em + a = na"
+    },
+    {
+      "target": "De onde és?",
+      "support": "Where are you from?"
+    },
+    {
+      "target": "Qual é a tua nacionalidade?",
+      "support": "What is your nationality?"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m1-countries-nationalities-01",
+      "type": "translate_word",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For a male person, the nationality adjective is masculine singular: «brasileiro».",
+      "direction": "toTarget",
+      "sentence": "He is **Brazilian**.",
+      "word": "Brazilian",
+      "answer": "brasileiro",
+      "options": ["brasileiro", "brasileira", "Brasil", "português"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-02",
+      "type": "translate_word",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "After «falar», language names are used directly: «falo português».",
+      "direction": "toTarget",
+      "sentence": "I speak **Portuguese** and English.",
+      "word": "Portuguese",
+      "answer": "português",
+      "options": ["português", "Portugal", "portuguesa", "inglês"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-03",
+      "type": "translate_word",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The country is «Índia». The nationality would be «indiana» or «indiano».",
+      "direction": "toTarget",
+      "sentence": "She is from **India**.",
+      "word": "India",
+      "answer": "Índia",
+      "options": ["Índia", "indiana", "China", "Portugal"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-04",
+      "type": "match_pairs",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each country with the nationality pair.",
+      "explanation": "Nationality words agree with gender, so you often learn them as a masculine/feminine pair.",
+      "pairs": [
+        {
+          "target": "Portugal",
+          "support": "Portuguese: português / portuguesa"
+        },
+        {
+          "target": "Brasil",
+          "support": "Brazilian: brasileiro / brasileira"
+        },
+        {
+          "target": "Nepal",
+          "support": "Nepalese: nepalês / nepalesa"
+        },
+        {
+          "target": "China",
+          "support": "Chinese: chinês / chinesa"
+        },
+        {
+          "target": "Angola",
+          "support": "Angolan: angolano / angolana"
+        }
+      ]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Sunita is Indian and speaks Hindi. Fill the two gaps.",
+      "explanation": "Use the feminine nationality with Sunita, and use the language name after «fala».",
+      "template": "A Sunita é ___ e fala ___.",
+      "gaps": [
+        {
+          "answer": "indiana"
+        },
+        {
+          "answer": "hindi"
+        }
+      ],
+      "wordBank": ["indiana", "hindi", "indiano", "inglês", "português"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "In the class there is one Brazilian man and one Ukrainian woman. Fill the gaps with the correct articles.",
+      "explanation": "Use «um» before a masculine singular noun and «uma» before a feminine singular noun.",
+      "template": "Na turma há ___ brasileiro e ___ ucraniana.",
+      "gaps": [
+        {
+          "answer": "um"
+        },
+        {
+          "answer": "uma"
+        }
+      ],
+      "wordBank": ["um", "uma", "o", "a"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence with the correct contractions.",
+      "explanation": "«De + o» becomes «do», and «em + a» becomes «na».",
+      "template": "Eu sou ___ Brasil, mas moro ___ Amadora.",
+      "gaps": [
+        {
+          "answer": "do"
+        },
+        {
+          "answer": "na"
+        }
+      ],
+      "wordBank": ["do", "na", "da", "no", "em"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the question in this short dialogue.",
+      "explanation": "To ask about nationality, the set question is «Qual é a tua nacionalidade?».",
+      "template": "— ___ é a tua nacionalidade?\n— Sou nepalesa.",
+      "gaps": [
+        {
+          "answer": "Qual"
+        }
+      ],
+      "wordBank": ["Qual", "Quem", "Como", "Quantos"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-09",
+      "type": "build_phrase",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I am from Brazil and I speak Portuguese.",
+      "explanation": "Use «ser de» for origin and «falar» for languages. «Brasil» takes the article here, so «de + o» becomes «do».",
+      "answer": ["Sou", "do", "Brasil", "e", "falo", "português."],
+      "distractors": ["da", "fala", "moro"],
+      "acceptedAnswers": ["Eu sou do Brasil e falo português."]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-10",
+      "type": "build_phrase",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say that Ahmed is Moroccan.",
+      "explanation": "Use «ser» + nationality. For a man, the form is «marroquino».",
+      "answer": ["O", "Ahmed", "é", "marroquino."],
+      "distractors": ["marroquina", "sou", "da"],
+      "acceptedAnswers": ["Ahmed é marroquino."]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-11",
+      "type": "build_phrase",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Mariana lives in Porto and is Portuguese.",
+      "explanation": "With Porto, use the contraction «no». For a woman, the nationality is «portuguesa».",
+      "answer": ["A", "Mariana", "mora", "no", "Porto", "e", "é", "portuguesa."],
+      "distractors": ["na", "sou", "português"],
+      "acceptedAnswers": ["Mariana mora no Porto e é portuguesa."]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-12",
+      "type": "build_phrase",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We are from Nepal and we speak English.",
+      "explanation": "For «nós», use «somos» and «falamos». With Nepal in this sentence, use «do Nepal».",
+      "answer": ["Somos", "do", "Nepal", "e", "falamos", "inglês."],
+      "distractors": ["da", "fala", "mora"],
+      "acceptedAnswers": ["Nós somos do Nepal e falamos inglês."]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-13",
+      "type": "build_phrase",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that Li is Chinese and lives in Amadora.",
+      "explanation": "For a woman, use «chinesa». With Amadora, «em + a» becomes «na».",
+      "answer": ["A", "Li", "é", "chinesa", "e", "mora", "na", "Amadora."],
+      "distractors": ["chinês", "no", "sou"],
+      "acceptedAnswers": ["Li é chinesa e mora na Amadora."]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your classmate answers: «Sou da Índia.» Ask her (informal) where she is from.",
+      "explanation": "To ask origin, use «De onde» with «ser»: «De onde és?». The longer form with «é que» is also very common.",
+      "givenAnswer": "Sou da Índia.",
+      "answer": ["De", "onde", "és?"],
+      "distractors": ["Qual", "moras?", "fala"],
+      "acceptedAnswers": ["De onde é que és?"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «É brasileira.» Ask what Ana's nationality is.",
+      "explanation": "A common question is «Qual é a nacionalidade de...?» Another natural form is «De que nacionalidade é...?»",
+      "givenAnswer": "É brasileira.",
+      "answer": ["Qual", "é", "a", "nacionalidade", "da", "Ana?"],
+      "distractors": ["de", "o", "fala"],
+      "acceptedAnswers": ["De que nacionalidade é a Ana?"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your colleague answers: «Falo três idiomas: hindi, inglês e português.» Ask him (informal) how many languages he speaks.",
+      "explanation": "This item uses the noun «idiomas», so the question word is masculine plural: «quantos». Many people also say «línguas», which is feminine and takes «quantas».",
+      "givenAnswer": "Falo três idiomas: hindi, inglês e português.",
+      "answer": ["Quantos", "idiomas", "falas?"],
+      "distractors": ["Qual", "línguas", "és"],
+      "acceptedAnswers": [
+        "Quantos idiomas é que falas?",
+        "Quantas línguas falas?",
+        "Quantas línguas é que falas?"
+      ]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The teacher answers: «O Raj.» Ask her (formal) who speaks hindi.",
+      "explanation": "Use «quem» to ask about a person. «Quem fala hindi?» and «Quem é que fala hindi?» are both natural.",
+      "givenAnswer": "O Raj.",
+      "answer": ["Quem", "fala", "hindi?"],
+      "distractors": ["Qual", "é", "inglês?"],
+      "acceptedAnswers": ["Quem é que fala hindi?"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-18",
+      "type": "find_error",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Nationalities agree with gender. Oksana is female, so the correct form is «ucraniana».",
+      "sentence": ["A", "Oksana", "é", "ucraniano", "e", "fala", "inglês."],
+      "wrongIndex": 3,
+      "correction": "ucraniana",
+      "options": ["ucraniana", "ucranianos", "ucranianas"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-19",
+      "type": "find_error",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Some country names take an article. With «Índia», use «da»: «sou da Índia».",
+      "sentence": ["Eu", "sou", "de", "Índia", "e", "falo", "hindi."],
+      "wrongIndex": 2,
+      "correction": "da",
+      "options": ["da", "do", "na"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-20",
+      "type": "about_me",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "You can join three useful chunks: name with «chamar-se», origin with «ser de», and languages with «falar».",
+      "question": "Como te chamas, de onde és e que línguas falas?",
+      "sampleAnswer": "Chamo-me Raj, sou do Nepal e falo inglês.",
+      "hints": ["Sunita", "Portugal", "hindi", "português", "também", "na Amadora"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-21",
+      "type": "translate_word",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Nationalities agree with gender. For a woman from Pakistan, the form is «paquistanesa».",
+      "direction": "toTarget",
+      "sentence": "Amina is **Pakistani** and speaks English.",
+      "word": "Pakistani",
+      "answer": "paquistanesa",
+      "options": ["paquistanesa", "nepalesa", "marroquina", "ucraniana"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-22",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "João is Angolan and Ana is Ukrainian. Fill the two gaps.",
+      "explanation": "Nationality words agree with gender: «angolano» for a man and «ucraniana» for a woman.",
+      "template": "O João é ___ e a Ana é ___.",
+      "gaps": [
+        {
+          "answer": "angolano"
+        },
+        {
+          "answer": "ucraniana"
+        }
+      ],
+      "wordBank": ["angolano", "ucraniana", "angolana", "ucraniano", "marroquina", "marroquino"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-23",
+      "type": "build_phrase",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you are from Ukraine and you live in Porto.",
+      "explanation": "With «Ucrânia», «de + a» becomes «da»: «da Ucrânia». With «Porto», «em + o» becomes «no»: «no Porto».",
+      "answer": ["Sou", "da", "Ucrânia", "e", "moro", "no", "Porto."],
+      "distractors": ["do", "na", "fala"],
+      "acceptedAnswers": ["Eu sou da Ucrânia e moro no Porto."]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-24",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «A Sara é cabo-verdiana.» Ask her (informal) who is Cape Verdean.",
+      "explanation": "Use «quem» to ask about a person. «É que» is very common in European Portuguese questions.",
+      "givenAnswer": "A Sara é cabo-verdiana.",
+      "answer": ["Quem", "é", "que", "é", "cabo-verdiana?"],
+      "distractors": ["onde", "fala", "marroquina"],
+      "acceptedAnswers": ["Quem é cabo-verdiana?"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-25",
+      "type": "find_error",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Nationality words must agree with gender. For Inês, you need the feminine form «portuguesa».",
+      "sentence": ["A", "Inês", "é", "português."],
+      "wrongIndex": 3,
+      "correction": "portuguesa.",
+      "options": ["portuguesa.", "portugueses.", "portuguesas."]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-26",
+      "type": "build_phrase",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Introduce Raj: say that he is Nepalese and speaks Hindi.",
+      "explanation": "For a man from Nepal, use «nepalês». After «falar», language names normally come with no article: «fala hindi».",
+      "answer": ["O", "Raj", "é", "nepalês", "e", "fala", "hindi."],
+      "distractors": ["são", "inglês", "paquistanês", "nepalesa"],
+      "acceptedAnswers": ["Raj é nepalês e fala hindi."]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-27",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Pedro speaks English, but Li speaks Chinese and also a little Portuguese. Fill the three gaps.",
+      "explanation": "After «falar», language names usually appear without an article: «fala inglês», «fala chinês», «um pouco de português».",
+      "template": "O Pedro fala ___, mas a Li fala ___ e também um pouco de ___.",
+      "gaps": [
+        {
+          "answer": "inglês"
+        },
+        {
+          "answer": "chinês"
+        },
+        {
+          "answer": "português"
+        }
+      ],
+      "wordBank": ["inglês", "chinês", "português", "hindi", "portuguesa", "China"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-28",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At a service desk, a woman answers: «Sou de Angola.» Ask her formally where she is from.",
+      "explanation": "With formal singular, use 3rd-person verb forms. «A senhora» is a polite way to address a woman.",
+      "givenAnswer": "Sou de Angola.",
+      "answer": ["De", "onde", "é", "a", "senhora?"],
+      "distractors": ["mora", "qual", "o", "senhor"],
+      "acceptedAnswers": ["De onde é que a senhora é?", "De onde é?"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-29",
+      "type": "find_error",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Ucrânia» takes the article «a», so «de + a» contracts to «da»: «da Ucrânia».",
+      "sentence": ["A", "Oksana", "é", "do", "Ucrânia."],
+      "wrongIndex": 3,
+      "correction": "da",
+      "options": ["da", "de", "na"]
+    },
+    {
+      "id": "pla-m1-countries-nationalities-30",
+      "type": "about_me",
+      "topicId": "pla-m1-countries-nationalities",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "To talk about languages, use «falar». After it, language names usually come with no article.",
+      "question": "Que línguas falas?",
+      "sampleAnswer": "Falo hindi e inglês.",
+      "hints": ["português", "chinês", "árabe", "também", "um", "pouco"]
+    }
+  ]
+}

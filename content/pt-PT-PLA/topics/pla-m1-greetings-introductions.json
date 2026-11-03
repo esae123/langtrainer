@@ -1,0 +1,537 @@
+{
+  "id": "pla-m1-greetings-introductions",
+  "moduleId": "m1",
+  "title": "Greetings, introductions and forms of address",
+  "kind": "situation",
+  "context": "Use these phrases every day in Portugal: when you greet people, introduce yourself, and speak politely in class, at work, or at a service desk. With friends, classmates and children, use **tu**: **Como te chamas?** With staff, teachers and older adults, use 3rd-person forms, often with **o senhor / a senhora**: **Como se chama?**\n\nExamples:\n- **Olá!** — *Hello!*\n- **Bom dia. Chamo-me Raj.** — *Good morning. My name is Raj.*\n- **Ela chama-se Oksana.** — *Her name is Oksana.*\n- **Sou nepalesa. Tenho vinte anos.** — *I am Nepalese. I am twenty years old.*\n- **Estou bem, obrigada.** — *I am well, thank you.*\n- **Falas português? — Sim, um pouco.** — *Do you speak Portuguese? — Yes, a little.*\n- **Muito prazer.** — *Nice to meet you.*\n- **Com licença / Por favor / Obrigado(a).** — *Excuse me / Please / Thank you.*\n\nWatch out:\n- In statements with **chamar-se**, the pronoun goes after the verb: **Chamo-me Ana**, not **Me chamo Ana**.\n- Greetings depend on the time: **Bom dia**, **Boa tarde**, **Boa noite**.",
+  "keyItems": [
+    {
+      "target": "Olá",
+      "support": "hello"
+    },
+    {
+      "target": "Bom dia",
+      "support": "good morning"
+    },
+    {
+      "target": "Boa tarde",
+      "support": "good afternoon"
+    },
+    {
+      "target": "Boa noite",
+      "support": "good evening / good night"
+    },
+    {
+      "target": "Adeus",
+      "support": "goodbye"
+    },
+    {
+      "target": "Até logo",
+      "support": "see you later"
+    },
+    {
+      "target": "Muito prazer",
+      "support": "nice to meet you"
+    },
+    {
+      "target": "Com licença",
+      "support": "excuse me / may I pass"
+    },
+    {
+      "target": "Por favor",
+      "support": "please"
+    },
+    {
+      "target": "Obrigado / Obrigada",
+      "support": "thank you",
+      "note": "male / female speaker"
+    },
+    {
+      "target": "Chamo-me ...",
+      "support": "my name is ..."
+    },
+    {
+      "target": "Chama-se ...",
+      "support": "his/her name is ..."
+    },
+    {
+      "target": "Como te chamas?",
+      "support": "what is your name?",
+      "note": "informal"
+    },
+    {
+      "target": "Como se chama?",
+      "support": "what is your name?",
+      "note": "formal"
+    },
+    {
+      "target": "Falas português?",
+      "support": "do you speak Portuguese?",
+      "note": "informal"
+    },
+    {
+      "target": "Sim, um pouco.",
+      "support": "yes, a little"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m1-greetings-introductions-01",
+      "type": "translate_word",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Olá» is the basic everyday greeting in Portuguese. It works in informal and neutral situations.",
+      "direction": "toTarget",
+      "sentence": "Say **hello** to your classmate.",
+      "word": "hello",
+      "answer": "Olá",
+      "options": ["Olá", "Adeus", "Obrigado", "Até logo"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-02",
+      "type": "translate_word",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In Portugal, «Boa noite» is used in the evening and at night. «Boa tarde» is earlier in the day.",
+      "direction": "toTarget",
+      "sentence": "It is 8 p.m. Say **good evening**.",
+      "word": "good evening",
+      "answer": "Boa noite",
+      "options": ["Boa noite", "Bom dia", "Boa tarde", "Boa viagem"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-03",
+      "type": "translate_word",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Por favor» is the fixed phrase for 'please'. «Com licença» is used to get attention or to pass by.",
+      "direction": "toTarget",
+      "sentence": "Say **please** when you ask for help.",
+      "word": "please",
+      "answer": "por favor",
+      "options": ["por favor", "com licença", "obrigado", "muito prazer"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-04",
+      "type": "match_pairs",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese phrase with its meaning.",
+      "explanation": "These are everyday fixed chunks. Learn them as whole phrases for real situations.",
+      "pairs": [
+        {
+          "target": "Muito prazer.",
+          "support": "Nice to meet you."
+        },
+        {
+          "target": "Com licença.",
+          "support": "Excuse me."
+        },
+        {
+          "target": "Até logo.",
+          "support": "See you later."
+        },
+        {
+          "target": "Adeus.",
+          "support": "Goodbye."
+        }
+      ]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Li is introducing herself. Fill the gaps.",
+      "explanation": "Use «chamar-se» for your name and «ser» for nationality. In an affirmative sentence, the pronoun comes after the verb: «chamo-me».",
+      "template": "Olá! ___ Li. ___ chinesa.",
+      "gaps": [
+        {
+          "answer": "chamo-me"
+        },
+        {
+          "answer": "sou"
+        }
+      ],
+      "wordBank": ["chamo-me", "sou", "chama-se", "estou"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps in this short formal greeting.",
+      "explanation": "With «o senhor / a senhora», Portuguese uses 3rd-person forms such as «está». For your own state, use «estou».",
+      "template": "— Bom dia, senhor Costa. Como ___? — Eu ___ bem, obrigado.",
+      "gaps": [
+        {
+          "answer": "está"
+        },
+        {
+          "answer": "estou"
+        }
+      ],
+      "wordBank": ["está", "estou", "és", "sou"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Talking to a friend. Fill the gaps.",
+      "explanation": "With informal «tu», the verb is «falas». The fixed reply is often «Sim, um pouco».",
+      "template": "___ português? — Sim, um ___.",
+      "gaps": [
+        {
+          "answer": "Falas"
+        },
+        {
+          "answer": "pouco"
+        }
+      ],
+      "wordBank": ["Falas", "pouco", "Fala", "muito"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about Fátima.",
+      "explanation": "Age uses «ter»: «tem vinte e um anos». Nationality uses «ser»: «é marroquina».",
+      "template": "A Fátima ___ vinte e um anos e ___ marroquina.",
+      "gaps": [
+        {
+          "answer": "tem"
+        },
+        {
+          "answer": "é"
+        }
+      ],
+      "wordBank": ["tem", "é", "está", "tens"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-09",
+      "type": "build_phrase",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"Good morning, my name is Raj.\"",
+      "explanation": "For your own name, use «chamo-me». European Portuguese often drops «eu», but both versions are possible.",
+      "answer": ["Bom", "dia,", "chamo-me", "Raj."],
+      "distractors": ["Boa", "noite,", "sou"],
+      "acceptedAnswers": ["Bom dia, eu chamo-me Raj."]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-10",
+      "type": "build_phrase",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Introduce a classmate: \"Her name is Sunita.\"",
+      "explanation": "To talk about another person, use «ela chama-se ...». The pronoun stays after the verb: «chama-se».",
+      "answer": ["Ela", "chama-se", "Sunita."],
+      "distractors": ["Eu", "chamo-me", "é"],
+      "acceptedAnswers": ["Chama-se Sunita."]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-11",
+      "type": "build_phrase",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask your friend (informal) what his name is.",
+      "explanation": "With friends and classmates, use «tu». The common question is «Como te chamas?».",
+      "answer": ["Como", "te", "chamas?"],
+      "distractors": ["se", "és", "fala"],
+      "acceptedAnswers": ["Como é que te chamas?"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-12",
+      "type": "build_phrase",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask a woman at reception (formal) what her name is.",
+      "explanation": "In formal situations, use 3rd-person forms. So the question is «Como se chama?».",
+      "answer": ["Como", "se", "chama?"],
+      "distractors": ["te", "chamo?", "são"],
+      "acceptedAnswers": [
+        "Como é que se chama?",
+        "Como se chama a senhora?",
+        "Como é que a senhora se chama?"
+      ]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-13",
+      "type": "build_phrase",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask your male teacher (formal) if he speaks Portuguese.",
+      "explanation": "With «o senhor», Portuguese uses the 3rd-person verb form: «fala». In formal speech, the subject can be said or left out.",
+      "answer": ["O", "senhor", "fala", "português?"],
+      "distractors": ["te", "falas", "como"],
+      "acceptedAnswers": ["Fala português?"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-14",
+      "type": "about_me",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "A short, useful answer is «Sim, um pouco». You can also give your real level if you want.",
+      "question": "Falas português?",
+      "sampleAnswer": "Sim, um pouco.",
+      "hints": ["não", "bem", "inglês", "árabe"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your new classmate answers: «Sou a Oksana.» Ask her (informal) who she is.",
+      "explanation": "To ask about identity, use «Quem» with the verb «ser»: «Quem és?».",
+      "givenAnswer": "Sou a Oksana.",
+      "answer": ["Quem", "és?"],
+      "distractors": ["onde", "tem", "fala"],
+      "acceptedAnswers": ["Quem é que és?", "Quem és tu?"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Sou do Paquistão.» Ask him (informal) where he is from.",
+      "explanation": "Origin is asked with «De onde» plus the verb «ser». «Onde» alone asks where someone is.",
+      "givenAnswer": "Sou do Paquistão.",
+      "answer": ["De", "onde", "és?"],
+      "distractors": ["para", "tens", "chamas"],
+      "acceptedAnswers": ["De onde é que és?", "De onde és tu?"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A man at the health centre answers: «Tenho trinta e dois anos.» Ask him (formal) how old he is.",
+      "explanation": "Age is asked with «Quantos anos tem?». In formal speech, the verb stays in the 3rd person.",
+      "givenAnswer": "Tenho trinta e dois anos.",
+      "answer": ["Quantos", "anos", "tem?"],
+      "distractors": ["onde", "está", "fala"],
+      "acceptedAnswers": [
+        "Quantos anos é que tem?",
+        "Quantos anos tem o senhor?",
+        "Quantos anos é que o senhor tem?"
+      ]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-18",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your new classmate answers: «Sim, um pouco.» Ask him (informal) if he speaks Portuguese.",
+      "explanation": "With informal «tu», the verb is «falas». European Portuguese often drops the subject pronoun.",
+      "givenAnswer": "Sim, um pouco.",
+      "answer": ["Falas", "português?"],
+      "distractors": ["fala", "quem", "se"],
+      "acceptedAnswers": ["Tu falas português?"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-19",
+      "type": "find_error",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «tu», the verb «ser» is «és». «É» is the form for ele/ela/o senhor/a senhora.",
+      "sentence": ["Tu", "é", "o", "Raj?"],
+      "wrongIndex": 1,
+      "correction": "és",
+      "options": ["és", "sou", "estás"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-20",
+      "type": "find_error",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «a senhora», the verb is 3rd-person singular: «Como é que a senhora se chama?». «Chamas» goes with «tu».",
+      "sentence": ["Como", "é", "que", "a", "senhora", "se", "chamas?"],
+      "wrongIndex": 6,
+      "correction": "chama?",
+      "options": ["chama?", "chamam?", "chamo?"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-21",
+      "type": "translate_word",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Use «Boa tarde» from lunchtime until the evening. It works in both informal and formal situations.",
+      "direction": "toTarget",
+      "sentence": "At 3 p.m. you say **good afternoon** to your neighbour.",
+      "word": "good afternoon",
+      "answer": "Boa tarde",
+      "options": ["Boa tarde", "Bom dia", "Boa noite", "Adeus"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-22",
+      "type": "translate_word",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Com licença» is the fixed phrase you use to get past someone or to interrupt politely.",
+      "direction": "toTarget",
+      "sentence": "In a corridor, you say **excuse me** before you pass.",
+      "word": "excuse me",
+      "answer": "Com licença",
+      "options": ["Com licença", "Por favor", "Muito prazer", "Obrigado"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the first class, complete the polite reply after an introduction.",
+      "explanation": "After someone tells you their name, a common polite reply is «Muito prazer». Learn it as a whole phrase.",
+      "template": "— Eu sou o Pedro. — ___ ___.",
+      "gaps": [
+        {
+          "answer": "Muito"
+        },
+        {
+          "answer": "prazer"
+        }
+      ],
+      "wordBank": ["Muito", "prazer", "obrigado", "licença", "sou"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-24",
+      "type": "build_phrase",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ask your classmate (informal) how she is.",
+      "explanation": "With «tu», use the 2nd-person singular of «estar»: «estás». In European Portuguese, «Como é que estás?» is also very common.",
+      "answer": ["Como", "estás?"],
+      "distractors": ["está", "chamas", "fala"],
+      "acceptedAnswers": ["Como é que estás?"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-25",
+      "type": "build_phrase",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You leave a service desk. Say «Adeus» and thank the clerk.",
+      "explanation": "«Adeus» is a goodbye. «Obrigado/Obrigada» changes with the speaker's gender, so both are accepted here.",
+      "answer": ["Adeus", "e", "obrigado."],
+      "distractors": ["até", "boa", "favor"],
+      "acceptedAnswers": ["Adeus e obrigada."]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-26",
+      "type": "fill_gaps",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps with the correct forms of address.",
+      "explanation": "For formal singular address, use «o senhor» for a man and «a senhora» for a woman.",
+      "template": "Com homens, dizemos o ___. Com mulheres, a ___.",
+      "gaps": [
+        {
+          "answer": "senhor"
+        },
+        {
+          "answer": "senhora"
+        }
+      ],
+      "wordBank": ["senhor", "senhora", "tu", "você", "ela"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-27",
+      "type": "question_for_answer",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your classmate answers: «Tenho vinte e três anos.» Ask him (informal) his age.",
+      "explanation": "Portuguese asks age with «ter»: «Quantos anos tens?». With «tu», the verb is «tens», not «tem».",
+      "givenAnswer": "Tenho vinte e três anos.",
+      "answer": ["Quantos", "anos", "tens?"],
+      "distractors": ["tem", "és", "fala"],
+      "acceptedAnswers": ["Quantos anos é que tens?"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-28",
+      "type": "match_pairs",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each form of address with its use.",
+      "explanation": "Portuguese chooses forms of address by relationship and situation: «tu» is informal, while «você / o senhor / a senhora» are polite or formal.",
+      "pairs": [
+        {
+          "target": "tu",
+          "support": "informal singular: friend, classmate, child"
+        },
+        {
+          "target": "você",
+          "support": "polite singular, with 3rd-person verb"
+        },
+        {
+          "target": "o senhor",
+          "support": "formal way to address a man"
+        },
+        {
+          "target": "a senhora",
+          "support": "formal way to address a woman"
+        }
+      ]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-29",
+      "type": "find_error",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «a senhora», the verb stays in the 3rd person: «chama-se». The informal form «chamas-se» goes with «tu».",
+      "sentence": ["A", "senhora", "chamas-se", "Fátima?"],
+      "wrongIndex": 2,
+      "correction": "chama-se",
+      "options": ["chama-se", "chamo-me", "chamam-se"]
+    },
+    {
+      "id": "pla-m1-greetings-introductions-30",
+      "type": "about_me",
+      "topicId": "pla-m1-greetings-introductions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «estou» + an adjective or «bem / mal» to say how you feel now. Your own answer can be different from the sample.",
+      "question": "Como estás hoje?",
+      "sampleAnswer": "Estou bem, obrigada.",
+      "hints": ["cansado", "cansada", "feliz", "triste", "assim-assim", "mais ou menos"]
+    }
+  ]
+}

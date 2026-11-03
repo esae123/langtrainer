@@ -1,0 +1,529 @@
+{
+  "id": "pla-m3-food-shops",
+  "moduleId": "m3",
+  "title": "Food and shops",
+  "kind": "vocabulary",
+  "context": "### Buying food in Portugal\nIn Portugal, different foods often belong to different shops or counters. Meat comes from the **talho**, fish and seafood from the **peixaria**, bread from the **padaria**, and ham or cheese from the **charcutaria**. In a **supermercado** or **mercado**, you often ask for quantities such as **um quilo de**, **meio quilo**, **uma dúzia**, **um pacote**, **uma lata** and **uma garrafa**.\n\nExamples:\n- **Queria meio quilo de queijo, por favor.** — “I’d like half a kilo of cheese, please.”\n- **Quanto custa o quilo de salmão?** — “How much is the kilo of salmon?”\n- **Na padaria, levo uma carcaça e uma broa.** — “At the bakery, I’m taking a bread roll and a corn loaf.”\n- **Compro arroz, massa e iogurte no supermercado.** — “I buy rice, pasta and yogurt at the supermarket.”\n- **Preciso de uma garrafa de azeite.** — “I need a bottle of olive oil.”\n- **Onde compras carne? No talho.** — “Where do you buy meat? At the butcher’s.”\n\n**Watch out:** after quantities, use **de**: **um quilo de frango**, **uma garrafa de azeite**. Also remember the shop names: **talho** is for meat, **peixaria** is for fish and seafood.",
+  "keyItems": [
+    {
+      "target": "talho",
+      "support": "butcher's shop / meat counter"
+    },
+    {
+      "target": "peixaria",
+      "support": "fish shop / fish counter"
+    },
+    {
+      "target": "padaria",
+      "support": "bakery / bread counter"
+    },
+    {
+      "target": "charcutaria",
+      "support": "cheese and cold cuts counter"
+    },
+    {
+      "target": "frutaria",
+      "support": "fruit shop"
+    },
+    {
+      "target": "supermercado",
+      "support": "supermarket"
+    },
+    {
+      "target": "mercado",
+      "support": "market"
+    },
+    {
+      "target": "frango",
+      "support": "chicken"
+    },
+    {
+      "target": "bacalhau",
+      "support": "cod"
+    },
+    {
+      "target": "camarão",
+      "support": "shrimp"
+    },
+    {
+      "target": "azeite",
+      "support": "olive oil"
+    },
+    {
+      "target": "carcaça",
+      "support": "bread roll"
+    },
+    {
+      "target": "broa",
+      "support": "corn bread / dense loaf"
+    },
+    {
+      "target": "um quilo de",
+      "support": "one kilo of"
+    },
+    {
+      "target": "meio quilo",
+      "support": "half a kilo"
+    },
+    {
+      "target": "uma dúzia",
+      "support": "a dozen"
+    },
+    {
+      "target": "Quanto custa o quilo?",
+      "support": "How much is the kilo?",
+      "note": "use in shops"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m3-food-shops-01",
+      "type": "translate_word",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "At the bakery you buy «pão». This is the general word for bread in Portuguese.",
+      "direction": "toTarget",
+      "sentence": "I buy **bread** at the bakery.",
+      "word": "bread",
+      "answer": "pão",
+      "options": ["pão", "peixe", "queijo", "arroz"]
+    },
+    {
+      "id": "pla-m3-food-shops-02",
+      "type": "translate_word",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Camarão» means shrimp. It is common vocabulary at the fish counter, together with «mexilhão» and «polvo».",
+      "direction": "toTarget",
+      "sentence": "At the market she buys **shrimp** and mussels.",
+      "word": "shrimp",
+      "answer": "camarão",
+      "options": ["camarão", "carapau", "borrego", "bacalhau"]
+    },
+    {
+      "id": "pla-m3-food-shops-03",
+      "type": "translate_word",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "For quantities, Portuguese often uses ready-made chunks. «Half a kilo» is «meio quilo».",
+      "direction": "toTarget",
+      "sentence": "I only need **half a kilo** of cheese.",
+      "word": "half a kilo",
+      "answer": "meio quilo",
+      "options": ["meio quilo", "um quilo", "uma dúzia", "uma garrafa"]
+    },
+    {
+      "id": "pla-m3-food-shops-04",
+      "type": "match_pairs",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each shop or counter with its meaning.",
+      "explanation": "These names are very common in Portugal. In a big supermarket, you may see several of these counters inside the same store.",
+      "pairs": [
+        {
+          "target": "talho",
+          "support": "butcher's shop / meat counter"
+        },
+        {
+          "target": "peixaria",
+          "support": "fish shop / fish counter"
+        },
+        {
+          "target": "padaria",
+          "support": "bakery / bread counter"
+        },
+        {
+          "target": "charcutaria",
+          "support": "cheese and cold cuts counter"
+        },
+        {
+          "target": "frutaria",
+          "support": "fruit shop"
+        }
+      ]
+    },
+    {
+      "id": "pla-m3-food-shops-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Mariana is listing two dry groceries and one dairy product: first rice, then pasta. Fill the two gaps.",
+      "explanation": "«Arroz» and «massa» are common dry groceries from the supermarket. «Iogurte» is the dairy item already given in the sentence.",
+      "template": "No supermercado, compro ___, ___ e iogurte.",
+      "gaps": [
+        {
+          "answer": "arroz"
+        },
+        {
+          "answer": "massa"
+        }
+      ],
+      "wordBank": ["arroz", "massa", "frango", "padaria"]
+    },
+    {
+      "id": "pla-m3-food-shops-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the fish counter, ask for a kilo of cod and half a kilo of shrimp. Fill the two gaps.",
+      "explanation": "At the «peixaria», you ask for fish and seafood. «Bacalhau» and «camarão» fit this shop and the quantity phrases in the sentence.",
+      "template": "Na peixaria, queria um quilo de ___ e meio quilo de ___, por favor.",
+      "gaps": [
+        {
+          "answer": "bacalhau"
+        },
+        {
+          "answer": "camarão"
+        }
+      ],
+      "wordBank": ["bacalhau", "camarão", "frango", "queijo"]
+    },
+    {
+      "id": "pla-m3-food-shops-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the bakery, you take a bread roll, a corn loaf and a packet of toast. Fill the two gaps.",
+      "explanation": "«Carcaça» is a bread roll, and «torradas» can come in a package. The sentence mixes a bread item with a quantity phrase.",
+      "template": "Na padaria, levo uma ___, uma broa e um pacote de ___.",
+      "gaps": [
+        {
+          "answer": "carcaça"
+        },
+        {
+          "answer": "torradas"
+        }
+      ],
+      "wordBank": ["carcaça", "torradas", "salmão", "iogurte"]
+    },
+    {
+      "id": "pla-m3-food-shops-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the supermarket you need half a kilo of cheese, a bottle of olive oil and a packet of rice. Fill the quantity phrases.",
+      "explanation": "Portuguese often uses quantity chunks before food words: «meio quilo de queijo», «uma garrafa de azeite», «um pacote de arroz».",
+      "template": "No supermercado, preciso de ___ de queijo, ___ de azeite e ___ de arroz.",
+      "gaps": [
+        {
+          "answer": "meio quilo"
+        },
+        {
+          "answer": "uma garrafa"
+        },
+        {
+          "answer": "um pacote"
+        }
+      ],
+      "wordBank": ["meio quilo", "uma garrafa", "um pacote", "uma dúzia", "um quilo"]
+    },
+    {
+      "id": "pla-m3-food-shops-09",
+      "type": "build_phrase",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the butcher's, ask politely for one kilo of chicken.",
+      "explanation": "In shops, «Queria ..., por favor» is a polite fixed phrase. After a quantity, use «de»: «um quilo de frango».",
+      "answer": ["Queria", "um", "quilo", "de", "frango,", "por", "favor."],
+      "distractors": ["meio", "duas", "queijo"],
+      "acceptedAnswers": ["Eu queria um quilo de frango, por favor."]
+    },
+    {
+      "id": "pla-m3-food-shops-10",
+      "type": "build_phrase",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask the fish seller how much the kilo of dourada costs.",
+      "explanation": "To ask a price per kilo, use «Quanto custa o quilo de ...?». The verb stays singular with «o quilo».",
+      "answer": ["Quanto", "custa", "o", "quilo", "de", "dourada?"],
+      "distractors": ["custam", "a", "salmão"],
+      "acceptedAnswers": ["Quanto é que custa o quilo de dourada?"]
+    },
+    {
+      "id": "pla-m3-food-shops-11",
+      "type": "build_phrase",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what you buy at the supermarket: rice, pasta and yogurt.",
+      "explanation": "A short shopping sentence can start with the place, then the verb and the list. The last item is linked with «e».",
+      "answer": ["No", "supermercado,", "compro", "arroz,", "massa", "e", "iogurte."],
+      "distractors": ["na", "compras", "queijo"],
+      "acceptedAnswers": [
+        "Compro arroz, massa e iogurte no supermercado.",
+        "Eu compro arroz, massa e iogurte no supermercado."
+      ]
+    },
+    {
+      "id": "pla-m3-food-shops-12",
+      "type": "build_phrase",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say you need a bottle of olive oil.",
+      "explanation": "Use «Preciso de ...» to say what you need. Containers are followed by «de»: «uma garrafa de azeite».",
+      "answer": ["Preciso", "de", "uma", "garrafa", "de", "azeite."],
+      "distractors": ["pacote", "quero", "leite"],
+      "acceptedAnswers": ["Eu preciso de uma garrafa de azeite."]
+    },
+    {
+      "id": "pla-m3-food-shops-13",
+      "type": "build_phrase",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the bakery, ask politely for one bread roll and one broa.",
+      "explanation": "At the bakery, «Queria ..., por favor» is the usual polite request. Here both bread items are singular: «uma carcaça» and «uma broa».",
+      "answer": ["Queria", "uma", "carcaça", "e", "uma", "broa,", "por", "favor."],
+      "distractors": ["duas", "queijo", "lata"],
+      "acceptedAnswers": ["Eu queria uma carcaça e uma broa, por favor."]
+    },
+    {
+      "id": "pla-m3-food-shops-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «No talho.» Ask him (informal) where he buys meat.",
+      "explanation": "To ask where someone buys something, use «Onde» + the verb. With «tu», the form is «compras».",
+      "givenAnswer": "No talho.",
+      "answer": ["Onde", "compras", "carne?"],
+      "distractors": ["Quando", "compram", "peixe?"],
+      "acceptedAnswers": ["Onde é que compras carne?"]
+    },
+    {
+      "id": "pla-m3-food-shops-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the charcutaria, the customer answers: «Meio quilo, por favor.» Ask her (formal) how much cheese she wants.",
+      "explanation": "With formal singular, the verb takes the 3rd-person form: «quer». A natural shop question is «Quanto quer de queijo?».",
+      "givenAnswer": "Meio quilo, por favor.",
+      "answer": ["Quanto", "quer", "de", "queijo?"],
+      "distractors": ["quero", "para", "quilo"],
+      "acceptedAnswers": [
+        "Quanto é que quer de queijo?",
+        "Quanto queijo quer?",
+        "Quanto queijo é que quer?"
+      ]
+    },
+    {
+      "id": "pla-m3-food-shops-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Uma garrafa de azeite.» Ask him (informal) what he needs to buy.",
+      "explanation": "To ask for the thing someone needs to buy, use «O que precisas de comprar?». After «precisar», Portuguese uses «de».",
+      "givenAnswer": "Uma garrafa de azeite.",
+      "answer": ["O", "que", "precisas", "de", "comprar?"],
+      "distractors": ["queres", "onde", "mercado"],
+      "acceptedAnswers": ["O que é que precisas de comprar?"]
+    },
+    {
+      "id": "pla-m3-food-shops-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the fish counter, the staff answers: «Custa doze euros o quilo.» Ask (formal) how much the kilo of salmon costs.",
+      "explanation": "Price questions use «Quanto custa ...?». For a specific fish, say «o quilo de salmão».",
+      "givenAnswer": "Custa doze euros o quilo.",
+      "answer": ["Quanto", "custa", "o", "quilo", "de", "salmão?"],
+      "distractors": ["custam", "a", "bacalhau"],
+      "acceptedAnswers": ["Quanto é que custa o quilo de salmão?"]
+    },
+    {
+      "id": "pla-m3-food-shops-18",
+      "type": "about_me",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "A simple answer can start with «Compro...» and list two or three foods. Join the last item with «e».",
+      "question": "O que compras no mercado?",
+      "sampleAnswer": "Compro laranjas, uvas e salada.",
+      "hints": ["legumes", "pão", "leite", "queijo", "supermercado"]
+    },
+    {
+      "id": "pla-m3-food-shops-19",
+      "type": "find_error",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The «peixaria» sells fish and seafood, so «frango» (meat, from the «talho») does not fit here. Ask for a seafood item: «um quilo de camarão na peixaria».",
+      "sentence": ["Queria", "um", "quilo", "de", "frango", "na", "peixaria."],
+      "wrongIndex": 4,
+      "correction": "camarão",
+      "options": ["camarão", "queijo", "broa"]
+    },
+    {
+      "id": "pla-m3-food-shops-20",
+      "type": "find_error",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With movement, Portuguese uses «ir a». «A + o» contracts to «ao»: «Vou ao supermercado».",
+      "sentence": ["Vou", "no", "supermercado."],
+      "wrongIndex": 1,
+      "correction": "ao",
+      "options": ["ao", "do", "na"]
+    },
+    {
+      "id": "pla-m3-food-shops-21",
+      "type": "translate_word",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For meat, the usual shop or counter is the «talho». «Peixaria» is for fish, and «padaria» is for bread.",
+      "direction": "toTarget",
+      "sentence": "I buy beef at the **butcher's shop**.",
+      "word": "butcher's shop",
+      "answer": "talho",
+      "options": ["talho", "peixaria", "padaria", "mercado"]
+    },
+    {
+      "id": "pla-m3-food-shops-22",
+      "type": "translate_word",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Azeite» means olive oil. After a container like «garrafa», Portuguese uses «de»: «uma garrafa de azeite».",
+      "direction": "toTarget",
+      "sentence": "We need a bottle of **olive oil**.",
+      "word": "olive oil",
+      "answer": "azeite",
+      "options": ["azeite", "manteiga", "leite", "arroz"]
+    },
+    {
+      "id": "pla-m3-food-shops-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Raj is at the butcher's. Fill the two gaps: first beef, then turkey.",
+      "explanation": "«Talho» is for meat, so «carne de vaca» and «peru» fit here. Use the exact food words from the prompt.",
+      "template": "No talho, o Raj compra ___ e ___.",
+      "gaps": [
+        {
+          "answer": "carne de vaca"
+        },
+        {
+          "answer": "peru"
+        }
+      ],
+      "wordBank": ["carne de vaca", "peru", "bacalhau", "broa", "camarão"]
+    },
+    {
+      "id": "pla-m3-food-shops-24",
+      "type": "build_phrase",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I buy corn bread (broa) at the bakery and apples at the fruit shop.",
+      "explanation": "Use the shop names with «em + a» → «na»: «na padaria», «na frutaria». «Broa» is the corn loaf, and «maçãs» is the plural of «maçã».",
+      "answer": ["Compro", "broa", "na", "padaria", "e", "maçãs", "na", "frutaria."],
+      "distractors": ["talho", "uvas", "mercado"],
+      "acceptedAnswers": ["Eu compro broa na padaria e maçãs na frutaria."]
+    },
+    {
+      "id": "pla-m3-food-shops-25",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The bakery assistant answers: «Sim, temos.» Ask formally if they have corn bread.",
+      "explanation": "To ask about availability in a shop, use the simple question «Tem...?» (to the assistant) or «Têm...?» (to the shop). The pronoun is usually left out.",
+      "givenAnswer": "Sim, temos.",
+      "answer": ["Tem", "broa?"],
+      "distractors": ["Quanto", "custa", "carcaça", "quer"],
+      "acceptedAnswers": ["Tem broa, por favor?", "Têm broa?", "Têm broa, por favor?"]
+    },
+    {
+      "id": "pla-m3-food-shops-26",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ahmed is at the fruit shop. Fill the two gaps: first apples, then vegetables.",
+      "explanation": "A «frutaria» sells fruit and often vegetables too, so «maçãs» and «legumes» fit this shop.",
+      "template": "Na frutaria, o Ahmed compra ___ e ___.",
+      "gaps": [
+        {
+          "answer": "maçãs"
+        },
+        {
+          "answer": "legumes"
+        }
+      ],
+      "wordBank": ["maçãs", "legumes", "salmão", "carcaça"]
+    },
+    {
+      "id": "pla-m3-food-shops-27",
+      "type": "build_phrase",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We are taking a packet of pasta and a bottle of milk.",
+      "explanation": "After quantities and containers, use «de»: «um pacote de massa», «uma garrafa de leite». The verb form «levamos» means «we take / we are taking».",
+      "answer": ["Levamos", "um", "pacote", "de", "massa", "e", "uma", "garrafa", "de", "leite."],
+      "distractors": ["azeite", "meio", "no"],
+      "acceptedAnswers": ["Nós levamos um pacote de massa e uma garrafa de leite."]
+    },
+    {
+      "id": "pla-m3-food-shops-28",
+      "type": "find_error",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Quilo» is masculine, so you say «um quilo», not «uma quilo». The rest of the request is correct.",
+      "sentence": ["Queria", "uma", "quilo", "de", "bacalhau,", "por", "favor."],
+      "wrongIndex": 1,
+      "correction": "um",
+      "options": ["um", "dois", "duas"]
+    },
+    {
+      "id": "pla-m3-food-shops-29",
+      "type": "build_phrase",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the market, say politely: I would like one kilo of apples and half a kilo of oranges.",
+      "explanation": "After both quantity expressions, use «de»: «um quilo de...» and «meio quilo de...». «Queria» is a polite fixed chunk for requests in shops.",
+      "answer": ["Queria", "um", "quilo", "de", "maçãs", "e", "meio", "quilo", "de", "laranjas."],
+      "distractors": ["garrafa", "uma", "peru"],
+      "acceptedAnswers": ["Eu queria um quilo de maçãs e meio quilo de laranjas."]
+    },
+    {
+      "id": "pla-m3-food-shops-30",
+      "type": "about_me",
+      "topicId": "pla-m3-food-shops",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Answer with «Compro...» and the place. Use the contractions: «na padaria» (em + a), «no supermercado» (em + o).",
+      "question": "Onde é que compras pão?",
+      "sampleAnswer": "Compro pão na padaria.",
+      "hints": ["carcaças", "broa", "no", "supermercado", "mercado", "perto de casa"]
+    }
+  ]
+}

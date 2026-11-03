@@ -1,0 +1,508 @@
+{
+  "id": "pla-m3-likes-preferences",
+  "moduleId": "m3",
+  "title": "Likes, preferences and modal verbs",
+  "kind": "grammar",
+  "context": "Use these verbs to talk about tastes, choices and what you can, want or know how to do in everyday Portuguese.\n\n- **Gosto de peixe.** = “I like fish.”\n- **Gosto de cozinhar.** = “I like cooking.”\n- **A Mariana adora café.** = “Mariana loves coffee.”\n- **Prefiro peixe a carne.** = “I prefer fish to meat.”\n- **Não gosto nada de picante.** = “I really don’t like spicy food.”\n- **Posso trazer pão.** = “I can bring bread.”\n- **Sei cozinhar arroz.** = “I know how to cook rice.”\n- **Ponho pouco sal na sopa.** = “I don’t put much salt in the soup.”\n\n**Watch out:** after **gostar**, keep **de**: **gosto de café**, not *gosto café*. With **preferir**, a statement compares two things with **a**: **Prefiro chá a café**. But a direct choice question normally uses **ou**: **Preferes chá ou café?**\n\nAlso remember these useful irregular present forms: **quero, posso, sei, trago, ponho**. In formal questions, use the 3rd-person form: **Prefere chá ou café?** / **Pode trazer água, por favor?**",
+  "keyItems": [
+    {
+      "target": "gostar de",
+      "support": "to like",
+      "note": "use de before a noun or infinitive"
+    },
+    {
+      "target": "adorar",
+      "support": "to love / really like"
+    },
+    {
+      "target": "preferir ... a ...",
+      "support": "to prefer ... to ..."
+    },
+    {
+      "target": "não gostar nada de",
+      "support": "to really not like"
+    },
+    {
+      "target": "detestar",
+      "support": "to hate"
+    },
+    {
+      "target": "quero",
+      "support": "I want",
+      "note": "irregular present of querer"
+    },
+    {
+      "target": "posso",
+      "support": "I can / may",
+      "note": "irregular present of poder"
+    },
+    {
+      "target": "sei",
+      "support": "I know / I know how",
+      "note": "irregular present of saber"
+    },
+    {
+      "target": "trago",
+      "support": "I bring",
+      "note": "irregular present of trazer"
+    },
+    {
+      "target": "ponho",
+      "support": "I put",
+      "note": "irregular present of pôr"
+    },
+    {
+      "target": "Gostas de...?",
+      "support": "Do you like... ?",
+      "note": "informal singular"
+    },
+    {
+      "target": "Prefere ... ou ...?",
+      "support": "Do you prefer ... or ...?",
+      "note": "formal singular"
+    },
+    {
+      "target": "Pode trazer ..., por favor?",
+      "support": "Can you bring ..., please?",
+      "note": "formal request"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m3-likes-preferences-01",
+      "type": "translate_word",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The present of «saber» is irregular in the 1st person singular: «eu sei». It means “I know” or “I know how to”.",
+      "direction": "toTarget",
+      "sentence": "I **know** how to cook rice.",
+      "word": "know",
+      "answer": "sei",
+      "options": ["sei", "sabes", "sabe", "sabem"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-02",
+      "type": "translate_word",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "With «eu», the verb is «prefiro». In a statement, «preferir» compares two things: «prefiro peixe a carne».",
+      "direction": "toTarget",
+      "sentence": "At lunch, I **prefer** fish to meat.",
+      "word": "prefer",
+      "answer": "prefiro",
+      "options": ["prefiro", "preferes", "prefere", "preferem"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-03",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence.",
+      "explanation": "«Gostar» needs «de»: «gosto de cozinhar». With «preferir», you compare one thing with another: «prefere peixe a carne».",
+      "template": "Eu ___ de cozinhar e o Ahmed ___ peixe a carne.",
+      "gaps": [
+        {
+          "answer": "gosto"
+        },
+        {
+          "answer": "prefere"
+        }
+      ],
+      "wordBank": ["gosto", "prefere", "gostas", "preferem"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-04",
+      "type": "build_phrase",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I like cooking.",
+      "explanation": "Use «gostar de» before an infinitive: «gosto de cozinhar». European Portuguese often drops «eu».",
+      "answer": ["Gosto", "de", "cozinhar."],
+      "distractors": ["adoro", "para", "cozinha"],
+      "acceptedAnswers": ["Eu gosto de cozinhar."]
+    },
+    {
+      "id": "pla-m3-likes-preferences-05",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Sim, gosto muito de chá.» Ask him (informal) if he likes tea.",
+      "explanation": "To ask about likes with «tu», use «gostas de ... ?». The subject pronoun is often omitted in Portuguese.",
+      "givenAnswer": "Sim, gosto muito de chá.",
+      "answer": ["Gostas", "de", "chá?"],
+      "distractors": ["Preferes", "café?", "bebes"],
+      "acceptedAnswers": ["Tu gostas de chá?"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-06",
+      "type": "find_error",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «eu», the present form is «gosto». «Gosta» is the form for ele/ela/o senhor/a senhora.",
+      "sentence": ["Eu", "gosta", "de", "peixe."],
+      "wrongIndex": 1,
+      "correction": "gosto",
+      "options": ["gosto", "gostam", "adoro"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-07",
+      "type": "build_phrase",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: She loves coffee.",
+      "explanation": "«Adorar» is stronger than «gostar». It does not need «de» before the thing you like.",
+      "answer": ["Ela", "adora", "café."],
+      "distractors": ["gosta", "chá", "adoram"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the two questions.",
+      "explanation": "With informal «tu», use «gostas». With formal «o senhor», use the 3rd-person form «prefere».",
+      "template": "Tu ___ de música brasileira? O senhor ___ chá ou café?",
+      "gaps": [
+        {
+          "answer": "gostas"
+        },
+        {
+          "answer": "prefere"
+        }
+      ],
+      "wordBank": ["gostas", "prefere", "gostam", "preferes"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-09",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Prefiro peixe a carne.» Ask her (informal) what she prefers: fish or meat.",
+      "explanation": "To ask someone to choose between two options, use «ou»: «Preferes peixe ou carne?». In the answer, the comparison is «peixe a carne».",
+      "givenAnswer": "Prefiro peixe a carne.",
+      "answer": ["Preferes", "peixe", "ou", "carne?"],
+      "distractors": ["Gostas", "frango?", "chá"],
+      "acceptedAnswers": ["Tu preferes peixe ou carne?"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-10",
+      "type": "build_phrase",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I do not like coffee at all.",
+      "explanation": "The strong negative chunk is «não gostar nada de». Keep «não» before the verb and «de» before the noun.",
+      "answer": ["Não", "gosto", "nada", "de", "café."],
+      "distractors": ["adoro", "com", "chá"],
+      "acceptedAnswers": ["Eu não gosto nada de café."]
+    },
+    {
+      "id": "pla-m3-likes-preferences-11",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Posso trazer pão.» Ask him (informal) if he can bring bread.",
+      "explanation": "To ask ability with informal «tu», use «podes». The verb in the second position stays in the infinitive: «trazer».",
+      "givenAnswer": "Posso trazer pão.",
+      "answer": ["Podes", "trazer", "pão?"],
+      "distractors": ["Queres", "leite?", "levar"],
+      "acceptedAnswers": ["Tu podes trazer pão?"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-12",
+      "type": "find_error",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In a statement with «preferir», Portuguese compares two things with «a»: «prefiro chá a café».",
+      "sentence": ["Eu", "prefiro", "chá", "para", "café."],
+      "wrongIndex": 3,
+      "correction": "a",
+      "options": ["a", "ou", "de"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-13",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence with the correct irregular forms.",
+      "explanation": "The 1st person singular forms are irregular here: «sei» from «saber» and «ponho» from «pôr».",
+      "template": "Eu ___ cozinhar e ___ pouco sal na sopa.",
+      "gaps": [
+        {
+          "answer": "sei"
+        },
+        {
+          "answer": "ponho"
+        }
+      ],
+      "wordBank": ["sei", "ponho", "sabe", "pões"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-14",
+      "type": "build_phrase",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I bring the drinks, and you bring the bread.",
+      "explanation": "«Trazer» is irregular in the 1st person singular: «eu trago». With «tu», the form is «trazes».",
+      "answer": ["Eu", "trago", "as", "bebidas", "e", "tu", "trazes", "o", "pão."],
+      "distractors": ["leva", "sumo", "para", "ponho"],
+      "acceptedAnswers": ["Trago as bebidas e tu trazes o pão."]
+    },
+    {
+      "id": "pla-m3-likes-preferences-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Quero pôr açúcar no chá.» Ask her (informal) what she wants to put in the tea.",
+      "explanation": "Use «O que» to ask about the thing. After «queres», keep the next verb in the infinitive: «pôr».",
+      "givenAnswer": "Quero pôr açúcar no chá.",
+      "answer": ["O", "que", "queres", "pôr", "no", "chá?"],
+      "distractors": ["Onde", "trazer", "açúcar?"],
+      "acceptedAnswers": ["O que é que queres pôr no chá?"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Detesto esperar.» Ask him (informal) if he hates waiting.",
+      "explanation": "«Detestar» can be followed directly by an infinitive: «detestar esperar». With «tu», the question is «detestas ... ?».",
+      "givenAnswer": "Detesto esperar.",
+      "answer": ["Detestas", "esperar?"],
+      "distractors": ["Adoras", "cozinhar?", "gosto"],
+      "acceptedAnswers": ["Tu detestas esperar?"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-17",
+      "type": "about_me",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "A natural answer can combine «preferir» and «gostar de». You can also name one drink you love or really do not like.",
+      "question": "O que é que preferes beber?",
+      "sampleAnswer": "Prefiro chá, mas gosto de café.",
+      "hints": ["adoro", "água", "sumo", "leite", "não", "nada"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-18",
+      "type": "find_error",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Poder» is irregular in the 1st person singular: «eu posso». «Pode» is the form for ele/ela/o senhor/a senhora.",
+      "sentence": ["Eu", "pode", "trazer", "a", "sobremesa."],
+      "wrongIndex": 1,
+      "correction": "posso",
+      "options": ["posso", "podemos", "podes"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-19",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete: I want to cook today. I can also bring the dessert, and I am bringing bread.",
+      "explanation": "These 1st person singular forms are common and irregular: «quero», «posso» and «trago».",
+      "template": "Eu ___ cozinhar hoje. Também ___ trazer a sobremesa e ___ pão.",
+      "gaps": [
+        {
+          "answer": "quero"
+        },
+        {
+          "answer": "posso"
+        },
+        {
+          "answer": "trago"
+        }
+      ],
+      "wordBank": ["quero", "posso", "trago", "queres", "pode", "trazes"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-20",
+      "type": "build_phrase",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask at a café (formal): Can you bring water, please?",
+      "explanation": "Formal singular uses the 3rd-person form «pode». In everyday Portuguese, the subject is often left out.",
+      "answer": ["Pode", "trazer", "água,", "por", "favor?"],
+      "distractors": ["podes", "sumo", "dar"],
+      "acceptedAnswers": [
+        "O senhor pode trazer água, por favor?",
+        "A senhora pode trazer água, por favor?"
+      ]
+    },
+    {
+      "id": "pla-m3-likes-preferences-21",
+      "type": "build_phrase",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you want to put only a little sugar (pouco açúcar) in the coffee.",
+      "explanation": "After «querer», use the infinitive: «quero pôr». With «em + o café», Portuguese contracts to «no café».",
+      "answer": ["Quero", "pôr", "pouco", "açúcar", "no", "café."],
+      "distractors": ["ponho", "para", "de"],
+      "acceptedAnswers": [
+        "Eu quero pôr pouco açúcar no café.",
+        "Quero pôr um pouco de açúcar no café.",
+        "Eu quero pôr um pouco de açúcar no café."
+      ]
+    },
+    {
+      "id": "pla-m3-likes-preferences-22",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A customer answers: «Prefiro sopa a salada.» Ask her (formal) which she prefers for lunch: soup or salad.",
+      "explanation": "In a direct choice question, «preferir» normally goes with «ou». In the answer, the comparison is «prefiro X a Y».",
+      "givenAnswer": "Prefiro sopa a salada.",
+      "answer": ["Prefere", "sopa", "ou", "salada", "para", "o", "almoço?"],
+      "distractors": ["Preferes", "gosta", "de"],
+      "acceptedAnswers": [
+        "A senhora prefere sopa ou salada para o almoço?",
+        "O que é que prefere para o almoço, sopa ou salada?",
+        "Prefere sopa ou salada ao almoço?",
+        "A senhora prefere sopa ou salada ao almoço?"
+      ]
+    },
+    {
+      "id": "pla-m3-likes-preferences-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ana is describing Raj's food tastes: he loves Indian food, but he really doesn't like spicy food. Fill the gaps.",
+      "explanation": "Use «adorar» for something you really like, and «não gostar nada de» for something you really do not like. With «o Raj», the verb forms are 3rd person singular: «adora», «gosta».",
+      "template": "O Raj ___ comida indiana, mas não ___ nada de picante.",
+      "gaps": [
+        {
+          "answer": "adora"
+        },
+        {
+          "answer": "gosta"
+        }
+      ],
+      "wordBank": ["adora", "gosta", "adoro", "gosto", "prefere"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-24",
+      "type": "find_error",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «poder», use the infinitive: «pode pôr». «Pões» is a conjugated form for «tu», so it cannot come after another verb.",
+      "sentence": ["A", "Li", "pode", "pões", "limão", "no", "chá?"],
+      "wrongIndex": 3,
+      "correction": "pôr",
+      "options": ["pôr", "põe", "ponho"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-25",
+      "type": "translate_word",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Pôr» is irregular: «eu ponho», «tu pões», «ele põe». So «I put milk in the coffee» is «Ponho leite no café».",
+      "direction": "toTarget",
+      "sentence": "I **put** milk in the coffee.",
+      "word": "put",
+      "answer": "ponho",
+      "options": ["ponho", "pões", "trago", "posso"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-26",
+      "type": "build_phrase",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that Sunita hates waiting at the health centre.",
+      "explanation": "«Detestar» is a strong verb for something you hate. «Em + o centro de saúde» contracts to «no centro de saúde».",
+      "answer": ["A", "Sunita", "detesta", "esperar", "no", "centro", "de", "saúde."],
+      "distractors": ["adora", "na", "quer"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-27",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Posso trazer fruta.» Ask him (informal) what he can bring to the picnic.",
+      "explanation": "To ask «what», use «O que» or «O que é que». With «tu», the irregular form of «poder» is «podes».",
+      "givenAnswer": "Posso trazer fruta.",
+      "answer": ["O", "que", "podes", "trazer", "para", "o", "piquenique?"],
+      "distractors": ["Pode", "levar", "ao"],
+      "acceptedAnswers": ["O que é que podes trazer para o piquenique?"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-28",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete: I want to make dinner, but I don't know how to cook fish and I don't put much salt.",
+      "explanation": "«Quero» says what you want to do, «sei» before an infinitive often means «know how to», and «ponho» is the irregular present of «pôr».",
+      "template": "Eu ___ fazer o jantar, mas não ___ cozinhar peixe e não ___ muito sal.",
+      "gaps": [
+        {
+          "answer": "quero"
+        },
+        {
+          "answer": "sei"
+        },
+        {
+          "answer": "ponho"
+        }
+      ],
+      "wordBank": ["quero", "sei", "ponho", "posso", "trago", "gosto"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-29",
+      "type": "about_me",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «gostar mais de» to say what you like better. You can keep it short or add details such as «com leite» or «sem açúcar».",
+      "question": "Gostas mais de café ou de chá?",
+      "sampleAnswer": "Gosto mais de chá com leite.",
+      "hints": ["prefiro", "bica", "água", "sem", "açúcar"]
+    },
+    {
+      "id": "pla-m3-likes-preferences-30",
+      "type": "find_error",
+      "topicId": "pla-m3-likes-preferences",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In a statement with «preferir», you compare two things with «a»: «prefiro sumo a água». «Ou» is normal in the question: «Prefere sumo ou água?».",
+      "sentence": ["Eu", "prefiro", "sumo", "ou", "água."],
+      "wrongIndex": 3,
+      "correction": "a",
+      "options": ["a", "de", "com"]
+    }
+  ]
+}

@@ -1,0 +1,575 @@
+{
+  "id": "pla-m4-public-services-documents",
+  "moduleId": "m4",
+  "title": "Public services and documents",
+  "kind": "situation",
+  "context": "When you go to **Finanças**, **Segurança Social**, **AIMA** or the **Junta de Freguesia**, you often need a document, an appointment, and a ticket number. In Portugal, short ready-made phrases are very useful at the counter.\n\nExamples:\n- **Queria pedir o NIF.** — “I’d like to ask for a NIF.”\n- **Preciso de um comprovativo de morada.** — “I need a proof of address.”\n- **Tenho de marcar atendimento.** — “I have to make an appointment.”\n- **O senhor tem de levar o passaporte.** — “You need to bring the passport.”\n- **Deve esperar a sua vez.** — “You should wait your turn.”\n- **A sua senha é para o balcão 7.** — “Your ticket is for counter 7.”\n\n**Watch out**\n- After **precisar**, use **de**: **preciso de** um documento / **preciso de** marcar atendimento.\n- With possessives in European Portuguese, use the article: **o meu passaporte**, **a sua vez**.\n- Very common contractions are **do** (= de + o) and **ao** (= a + o).",
+  "keyItems": [
+    {
+      "target": "Finanças",
+      "support": "Tax office"
+    },
+    {
+      "target": "Segurança Social",
+      "support": "Social Security office"
+    },
+    {
+      "target": "Loja do Cidadão",
+      "support": "one-stop public services office"
+    },
+    {
+      "target": "AIMA",
+      "support": "immigration and residence office"
+    },
+    {
+      "target": "Junta de Freguesia",
+      "support": "local parish council office"
+    },
+    {
+      "target": "NIF",
+      "support": "tax number"
+    },
+    {
+      "target": "NISS",
+      "support": "social security number"
+    },
+    {
+      "target": "cartão de residência",
+      "support": "residence card"
+    },
+    {
+      "target": "comprovativo de morada",
+      "support": "proof of address"
+    },
+    {
+      "target": "contrato de arrendamento",
+      "support": "rental contract"
+    },
+    {
+      "target": "fotografia",
+      "support": "photo"
+    },
+    {
+      "target": "tirar uma senha",
+      "support": "take a ticket number",
+      "note": "fixed public-office phrase"
+    },
+    {
+      "target": "esperar a sua vez",
+      "support": "wait your turn"
+    },
+    {
+      "target": "marcar atendimento",
+      "support": "make an appointment",
+      "note": "fixed service phrase"
+    },
+    {
+      "target": "balcão",
+      "support": "service counter"
+    },
+    {
+      "target": "ter de + infinitivo",
+      "support": "have to + verb",
+      "note": "obligation"
+    },
+    {
+      "target": "precisar de + nome / infinitivo",
+      "support": "need + noun / need to + verb",
+      "note": "de is required"
+    },
+    {
+      "target": "dever + infinitivo",
+      "support": "should + verb",
+      "note": "advice"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m4-public-services-documents-01",
+      "type": "translate_word",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The normal document word is «passaporte». Public offices may ask you to bring it.",
+      "direction": "toTarget",
+      "sentence": "At AIMA, you need your **passport**.",
+      "word": "passport",
+      "answer": "passaporte",
+      "options": ["passaporte", "cartão", "contrato", "balcão"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-02",
+      "type": "translate_word",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "At many offices you first take a «senha» and then wait for your number on the screen.",
+      "direction": "toTarget",
+      "sentence": "At the Loja do Cidadão, first take a **ticket number**.",
+      "word": "ticket number",
+      "answer": "senha",
+      "options": ["senha", "vez", "balcão", "consulta"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-03",
+      "type": "translate_word",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Comprovativo de morada» is the usual official phrase for a document that proves your address in Portugal.",
+      "direction": "toTarget",
+      "sentence": "I need a **proof of address** for Finanças.",
+      "word": "proof of address",
+      "answer": "comprovativo de morada",
+      "options": [
+        "comprovativo de morada",
+        "contrato de arrendamento",
+        "cartão de residência",
+        "fotografia"
+      ]
+    },
+    {
+      "id": "pla-m4-public-services-documents-04",
+      "type": "match_pairs",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match the place with what people usually ask for there.",
+      "explanation": "These are real Portuguese public services. Learners often need the institution name together with the document or number.",
+      "pairs": [
+        {
+          "target": "Finanças",
+          "support": "NIF"
+        },
+        {
+          "target": "Segurança Social",
+          "support": "NISS"
+        },
+        {
+          "target": "AIMA",
+          "support": "cartão de residência"
+        },
+        {
+          "target": "Junta de Freguesia",
+          "support": "atestado de residência"
+        },
+        {
+          "target": "Loja do Cidadão",
+          "support": "many public services in one place"
+        }
+      ]
+    },
+    {
+      "id": "pla-m4-public-services-documents-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the Loja do Cidadão, complete the routine steps.",
+      "explanation": "With «eu», the verbs are «tiro» and «espero». «A minha vez» needs the article before the possessive.",
+      "template": "Primeiro ___ uma senha e depois ___ a minha vez.",
+      "gaps": [
+        {
+          "answer": "tiro"
+        },
+        {
+          "answer": "espero"
+        }
+      ],
+      "wordBank": ["tiro", "espero", "marco", "preciso"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You are talking about Segurança Social. Fill the two gaps.",
+      "explanation": "Use «ter de + infinitive» for obligation and «precisar de» for need. «Do meu passaporte» is «de + o meu».",
+      "template": "Para pedir o NISS, eu ___ de marcar atendimento e ___ do meu passaporte.",
+      "gaps": [
+        {
+          "answer": "tenho",
+          "accepted": ["preciso"]
+        },
+        {
+          "answer": "preciso"
+        }
+      ],
+      "wordBank": ["tenho", "preciso", "devo", "marco"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At AIMA, tell a woman formally that she needs a photo and has to renew the residence card. Fill the two gaps.",
+      "explanation": "«Precisar de» is followed by a noun, and «ter de» is followed by an infinitive. Formal «a senhora» takes 3rd-person verbs.",
+      "template": "A senhora ___ de uma fotografia e ___ renovar o cartão de residência.",
+      "gaps": [
+        {
+          "answer": "precisa"
+        },
+        {
+          "answer": "tem de"
+        }
+      ],
+      "wordBank": ["precisa", "tem de", "deve", "espera"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the advice for someone at a public office.",
+      "explanation": "«Dever + infinitive» gives advice: what is a good idea to do. After it, use the base verb: «ver», not a conjugated form.",
+      "template": "Se não sabe qual é o balcão, ___ perguntar na receção e ___ o ecrã.",
+      "gaps": [
+        {
+          "answer": "deve"
+        },
+        {
+          "answer": "ver"
+        }
+      ],
+      "wordBank": ["deve", "ver", "tem", "leva", "marca"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-09",
+      "type": "build_phrase",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At Finanças, say politely: I would like to ask for the NIF, please.",
+      "explanation": "«Queria...» is a polite ready-made phrase in offices and shops. Learn it as a whole chunk for requests.",
+      "answer": ["Queria", "pedir", "o", "NIF,", "por", "favor."],
+      "distractors": ["preciso", "marcar", "senha"],
+      "acceptedAnswers": ["Eu queria pedir o NIF, por favor."]
+    },
+    {
+      "id": "pla-m4-public-services-documents-10",
+      "type": "build_phrase",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a man formally: You have to renew the residence card.",
+      "explanation": "For obligation, use «ter de + infinitive»: «tem de renovar». In formal address, Portuguese often drops «o senhor».",
+      "answer": ["Tem", "de", "renovar", "o", "cartão", "de", "residência."],
+      "distractors": ["precisa", "levar", "fotografia"],
+      "acceptedAnswers": ["O senhor tem de renovar o cartão de residência."]
+    },
+    {
+      "id": "pla-m4-public-services-documents-11",
+      "type": "build_phrase",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the Junta de Freguesia, say: I need a residence certificate.",
+      "explanation": "Use «precisar de + noun» for things you need. Here the document name is «um atestado de residência».",
+      "answer": ["Preciso", "de", "um", "atestado", "de", "residência."],
+      "distractors": ["marcar", "cartão", "balcão"],
+      "acceptedAnswers": ["Eu preciso de um atestado de residência."]
+    },
+    {
+      "id": "pla-m4-public-services-documents-12",
+      "type": "build_phrase",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say what Sunita needs for AIMA: a passport and a photo.",
+      "explanation": "With a list after «precisa de», Portuguese often repeats «de»: «de um passaporte e de uma fotografia».",
+      "answer": [
+        "A",
+        "Sunita",
+        "precisa",
+        "de",
+        "um",
+        "passaporte",
+        "e",
+        "de",
+        "uma",
+        "fotografia."
+      ],
+      "distractors": ["tem", "contrato", "senhas"],
+      "acceptedAnswers": [
+        "Sunita precisa de um passaporte e de uma fotografia.",
+        "A Sunita precisa de um passaporte e uma fotografia."
+      ]
+    },
+    {
+      "id": "pla-m4-public-services-documents-13",
+      "type": "build_phrase",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the Loja do Cidadão, say: First I take a ticket, then I wait for my turn.",
+      "explanation": "Use «primeiro» and «depois» to show order. In European Portuguese, say «a minha vez», with the article before the possessive.",
+      "answer": ["Primeiro", "tiro", "uma", "senha,", "depois", "espero", "a", "minha", "vez."],
+      "distractors": ["balcão", "marco", "leva"],
+      "acceptedAnswers": [
+        "Eu tiro primeiro uma senha e depois espero a minha vez.",
+        "Primeiro tiro uma senha e depois espero a minha vez.",
+        "Primeiro, tiro uma senha e depois espero a minha vez."
+      ]
+    },
+    {
+      "id": "pla-m4-public-services-documents-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You work at the counter. A customer answers: «Preciso do meu passaporte.» Ask him formally: Which document do you need?",
+      "explanation": "To ask which document someone needs, use «De que documento...?» In formal address, the verb is 3rd person: «precisa».",
+      "givenAnswer": "Preciso do meu passaporte.",
+      "answer": ["De", "que", "documento", "precisa?"],
+      "distractors": ["balcão", "leva", "onde"],
+      "acceptedAnswers": ["De que documento é que precisa?"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The worker says to you: «Tem de marcar atendimento.» Ask her formally: What do I have to do?",
+      "explanation": "Ask about an obligation with «O que tenho de fazer?». The structure is «ter de + infinitive».",
+      "givenAnswer": "Tem de marcar atendimento.",
+      "answer": ["O", "que", "tenho", "de", "fazer?"],
+      "distractors": ["onde", "precisa", "balcão"],
+      "acceptedAnswers": ["O que é que tenho de fazer?"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The screen shows your number. Ask a clerk formally: Which counter do I go to?",
+      "explanation": "Ask the destination with «A que balcão vou?» (ir a). In the answer, «ao balcão» is «a + o balcão».",
+      "givenAnswer": "Ao balcão 7.",
+      "answer": ["A", "que", "balcão", "vou?"],
+      "distractors": ["senha", "moro", "documento"],
+      "acceptedAnswers": ["A que balcão é que vou?", "Para que balcão vou?"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend Raj answers: «Às dez e meia.» Ask him (informal): At what time do you have your appointment?",
+      "explanation": "For a friend, use the informal verb «tens». Questions keep European order: «A que horas tens...?», not a Brazilian pattern.",
+      "givenAnswer": "Às dez e meia.",
+      "answer": ["A", "que", "horas", "tens", "atendimento?"],
+      "distractors": ["temos", "vais", "balcão"],
+      "acceptedAnswers": [
+        "A que horas é que tens atendimento?",
+        "A que horas tens marcação?",
+        "A que horas tens a marcação?",
+        "A que horas é que tens a marcação?"
+      ]
+    },
+    {
+      "id": "pla-m4-public-services-documents-18",
+      "type": "find_error",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «ir a» + «o balcão», Portuguese contracts to «ao». So «Vou ao balcão 4.» is correct.",
+      "sentence": ["Vou", "no", "balcão", "4."],
+      "wrongIndex": 1,
+      "correction": "ao",
+      "options": ["ao", "do", "na"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-19",
+      "type": "find_error",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «precisar», use the preposition «de»: «Preciso de um comprovativo de morada.»",
+      "sentence": ["Preciso", "a", "um", "comprovativo", "de", "morada."],
+      "wrongIndex": 1,
+      "correction": "de",
+      "options": ["de", "do", "para"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-20",
+      "type": "about_me",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Answer with «Preciso de...» plus the document name. With possessives, European Portuguese uses the article: «o meu passaporte».",
+      "question": "De que documento precisas hoje?",
+      "sampleAnswer": "Preciso do meu passaporte e de uma fotografia.",
+      "hints": [
+        "cartão de residência",
+        "comprovativo de morada",
+        "contrato de arrendamento",
+        "atestado de residência",
+        "NIF"
+      ]
+    },
+    {
+      "id": "pla-m4-public-services-documents-21",
+      "type": "translate_word",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "At a public office, «balcão» is the service counter where your number is called.",
+      "direction": "toTarget",
+      "sentence": "Your ticket is for **counter** 6.",
+      "word": "counter",
+      "answer": "balcão",
+      "options": ["balcão", "senha", "ecrã", "fotografia"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-22",
+      "type": "translate_word",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "«Contrato de arrendamento» is the document that shows you rent a home.",
+      "direction": "toTarget",
+      "sentence": "Bring the **rental contract** and one photo.",
+      "word": "rental contract",
+      "answer": "contrato de arrendamento",
+      "options": [
+        "contrato de arrendamento",
+        "comprovativo de morada",
+        "cartão de residência",
+        "passaporte"
+      ]
+    },
+    {
+      "id": "pla-m4-public-services-documents-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You are at the office. Fill the two gaps.",
+      "explanation": "With «ir a + o balcão», Portuguese contracts to «ao». In European Portuguese, possessives before nouns normally take the article: «o meu passaporte».",
+      "template": "No ecrã, vejo a minha senha. Agora vou ___ balcão 3 com ___ passaporte.",
+      "gaps": [
+        {
+          "answer": "ao"
+        },
+        {
+          "answer": "o meu"
+        }
+      ],
+      "wordBank": ["ao", "o meu", "na", "meu"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-24",
+      "type": "build_phrase",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I need to ask for the NISS at Segurança Social.",
+      "explanation": "After «precisar», use «de». With an infinitive, you say «preciso de pedir».",
+      "answer": ["Preciso", "de", "pedir", "o", "NISS", "na", "Segurança", "Social."],
+      "distractors": ["tem", "uma", "renovar", "ao"],
+      "acceptedAnswers": [
+        "Eu preciso de pedir o NISS na Segurança Social.",
+        "Preciso de pedir o NISS."
+      ]
+    },
+    {
+      "id": "pla-m4-public-services-documents-25",
+      "type": "build_phrase",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a man formally: you have to go to Finanças today.",
+      "explanation": "For formal singular, use «o senhor» with the 3rd-person verb. With «ir a + as Finanças», the contraction is «às».",
+      "answer": ["O", "senhor", "tem", "de", "ir", "às", "Finanças", "hoje."],
+      "distractors": ["vai", "na", "deve", "esta"],
+      "acceptedAnswers": ["Tem de ir às Finanças hoje."]
+    },
+    {
+      "id": "pla-m4-public-services-documents-26",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A clerk answers: «Tem de levar o comprovativo de morada.» Ask him formally what document you have to bring.",
+      "explanation": "To ask about the required document, use «Que documento ...?». With obligation, you ask «tenho de levar».",
+      "givenAnswer": "Tem de levar o comprovativo de morada.",
+      "answer": ["Que", "documento", "tenho", "de", "levar?"],
+      "distractors": ["onde", "precisa", "mostrar", "cartão"],
+      "acceptedAnswers": [
+        "Que documento é que tenho de levar?",
+        "Que documento é que eu tenho de levar?",
+        "Que documento tenho de trazer?"
+      ]
+    },
+    {
+      "id": "pla-m4-public-services-documents-27",
+      "type": "question_for_answer",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the office, an employee answers: «Na receção.» Ask formally where you can ask for information.",
+      "explanation": "For place, use «Onde». Here you ask in the 1st person: «Onde posso ...?».",
+      "givenAnswer": "Na receção.",
+      "answer": ["Onde", "posso", "pedir", "informações?"],
+      "distractors": ["podes", "receção", "marcar", "atendimento"],
+      "acceptedAnswers": ["Onde é que posso pedir informações?"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-28",
+      "type": "find_error",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «precisar», European Portuguese uses the preposition «de»: «preciso de marcar atendimento».",
+      "sentence": ["Eu", "preciso", "em", "marcar", "atendimento", "na", "AIMA."],
+      "wrongIndex": 2,
+      "correction": "de",
+      "options": ["de", "para", "com"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-29",
+      "type": "fill_gaps",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "A clerk gives advice: arrive early and look for your ticket number on the screen. Fill the two gaps.",
+      "explanation": "After «dever», use the infinitive. Here the advice is «deve chegar» and «deve ver».",
+      "template": "Na AIMA, o senhor deve ___ cedo e ___ a senha no ecrã.",
+      "gaps": [
+        {
+          "answer": "chegar"
+        },
+        {
+          "answer": "ver"
+        }
+      ],
+      "wordBank": ["chegar", "ver", "esperar", "levar"]
+    },
+    {
+      "id": "pla-m4-public-services-documents-30",
+      "type": "about_me",
+      "topicId": "pla-m4-public-services-documents",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "You ask for the NIF at Finanças (also at the Finanças desk of a Loja do Cidadão). Remember the contraction «nas Finanças» = em + as.",
+      "question": "Onde é que pedes o NIF?",
+      "sampleAnswer": "Peço o NIF nas Finanças.",
+      "hints": ["na", "Loja do Cidadão", "posso", "pedir", "balcão"]
+    }
+  ]
+}

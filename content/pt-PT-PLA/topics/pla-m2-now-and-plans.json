@@ -1,0 +1,519 @@
+{
+  "id": "pla-m2-now-and-plans",
+  "moduleId": "m2",
+  "title": "What is happening now and future plans",
+  "kind": "grammar",
+  "context": "Use two very common patterns in everyday Portuguese.\n\n- **estar a + infinitive** = an action happening **now**.\n- **ir + infinitive** = a **plan** or something you are going to do.\n\nYou also meet some important irregular present forms: **vou, vais, vai, vamos, vão**; **vejo / vês / vê / veem**; **leio / lês / lê / leem**; **saio / sais / sai**; **faço / fazes / faz**.\n\nExamples:\n- **Agora estou a aprender português.** — I am learning Portuguese now.\n- **Neste momento, estamos a fazer o jantar.** — At this moment, we are making dinner.\n- **Amanhã vou à Loja do Cidadão.** — Tomorrow I am going to the Citizens’ Shop.\n- **Na próxima semana, vamos ver uma casa.** — Next week we are going to see a house.\n- **No próximo ano, vai abrir uma loja.** — Next year he/she is going to open a shop.\n- **Agora vocês veem o número no ecrã.** — You all see the number on the screen now.\n\n**Watch out:** for actions happening now, use **estar a + infinitive**. For plans with **ir**, the next verb stays in the **infinitive**: **vou ver**, **vais sair**, **vamos fazer**.",
+  "keyItems": [
+    {
+      "target": "estar a + infinitivo",
+      "support": "to be doing; action happening now",
+      "note": "European Portuguese progressive"
+    },
+    {
+      "target": "ir + infinitivo",
+      "support": "to be going to; plan",
+      "note": "very common for future plans"
+    },
+    {
+      "target": "agora",
+      "support": "now"
+    },
+    {
+      "target": "neste momento",
+      "support": "at this moment"
+    },
+    {
+      "target": "amanhã",
+      "support": "tomorrow"
+    },
+    {
+      "target": "na próxima semana",
+      "support": "next week",
+      "note": "with feminine «semana»"
+    },
+    {
+      "target": "no próximo ano",
+      "support": "next year",
+      "note": "with masculine «ano»"
+    },
+    {
+      "target": "vou / vais / vai / vamos / vão",
+      "support": "go / am going to; are going to",
+      "note": "present of «ir», irregular"
+    },
+    {
+      "target": "veem",
+      "support": "they / you all see",
+      "note": "present of «ver», irregular"
+    },
+    {
+      "target": "leem",
+      "support": "they read",
+      "note": "present of «ler», irregular"
+    },
+    {
+      "target": "saio",
+      "support": "I go out / leave",
+      "note": "present of «sair», irregular"
+    },
+    {
+      "target": "faço",
+      "support": "I do / make",
+      "note": "present of «fazer», irregular"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m2-now-and-plans-01",
+      "type": "build_phrase",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you are reading the newspaper now.",
+      "explanation": "For an action happening now, use «estar a + infinitive»: «estou a ler». «Agora» makes the time clear.",
+      "answer": ["Estou", "a", "ler", "o", "jornal", "agora."],
+      "distractors": ["vou", "amanhã", "lê"],
+      "acceptedAnswers": ["Eu estou a ler o jornal agora.", "Agora estou a ler o jornal."]
+    },
+    {
+      "id": "pla-m2-now-and-plans-02",
+      "type": "build_phrase",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: at this moment, we are making dinner.",
+      "explanation": "With «neste momento», use «estar a + infinitive» for something happening right now. The verb is «estamos» with «nós».",
+      "answer": ["Neste", "momento,", "estamos", "a", "fazer", "o", "jantar."],
+      "distractors": ["vamos", "amanhã", "sair"],
+      "acceptedAnswers": [
+        "Nós estamos a fazer o jantar neste momento.",
+        "Estamos a fazer o jantar neste momento."
+      ]
+    },
+    {
+      "id": "pla-m2-now-and-plans-03",
+      "type": "build_phrase",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you are going to the Loja do Cidadão tomorrow.",
+      "explanation": "With a future time word like «amanhã», Portuguese often uses the present of «ir». «A + a» contracts to «à»: «à Loja do Cidadão».",
+      "answer": ["Amanhã", "vou", "à", "Loja", "do", "Cidadão."],
+      "distractors": ["estou", "na", "próxima"],
+      "acceptedAnswers": ["Vou à Loja do Cidadão amanhã.", "Eu vou à Loja do Cidadão amanhã."]
+    },
+    {
+      "id": "pla-m2-now-and-plans-04",
+      "type": "build_phrase",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: next week we are going to see a house.",
+      "explanation": "For a plan, use present «vamos» + infinitive «ver». The time expression is «na próxima semana».",
+      "answer": ["Na", "próxima", "semana,", "vamos", "ver", "uma", "casa."],
+      "distractors": ["estão", "agora", "loja"],
+      "acceptedAnswers": [
+        "Vamos ver uma casa na próxima semana.",
+        "Nós vamos ver uma casa na próxima semana."
+      ]
+    },
+    {
+      "id": "pla-m2-now-and-plans-05",
+      "type": "build_phrase",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that he is going to open a shop next year.",
+      "explanation": "Use «vai» for ele/ela and add the time phrase «no próximo ano». Portuguese often drops the subject pronoun, so «Vai abrir...» is also natural.",
+      "answer": ["Ele", "vai", "abrir", "uma", "loja", "no", "próximo", "ano."],
+      "distractors": ["está", "amanhã", "ver"],
+      "acceptedAnswers": ["Vai abrir uma loja no próximo ano."]
+    },
+    {
+      "id": "pla-m2-now-and-plans-06",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Estou a estudar português.» Ask him (informal) what he is doing now.",
+      "explanation": "To ask about an action happening now, use «O que» + «estar a fazer». With «tu», the form is «estás».",
+      "givenAnswer": "Estou a estudar português.",
+      "answer": ["O", "que", "estás", "a", "fazer", "agora?"],
+      "distractors": ["onde", "amanhã", "vão"],
+      "acceptedAnswers": ["O que é que estás a fazer agora?"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-07",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your family answers: «Neste momento, estamos a fazer o jantar.» Ask them what they are doing now.",
+      "explanation": "For «vocês», use the 3rd person plural form: «estão». «Neste momento» is a common way to say right now.",
+      "givenAnswer": "Neste momento, estamos a fazer o jantar.",
+      "answer": ["O", "que", "estão", "a", "fazer", "neste", "momento?"],
+      "distractors": ["vão", "amanhã", "onde"],
+      "acceptedAnswers": [
+        "O que é que estão a fazer neste momento?",
+        "O que estão a fazer agora?",
+        "O que é que estão a fazer agora?",
+        "O que é que vocês estão a fazer neste momento?"
+      ]
+    },
+    {
+      "id": "pla-m2-now-and-plans-08",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Amanhã vou sair às seis.» Ask him (informal) at what time he is going to go out tomorrow.",
+      "explanation": "Use «A que horas» for clock time. With «tu», the present of «ir» is «vais»: «vais sair».",
+      "givenAnswer": "Amanhã vou sair às seis.",
+      "answer": ["A", "que", "horas", "vais", "sair", "amanhã?"],
+      "distractors": ["onde", "agora", "estás"],
+      "acceptedAnswers": ["A que horas é que vais sair amanhã?"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-09",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friends answer: «Na próxima semana vamos ver um apartamento.» Ask them what they are going to do next week.",
+      "explanation": "To ask about a plan, use «O que» + present of «ir» + infinitive. With «vocês», the form is «vão».",
+      "givenAnswer": "Na próxima semana vamos ver um apartamento.",
+      "answer": ["O", "que", "vão", "fazer", "na", "próxima", "semana?"],
+      "distractors": ["estão", "neste", "momento"],
+      "acceptedAnswers": [
+        "O que é que vão fazer na próxima semana?",
+        "O que é que vocês vão fazer na próxima semana?"
+      ]
+    },
+    {
+      "id": "pla-m2-now-and-plans-10",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A woman answers: «No próximo ano, vou abrir uma loja.» Ask her (formal) what she is going to do next year.",
+      "explanation": "In formal singular, use the 3rd person form: «vai fazer». The time phrase here is «no próximo ano».",
+      "givenAnswer": "No próximo ano, vou abrir uma loja.",
+      "answer": ["O", "que", "vai", "fazer", "no", "próximo", "ano?"],
+      "distractors": ["está", "amanhã", "onde"],
+      "acceptedAnswers": [
+        "O que é que vai fazer no próximo ano?",
+        "O que é que a senhora vai fazer no próximo ano?"
+      ]
+    },
+    {
+      "id": "pla-m2-now-and-plans-11",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: Now I am writing an email. Fill the two gaps.",
+      "explanation": "For something happening now, use the present of «estar» plus «a» and the infinitive. Here the forms are «estou» and «escrever».",
+      "template": "Agora eu ___ a ___ um email.",
+      "gaps": [
+        {
+          "answer": "estou"
+        },
+        {
+          "answer": "escrever"
+        }
+      ],
+      "wordBank": ["estou", "escrever", "vou", "escrevo"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-12",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Sunita says: Tomorrow we are going to read the contract. Fill the two gaps.",
+      "explanation": "Plans often use present «ir» + infinitive. With «nós», the form of «ir» is «vamos».",
+      "template": "Amanhã nós ___ ___ o contrato.",
+      "gaps": [
+        {
+          "answer": "vamos"
+        },
+        {
+          "answer": "ler"
+        }
+      ],
+      "wordBank": ["vamos", "ler", "estamos", "lê"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-13",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Compare now and tomorrow. Fill the two gaps.",
+      "explanation": "Use «estás a trabalhar» for now, and «vais sair» for tomorrow’s plan. The form «vais» is from irregular «ir».",
+      "template": "Agora tu ___ a trabalhar, mas amanhã ___ sair cedo.",
+      "gaps": [
+        {
+          "answer": "estás"
+        },
+        {
+          "answer": "vais"
+        }
+      ],
+      "wordBank": ["estás", "vais", "estou", "vai"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-14",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "People are looking at a ticket screen. Fill the gap.",
+      "explanation": "The present of «ver» is irregular. With «vocês», the correct form is «veem».",
+      "template": "Agora vocês ___ o número no ecrã.",
+      "gaps": [
+        {
+          "answer": "veem"
+        }
+      ],
+      "wordBank": ["veem", "vemos", "vejo", "vês"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-15",
+      "type": "find_error",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "For an action happening now, European Portuguese uses «estar a + infinitive». «Vou a trabalhar» is not the right pattern here.",
+      "sentence": ["Agora", "eu", "vou", "a", "trabalhar."],
+      "wrongIndex": 2,
+      "correction": "estou",
+      "options": ["estou", "estás", "está"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-16",
+      "type": "find_error",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The first person singular of «ir» is «vou». «Vai» is for ele/ela/você.",
+      "sentence": ["Amanhã", "eu", "vai", "sair", "cedo."],
+      "wrongIndex": 2,
+      "correction": "vou",
+      "options": ["vou", "vais", "vamos"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-17",
+      "type": "find_error",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «vou», the next verb stays in the infinitive. «Vejo» is a conjugated form, but here you need «ver».",
+      "sentence": ["Na", "próxima", "semana,", "vou", "vejo", "uma", "casa."],
+      "wrongIndex": 4,
+      "correction": "ver",
+      "options": ["ver", "vê", "vemos"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-18",
+      "type": "translate_word",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Fazer» is irregular in the first person singular: «eu faço». This form is common in daily speech.",
+      "direction": "toTarget",
+      "sentence": "I **do** the shopping every Saturday.",
+      "word": "do",
+      "answer": "faço",
+      "options": ["faço", "fazes", "faz", "fazem"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-19",
+      "type": "translate_word",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The verb «ler» is irregular. With «they», the correct present form is «leem».",
+      "direction": "toTarget",
+      "sentence": "They **read** the newspaper every day.",
+      "word": "read",
+      "answer": "leem",
+      "options": ["leem", "lês", "lê", "lemos"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-20",
+      "type": "about_me",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "For plans, «ir + infinitive» is the easiest pattern: «Vou estudar», «vou trabalhar». You can put the time phrase at the beginning or at the end.",
+      "question": "O que vais fazer amanhã?",
+      "sampleAnswer": "Vou estudar português de manhã.",
+      "hints": ["trabalhar", "descansar", "à tarde", "em casa", "com amigos", "ir ao médico"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-21",
+      "type": "build_phrase",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I am leaving home now.",
+      "explanation": "For something happening now, use «estar a + infinitive»: «estou a sair». This is the usual European Portuguese progressive.",
+      "answer": ["Agora", "estou", "a", "sair", "de", "casa."],
+      "distractors": ["vou", "sais", "na"],
+      "acceptedAnswers": ["Agora eu estou a sair de casa.", "Estou a sair de casa agora."]
+    },
+    {
+      "id": "pla-m2-now-and-plans-22",
+      "type": "build_phrase",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Tomorrow Mariana and I are going to do the shopping at Continente.",
+      "explanation": "«Mariana and I» = «nós», so the form is «vamos». After «ir», the next verb stays in the infinitive: «fazer».",
+      "answer": [
+        "Amanhã,",
+        "eu",
+        "e",
+        "a",
+        "Mariana",
+        "vamos",
+        "fazer",
+        "compras",
+        "no",
+        "Continente."
+      ],
+      "distractors": ["vou", "fazemos", "ao"],
+      "acceptedAnswers": [
+        "Amanhã, a Mariana e eu vamos fazer compras no Continente.",
+        "Amanhã, eu e a Mariana vamos fazer as compras no Continente.",
+        "Eu e a Mariana vamos fazer compras no Continente amanhã."
+      ]
+    },
+    {
+      "id": "pla-m2-now-and-plans-23",
+      "type": "build_phrase",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Next year I am going to do a cooking course.",
+      "explanation": "For a plan, use «ir + infinitive»: «vou fazer». «No próximo ano» is the common time expression for next year.",
+      "answer": ["No", "próximo", "ano,", "vou", "fazer", "um", "curso", "de", "cozinha."],
+      "distractors": ["faço", "vais", "na"],
+      "acceptedAnswers": ["No próximo ano, eu vou fazer um curso de cozinha."]
+    },
+    {
+      "id": "pla-m2-now-and-plans-24",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Em casa.» Ask him (informal) where he is going to read the contract tomorrow.",
+      "explanation": "To ask about place, use «Onde». With «tu», the plan form is «vais + infinitive»: «vais ler».",
+      "givenAnswer": "Em casa.",
+      "answer": ["Onde", "é", "que", "vais", "ler", "o", "contrato", "amanhã?"],
+      "distractors": ["Quando", "vão", "ver"],
+      "acceptedAnswers": ["Onde vais ler o contrato amanhã?"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-25",
+      "type": "question_for_answer",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A woman answers: «No Centro de Saúde.» Ask her (formal) where she is going to have medical tests (fazer análises).",
+      "explanation": "Formal singular takes the 3rd-person form: «vai fazer». «Onde é que» asks for the place.",
+      "givenAnswer": "No Centro de Saúde.",
+      "answer": ["Onde", "é", "que", "vai", "fazer", "análises?"],
+      "distractors": ["Quando", "vão", "ler"],
+      "acceptedAnswers": ["Onde vai fazer análises?", "Onde é que a senhora vai fazer análises?"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-26",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: I read the notice, you (tu) see the number and they read the instructions.",
+      "explanation": "These verbs are irregular in the present: «leio», «vês», «leem». You need a different form for each person.",
+      "template": "Eu ___ o aviso, tu ___ o número e eles ___ as instruções.",
+      "gaps": [
+        {
+          "answer": "leio"
+        },
+        {
+          "answer": "vês"
+        },
+        {
+          "answer": "leem"
+        }
+      ],
+      "wordBank": ["leio", "vês", "leem", "lês", "veem", "lê"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-27",
+      "type": "fill_gaps",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about now and tomorrow.",
+      "explanation": "For an action now, use «estar a + infinitive»: «está a preencher». For a plan, use «vai + infinitive»: «vai fazer».",
+      "template": "Agora a Oksana ___ a preencher o formulário e amanhã ___ fazer a inscrição.",
+      "gaps": [
+        {
+          "answer": "está"
+        },
+        {
+          "answer": "vai"
+        }
+      ],
+      "wordBank": ["está", "vai", "estou", "vão"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-28",
+      "type": "find_error",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «estar a», the next verb must be in the infinitive: «sair». «Saio» is a present form, not an infinitive.",
+      "sentence": ["Agora", "estou", "a", "saio", "de", "casa."],
+      "wrongIndex": 3,
+      "correction": "sair",
+      "options": ["sair", "sais", "sai"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-29",
+      "type": "translate_word",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The verb «ver» is irregular. With «they» (eles/elas), the correct present form is «veem».",
+      "direction": "toTarget",
+      "sentence": "From the window they **see** the bus.",
+      "word": "see",
+      "answer": "veem",
+      "options": ["veem", "vejo", "vês", "vemos"]
+    },
+    {
+      "id": "pla-m2-now-and-plans-30",
+      "type": "about_me",
+      "topicId": "pla-m2-now-and-plans",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «vou + infinitive» to talk about your plan for tomorrow night. You can answer with any real activity.",
+      "question": "O que vais fazer amanhã à noite?",
+      "sampleAnswer": "Vou fazer o jantar com a minha irmã.",
+      "hints": ["sair", "ver", "filme", "amigos", "trabalhar", "cedo"]
+    }
+  ]
+}

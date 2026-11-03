@@ -1,0 +1,550 @@
+{
+  "id": "pla-m3-restaurant-cafe",
+  "moduleId": "m3",
+  "title": "At the restaurant and café",
+  "kind": "situation",
+  "context": "At cafés and restaurants in Portugal, you often need ready-made polite phrases more than long grammar. Learn the meal words **pequeno-almoço**, **almoço**, **lanche** and **jantar**, and menu words like **entrada**, **prato principal**, **acompanhamento**, **sobremesa**, **prato do dia**, **ementa** and **conta**. With staff, Portuguese often sounds softer with fixed chunks such as **Queria...**, **Podia...** and **Preferia...**. Learn these as whole phrases for now.\n\n- «Queria uma mesa para duas pessoas.» — “I would like a table for two.”\n- «Preferia perto da janela.» — “I would prefer to sit near the window.”\n- «Para mim, uma dourada grelhada com batatas cozidas.» — “For me, a grilled sea bream with boiled potatoes.”\n- «O que deseja?» — “What would you like?”\n- «Mais alguma coisa?» — “Anything else?”\n- «Podia trazer a conta, por favor?» — “Could you bring the bill, please?”\n\n**Watch out:** in Portugal, the restaurant menu is usually **a ementa**. **Watch out:** cooking words agree with the noun: **peixe grelhado**, but **dourada grelhada** and **batatas cozidas**.",
+  "keyItems": [
+    {
+      "target": "pequeno-almoço",
+      "support": "breakfast"
+    },
+    {
+      "target": "almoço",
+      "support": "lunch"
+    },
+    {
+      "target": "lanche",
+      "support": "snack / light meal"
+    },
+    {
+      "target": "jantar",
+      "support": "dinner"
+    },
+    {
+      "target": "a ementa",
+      "support": "the menu"
+    },
+    {
+      "target": "o prato do dia",
+      "support": "the dish of the day"
+    },
+    {
+      "target": "a entrada",
+      "support": "starter"
+    },
+    {
+      "target": "o prato principal",
+      "support": "main course"
+    },
+    {
+      "target": "o acompanhamento",
+      "support": "side dish"
+    },
+    {
+      "target": "a sobremesa",
+      "support": "dessert"
+    },
+    {
+      "target": "a conta",
+      "support": "the bill"
+    },
+    {
+      "target": "Queria uma mesa para duas pessoas.",
+      "support": "I would like a table for two.",
+      "note": "fixed polite chunk"
+    },
+    {
+      "target": "Preferia perto da janela.",
+      "support": "I would prefer near the window.",
+      "note": "fixed polite chunk"
+    },
+    {
+      "target": "Podia trazer a conta, por favor?",
+      "support": "Could you bring the bill, please?",
+      "note": "fixed polite chunk"
+    },
+    {
+      "target": "O que deseja?",
+      "support": "What would you like?",
+      "note": "common waiter phrase"
+    },
+    {
+      "target": "Mais alguma coisa?",
+      "support": "Anything else?",
+      "note": "common waiter phrase"
+    },
+    {
+      "target": "uma dourada grelhada",
+      "support": "a grilled sea bream"
+    },
+    {
+      "target": "batatas cozidas",
+      "support": "boiled potatoes"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m3-restaurant-cafe-01",
+      "type": "translate_word",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In Portugal, the list of dishes in a restaurant is the «ementa».",
+      "direction": "toTarget",
+      "sentence": "Can I see the **menu**, please?",
+      "word": "menu",
+      "answer": "ementa",
+      "options": ["ementa", "conta", "entrada", "sobremesa"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-02",
+      "type": "translate_word",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "At the end of the meal, you ask for «a conta», the bill.",
+      "direction": "toTarget",
+      "sentence": "Could you bring the **bill**, please?",
+      "word": "bill",
+      "answer": "conta",
+      "options": ["conta", "ementa", "janela", "entrada"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-03",
+      "type": "translate_word",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The sweet course after the main meal is «a sobremesa».",
+      "direction": "toTarget",
+      "sentence": "I would like a **dessert**.",
+      "word": "dessert",
+      "answer": "sobremesa",
+      "options": ["sobremesa", "ementa", "acompanhamento", "entrada"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-04",
+      "type": "translate_word",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "A food served with the main dish is «o acompanhamento».",
+      "direction": "toTarget",
+      "sentence": "Rice is the **side dish** today.",
+      "word": "side dish",
+      "answer": "acompanhamento",
+      "options": ["acompanhamento", "sobremesa", "entrada", "conta"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-05",
+      "type": "order_dialogue",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "At the restaurant door. Put the lines in order.",
+      "explanation": "The waiter first asks about a reservation. Then the customer asks for a table and receives the menu.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Boa tarde! Têm reserva?"
+        },
+        {
+          "speaker": "B",
+          "text": "Não. Queria uma mesa para duas pessoas, por favor."
+        },
+        {
+          "speaker": "A",
+          "text": "Claro. Preferem perto da janela?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sim, por favor."
+        },
+        {
+          "speaker": "A",
+          "text": "Aqui têm a ementa."
+        }
+      ]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the restaurant, fill the gap to ask politely for a table for two people.",
+      "explanation": "With restaurant staff, «Queria...» is the common polite chunk to ask for something.",
+      "template": "Bom dia. ___ uma mesa para duas pessoas, por favor.",
+      "gaps": [
+        {
+          "answer": "Queria"
+        }
+      ],
+      "wordBank": ["Queria", "Tenho", "Gosto", "Podia"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The waiter asks if you want anything else. Fill the gap.",
+      "explanation": "After one order, staff often ask «Mais alguma coisa?» to offer more.",
+      "template": "Mais alguma ___?",
+      "gaps": [
+        {
+          "answer": "coisa"
+        }
+      ],
+      "wordBank": ["coisa", "mesa", "conta", "entrada"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You are ordering grilled sea bream with boiled potatoes. Fill the two gaps.",
+      "explanation": "The cooking words agree with the noun: «dourada grelhada» and «batatas cozidas».",
+      "template": "Para mim, uma dourada ___ com batatas ___.",
+      "gaps": [
+        {
+          "answer": "grelhada"
+        },
+        {
+          "answer": "cozidas"
+        }
+      ],
+      "wordBank": ["grelhada", "cozidas", "grelhado", "cozido"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-09",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The waiter says the dish of the day is roast chicken with rice. Fill the two gaps.",
+      "explanation": "After the meat, use the cooking method. Then add the side with «com».",
+      "template": "O prato do dia é frango ___ com ___.",
+      "gaps": [
+        {
+          "answer": "assado"
+        },
+        {
+          "answer": "arroz"
+        }
+      ],
+      "wordBank": ["assado", "arroz", "frito", "massa"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-10",
+      "type": "build_phrase",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the restaurant, say politely: \"I would like a table for two people, please.\"",
+      "explanation": "Use the fixed polite chunk «Queria...». «Para duas pessoas» tells the waiter the number of seats.",
+      "answer": ["Queria", "uma", "mesa", "para", "duas", "pessoas,", "por", "favor."],
+      "distractors": ["quero", "três", "de"],
+      "acceptedAnswers": ["Eu queria uma mesa para duas pessoas, por favor."]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-11",
+      "type": "build_phrase",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell the waiter you would prefer to sit near the window.",
+      "explanation": "«Preferia...» is a polite chunk for a preference. «Da» is «de + a» in «perto da janela».",
+      "answer": ["Preferia", "perto", "da", "janela."],
+      "distractors": ["ao", "longe", "quero"],
+      "acceptedAnswers": [
+        "Eu preferia perto da janela.",
+        "Preferia uma mesa perto da janela.",
+        "Eu preferia uma mesa perto da janela."
+      ]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-12",
+      "type": "build_phrase",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Order exactly this: \"For me, a grilled sea bream with boiled potatoes.\"",
+      "explanation": "In orders, «Para mim» is very common. The cooking words agree: «dourada grelhada», «batatas cozidas».",
+      "answer": ["Para", "mim,", "uma", "dourada", "grelhada", "com", "batatas", "cozidas."],
+      "distractors": ["peixe", "assada", "arroz"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-13",
+      "type": "build_phrase",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask politely: \"Could you bring the bill, please?\"",
+      "explanation": "Use «Podia...?» as a polite request. «A conta» is the bill in a restaurant.",
+      "answer": ["Podia", "trazer", "a", "conta,", "por", "favor?"],
+      "distractors": ["trazes", "ementa", "quero"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The waiter answers: «Claro, aqui tem.» Ask him politely (formal) if he could bring the menu, please.",
+      "explanation": "Use «Podia...?» for a polite request to staff. In Portugal, «ementa» is the menu.",
+      "givenAnswer": "Claro, aqui tem.",
+      "answer": ["Podia", "trazer", "a", "ementa,", "por", "favor?"],
+      "distractors": ["conta", "quero", "mesa"],
+      "acceptedAnswers": ["Podia trazer-me a ementa, por favor?"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The waiter answers: «Temos sopa e salada.» Ask him (formal) what starters they have.",
+      "explanation": "To ask about starters, use «Que entradas tem?» or the very common «Que entradas é que tem?». With formal singular, the verb is 3rd person: «tem».",
+      "givenAnswer": "Temos sopa e salada.",
+      "answer": ["Que", "entradas", "tem?"],
+      "distractors": ["pratos", "sobremesas", "tens"],
+      "acceptedAnswers": [
+        "Que entradas é que tem?",
+        "Quais são as entradas?",
+        "Que entradas têm?",
+        "Que entradas é que têm?"
+      ]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The waiter answers: «O prato do dia é frango assado com arroz.» Ask him (formal) what the dish of the day is.",
+      "explanation": "«Qual é...?» asks for identification. «Prato do dia» is a fixed menu phrase.",
+      "givenAnswer": "O prato do dia é frango assado com arroz.",
+      "answer": ["Qual", "é", "o", "prato", "do", "dia?"],
+      "distractors": ["ementa", "sobremesa", "tem"],
+      "acceptedAnswers": ["Qual é que é o prato do dia?"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The waiter answers: «Fica ao fundo, à direita.» Ask him (formal) where the bathroom is.",
+      "explanation": "For location, use «Onde fica...?» or «Onde é que fica...?» Both are common in Portugal.",
+      "givenAnswer": "Fica ao fundo, à direita.",
+      "answer": ["Onde", "é", "que", "fica", "a", "casa", "de", "banho?"],
+      "distractors": ["conta", "mesa", "preferia"],
+      "acceptedAnswers": ["Onde fica a casa de banho?"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-18",
+      "type": "find_error",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Pessoas» is feminine plural, so the numeral must also be feminine plural: «duas».",
+      "sentence": ["Queria", "uma", "mesa", "para", "dois", "pessoas,", "por", "favor."],
+      "wrongIndex": 4,
+      "correction": "duas",
+      "options": ["duas", "uma", "um"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-19",
+      "type": "find_error",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Janela» is feminine, so «de + a» contracts to «da»: «perto da janela».",
+      "sentence": ["Preferia", "uma", "mesa", "perto", "do", "janela."],
+      "wrongIndex": 4,
+      "correction": "da",
+      "options": ["da", "de", "na"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-20",
+      "type": "about_me",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «prefiro» to say your choice. You can add the cooking method and a side dish with «com».",
+      "question": "O que preferes comer num restaurante?",
+      "sampleAnswer": "Prefiro frango assado com arroz.",
+      "hints": ["peixe", "salada", "sobremesa", "massa", "grelhado"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-21",
+      "type": "translate_word",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Lanche» is a snack or light meal, often in the afternoon.",
+      "direction": "toTarget",
+      "sentence": "At five, I usually have a **snack**.",
+      "word": "snack",
+      "answer": "lanche",
+      "options": ["lanche", "jantar", "almoço", "pequeno-almoço"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-22",
+      "type": "match_pairs",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each cooking word with its meaning.",
+      "explanation": "These cooking words often work like adjectives. They change to agree with the noun: «peixe grelhado», but «batatas cozidas».",
+      "pairs": [
+        {
+          "target": "grelhado",
+          "support": "grilled"
+        },
+        {
+          "target": "frito",
+          "support": "fried"
+        },
+        {
+          "target": "cozido",
+          "support": "boiled"
+        },
+        {
+          "target": "assado",
+          "support": "roasted"
+        },
+        {
+          "target": "salteado",
+          "support": "sautéed"
+        }
+      ]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill the gaps with the parts of a meal.",
+      "explanation": "A full meal often goes in this order: «entrada», then «prato principal», and finally «sobremesa».",
+      "template": "Numa refeição completa, primeiro vem a ___, depois o ___ e no fim a ___.",
+      "gaps": [
+        {
+          "answer": "entrada"
+        },
+        {
+          "answer": "prato principal"
+        },
+        {
+          "answer": "sobremesa"
+        }
+      ],
+      "wordBank": ["entrada", "prato principal", "sobremesa", "ementa", "acompanhamento", "conta"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-24",
+      "type": "build_phrase",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You are the waiter. Ask the customer formally: \"What would you like?\"",
+      "explanation": "With customers, staff often use the formal 3rd-person form: «deseja». You can also hear the common version with «é que».",
+      "answer": ["O", "que", "deseja?"],
+      "distractors": ["desejas", "pedes", "desejo"],
+      "acceptedAnswers": ["O que é que deseja?"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-25",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At a restaurant, ask the waiter (formal) what desserts they have.",
+      "explanation": "To ask about desserts, you can say «Que sobremesas tem?» or «O que tem de sobremesa?». With staff, use the formal 3rd-person form.",
+      "givenAnswer": "Temos bolo de chocolate e fruta.",
+      "answer": ["Que", "sobremesas", "tem?"],
+      "distractors": ["Qual", "sobremesa", "entrada"],
+      "acceptedAnswers": [
+        "O que tem de sobremesa?",
+        "Que sobremesas é que tem?",
+        "Que sobremesas têm?",
+        "Que sobremesas é que têm?"
+      ]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-26",
+      "type": "find_error",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Legumes» is masculine plural, so the cooking word must also be masculine plural: «salteados».",
+      "sentence": ["Os", "legumes", "salteada", "são", "bons."],
+      "wrongIndex": 2,
+      "correction": "salteados",
+      "options": ["salteados", "salteado", "salteadas"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-27",
+      "type": "build_phrase",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"The main course is grilled fish.\"",
+      "explanation": "«Prato principal» is a fixed menu phrase. «Peixe grelhado» stays masculine singular because «peixe» is masculine.",
+      "answer": ["O", "prato", "principal", "é", "peixe", "grelhado."],
+      "distractors": ["a", "sobremesa", "grelhada"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-28",
+      "type": "question_for_answer",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask your friend (informal) if he wants a starter or a main course.",
+      "explanation": "With «tu», the verb is «queres». «Entrada» and «prato principal» are the menu words for starter and main course.",
+      "givenAnswer": "Quero só uma entrada.",
+      "answer": ["Queres", "uma", "entrada", "ou", "um", "prato", "principal?"],
+      "distractors": ["quer", "a", "sobremesa"],
+      "acceptedAnswers": ["Tu queres uma entrada ou um prato principal?"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-29",
+      "type": "translate_word",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«O prato do dia» is the dish of the day, a cheaper daily dish in many Portuguese restaurants. «Prato principal» is any main course.",
+      "direction": "toTarget",
+      "sentence": "What is the **dish of the day** today?",
+      "word": "dish of the day",
+      "answer": "prato do dia",
+      "options": ["prato do dia", "prato principal", "ementa", "entrada"]
+    },
+    {
+      "id": "pla-m3-restaurant-cafe-30",
+      "type": "about_me",
+      "topicId": "pla-m3-restaurant-cafe",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «prefiro» to say what you choose to eat. You can answer with one dish or with a fuller meal.",
+      "question": "Ao jantar, o que preferes?",
+      "sampleAnswer": "Ao jantar, prefiro sopa e peixe grelhado.",
+      "hints": ["frango", "arroz", "salada", "massa", "sobremesa"]
+    }
+  ]
+}
