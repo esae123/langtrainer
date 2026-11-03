@@ -1,0 +1,534 @@
+{
+  "id": "pla-m7-life-stages-migration",
+  "moduleId": "m7",
+  "title": "Life stages, migration and changes",
+  "kind": "situation",
+  "context": "When talking about your life story in Portugal, you often contrast past habits with your current routine, or talk about migration memories. To describe past habits or situations, use **Antigamente** (in the past / back then) or **No meu país** (in my country) with the Pretérito Imperfeito (*vivia*, *falava*, *fazia*). To speak about your current life, use **Hoje em dia** (nowadays) or **Agora** (now) with the Presente (*moro*, *falo*, *faço*).\n\nExamples:\n- *Antigamente vivia na Alemanha, mas hoje em dia moro em Portugal.* (In the past I lived in Germany, but nowadays I live in Portugal.)\n- *No meu país fazia muito frio.* (In my country it was very cold.)\n- *Há cinco anos não falava português, mas hoje já compreendo muito bem.* (Five years ago I didn't speak Portuguese, but today I understand very well.)\n- *Tenho saudades da minha terra natal.* (I miss my hometown.)\n\n**Watch out:** In European Portuguese, expressing nostalgia uses **ter saudades de** followed by a definite article: *Tenho saudades **da** minha família* (never leave out the article!). To express how long ago something happened, use **há + time**: *Cheguei a Portugal **há** três anos*.",
+  "keyItems": [
+    {
+      "target": "a infância",
+      "support": "childhood"
+    },
+    {
+      "target": "a juventude",
+      "support": "youth"
+    },
+    {
+      "target": "a terra natal",
+      "support": "hometown / birthplace"
+    },
+    {
+      "target": "antigamente",
+      "support": "in the past / back then"
+    },
+    {
+      "target": "hoje em dia",
+      "support": "nowadays"
+    },
+    {
+      "target": "no meu país",
+      "support": "in my country"
+    },
+    {
+      "target": "em Portugal",
+      "support": "in Portugal"
+    },
+    {
+      "target": "mudar de vida",
+      "support": "to change one's life"
+    },
+    {
+      "target": "chegar a",
+      "support": "to arrive in/at"
+    },
+    {
+      "target": "ter saudades de",
+      "support": "to miss / feel nostalgic for"
+    },
+    {
+      "target": "há cinco anos",
+      "support": "five years ago"
+    },
+    {
+      "target": "hábitos",
+      "support": "habits"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m7-life-stages-migration-01",
+      "type": "translate_word",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Infância» means childhood.",
+      "direction": "toTarget",
+      "sentence": "In my **childhood**, I lived in a small village.",
+      "word": "childhood",
+      "answer": "infância",
+      "options": ["infância", "juventude", "velhice", "vida"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-02",
+      "type": "translate_word",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Hoje em dia» is the set phrase for «nowadays».",
+      "direction": "toTarget",
+      "sentence": "**Nowadays**, I work in Lisbon.",
+      "word": "Nowadays",
+      "answer": "Hoje em dia",
+      "options": ["Hoje em dia", "Antigamente", "Amanhã", "Ontem"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-03",
+      "type": "translate_word",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Terra natal» refers to one's birthplace or hometown.",
+      "direction": "toTarget",
+      "sentence": "I really miss my **hometown**.",
+      "word": "hometown",
+      "answer": "terra natal",
+      "options": ["terra natal", "casa de banho", "língua materna", "segurança social"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-04",
+      "type": "match_pairs",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese expression with its English translation.",
+      "explanation": "Connecting key expressions used when discussing past vs present life.",
+      "pairs": [
+        {
+          "target": "antigamente",
+          "support": "in the past / back then"
+        },
+        {
+          "target": "hoje em dia",
+          "support": "nowadays"
+        },
+        {
+          "target": "terra natal",
+          "support": "hometown"
+        },
+        {
+          "target": "ter saudades",
+          "support": "to miss / feel nostalgia"
+        }
+      ]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Oksana is contrasting her past life with her present. Fill the gaps.",
+      "explanation": "«Antigamente» sets the past context, while «hoje em dia» introduces the current situation.",
+      "template": "___ vivia na Ucrânia, mas ___ moro em Portugal.",
+      "gaps": [
+        {
+          "answer": "Antigamente"
+        },
+        {
+          "answer": "hoje em dia"
+        }
+      ],
+      "wordBank": ["Antigamente", "hoje em dia", "Amanhã", "Sempre"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Raj talks about language learning. Fill the gaps.",
+      "explanation": "Use the imperfeito «falava» for the past condition and «falo» for the present.",
+      "template": "Há dois anos não ___ português, mas agora ___ muito bem.",
+      "gaps": [
+        {
+          "answer": "falava"
+        },
+        {
+          "answer": "falo"
+        }
+      ],
+      "wordBank": ["falava", "falo", "falam", "falavas", "falou"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ahmed is talking about moving. Fill the gaps with the completed past actions.",
+      "explanation": "Both actions are completed past events (Pretérito Perfeito): «mudei» and «cheguei».",
+      "template": "Eu ___ de vida quando ___ a Portugal.",
+      "gaps": [
+        {
+          "answer": "mudei"
+        },
+        {
+          "answer": "cheguei"
+        }
+      ],
+      "wordBank": ["mudei", "cheguei", "mudo", "chego", "mudava"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Sunita describes her routine before and after moving. Fill the three gaps.",
+      "explanation": "«Andava» describes past habit, while «vou» and «é» describe current routine.",
+      "template": "Na minha terra natal ___ de autocarro, mas hoje em dia ___ de metro e ___ muito mais rápido.",
+      "gaps": [
+        {
+          "answer": "andava"
+        },
+        {
+          "answer": "vou"
+        },
+        {
+          "answer": "é"
+        }
+      ],
+      "wordBank": ["andava", "vou", "é", "andou", "fui", "era"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-09",
+      "type": "build_phrase",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that in the past (antigamente) you lived in Germany.",
+      "explanation": "«Antigamente» is combined with the imperfect form «vivia». Country names like «Alemanha» take a definite article: «em + a = na».",
+      "answer": ["Antigamente", "vivia", "na", "Alemanha."],
+      "distractors": ["moro", "em", "do"],
+      "acceptedAnswers": [
+        "Antigamente eu vivia na Alemanha.",
+        "Antigamente morava na Alemanha.",
+        "Antigamente eu morava na Alemanha."
+      ]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-10",
+      "type": "build_phrase",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: In my country it was very cold.",
+      "explanation": "In European Portuguese, possessives take an article: «No meu país» (em + o meu país). Weather in the past uses «fazia».",
+      "answer": ["No", "meu", "país", "fazia", "muito", "frio."],
+      "distractors": ["faz", "em", "da"],
+      "acceptedAnswers": ["No meu país estava muito frio."]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-11",
+      "type": "build_phrase",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"Five years ago I didn't speak Portuguese.\"",
+      "explanation": "«Há + time» expresses time ago. «Não falava» uses imperfeito for past state.",
+      "answer": ["Há", "cinco", "anos", "não", "falava", "português."],
+      "distractors": ["falo", "com", "A"],
+      "acceptedAnswers": ["Há cinco anos eu não falava português."]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-12",
+      "type": "build_phrase",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Today I live in Portugal and understand very well.",
+      "explanation": "Use present tense «moro» and «compreendo» for present realities.",
+      "answer": ["Hoje", "moro", "em", "Portugal", "e", "compreendo", "muito", "bem."],
+      "distractors": ["vivia", "na", "de"],
+      "acceptedAnswers": [
+        "Hoje eu moro em Portugal e compreendo muito bem.",
+        "Hoje em dia moro em Portugal e compreendo muito bem.",
+        "Hoje vivo em Portugal e compreendo muito bem.",
+        "Hoje em dia vivo em Portugal e compreendo muito bem."
+      ]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-13",
+      "type": "build_phrase",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I miss my family a lot.",
+      "explanation": "«Ter saudades de» contracts with «a minha família» to form «da minha família».",
+      "answer": ["Tenho", "muitas", "saudades", "da", "minha", "família."],
+      "distractors": ["de", "meu", "tens"],
+      "acceptedAnswers": [
+        "Eu tenho muitas saudades da minha família.",
+        "Sinto muitas saudades da minha família."
+      ]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Vivia no Nepal.» Ask him (informal) where he lived before.",
+      "explanation": "Use «Onde» with the 2nd person imperfeito «vivias».",
+      "givenAnswer": "Vivia no Nepal.",
+      "answer": ["Onde", "vivias", "antes?"],
+      "distractors": ["Como", "mora", "de"],
+      "acceptedAnswers": [
+        "Onde é que vivias antes?",
+        "Onde é que tu vivias antes?",
+        "Onde moravas antes?",
+        "Onde é que moravas antes?"
+      ]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your neighbour answers: «Cheguei a Portugal há três anos.» Ask her (informal) when she arrived in Portugal.",
+      "explanation": "Ask «Quando é que» with the past tense verb «chegaste».",
+      "givenAnswer": "Cheguei a Portugal há três anos.",
+      "answer": ["Quando", "é", "que", "chegaste", "a", "Portugal?"],
+      "distractors": ["chegou", "onde", "em"],
+      "acceptedAnswers": ["Quando chegaste a Portugal?"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "An elderly classmate answers: «Sim, tenho saudades da minha terra natal.» Ask her politely (formal) if she misses her hometown.",
+      "explanation": "Formal 3rd person singular uses «Tem» and «sua terra natal».",
+      "givenAnswer": "Sim, tenho saudades da minha terra natal.",
+      "answer": ["Tem", "saudades", "da", "sua", "terra", "natal?"],
+      "distractors": ["Tens", "tua", "de"],
+      "acceptedAnswers": [
+        "A senhora tem saudades da sua terra natal?",
+        "O senhor tem saudades da sua terra natal?"
+      ]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fátima answers: «Antigamente trabalhava num hospital.» Ask her (informal) what she used to do in her country.",
+      "explanation": "Use «O que é que fazias...» for informal questions about past occupations.",
+      "givenAnswer": "Antigamente trabalhava num hospital.",
+      "answer": ["O", "que", "é", "que", "fazias", "no", "teu", "país?"],
+      "distractors": ["fazia", "seu", "como"],
+      "acceptedAnswers": ["O que fazias no teu país?"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-18",
+      "type": "find_error",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «Antigamente» (in the past / back then), use the imperfect «morava», not the present «moro».",
+      "sentence": ["Antigamente", "eu", "moro", "em", "Cabo", "Verde."],
+      "wrongIndex": 2,
+      "correction": "morava",
+      "options": ["morava", "morou", "morar"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-19",
+      "type": "find_error",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In European Portuguese, possessives require a definite article: «da minha terra» (de + a minha terra), never «de minha terra».",
+      "sentence": ["Tenho", "saudades", "de", "minha", "terra."],
+      "wrongIndex": 2,
+      "correction": "da",
+      "options": ["da", "na", "do"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-20",
+      "type": "about_me",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «Moro em Portugal há...» followed by time units (e.g., «dois anos», «seis meses»).",
+      "question": "Há quanto tempo moras em Portugal?",
+      "sampleAnswer": "Moro em Portugal há dois anos.",
+      "hints": ["vivo", "um", "mês", "três", "desde"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-21",
+      "type": "order_dialogue",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "A conversation about changing life and moving to Portugal. Put the lines in order.",
+      "explanation": "«Há quanto tempo» asks about duration, and «no início» contrasts the difficult beginning with enjoying current life.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Olá! Há quanto tempo é que estás em Portugal?"
+        },
+        {
+          "speaker": "B",
+          "text": "Estou cá há três anos. Mudei de vida em 2023."
+        },
+        {
+          "speaker": "A",
+          "text": "E de onde é que vieste?"
+        },
+        {
+          "speaker": "B",
+          "text": "Vim da Índia. No início foi difícil, mas agora gosto muito."
+        }
+      ]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-22",
+      "type": "translate_word",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Juventude» means youth, whereas «infância» refers to childhood.",
+      "direction": "toTarget",
+      "sentence": "In my **youth**, I studied in Brazil.",
+      "word": "youth",
+      "answer": "juventude",
+      "options": ["juventude", "infância", "velhice", "família"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the sentence comparing past and present habits.",
+      "explanation": "«Antigamente» sets the past habit, and «hoje em dia» introduces the current routine.",
+      "template": "___ eu não tinha telemóvel, mas ___ uso o telemóvel todos os dias.",
+      "gaps": [
+        {
+          "answer": "Antigamente"
+        },
+        {
+          "answer": "hoje em dia"
+        }
+      ],
+      "wordBank": ["Antigamente", "hoje em dia", "Amanhã", "Ontem", "nunca"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-24",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the sentence about missing home and arriving in Portugal.",
+      "explanation": "«Ter saudades de» contracts with «a minha casa» to form «da minha casa». «Chegar a» requires «a» before «Portugal».",
+      "template": "Tenho saudades ___ minha casa, mas fiquei feliz quando ___ a Portugal.",
+      "gaps": [
+        {
+          "answer": "da"
+        },
+        {
+          "answer": "cheguei"
+        }
+      ],
+      "wordBank": ["da", "cheguei", "de", "chego", "para", "chegava"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-25",
+      "type": "build_phrase",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Five years ago I did not work here.",
+      "explanation": "Express time elapsed with «há + period» («há cinco anos») and put «não» before the past verb («não trabalhava»).",
+      "answer": ["Há", "cinco", "anos", "não", "trabalhava", "aqui."],
+      "distractors": ["tinha", "trabalho", "este", "nunca"],
+      "acceptedAnswers": ["Há cinco anos eu não trabalhava aqui."]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-26",
+      "type": "build_phrase",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: In my country I drank tea, but in Portugal I drink coffee.",
+      "explanation": "Contrast a past habit («bebia») in your country with a present habit («bebo») in Portugal.",
+      "answer": ["No", "meu", "país", "bebia", "chá,", "mas", "em", "Portugal", "bebo", "café."],
+      "distractors": ["bebida", "bebe", "para", "quando"],
+      "acceptedAnswers": [
+        "No meu país eu bebia chá, mas em Portugal bebo café.",
+        "No meu país eu bebia chá, mas em Portugal eu bebo café."
+      ]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-27",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Na minha infância morava no Porto.» Ask him (informal) where he lived in his childhood.",
+      "explanation": "Ask about past residence with «Onde» + «moravas» + «na tua infância».",
+      "givenAnswer": "Na minha infância morava no Porto.",
+      "answer": ["Onde", "moravas", "na", "tua", "infância?"],
+      "distractors": ["moras", "vives", "qual", "como"],
+      "acceptedAnswers": ["Onde é que moravas na tua infância?"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-28",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «No meu país eu era professor.» Ask him (informal) what his job was in his country.",
+      "explanation": "Ask about a former job using «Qual era a tua profissão» + «no teu país».",
+      "givenAnswer": "No meu país eu era professor.",
+      "answer": ["Qual", "era", "a", "tua", "profissão", "no", "teu", "país?"],
+      "distractors": ["é", "sua", "como", "quem"],
+      "acceptedAnswers": ["Qual é que era a tua profissão no teu país?"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-29",
+      "type": "find_error",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In European Portuguese, movement destination with «chegar» uses «a» («cheguei a Portugal»), not «em».",
+      "sentence": ["Cheguei", "em", "Portugal", "há", "três", "anos."],
+      "wrongIndex": 1,
+      "correction": "a",
+      "options": ["a", "para", "de"]
+    },
+    {
+      "id": "pla-m7-life-stages-migration-30",
+      "type": "about_me",
+      "topicId": "pla-m7-life-stages-migration",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself: How long have you been living in Portugal and where did you live before?",
+      "explanation": "Use «Moro em Portugal há...» for how long you have been here, and «antes vivia em/na/no...» for your previous country.",
+      "question": "Há quanto tempo moras em Portugal e onde vivias antes?",
+      "sampleAnswer": "Moro em Portugal há um ano e antes vivia na Índia.",
+      "hints": ["dois", "anos", "seis", "meses", "Ucrânia", "China", "país", "cidade"]
+    }
+  ]
+}

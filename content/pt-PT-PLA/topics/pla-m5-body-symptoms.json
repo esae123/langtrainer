@@ -1,0 +1,550 @@
+{
+  "id": "pla-m5-body-symptoms",
+  "moduleId": "m5",
+  "title": "Body, pain and symptoms",
+  "kind": "vocabulary",
+  "context": "In health situations, you often need very practical phrases. In this topic, you learn body parts and simple ways to talk about pain and symptoms in Portugal.\n\n- «Dói-me a cabeça.» — My head hurts.\n- «Doem-me os pés.» — My feet hurt.\n- «Dói-lhe o joelho.» — His/Her knee hurts. / Your knee hurts. (formal)\n- «Sinto-me mal.» — I feel unwell.\n- «Não me sinto bem.» — I don’t feel well.\n- «Estou com febre e com tosse.» — I have a fever and a cough.\n- «Tenho alergia.» — I have an allergy.\n- «O que é que sente?» — What do you feel? (formal)\n\nWatch out:\n\n- With one body part, use «dói»: «Dói-me a cabeça.» With a plural body part, use «doem»: «Doem-me os pés.» / «Doem-lhe as costas.»\n- In affirmative main clauses, the small pronoun usually comes after the verb: «dói-me», «doem-lhe», «sinto-me». After negation, it comes before: «não me sinto bem».\n- Body parts normally use the article: «a cabeça», «os pés», «as costas».",
+  "keyItems": [
+    {
+      "target": "a cabeça",
+      "support": "head"
+    },
+    {
+      "target": "os olhos",
+      "support": "eyes",
+      "note": "plural"
+    },
+    {
+      "target": "o nariz",
+      "support": "nose"
+    },
+    {
+      "target": "a boca",
+      "support": "mouth"
+    },
+    {
+      "target": "os dentes",
+      "support": "teeth",
+      "note": "plural"
+    },
+    {
+      "target": "a garganta",
+      "support": "throat"
+    },
+    {
+      "target": "o pescoço",
+      "support": "neck"
+    },
+    {
+      "target": "as costas",
+      "support": "back",
+      "note": "plural form in Portuguese"
+    },
+    {
+      "target": "o braço",
+      "support": "arm"
+    },
+    {
+      "target": "o cotovelo",
+      "support": "elbow"
+    },
+    {
+      "target": "a mão",
+      "support": "hand",
+      "note": "plural: as mãos"
+    },
+    {
+      "target": "a barriga",
+      "support": "belly / stomach"
+    },
+    {
+      "target": "a perna",
+      "support": "leg"
+    },
+    {
+      "target": "o joelho",
+      "support": "knee"
+    },
+    {
+      "target": "o pé",
+      "support": "foot",
+      "note": "plural: os pés"
+    },
+    {
+      "target": "Dói-me a cabeça.",
+      "support": "My head hurts."
+    },
+    {
+      "target": "Doem-me os pés.",
+      "support": "My feet hurt."
+    },
+    {
+      "target": "Sinto-me mal.",
+      "support": "I feel unwell."
+    },
+    {
+      "target": "Estou com febre.",
+      "support": "I have a fever."
+    },
+    {
+      "target": "Tenho alergia.",
+      "support": "I have an allergy."
+    },
+    {
+      "target": "O que é que sente?",
+      "support": "What do you feel?",
+      "note": "formal"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m5-body-symptoms-01",
+      "type": "translate_word",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Cabeça» means 'head'. In this topic you will often use it with pain: «Dói-me a cabeça.»",
+      "direction": "toTarget",
+      "sentence": "My **head** hurts today.",
+      "word": "head",
+      "answer": "cabeça",
+      "options": ["cabeça", "garganta", "barriga", "joelho"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-02",
+      "type": "translate_word",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Garganta» is 'throat'. It is a common word when you talk to a doctor or pharmacist.",
+      "direction": "toTarget",
+      "sentence": "The doctor looks at my **throat**.",
+      "word": "throat",
+      "answer": "garganta",
+      "options": ["garganta", "nariz", "pescoço", "mão"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-03",
+      "type": "translate_word",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Portuguese usually uses the plural form «costas» for the body part 'back'.",
+      "direction": "toTarget",
+      "sentence": "After work, my **back** hurts.",
+      "word": "back",
+      "answer": "costas",
+      "options": ["costas", "braço", "boca", "pé"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-04",
+      "type": "match_pairs",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese sentence with its meaning.",
+      "explanation": "These are useful ready-made phrases for describing pain and symptoms. Learn them as whole chunks.",
+      "pairs": [
+        {
+          "target": "Dói-me a cabeça.",
+          "support": "My head hurts."
+        },
+        {
+          "target": "Doem-me os pés.",
+          "support": "My feet hurt."
+        },
+        {
+          "target": "Sinto-me mal.",
+          "support": "I feel unwell."
+        },
+        {
+          "target": "Estou com febre.",
+          "support": "I have a fever."
+        },
+        {
+          "target": "O que é que sente?",
+          "support": "What do you feel? (formal)"
+        }
+      ]
+    },
+    {
+      "id": "pla-m5-body-symptoms-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You are describing how you feel today. Fill the two gaps.",
+      "explanation": "Use «estar com» for symptoms like «febre», and «sentir-se» for your general feeling.",
+      "template": "Hoje ___ com febre e ___ mal.",
+      "gaps": [
+        {
+          "answer": "estou"
+        },
+        {
+          "answer": "sinto-me"
+        }
+      ],
+      "wordBank": ["estou", "sinto-me", "tenho", "sentes-te"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the doctor. Fill the two gaps.",
+      "explanation": "With «o senhor», the verb is in the 3rd person: «está». «A garganta» is singular, so use «dói-me».",
+      "template": "O senhor ___ com tosse? — Sim, e ___-me a garganta.",
+      "gaps": [
+        {
+          "answer": "está"
+        },
+        {
+          "answer": "dói"
+        }
+      ],
+      "wordBank": ["está", "dói", "és", "doem"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "After a long walk, fill the two gaps.",
+      "explanation": "Use «doem» with a plural body part. «Os pés» is plural, so the verb must also be plural.",
+      "template": "Quando caminho muito, ___-me os ___.",
+      "gaps": [
+        {
+          "answer": "doem"
+        },
+        {
+          "answer": "pés"
+        }
+      ],
+      "wordBank": ["doem", "pés", "dói", "mão", "joelho"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Li is ill. Fill the two gaps.",
+      "explanation": "For «gripe» we practise «estar com». For «alergia» we use «ter».",
+      "template": "A Li não se sente bem. Ela ___ com gripe e ___ alergia.",
+      "gaps": [
+        {
+          "answer": "está"
+        },
+        {
+          "answer": "tem"
+        }
+      ],
+      "wordBank": ["está", "tem", "estou", "tenho"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-09",
+      "type": "build_phrase",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: My head hurts.",
+      "explanation": "With one body part, use singular «dói». In an affirmative sentence, the pronoun comes after the verb: «dói-me».",
+      "answer": ["Dói-me", "a", "cabeça."],
+      "distractors": ["doem-me", "o", "joelho"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-10",
+      "type": "build_phrase",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Tell the doctor: My feet hurt.",
+      "explanation": "«Os pés» is plural, so use «doem-me», not «dói-me».",
+      "answer": ["Doem-me", "os", "pés."],
+      "distractors": ["dói-me", "as", "mãos"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-11",
+      "type": "build_phrase",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that Ahmed has a cough.",
+      "explanation": "A common pattern for symptoms is «estar com + noun»: «está com tosse». «Tem tosse» is also correct.",
+      "answer": ["O", "Ahmed", "está", "com", "tosse."],
+      "distractors": ["estás", "gripe", "estão"],
+      "acceptedAnswers": ["Ahmed está com tosse.", "O Ahmed tem tosse.", "Ahmed tem tosse."]
+    },
+    {
+      "id": "pla-m5-body-symptoms-12",
+      "type": "build_phrase",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Say: I don't feel well.",
+      "explanation": "After negation, the pronoun goes before the verb: «não me sinto».",
+      "answer": ["Não", "me", "sinto", "bem."],
+      "distractors": ["sentes", "se", "mal"],
+      "acceptedAnswers": ["Eu não me sinto bem."]
+    },
+    {
+      "id": "pla-m5-body-symptoms-13",
+      "type": "build_phrase",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that Mariana has a headache.",
+      "explanation": "A common fixed phrase is «ter dores de cabeça». Learn it as a whole chunk.",
+      "answer": ["A", "Mariana", "tem", "dores", "de", "cabeça."],
+      "distractors": ["têm", "febre", "doem"],
+      "acceptedAnswers": ["Mariana tem dores de cabeça.", "A Mariana está com dores de cabeça."]
+    },
+    {
+      "id": "pla-m5-body-symptoms-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Dói-me o joelho.» Ask him (informal) what hurts.",
+      "explanation": "To ask informally about the painful body part, use «O que é que te dói?» with «te».",
+      "givenAnswer": "Dói-me o joelho.",
+      "answer": ["O", "que", "é", "que", "te", "dói?"],
+      "distractors": ["lhe", "sentes", "joelho"],
+      "acceptedAnswers": ["O que te dói?"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A patient answers: «Tenho alergia.» Ask her (formal) what she has.",
+      "explanation": "In formal speech, ask with the 3rd-person verb: «tem».",
+      "givenAnswer": "Tenho alergia.",
+      "answer": ["O", "que", "é", "que", "tem?"],
+      "distractors": ["Onde", "sente", "febre"],
+      "acceptedAnswers": ["O que tem?", "O que é que a senhora tem?"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your colleague answers: «Estou com febre.» Ask her (informal) if she has a fever.",
+      "explanation": "For a yes/no question with «tu», use the 2nd-person form: «Estás com febre?»",
+      "givenAnswer": "Estou com febre.",
+      "answer": ["Estás", "com", "febre?"],
+      "distractors": ["Está", "gripe", "tosse"],
+      "acceptedAnswers": ["Tu estás com febre?", "Tens febre?", "Tu tens febre?"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your neighbour answers: «Sinto-me mal.» Ask him (formal) how he feels.",
+      "explanation": "With formal «o senhor / a senhora», use the 3rd-person form: «Como se sente?»",
+      "givenAnswer": "Sinto-me mal.",
+      "answer": ["Como", "se", "sente?"],
+      "distractors": ["está", "te", "sentes"],
+      "acceptedAnswers": ["Como é que se sente?", "Como é que o senhor se sente?"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-18",
+      "type": "find_error",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«As costas» is plural, so you need the plural verb: «doem-me».",
+      "sentence": ["As", "costas", "dói-me", "muito."],
+      "wrongIndex": 2,
+      "correction": "doem-me",
+      "options": ["doem-me", "dói-lhe", "dói-te"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-19",
+      "type": "find_error",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«O braço» is singular, so use «dói-me», not the plural form «doem-me».",
+      "sentence": ["Tenho", "alergia", "e", "doem-me", "o", "braço."],
+      "wrongIndex": 3,
+      "correction": "dói-me",
+      "options": ["dói-me", "doem-lhe", "doem-te"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-20",
+      "type": "about_me",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "You can answer with a symptom using «estar com / ter», or with a feeling using «sentir-se». A short combination is very natural.",
+      "question": "O que é que sentes hoje?",
+      "sampleAnswer": "Estou com tosse e sinto-me mal.",
+      "hints": ["tenho", "febre", "gripe", "dói-me", "a", "cabeça"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-21",
+      "type": "translate_word",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Neck» is «pescoço». In a full sentence, you normally use the article: «o pescoço».",
+      "direction": "toTarget",
+      "sentence": "My **neck** hurts when I work at the computer.",
+      "word": "neck",
+      "answer": "pescoço",
+      "options": ["pescoço", "garganta", "nariz", "joelho"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-22",
+      "type": "match_pairs",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each body part with its meaning.",
+      "explanation": "Body parts usually come with the article in Portuguese: «o braço», «a barriga». Learn the noun together with the article.",
+      "pairs": [
+        {
+          "target": "o braço",
+          "support": "arm"
+        },
+        {
+          "target": "o cotovelo",
+          "support": "elbow"
+        },
+        {
+          "target": "a barriga",
+          "support": "belly / stomach"
+        },
+        {
+          "target": "o joelho",
+          "support": "knee"
+        }
+      ]
+    },
+    {
+      "id": "pla-m5-body-symptoms-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence.",
+      "explanation": "Use «ter» with «alergia» and «estar com» with «gripe». They are two different patterns.",
+      "template": "O Pedro ___ alergia e a irmã ___ com gripe.",
+      "gaps": [
+        {
+          "answer": "tem"
+        },
+        {
+          "answer": "está"
+        }
+      ],
+      "wordBank": ["tem", "está", "é", "dói-lhe"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-24",
+      "type": "build_phrase",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Tell the doctor: my teeth hurt.",
+      "explanation": "With a plural body part, use «doem». The article stays with the noun: «os dentes».",
+      "answer": ["Doem-me", "os", "dentes."],
+      "distractors": ["Dói-me", "o", "joelho"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-25",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "A patient answers: «Dói-me a perna.» Ask him formally where it hurts.",
+      "explanation": "To ask about the place of pain, use «Onde». With formal singular, the pronoun is «lhe»: «Onde lhe dói?».",
+      "givenAnswer": "Dói-me a perna.",
+      "answer": ["Onde", "lhe", "dói?"],
+      "distractors": ["Como", "te", "sente?"],
+      "acceptedAnswers": ["Onde é que lhe dói?"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-26",
+      "type": "build_phrase",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the clinic, the nurse tells the doctor about a male patient: His elbow hurts. (Use «lhe».)",
+      "explanation": "With one body part, use «dói». «Lhe» means «to him / to her»; in an affirmative sentence it comes after the verb: «dói-lhe».",
+      "answer": ["Dói-lhe", "o", "cotovelo."],
+      "distractors": ["Doem-lhe", "a", "mão"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-27",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about a woman: at the end of the day, her eyes hurt.",
+      "explanation": "«Olhos» is plural, so use «doem». In an affirmative sentence, the pronoun comes after the verb: «doem-lhe».",
+      "template": "Ao fim do dia, ___ os ___.",
+      "gaps": [
+        {
+          "answer": "doem-lhe"
+        },
+        {
+          "answer": "olhos"
+        }
+      ],
+      "wordBank": ["doem-lhe", "olhos", "dói-lhe", "pés"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-28",
+      "type": "find_error",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Joelho» is singular, so you need «dói». Use «doem» only with plural body parts such as «os olhos» or «os dentes».",
+      "sentence": ["Hoje", "doem-me", "o", "joelho."],
+      "wrongIndex": 1,
+      "correction": "dói-me",
+      "options": ["dói-me", "doem-lhe", "doem-te"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-29",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend answers: «Sinto-me mal.» Ask her (informal) how she feels.",
+      "explanation": "To ask about someone's state, use «Como te sentes?» with «tu». The verb is «sentir-se».",
+      "givenAnswer": "Sinto-me mal.",
+      "answer": ["Como", "te", "sentes?"],
+      "distractors": ["Onde", "se", "dói?"],
+      "acceptedAnswers": ["Como é que te sentes?"]
+    },
+    {
+      "id": "pla-m5-body-symptoms-30",
+      "type": "about_me",
+      "topicId": "pla-m5-body-symptoms",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «sentir-se» to say how you feel and add a symptom if you want. Any short true answer is fine.",
+      "question": "Como te sentes hoje?",
+      "sampleAnswer": "Sinto-me bem, só tenho alergia.",
+      "hints": ["estou com", "febre", "mal", "tosse", "gripe"]
+    }
+  ]
+}

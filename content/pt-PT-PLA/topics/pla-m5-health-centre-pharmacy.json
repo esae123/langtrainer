@@ -1,0 +1,546 @@
+{
+  "id": "pla-m5-health-centre-pharmacy",
+  "moduleId": "m5",
+  "title": "Health centre, doctor and pharmacy",
+  "kind": "situation",
+  "context": "In Portugal, many everyday health needs start at the **centro de saúde**. There you can speak to reception, book a **consulta**, and use your **número de utente**. For health advice by phone, there is **SNS 24**. At the **farmácia**, some medicines are **sem receita** and others need a **receita médica**. Learn the most useful phrases as whole chunks.\n\n- **Queria marcar uma consulta.** — I would like to make an appointment.\n- **Quero desmarcar a consulta de amanhã.** — I want to cancel tomorrow’s appointment.\n- **O meu número de utente é 12345678.** — My patient number is 12345678.\n- **Preciso de análises ao sangue.** — I need blood tests.\n- **Esta pomada precisa de receita?** — Does this ointment need a prescription?\n- **Tome estes comprimidos de oito em oito horas.** — Take these tablets every eight hours.\n- **Beba muita água e descanse.** — Drink plenty of water and rest.\n- **Não se esqueça de ligar para o SNS 24.** — Don’t forget to call SNS 24.\n\n**Watch out:**\n- With staff, doctors and pharmacists, polite chunks like **Queria...** and **Pode repetir, por favor?** are very useful.\n- Learn forms like **Tome**, **Beba** and **Descanse** as ready-made formal instructions to one person.",
+  "keyItems": [
+    {
+      "target": "o centro de saúde",
+      "support": "health centre"
+    },
+    {
+      "target": "o médico de família",
+      "support": "family doctor"
+    },
+    {
+      "target": "o enfermeiro / a enfermeira",
+      "support": "nurse"
+    },
+    {
+      "target": "o pediatra",
+      "support": "paediatrician"
+    },
+    {
+      "target": "o utente",
+      "support": "patient / user of the SNS"
+    },
+    {
+      "target": "o número de utente",
+      "support": "patient number"
+    },
+    {
+      "target": "o SNS 24",
+      "support": "SNS health advice line"
+    },
+    {
+      "target": "as urgências",
+      "support": "emergency department"
+    },
+    {
+      "target": "marcar uma consulta",
+      "support": "make an appointment"
+    },
+    {
+      "target": "desmarcar uma consulta",
+      "support": "cancel an appointment"
+    },
+    {
+      "target": "a receita médica",
+      "support": "prescription"
+    },
+    {
+      "target": "as análises ao sangue",
+      "support": "blood tests"
+    },
+    {
+      "target": "a baixa médica",
+      "support": "sick note / medical leave note"
+    },
+    {
+      "target": "os comprimidos",
+      "support": "tablets / pills"
+    },
+    {
+      "target": "o xarope",
+      "support": "syrup"
+    },
+    {
+      "target": "as gotas",
+      "support": "drops"
+    },
+    {
+      "target": "a pomada",
+      "support": "ointment"
+    },
+    {
+      "target": "o penso",
+      "support": "bandage / dressing"
+    },
+    {
+      "target": "sem receita",
+      "support": "without prescription"
+    },
+    {
+      "target": "Tome estes comprimidos",
+      "support": "Take these tablets",
+      "note": "formal instruction"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m5-health-centre-pharmacy-01",
+      "type": "translate_word",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In Portugal, «centro de saúde» is the local public health centre. You use it for appointments, nurses and your family doctor.",
+      "direction": "toTarget",
+      "sentence": "I have an appointment at the **health centre** tomorrow.",
+      "word": "health centre",
+      "answer": "centro de saúde",
+      "options": ["centro de saúde", "farmácia", "urgências", "consulta"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-02",
+      "type": "translate_word",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Pediatra» is the doctor for children. «Enfermeiro» is a nurse, not a specialist doctor.",
+      "direction": "toTarget",
+      "sentence": "The child has an appointment with the **paediatrician**.",
+      "word": "paediatrician",
+      "answer": "pediatra",
+      "options": ["pediatra", "enfermeiro", "utente", "médico de família"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-03",
+      "type": "translate_word",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Receita médica» is a prescription from the doctor. At the pharmacy, people often shorten it to just «receita».",
+      "direction": "toTarget",
+      "sentence": "Do you have a **prescription** for this medicine?",
+      "word": "prescription",
+      "answer": "receita médica",
+      "options": ["receita médica", "baixa médica", "análises ao sangue", "número de utente"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-04",
+      "type": "match_pairs",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese health phrase with its meaning.",
+      "explanation": "These are high-frequency health phrases. Learn them as whole chunks because you will hear them at the health centre and the pharmacy.",
+      "pairs": [
+        {
+          "target": "marcar uma consulta",
+          "support": "make an appointment"
+        },
+        {
+          "target": "desmarcar uma consulta",
+          "support": "cancel an appointment"
+        },
+        {
+          "target": "número de utente",
+          "support": "patient/user number in the SNS"
+        },
+        {
+          "target": "sem receita",
+          "support": "without prescription"
+        },
+        {
+          "target": "análises ao sangue",
+          "support": "blood tests"
+        }
+      ]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the health centre, Ahmed wants to make an appointment with his family doctor. Fill the gap.",
+      "explanation": "After «Queria», the usual chunk is «marcar uma consulta». «Médico de família» is your family doctor.",
+      "template": "Queria ___ uma consulta com o médico de família.",
+      "gaps": [
+        {
+          "answer": "marcar"
+        }
+      ],
+      "wordBank": ["marcar", "desmarcar", "comprar", "beber"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "At the pharmacy, the pharmacist asks about the medicine. Fill the two gaps.",
+      "explanation": "At the pharmacy, people often shorten «receita médica» to «receita». «Sem receita» is a fixed phrase for medicines you can buy without a prescription.",
+      "template": "Tem ___ médica ou é ___ receita?",
+      "gaps": [
+        {
+          "answer": "receita"
+        },
+        {
+          "answer": "sem"
+        }
+      ],
+      "wordBank": ["receita", "sem", "baixa", "com", "utente"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The doctor gives two instructions. Fill the gaps.",
+      "explanation": "Doctors often use short formal instructions to one person: «Beba», «Descanse», «Tome». Learn them as useful ready-made phrases.",
+      "template": "___ muita água e ___ em casa.",
+      "gaps": [
+        {
+          "answer": "Beba",
+          "accepted": ["beba"]
+        },
+        {
+          "answer": "descanse"
+        }
+      ],
+      "wordBank": ["Beba", "descanse", "Coma", "ligue"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the nurse's explanation.",
+      "explanation": "«Análises ao sangue» is a fixed expression for blood tests. «Baixa médica» is sick leave certified by the doctor when you cannot work.",
+      "template": "Precisa de ___ ao sangue e de uma ___ médica para faltar ao trabalho.",
+      "gaps": [
+        {
+          "answer": "análises"
+        },
+        {
+          "answer": "baixa"
+        }
+      ],
+      "wordBank": ["análises", "baixa", "receita", "consulta", "pomada"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-09",
+      "type": "build_phrase",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the health centre, say politely (formal) that you want to make an appointment for tomorrow at 10.",
+      "explanation": "«Queria...» is a polite fixed phrase for requests. Use «para amanhã às dez» to give the day and time.",
+      "answer": ["Queria", "marcar", "uma", "consulta", "para", "amanhã", "às", "dez."],
+      "distractors": ["desmarcar", "hoje", "gosto"],
+      "acceptedAnswers": [
+        "Eu queria marcar uma consulta para amanhã às dez.",
+        "Queria marcar uma consulta para amanhã às 10.",
+        "Eu queria marcar uma consulta para amanhã às 10."
+      ]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-10",
+      "type": "build_phrase",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At reception, say your patient number: my patient number is 12345678.",
+      "explanation": "In European Portuguese, possessives normally take the article: «o meu número». At reception, this whole sentence is very useful.",
+      "answer": ["O", "meu", "número", "de", "utente", "é", "12345678."],
+      "distractors": ["sou", "consulta", "tem"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-11",
+      "type": "build_phrase",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the pharmacy, ask politely (formal) if this ointment needs a prescription.",
+      "explanation": "With medicines, «precisar de receita» asks if a prescription is needed. It is more natural than translating word by word from English.",
+      "answer": ["Esta", "pomada", "precisa", "de", "receita?"],
+      "distractors": ["sem", "tem", "gotas"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-12",
+      "type": "build_phrase",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Doctor's instruction to a patient (formal): Take these tablets every eight hours.",
+      "explanation": "The doctor is giving a formal instruction to one patient, so the verb is «Tome». «De oito em oito horas» means every eight hours.",
+      "answer": ["Tome", "estes", "comprimidos", "de", "oito", "em", "oito", "horas."],
+      "distractors": ["Beba", "este", "às"],
+      "acceptedAnswers": ["Tome estes comprimidos de 8 em 8 horas."]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-13",
+      "type": "build_phrase",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Doctor's instruction to a patient (formal): Don't forget to call SNS 24.",
+      "explanation": "After negation, the pronoun comes before the verb: «Não se esqueça». Learn this whole phrase as a polite formal instruction.",
+      "answer": ["Não", "se", "esqueça", "de", "ligar", "para", "o", "SNS", "24."],
+      "distractors": ["lembra", "esquece", "tem"],
+      "acceptedAnswers": ["Não se esqueça de ligar ao SNS 24."]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Às onze.» Ask him (informal) what time his appointment is.",
+      "explanation": "For time, use «A que horas...?». With a friend, the verb is «tens».",
+      "givenAnswer": "Às onze.",
+      "answer": ["A", "que", "horas", "tens", "consulta?"],
+      "distractors": ["Quando", "marcação", "médico"],
+      "acceptedAnswers": [
+        "A que horas é que tens consulta?",
+        "A que horas é a tua consulta?",
+        "A que horas é que é a tua consulta?",
+        "A que horas tens a consulta?",
+        "A que horas é que tens a consulta?"
+      ]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your neighbour answers: «É no centro de saúde da Alameda.» Ask her (informal) where the appointment is.",
+      "explanation": "Use «Onde é que...?» to ask where something is. «Consulta» is feminine, so you say «a consulta».",
+      "givenAnswer": "É no centro de saúde da Alameda.",
+      "answer": ["Onde", "é", "que", "é", "a", "consulta?"],
+      "distractors": ["quando", "moras", "tens"],
+      "acceptedAnswers": [
+        "Onde é a consulta?",
+        "Onde é a tua consulta?",
+        "Onde é que é a tua consulta?",
+        "Onde tens consulta?",
+        "Onde é que tens consulta?"
+      ]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The pharmacist answers: «Não, é sem receita.» Ask him (formal) whether this syrup needs a prescription.",
+      "explanation": "At the pharmacy, «precisar de receita» is the normal way to ask about a prescription. «Sem receita» is the answer if you can buy it directly.",
+      "givenAnswer": "Não, é sem receita.",
+      "answer": ["Este", "xarope", "precisa", "de", "receita?"],
+      "distractors": ["consulta", "baixa", "tem"],
+      "acceptedAnswers": ["É preciso receita para este xarope?", "Este xarope é com receita?"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The receptionist answers: «É o 808 24 24 24.» Ask her (formal) what the SNS 24 number is.",
+      "explanation": "Use «Qual é o número...?» to ask for a phone number. «Do SNS 24» is «de + o» → «do».",
+      "givenAnswer": "É o 808 24 24 24.",
+      "answer": ["Qual", "é", "o", "número", "do", "SNS", "24?"],
+      "distractors": ["onde", "farmácia", "utente"],
+      "acceptedAnswers": ["Qual é o número de telefone do SNS 24?"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-18",
+      "type": "find_error",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Consulta» is feminine, so the article must be «uma». «Um consulta» is a gender mistake.",
+      "sentence": ["Queria", "marcar", "um", "consulta."],
+      "wrongIndex": 2,
+      "correction": "uma",
+      "options": ["uma", "o", "as"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-19",
+      "type": "find_error",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «ir», European Portuguese uses the preposition «a»: «vou ao centro de saúde» (a + o = ao). «Vou no» is not correct here.",
+      "sentence": ["Vou", "no", "centro", "de", "saúde", "amanhã."],
+      "wrongIndex": 1,
+      "correction": "ao",
+      "options": ["ao", "na", "do"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-20",
+      "type": "about_me",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "SNS 24 is for health advice by phone when it is not an emergency. Answer with your own reason or situation.",
+      "question": "Quando é que ligas para o SNS 24?",
+      "sampleAnswer": "Ligo quando tenho febre alta.",
+      "hints": ["dor", "de", "cabeça", "à", "noite", "urgências"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-21",
+      "type": "build_phrase",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At reception, say politely that you want to cancel Friday's appointment.",
+      "explanation": "«Queria...» is a very useful polite chunk with staff. Use «desmarcar» for cancelling an appointment.",
+      "answer": ["Queria", "desmarcar", "a", "consulta", "de", "sexta-feira."],
+      "distractors": ["marcar", "segunda-feira", "hoje"],
+      "acceptedAnswers": ["Eu queria desmarcar a consulta de sexta-feira."]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-22",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: at the health centre, the nurse measures blood pressure and the family doctor does the consultation.",
+      "explanation": "At the health centre, «o enfermeiro» can do checks like blood pressure, and «o médico de família» is the family doctor.",
+      "template": "No centro de saúde, o ___ mede a tensão e o ___ de família faz a consulta.",
+      "gaps": [
+        {
+          "answer": "enfermeiro"
+        },
+        {
+          "answer": "médico"
+        }
+      ],
+      "wordBank": ["enfermeiro", "médico", "utente", "pediatra"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-23",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The receptionist answers: «Para terça-feira.» Ask her (formal) when the appointment is.",
+      "explanation": "To ask about the scheduled day, you can say «Para quando é a consulta?». A shorter common form is «Quando é a consulta?».",
+      "givenAnswer": "Para terça-feira.",
+      "answer": ["Para", "quando", "é", "a", "consulta?"],
+      "distractors": ["onde", "amanhã", "farmácia"],
+      "acceptedAnswers": ["Quando é a consulta?", "Quando é que é a consulta?"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-24",
+      "type": "find_error",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Receita» is feminine, so the adjective must also be feminine: «médica».",
+      "sentence": ["A", "receita", "médico", "está", "pronta."],
+      "wrongIndex": 2,
+      "correction": "médica",
+      "options": ["médica", "médicos", "médicas"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-25",
+      "type": "translate_word",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«O penso» is a bandage or dressing. «A pomada» is ointment that you put on the skin.",
+      "direction": "toTarget",
+      "sentence": "I need a **bandage** for my finger.",
+      "word": "bandage",
+      "answer": "penso",
+      "options": ["penso", "pomada", "gotas", "xarope"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-26",
+      "type": "build_phrase",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the pharmacy, ask politely for cough syrup.",
+      "explanation": "At a pharmacy, «Queria...» is a polite way to ask for something. «Xarope para a tosse» is a useful ready-made chunk.",
+      "answer": ["Queria", "um", "xarope", "para", "a", "tosse,", "por", "favor."],
+      "distractors": ["gotas", "consulta", "sem"],
+      "acceptedAnswers": [
+        "Queria um xarope para a tosse por favor.",
+        "Eu queria um xarope para a tosse, por favor.",
+        "Eu queria um xarope para a tosse por favor."
+      ]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-27",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The pharmacist answers: «É sem receita.» Ask the pharmacist if this syrup is without prescription.",
+      "explanation": "Use the chunk «sem receita» for medicine that you can buy without a prescription.",
+      "givenAnswer": "É sem receita.",
+      "answer": ["Este", "xarope", "é", "sem", "receita?"],
+      "distractors": ["pomada", "consulta", "urgências"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-28",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps in the doctor's instruction.",
+      "explanation": "These are common ready-made instructions: «tomar» with medicine like syrup, and «beber» with water.",
+      "template": "O médico diz: «Tome o ___ depois do jantar e beba muita ___.»",
+      "gaps": [
+        {
+          "answer": "xarope"
+        },
+        {
+          "answer": "água"
+        }
+      ],
+      "wordBank": ["xarope", "água", "pomada", "penso"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-29",
+      "type": "about_me",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "You can answer personally. With phone services, Portuguese uses «ligar para».",
+      "question": "Quando estás doente, ligas para o SNS 24?",
+      "sampleAnswer": "Sim, ligo para o SNS 24.",
+      "hints": ["não", "às vezes", "primeiro", "centro de saúde", "urgências", "normalmente"]
+    },
+    {
+      "id": "pla-m5-health-centre-pharmacy-30",
+      "type": "find_error",
+      "topicId": "pla-m5-health-centre-pharmacy",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Penso» is masculine, so you say «um penso». The article must match the noun.",
+      "sentence": ["Preciso", "de", "uma", "penso", "para", "o", "dedo."],
+      "wrongIndex": 2,
+      "correction": "um",
+      "options": ["um", "o", "este"]
+    }
+  ]
+}

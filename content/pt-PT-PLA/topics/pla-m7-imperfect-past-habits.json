@@ -1,0 +1,518 @@
+{
+  "id": "pla-m7-imperfect-past-habits",
+  "moduleId": "m7",
+  "title": "Past habits and descriptions: Pretérito Imperfeito",
+  "kind": "grammar",
+  "context": "The **Pretérito Imperfeito** is used to describe continuous past states, habits, routines, and background circumstances (\"used to do\", \"was doing\"). In Portugal, it is also frequently used to make polite requests.\n\n### Regular Endings\n- **-ar verbs** (*morar*): *eu morava, tu moravas, ele/ela/você morava, nós morávamos, vocês/eles/elas moravam*\n- **-er / -ir verbs** (*viver, sair*): *eu vivia, tu vivias, ele/ela/você vivia, nós vivíamos, vocês/eles/elas viviam*\n\n### Essential Irregular Verbs\n- **ser**: *era, eras, era, éramos, eram*\n- **ter**: *tinha, tinhas, tinha, tínhamos, tinham*\n- **vir**: *vinha, vinhas, vinha, vínhamos, vinham*\n- **pôr**: *punha, punhas, punha, púnhamos, punham*\n\n### Examples\n- *Quando era jovem, vivia no campo.* (When I was young, I lived in the countryside.)\n- *Antigamente, a Fátima trabalhava numa fábrica.* (Formerly, Fátima worked in a factory.)\n- *Nós tínhamos muitos amigos na escola.* (We had many friends at school.)\n- *Gostava de pedir um comprovativo de morada.* (I would like to request a proof of address — polite imperfect chunk).\n\n### Watch Out\n1. **Tu vs. Você forms**: Make sure to use the correct ending for *tu* (*-avas / -ias*) versus formal/3rd person (*-ava / -ia*).\n2. **Definite Articles**: Always include articles before possessives in European Portuguese (*os meus amigos*, *a sua profissão*).",
+  "keyItems": [
+    {
+      "target": "morava",
+      "support": "used to live / was living (eu/ele/ela)"
+    },
+    {
+      "target": "trabalhava",
+      "support": "used to work / was working"
+    },
+    {
+      "target": "vivia",
+      "support": "used to live / resided"
+    },
+    {
+      "target": "comia",
+      "support": "used to eat"
+    },
+    {
+      "target": "era",
+      "support": "was / used to be (ser)"
+    },
+    {
+      "target": "tinha",
+      "support": "had / used to have (ter)"
+    },
+    {
+      "target": "vinha",
+      "support": "used to come (vir)"
+    },
+    {
+      "target": "punha",
+      "support": "used to put (pôr)"
+    },
+    {
+      "target": "antigamente",
+      "support": "formerly / in the past"
+    },
+    {
+      "target": "naquela altura",
+      "support": "at that time / in those days"
+    },
+    {
+      "target": "queria",
+      "support": "would like / wanted (polite chunk)"
+    },
+    {
+      "target": "gostava de",
+      "support": "would like to (polite chunk)"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m7-imperfect-past-habits-01",
+      "type": "translate_word",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Morava» is the Pretérito Imperfeito of «morar» (to live) for continuous or repeated past actions.",
+      "direction": "toTarget",
+      "sentence": "Formerly, I **lived** in a small village.",
+      "word": "lived",
+      "answer": "morava",
+      "options": ["morava", "moro", "morei", "moravas"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-02",
+      "type": "translate_word",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Ter» (to have) is irregular in the imperfect tense: «ele tinha» (he had / used to have).",
+      "direction": "toTarget",
+      "sentence": "When he was young, he **had** many friends.",
+      "word": "had",
+      "answer": "tinha",
+      "options": ["tinha", "tem", "teve", "terá"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-03",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the text about Fátima's past habits with the correct forms of «trabalhar» and «vir».",
+      "explanation": "Both verbs express continuous past routines in 3rd person singular: «trabalhava» and «vinha».",
+      "template": "Antigamente, a Fátima ___ numa fábrica e ___ para casa de autocarro.",
+      "gaps": [
+        {
+          "answer": "trabalhava"
+        },
+        {
+          "answer": "vinha"
+        }
+      ],
+      "wordBank": ["trabalhava", "vinha", "trabalha", "vem", "trabalhou", "veio"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-04",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the sentence with «nós» forms of «ser» and «viver» in the imperfect tense.",
+      "explanation": "With «nós», the imperfect form of «ser» is «éramos» and «viver» becomes «vivíamos».",
+      "template": "Quando nós ___ crianças, ___ perto da praia.",
+      "gaps": [
+        {
+          "answer": "éramos"
+        },
+        {
+          "answer": "vivíamos"
+        }
+      ],
+      "wordBank": ["éramos", "vivíamos", "fomos", "vivemos", "eram", "viviam"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the sentence with the imperfect tense of «pôr» and «ter».",
+      "explanation": "The imperfect of «pôr» for he/she is «punha», and for «ter» it is «tinha».",
+      "template": "No inverno, o Raj ___ sempre o casaco quente porque ___ muito frio.",
+      "gaps": [
+        {
+          "answer": "punha"
+        },
+        {
+          "answer": "tinha"
+        }
+      ],
+      "wordBank": ["punha", "tinha", "pôs", "teve", "põe", "tem"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the polite request chunks in the Pretérito Imperfeito.",
+      "explanation": "«Queria» and «podia» are standard polite expressions used in Portuguese service interactions.",
+      "template": "Desculpe, eu ___ saber se ___ ajudar-me.",
+      "gaps": [
+        {
+          "answer": "queria"
+        },
+        {
+          "answer": "podia"
+        }
+      ],
+      "wordBank": ["queria", "podia", "quero", "pode", "queres", "podes"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-07",
+      "type": "build_phrase",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Translate to Portuguese: \"When I was young, I lived in the countryside.\"",
+      "explanation": "«Quando era jovem» describes a past time frame; «vivia no campo» expresses the habit.",
+      "answer": ["Quando", "era", "jovem,", "vivia", "no", "campo."],
+      "distractors": ["fui", "vivo", "na"],
+      "acceptedAnswers": [
+        "Quando eu era jovem, vivia no campo.",
+        "Quando eu era jovem, eu vivia no campo.",
+        "Quando era jovem, eu vivia no campo."
+      ]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-08",
+      "type": "build_phrase",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Translate to Portuguese: \"Formerly, Sunita worked in a restaurant.\"",
+      "explanation": "«Antigamente» triggers the imperfect «trabalhava» for a former repeated condition.",
+      "answer": ["Antigamente,", "a", "Sunita", "trabalhava", "num", "restaurante."],
+      "distractors": ["trabalhou", "no", "trabalha"],
+      "acceptedAnswers": [
+        "Antigamente, a Sunita trabalhava num restaurante.",
+        "Antigamente a Sunita trabalhava num restaurante."
+      ]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-09",
+      "type": "build_phrase",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Translate to Portuguese (informal): \"Did you use to come to Lisbon by train?\"",
+      "explanation": "Informal «tu» takes «vinhas» (from «vir»). Means of transport takes «de»: «de comboio».",
+      "answer": ["Tu", "vinhas", "para", "Lisboa", "de", "comboio?"],
+      "distractors": ["veio", "vias", "por"],
+      "acceptedAnswers": ["Vinhas para Lisboa de comboio?", "Tu vinhas para Lisboa de comboio?"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-10",
+      "type": "build_phrase",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Translate to Portuguese: \"In those days, we used to put our bags here.\"",
+      "explanation": "The imperfect of «pôr» with «nós» is «púnhamos» (irregular: punha, punhas, punha, púnhamos, punham). Possessives require an article: «as nossas malas».",
+      "answer": ["Naquela", "altura,", "nós", "púnhamos", "as", "nossas", "malas", "aqui."],
+      "distractors": ["pusemos", "minhas", "pomos"],
+      "acceptedAnswers": [
+        "Naquela altura, púnhamos as nossas malas aqui.",
+        "Naquela altura, nós púnhamos as nossas malas aqui.",
+        "Naquela altura púnhamos as nossas malas aqui."
+      ]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-11",
+      "type": "build_phrase",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Translate to Portuguese (formal, polite): \"I would like to make an appointment at the health centre.\"",
+      "explanation": "«Gostava de» + infinitive is a fixed polite chunk in European Portuguese.",
+      "answer": ["Gostava", "de", "marcar", "uma", "consulta", "no", "Centro", "de", "Saúde."],
+      "distractors": ["Gosto", "em", "marquei"],
+      "acceptedAnswers": [
+        "Eu gostava de marcar uma consulta no Centro de Saúde.",
+        "Gostava de marcar uma consulta no Centro de Saúde."
+      ]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-12",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Quando era criança, vivia em Coimbra.» Ask him (informal) where he lived when he was a child.",
+      "explanation": "Ask about location in the past with «Onde (é que) vivias quando eras criança?».",
+      "givenAnswer": "Quando era criança, vivia em Coimbra.",
+      "answer": ["Onde", "é", "que", "vivias", "quando", "eras", "criança?"],
+      "distractors": ["vives", "foste", "como"],
+      "acceptedAnswers": [
+        "Onde vivias quando eras criança?",
+        "Onde é que vivias quando eras criança?"
+      ]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-13",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Antigamente, eu vinha de autocarro para o trabalho.» Ask her (informal) how she used to come to work.",
+      "explanation": "Use «Como (é que) vinhas...» to ask about past travel habits with «tu».",
+      "givenAnswer": "Antigamente, eu vinha de autocarro para o trabalho.",
+      "answer": ["Como", "é", "que", "vinhas", "para", "o", "trabalho?"],
+      "distractors": ["vens", "onde", "vias"],
+      "acceptedAnswers": ["Como vinhas para o trabalho?", "Como é que vinhas para o trabalho?"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "An elderly neighbour answers: «Eu era professor de história.» Ask him (formal) what his profession was in the past.",
+      "explanation": "Formal questions use 3rd person singular «era» and possessive «a sua profissão».",
+      "givenAnswer": "Eu era professor de história.",
+      "answer": ["Qual", "era", "a", "sua", "profissão?"],
+      "distractors": ["é", "tua", "quem"],
+      "acceptedAnswers": [
+        "Qual era a sua profissão?",
+        "O que é que o senhor fazia?",
+        "O que é que a senhora fazia?"
+      ]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «Sim, dantes eu tinha um cão muito grande.» Ask him (informal) if he used to have a dog in the past.",
+      "explanation": "Yes/no questions keep standard word order in Portuguese: «Tinhas um cão dantes?».",
+      "givenAnswer": "Sim, dantes eu tinha um cão muito grande.",
+      "answer": ["Tinhas", "um", "cão", "dantes?"],
+      "distractors": ["Tens", "tiveste", "uma"],
+      "acceptedAnswers": [
+        "Tu tinhas um cão dantes?",
+        "Tinhas um cão?",
+        "Tu tinhas um cão?",
+        "Dantes tinhas um cão?",
+        "Tinhas um cão antigamente?",
+        "Antigamente tinhas um cão?"
+      ]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fátima answers: «Gostava de pedir um comprovativo de morada.» Ask her politely at a service desk what she would like.",
+      "explanation": "Staff at service desks politely ask «O que (é que) desejava?» — learn this polite imperfect as a fixed chunk. «O que deseja?» is also correct.",
+      "givenAnswer": "Gostava de pedir um comprovativo de morada.",
+      "answer": ["O", "que", "é", "que", "desejava?"],
+      "distractors": ["desejou", "queres", "onde"],
+      "acceptedAnswers": ["O que deseja?", "O que é que desejava?", "O que desejava?"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-17",
+      "type": "find_error",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Find the incorrect verb form in this sentence about past habits.",
+      "explanation": "With «nós», the imperfect form of «ser» is «éramos», not «era».",
+      "sentence": ["Quando", "nós", "era", "jovens,", "morávamos", "em", "Faro."],
+      "wrongIndex": 2,
+      "correction": "éramos",
+      "options": ["éramos", "fomos", "eram"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-18",
+      "type": "find_error",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Find the error in this description of past work.",
+      "explanation": "In European Portuguese, possessives take a definite article: «o seu próprio horário».",
+      "sentence": [
+        "O",
+        "Raj",
+        "trabalhava",
+        "numa",
+        "loja",
+        "e",
+        "tinha",
+        "meu",
+        "próprio",
+        "horário."
+      ],
+      "wrongIndex": 7,
+      "correction": "o seu",
+      "options": ["o seu", "seu", "os seus"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-19",
+      "type": "find_error",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "Find the incorrect verb form in this past habit statement.",
+      "explanation": "With «tu», regular -er verbs end in «-ias» in the imperfect tense: «tu comias».",
+      "sentence": ["Antigamente,", "tu", "comia", "sempre", "o", "pequeno-almoço", "em", "casa."],
+      "wrongIndex": 2,
+      "correction": "comias",
+      "options": ["comias", "comeu", "comias-te"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-20",
+      "type": "about_me",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about your own past habits.",
+      "explanation": "State where you used to live using «morava em / na / no...».",
+      "question": "Onde é que moravas quando eras criança?",
+      "sampleAnswer": "Quando era criança, morava numa cidade pequena.",
+      "hints": ["em", "na", "no", "com", "uma", "aldeia", "família", "país"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-21",
+      "type": "build_phrase",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that in those days Ahmed always drank tea in the afternoon.",
+      "explanation": "Frequency adverbs like «sempre» normally follow the verb: «bebia sempre».",
+      "answer": ["Naquela", "altura,", "o", "Ahmed", "bebia", "sempre", "chá", "à", "tarde."],
+      "distractors": ["bebiam", "bebe", "no"],
+      "acceptedAnswers": ["Naquela altura o Ahmed bebia sempre chá à tarde."]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-22",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Eu saía da empresa às seis horas.» Ask him (informal) what time he used to leave work.",
+      "explanation": "Ask «A que horas é que...» followed by the informal 2nd-person imperfect form «saías».",
+      "givenAnswer": "Eu saía da empresa às seis horas.",
+      "answer": ["A", "que", "horas", "é", "que", "saías", "do", "trabalho?"],
+      "distractors": ["saía", "saíam", "quando"],
+      "acceptedAnswers": ["A que horas saías do trabalho?"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the description of Oksana's past routine in Ukraine.",
+      "explanation": "Use the imperfect forms «ensinava» (-ar verb) and «ia» (verb ir) to describe past continuous actions.",
+      "template": "Na Ucrânia, a Oksana ___ numa escola e ___ de metro.",
+      "gaps": [
+        {
+          "answer": "ensinava"
+        },
+        {
+          "answer": "ia"
+        }
+      ],
+      "wordBank": ["ensinava", "ia", "ensina", "vai", "ensinavam", "iam"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-24",
+      "type": "find_error",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The subject «Nós» requires the 1st person plural imperfect form «tínhamos» (with an accent).",
+      "sentence": ["Nós", "tinham", "um", "apartamento", "em", "Coimbra."],
+      "wrongIndex": 1,
+      "correction": "tínhamos",
+      "options": ["tínhamos", "tinha", "tinhas"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-25",
+      "type": "translate_word",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "The imperfect of «vir» for 3rd person singular («o Li») is «vinha».",
+      "direction": "toTarget",
+      "sentence": "When Li was a child, he **used to come** to Portugal in the summer.",
+      "word": "used to come",
+      "answer": "vinha",
+      "options": ["vinha", "vem", "vinham", "vimos"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-26",
+      "type": "build_phrase",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At the Finanças office, say politely: \"I would like to ask a question, please.\"",
+      "explanation": "«Queria» is a polite imperfect chunk used to make requests in Portugal.",
+      "answer": ["Queria", "fazer", "uma", "pergunta,", "por", "favor."],
+      "distractors": ["quer", "faço", "um"],
+      "acceptedAnswers": ["Gostava de fazer uma pergunta, por favor."]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-27",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend says: «Antigamente, os meus pais moravam no Porto.» Ask her (informal) where her parents used to live.",
+      "explanation": "In European Portuguese, possessives take an article: «os teus pais». Ask using «Onde é que...».",
+      "givenAnswer": "Antigamente, os meus pais moravam no Porto.",
+      "answer": ["Onde", "é", "que", "os", "teus", "pais", "moravam?"],
+      "distractors": ["seus", "morava", "De"],
+      "acceptedAnswers": ["Onde moravam os teus pais?"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-28",
+      "type": "build_phrase",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that Ana and Mariana used to put their keys on the table.",
+      "explanation": "The irregular verb «pôr» becomes «punham» in the 3rd person plural of the imperfect.",
+      "answer": ["A", "Ana", "e", "a", "Mariana", "punham", "as", "chaves", "na", "mesa."],
+      "distractors": ["punha", "põem", "da"],
+      "acceptedAnswers": [
+        "Ana e Mariana punham as chaves na mesa.",
+        "A Ana e a Mariana punham as suas chaves na mesa.",
+        "A Ana e a Mariana punham as chaves em cima da mesa."
+      ]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-29",
+      "type": "about_me",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «Há [time]» for time elapsed and «morava em» for past residence.",
+      "question": "Onde é que moravas há cinco anos?",
+      "sampleAnswer": "Há cinco anos, morava em Lisboa.",
+      "hints": ["vivia", "no", "Porto", "numa", "casa", "pequena"]
+    },
+    {
+      "id": "pla-m7-imperfect-past-habits-30",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-imperfect-past-habits",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend says: «Sim, quando era criança tinha um gato preto.» Ask him (informal) if he used to have a pet when he was a child.",
+      "explanation": "Use the informal 2nd-person forms «tinhas» and «eras».",
+      "givenAnswer": "Sim, quando era criança tinha um gato preto.",
+      "answer": ["Tinhas", "um", "animal", "de", "estimação", "quando", "eras", "criança?"],
+      "distractors": ["Tinha", "têm", "era"],
+      "acceptedAnswers": [
+        "Tu tinhas um animal de estimação quando eras criança?",
+        "Quando eras criança, tinhas um animal de estimação?"
+      ]
+    }
+  ]
+}

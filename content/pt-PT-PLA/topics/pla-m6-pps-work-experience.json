@@ -1,0 +1,576 @@
+{
+  "id": "pla-m6-pps-work-experience",
+  "moduleId": "m6",
+  "title": "Talking about past work: Pretérito Perfeito",
+  "kind": "grammar",
+  "context": "Use the **Pretérito Perfeito Simples** for actions that are finished in the past, especially with clear time markers such as **ontem**, **no ano passado**, **há dois anos** and **durante três anos**. In real life in Portugal, you use it a lot to talk about past jobs, courses and important steps in your work history.\n\n- **Ontem trabalhei até às seis.** — Yesterday I worked until six.\n- **No ano passado, a Fátima trabalhou num hotel.** — Last year Fátima worked in a hotel.\n- **Há dois anos, vim para Portugal.** — I came to Portugal two years ago.\n- **Trabalhámos numa fábrica durante três anos.** — We worked in a factory for three years.\n- **Comecei um curso e aprendi muito.** — I started a course and learned a lot.\n- **Ele fez um estágio e depois foi para outra empresa.** — He did an internship and then went to another company.\n\n**Watch out:** some verbs are irregular: **fiz, disse, vim, tive, fui**. Also, some **eu** forms change spelling to keep the sound: **fiquei, cheguei, comecei, paguei**.\n\nIn European Portuguese, the subject pronoun is often dropped: **Trabalhei num café** is more natural than **Eu trabalhei num café**, but both are correct.",
+  "keyItems": [
+    {
+      "target": "trabalhei",
+      "support": "I worked",
+      "note": "regular -ar, eu"
+    },
+    {
+      "target": "trabalhou",
+      "support": "he/she worked; you worked (formal)",
+      "note": "regular -ar, 3rd person"
+    },
+    {
+      "target": "trabalhámos",
+      "support": "we worked",
+      "note": "regular -ar, nós"
+    },
+    {
+      "target": "aprendi",
+      "support": "I learned",
+      "note": "regular -er, eu"
+    },
+    {
+      "target": "decidi",
+      "support": "I decided",
+      "note": "regular -ir, eu"
+    },
+    {
+      "target": "fiquei",
+      "support": "I stayed",
+      "note": "spelling change: ficar → fiquei"
+    },
+    {
+      "target": "cheguei",
+      "support": "I arrived",
+      "note": "spelling change: chegar → cheguei"
+    },
+    {
+      "target": "comecei",
+      "support": "I started",
+      "note": "spelling change: começar → comecei"
+    },
+    {
+      "target": "paguei",
+      "support": "I paid",
+      "note": "spelling change: pagar → paguei"
+    },
+    {
+      "target": "fiz",
+      "support": "I did / I made",
+      "note": "irregular: fazer"
+    },
+    {
+      "target": "disse",
+      "support": "I said / he said / she said",
+      "note": "irregular: dizer"
+    },
+    {
+      "target": "vim",
+      "support": "I came",
+      "note": "irregular: vir"
+    },
+    {
+      "target": "veio",
+      "support": "he came / she came / you came (formal)",
+      "note": "irregular: vir"
+    },
+    {
+      "target": "tive",
+      "support": "I had",
+      "note": "irregular: ter"
+    },
+    {
+      "target": "fui",
+      "support": "I went / I was",
+      "note": "past of ir / ser"
+    },
+    {
+      "target": "ontem",
+      "support": "yesterday"
+    },
+    {
+      "target": "no ano passado",
+      "support": "last year"
+    },
+    {
+      "target": "há dois anos",
+      "support": "two years ago"
+    },
+    {
+      "target": "durante três anos",
+      "support": "for three years"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m6-pps-work-experience-01",
+      "type": "build_phrase",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Last year I worked in a café.",
+      "explanation": "Use the pretérito perfeito for a finished past action. With «eu», regular -ar verbs end in «-ei»: «trabalhei».",
+      "answer": ["Trabalhei", "num", "café", "no", "ano", "passado."],
+      "distractors": ["trabalho", "na", "trabalharam"],
+      "acceptedAnswers": [
+        "Eu trabalhei num café no ano passado.",
+        "No ano passado, trabalhei num café.",
+        "No ano passado trabalhei num café.",
+        "No ano passado, eu trabalhei num café."
+      ]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-02",
+      "type": "build_phrase",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: We worked in a factory for three years.",
+      "explanation": "With «nós», regular -ar verbs in the pretérito perfeito end in «-ámos»: «trabalhámos».",
+      "answer": ["Trabalhámos", "numa", "fábrica", "durante", "três", "anos."],
+      "distractors": ["trabalharam", "ao", "veio"],
+      "acceptedAnswers": ["Nós trabalhámos numa fábrica durante três anos."]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-03",
+      "type": "build_phrase",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Yesterday I arrived early and I started at eight.",
+      "explanation": "These are two finished actions yesterday, so use the pretérito perfeito. In the «eu» form, «chegar» and «começar» change spelling: «cheguei», «comecei».",
+      "answer": ["Ontem,", "cheguei", "cedo", "e", "comecei", "às", "oito."],
+      "distractors": ["chego", "paguei", "foram"],
+      "acceptedAnswers": [
+        "Eu cheguei cedo ontem e comecei às oito.",
+        "Ontem cheguei cedo e comecei às oito.",
+        "Ontem, eu cheguei cedo e comecei às oito.",
+        "Cheguei cedo ontem e comecei às oito."
+      ]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-04",
+      "type": "build_phrase",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Yesterday I stayed at home because I had a fever.",
+      "explanation": "Use the pretérito perfeito for finished past facts. «Ficar» becomes «fiquei» and «ter» is irregular: «tive».",
+      "answer": ["Ontem,", "fiquei", "em", "casa", "porque", "tive", "febre."],
+      "distractors": ["fico", "teve", "na"],
+      "acceptedAnswers": [
+        "Eu fiquei em casa ontem porque tive febre.",
+        "Ontem fiquei em casa porque tive febre.",
+        "Ontem, eu fiquei em casa porque tive febre.",
+        "Fiquei em casa ontem porque tive febre."
+      ]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-05",
+      "type": "build_phrase",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say to an employer: I worked as a kitchen assistant for two years.",
+      "explanation": "Use «trabalhei» for «I worked». The job comes after «como», and duration is expressed with «durante».",
+      "answer": ["Trabalhei", "como", "ajudante", "de", "cozinha", "durante", "dois", "anos."],
+      "distractors": ["trabalhou", "para", "aprendi"],
+      "acceptedAnswers": ["Eu trabalhei como ajudante de cozinha durante dois anos."]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-06",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Trabalhei numa pastelaria durante um ano.» Ask him (informal) where he worked before.",
+      "explanation": "To ask about place, use «Onde». With «tu», the past form is «trabalhaste».",
+      "givenAnswer": "Trabalhei numa pastelaria durante um ano.",
+      "answer": ["Onde", "trabalhaste", "antes?"],
+      "distractors": ["Quando", "foste?", "trabalho?"],
+      "acceptedAnswers": ["Onde é que trabalhaste antes?"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-07",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your neighbour answers: «Comecei a trabalhar em 2022.» Ask her (informal) when she started working.",
+      "explanation": "Ask about time with «Quando». With «tu», the pretérito perfeito of «começar» is «começaste».",
+      "givenAnswer": "Comecei a trabalhar em 2022.",
+      "answer": ["Quando", "começaste", "a", "trabalhar?"],
+      "distractors": ["Onde", "trabalhaste?", "vieram"],
+      "acceptedAnswers": ["Quando é que começaste a trabalhar?"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-08",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At a job interview, the candidate answers: «Trabalhei na construção civil.» Ask him (formal) what area he worked in.",
+      "explanation": "For formal singular, use the 3rd-person form: «trabalhou». «Em que área» asks about the field of work.",
+      "givenAnswer": "Trabalhei na construção civil.",
+      "answer": ["Em", "que", "área", "trabalhou?"],
+      "distractors": ["Como", "veio?", "fizeram"],
+      "acceptedAnswers": ["Em que área é que trabalhou?"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-09",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At a job interview, the candidate answers: «Vim para Portugal há dois anos.» Ask her (formal) when she came to Portugal.",
+      "explanation": "With formal singular, use the 3rd-person past form «veio». «Quando» asks for the time of the action.",
+      "givenAnswer": "Vim para Portugal há dois anos.",
+      "answer": ["Quando", "veio", "para", "Portugal?"],
+      "distractors": ["Onde", "viveu?", "vim"],
+      "acceptedAnswers": ["Quando é que veio para Portugal?"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-10",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Foi no ano passado.» Ask him (informal) when he finished the course.",
+      "explanation": "Use «Quando» to ask about time. With «tu», the past form is «acabaste».",
+      "givenAnswer": "Foi no ano passado.",
+      "answer": ["Quando", "acabaste", "o", "curso?"],
+      "distractors": ["Onde", "estudaste?", "foram"],
+      "acceptedAnswers": [
+        "Quando é que acabaste o curso?",
+        "Quando terminaste o curso?",
+        "Quando é que terminaste o curso?"
+      ]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-11",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps with the correct past forms.",
+      "explanation": "With «ontem», use the pretérito perfeito. For «eu», «acordar» becomes «acordei» and «ir» is irregular: «fui».",
+      "template": "Ontem, eu ___ cedo e ___ ao trabalho às sete.",
+      "gaps": [
+        {
+          "answer": "acordei"
+        },
+        {
+          "answer": "fui"
+        }
+      ],
+      "wordBank": ["acordei", "fui", "acordo", "vou", "foi"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-12",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: Last year I started working in a restaurant and learned a lot.",
+      "explanation": "These actions happened «no ano passado», so use the pretérito perfeito. «Começar» changes spelling in the «eu» form: «comecei».",
+      "template": "No ano passado, eu ___ a trabalhar num restaurante e ___ muito.",
+      "gaps": [
+        {
+          "answer": "comecei"
+        },
+        {
+          "answer": "aprendi"
+        }
+      ],
+      "wordBank": ["comecei", "aprendi", "começo", "aprendo", "começou", "aprendeu"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-13",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the three gaps with the correct past forms.",
+      "explanation": "Use the pretérito perfeito for finished past facts. «Disse» and «foi» are irregular, while «trabalhou» is the regular 3rd-person form.",
+      "template": "A Mariana ___ que ___ numa loja, mas depois ___ para um hotel.",
+      "gaps": [
+        {
+          "answer": "disse"
+        },
+        {
+          "answer": "trabalhou"
+        },
+        {
+          "answer": "foi"
+        }
+      ],
+      "wordBank": ["disse", "trabalhou", "foi", "disseram", "trabalha", "vai"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-14",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the three gaps with the correct past forms.",
+      "explanation": "With «eu», use «fiquei» and «decidi». The verb «fazer» is irregular in the pretérito perfeito: «fiz».",
+      "template": "Há dois anos, eu ___ no Porto, ___ mudar de área e ___ um curso.",
+      "gaps": [
+        {
+          "answer": "fiquei"
+        },
+        {
+          "answer": "decidi"
+        },
+        {
+          "answer": "fiz"
+        }
+      ],
+      "wordBank": ["fiquei", "decidi", "fiz", "fico", "decido", "faço", "veio"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-15",
+      "type": "find_error",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «eu», regular -ar verbs in the pretérito perfeito end in «-ei»: «trabalhei».",
+      "sentence": ["Ontem,", "eu", "trabalhou", "até", "às", "seis."],
+      "wrongIndex": 2,
+      "correction": "trabalhei",
+      "options": ["trabalhei", "trabalhaste", "trabalharam"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-16",
+      "type": "find_error",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The verb «fazer» is irregular in the pretérito perfeito. With «ela», the correct form is «fez».",
+      "sentence": ["No", "ano", "passado,", "ela", "faziu", "um", "curso."],
+      "wrongIndex": 4,
+      "correction": "fez",
+      "options": ["fez", "fiz", "fizeram"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-17",
+      "type": "find_error",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «eu», the pretérito perfeito of «chegar» is «cheguei». «Chegou» is the 3rd-person form.",
+      "sentence": ["Há", "dois", "anos,", "eu", "chegou", "a", "Portugal."],
+      "wrongIndex": 4,
+      "correction": "cheguei",
+      "options": ["cheguei", "chegaste", "chegaram"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-18",
+      "type": "translate_word",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The subject is «Ahmed», so you need the 3rd-person singular past form: «trabalhou».",
+      "direction": "toTarget",
+      "sentence": "Last year Ahmed **worked** in a supermarket.",
+      "word": "worked",
+      "answer": "trabalhou",
+      "options": ["trabalhou", "trabalhei", "trabalharam", "trabalhaste"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-19",
+      "type": "translate_word",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The verb is «vir». For «I», the pretérito perfeito form is «vim».",
+      "direction": "toTarget",
+      "sentence": "I **came** to Portugal in 2021.",
+      "word": "came",
+      "answer": "vim",
+      "options": ["vim", "veio", "fui", "vi"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-20",
+      "type": "about_me",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "To talk about a finished past job, use the pretérito perfeito. You can add the place, the role and a time expression.",
+      "question": "Onde trabalhaste antes?",
+      "sampleAnswer": "Trabalhei numa loja durante um ano.",
+      "hints": ["como", "ajudante", "de", "cozinha", "hotel", "dois", "meses"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-21",
+      "type": "build_phrase",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that last year Sunita did an internship at a company.",
+      "explanation": "«Fazer» is irregular in the Pretérito Perfeito: «fez». With «em + uma», European Portuguese normally contracts to «numa».",
+      "answer": [
+        "No",
+        "ano",
+        "passado,",
+        "a",
+        "Sunita",
+        "fez",
+        "um",
+        "estágio",
+        "numa",
+        "empresa."
+      ],
+      "distractors": ["foi", "viu", "durante"],
+      "acceptedAnswers": ["A Sunita fez um estágio numa empresa no ano passado."]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-22",
+      "type": "build_phrase",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Yesterday I paid the fee and started the course.",
+      "explanation": "Some «eu» forms change spelling to keep the sound: «pagar → paguei» and «começar → comecei». In Portuguese, the subject pronoun is often dropped.",
+      "answer": ["Ontem,", "paguei", "a", "taxa", "e", "comecei", "o", "curso."],
+      "distractors": ["pagou", "aprendi", "na"],
+      "acceptedAnswers": [
+        "Ontem, eu paguei a taxa e comecei o curso.",
+        "Paguei a taxa e comecei o curso ontem.",
+        "Eu paguei a taxa e comecei o curso ontem."
+      ]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-23",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "In a job interview, the candidate answers: «Durante quatro anos.» Ask him formally how long he worked in the company.",
+      "explanation": "To ask about duration, Portuguese uses «Quanto tempo» or «Durante quanto tempo». In the formal form, use the 3rd person: «trabalhou».",
+      "givenAnswer": "Durante quatro anos.",
+      "answer": ["Quanto", "tempo", "trabalhou", "na", "empresa?"],
+      "distractors": ["Onde", "Quando", "veio"],
+      "acceptedAnswers": [
+        "Quanto tempo é que trabalhou na empresa?",
+        "Durante quanto tempo trabalhou na empresa?",
+        "Durante quanto tempo é que trabalhou na empresa?"
+      ]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-24",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague answers: «Fui para outra empresa.» Ask him (informal) where he went after the internship.",
+      "explanation": "For movement to a destination, ask with «Para onde». With «tu», the Pretérito Perfeito of «ir» is «foste».",
+      "givenAnswer": "Fui para outra empresa.",
+      "answer": ["Para", "onde", "foste", "depois", "do", "estágio?"],
+      "distractors": ["Quando", "veio", "trabalhaste"],
+      "acceptedAnswers": [
+        "Para onde é que foste depois do estágio?",
+        "Depois do estágio, para onde foste?",
+        "Depois do estágio, para onde é que foste?"
+      ]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-25",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the three gaps about João's work history.",
+      "explanation": "Use the Pretérito Perfeito for three finished past actions. «Fez» and «foi» are irregular; «aprendeu» is a regular past form.",
+      "template": "No ano passado, o João ___ um curso, ___ muito e depois ___ para uma empresa de construção.",
+      "gaps": [
+        {
+          "answer": "fez"
+        },
+        {
+          "answer": "aprendeu"
+        },
+        {
+          "answer": "foi"
+        }
+      ],
+      "wordBank": ["fez", "aprendeu", "foi", "fiz", "aprendi", "vai"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-26",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence: Five years ago, Oksana came from Kyiv, stayed in Faro and worked in a pastry shop.",
+      "explanation": "With «ela», use 3rd-person past forms: «veio», «ficou» and «trabalhou». The time marker «há cinco anos» clearly places everything in the finished past.",
+      "template": "Há cinco anos, ela ___ de Kiev, ___ em Faro e ___ numa pastelaria.",
+      "gaps": [
+        {
+          "answer": "veio"
+        },
+        {
+          "answer": "ficou"
+        },
+        {
+          "answer": "trabalhou"
+        }
+      ],
+      "wordBank": ["veio", "ficou", "trabalhou", "vim", "fiquei", "trabalharam"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-27",
+      "type": "find_error",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The time marker «ontem» asks for a finished past action. With «eu», «chegar» becomes «cheguei» (spelling change), not the present «chego».",
+      "sentence": ["Ontem,", "eu", "chego", "tarde", "ao", "trabalho."],
+      "wrongIndex": 2,
+      "correction": "cheguei",
+      "options": ["cheguei", "chegou", "chegaste"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-28",
+      "type": "find_error",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «ontem», you need a finished past form. With «o Raj», the correct Pretérito Perfeito of «vir» is «veio».",
+      "sentence": ["Ontem,", "o", "Raj", "vir", "à", "entrevista."],
+      "wrongIndex": 3,
+      "correction": "veio",
+      "options": ["veio", "vim", "vieram"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-29",
+      "type": "translate_word",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "The Pretérito Perfeito of «dizer» is irregular. «Disse» can mean «I said» or «he/she said» depending on the subject.",
+      "direction": "toTarget",
+      "sentence": "Last year Li **said** that the course was useful.",
+      "word": "said",
+      "answer": "disse",
+      "options": ["disse", "diz", "digo", "disseram"]
+    },
+    {
+      "id": "pla-m6-pps-work-experience-30",
+      "type": "about_me",
+      "topicId": "pla-m6-pps-work-experience",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use one or two finished past actions in the Pretérito Perfeito. A short answer is fine if it is true for you.",
+      "question": "O que é que fizeste no teu último trabalho?",
+      "sampleAnswer": "Atendi clientes e organizei produtos.",
+      "hints": ["cozinha", "caixas", "limpeza", "computador", "vendas", "receção"]
+    }
+  ]
+}

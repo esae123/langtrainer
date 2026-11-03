@@ -1,0 +1,562 @@
+{
+  "id": "pla-m6-job-search-cv",
+  "moduleId": "m6",
+  "title": "Looking for a job, CV and interview",
+  "kind": "vocabulary",
+  "context": "Looking for a job in Portugal often starts with an **anúncio de trabalho** or **oferta de emprego**. You usually send a **candidatura** with your **currículo (CV)** and sometimes a **carta de apresentação**. In an interview, short formal questions are very common, so it helps to learn them as ready-made phrases.\n\n- «Procuro emprego na área da logística.» — “I’m looking for work in logistics.”\n- «Queria candidatar-me a esta oferta de emprego.» — “I would like to apply for this job offer.”\n- «Aqui está o meu currículo.» — “Here is my CV.”\n- «Tenho experiência profissional na restauração.» — “I have work experience in hospitality / restaurant work.”\n- «Tenho carta de condução.» — “I have a driving licence.”\n- «Que experiência tem?» — “What experience do you have?”\n- «Fala inglês?» — “Do you speak English?”\n- «Tem disponibilidade para trabalhar ao fim de semana?» — “Are you available to work at weekends?”\n\n**Watch out:**\n- In formal interview questions, use 3rd-person forms: «tem», «fala», not «tens», «falas».\n- Many useful nouns come from verbs: «candidatar-se → candidatura», «inscrever-se → inscrição», «marcar → marcação», «informar → informação». Many end in **-ção**. Learn the verb and noun together.",
+  "keyItems": [
+    {
+      "target": "procurar emprego",
+      "support": "to look for a job"
+    },
+    {
+      "target": "anúncio de trabalho",
+      "support": "job ad"
+    },
+    {
+      "target": "oferta de emprego",
+      "support": "job offer"
+    },
+    {
+      "target": "candidatar-se a",
+      "support": "to apply for",
+      "note": "fixed preposition + reflexive verb"
+    },
+    {
+      "target": "candidatura",
+      "support": "application"
+    },
+    {
+      "target": "currículo",
+      "support": "CV / résumé",
+      "note": "often also called «CV»"
+    },
+    {
+      "target": "carta de apresentação",
+      "support": "cover letter"
+    },
+    {
+      "target": "entrevista de trabalho",
+      "support": "job interview"
+    },
+    {
+      "target": "habilitações académicas",
+      "support": "educational qualifications"
+    },
+    {
+      "target": "experiência profissional",
+      "support": "work experience"
+    },
+    {
+      "target": "carta de condução",
+      "support": "driving licence"
+    },
+    {
+      "target": "disponibilidade",
+      "support": "availability"
+    },
+    {
+      "target": "marcação",
+      "support": "appointment / booking"
+    },
+    {
+      "target": "informação",
+      "support": "information"
+    },
+    {
+      "target": "construção civil",
+      "support": "construction sector"
+    },
+    {
+      "target": "restauração e hotelaria",
+      "support": "hospitality and restaurant sector"
+    },
+    {
+      "target": "logística",
+      "support": "logistics"
+    },
+    {
+      "target": "limpezas",
+      "support": "cleaning sector"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m6-job-search-cv-01",
+      "type": "translate_word",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Anúncio de trabalho» is a job ad. «Candidatura» is your application, and «entrevista de trabalho» is the interview.",
+      "direction": "toTarget",
+      "sentence": "I saw a **job ad** online this morning.",
+      "word": "job ad",
+      "answer": "anúncio de trabalho",
+      "options": [
+        "anúncio de trabalho",
+        "candidatura",
+        "entrevista de trabalho",
+        "carta de apresentação"
+      ]
+    },
+    {
+      "id": "pla-m6-job-search-cv-02",
+      "type": "translate_word",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In Portugal, «currículo» is the full word for CV or résumé. In everyday use, people also say «CV».",
+      "direction": "toTarget",
+      "sentence": "Please send your **résumé** and your contact details.",
+      "word": "résumé",
+      "answer": "currículo",
+      "options": ["currículo", "candidatura", "contrato", "passaporte"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-03",
+      "type": "translate_word",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Disponibilidade» means availability. In job ads, it often appears with time expressions such as «ao fim de semana».",
+      "direction": "toTarget",
+      "sentence": "The job requires weekend **availability**.",
+      "word": "availability",
+      "answer": "disponibilidade",
+      "options": ["disponibilidade", "experiência", "inscrição", "marcação"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-04",
+      "type": "match_pairs",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each work sector with its meaning.",
+      "explanation": "These sector names often appear in job ads and in CVs. Learn them as whole chunks.",
+      "pairs": [
+        {
+          "target": "construção civil",
+          "support": "construction sector"
+        },
+        {
+          "target": "restauração e hotelaria",
+          "support": "hospitality and restaurant sector"
+        },
+        {
+          "target": "logística",
+          "support": "logistics"
+        },
+        {
+          "target": "saúde",
+          "support": "healthcare"
+        },
+        {
+          "target": "limpezas",
+          "support": "cleaning sector"
+        }
+      ]
+    },
+    {
+      "id": "pla-m6-job-search-cv-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Raj is talking about his plans. Fill the two gaps.",
+      "explanation": "After «querer», use the infinitive: «quero procurar». The common chunk for a job offer is «oferta de emprego».",
+      "template": "Quero ___ emprego. Há uma ___ de emprego no jornal.",
+      "gaps": [
+        {
+          "answer": "procurar"
+        },
+        {
+          "answer": "oferta"
+        }
+      ],
+      "wordBank": ["procurar", "oferta", "currículo", "entrevista"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the two words from the same family.",
+      "explanation": "The verb is «candidatar-se a». The related noun is «candidatura» (with -ura, not -ção).",
+      "template": "Quero ___-me a esta oferta. A minha ___ está pronta.",
+      "gaps": [
+        {
+          "answer": "candidatar"
+        },
+        {
+          "answer": "candidatura"
+        }
+      ],
+      "wordBank": ["candidatar", "candidatura", "inscrição", "informação"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the gaps: you need an appointment at the health centre and more information about the opening hours.",
+      "explanation": "These useful service nouns end in «-ção»: «marcação» and «informação». They are common in offices and health services.",
+      "template": "Preciso de uma ___ no centro de saúde e de mais ___ sobre o horário.",
+      "gaps": [
+        {
+          "answer": "marcação"
+        },
+        {
+          "answer": "informação"
+        }
+      ],
+      "wordBank": ["marcação", "informação", "inscrição", "currículo"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete this sentence about a CV.",
+      "explanation": "In a CV, «habilitações académicas» is your studies or qualifications, and «experiência profissional» is your work experience.",
+      "template": "No meu CV, escrevo as minhas ___ académicas e a minha ___ profissional.",
+      "gaps": [
+        {
+          "answer": "habilitações"
+        },
+        {
+          "answer": "experiência"
+        }
+      ],
+      "wordBank": ["habilitações", "experiência", "disponibilidade", "entrevista"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-09",
+      "type": "build_phrase",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You are writing to a company. Say politely that you want to apply for this job offer.",
+      "explanation": "After the polite chunk «Queria», the reflexive stays attached to the infinitive: «candidatar-me». This verb takes «a»: «candidatar-se a uma oferta».",
+      "answer": ["Queria", "candidatar-me", "a", "esta", "oferta", "de", "emprego."],
+      "distractors": ["candidatura", "trabalho", "uma"],
+      "acceptedAnswers": ["Eu queria candidatar-me a esta oferta de emprego."]
+    },
+    {
+      "id": "pla-m6-job-search-cv-10",
+      "type": "build_phrase",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "In an interview, say that you have a driving licence.",
+      "explanation": "Portuguese uses the fixed expression «carta de condução» for driving licence. You can omit «eu» because «tenho» already shows the subject.",
+      "answer": ["Tenho", "carta", "de", "condução."],
+      "distractors": ["cartão", "da", "tens"],
+      "acceptedAnswers": ["Eu tenho carta de condução."]
+    },
+    {
+      "id": "pla-m6-job-search-cv-11",
+      "type": "build_phrase",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you work in the cleaning sector.",
+      "explanation": "For sectors, «trabalhar em» + area is the normal pattern: «em limpezas», «em saúde», «em logística».",
+      "answer": ["Trabalho", "em", "limpezas."],
+      "distractors": ["na", "indústria", "trabalha"],
+      "acceptedAnswers": ["Eu trabalho em limpezas."]
+    },
+    {
+      "id": "pla-m6-job-search-cv-12",
+      "type": "build_phrase",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "In a job interview, say that you speak English and Portuguese.",
+      "explanation": "With no subject pronoun, «falo» already means «I speak». Languages are linked with «e».",
+      "answer": ["Falo", "inglês", "e", "português."],
+      "distractors": ["fala", "ou", "francês"],
+      "acceptedAnswers": ["Eu falo inglês e português."]
+    },
+    {
+      "id": "pla-m6-job-search-cv-13",
+      "type": "build_phrase",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you are available to work at the weekend.",
+      "explanation": "The chunk is «ter disponibilidade para» + infinitive. In general statements, Portuguese often says «ao fim de semana».",
+      "answer": ["Tenho", "disponibilidade", "para", "trabalhar", "ao", "fim", "de", "semana."],
+      "distractors": ["durante", "noite", "ter"],
+      "acceptedAnswers": ["Eu tenho disponibilidade para trabalhar ao fim de semana."]
+    },
+    {
+      "id": "pla-m6-job-search-cv-14",
+      "type": "about_me",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "«Quero trabalhar em/na + sector» is a simple way to say the area you want. Some sectors take a contraction, for example «na saúde».",
+      "question": "Em que área queres trabalhar?",
+      "sampleAnswer": "Quero trabalhar na saúde.",
+      "hints": ["procuro", "emprego", "em", "logística", "comércio", "limpezas"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The candidate answers: «Tenho experiência na restauração.» Ask in the formal register what experience the candidate has.",
+      "explanation": "Formal singular uses 3rd-person forms: «tem». You can also hear the emphatic version «Que experiência é que tem?».",
+      "givenAnswer": "Tenho experiência na restauração.",
+      "answer": ["Que", "experiência", "tem?"],
+      "distractors": ["Quanta", "trabalha?", "tens?"],
+      "acceptedAnswers": ["Que experiência é que tem?"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The candidate answers: «Sim, falo inglês.» Ask in a job interview, in the formal register, if the candidate speaks English.",
+      "explanation": "In formal questions, Portuguese often uses just the verb in 3rd person: «Fala inglês?». «O senhor / A senhora» is possible but not necessary.",
+      "givenAnswer": "Sim, falo inglês.",
+      "answer": ["Fala", "inglês?"],
+      "distractors": ["Falas", "francês?", "tem?"],
+      "acceptedAnswers": ["O senhor fala inglês?", "A senhora fala inglês?"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The candidate answers: «Tenho disponibilidade ao fim de semana.» Ask in the formal register if the candidate is available to work at weekends.",
+      "explanation": "The formal verb is «tem». Both the longer question with «para trabalhar» and the shorter version are natural.",
+      "givenAnswer": "Tenho disponibilidade ao fim de semana.",
+      "answer": ["Tem", "disponibilidade", "para", "trabalhar", "ao", "fim", "de", "semana?"],
+      "distractors": ["tens", "durante", "noite", "fala?"],
+      "acceptedAnswers": ["Tem disponibilidade ao fim de semana?"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-18",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The candidate answers: «Tenho carta de condução.» Ask in the formal register if the candidate has a driving licence.",
+      "explanation": "Again, formal singular uses 3rd-person «tem». «Carta de condução» is the standard expression in Portugal.",
+      "givenAnswer": "Tenho carta de condução.",
+      "answer": ["Tem", "carta", "de", "condução?"],
+      "distractors": ["Tens", "cartão", "da"],
+      "acceptedAnswers": ["O senhor tem carta de condução?", "A senhora tem carta de condução?"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-19",
+      "type": "find_error",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong for a formal interview. Tap it and choose the correction.",
+      "explanation": "With a candidate you do not know well, formal singular uses 3rd-person forms: «tem». «Tens» is the informal «tu» form.",
+      "sentence": ["Que", "experiência", "tens?"],
+      "wrongIndex": 2,
+      "correction": "tem?",
+      "options": ["tem?", "tenho?", "temos?"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-20",
+      "type": "find_error",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «preciso de mais», you need a noun here: «informação». «Informar» is the verb.",
+      "sentence": ["Preciso", "de", "mais", "informar", "sobre", "a", "oferta."],
+      "wrongIndex": 3,
+      "correction": "informação",
+      "options": ["informação", "inscrição", "marcação"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-21",
+      "type": "translate_word",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For job applications, «carta de apresentação» means a cover letter. Do not confuse it with «carta de condução», which is a driving licence.",
+      "direction": "toTarget",
+      "sentence": "Please attach a **cover letter** to your application.",
+      "word": "cover letter",
+      "answer": "carta de apresentação",
+      "options": [
+        "carta de apresentação",
+        "carta de condução",
+        "oferta de emprego",
+        "entrevista de trabalho"
+      ]
+    },
+    {
+      "id": "pla-m6-job-search-cv-22",
+      "type": "translate_word",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Some work sectors are best learned as fixed expressions. In Portuguese, «construction sector» is «construção civil».",
+      "direction": "toTarget",
+      "sentence": "He wants to work in the **construction sector**.",
+      "word": "construction sector",
+      "answer": "construção civil",
+      "options": ["construção civil", "comércio", "saúde", "limpezas"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the noun forms.",
+      "explanation": "Learn the verb and noun together: «candidatar-se → candidatura», «inscrever-se → inscrição», «informar → informação». Many of these nouns end in «-ção».",
+      "template": "candidatar-se → ___ ; inscrever-se → ___ ; informar → ___.",
+      "gaps": [
+        {
+          "answer": "candidatura"
+        },
+        {
+          "answer": "inscrição"
+        },
+        {
+          "answer": "informação"
+        }
+      ],
+      "wordBank": ["candidatura", "inscrição", "informação", "marcação", "candidato", "entrevista"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-24",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You are preparing a job application. Fill the two gaps.",
+      "explanation": "A job application often includes the CV and a cover letter. «Currículo» is also often called «CV».",
+      "template": "Na candidatura, junto o meu ___ e a minha ___.",
+      "gaps": [
+        {
+          "answer": "currículo",
+          "accepted": ["CV"]
+        },
+        {
+          "answer": "carta de apresentação"
+        }
+      ],
+      "wordBank": [
+        "currículo",
+        "carta de apresentação",
+        "entrevista de trabalho",
+        "disponibilidade"
+      ]
+    },
+    {
+      "id": "pla-m6-job-search-cv-25",
+      "type": "build_phrase",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you have a job interview tomorrow morning.",
+      "explanation": "Use «ter» for scheduled events: «Tenho uma entrevista...». «Entrevista de trabalho» is the fixed phrase for a job interview.",
+      "answer": ["Tenho", "uma", "entrevista", "de", "trabalho", "amanhã", "de", "manhã."],
+      "distractors": ["um", "na", "profissional"],
+      "acceptedAnswers": ["Eu tenho uma entrevista de trabalho amanhã de manhã."]
+    },
+    {
+      "id": "pla-m6-job-search-cv-26",
+      "type": "build_phrase",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that you send your CV and your cover letter.",
+      "explanation": "With possessives in European Portuguese, use the article: «o meu currículo», «a minha carta». This is a useful sentence for talking about your application documents.",
+      "answer": [
+        "Envio",
+        "o",
+        "meu",
+        "currículo",
+        "e",
+        "a",
+        "minha",
+        "carta",
+        "de",
+        "apresentação."
+      ],
+      "distractors": ["uma", "para", "profissional"],
+      "acceptedAnswers": [
+        "Eu envio o meu currículo e a minha carta de apresentação.",
+        "Envio o meu CV e a minha carta de apresentação.",
+        "Eu envio o meu CV e a minha carta de apresentação."
+      ]
+    },
+    {
+      "id": "pla-m6-job-search-cv-27",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "The candidate answers: «Tenho o 12.º ano.» Ask him formally about his educational qualifications.",
+      "explanation": "In a formal interview, use the 3rd-person form «tem». «Habilitações académicas» is the usual phrase for educational qualifications.",
+      "givenAnswer": "Tenho o 12.º ano.",
+      "answer": ["Que", "habilitações", "académicas", "tem?"],
+      "distractors": ["tens?", "experiência", "fala", "temos"],
+      "acceptedAnswers": [
+        "Que habilitações académicas é que tem?",
+        "Quais são as suas habilitações académicas?"
+      ]
+    },
+    {
+      "id": "pla-m6-job-search-cv-28",
+      "type": "find_error",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «disponibilidade», Portuguese uses «para» + infinitive: «disponibilidade para trabalhar». «Por trabalhar» does not fit here.",
+      "sentence": ["Tenho", "disponibilidade", "por", "trabalhar", "à", "noite."],
+      "wrongIndex": 2,
+      "correction": "para",
+      "options": ["para", "com", "sem"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-29",
+      "type": "find_error",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Habilitações» is plural feminine, so the possessive must agree: «as minhas». In European Portuguese, the article stays before the possessive.",
+      "sentence": ["As", "meus", "habilitações", "académicas", "são", "importantes."],
+      "wrongIndex": 1,
+      "correction": "minhas",
+      "options": ["minhas", "meu", "minha"]
+    },
+    {
+      "id": "pla-m6-job-search-cv-30",
+      "type": "about_me",
+      "topicId": "pla-m6-job-search-cv",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "You can answer with «Procuro trabalho» or «Procuro emprego» plus a sector. Use the area that is true for you.",
+      "question": "Em que área procuras emprego?",
+      "sampleAnswer": "Procuro trabalho na agricultura.",
+      "hints": ["quero", "emprego", "em", "logística", "saúde", "construção civil"]
+    }
+  ]
+}

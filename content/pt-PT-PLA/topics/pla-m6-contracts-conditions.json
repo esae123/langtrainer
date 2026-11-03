@@ -1,0 +1,560 @@
+{
+  "id": "pla-m6-contracts-conditions",
+  "moduleId": "m6",
+  "title": "Contracts and working conditions",
+  "kind": "vocabulary",
+  "context": "When you start a job in Portugal, you need practical words for the contract, the hours, the pay and the deductions. In real life, you often ask short, direct questions and read simple documents such as the contract or the **recibo de vencimento**.\n\n- `Tenho um contrato a termo certo.` = I have a fixed-term contract.\n- `Tenho um contrato sem termo.` = I have a permanent contract.\n- `O período experimental é de trinta dias.` = The probation period is thirty days.\n- `Trabalho a tempo inteiro, das nove às dezoito.` = I work full-time, from 9 to 6.\n- `No recibo de vencimento vejo o salário e os descontos para a Segurança Social.` = On the payslip I see the salary and the Social Security deductions.\n- `Quantos dias de férias tenho?` = How many holiday days do I have?\n- `Há subsídio de refeição?` = Is there a meal allowance?\n\n**Watch out:** in Portugal, `salário` and `ordenado` are both common in everyday speech; `remuneração` is a bit more formal. Learn `Queria saber...` as a polite fixed phrase for questions to an employer.",
+  "keyItems": [
+    {
+      "target": "contrato a termo certo",
+      "support": "fixed-term contract"
+    },
+    {
+      "target": "contrato sem termo",
+      "support": "permanent contract"
+    },
+    {
+      "target": "período experimental",
+      "support": "probation period"
+    },
+    {
+      "target": "prestação de serviços",
+      "support": "service provision / self-employed arrangement"
+    },
+    {
+      "target": "recibos verdes",
+      "support": "green receipts (invoices of self-employed workers)",
+      "note": "common Portugal term"
+    },
+    {
+      "target": "salário",
+      "support": "salary / pay"
+    },
+    {
+      "target": "ordenado",
+      "support": "salary / pay",
+      "note": "common everyday word"
+    },
+    {
+      "target": "remuneração",
+      "support": "remuneration",
+      "note": "more formal"
+    },
+    {
+      "target": "salário mínimo",
+      "support": "minimum wage"
+    },
+    {
+      "target": "recibo de vencimento",
+      "support": "payslip"
+    },
+    {
+      "target": "horário de trabalho",
+      "support": "working hours"
+    },
+    {
+      "target": "a tempo inteiro",
+      "support": "full-time"
+    },
+    {
+      "target": "part-time",
+      "support": "part-time"
+    },
+    {
+      "target": "por turnos",
+      "support": "in shifts / shift work"
+    },
+    {
+      "target": "folga",
+      "support": "day off"
+    },
+    {
+      "target": "férias",
+      "support": "paid holiday / vacation days"
+    },
+    {
+      "target": "subsídio de refeição",
+      "support": "meal allowance"
+    },
+    {
+      "target": "descontos para a Segurança Social",
+      "support": "Social Security deductions"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m6-contracts-conditions-01",
+      "type": "translate_word",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In Portugal, a permanent job contract is called «contrato sem termo». It is different from «contrato a termo certo», which has an end date.",
+      "direction": "toTarget",
+      "sentence": "I have a **permanent contract**.",
+      "word": "permanent contract",
+      "answer": "contrato sem termo",
+      "options": [
+        "contrato sem termo",
+        "contrato a termo certo",
+        "período experimental",
+        "recibo de vencimento"
+      ]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-02",
+      "type": "translate_word",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "A meal allowance is «subsídio de refeição». It is a fixed phrase you often hear at work in Portugal.",
+      "direction": "toTarget",
+      "sentence": "There is **meal allowance** in this job.",
+      "word": "meal allowance",
+      "answer": "subsídio de refeição",
+      "options": [
+        "subsídio de refeição",
+        "subsídio de Natal",
+        "recibo de vencimento",
+        "salário mínimo"
+      ]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-03",
+      "type": "translate_word",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Turnos» means shifts. The common expression is «trabalhar por turnos».",
+      "direction": "toTarget",
+      "sentence": "I work in **shifts**.",
+      "word": "shifts",
+      "answer": "turnos",
+      "options": ["turnos", "férias", "folga", "horário"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-04",
+      "type": "match_pairs",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese work term with its meaning.",
+      "explanation": "These are very common words in contracts and job conversations. Learn them as useful chunks, not as isolated grammar.",
+      "pairs": [
+        {
+          "target": "período experimental",
+          "support": "probation period"
+        },
+        {
+          "target": "recibo de vencimento",
+          "support": "payslip"
+        },
+        {
+          "target": "folga",
+          "support": "day off"
+        },
+        {
+          "target": "subsídio de refeição",
+          "support": "meal allowance"
+        },
+        {
+          "target": "contrato sem termo",
+          "support": "permanent contract"
+        }
+      ]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the fixed expression for a fixed-term contract with a set end date.",
+      "explanation": "The full expression is «contrato a termo certo». Only «sem termo» means a permanent contract.",
+      "template": "Tenho um contrato ___ termo ___.",
+      "gaps": [
+        {
+          "answer": "a"
+        },
+        {
+          "answer": "certo"
+        }
+      ],
+      "wordBank": ["a", "certo", "sem", "experimental", "inteiro"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the name of the institution in the sentence.",
+      "explanation": "In Portugal, the institution is «a Segurança Social». After «para», the article stays: «para a Segurança Social».",
+      "template": "No recibo de vencimento vejo os descontos para a ___ ___.",
+      "gaps": [
+        {
+          "answer": "Segurança"
+        },
+        {
+          "answer": "Social"
+        }
+      ],
+      "wordBank": ["Segurança", "Social", "Saúde", "Centro", "horário"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-07",
+      "type": "build_phrase",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I have a permanent contract.",
+      "explanation": "Use the fixed phrase «contrato sem termo» for a permanent contract. In European Portuguese, you can say it with or without «eu».",
+      "answer": ["Tenho", "um", "contrato", "sem", "termo."],
+      "distractors": ["a", "certo", "estou"],
+      "acceptedAnswers": ["Eu tenho um contrato sem termo."]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-08",
+      "type": "build_phrase",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say politely to your employer: I would like to see my payslip, please.",
+      "explanation": "«Queria...» is a polite fixed chunk for requests. «Payslip» is «recibo de vencimento».",
+      "answer": ["Queria", "ver", "o", "meu", "recibo", "de", "vencimento,", "por", "favor."],
+      "distractors": ["gostava", "salário", "teu"],
+      "acceptedAnswers": ["Eu queria ver o meu recibo de vencimento, por favor."]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-09",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your employer answers: «Das nove às dezoito.» Ask in a formal way what the working hours are.",
+      "explanation": "To ask about working hours, use «Qual é o horário?» or the longer «Qual é o horário de trabalho?». Both are natural in Portugal.",
+      "givenAnswer": "Das nove às dezoito.",
+      "answer": ["Qual", "é", "o", "horário?"],
+      "distractors": ["quantos", "salário", "férias"],
+      "acceptedAnswers": ["Qual é o horário de trabalho?"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-10",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your employer answers: «Tem vinte e dois dias por ano.» Ask in a formal way how many holiday days you have.",
+      "explanation": "Ask about your own holiday entitlement with «Quantos dias de férias tenho?». The version with «é que» is also very common.",
+      "givenAnswer": "Tem vinte e dois dias por ano.",
+      "answer": ["Quantos", "dias", "de", "férias", "tenho?"],
+      "distractors": ["qual", "salário", "horário"],
+      "acceptedAnswers": ["Quantos dias de férias é que tenho?"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-11",
+      "type": "find_error",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Turno» is masculine: «o turno, os turnos». The fixed expression is «por turnos».",
+      "sentence": ["O", "meu", "horário", "é", "por", "turnas."],
+      "wrongIndex": 5,
+      "correction": "turnos",
+      "options": ["turnos", "tempo", "folga"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-12",
+      "type": "build_phrase",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: I work full-time and I have Sunday off.",
+      "explanation": "Use «a tempo inteiro» for full-time. For a regular weekly day off, Portuguese often uses «ao domingo».",
+      "answer": ["Trabalho", "a", "tempo", "inteiro", "e", "tenho", "folga", "ao", "domingo."],
+      "distractors": ["em", "sem", "turnos"],
+      "acceptedAnswers": [
+        "Eu trabalho a tempo inteiro e tenho folga ao domingo.",
+        "Trabalho a tempo inteiro e tenho folga aos domingos."
+      ]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-13",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence with the names of the Christmas bonus and the holiday bonus.",
+      "explanation": "In Portugal, these common payments are «subsídio de Natal» and «subsídio de férias». They are fixed expressions.",
+      "template": "Na empresa há subsídio de ___ e subsídio de ___.",
+      "gaps": [
+        {
+          "answer": "Natal"
+        },
+        {
+          "answer": "férias"
+        }
+      ],
+      "wordBank": ["Natal", "férias", "refeição", "turnos", "mínimo"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your employer answers: «Sim, há subsídio de refeição.» Ask in a formal way if there is a meal allowance.",
+      "explanation": "A simple yes/no question is enough here: «Há subsídio de refeição?». «Existe...» is also possible.",
+      "givenAnswer": "Sim, há subsídio de refeição.",
+      "answer": ["Há", "subsídio", "de", "refeição?"],
+      "distractors": ["horário", "turnos", "férias"],
+      "acceptedAnswers": ["Existe subsídio de refeição?"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-15",
+      "type": "order_dialogue",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "At a job interview. Put the lines in order.",
+      "explanation": "A polite conversation often starts with a greeting, then the applicant asks a short question. «Qual é o horário de trabalho?» is a ready-made useful question.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Bom dia. Tem alguma pergunta?"
+        },
+        {
+          "speaker": "B",
+          "text": "Bom dia. Sim, qual é o horário de trabalho?"
+        },
+        {
+          "speaker": "A",
+          "text": "Das nove às dezoito, com uma hora de almoço."
+        },
+        {
+          "speaker": "B",
+          "text": "Está bem."
+        }
+      ]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-16",
+      "type": "build_phrase",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ask politely: I would like to know what the salary is.",
+      "explanation": "«Queria saber...» is a useful polite chunk for talking to an employer. In everyday Portuguese, «salário» and «ordenado» are both common.",
+      "answer": ["Queria", "saber", "qual", "é", "o", "salário."],
+      "distractors": ["quais", "sou", "horário"],
+      "acceptedAnswers": ["Eu queria saber qual é o salário.", "Queria saber qual é o ordenado."]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-17",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence: I work under a service arrangement and I use green receipts.",
+      "explanation": "In Portugal, self-employed work is often called «prestação de serviços». The common phrase is «recibos verdes».",
+      "template": "Trabalho em regime de ___ e passo recibos ___.",
+      "gaps": [
+        {
+          "answer": "prestação de serviços"
+        },
+        {
+          "answer": "verdes"
+        }
+      ],
+      "wordBank": ["prestação de serviços", "verdes", "tempo inteiro", "sem termo", "folga"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-18",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your employer answers: «Sim, os descontos são para a Segurança Social.» Ask in a formal way if the deductions are for Social Security.",
+      "explanation": "This question checks the destination of the deductions. The institution name is «a Segurança Social», so the question uses «para a».",
+      "givenAnswer": "Sim, os descontos são para a Segurança Social.",
+      "answer": ["Os", "descontos", "são", "para", "a", "Segurança", "Social?"],
+      "distractors": ["empresa", "recibo", "horário"],
+      "acceptedAnswers": ["São para a Segurança Social os descontos?"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-19",
+      "type": "find_error",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Segurança Social» is feminine: «a Segurança Social». After «para», we say «para a Segurança Social».",
+      "sentence": ["Os", "descontos", "são", "para", "o", "Segurança", "Social."],
+      "wrongIndex": 4,
+      "correction": "a",
+      "options": ["a", "na", "da"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-20",
+      "type": "about_me",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "You can answer with exact hours, or more generally with a pattern such as «Trabalho por turnos». Keep it short and natural.",
+      "question": "Qual é o teu horário de trabalho?",
+      "sampleAnswer": "Trabalho das oito às dezassete.",
+      "hints": ["de manhã", "à tarde", "por turnos", "folga", "sábado"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-21",
+      "type": "translate_word",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In Portugal, the usual word for a payslip is «recibo de vencimento». You often need this document for the bank or for other paperwork.",
+      "direction": "toTarget",
+      "sentence": "I need my **payslip** for the bank.",
+      "word": "payslip",
+      "answer": "recibo de vencimento",
+      "options": [
+        "recibo de vencimento",
+        "contrato sem termo",
+        "horário de trabalho",
+        "salário mínimo"
+      ]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-22",
+      "type": "translate_word",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For a full-time job, Portuguese normally uses the fixed expression «a tempo inteiro».",
+      "direction": "toTarget",
+      "sentence": "This job is **full-time**.",
+      "word": "full-time",
+      "answer": "a tempo inteiro",
+      "options": ["a tempo inteiro", "por turnos", "de folga", "sem termo"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You are reading a contract. Fill the gaps: In the contract I see the probation period and the working hours.",
+      "explanation": "A contract can show both the probation period and the working hours. These are common things to check before you start.",
+      "template": "No contrato vejo o ___ e o ___.",
+      "gaps": [
+        {
+          "answer": "período experimental"
+        },
+        {
+          "answer": "horário de trabalho"
+        }
+      ],
+      "wordBank": [
+        "período experimental",
+        "horário de trabalho",
+        "salário mínimo",
+        "recibo de vencimento"
+      ]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-24",
+      "type": "fill_gaps",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Ana works only four hours a day. Fill the gap.",
+      "explanation": "In Portugal, «part-time» is very common in everyday speech. It contrasts with «a tempo inteiro».",
+      "template": "A Ana trabalha só quatro horas por dia; é um trabalho ___.",
+      "gaps": [
+        {
+          "answer": "part-time"
+        }
+      ],
+      "wordBank": ["part-time", "a tempo inteiro", "por turnos", "de folga"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-25",
+      "type": "build_phrase",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: This company offers a fixed-term contract.",
+      "explanation": "Use «oferece» for what a company gives, and the fixed expression is «contrato a termo certo».",
+      "answer": ["Esta", "empresa", "oferece", "um", "contrato", "a", "termo", "certo."],
+      "distractors": ["sem", "tenho", "recebe"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-26",
+      "type": "build_phrase",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The minimum wage is nine hundred and twenty euros. (2026)",
+      "explanation": "«Salário mínimo» is a fixed expression. Because the subject is singular, the verb is «é».",
+      "answer": ["O", "salário", "mínimo", "é", "novecentos", "e", "vinte", "euros."],
+      "distractors": ["são", "de", "recebe"],
+      "acceptedAnswers": ["O salário mínimo é 920 euros."]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-27",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The employer answers: «Dura noventa dias.» Ask formally how long the probation period lasts.",
+      "explanation": "To ask about duration, use «Quanto tempo dura ...?». This is a practical question when you start a new job.",
+      "givenAnswer": "Dura noventa dias.",
+      "answer": ["Quanto", "tempo", "dura", "o", "período", "experimental?"],
+      "distractors": ["férias", "começa", "horas", "salário"],
+      "acceptedAnswers": ["Quanto tempo é que dura o período experimental?"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-28",
+      "type": "question_for_answer",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The employer answers: «Começa às seis da manhã.» Ask formally what time the morning shift starts.",
+      "explanation": "For clock time, use «A que horas». In European Portuguese, the normal order is «A que horas (é que) + verb».",
+      "givenAnswer": "Começa às seis da manhã.",
+      "answer": ["A", "que", "horas", "começa", "o", "turno", "da", "manhã?"],
+      "distractors": ["qual", "tem", "salário", "dias"],
+      "acceptedAnswers": ["A que horas é que começa o turno da manhã?"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-29",
+      "type": "find_error",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Remuneração» is singular, so the verb must also be singular: «é». In European Portuguese, keep the article before the possessive: «A minha remuneração».",
+      "sentence": ["A", "minha", "remuneração", "são", "novecentos", "euros."],
+      "wrongIndex": 3,
+      "correction": "é",
+      "options": ["é", "tem", "fica"]
+    },
+    {
+      "id": "pla-m6-contracts-conditions-30",
+      "type": "about_me",
+      "topicId": "pla-m6-contracts-conditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «a tempo inteiro» or «part-time» to describe your working pattern. You can keep your answer short and simple.",
+      "question": "Trabalhas a tempo inteiro ou part-time?",
+      "sampleAnswer": "Trabalho a tempo inteiro.",
+      "hints": ["por turnos", "de manhã", "sábado", "não"]
+    }
+  ]
+}

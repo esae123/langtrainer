@@ -1,0 +1,528 @@
+{
+  "id": "pla-m5-healthy-habits-advice",
+  "moduleId": "m5",
+  "title": "Healthy habits and advice",
+  "kind": "grammar",
+  "context": "To give simple advice in Portuguese, three patterns are very common.\n\n- `Deves beber mais água.` = “You should drink more water.”\n- `Tens de descansar.` = “You have to rest.”\n- `É melhor dormir cedo.` = “It is better to sleep early.”\n- `Pratica desporto todos os dias.` = “Do exercise every day.” (to one friend)\n- `Pratique desporto todos os dias.` = “Do exercise every day.” (formal: to one patient or client)\n- `Não fumes.` = “Don’t smoke.” (informal)\n- `Não fume.` = “Don’t smoke.” (formal)\n\nFrequency is very useful with health routines: `todos os dias` = every day, `duas vezes por semana` = twice a week, `de oito em oito horas` = every eight hours.\n\n**Watch out:** with **tu**, statements use `deves / tens de`. The positive imperative looks like the ele/ela present form, without -s: `come / dorme / pratica` (not `comes / dormes / praticas`). The negative is different: `não comas`, `não fumes`. With formal advice (`o senhor / a senhora`), use 3rd-person forms: `deve`, `coma`, `durma`, `não fume`.",
+  "keyItems": [
+    {
+      "target": "dever + infinitivo",
+      "support": "should + verb"
+    },
+    {
+      "target": "ter de + infinitivo",
+      "support": "have to + verb"
+    },
+    {
+      "target": "é melhor + infinitivo",
+      "support": "it is better to + verb"
+    },
+    {
+      "target": "deves beber água",
+      "support": "you should drink water",
+      "note": "informal"
+    },
+    {
+      "target": "deve descansar",
+      "support": "you should rest",
+      "note": "formal singular"
+    },
+    {
+      "target": "pratica desporto",
+      "support": "do exercise",
+      "note": "informal imperative"
+    },
+    {
+      "target": "pratique desporto",
+      "support": "do exercise",
+      "note": "formal imperative"
+    },
+    {
+      "target": "não fumes",
+      "support": "don't smoke",
+      "note": "informal imperative"
+    },
+    {
+      "target": "não fume",
+      "support": "don't smoke",
+      "note": "formal imperative"
+    },
+    {
+      "target": "todos os dias",
+      "support": "every day"
+    },
+    {
+      "target": "duas vezes por semana",
+      "support": "twice a week"
+    },
+    {
+      "target": "de oito em oito horas",
+      "support": "every eight hours",
+      "note": "learn as a chunk"
+    },
+    {
+      "target": "fruta e legumes",
+      "support": "fruit and vegetables"
+    },
+    {
+      "target": "dormir oito horas",
+      "support": "sleep eight hours"
+    },
+    {
+      "target": "stress",
+      "support": "stress"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m5-healthy-habits-advice-01",
+      "type": "build_phrase",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell your friend: You should drink more water.",
+      "explanation": "With informal singular, use `deves` + infinitive. Portuguese often drops the subject pronoun `tu`.",
+      "answer": ["Deves", "beber", "mais", "água."],
+      "distractors": ["devem", "bebe", "muito"],
+      "acceptedAnswers": ["Tu deves beber mais água."]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-02",
+      "type": "build_phrase",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give formal advice to one patient: Sleep eight hours.",
+      "explanation": "For formal advice to one person, the imperative uses the 3rd-person form: `durma`.",
+      "answer": ["Durma", "oito", "horas."],
+      "distractors": ["dorme", "durmo", "dormir"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-03",
+      "type": "build_phrase",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell a friend not to smoke.",
+      "explanation": "Negative informal advice uses `não` + the informal imperative form here: `não fumes`.",
+      "answer": ["Não", "fumes."],
+      "distractors": ["fuma", "fume", "fumas"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-04",
+      "type": "build_phrase",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: It is better to rest today.",
+      "explanation": "After `é melhor`, Portuguese normally uses the infinitive: `descansar`.",
+      "answer": ["É", "melhor", "descansar", "hoje."],
+      "distractors": ["bom", "descanse", "amanhã"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-05",
+      "type": "build_phrase",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell your friend: You have to take this medicine every eight hours.",
+      "explanation": "`Ter de` + infinitive expresses necessity. `De oito em oito horas` is the fixed phrase for regular intervals of eight hours.",
+      "answer": [
+        "Tens",
+        "de",
+        "tomar",
+        "este",
+        "medicamento",
+        "de",
+        "oito",
+        "em",
+        "oito",
+        "horas."
+      ],
+      "distractors": ["tem", "para", "comer"],
+      "acceptedAnswers": ["Tu tens de tomar este medicamento de oito em oito horas."]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-06",
+      "type": "build_phrase",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give informal advice: Eat fruit every day.",
+      "explanation": "For «tu», the affirmative imperative looks like the ele/ela present form, without -s: «come» (not «comes»). Frequency phrases like «todos os dias» often come at the end.",
+      "answer": ["Come", "fruta", "todos", "os", "dias."],
+      "distractors": ["coma", "legumes", "nunca"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-07",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The doctor answers: «Deve beber mais água.» Ask the doctor (formal) what you should drink.",
+      "explanation": "To ask about a thing, use `O que`. With `dever`, the next verb stays in the infinitive.",
+      "givenAnswer": "Deve beber mais água.",
+      "answer": ["O", "que", "devo", "beber?"],
+      "distractors": ["Onde", "deves", "fruta"],
+      "acceptedAnswers": ["O que é que devo beber?", "O que é que eu devo beber?"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-08",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Tens de dormir mais.» Ask your friend (informal) what you have to do.",
+      "explanation": "Use `O que` to ask for the action. With `ter de`, the main verb after `de` is an infinitive.",
+      "givenAnswer": "Tens de dormir mais.",
+      "answer": ["O", "que", "tenho", "de", "fazer?"],
+      "distractors": ["Quando", "tens", "dormes"],
+      "acceptedAnswers": ["O que é que tenho de fazer?", "O que é que eu tenho de fazer?"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-09",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The nurse answers: «É melhor descansar hoje.» Ask the nurse (formal) if it is better for you to rest today.",
+      "explanation": "A yes/no question can keep the same word order and use question intonation. `É melhor` is followed by the infinitive.",
+      "givenAnswer": "É melhor descansar hoje.",
+      "answer": ["É", "melhor", "descansar", "hoje?"],
+      "distractors": ["amanhã", "devo", "coma"],
+      "acceptedAnswers": ["É melhor eu descansar hoje?"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-10",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Duas vezes por semana.» Ask him (informal) how often he does exercise.",
+      "explanation": "`Quantas vezes por semana` is the natural way to ask about weekly frequency. With `tu`, the verb is `fazes`.",
+      "givenAnswer": "Duas vezes por semana.",
+      "answer": ["Quantas", "vezes", "por", "semana", "fazes", "exercício?"],
+      "distractors": ["Onde", "moras", "sempre"],
+      "acceptedAnswers": [
+        "Quantas vezes por semana é que fazes exercício?",
+        "Quantas vezes por semana é que tu fazes exercício?",
+        "Quantas vezes por semana fazes desporto?",
+        "Quantas vezes por semana é que fazes desporto?"
+      ]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-11",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "The pharmacist answers: «De oito em oito horas.» Ask the pharmacist (formal) how often you take the medicine.",
+      "explanation": "`Com que frequência` asks about regularity. The answer uses the fixed interval expression `de oito em oito horas`.",
+      "givenAnswer": "De oito em oito horas.",
+      "answer": ["Com", "que", "frequência", "tomo", "o", "medicamento?"],
+      "distractors": ["qual", "bebes", "tomas"],
+      "acceptedAnswers": [
+        "Com que frequência é que tomo o medicamento?",
+        "Com que frequência é que eu tomo o medicamento?",
+        "De quantas em quantas horas tomo o medicamento?"
+      ]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-12",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You are giving simple health advice. Fill the two gaps.",
+      "explanation": "After `dever`, use the infinitive. With `tu`, the correct form is `deves`.",
+      "template": "Se estás cansado, ___ dormir mais e ___ mais água.",
+      "gaps": [
+        {
+          "answer": "deves"
+        },
+        {
+          "answer": "beber"
+        }
+      ],
+      "wordBank": ["deves", "beber", "deve", "bebes"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-13",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A nutritionist is speaking formally to Dona Ana. Fill the two gaps.",
+      "explanation": "Formal imperative uses 3rd-person forms. In negative advice, `não` comes before the verb: `não fume`.",
+      "template": "Dona Ana, ___ fruta todos os dias e não ___.",
+      "gaps": [
+        {
+          "answer": "coma"
+        },
+        {
+          "answer": "fume"
+        }
+      ],
+      "wordBank": ["coma", "fume", "come", "fumas"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-14",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill the gaps: I exercise twice a week and drink water every day.",
+      "explanation": "These are fixed time expressions. `Duas vezes por semana` gives weekly frequency, and `todos os dias` means every day.",
+      "template": "Faço exercício ___ por semana e bebo água ___ os dias.",
+      "gaps": [
+        {
+          "answer": "duas vezes"
+        },
+        {
+          "answer": "todos"
+        }
+      ],
+      "wordBank": ["duas vezes", "todos", "uma vez", "todas"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-15",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You are advising a friend about sleep. Fill the three gaps.",
+      "explanation": "After `tens de` and after `é melhor`, Portuguese uses the infinitive. So the second and third gaps are not conjugated forms.",
+      "template": "Para dormir melhor, ___ de jantar cedo e ___ mais. Também é melhor não ___ café à noite.",
+      "gaps": [
+        {
+          "answer": "tens"
+        },
+        {
+          "answer": "descansar"
+        },
+        {
+          "answer": "beber"
+        }
+      ],
+      "wordBank": ["tens", "descansar", "beber", "tem", "descansa", "bebes"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-16",
+      "type": "find_error",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With `tu`, the verb `dever` changes to `deves`. `Deve` is the form for ele/ela/você/o senhor/a senhora.",
+      "sentence": ["Tu", "deve", "beber", "mais", "água."],
+      "wrongIndex": 1,
+      "correction": "deves",
+      "options": ["deves", "devo", "devem"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-17",
+      "type": "find_error",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With formal address like `Senhor João`, the negative imperative uses the 3rd-person form: `não fume`.",
+      "sentence": ["Senhor", "João,", "não", "fumes", "aqui."],
+      "wrongIndex": 3,
+      "correction": "fume",
+      "options": ["fume", "fuma", "fumas"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-18",
+      "type": "translate_word",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For one formal person, `should` is often expressed with `deve` in this topic.",
+      "direction": "toTarget",
+      "sentence": "You (formal) **should** drink more water.",
+      "word": "should",
+      "answer": "deve",
+      "options": ["deve", "deves", "tens", "é"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-19",
+      "type": "translate_word",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "`De oito em oito horas` is a common fixed phrase for medicine and other regular intervals.",
+      "direction": "toTarget",
+      "sentence": "Take this medicine **every eight hours**.",
+      "word": "every eight hours",
+      "answer": "de oito em oito horas",
+      "options": [
+        "de oito em oito horas",
+        "oito vezes por dia",
+        "todas as horas",
+        "duas vezes por semana"
+      ]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-20",
+      "type": "about_me",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use the present to talk about your real routine. One or two short healthy habits are enough.",
+      "question": "O que fazes para ter hábitos saudáveis?",
+      "sampleAnswer": "Como fruta e durmo oito horas.",
+      "hints": ["bebo água", "faço exercício", "todos os dias", "legumes", "menos stress", "cedo"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-21",
+      "type": "build_phrase",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Tell your friend: You should go to bed early.",
+      "explanation": "With informal singular, «dever» is «deves». After «deves», use the infinitive, and the reflexive pronoun stays attached: «deitar-te».",
+      "answer": ["Deves", "deitar-te", "cedo."],
+      "distractors": ["deve", "durma", "tem"],
+      "acceptedAnswers": [
+        "Tu deves deitar-te cedo.",
+        "Deves-te deitar cedo.",
+        "Deves ir para a cama cedo."
+      ]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-22",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A doctor answers: «Duas vezes por semana.» Ask formally how often you should walk.",
+      "explanation": "To ask about frequency, use «Com que frequência». When you ask the doctor for advice about yourself, the verb is in the 1st person: «devo caminhar».",
+      "givenAnswer": "Duas vezes por semana.",
+      "answer": ["Com", "que", "frequência", "devo", "caminhar?"],
+      "distractors": ["deve", "quantas", "caminhas"],
+      "acceptedAnswers": [
+        "Com que frequência é que devo caminhar?",
+        "Quantas vezes por semana devo caminhar?"
+      ]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You are giving advice about stress. Fill the two gaps.",
+      "explanation": "«É melhor + infinitive» is a common pattern for advice. When two verbs follow it with «e», both stay in the infinitive: «falar» e «descansar».",
+      "template": "Se tens muito stress, ___ falar com o médico e ___ mais.",
+      "gaps": [
+        {
+          "answer": "é melhor"
+        },
+        {
+          "answer": "descansar"
+        }
+      ],
+      "wordBank": ["é melhor", "descansar", "deve", "descansa"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-24",
+      "type": "find_error",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «deve», Portuguese uses the infinitive: «deve descansar». «Descansas» is a present-tense form, not the infinitive.",
+      "sentence": ["O", "senhor", "deve", "descansas", "mais."],
+      "wrongIndex": 3,
+      "correction": "descansar",
+      "options": ["descansar", "descansa", "descanso"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-25",
+      "type": "translate_word",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "A common healthy-eating phrase is «fruta e legumes». In European Portuguese, «legumes» here means vegetables.",
+      "direction": "toTarget",
+      "sentence": "You should eat more **vegetables**.",
+      "word": "vegetables",
+      "answer": "legumes",
+      "options": ["legumes", "fruta", "açúcar", "água"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-26",
+      "type": "about_me",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use the present to describe your own routine or habits. One or two short actions are enough.",
+      "question": "O que fazes para dormir melhor?",
+      "sampleAnswer": "Janto cedo e desligo o telemóvel.",
+      "hints": ["durmo", "água", "livro", "relaxo", "às dez", "caminho"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-27",
+      "type": "build_phrase",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give formal advice to one patient: do not drink coffee at night.",
+      "explanation": "For formal negative advice, use «não» + the 3rd-person form: «não beba». «À noite» is the usual time expression here.",
+      "answer": ["Não", "beba", "café", "à", "noite."],
+      "distractors": ["bebes", "fume", "ao"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-28",
+      "type": "question_for_answer",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «É melhor desligar o telemóvel.» Ask him (informal) what is better to do before sleeping.",
+      "explanation": "To ask for advice with «é melhor», you can say «O que é melhor fazer...?». «Antes de dormir» gives the exact moment you are asking about.",
+      "givenAnswer": "É melhor desligar o telemóvel.",
+      "answer": ["O", "que", "é", "melhor", "fazer", "antes", "de", "dormir?"],
+      "distractors": ["quando", "devo", "desligar"],
+      "acceptedAnswers": [
+        "Antes de dormir, o que é melhor fazer?",
+        "O que é que é melhor fazer antes de dormir?"
+      ]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-29",
+      "type": "fill_gaps",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "You are advising Miguel. Fill the two gaps.",
+      "explanation": "With «tu», the positive command is «bebe», but negative advice is «não bebas». Learn this pair as a fixed imperative pattern.",
+      "template": "Miguel, ___ mais água e não ___ tantas bebidas com açúcar.",
+      "gaps": [
+        {
+          "answer": "bebe"
+        },
+        {
+          "answer": "bebas"
+        }
+      ],
+      "wordBank": ["bebe", "bebas", "beba", "bebes"]
+    },
+    {
+      "id": "pla-m5-healthy-habits-advice-30",
+      "type": "build_phrase",
+      "topicId": "pla-m5-healthy-habits-advice",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Give general advice: It is better to eat soup and salad at dinner.",
+      "explanation": "«É melhor + infinitive» gives neutral advice without saying who the person is. «Ao jantar» is the normal expression for ‘at dinner’.",
+      "answer": ["É", "melhor", "comer", "sopa", "e", "salada", "ao", "jantar."],
+      "distractors": ["deves", "beba", "no"]
+    }
+  ]
+}

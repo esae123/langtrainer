@@ -1,0 +1,526 @@
+{
+  "id": "pla-m7-perfeito-vs-imperfeito",
+  "moduleId": "m7",
+  "title": "Pretérito Perfeito vs Imperfeito",
+  "kind": "grammar",
+  "context": "In European Portuguese, choosing between the **Pretérito Perfeito Simples** and the **Pretérito Imperfeito** depends on how you view the past action:\n\n1. **Pretérito Perfeito**: Used for completed, punctual actions or events that happened at a specific moment in time.\n   - *No ano passado mudei-me para Portugal.* (Last year I moved to Portugal.)\n   - *Ontem fui às Finanças e tratei do NIF.* (Yesterday I went to Finanças and sorted out my NIF.)\n\n2. **Pretérito Imperfeito**: Used for past habits, repeated actions, ongoing background states, descriptions, age, and feelings.\n   - *Antigamente trabalhava num banco.* (In the past I used to work in a bank.)\n   - *Quando cheguei, não falava português.* (When I arrived, I didn't speak Portuguese.)\n\n**Common Time Markers:**\n- **Perfeito**: *ontem, na semana passada, em 2020, no ano passado, há X anos* (for a single event: *Há três anos cheguei a Lisboa*).\n- **Imperfeito**: *antigamente, dantes, quando era criança, normalmente, todos os dias*.\n\n**Watch out:** Sentences often combine both tenses! The Imperfeito describes the background state or ongoing action, while the Perfeito introduces a specific event that interrupted or happened during that time (*Quando vivia em Lisboa, comprei um carro*).",
+  "keyItems": [
+    {
+      "target": "no ano passado",
+      "support": "last year"
+    },
+    {
+      "target": "na semana passada",
+      "support": "last week"
+    },
+    {
+      "target": "antigamente",
+      "support": "in the past / formerly"
+    },
+    {
+      "target": "quando era criança",
+      "support": "when I was a child"
+    },
+    {
+      "target": "há três anos",
+      "support": "three years ago"
+    },
+    {
+      "target": "mudei-me",
+      "support": "I moved (completed)"
+    },
+    {
+      "target": "trabalhava",
+      "support": "used to work / was working"
+    },
+    {
+      "target": "falava",
+      "support": "used to speak / spoke (habitual)"
+    },
+    {
+      "target": "hoje em dia",
+      "support": "nowadays"
+    },
+    {
+      "target": "agora",
+      "support": "now"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-01",
+      "type": "translate_word",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Past habits or ongoing background states in the past require the Imperfeito («trabalhava»).",
+      "direction": "toTarget",
+      "sentence": "In Ukraine I **used to work** in a bank.",
+      "word": "used to work",
+      "answer": "trabalhava",
+      "options": ["trabalhava", "trabalhei", "trabalho", "trabalhar"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-02",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the sentence with the correct past tense forms.",
+      "explanation": "Use Perfeito («foi») for a specific finished action (ontem) and Imperfeito («fazia») for a past habit or custom (antigamente).",
+      "template": "Ontem a Fátima ___ às Finanças, mas antigamente ___ tudo na junta.",
+      "gaps": [
+        {
+          "answer": "foi"
+        },
+        {
+          "answer": "fazia"
+        }
+      ],
+      "wordBank": ["foi", "fazia", "ia", "fez", "são", "foram"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-03",
+      "type": "build_phrase",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Build the sentence: 'Last year I moved to Portugal.'",
+      "explanation": "Moving to a country is a completed action at a specific time, so use the Pretérito Perfeito «mudei-me».",
+      "answer": ["No", "ano", "passado", "mudei-me", "para", "Portugal."],
+      "distractors": ["mudava-me", "em", "por"],
+      "acceptedAnswers": ["No ano passado eu mudei-me para Portugal."]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-04",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Quando era criança, morava em Kiev.» Ask her (informal) where she used to live when she was a child.",
+      "explanation": "Habitual past states use the Imperfeito: «moravas» and «eras».",
+      "givenAnswer": "Quando era criança, morava em Kiev.",
+      "answer": ["Onde", "é", "que", "moravas", "quando", "eras", "criança?"],
+      "distractors": ["moraste", "foste", "vives"],
+      "acceptedAnswers": ["Onde moravas quando eras criança?"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-05",
+      "type": "find_error",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Buying a house «no ano passado» is a specific completed action, requiring the Perfeito («comprou»), not the Imperfeito («comprava»).",
+      "sentence": [
+        "No",
+        "ano",
+        "passado,",
+        "o",
+        "Ahmed",
+        "comprava",
+        "uma",
+        "casa",
+        "em",
+        "Lisboa."
+      ],
+      "wrongIndex": 5,
+      "correction": "comprou",
+      "options": ["comprou", "compra", "compravam"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-06",
+      "type": "build_phrase",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Build the sentence: 'When I arrived in Portugal, I didn't speak Portuguese.'",
+      "explanation": "Arriving («cheguei») is a completed event (Perfeito), while not speaking Portuguese («não falava») was an ongoing state (Imperfeito).",
+      "answer": ["Quando", "cheguei", "a", "Portugal,", "não", "falava", "português."],
+      "distractors": ["chegava", "falei", "em"],
+      "acceptedAnswers": ["Quando eu cheguei a Portugal, não falava português."]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the gaps with the right past tense forms.",
+      "explanation": "«Tirou» is a completed action at a specific time (em 2020), while «falava» describes an ongoing lack of language fluency back then.",
+      "template": "Em 2020, o Pedro ___ o NIF, mas ainda não ___ bem a língua.",
+      "gaps": [
+        {
+          "answer": "tirou"
+        },
+        {
+          "answer": "falava"
+        }
+      ],
+      "wordBank": ["tirou", "falava", "tirava", "falou", "tira", "fala"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-08",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Oksana answers: «Em 2022 trabalhei num restaurante.» Ask her (formal) where she worked in 2022.",
+      "explanation": "Formal register uses 3rd-person forms: «trabalhou» (the finished year 2022, as in her answer). «Onde trabalhava em 2022?» is also correct and accepted.",
+      "givenAnswer": "Em 2022 trabalhei num restaurante.",
+      "answer": ["Onde", "é", "que", "trabalhou", "em", "2022?"],
+      "distractors": ["trabalhaste", "trabalhas", "foi"],
+      "acceptedAnswers": [
+        "Onde trabalhou em 2022?",
+        "Onde é que trabalhava em 2022?",
+        "Onde trabalhava em 2022?",
+        "Onde é que a senhora trabalhou em 2022?"
+      ]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-09",
+      "type": "about_me",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about your past work or life before coming to Portugal.",
+      "explanation": "Use the Imperfeito to describe past habits, routines, or professions before moving.",
+      "question": "O que é que fazias no teu país antes de vir para Portugal?",
+      "sampleAnswer": "No meu país trabalhava num hospital e estudava.",
+      "hints": ["moro", "em", "uma", "loja", "banco", "escola", "era"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-10",
+      "type": "translate_word",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese form for the word in bold.",
+      "explanation": "Describing repeated customary actions in the past («In the past... used to wait») requires the Imperfeito form «esperavam».",
+      "direction": "toTarget",
+      "sentence": "In the past, people **used to wait** in long queues at the Loja do Cidadão.",
+      "word": "used to wait",
+      "answer": "esperavam",
+      "options": ["esperavam", "esperaram", "esperam", "esperar"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-11",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the contrast between past habit and completed action.",
+      "explanation": "Use Imperfeito («morava») for an ongoing past situation and Perfeito («mudou-se») for a completed action at a specific time («no ano passado»).",
+      "template": "Antigamente a Sunita ___ em Sintra, mas no ano passado ___ para Aveiro.",
+      "gaps": [
+        {
+          "answer": "morava"
+        },
+        {
+          "answer": "mudou-se"
+        }
+      ],
+      "wordBank": ["morava", "mudou-se", "morou", "mudava", "mora"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-12",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ali answers: «Antigamente não tinha cartão de residência.» Ask him (informal) if he had a residence card in the past.",
+      "explanation": "Ongoing state in the past asked informally: «Antigamente tinhas...?»",
+      "givenAnswer": "Antigamente não tinha cartão de residência.",
+      "answer": ["Antigamente", "tinhas", "cartão", "de", "residência?"],
+      "distractors": ["teve", "tiveste", "tem"],
+      "acceptedAnswers": [
+        "Tu tinhas cartão de residência antigamente?",
+        "Antigamente tu tinhas cartão de residência?",
+        "Tinhas cartão de residência antigamente?"
+      ]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-13",
+      "type": "find_error",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "Specific past time expressions like «na semana passada» require the Pretérito Perfeito («alugou»), not the Imperfeito («alugava»).",
+      "sentence": ["Na", "semana", "passada", "a", "Oksana", "alugava", "um", "apartamento."],
+      "wrongIndex": 5,
+      "correction": "alugou",
+      "options": ["alugou", "aluga", "alugavam"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-14",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the gaps with the proper past tense forms.",
+      "explanation": "«Chegou» is a completed action at a specific time (há três anos), while «conhecia» expresses a continuous background state.",
+      "template": "Há três anos a Li ___ a Lisboa e não ___ o SNS.",
+      "gaps": [
+        {
+          "answer": "chegou"
+        },
+        {
+          "answer": "conhecia"
+        }
+      ],
+      "wordBank": ["chegou", "conhecia", "chegava", "conhecem", "chega", "conhece"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-15",
+      "type": "build_phrase",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Build the sentence: 'Yesterday I went to CTT and paid the tax.'",
+      "explanation": "Both actions occurred yesterday and are completed, so both use the Pretérito Perfeito («fui», «paguei»). Note: «ir aos CTT».",
+      "answer": ["Ontem", "fui", "aos", "CTT", "e", "paguei", "o", "imposto."],
+      "distractors": ["ia", "pagava", "nos"],
+      "acceptedAnswers": ["Ontem eu fui aos CTT e paguei o imposto."]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Mariana answers: «Na semana passada assinei o contrato de arrendamento.» Ask her (informal) what she signed last week.",
+      "explanation": "For a completed action last week, ask informally with «assinaste».",
+      "givenAnswer": "Na semana passada assinei o contrato de arrendamento.",
+      "answer": ["O", "que", "é", "que", "assinaste", "na", "semana", "passada?"],
+      "distractors": ["assinavas", "assina", "assinou"],
+      "acceptedAnswers": ["O que assinaste na semana passada?"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-17",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete the sentence comparing the past habit with the present.",
+      "explanation": "Past habit takes Imperfeito («apanhava»), while present habit takes Presente («vou»).",
+      "template": "Antigamente eu ___ muito autocarro, mas hoje em dia ___ de metro.",
+      "gaps": [
+        {
+          "answer": "apanhava"
+        },
+        {
+          "answer": "vou"
+        }
+      ],
+      "wordBank": ["apanhava", "vou", "apanhei", "fui", "apanho", "ia"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-18",
+      "type": "translate_word",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese form for the word in bold.",
+      "explanation": "Past background states and habits are expressed with the Pretérito Imperfeito («morava»).",
+      "direction": "toTarget",
+      "sentence": "When I was young, I **used to live** near the sea.",
+      "word": "used to live",
+      "answer": "morava",
+      "options": ["morava", "morei", "moro", "morou"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-19",
+      "type": "build_phrase",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Build the sentence: 'When Raj was ten years old, he didn't like coffee.'",
+      "explanation": "Ages and ongoing likes/dislikes in the past are described using the Imperfeito («tinha», «não gostava»).",
+      "answer": ["Quando", "o", "Raj", "tinha", "dez", "anos,", "não", "gostava", "de", "café."],
+      "distractors": ["teve", "gostou", "com"],
+      "acceptedAnswers": ["Quando o Raj tinha dez anos não gostava de café."]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-20",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Pedro answers: «Ontem perdi o passe navegante.» Ask him (formal) what he lost yesterday.",
+      "explanation": "Losing an item is a single finished event in the past («perdeu» in 3rd person formal).",
+      "givenAnswer": "Ontem perdi o passe navegante.",
+      "answer": ["O", "que", "é", "que", "perdeu", "ontem?"],
+      "distractors": ["perdia", "perde", "perder"],
+      "acceptedAnswers": ["O que perdeu ontem?"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-21",
+      "type": "build_phrase",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Build the sentence: 'Last month João renewed his residence card.'",
+      "explanation": "«No mês passado» refers to a specific finished action, so we use Pretérito Perfeito («renovou»).",
+      "answer": [
+        "No",
+        "mês",
+        "passado,",
+        "o",
+        "João",
+        "renovou",
+        "o",
+        "cartão",
+        "de",
+        "residência."
+      ],
+      "distractors": ["renovava", "renovo", "um"],
+      "acceptedAnswers": [
+        "No mês passado o João renovou o cartão de residência.",
+        "No mês passado, o João renovou o seu cartão de residência."
+      ]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-22",
+      "type": "build_phrase",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Build the sentence: 'When Ana was a student, she lived in Porto.'",
+      "explanation": "Background facts and long-term ongoing states in the past use Imperfeito («era», «morava»). In Portugal, Porto takes a definite article («no Porto»).",
+      "answer": ["Quando", "a", "Ana", "era", "estudante,", "morava", "no", "Porto."],
+      "distractors": ["foi", "morou", "em"],
+      "acceptedAnswers": [
+        "Quando a Ana era estudante morava no Porto.",
+        "Quando era estudante, a Ana morava no Porto."
+      ]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-23",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Na semana passada fiz a inscrição no centro de saúde.» Ask him (informal) what he did last week.",
+      "explanation": "A specific past time window («na semana passada») requires the Pretérito Perfeito («fizeste»).",
+      "givenAnswer": "Na semana passada fiz a inscrição no centro de saúde.",
+      "answer": ["O", "que", "é", "que", "fizeste", "na", "semana", "passada?"],
+      "distractors": ["fazias", "fez", "fizeram"],
+      "acceptedAnswers": ["O que fizeste na semana passada?"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-24",
+      "type": "question_for_answer",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A neighbour answers: «Antigamente os meus filhos brincavam na praça todos os dias.» Ask her (formal) what her children used to do in the past.",
+      "explanation": "Use formal 3rd-person possessive («os seus filhos») and Pretérito Imperfeito («faziam») for past habits («antigamente»).",
+      "givenAnswer": "Antigamente os meus filhos brincavam na praça todos os dias.",
+      "answer": ["O", "que", "faziam", "os", "seus", "filhos", "antigamente?"],
+      "distractors": ["fizeram", "fazem", "teus"],
+      "acceptedAnswers": [
+        "O que é que os seus filhos faziam antigamente?",
+        "O que faziam antigamente os seus filhos?"
+      ]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-25",
+      "type": "fill_gaps",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence with Perfeito and Imperfeito.",
+      "explanation": "«Ontem … chegou» (Perfeito) is a single event; «havia» (Imperfeito of «haver») describes the situation he found at that moment.",
+      "template": "Ontem, quando o Raj ___ ao Centro de Saúde, ___ muitos utentes na sala.",
+      "gaps": [
+        {
+          "answer": "chegou"
+        },
+        {
+          "answer": "havia"
+        }
+      ],
+      "wordBank": ["chegou", "havia", "chegava", "houve", "chegam"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-26",
+      "type": "find_error",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Dantes» indicates a habitual past state or action, requiring Pretérito Imperfeito («comprava»), not Perfeito («comprou»).",
+      "sentence": ["Dantes", "a", "Mariana", "comprou", "pão", "na", "padaria", "da", "rua."],
+      "wrongIndex": 3,
+      "correction": "comprava",
+      "options": ["comprava", "compra", "compraram"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-27",
+      "type": "translate_word",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese form for the word in bold.",
+      "explanation": "«Ontem» indicates a completed action in the past, so use Pretérito Perfeito 1st person singular («liguei»).",
+      "direction": "toTarget",
+      "sentence": "Yesterday I **called** SNS 24 to ask for information.",
+      "word": "called",
+      "answer": "liguei",
+      "options": ["liguei", "ligava", "ligo", "ligou"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-28",
+      "type": "find_error",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Em 2019» marks one completed event (coming to Portugal), so use the Pretérito Perfeito of «vir»: «veio», not the Imperfeito «vinha».",
+      "sentence": ["Em", "2019", "o", "Ahmed", "vinha", "para", "Portugal", "sozinho."],
+      "wrongIndex": 4,
+      "correction": "veio",
+      "options": ["veio", "vem", "vieram"]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-29",
+      "type": "build_phrase",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Build the sentence: 'In 2021 Fátima visited Braga, but she lived in Lisbon.'",
+      "explanation": "«Visitou» is a completed event (Perfeito) during an ongoing background residency state («morava», Imperfeito).",
+      "answer": [
+        "Em",
+        "2021",
+        "a",
+        "Fátima",
+        "visitou",
+        "Braga,",
+        "mas",
+        "morava",
+        "em",
+        "Lisboa."
+      ],
+      "distractors": ["visitava", "morou", "de"],
+      "acceptedAnswers": [
+        "Em 2021 Fátima visitou Braga, mas morava em Lisboa.",
+        "Em 2021 a Fátima visitou Braga, mas vivia em Lisboa."
+      ]
+    },
+    {
+      "id": "pla-m7-perfeito-vs-imperfeito-30",
+      "type": "about_me",
+      "topicId": "pla-m7-perfeito-vs-imperfeito",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about what you did yesterday.",
+      "explanation": "Use Pretérito Perfeito («fui», «fiz», «comprei») for completed actions that took place yesterday.",
+      "question": "O que é que fizeste ontem?",
+      "sampleAnswer": "Ontem fui ao supermercado e fiz o jantar.",
+      "hints": ["comprei", "pão", "falei", "com", "amigos", "trabalhei"]
+    }
+  ]
+}

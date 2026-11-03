@@ -1,0 +1,518 @@
+{
+  "id": "pla-m8-opinions-agreement",
+  "moduleId": "m8",
+  "title": "Opinions, agreement and disagreement",
+  "kind": "situation",
+  "context": "Expressing your point of view, agreeing, disagreeing, and making cultural comparisons are essential social skills in Portugal.\n\n### Expressing an Opinion\n* **Acho que...** (I think that...): *Acho que Portugal é um país tranquilo.*\n* **Na minha opinião,...** (In my opinion,...): *Na minha opinião, a burocracia é difícil.*\n* **Para mim,...** (For me,...): *Para mim, o clima em Lisboa é ótimo.*\n\n### Agreeing & Disagreeing\n* **Concordo contigo!** (I agree with you! - informal)\n* **Concordo com o senhor / a senhora.** (I agree with you - formal)\n* **Tens razão. / Tem razão.** (You are right. - informal / formal)\n* **Não concordo com isso.** (I don't agree with that.)\n* **Não é bem assim.** (It's not quite like that.)\n* **Depende.** (It depends.)\n\n### Comparing Cultures\n* **No meu país é diferente porque...** (In my country it is different because...)\n* **É mais... do que...** (It is more... than...)\n* **É menos... do que...** (It is less... than...)\n\n> **Watch out!** Always include the definite article before possessives in European Portuguese (*a minha opinião*, *no meu país*).",
+  "keyItems": [
+    {
+      "target": "Acho que...",
+      "support": "I think that..."
+    },
+    {
+      "target": "Na minha opinião",
+      "support": "In my opinion"
+    },
+    {
+      "target": "Para mim",
+      "support": "For me"
+    },
+    {
+      "target": "Concordo contigo",
+      "support": "I agree with you (informal)"
+    },
+    {
+      "target": "Concordo com o senhor",
+      "support": "I agree with you (formal)"
+    },
+    {
+      "target": "Tens razão",
+      "support": "You are right (informal)"
+    },
+    {
+      "target": "Não concordo",
+      "support": "I don't agree"
+    },
+    {
+      "target": "Não é bem assim",
+      "support": "It is not quite like that"
+    },
+    {
+      "target": "Depende",
+      "support": "It depends"
+    },
+    {
+      "target": "No meu país",
+      "support": "In my country"
+    },
+    {
+      "target": "mais ... do que",
+      "support": "more ... than"
+    },
+    {
+      "target": "menos ... do que",
+      "support": "less ... than"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m8-opinions-agreement-01",
+      "type": "translate_word",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Opinião» means 'opinion'. «Na minha opinião» is a standard phrase for expressing your point of view.",
+      "direction": "toTarget",
+      "sentence": "In my **opinion**, Lisbon is very beautiful.",
+      "word": "opinion",
+      "answer": "opinião",
+      "options": ["opinião", "razão", "ideia", "verdade"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-02",
+      "type": "translate_word",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Concordo» comes from the verb «concordar» (to agree).",
+      "direction": "toTarget",
+      "sentence": "I **agree** with you.",
+      "word": "agree",
+      "answer": "Concordo",
+      "options": ["Concordo", "Penso", "Acho", "Falo"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-03",
+      "type": "match_pairs",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each phrase with its meaning.",
+      "explanation": "Expressing opinions and agreement uses fixed phrases like «tens razão» (you are right) or «não é bem assim».",
+      "pairs": [
+        {
+          "target": "Na minha opinião",
+          "support": "In my opinion"
+        },
+        {
+          "target": "Concordo contigo",
+          "support": "I agree with you (informal)"
+        },
+        {
+          "target": "Tens razão",
+          "support": "You are right (informal)"
+        },
+        {
+          "target": "Não é bem assim",
+          "support": "It is not quite like that"
+        }
+      ]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-04",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete with «achar» and a comparison: \"I think that life here is calmer than in my city.\"",
+      "explanation": "«Acho que» means 'I think that', and «mais... do que» means 'more... than'.",
+      "template": "___ que a vida aqui é ___ calma do que na minha cidade.",
+      "gaps": [
+        {
+          "answer": "Acho"
+        },
+        {
+          "answer": "mais"
+        }
+      ],
+      "wordBank": ["Acho", "mais", "Achas", "menos", "com", "de"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-05",
+      "type": "build_phrase",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Tell your friend you agree with him: I agree with you.",
+      "explanation": "With friends (informal «tu»), use «contigo» after «concordo»: «Concordo contigo.»",
+      "answer": ["Concordo", "contigo."],
+      "distractors": ["consigo", "com", "razão"],
+      "acceptedAnswers": ["Eu concordo contigo."]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-06",
+      "type": "build_phrase",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Tell an official formally that you agree: I agree with you.",
+      "explanation": "In formal situations, «with you» is «com o senhor / com a senhora» (or «consigo»), never «contigo».",
+      "answer": ["Concordo", "com", "o", "senhor."],
+      "distractors": ["contigo", "comigo", "razão"],
+      "acceptedAnswers": [
+        "Eu concordo com o senhor.",
+        "Concordo com a senhora.",
+        "Eu concordo com a senhora.",
+        "Concordo consigo.",
+        "Eu concordo consigo."
+      ]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-07",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague gives an opinion about Portugal: «Acho que Portugal é um país muito acolhedor.» Ask her (informal) what she thinks about Portugal.",
+      "explanation": "To ask someone's opinion informally, ask «O que (é que) achas de...?»",
+      "givenAnswer": "Acho que Portugal é um país muito acolhedor.",
+      "answer": ["O", "que", "é", "que", "achas", "de", "Portugal?"],
+      "distractors": ["como", "onde", "qual"],
+      "acceptedAnswers": ["O que achas de Portugal?", "O que é que tu achas de Portugal?"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Two friends (tu) are talking. Complete the reply: \"Yes, you are right!\"",
+      "explanation": "To tell a friend 'you are right', say «tens razão» (using «ter» with «tu»).",
+      "template": "— O transporte público é muito bom. — Pois é, ___ razão!",
+      "gaps": [
+        {
+          "answer": "tens"
+        }
+      ],
+      "wordBank": ["tens", "tem", "sou", "estás"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-09",
+      "type": "build_phrase",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Express your opinion in a meeting: In my opinion, it is important.",
+      "explanation": "«Na minha opinião» always takes the definite article before the possessive in European Portuguese: «a minha opinião».",
+      "answer": ["Na", "minha", "opinião,", "é", "importante."],
+      "distractors": ["meu", "da", "que", "são"],
+      "acceptedAnswers": ["Na minha opinião é importante."]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-10",
+      "type": "order_dialogue",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles"],
+      "prompt": "Put the conversation in order.",
+      "explanation": "The dialogue starts with «O que é que achas...?», then an opinion, agreement («Tens razão!») and a qualification («depende da hora»).",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "O que é que achas do autocarro em Lisboa?"
+        },
+        {
+          "speaker": "B",
+          "text": "Acho que é bom, mas às vezes atrasa-se."
+        },
+        {
+          "speaker": "A",
+          "text": "Tens razão! Nem sempre é pontual."
+        },
+        {
+          "speaker": "B",
+          "text": "Pois, depende da hora."
+        }
+      ]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-11",
+      "type": "find_error",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Opinião» is feminine («a opinião»), so use the feminine possessive: «Na minha opinião».",
+      "sentence": ["Na", "meu", "opinião,", "o", "clima", "é", "ótimo."],
+      "wrongIndex": 1,
+      "correction": "minha",
+      "options": ["minha", "meus", "minhas"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-12",
+      "type": "translate_word",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Depende» comes from the verb «depender» (it depends).",
+      "direction": "toTarget",
+      "sentence": "It **depends** on the schedule.",
+      "word": "depends",
+      "answer": "Depende",
+      "options": ["Depende", "Acho", "Concordo", "Parece"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-13",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete: \"In my country it is colder than in Portugal.\"",
+      "explanation": "Comparisons use «mais... do que» (more... than) or «menos... do que» (less... than).",
+      "template": "No meu país faz ___ frio ___ em Portugal.",
+      "gaps": [
+        {
+          "answer": "mais"
+        },
+        {
+          "answer": "do que"
+        }
+      ],
+      "wordBank": ["mais", "do que", "menos", "como", "de"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "An older classmate, whom you address formally, gives an opinion: «Na minha opinião, aprender português é fácil.» Ask him (formal) what his opinion is.",
+      "explanation": "To ask someone's opinion formally, ask «Qual é a sua opinião?» or «Qual é a opinião do senhor / da senhora?»",
+      "givenAnswer": "Na minha opinião, aprender português é fácil.",
+      "answer": ["Qual", "é", "a", "sua", "opinião?"],
+      "distractors": ["Como", "Onde", "Quem"],
+      "acceptedAnswers": ["Qual é a opinião do senhor?"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-15",
+      "type": "build_phrase",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Politely disagree with a friend: It is not quite like that.",
+      "explanation": "«Não é bem assim» is a standard polite phrase to state that something is not entirely accurate.",
+      "answer": ["Não", "é", "bem", "assim."],
+      "distractors": ["bom", "sim", "concordo"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Your friend agrees with you: «Concordo contigo!» Ask her (informal) if she agrees with you.",
+      "explanation": "The question for «tu» is «Concordas...?», and 'with me' is «comigo».",
+      "givenAnswer": "Concordo contigo!",
+      "answer": ["Concordas", "comigo?"],
+      "distractors": ["contigo", "consigo", "Achas"],
+      "acceptedAnswers": ["Tu concordas comigo?"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-17",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete: \"The rent is more expensive in the centre than in the suburbs.\"",
+      "explanation": "To compare characteristics between places, use «mais + adjective + do que».",
+      "template": "A renda da casa é ___ cara no centro ___ na periferia.",
+      "gaps": [
+        {
+          "answer": "mais"
+        },
+        {
+          "answer": "do que"
+        }
+      ],
+      "wordBank": ["mais", "do que", "menos", "como", "de"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-18",
+      "type": "build_phrase",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Explain cultural differences: In my country it is different.",
+      "explanation": "«No meu país» means 'In my country' («em + o = no»).",
+      "answer": ["No", "meu", "país", "é", "diferente."],
+      "distractors": ["na", "minha", "do", "que"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-19",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "An employee at Finanças says: «Sim, concordo com o senhor.» Ask him (formal) if he agrees with you.",
+      "explanation": "In formal situations, use 3rd-person «Concorda...?» and 'with me' «comigo».",
+      "givenAnswer": "Sim, concordo com o senhor.",
+      "answer": ["Concorda", "comigo?"],
+      "distractors": ["Concordas", "contigo", "achas"],
+      "acceptedAnswers": ["O senhor concorda comigo?", "A senhora concorda comigo?"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-20",
+      "type": "about_me",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Express your opinion about living in Portugal using «Acho que...» or «Na minha opinião,...»",
+      "question": "O que é que achas de morar em Portugal?",
+      "sampleAnswer": "Acho que Portugal é um país muito bonito e tranquilo.",
+      "hints": ["Na minha opinião", "gosto", "pessoas", "clima", "agradável", "bom"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-21",
+      "type": "translate_word",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese word for \"think\" in this opinion context.",
+      "explanation": "«Acho que...» is the most common way to say «I think that...» when expressing a personal opinion.",
+      "direction": "toTarget",
+      "sentence": "I **think** that learning Portuguese is important.",
+      "word": "think",
+      "answer": "acho",
+      "options": ["acho", "digo", "quero", "posso"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-22",
+      "type": "translate_word",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese word for \"right\" in \"You are right\".",
+      "explanation": "In Portuguese, «ter razão» means «to be right». So «Tens razão» means «You are right».",
+      "direction": "toTarget",
+      "sentence": "You are **right**, the food in Portugal is delicious.",
+      "word": "right",
+      "answer": "razão",
+      "options": ["razão", "certeza", "opinião", "dúvida"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete: \"For me, Portuguese is easier than German.\"",
+      "explanation": "«Para mim» means «for me». Comparisons of superiority use «mais ... do que» (more ... than).",
+      "template": "Para ___, a língua portuguesa é ___ fácil do que o alemão.",
+      "gaps": [
+        {
+          "answer": "mim"
+        },
+        {
+          "answer": "mais"
+        }
+      ],
+      "wordBank": ["mim", "mais", "eu", "menos", "comigo", "do"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-24",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Fill in the gaps in this conversation about agreeing.",
+      "explanation": "«Não concordo» means «I don't agree». Formal address uses «com o senhor» or «com a senhora».",
+      "template": "— Este plano é bom, não acha? — Não, não ___ com ___ senhor.",
+      "gaps": [
+        {
+          "answer": "concordo"
+        },
+        {
+          "answer": "o"
+        }
+      ],
+      "wordBank": ["concordo", "o", "concordas", "do", "acho", "a"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-25",
+      "type": "build_phrase",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: \"In my country it is cheaper than in Portugal.\"",
+      "explanation": "Use «No meu país» (em + o meu) and the comparative «é mais barato do que...».",
+      "answer": ["No", "meu", "país", "é", "mais", "barato", "do", "que", "em", "Portugal."],
+      "distractors": ["menos", "de", "da"],
+      "acceptedAnswers": [
+        "No meu país é mais barato que em Portugal.",
+        "No meu país, é mais barato do que em Portugal."
+      ]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-26",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate Sunita says: «Não concordo com essa ideia.» Ask her (informal) if she agrees with that idea.",
+      "explanation": "Ask «Concordas com essa ideia?» using the 2nd person singular («tu concordas»).",
+      "givenAnswer": "Não concordo com essa ideia.",
+      "answer": ["Concordas", "com", "essa", "ideia?"],
+      "distractors": ["Concorda", "Achas", "que"],
+      "acceptedAnswers": ["Tu concordas com essa ideia?", "Concordas com essa ideia ou não?"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-27",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Ahmed answers: «Acho que o curso de português é muito útil.» Ask him (informal) what he thinks about the course.",
+      "explanation": "To ask an informal opinion, use «O que é que achas do...?» or «O que achas do...?».",
+      "givenAnswer": "Acho que o curso de português é muito útil.",
+      "answer": ["O", "que", "é", "que", "achas", "do", "curso?"],
+      "distractors": ["pensa", "acha", "qual"],
+      "acceptedAnswers": [
+        "O que achas do curso?",
+        "O que é que achas do curso de português?",
+        "O que achas do curso de português?"
+      ]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-28",
+      "type": "find_error",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and select the correction.",
+      "explanation": "In European Portuguese, possessives take a definite article: «na minha opinião» (em + a), not «em minha opinião».",
+      "sentence": ["Em", "minha", "opinião,", "o", "trabalho", "é", "interessante."],
+      "wrongIndex": 0,
+      "correction": "Na",
+      "options": ["Na", "No", "Pela", "Com"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-29",
+      "type": "find_error",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and select the correction.",
+      "explanation": "With «tu» (informal), the correct verb form is «tens»: «tu tens razão». «Tem» is for 3rd person singular.",
+      "sentence": ["Tu", "tem", "razão,", "é", "um", "problema", "difícil."],
+      "wrongIndex": 1,
+      "correction": "tens",
+      "options": ["tens", "tendes", "têm", "ter"]
+    },
+    {
+      "id": "pla-m8-opinions-agreement-30",
+      "type": "about_me",
+      "topicId": "pla-m8-opinions-agreement",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself in Portuguese.",
+      "explanation": "Give your opinion using «Acho que...» and a comparison with «mais ... do que ...».",
+      "question": "Na tua opinião, Portugal é mais calmo do que o teu país?",
+      "sampleAnswer": "Sim, acho que Portugal é mais calmo do que o meu país.",
+      "hints": ["Na", "minha", "opinião", "menos", "diferente", "bastante", "simples"]
+    }
+  ]
+}

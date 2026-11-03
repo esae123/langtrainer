@@ -1,0 +1,565 @@
+{
+  "id": "pla-m8-holidays-traditions",
+  "moduleId": "m8",
+  "title": "Holidays, traditions and celebrations",
+  "kind": "vocabulary",
+  "context": "In this topic you learn vocabulary for holidays and celebrations in Portugal, and you compare them with traditions from your country. The goal is practical: understand the names of important days, say a simple wish, and ask how people celebrate.\n\n- `O 25 de Abril é feriado nacional.` — “25 April is a national holiday.”\n- `No Santo António, as pessoas comem sardinhas assadas.` — “On Saint Anthony’s Day, people eat grilled sardines.”\n- `No Porto, as pessoas festejam o São João em junho.` — “In Porto, people celebrate Saint John in June.”\n- `No Natal, muitas famílias comem bacalhau na consoada.` — “At Christmas, many families eat cod on Christmas Eve.”\n- `Boas Festas!` / `Feliz Ano Novo!` — common wishes at the end of the year.\n- `Como se festeja o Diwali no teu país?` — “How is Diwali celebrated in your country?”\n\nWatch out:\n- `feriado` is a public holiday; it is not the same as any party or festival.\n- Contractions are very common: `no Natal`, `no Porto`, `na consoada`, `do 25 de Abril`.",
+  "keyItems": [
+    {
+      "target": "feriado",
+      "support": "public holiday"
+    },
+    {
+      "target": "feriado nacional",
+      "support": "national holiday"
+    },
+    {
+      "target": "Páscoa",
+      "support": "Easter"
+    },
+    {
+      "target": "Natal",
+      "support": "Christmas"
+    },
+    {
+      "target": "consoada",
+      "support": "Christmas Eve dinner",
+      "note": "fixed cultural word"
+    },
+    {
+      "target": "bacalhau",
+      "support": "cod"
+    },
+    {
+      "target": "bolo-rei",
+      "support": "traditional Christmas cake"
+    },
+    {
+      "target": "Santos Populares",
+      "support": "June popular saints festivals",
+      "note": "cultural celebration"
+    },
+    {
+      "target": "Santo António",
+      "support": "Saint Anthony festival in Lisbon"
+    },
+    {
+      "target": "São João",
+      "support": "Saint John festival in Porto"
+    },
+    {
+      "target": "sardinhas assadas",
+      "support": "grilled sardines"
+    },
+    {
+      "target": "manjerico",
+      "support": "small basil pot sold at June festivals"
+    },
+    {
+      "target": "Feliz Natal!",
+      "support": "Merry Christmas!",
+      "note": "fixed wish"
+    },
+    {
+      "target": "Boas Festas!",
+      "support": "Season's greetings!",
+      "note": "fixed wish"
+    },
+    {
+      "target": "Feliz Ano Novo!",
+      "support": "Happy New Year!",
+      "note": "fixed wish"
+    },
+    {
+      "target": "Bom feriado!",
+      "support": "Have a good holiday!",
+      "note": "fixed wish"
+    },
+    {
+      "target": "Ramadão",
+      "support": "Ramadan"
+    },
+    {
+      "target": "Eid",
+      "support": "Eid"
+    },
+    {
+      "target": "Diwali",
+      "support": "Diwali"
+    },
+    {
+      "target": "Ano Novo Chinês",
+      "support": "Chinese New Year"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m8-holidays-traditions-01",
+      "type": "translate_word",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "A public holiday is «um feriado». To say «national holiday», add «nacional».",
+      "direction": "toTarget",
+      "sentence": "In Portugal, 25 April is a public **holiday**.",
+      "word": "holiday",
+      "answer": "feriado",
+      "options": ["feriado", "festival", "tradição", "desfile"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-02",
+      "type": "translate_word",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Portuguese uses the single word «Páscoa» for Easter. It is the name of the holiday.",
+      "direction": "toTarget",
+      "sentence": "Many families get together at **Easter**.",
+      "word": "Easter",
+      "answer": "Páscoa",
+      "options": ["Páscoa", "Natal", "Carnaval", "procissão"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-03",
+      "type": "translate_word",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "«Ano Novo Chinês» is a fixed name, so learn it as one chunk.",
+      "direction": "toTarget",
+      "sentence": "Some families celebrate **Chinese New Year** in Portugal.",
+      "word": "Chinese New Year",
+      "answer": "Ano Novo Chinês",
+      "options": ["Ano Novo Chinês", "Santo António", "Feliz Ano Novo", "feriado nacional"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-04",
+      "type": "match_pairs",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each wish with its meaning.",
+      "explanation": "These are common ready-made wishes. Learn them as fixed chunks.",
+      "pairs": [
+        {
+          "target": "Feliz Natal!",
+          "support": "Merry Christmas!"
+        },
+        {
+          "target": "Boas Festas!",
+          "support": "Season's greetings!"
+        },
+        {
+          "target": "Feliz Ano Novo!",
+          "support": "Happy New Year!"
+        },
+        {
+          "target": "Bom feriado!",
+          "support": "Have a good holiday!"
+        }
+      ]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps about Portugal.",
+      "explanation": "«Feriado» is the noun and «nacional» is the adjective. Together they mean «national holiday».",
+      "template": "O 25 de Abril é um ___ ___ em Portugal.",
+      "gaps": [
+        {
+          "answer": "feriado"
+        },
+        {
+          "answer": "nacional"
+        }
+      ],
+      "wordBank": ["feriado", "nacional", "tradicional", "religioso"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps about Santo António in Lisbon.",
+      "explanation": "A very common June tradition is to eat «sardinhas assadas» and buy a «manjerico».",
+      "template": "No Santo António muitas pessoas comem ___ assadas e compram ___.",
+      "gaps": [
+        {
+          "answer": "sardinhas"
+        },
+        {
+          "answer": "manjericos"
+        }
+      ],
+      "wordBank": ["sardinhas", "manjericos", "castanhas", "bolo-rei"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the two gaps about Christmas food in Portugal.",
+      "explanation": "These two foods are strongly associated with Portuguese Christmas: «bacalhau» for the meal and «bolo-rei» for the season.",
+      "template": "No Natal muitas famílias comem ___ na consoada e ___ durante a época festiva.",
+      "gaps": [
+        {
+          "answer": "bacalhau"
+        },
+        {
+          "answer": "bolo-rei"
+        }
+      ],
+      "wordBank": ["bacalhau", "bolo-rei", "sardinhas", "manjericos"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-08",
+      "type": "build_phrase",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Wish someone a happy new year: «Happy New Year!»",
+      "explanation": "This is a fixed wish used at the end of December and on 1 January.",
+      "answer": ["Feliz", "Ano", "Novo!"],
+      "distractors": ["Boas", "feriado", "Páscoa"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-09",
+      "type": "build_phrase",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «Today is a national holiday in Portugal.»",
+      "explanation": "Use «ser» to identify the day: «é feriado nacional».",
+      "answer": ["Hoje", "é", "feriado", "nacional", "em", "Portugal."],
+      "distractors": ["está", "no", "festeja"],
+      "acceptedAnswers": [
+        "Em Portugal hoje é feriado nacional.",
+        "Hoje é um feriado nacional em Portugal."
+      ]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-10",
+      "type": "build_phrase",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «On Saint Anthony's Day, people eat grilled sardines.»",
+      "explanation": "Use «no» because it is the contraction of «em + o»: «no Santo António».",
+      "answer": ["No", "Santo", "António", "as", "pessoas", "comem", "sardinhas", "assadas."],
+      "distractors": ["bebem", "ao", "manjericos"],
+      "acceptedAnswers": ["As pessoas comem sardinhas assadas no Santo António."]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-11",
+      "type": "build_phrase",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «At Christmas, many families eat cod at dinner on Christmas Eve.»",
+      "explanation": "«Consoada» is the usual Portuguese word for the Christmas Eve dinner.",
+      "answer": ["No", "Natal", "muitas", "famílias", "comem", "bacalhau", "na", "consoada."],
+      "distractors": ["do", "bebem", "sardinhas"],
+      "acceptedAnswers": ["Muitas famílias comem bacalhau na consoada no Natal."]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-12",
+      "type": "build_phrase",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: «In Porto, people celebrate São João in June.»",
+      "explanation": "For cities, use «em» with contraction where needed: «no Porto».",
+      "answer": ["No", "Porto", "as", "pessoas", "festejam", "o", "São", "João", "em", "junho."],
+      "distractors": ["ao", "festeja", "de"],
+      "acceptedAnswers": ["As pessoas festejam o São João em junho no Porto."]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-13",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A guide says: «Come-se bacalhau na consoada.» Ask, in neutral Portuguese, what people eat at dinner on Christmas Eve.",
+      "explanation": "«O que é que...?» is a very common European Portuguese pattern for asking about things.",
+      "givenAnswer": "Come-se bacalhau na consoada.",
+      "answer": ["O", "que", "é", "que", "se", "come", "na", "consoada?"],
+      "distractors": ["quando", "festeja", "onde", "comia"],
+      "acceptedAnswers": [
+        "O que se come na consoada?",
+        "O que comem muitas famílias na consoada?",
+        "O que é que as pessoas comem na consoada?",
+        "O que comem as pessoas na consoada?"
+      ]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate says: «Festeja-se em junho.» Ask when São João is celebrated.",
+      "explanation": "To ask about time, use «Quando» or «Em que mês». Both are natural here.",
+      "givenAnswer": "Festeja-se em junho.",
+      "answer": ["Quando", "é", "que", "se", "festeja", "o", "São", "João?"],
+      "distractors": ["onde", "come", "às", "pessoas"],
+      "acceptedAnswers": [
+        "Quando se festeja o São João?",
+        "Em que mês é que se festeja o São João?",
+        "Em que mês se festeja o São João?"
+      ]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate says: «No meu país, festejamos o Diwali com a família.» Ask your classmate (informal) how Diwali is celebrated in their country.",
+      "explanation": "You can learn «Como se festeja ... no teu país?» as a useful ready-made question.",
+      "givenAnswer": "No meu país, festejamos o Diwali com a família.",
+      "answer": ["Como", "se", "festeja", "o", "Diwali", "no", "teu", "país?"],
+      "distractors": ["quando", "onde", "Ramadão"],
+      "acceptedAnswers": ["Como é que se festeja o Diwali no teu país?"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-16",
+      "type": "find_error",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «consoada», the phrase is «na consoada» because it is «em + a».",
+      "sentence": ["No", "Natal", "muitas", "famílias", "comem", "bacalhau", "no", "consoada."],
+      "wrongIndex": 6,
+      "correction": "na",
+      "options": ["na", "do", "nos"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-17",
+      "type": "find_error",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «tu», regular verbs in the present often end in «-as»: «tu festejas».",
+      "sentence": ["Tu", "festeja", "o", "Carnaval", "com", "amigos?"],
+      "wrongIndex": 1,
+      "correction": "festejas",
+      "options": ["festejas", "festejo", "festejam"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-18",
+      "type": "about_me",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "You can answer with «No meu país...» and say who celebrates with you, what people eat, or what people do.",
+      "question": "Como se festeja uma data importante no teu país?",
+      "sampleAnswer": "No meu país, festejamos o Eid com a família.",
+      "hints": ["tradicionalmente", "há", "comida", "especial", "amigos", "orações"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-19",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Fill the three gaps with a common end-of-year wish.",
+      "explanation": "«Feliz Ano Novo!» is a fixed expression, so the three words stay together in this order.",
+      "template": "No fim do ano, muitas pessoas dizem: «___ ___ ___!»",
+      "gaps": [
+        {
+          "answer": "Feliz"
+        },
+        {
+          "answer": "Ano"
+        },
+        {
+          "answer": "Novo"
+        }
+      ],
+      "wordBank": ["Feliz", "Ano", "Novo", "Boas", "Páscoa", "feriado"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-20",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your colleague says: «Diz-se “Bom feriado!”.» Ask what people say before a public holiday.",
+      "explanation": "Use «O que se diz...?» to ask for the expression people normally use in a situation.",
+      "givenAnswer": "Diz-se «Bom feriado!».",
+      "answer": ["O", "que", "se", "diz", "antes", "de", "um", "feriado?"],
+      "distractors": ["quando", "boa", "festa"],
+      "acceptedAnswers": ["O que é que se diz antes de um feriado?"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-21",
+      "type": "translate_word",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Bacalhau» means cod. It is a very common food at Christmas in Portugal.",
+      "direction": "toTarget",
+      "sentence": "For Christmas dinner, Ahmed buys **cod**.",
+      "word": "cod",
+      "answer": "bacalhau",
+      "options": ["bacalhau", "bolo-rei", "manjerico", "feriado"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-22",
+      "type": "match_pairs",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each holiday word with its meaning or place.",
+      "explanation": "Some items are general words and some are specific Portuguese traditions. Learn them as ready-made cultural words.",
+      "pairs": [
+        {
+          "target": "feriado nacional",
+          "support": "national holiday"
+        },
+        {
+          "target": "consoada",
+          "support": "Christmas Eve dinner"
+        },
+        {
+          "target": "Santos Populares",
+          "support": "June popular saints festivals"
+        },
+        {
+          "target": "Santo António",
+          "support": "June festival in Lisbon"
+        },
+        {
+          "target": "São João",
+          "support": "June festival in Porto"
+        }
+      ]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-23",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete: \"Carnival is in February or March, depending on the year.\"",
+      "explanation": "Carnaval changes date, so in Portugal it can be in February or in March.",
+      "template": "O Carnaval é em ___ ou ___, conforme o ano.",
+      "gaps": [
+        {
+          "answer": "fevereiro"
+        },
+        {
+          "answer": "março"
+        }
+      ],
+      "wordBank": ["fevereiro", "março", "junho", "dezembro"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-24",
+      "type": "build_phrase",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that bolo-rei is a traditional Christmas cake.",
+      "explanation": "Use «é» to define something. «De Natal» means it is connected with Christmas.",
+      "answer": ["O", "bolo-rei", "é", "um", "bolo", "tradicional", "de", "Natal."],
+      "distractors": ["uma", "da", "está"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-25",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Festeja-se em fevereiro ou março.» Ask when Carnival is celebrated.",
+      "explanation": "To ask about time, use «Quando (é que) ...?». Here the verb is impersonal: «se festeja».",
+      "givenAnswer": "Festeja-se em fevereiro ou março.",
+      "answer": ["Quando", "é", "que", "se", "festeja", "o", "Carnaval?"],
+      "distractors": ["Onde", "Como", "come", "trabalha"],
+      "acceptedAnswers": ["Quando se festeja o Carnaval?"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-26",
+      "type": "find_error",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The article agrees with the noun after it: «doce» is masculine, so «um doce tradicional», not «uma doce».",
+      "sentence": ["O", "bolo-rei", "é", "uma", "doce", "tradicional."],
+      "wrongIndex": 3,
+      "correction": "um",
+      "options": ["um", "umas", "uns"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-27",
+      "type": "build_phrase",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say that Sunita celebrates Diwali with friends in Portugal.",
+      "explanation": "With a named person, use the 3rd person singular: «festeja». «Com amigos» tells you who she celebrates with.",
+      "answer": ["A", "Sunita", "festeja", "o", "Diwali", "com", "amigos", "em", "Portugal."],
+      "distractors": ["festejo", "na", "das"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-28",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Come-se bolo-rei.» Ask what traditional cake people eat at Christmas.",
+      "explanation": "Ask about the thing with «Que ...?». «No Natal» is the contraction of «em + o Natal».",
+      "givenAnswer": "Come-se bolo-rei.",
+      "answer": ["Que", "bolo", "tradicional", "se", "come", "no", "Natal?"],
+      "distractors": ["Quando", "bebe", "onde", "na"],
+      "acceptedAnswers": [
+        "Que bolo tradicional é que se come no Natal?",
+        "Qual é o bolo tradicional que se come no Natal?"
+      ]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-29",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about Ramadan and Eid.",
+      "explanation": "Eid (Eid al-Fitr) is celebrated at the end of Ramadan, the month of fasting: «Depois do Ramadão, … festejam o Eid».",
+      "template": "Depois do ___, muitos muçulmanos festejam o ___ com a família.",
+      "gaps": [
+        {
+          "answer": "Ramadão"
+        },
+        {
+          "answer": "Eid"
+        }
+      ],
+      "wordBank": ["Ramadão", "Eid", "Diwali", "Carnaval"]
+    },
+    {
+      "id": "pla-m8-holidays-traditions-30",
+      "type": "about_me",
+      "topicId": "pla-m8-holidays-traditions",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "You can answer with a celebration from your country. «Celebra-se» is useful when you talk about what people in general do.",
+      "question": "Que festa importante se celebra no teu país?",
+      "sampleAnswer": "No meu país, celebra-se o Diwali em família.",
+      "hints": ["Ramadão", "Eid", "Natal", "Páscoa", "importante", "com", "amigos"]
+    }
+  ]
+}

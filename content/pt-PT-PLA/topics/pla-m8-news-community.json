@@ -1,0 +1,541 @@
+{
+  "id": "pla-m8-news-community",
+  "moduleId": "m8",
+  "title": "News, society and community life",
+  "kind": "vocabulary",
+  "context": "**In this topic** you talk about short news texts and about community life in Portugal. You learn words for parts of a news item (*notícia, título, artigo, gráfico, entrevista*) and for social life (*comunidade, vizinhos, associação, voluntariado*). You also practise two very common patterns in simple news Portuguese: **Segundo a notícia...** (*According to the news item...*) and **O número de ... aumentou / diminuiu** (*The number of ... increased / decreased*).\n\nExamples:\n- **Leio o título primeiro.** — *I read the headline first.*\n- **Este artigo fala de integração.** — *This article talks about integration.*\n- **Há um gráfico no jornal.** — *There is a graph in the newspaper.*\n- **Os vizinhos participam na associação do bairro.** — *The neighbours take part in the neighbourhood association.*\n- **Faço voluntariado ao sábado.** — *I do voluntary work on Saturdays.*\n- **Segundo a notícia, o número de voluntários aumentou.** — *According to the news item, the number of volunteers increased.*\n\nWatch out:\n- After **o número de**, the verb is usually singular: **o número de alunos aumentou**.\n- **Direitos e deveres** is a fixed chunk: learn it together as “rights and duties”.",
+  "keyItems": [
+    {
+      "target": "a notícia",
+      "support": "news item / story"
+    },
+    {
+      "target": "o jornal",
+      "support": "newspaper"
+    },
+    {
+      "target": "o artigo",
+      "support": "article"
+    },
+    {
+      "target": "o título",
+      "support": "headline / title"
+    },
+    {
+      "target": "o gráfico",
+      "support": "graph / chart"
+    },
+    {
+      "target": "a entrevista",
+      "support": "interview"
+    },
+    {
+      "target": "a sociedade",
+      "support": "society"
+    },
+    {
+      "target": "a comunidade",
+      "support": "community"
+    },
+    {
+      "target": "os vizinhos",
+      "support": "neighbours"
+    },
+    {
+      "target": "a associação",
+      "support": "association"
+    },
+    {
+      "target": "o voluntariado",
+      "support": "voluntary work / volunteering"
+    },
+    {
+      "target": "a integração",
+      "support": "integration"
+    },
+    {
+      "target": "os direitos e deveres",
+      "support": "rights and duties"
+    },
+    {
+      "target": "Segundo a notícia,",
+      "support": "According to the news item,",
+      "note": "fixed news phrase"
+    },
+    {
+      "target": "O número de ... aumentou.",
+      "support": "The number of ... increased.",
+      "note": "verb normally singular after «o número de»"
+    },
+    {
+      "target": "O número de ... diminuiu.",
+      "support": "The number of ... decreased.",
+      "note": "verb normally singular after «o número de»"
+    },
+    {
+      "target": "encontrar casa",
+      "support": "to find housing"
+    },
+    {
+      "target": "aprender a língua",
+      "support": "to learn the language"
+    },
+    {
+      "target": "reconhecer diplomas",
+      "support": "to have diplomas recognised"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "pla-m8-news-community-01",
+      "type": "translate_word",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In news vocabulary, «título» is the headline or title of the text, not the whole article.",
+      "direction": "toTarget",
+      "sentence": "Read the **headline** first.",
+      "word": "headline",
+      "answer": "título",
+      "options": ["título", "artigo", "gráfico", "jornal"]
+    },
+    {
+      "id": "pla-m8-news-community-02",
+      "type": "translate_word",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Jornal» is the newspaper or news publication. An «entrevista» is just one kind of text inside it.",
+      "direction": "toTarget",
+      "sentence": "The local **newspaper** has an interview with the association.",
+      "word": "newspaper",
+      "answer": "jornal",
+      "options": ["jornal", "notícia", "artigo", "entrevista"]
+    },
+    {
+      "id": "pla-m8-news-community-03",
+      "type": "translate_word",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For a past change in a short news sentence, «aumentou» means «increased». «Diminuiu» means «decreased».",
+      "direction": "toTarget",
+      "sentence": "The number of volunteers **increased** this year.",
+      "word": "increased",
+      "answer": "aumentou",
+      "options": ["aumentou", "diminuiu", "aprendeu", "encontrou"]
+    },
+    {
+      "id": "pla-m8-news-community-04",
+      "type": "match_pairs",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 1,
+      "allowedModes": ["tiles"],
+      "prompt": "Match each Portuguese word with its meaning.",
+      "explanation": "These are basic words for reading simple news texts.",
+      "pairs": [
+        {
+          "target": "notícia",
+          "support": "news item"
+        },
+        {
+          "target": "jornal",
+          "support": "newspaper"
+        },
+        {
+          "target": "artigo",
+          "support": "article"
+        },
+        {
+          "target": "gráfico",
+          "support": "graph / chart"
+        },
+        {
+          "target": "entrevista",
+          "support": "interview"
+        }
+      ]
+    },
+    {
+      "id": "pla-m8-news-community-05",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete: \"According to the news item, the number of volunteers increased.\"",
+      "explanation": "After «Segundo a», you name the source. With «o número de», the verb normally stays singular: «aumentou».",
+      "template": "Segundo a ___, o número de voluntários ___.",
+      "gaps": [
+        {
+          "answer": "notícia"
+        },
+        {
+          "answer": "aumentou"
+        }
+      ],
+      "wordBank": ["notícia", "aumentou", "artigo", "diminuiu"]
+    },
+    {
+      "id": "pla-m8-news-community-06",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about community life.",
+      "explanation": "«Vizinhos» is plural, and «associação» is a common word for a local group in the neighbourhood.",
+      "template": "Os ___ participam numa ___ do bairro.",
+      "gaps": [
+        {
+          "answer": "vizinhos"
+        },
+        {
+          "answer": "associação"
+        }
+      ],
+      "wordBank": ["vizinhos", "associação", "título", "gráfico"]
+    },
+    {
+      "id": "pla-m8-news-community-07",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about integration.",
+      "explanation": "Two common chunks are «aprender a língua» and «ajuda na integração».",
+      "template": "Aprender a ___ ajuda na ___ e no trabalho.",
+      "gaps": [
+        {
+          "answer": "língua"
+        },
+        {
+          "answer": "integração"
+        }
+      ],
+      "wordBank": ["língua", "integração", "sociedade", "entrevista"]
+    },
+    {
+      "id": "pla-m8-news-community-08",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Complete the sentence about challenges for migrants.",
+      "explanation": "At this level, learn these as useful real-life chunks: «encontrar casa» and «reconhecer diplomas».",
+      "template": "Encontrar ___ e reconhecer ___ podem ser desafios.",
+      "gaps": [
+        {
+          "answer": "casa"
+        },
+        {
+          "answer": "diplomas"
+        }
+      ],
+      "wordBank": ["casa", "diplomas", "vizinhos", "título"]
+    },
+    {
+      "id": "pla-m8-news-community-09",
+      "type": "build_phrase",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: This article talks about integration in Portugal.",
+      "explanation": "Use «falar de» for the topic of a text: «O artigo fala de...».",
+      "answer": ["Este", "artigo", "fala", "de", "integração", "em", "Portugal."],
+      "distractors": ["jornal", "do", "está"],
+      "acceptedAnswers": [
+        "Este artigo fala sobre integração em Portugal.",
+        "Este artigo fala da integração em Portugal.",
+        "Este artigo fala sobre a integração em Portugal."
+      ]
+    },
+    {
+      "id": "pla-m8-news-community-10",
+      "type": "build_phrase",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: According to the news item, the number of volunteers decreased.",
+      "explanation": "«Segundo a notícia» means «according to the news item». After «o número de», the verb is singular: «diminuiu».",
+      "answer": ["Segundo", "a", "notícia,", "o", "número", "de", "voluntários", "diminuiu."],
+      "distractors": ["gráfico", "aumentou", "dos", "na"]
+    },
+    {
+      "id": "pla-m8-news-community-11",
+      "type": "build_phrase",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: The association helps migrants to learn the language.",
+      "explanation": "After «ajudar», Portuguese often uses «a + infinitive»: «ajuda ... a aprender».",
+      "answer": ["A", "associação", "ajuda", "os", "migrantes", "a", "aprender", "a", "língua."],
+      "distractors": ["comunidade", "fala", "no", "integração"]
+    },
+    {
+      "id": "pla-m8-news-community-12",
+      "type": "build_phrase",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Our neighbours do voluntary work in the community.",
+      "explanation": "In European Portuguese, possessives before a noun take the article: «os nossos vizinhos». «Na» is «em + a».",
+      "answer": ["Os", "nossos", "vizinhos", "fazem", "voluntariado", "na", "comunidade."],
+      "distractors": ["meus", "está", "do", "entrevista"]
+    },
+    {
+      "id": "pla-m8-news-community-13",
+      "type": "build_phrase",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Rights and duties are important in society.",
+      "explanation": "«Direitos e deveres» is a fixed pair. Because the subject is plural, the verb is «são».",
+      "answer": ["Os", "direitos", "e", "deveres", "são", "importantes", "na", "sociedade."],
+      "distractors": ["é", "de", "comunidade", "direito"],
+      "acceptedAnswers": ["Os direitos e os deveres são importantes na sociedade."]
+    },
+    {
+      "id": "pla-m8-news-community-14",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "You are looking at a text with a friend. Ask (informal): “Is it an article or an interview?”",
+      "explanation": "To offer two options, Portuguese uses «ou». Here you only need the two text types.",
+      "givenAnswer": "É uma entrevista.",
+      "answer": ["É", "um", "artigo", "ou", "uma", "entrevista?"],
+      "distractors": ["jornal", "gráfico", "título"],
+      "acceptedAnswers": ["Isto é um artigo ou uma entrevista?"]
+    },
+    {
+      "id": "pla-m8-news-community-15",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your classmate answers: «Segundo a notícia, aumentou.» Ask: “What happened to the number of volunteers?”",
+      "explanation": "To ask about a change, use «O que aconteceu ao ...?». «Ao» is the contraction of «a + o».",
+      "givenAnswer": "Segundo a notícia, aumentou.",
+      "answer": ["O", "que", "aconteceu", "ao", "número", "de", "voluntários?"],
+      "distractors": ["como", "na", "diminuiu", "jornal"],
+      "acceptedAnswers": ["O que é que aconteceu ao número de voluntários?"]
+    },
+    {
+      "id": "pla-m8-news-community-16",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "A teacher gives this answer: «Porque querem ajudar a comunidade.» Ask: “Why do the neighbours do voluntary work?”",
+      "explanation": "For a reason, ask with «Porque é que ...?». This is a very common spoken pattern.",
+      "givenAnswer": "Porque querem ajudar a comunidade.",
+      "answer": ["Porque", "é", "que", "os", "vizinhos", "fazem", "voluntariado?"],
+      "distractors": ["como", "ajudar", "associação", "trabalho"],
+      "acceptedAnswers": ["Porque fazem os vizinhos voluntariado?"]
+    },
+    {
+      "id": "pla-m8-news-community-17",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "At work, your colleague answers: «Fala dos desafios dos migrantes.» Ask: “What does the article talk about?”",
+      "explanation": "With «falar de», ask with «De que ...?». The very common spoken form is «De que é que fala ...?».",
+      "givenAnswer": "Fala dos desafios dos migrantes.",
+      "answer": ["De", "que", "é", "que", "fala", "o", "artigo?"],
+      "distractors": ["sobre", "entrevista", "notícia", "na"],
+      "acceptedAnswers": [
+        "De que fala o artigo?",
+        "De que é que o artigo fala?",
+        "De que o artigo fala?"
+      ]
+    },
+    {
+      "id": "pla-m8-news-community-18",
+      "type": "find_error",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The subject «os nossos vizinhos» is plural, so the verb must also be plural: «participam».",
+      "sentence": ["Os", "nossos", "vizinhos", "participa", "na", "associação."],
+      "wrongIndex": 3,
+      "correction": "participam",
+      "options": ["participam", "participas", "participamos"]
+    },
+    {
+      "id": "pla-m8-news-community-19",
+      "type": "find_error",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Notícia» is feminine, so the article is «a»: «segundo a notícia».",
+      "sentence": ["Segundo", "o", "notícia,", "o", "número", "de", "voluntários", "aumentou."],
+      "wrongIndex": 1,
+      "correction": "a",
+      "options": ["a", "os", "na"]
+    },
+    {
+      "id": "pla-m8-news-community-20",
+      "type": "about_me",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use a short real answer about your life. You can say yes and give an example, or say no.",
+      "question": "Participas em atividades da tua comunidade?",
+      "sampleAnswer": "Sim, ajudo numa associação do bairro.",
+      "hints": ["não", "faço", "voluntariado", "na", "escola", "com", "vizinhos"]
+    },
+    {
+      "id": "pla-m8-news-community-21",
+      "type": "translate_word",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 1,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In news texts, «gráfico» means a graph or chart. It is a masculine noun: «um gráfico».",
+      "direction": "toTarget",
+      "sentence": "There is a **graph** in the article about housing.",
+      "word": "graph",
+      "answer": "gráfico",
+      "options": ["gráfico", "título", "jornal", "entrevista"]
+    },
+    {
+      "id": "pla-m8-news-community-22",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete: \"According to the news item, the number of foreign students decreased this year.\"",
+      "explanation": "Use the fixed phrase «Segundo a notícia». After «o número de», the verb is usually singular: «diminuiu».",
+      "template": "Segundo a ___, o número de alunos estrangeiros ___ este ano.",
+      "gaps": [
+        {
+          "answer": "notícia"
+        },
+        {
+          "answer": "diminuiu"
+        }
+      ],
+      "wordBank": ["notícia", "diminuiu", "entrevista", "aumentou", "gráfico"]
+    },
+    {
+      "id": "pla-m8-news-community-23",
+      "type": "build_phrase",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Raj reads an article about migrants' challenges.",
+      "explanation": "Use «ler um artigo sobre ...». With the plural noun, Portuguese normally uses the article: «os desafios dos migrantes».",
+      "answer": ["O", "Raj", "lê", "um", "artigo", "sobre", "os", "desafios", "dos", "migrantes."],
+      "distractors": ["título", "na", "fala"],
+      "acceptedAnswers": ["Raj lê um artigo sobre os desafios dos migrantes."]
+    },
+    {
+      "id": "pla-m8-news-community-24",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your friend answers: «Leio o jornal ao pequeno-almoço.» Ask him (informal) what he reads at breakfast.",
+      "explanation": "To ask for the thing someone reads, use «O que». In European Portuguese, «é que» is also very common.",
+      "givenAnswer": "Leio o jornal ao pequeno-almoço.",
+      "answer": ["O", "que", "lês", "ao", "pequeno-almoço?"],
+      "distractors": ["Onde", "vês", "jornal"],
+      "acceptedAnswers": ["O que é que lês ao pequeno-almoço?"]
+    },
+    {
+      "id": "pla-m8-news-community-25",
+      "type": "find_error",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters"],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «o número de ...», the verb is usually singular. So we say «o número de pessoas aumentou».",
+      "sentence": ["O", "número", "de", "pessoas", "aumentaram", "no", "bairro."],
+      "wrongIndex": 4,
+      "correction": "aumentou",
+      "options": ["aumentou", "aumentei", "aumentamos"]
+    },
+    {
+      "id": "pla-m8-news-community-26",
+      "type": "build_phrase",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Say: Li does voluntary work with the neighbours on Saturdays.",
+      "explanation": "Use the chunk «fazer voluntariado». «Ao sábado» is a common European Portuguese way to talk about Saturdays in general.",
+      "answer": ["A", "Li", "faz", "voluntariado", "com", "os", "vizinhos", "ao", "sábado."],
+      "distractors": ["na", "fala", "somos"],
+      "acceptedAnswers": [
+        "Li faz voluntariado com os vizinhos ao sábado.",
+        "A Li faz voluntariado com os vizinhos aos sábados."
+      ]
+    },
+    {
+      "id": "pla-m8-news-community-27",
+      "type": "fill_gaps",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Complete: \"In the newspaper there is a graph and an interview about the community.\"",
+      "explanation": "«Gráfico» goes with the masculine article «um», and «entrevista» goes with the feminine article «uma».",
+      "template": "No jornal, há um ___ e uma ___ sobre a comunidade.",
+      "gaps": [
+        {
+          "answer": "gráfico"
+        },
+        {
+          "answer": "entrevista"
+        }
+      ],
+      "wordBank": ["gráfico", "entrevista", "título", "artigo"]
+    },
+    {
+      "id": "pla-m8-news-community-28",
+      "type": "question_for_answer",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 3,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Your neighbour answers: «Na associação do bairro.» Ask him (informal) where the neighbours do voluntary work.",
+      "explanation": "Use «Onde» to ask about place. In European Portuguese, the question can be «Onde é que ...?»",
+      "givenAnswer": "Na associação do bairro.",
+      "answer": ["Onde", "é", "que", "os", "vizinhos", "fazem", "voluntariado?"],
+      "distractors": ["Quando", "moram", "bairro"],
+      "acceptedAnswers": [
+        "Onde fazem voluntariado os vizinhos?",
+        "Onde fazem os vizinhos voluntariado?"
+      ]
+    },
+    {
+      "id": "pla-m8-news-community-29",
+      "type": "translate_word",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "letters", "typing"],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "«Os direitos e deveres» is a fixed chunk. Learn it together for everyday life, work and public services.",
+      "direction": "toTarget",
+      "sentence": "It is important to know your **rights and duties** in Portugal.",
+      "word": "rights and duties",
+      "answer": "os direitos e deveres",
+      "options": ["os direitos e deveres", "a sociedade", "a integração", "os vizinhos"]
+    },
+    {
+      "id": "pla-m8-news-community-30",
+      "type": "about_me",
+      "topicId": "pla-m8-news-community",
+      "difficulty": 2,
+      "allowedModes": ["tiles", "typing"],
+      "prompt": "Answer about yourself.",
+      "explanation": "You can answer with a short frequency expression plus an activity, for example about helping locally or not helping yet.",
+      "question": "Fazes voluntariado na tua comunidade?",
+      "sampleAnswer": "Às vezes ajudo na associação.",
+      "hints": ["bairro", "vizinhos", "sábado", "eventos", "participar"]
+    }
+  ]
+}

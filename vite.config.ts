@@ -39,6 +39,9 @@ export default defineConfig({
         ],
       },
       workbox: {
+        // The bundled courses are inlined into the main chunk (>2 MiB with three courses);
+        // it must still be precached for offline use.
+        maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'],
       },
       devOptions: {
