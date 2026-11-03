@@ -1,0 +1,1684 @@
+{
+  "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+  "moduleId": "m1",
+  "title": "Encounters, arrivals and unexpected events",
+  "kind": "vocabulary",
+  "context": "Phrasal verbs are central when describing unexpected encounters, arrivals, travel movements, and sudden occurrences.\n\n### Encounters & Arrivals\n- **bump into** (= run into): meet someone unexpectedly or accidentally hit something. *I bumped into an old classmate at the supermarket.*\n- **come across**: find or meet by chance; be understood or perceived in a certain way. *We came across a lovely little café in the old quarter.*\n- **come by**: obtain something rare, hard to get, or in a surprising way. *How did you come by such a rare antique coin?*\n- **come back**: return to a place; (of a team) recover and win; (of a fashion) become popular again. *Flared jeans have come back this year.*\n- **come in**: enter a room or arrive (train, plane). *The afternoon flight from Lisbon came in on schedule.*\n- **come over**: visit someone at their home, or move across a space towards someone. *Why don't you come over for dinner on Friday?*\n- **get in**: arrive in town or enter a vehicle. *Our train got in late because of the heavy snow.*\n\n### Movement & Transport\n- **get on / get off**: board or leave public transport (bus, train, plane); get off (work) = finish work; get on with = continue doing. *We got on at Central Station and got off three stops later.*\n- **get out**: leave a vehicle, building or other place; (of secret information) become known. *He got out of the taxi and ran into the terminal.*\n- **drop off**: take someone or something to a place and leave them there; (of sales, numbers) fall. *Can you drop me off near the library?*\n- **come through**: (of news, money, approval) arrive after waiting; keep a promise. *The official clearance finally came through today.*\n- **come down**: (of rain) fall heavily; (of a seller) lower the price. *It's really coming down outside.*\n\n### Unexpected Events & Situations\n- **come about**: happen as a result of events. *How did this surprising change of leadership come about?*\n- **come up**: arise unexpectedly or be mentioned. *I am sorry I cannot join you; an urgent issue has come up.*\n- **come down to**: depend essentially on a key point. *The decision comes down to budget and available time.*\n- **come off**: succeed as planned or become detached. *The surprise party came off brilliantly despite the rain.*\n- **come on**: (of a light or machine) start working; (of an illness) start to develop. *I can feel a cold coming on.*\n- **come out**: be published or released; (of the sun) appear. *Her new album comes out in May.*\n- **come to**: total (an amount); regain consciousness. *Lunch for four came to sixty euros.*\n- **come apart**: separate into pieces due to wear. *The vintage suitcase came apart at the seams.*\n- **float around**: circulate as a rumor or be somewhere nearby. *A rumor has been floating around about the merger.*\n- **go about**: approach or proceed with a task. *What is the best way to go about renewing my passport?*\n\n### Watch out!\n- **bump into** means to meet by accident; do not confuse with planned meetings.\n- **get on** and **get off** are used for buses, trains, and planes, whereas **get in** and **get out of** are used for cars and taxis.\n- **come to** can mean regain consciousness or total an amount of money.",
+  "keyItems": [
+    {
+      "target": "bump into",
+      "support": "meet unexpectedly or hit by accident"
+    },
+    {
+      "target": "come about",
+      "support": "happen as a result of events"
+    },
+    {
+      "target": "come across",
+      "support": "find or encounter by chance"
+    },
+    {
+      "target": "come apart",
+      "support": "separate into pieces due to poor condition"
+    },
+    {
+      "target": "come back",
+      "support": "return to a place, success, or popularity"
+    },
+    {
+      "target": "come by",
+      "support": "obtain something rare or surprising"
+    },
+    {
+      "target": "come down",
+      "support": "fall heavily (rain) or lower a price"
+    },
+    {
+      "target": "come down to",
+      "support": "depend essentially on a key point"
+    },
+    {
+      "target": "come in",
+      "support": "enter a room or arrive (train, plane)"
+    },
+    {
+      "target": "come off",
+      "support": "succeed as planned or become detached"
+    },
+    {
+      "target": "come on",
+      "support": "start operating, develop (illness), or encourage"
+    },
+    {
+      "target": "come out",
+      "support": "be published, appear (sun), or be revealed"
+    },
+    {
+      "target": "come over",
+      "support": "visit someone's home or move across a space"
+    },
+    {
+      "target": "come through",
+      "support": "receive official approval or deliver on a promise"
+    },
+    {
+      "target": "come to",
+      "support": "total an amount of money or regain consciousness"
+    },
+    {
+      "target": "come up",
+      "support": "arise unexpectedly or be mentioned in discussion"
+    },
+    {
+      "target": "drop off",
+      "support": "take someone to a destination or decline sharply"
+    },
+    {
+      "target": "float around",
+      "support": "circulate as a rumor or be somewhere nearby"
+    },
+    {
+      "target": "get in",
+      "support": "enter a vehicle or arrive at a destination"
+    },
+    {
+      "target": "get off",
+      "support": "disembark from public transit or finish work"
+    },
+    {
+      "target": "get on",
+      "support": "board public transport or continue with work"
+    },
+    {
+      "target": "get out",
+      "support": "leave an enclosed place or leak (news/secrets)"
+    },
+    {
+      "target": "go about",
+      "support": "approach or tackle a multi-step task"
+    }
+  ],
+  "coverage": {
+    "items": [
+      {
+        "id": "bump-into",
+        "phrase": "bump into"
+      },
+      {
+        "id": "come-about",
+        "phrase": "come about"
+      },
+      {
+        "id": "come-across",
+        "phrase": "come across"
+      },
+      {
+        "id": "come-apart",
+        "phrase": "come apart"
+      },
+      {
+        "id": "come-back",
+        "phrase": "come back"
+      },
+      {
+        "id": "come-by",
+        "phrase": "come by"
+      },
+      {
+        "id": "come-down",
+        "phrase": "come down"
+      },
+      {
+        "id": "come-down-to",
+        "phrase": "come down to"
+      },
+      {
+        "id": "come-in",
+        "phrase": "come in"
+      },
+      {
+        "id": "come-off",
+        "phrase": "come off"
+      },
+      {
+        "id": "come-on",
+        "phrase": "come on"
+      },
+      {
+        "id": "come-out",
+        "phrase": "come out"
+      },
+      {
+        "id": "come-over",
+        "phrase": "come over"
+      },
+      {
+        "id": "come-through",
+        "phrase": "come through"
+      },
+      {
+        "id": "come-to",
+        "phrase": "come to"
+      },
+      {
+        "id": "come-up",
+        "phrase": "come up"
+      },
+      {
+        "id": "drop-off",
+        "phrase": "drop off"
+      },
+      {
+        "id": "float-around",
+        "phrase": "float around"
+      },
+      {
+        "id": "get-in",
+        "phrase": "get in"
+      },
+      {
+        "id": "get-off",
+        "phrase": "get off"
+      },
+      {
+        "id": "get-on",
+        "phrase": "get on"
+      },
+      {
+        "id": "get-out",
+        "phrase": "get out"
+      },
+      {
+        "id": "go-about",
+        "phrase": "go about"
+      }
+    ],
+    "minimumExercisesPerItem": 2,
+    "assignments": {
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-01": "bump-into",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-24": "bump-into",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-02": "come-about",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-25": "come-about",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-03": "come-across",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-26": "come-across",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-04": "come-apart",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-27": "come-apart",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-05": "come-back",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-28": "come-back",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-06": "come-by",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-29": "come-by",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-07": "come-down",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-30": "come-down",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-08": "come-down-to",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-31": "come-down-to",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-09": "come-in",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-32": "come-in",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-10": "come-off",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-33": "come-off",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-11": "come-on",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-34": "come-on",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-12": "come-out",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-35": "come-out",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-13": "come-over",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-36": "come-over",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-14": "come-through",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-37": "come-through",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-15": "come-to",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-38": "come-to",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-16": "come-up",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-39": "come-up",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-17": "drop-off",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-40": "drop-off",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-18": "float-around",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-41": "float-around",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-19": "get-in",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-42": "get-in",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-20": "get-off",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-43": "get-off",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-21": "get-on",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-44": "get-on",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-22": "get-out",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-45": "get-out",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-23": "go-about",
+      "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-46": "go-about"
+    }
+  },
+  "exercises": [
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-01",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Bump into' (= 'run into') means to meet someone unexpectedly. Example: Guess who I bumped into at the airport this morning?",
+      "direction": "toTarget",
+      "sentence": "Guess who I **met by chance** at the airport this morning? My old professor!",
+      "word": "met by chance",
+      "answer": "bumped into",
+      "options": [
+        "bumped into",
+        "dropped off",
+        "got in",
+        "came over"
+      ],
+      "tags": [
+        "coverage:bump-into"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-02",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about how a dramatic change happened.",
+      "explanation": "'Come about' means to happen or take place, especially resulting from a sequence of events.",
+      "template": "Nobody understood how such a dramatic change had ___ ___ so quickly.",
+      "gaps": [
+        {
+          "answer": "come"
+        },
+        {
+          "answer": "about"
+        }
+      ],
+      "wordBank": [
+        "come",
+        "about",
+        "across",
+        "by",
+        "down"
+      ],
+      "tags": [
+        "coverage:come-about"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-03",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Come across' means to find or discover something by chance.",
+      "direction": "toTarget",
+      "sentence": "While sorting old books, we **found by chance** some rare family photographs.",
+      "word": "found by chance",
+      "answer": "came across",
+      "options": [
+        "came across",
+        "bumped into",
+        "came by",
+        "dropped off"
+      ],
+      "tags": [
+        "coverage:come-across"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-04",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that the old box fell to pieces in my hands (use a phrasal verb).",
+      "explanation": "'Come apart' means to separate into pieces because an object is fragile, old, or poorly constructed.",
+      "answer": [
+        "The",
+        "old",
+        "box",
+        "came",
+        "apart",
+        "in",
+        "my",
+        "hands."
+      ],
+      "distractors": [
+        "away",
+        "off",
+        "out"
+      ],
+      "acceptedAnswers": [
+        "The old box came apart in my hand."
+      ],
+      "tags": [
+        "coverage:come-apart"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-05",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about a sports team returning from behind to win.",
+      "explanation": "'Come back' means to return to success after trailing behind or facing hardship.",
+      "template": "The underdog team was losing 2–0 but managed to ___ ___ and win in the final minutes.",
+      "gaps": [
+        {
+          "answer": "come"
+        },
+        {
+          "answer": "back"
+        }
+      ],
+      "wordBank": [
+        "come",
+        "back",
+        "across",
+        "off",
+        "up"
+      ],
+      "tags": [
+        "coverage:come-back"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-06",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask your friend how they obtained that rare painting (use a phrasal verb).",
+      "explanation": "'Come by' means to acquire or obtain something that is rare, surprising, or difficult to find.",
+      "answer": [
+        "How",
+        "did",
+        "you",
+        "come",
+        "by",
+        "that",
+        "rare",
+        "painting?"
+      ],
+      "distractors": [
+        "about",
+        "off",
+        "along"
+      ],
+      "acceptedAnswers": [
+        "How did you come by this rare painting?"
+      ],
+      "tags": [
+        "coverage:come-by"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-07",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about torrential rain outside.",
+      "explanation": "When rain or snow 'comes down', it is falling heavily.",
+      "template": "We stayed indoors because the rain was really ___ ___.",
+      "gaps": [
+        {
+          "answer": "coming"
+        },
+        {
+          "answer": "down"
+        }
+      ],
+      "wordBank": [
+        "coming",
+        "down",
+        "off",
+        "through",
+        "out"
+      ],
+      "tags": [
+        "coverage:come-down"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-08",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that, in the end, success depends on consistent daily practice (use a phrasal verb).",
+      "explanation": "'Come down to' means to depend on or be reduced to the single most important factor.",
+      "answer": [
+        "Success",
+        "comes",
+        "down",
+        "to",
+        "consistent",
+        "daily",
+        "practice."
+      ],
+      "distractors": [
+        "up",
+        "about",
+        "by"
+      ],
+      "acceptedAnswers": [
+        "In the end, success comes down to consistent daily practice.",
+        "Success really comes down to consistent daily practice.",
+        "Success comes down to daily consistent practice."
+      ],
+      "tags": [
+        "coverage:come-down-to"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-09",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Come in' (similar: 'get in') means to arrive, especially for trains, buses, planes or ships. Example: What time will the express train come in?",
+      "direction": "toTarget",
+      "sentence": "Do you know what time the express train will **arrive** tonight?",
+      "word": "arrive",
+      "answer": "come in",
+      "options": [
+        "come in",
+        "come out",
+        "get off",
+        "drop off"
+      ],
+      "tags": [
+        "coverage:come-in"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-10",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence describing a plan that succeeded completely.",
+      "explanation": "'Come off' means to take place successfully or according to plan.",
+      "template": "Everyone was relieved when the daring rescue mission ___ ___ without a hitch.",
+      "gaps": [
+        {
+          "answer": "came"
+        },
+        {
+          "answer": "off"
+        }
+      ],
+      "wordBank": [
+        "came",
+        "off",
+        "out",
+        "by",
+        "down"
+      ],
+      "tags": [
+        "coverage:come-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-11",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about sensing an oncoming illness.",
+      "explanation": "'Come on' (usually continuous) describes an illness, headache, or pain starting to develop.",
+      "template": "I took vitamin C because I felt a sore throat ___ ___ yesterday.",
+      "gaps": [
+        {
+          "answer": "coming"
+        },
+        {
+          "answer": "on"
+        }
+      ],
+      "wordBank": [
+        "coming",
+        "on",
+        "off",
+        "out",
+        "up"
+      ],
+      "tags": [
+        "coverage:come-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-12",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Come out' means to be published, released, or made available to the public.",
+      "direction": "toTarget",
+      "sentence": "The author's highly anticipated second novel will **be published** next Tuesday.",
+      "word": "be published",
+      "answer": "come out",
+      "options": [
+        "come out",
+        "come in",
+        "come on",
+        "come through"
+      ],
+      "tags": [
+        "coverage:come-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-13",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask your friend if they would like to visit you at your home this evening (use a phrasal verb).",
+      "explanation": "'Come over' means to visit someone at their house or apartment.",
+      "givenAnswer": "I would love to, thank you!",
+      "answer": [
+        "Would",
+        "you",
+        "like",
+        "to",
+        "come",
+        "over",
+        "this",
+        "evening?"
+      ],
+      "distractors": [
+        "about",
+        "off",
+        "away"
+      ],
+      "acceptedAnswers": [
+        "Would you like to come over tonight?",
+        "Do you want to come over this evening?",
+        "Do you want to come over tonight?",
+        "Would you like to come round this evening?",
+        "Would you like to come around this evening?"
+      ],
+      "tags": [
+        "coverage:come-over"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-14",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about finally receiving official mortgage approval.",
+      "explanation": "When official clearance, money, or permission 'comes through', it is received after waiting.",
+      "template": "We signed the contract because the bank loan finally ___ ___ yesterday.",
+      "gaps": [
+        {
+          "answer": "came"
+        },
+        {
+          "answer": "through"
+        }
+      ],
+      "wordBank": [
+        "came",
+        "through",
+        "across",
+        "about",
+        "out"
+      ],
+      "tags": [
+        "coverage:come-through"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-15",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Come to' means to total a specific monetary sum.",
+      "direction": "toTarget",
+      "sentence": "The entire restaurant bill for appetizers, mains, and dessert **totaled** ninety euros.",
+      "word": "totaled",
+      "answer": "came to",
+      "options": [
+        "came to",
+        "came in",
+        "got in",
+        "went about"
+      ],
+      "tags": [
+        "coverage:come-to"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-16",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about an unexpected issue that prevented attendance.",
+      "explanation": "When an unexpected problem 'comes up', it arises suddenly and needs attention.",
+      "template": "I cannot make lunch because an unexpected urgent matter has ___ ___ at work.",
+      "gaps": [
+        {
+          "answer": "come"
+        },
+        {
+          "answer": "up"
+        }
+      ],
+      "wordBank": [
+        "come",
+        "up",
+        "down",
+        "across",
+        "off"
+      ],
+      "tags": [
+        "coverage:come-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-17",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Drop off' means to take someone or something to a place and leave them there. Example: Luis dropped off his laundry at the cleaners.",
+      "direction": "toTarget",
+      "sentence": "Luis **left** his laundry at the cleaners on his way to work.",
+      "word": "left",
+      "answer": "dropped off",
+      "options": [
+        "dropped off",
+        "picked up",
+        "came by",
+        "got off"
+      ],
+      "tags": [
+        "coverage:drop-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-18",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about an unconfirmed rumor spreading through the team.",
+      "explanation": "When rumors or ideas are 'floating around', they are being informally discussed in an organization.",
+      "template": "There is an unconfirmed rumor ___ ___ the office regarding budget cuts.",
+      "gaps": [
+        {
+          "answer": "floating"
+        },
+        {
+          "answer": "around"
+        }
+      ],
+      "wordBank": [
+        "floating",
+        "around",
+        "coming",
+        "out",
+        "off"
+      ],
+      "tags": [
+        "coverage:float-around"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-19",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask your colleague what time their flight arrives (use a phrasal verb).",
+      "explanation": "'Get in' means to arrive at a destination, particularly for flights or trains.",
+      "givenAnswer": "It lands at quarter past eight.",
+      "answer": [
+        "What",
+        "time",
+        "does",
+        "your",
+        "flight",
+        "get",
+        "in?"
+      ],
+      "distractors": [
+        "off",
+        "out",
+        "away"
+      ],
+      "acceptedAnswers": [
+        "When does your flight get in?",
+        "What time does your flight come in?",
+        "When does your flight come in?"
+      ],
+      "tags": [
+        "coverage:get-in"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-20",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about leaving the commuter train.",
+      "explanation": "You 'get off' a train, bus, or plane. 'Get out' is used with 'of' for cars or enclosed rooms.",
+      "sentence": [
+        "We",
+        "need",
+        "to",
+        "get",
+        "out",
+        "the",
+        "train",
+        "here."
+      ],
+      "wrongIndex": 4,
+      "correction": "off",
+      "options": [
+        "off",
+        "in",
+        "down"
+      ],
+      "tags": [
+        "coverage:get-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-21",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Politely tell passengers to board the train before the doors close (use a phrasal verb).",
+      "explanation": "'Get on' means to board public transit such as a train, metro, bus, or airplane.",
+      "answer": [
+        "Please",
+        "get",
+        "on",
+        "the",
+        "train",
+        "before",
+        "the",
+        "doors",
+        "close."
+      ],
+      "distractors": [
+        "in",
+        "off",
+        "out"
+      ],
+      "acceptedAnswers": [
+        "Get on the train before the doors close.",
+        "Please get on the train before the doors shut."
+      ],
+      "tags": [
+        "coverage:get-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-22",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about confidential meeting details leaking to journalists.",
+      "explanation": "When confidential information 'gets out', it becomes known to unauthorized people.",
+      "template": "We will face strict penalties if this confidential data ___ ___ to the press.",
+      "gaps": [
+        {
+          "answer": "gets"
+        },
+        {
+          "answer": "out"
+        }
+      ],
+      "wordBank": [
+        "gets",
+        "out",
+        "off",
+        "in",
+        "on"
+      ],
+      "tags": [
+        "coverage:get-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-23",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that you don't know how to start the process of applying (use a phrasal verb).",
+      "explanation": "'Go about' means to begin or carry out the necessary steps to accomplish a task.",
+      "answer": [
+        "I",
+        "don't",
+        "know",
+        "how",
+        "to",
+        "go",
+        "about",
+        "applying."
+      ],
+      "distractors": [
+        "around",
+        "across",
+        "along"
+      ],
+      "acceptedAnswers": [
+        "I do not know how to go about applying."
+      ],
+      "tags": [
+        "coverage:go-about"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-24",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that you accidentally hit the doorframe in the dark (use a phrasal verb).",
+      "explanation": "'Bump into' also means to physically collide with or hit an object accidentally.",
+      "answer": [
+        "I",
+        "bumped",
+        "into",
+        "the",
+        "doorframe",
+        "in",
+        "the",
+        "dark."
+      ],
+      "distractors": [
+        "across",
+        "apart",
+        "by"
+      ],
+      "acceptedAnswers": [
+        "I bumped into the door frame in the dark.",
+        "I accidentally bumped into the doorframe in the dark.",
+        "I ran into the doorframe in the dark."
+      ],
+      "tags": [
+        "coverage:bump-into"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-25",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence explaining how the breakthrough occurred.",
+      "explanation": "'Come about' means to happen or take place. 'Come around' means to visit or change one's mind.",
+      "sentence": [
+        "Major",
+        "advances",
+        "in",
+        "medicine",
+        "have",
+        "come",
+        "around",
+        "recently."
+      ],
+      "wrongIndex": 6,
+      "correction": "about",
+      "options": [
+        "about",
+        "across",
+        "along"
+      ],
+      "tags": [
+        "coverage:come-about"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-26",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about how a speaker was perceived by the audience.",
+      "explanation": "When something you say 'comes across' in a certain way, it is perceived or received that way by others.",
+      "template": "His nervous opening remarks did not ___ ___ well with the listeners.",
+      "gaps": [
+        {
+          "answer": "come"
+        },
+        {
+          "answer": "across"
+        }
+      ],
+      "wordBank": [
+        "come",
+        "across",
+        "down",
+        "about",
+        "by"
+      ],
+      "tags": [
+        "coverage:come-across"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-27",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence describing a delicate manuscript.",
+      "explanation": "'Come apart' means to separate into pieces or disintegrate. 'Come down' means to fall or descend.",
+      "sentence": [
+        "Handle",
+        "this",
+        "delicate",
+        "manuscript",
+        "carefully;",
+        "it",
+        "is",
+        "coming",
+        "down."
+      ],
+      "wrongIndex": 8,
+      "correction": "apart",
+      "options": [
+        "apart",
+        "about",
+        "along"
+      ],
+      "tags": [
+        "coverage:come-apart"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-28",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "When a style or trend 'comes back', it becomes fashionable and popular again.",
+      "direction": "toTarget",
+      "sentence": "Many retro fashion styles from the nineties **become popular again** every few decades.",
+      "word": "become popular again",
+      "answer": "come back",
+      "options": [
+        "come back",
+        "come out",
+        "come on",
+        "come through"
+      ],
+      "tags": [
+        "coverage:come-back"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-29",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence explaining how scarce affordable flats are.",
+      "explanation": "'Come by' is commonly used to describe acquiring something difficult to get.",
+      "template": "Affordable flats in the historic city center are very hard to ___ ___ nowadays.",
+      "gaps": [
+        {
+          "answer": "come"
+        },
+        {
+          "answer": "by"
+        }
+      ],
+      "wordBank": [
+        "come",
+        "by",
+        "about",
+        "off",
+        "to"
+      ],
+      "tags": [
+        "coverage:come-by"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-30",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Come down' means to lower or reduce an asking price or demand.",
+      "direction": "toTarget",
+      "sentence": "The seller refused to **lower the asking price** even after prolonged negotiation.",
+      "word": "lower the asking price",
+      "answer": "come down",
+      "options": [
+        "come down",
+        "come off",
+        "drop off",
+        "come to"
+      ],
+      "tags": [
+        "coverage:come-down"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-31",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence identifying the decisive factor in the hiring choice.",
+      "explanation": "'Come down to' expresses that the core issue or determining element is a specific point.",
+      "template": "In the end, the final hiring decision will ___ ___ ___ relevant experience.",
+      "gaps": [
+        {
+          "answer": "come"
+        },
+        {
+          "answer": "down"
+        },
+        {
+          "answer": "to"
+        }
+      ],
+      "wordBank": [
+        "come",
+        "down",
+        "to",
+        "up",
+        "with",
+        "about"
+      ],
+      "tags": [
+        "coverage:come-down-to"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-32",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Welcome a colleague warmly into your workspace.",
+      "explanation": "'Come in' means to enter a room, building, or office.",
+      "answer": [
+        "Please",
+        "come",
+        "in",
+        "and",
+        "take",
+        "a",
+        "seat."
+      ],
+      "distractors": [
+        "out",
+        "off",
+        "away"
+      ],
+      "tags": [
+        "coverage:come-in"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-33",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about a label that became detached.",
+      "explanation": "'Come off' means to become detached from something. Example: The label came off when I washed the jar.",
+      "sentence": [
+        "The",
+        "label",
+        "came",
+        "across",
+        "when",
+        "I",
+        "washed",
+        "the",
+        "jar."
+      ],
+      "wrongIndex": 3,
+      "correction": "off",
+      "options": [
+        "off",
+        "about",
+        "by"
+      ],
+      "tags": [
+        "coverage:come-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-34",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Come on' means to start functioning or operating, especially automatically.",
+      "direction": "toTarget",
+      "sentence": "The streetlamps automatically **start operating** as soon as dusk falls.",
+      "word": "start operating",
+      "answer": "come on",
+      "options": [
+        "come on",
+        "go off",
+        "come out",
+        "get in"
+      ],
+      "tags": [
+        "coverage:come-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-35",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that the sun appeared after the morning storm (use a phrasal verb).",
+      "explanation": "When the sun 'comes out', clouds part and sunshine becomes visible.",
+      "answer": [
+        "The",
+        "sun",
+        "came",
+        "out",
+        "after",
+        "the",
+        "morning",
+        "storm."
+      ],
+      "distractors": [
+        "off",
+        "down",
+        "into"
+      ],
+      "tags": [
+        "coverage:come-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-36",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about a colleague crossing the open-plan office.",
+      "explanation": "'Come over' means to move across a room or space toward where you are.",
+      "template": "As soon as he noticed me across the office, he ___ ___ to my desk to say hello.",
+      "gaps": [
+        {
+          "answer": "came"
+        },
+        {
+          "answer": "over"
+        }
+      ],
+      "wordBank": [
+        "came",
+        "over",
+        "off",
+        "about",
+        "apart"
+      ],
+      "tags": [
+        "coverage:come-over"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-37",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Come through' means to do what you promised. Example: Despite severe delays, our supplier came through and delivered on time.",
+      "direction": "toTarget",
+      "sentence": "Despite severe delays, our supplier **kept its promise** and delivered our order on time.",
+      "word": "kept its promise",
+      "answer": "came through",
+      "options": [
+        "came through",
+        "came about",
+        "came down",
+        "got out"
+      ],
+      "tags": [
+        "coverage:come-through"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-38",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that he slowly regained consciousness in the ambulance (use a phrasal verb).",
+      "explanation": "'Come to' means to regain consciousness after fainting or being injured.",
+      "answer": [
+        "He",
+        "slowly",
+        "came",
+        "to",
+        "in",
+        "the",
+        "ambulance."
+      ],
+      "distractors": [
+        "up",
+        "out",
+        "by"
+      ],
+      "acceptedAnswers": [
+        "He slowly came round in the ambulance.",
+        "He slowly came around in the ambulance."
+      ],
+      "tags": [
+        "coverage:come-to"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-39",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your colleague tells you about the board meeting. Ask them why your proposal was mentioned there (use a phrasal verb).",
+      "explanation": "When a topic or name 'comes up', it is mentioned or introduced into discussion.",
+      "givenAnswer": "The director was impressed by your proposal and wanted to highlight it.",
+      "answer": [
+        "Why",
+        "did",
+        "my",
+        "proposal",
+        "come",
+        "up?"
+      ],
+      "distractors": [
+        "down",
+        "about",
+        "off"
+      ],
+      "acceptedAnswers": [
+        "Why did my proposal come up at the meeting?",
+        "Why did my proposal come up in the meeting?",
+        "Why did my proposal come up during the meeting?"
+      ],
+      "tags": [
+        "coverage:come-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-40",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that concert ticket sales fell sharply after Christmas (use a phrasal verb).",
+      "explanation": "'Drop off' means to decline sharply in sales, numbers, or activity.",
+      "answer": [
+        "Concert",
+        "ticket",
+        "sales",
+        "dropped",
+        "off",
+        "sharply",
+        "after",
+        "Christmas."
+      ],
+      "distractors": [
+        "out",
+        "by",
+        "down"
+      ],
+      "acceptedAnswers": [
+        "Sales of concert tickets dropped off sharply after Christmas."
+      ],
+      "tags": [
+        "coverage:drop-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-41",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that the spare keys are somewhere here, but you don't know exactly where (use a phrasal verb).",
+      "explanation": "When an item is 'floating around', it is somewhere nearby, though you do not know the exact spot.",
+      "answer": [
+        "The",
+        "spare",
+        "keys",
+        "are",
+        "floating",
+        "around",
+        "here",
+        "somewhere."
+      ],
+      "distractors": [
+        "off",
+        "out",
+        "away"
+      ],
+      "acceptedAnswers": [
+        "The spare keys are floating around somewhere here.",
+        "The spare keys are floating about here somewhere."
+      ],
+      "tags": [
+        "coverage:float-around"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-42",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Get in' means to enter an enclosed vehicle, such as a car, taxi, or boat.",
+      "direction": "toTarget",
+      "sentence": "Hurry up and **enter the vehicle** before the heavy storm starts.",
+      "word": "enter the vehicle",
+      "answer": "get in",
+      "options": [
+        "get in",
+        "get off",
+        "get out",
+        "come down"
+      ],
+      "tags": [
+        "coverage:get-in"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-43",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about finishing your work shift on Friday.",
+      "explanation": "'Get off' (or 'get off work') means to complete work and leave the workplace.",
+      "template": "I normally ___ ___ work at five o'clock on Fridays.",
+      "gaps": [
+        {
+          "answer": "get"
+        },
+        {
+          "answer": "off"
+        }
+      ],
+      "wordBank": [
+        "get",
+        "off",
+        "out",
+        "in",
+        "on"
+      ],
+      "tags": [
+        "coverage:get-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-44",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Get on with' means to continue or proceed with doing one's work.",
+      "direction": "toTarget",
+      "sentence": "We should stop chatting and **continue with** our work.",
+      "word": "continue with",
+      "answer": "get on with",
+      "options": [
+        "get on with",
+        "come down to",
+        "come across",
+        "get off"
+      ],
+      "tags": [
+        "coverage:get-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-45",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that we smelled gas and quickly left the building (use a phrasal verb).",
+      "explanation": "'Get out (of)' means to leave or escape from a place. Example: We smelled gas and quickly got out of the building.",
+      "answer": [
+        "We",
+        "smelled",
+        "gas",
+        "and",
+        "quickly",
+        "got",
+        "out",
+        "of",
+        "the",
+        "building."
+      ],
+      "distractors": [
+        "off",
+        "in",
+        "on"
+      ],
+      "acceptedAnswers": [
+        "We smelt gas and quickly got out of the building.",
+        "We smelled gas and got out of the building quickly.",
+        "We smelt gas and got out of the building quickly."
+      ],
+      "tags": [
+        "coverage:get-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-46",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your friend has decided to open a café. Ask her how she will tackle the steps of opening it (use a phrasal verb).",
+      "explanation": "'Go about' something means to do the steps needed to do it. Example: How will you go about opening the café?",
+      "givenAnswer": "First I'll write a business plan, then I'll look for a small place to rent.",
+      "answer": [
+        "How",
+        "will",
+        "you",
+        "go",
+        "about",
+        "opening",
+        "the",
+        "café?"
+      ],
+      "distractors": [
+        "around",
+        "along",
+        "across"
+      ],
+      "acceptedAnswers": [
+        "How will you go about opening the cafe?",
+        "How are you going to go about opening the café?",
+        "How are you going to go about opening the cafe?",
+        "How will you go about opening it?",
+        "How are you going to go about it?"
+      ],
+      "tags": [
+        "coverage:go-about"
+      ]
+    }
+  ]
+}

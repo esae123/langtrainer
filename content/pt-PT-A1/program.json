@@ -6,5 +6,5 @@
   "level": "A1",
   "completionThreshold": "all",
   "moduleOrder": ["m1", "m2", "m3", "m4", "m5", "m6", "m7"],
-  "phraseSetOrder": ["everyday-1"]
+  "phraseSetOrder": ["everyday-1", "everyday-2", "everyday-3", "everyday-4", "everyday-5", "everyday-6", "everyday-7"]
 }

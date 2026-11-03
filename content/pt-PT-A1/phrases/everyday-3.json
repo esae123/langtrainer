@@ -1,0 +1,1392 @@
+{
+  "id": "everyday-3",
+  "title": "Everyday phrases 3 — health, problems and asking for help",
+  "phrases": [
+    {
+      "target": "Não me sinto bem.",
+      "support": "I don’t feel well.",
+      "register": "neutral",
+      "situation": "You feel ill and want to say it clearly."
+    },
+    {
+      "target": "Sinto-me mal.",
+      "support": "I feel unwell.",
+      "register": "neutral",
+      "situation": "You suddenly feel sick or dizzy."
+    },
+    {
+      "target": "Dói-me aqui.",
+      "support": "It hurts here.",
+      "register": "neutral",
+      "situation": "You show the place that hurts."
+    },
+    {
+      "target": "Tenho dores de cabeça.",
+      "support": "I have a headache.",
+      "register": "neutral",
+      "situation": "You describe a common pain."
+    },
+    {
+      "target": "Tenho dores de garganta.",
+      "support": "I have a sore throat.",
+      "register": "neutral",
+      "situation": "You describe throat pain."
+    },
+    {
+      "target": "Tenho dores de barriga.",
+      "support": "My stomach hurts.",
+      "register": "neutral",
+      "situation": "You talk about stomach pain."
+    },
+    {
+      "target": "Estou com febre.",
+      "support": "I have a fever.",
+      "register": "neutral",
+      "situation": "You describe a fever."
+    },
+    {
+      "target": "Estou com tosse.",
+      "support": "I have a cough.",
+      "register": "neutral",
+      "situation": "You describe a cough."
+    },
+    {
+      "target": "Estou constipado/a.",
+      "support": "I have a cold.",
+      "register": "neutral",
+      "situation": "You say you have a cold."
+    },
+    {
+      "target": "Tenho tonturas.",
+      "support": "I feel dizzy.",
+      "register": "neutral",
+      "situation": "You describe dizziness."
+    },
+    {
+      "target": "Preciso de ajuda.",
+      "support": "I need help.",
+      "register": "neutral",
+      "situation": "You need assistance quickly."
+    },
+    {
+      "target": "Pode ajudar-me?",
+      "support": "Can you help me?",
+      "register": "formal",
+      "situation": "You ask a stranger or member of staff for help."
+    },
+    {
+      "target": "Precisa de ajuda?",
+      "support": "Do you need help?",
+      "register": "formal",
+      "situation": "You offer help politely to a stranger."
+    },
+    {
+      "target": "Está tudo bem?",
+      "support": "Is everything okay?",
+      "register": "neutral",
+      "situation": "You check if someone is okay."
+    },
+    {
+      "target": "É urgente.",
+      "support": "It’s urgent.",
+      "register": "neutral",
+      "situation": "You say the problem needs quick attention."
+    },
+    {
+      "target": "Chame uma ambulância!",
+      "support": "Call an ambulance!",
+      "register": "formal",
+      "situation": "You ask urgently for emergency help."
+    },
+    {
+      "target": "Socorro!",
+      "support": "Help!",
+      "register": "neutral",
+      "situation": "You shout in an emergency."
+    },
+    {
+      "target": "Não se preocupe.",
+      "support": "Don’t worry.",
+      "register": "formal",
+      "situation": "You reassure someone politely."
+    },
+    {
+      "target": "Já passou.",
+      "support": "It’s gone now.",
+      "register": "neutral",
+      "situation": "You say the pain or problem has passed."
+    },
+    {
+      "target": "As melhoras!",
+      "support": "Get well soon!",
+      "register": "neutral",
+      "situation": "You say this to someone who is ill."
+    },
+    {
+      "target": "Tenha cuidado!",
+      "support": "Be careful!",
+      "register": "formal",
+      "situation": "You warn someone politely."
+    },
+    {
+      "target": "Não faz mal.",
+      "support": "It’s okay / It doesn’t matter.",
+      "register": "neutral",
+      "situation": "You reassure someone after a small problem."
+    },
+    {
+      "target": "Tem alguma coisa para a tosse?",
+      "support": "Do you have anything for a cough?",
+      "register": "formal",
+      "situation": "You ask at the pharmacy."
+    },
+    {
+      "target": "Tem alguma coisa para a febre?",
+      "support": "Do you have anything for fever?",
+      "register": "formal",
+      "situation": "You ask at the pharmacy."
+    },
+    {
+      "target": "Tem alguma coisa para as dores de cabeça?",
+      "support": "Do you have anything for headaches?",
+      "register": "formal",
+      "situation": "You ask at the pharmacy."
+    },
+    {
+      "target": "Preciso de marcar uma consulta.",
+      "support": "I need to make an appointment.",
+      "register": "formal",
+      "situation": "You speak to reception at a clinic or health centre."
+    },
+    {
+      "target": "Preciso de um médico.",
+      "support": "I need a doctor.",
+      "register": "neutral",
+      "situation": "You say this when medical help is needed."
+    },
+    {
+      "target": "Onde fica o centro de saúde?",
+      "support": "Where is the health centre?",
+      "register": "formal",
+      "situation": "You ask for directions."
+    },
+    {
+      "target": "Onde é a farmácia de serviço?",
+      "support": "Where is the duty pharmacy?",
+      "register": "formal",
+      "situation": "You ask which pharmacy is open on duty."
+    },
+    {
+      "target": "Há uma farmácia aqui perto?",
+      "support": "Is there a pharmacy near here?",
+      "register": "formal",
+      "situation": "You ask for a nearby pharmacy."
+    },
+    {
+      "target": "Sou alérgico/a a...",
+      "support": "I’m allergic to...",
+      "register": "neutral",
+      "situation": "You tell the doctor or pharmacist about an allergy."
+    },
+    {
+      "target": "Tomo isto quantas vezes por dia?",
+      "support": "How many times a day do I take this?",
+      "register": "formal",
+      "situation": "You ask how often to take medicine."
+    },
+    {
+      "target": "Como é que tomo isto?",
+      "support": "How do I take this?",
+      "register": "formal",
+      "situation": "You ask for instructions for medicine."
+    },
+    {
+      "target": "Antes ou depois das refeições?",
+      "support": "Before or after meals?",
+      "register": "formal",
+      "situation": "You ask when to take medicine."
+    },
+    {
+      "target": "Sem receita médica?",
+      "support": "Without a prescription?",
+      "register": "formal",
+      "situation": "You check if medicine needs a prescription."
+    },
+    {
+      "target": "Perdi a minha carteira.",
+      "support": "I lost my wallet.",
+      "register": "neutral",
+      "situation": "You report a lost wallet."
+    },
+    {
+      "target": "Perdi as minhas chaves.",
+      "support": "I lost my keys.",
+      "register": "neutral",
+      "situation": "You report lost keys."
+    },
+    {
+      "target": "Roubaram-me o telemóvel.",
+      "support": "They stole my mobile phone.",
+      "register": "neutral",
+      "situation": "You report a theft."
+    },
+    {
+      "target": "Não encontro a minha mala.",
+      "support": "I can’t find my bag.",
+      "register": "neutral",
+      "situation": "You say your bag is missing."
+    },
+    {
+      "target": "Pode chamar a polícia?",
+      "support": "Can you call the police?",
+      "register": "formal",
+      "situation": "You ask for help after a problem or theft."
+    },
+    {
+      "target": "O meu amigo caiu.",
+      "support": "My friend fell down.",
+      "register": "neutral",
+      "situation": "You explain what happened in a small emergency."
+    },
+    {
+      "target": "Ele não consegue respirar.",
+      "support": "He can’t breathe.",
+      "register": "neutral",
+      "situation": "You describe a serious emergency."
+    },
+    {
+      "target": "Ela desmaiou.",
+      "support": "She fainted.",
+      "register": "neutral",
+      "situation": "You describe what happened in an emergency."
+    },
+    {
+      "target": "Chame os bombeiros!",
+      "support": "Call the fire brigade!",
+      "register": "formal",
+      "situation": "You ask urgently for emergency services."
+    },
+    {
+      "target": "Fui assaltado/a.",
+      "support": "I was robbed / mugged.",
+      "register": "neutral",
+      "situation": "You report a robbery to the police."
+    },
+    {
+      "target": "Onde é o hospital mais próximo?",
+      "support": "Where is the nearest hospital?",
+      "register": "neutral",
+      "situation": "You need a hospital quickly."
+    },
+    {
+      "target": "Tenho aqui uma receita.",
+      "support": "I have a prescription here.",
+      "register": "formal",
+      "situation": "You hand a prescription to the pharmacist."
+    },
+    {
+      "target": "Queria falar com o médico.",
+      "support": "I’d like to speak to the doctor.",
+      "register": "formal",
+      "situation": "You speak politely at reception."
+    },
+    {
+      "target": "Já chamei uma ambulância.",
+      "support": "I’ve already called an ambulance.",
+      "register": "neutral",
+      "situation": "You update someone during an emergency."
+    },
+    {
+      "target": "Pode vir comigo?",
+      "support": "Can you come with me?",
+      "register": "formal",
+      "situation": "You ask someone to come and help you."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "everyday-3-01",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You suddenly feel ill in class. Say: I don't feel well.",
+      "explanation": "Learn «Não me sinto bem» as a whole phrase. After «não», the pronoun «me» goes before the verb. You can add «Eu», but Portuguese often leaves it out.",
+      "answer": [
+        "Não",
+        "me",
+        "sinto",
+        "bem."
+      ],
+      "distractors": [
+        "mal",
+        "tem",
+        "está"
+      ],
+      "acceptedAnswers": [
+        "Eu não me sinto bem."
+      ]
+    },
+    {
+      "id": "everyday-3-02",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Point to the place that hurts and tell the doctor: \"It hurts here.\"",
+      "explanation": "Learn «Dói-me aqui» as a fixed chunk for showing the place that hurts.",
+      "answer": [
+        "Dói-me",
+        "aqui."
+      ],
+      "distractors": [
+        "ali",
+        "tenho",
+        "sente"
+      ]
+    },
+    {
+      "id": "everyday-3-03",
+      "type": "translate_word",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In Portuguese, one common health phrase is «Estou com febre». Learn «febre» as the key word.",
+      "direction": "toTarget",
+      "sentence": "I'm not feeling well. I have a **fever**.",
+      "word": "fever",
+      "answer": "febre",
+      "options": [
+        "febre",
+        "tosse",
+        "consulta",
+        "carteira"
+      ]
+    },
+    {
+      "id": "everyday-3-04",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At the pharmacy, ask politely if they have something for a cough.",
+      "explanation": "Use the polite form «tem». Learn «Tem alguma coisa para...?» as a useful pharmacy chunk.",
+      "answer": [
+        "Tem",
+        "alguma",
+        "coisa",
+        "para",
+        "a",
+        "tosse?"
+      ],
+      "distractors": [
+        "febre",
+        "marcar",
+        "preciso"
+      ]
+    },
+    {
+      "id": "everyday-3-05",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At the health centre reception, say that you need to make an appointment.",
+      "explanation": "This is a common formal phrase at reception. Learn it as a whole chunk.",
+      "answer": [
+        "Preciso",
+        "de",
+        "marcar",
+        "uma",
+        "consulta."
+      ],
+      "distractors": [
+        "urgente",
+        "médico",
+        "chamar"
+      ],
+      "acceptedAnswers": [
+        "Eu preciso de marcar uma consulta."
+      ]
+    },
+    {
+      "id": "everyday-3-06",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At the police desk, say that you lost your wallet.",
+      "explanation": "In European Portuguese, possessives normally take the article: «a minha carteira».",
+      "answer": [
+        "Perdi",
+        "a",
+        "minha",
+        "carteira."
+      ],
+      "distractors": [
+        "mala",
+        "roubaram-me",
+        "chaves"
+      ],
+      "acceptedAnswers": [
+        "Eu perdi a minha carteira."
+      ]
+    },
+    {
+      "id": "everyday-3-07",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Tell a police officer that someone stole your mobile phone.",
+      "explanation": "Learn «Roubaram-me...» ('they stole my...') as a chunk for reporting a theft. In Portugal a mobile phone is «telemóvel».",
+      "answer": [
+        "Roubaram-me",
+        "o",
+        "telemóvel."
+      ],
+      "distractors": [
+        "perdi",
+        "carteira",
+        "ambulância"
+      ],
+      "acceptedAnswers": [
+        "Roubaram o meu telemóvel."
+      ]
+    },
+    {
+      "id": "everyday-3-08",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "A female patient tells the doctor about her allergy. Say that you are allergic to penicillin.",
+      "explanation": "Learn «Sou alérgico/a a...» as a chunk: a woman says «alérgica». «A penicilina» is feminine, so a + a = «à penicilina».",
+      "answer": [
+        "Sou",
+        "alérgica",
+        "à",
+        "penicilina."
+      ],
+      "distractors": [
+        "a",
+        "alérgico",
+        "constipada"
+      ],
+      "acceptedAnswers": [
+        "Eu sou alérgica à penicilina."
+      ]
+    },
+    {
+      "id": "everyday-3-09",
+      "type": "question_for_answer",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "A passer-by answers: «Fica ao lado do mercado.» Ask where the health centre is.",
+      "explanation": "For places, use «Onde fica...?» or the common variant with «é que».",
+      "givenAnswer": "Fica ao lado do mercado.",
+      "answer": [
+        "Onde",
+        "fica",
+        "o",
+        "centro",
+        "de",
+        "saúde?"
+      ],
+      "distractors": [
+        "quando",
+        "farmácia",
+        "quantas"
+      ],
+      "acceptedAnswers": [
+        "Onde é que fica o centro de saúde?",
+        "Onde é o centro de saúde?"
+      ]
+    },
+    {
+      "id": "everyday-3-10",
+      "type": "question_for_answer",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "The neighbour says: «É na Rua das Flores.» Ask where the duty pharmacy is.",
+      "explanation": "Learn «farmácia de serviço» as one fixed phrase. With place questions, «Onde é...» and «Onde fica...» are both common.",
+      "givenAnswer": "É na Rua das Flores.",
+      "answer": [
+        "Onde",
+        "é",
+        "a",
+        "farmácia",
+        "de",
+        "serviço?"
+      ],
+      "distractors": [
+        "fica",
+        "centro",
+        "quando"
+      ],
+      "acceptedAnswers": [
+        "Onde fica a farmácia de serviço?",
+        "Onde é que fica a farmácia de serviço?"
+      ]
+    },
+    {
+      "id": "everyday-3-11",
+      "type": "question_for_answer",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "The pharmacist answers: «Três vezes por dia.» Ask how many times a day you take this.",
+      "explanation": "This is a useful whole question for medicine instructions. Learn it as a chunk.",
+      "givenAnswer": "Três vezes por dia.",
+      "answer": [
+        "Tomo",
+        "isto",
+        "quantas",
+        "vezes",
+        "por",
+        "dia?"
+      ],
+      "distractors": [
+        "quando",
+        "consulta",
+        "é"
+      ],
+      "acceptedAnswers": [
+        "Quantas vezes por dia tomo isto?",
+        "Quantas vezes por dia é que tomo isto?"
+      ]
+    },
+    {
+      "id": "everyday-3-12",
+      "type": "question_for_answer",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "An older man answers: «Sim, por favor.» Ask him politely if he needs help.",
+      "explanation": "With strangers, Portuguese normally uses the polite 3rd-person form: «Precisa de ajuda?».",
+      "givenAnswer": "Sim, por favor.",
+      "answer": [
+        "Precisa",
+        "de",
+        "ajuda?"
+      ],
+      "distractors": [
+        "pode",
+        "tem",
+        "urgente"
+      ],
+      "acceptedAnswers": [
+        "O senhor precisa de ajuda?"
+      ]
+    },
+    {
+      "id": "everyday-3-13",
+      "type": "fill_gaps",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Fill the two gaps in this short health exchange.",
+      "explanation": "Use «Está tudo bem?» to check on someone, and «Estou com febre» to describe a fever.",
+      "template": "— ___ tudo bem? — Não, ___ com febre.",
+      "gaps": [
+        {
+          "answer": "Está"
+        },
+        {
+          "answer": "estou"
+        }
+      ],
+      "wordBank": [
+        "Está",
+        "estou",
+        "tem",
+        "sou",
+        "és"
+      ]
+    },
+    {
+      "id": "everyday-3-14",
+      "type": "fill_gaps",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "At reception, fill the two missing chunks.",
+      "explanation": "These are two common reception phrases. It is best to learn them as ready-made chunks.",
+      "template": "Na receção: «___ de marcar uma consulta. ___ urgente.»",
+      "gaps": [
+        {
+          "answer": "Preciso"
+        },
+        {
+          "answer": "É"
+        }
+      ],
+      "wordBank": [
+        "Preciso",
+        "É",
+        "Quero",
+        "Sou",
+        "Tem"
+      ]
+    },
+    {
+      "id": "everyday-3-15",
+      "type": "fill_gaps",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the report about lost and stolen things.",
+      "explanation": "In European Portuguese, possessives usually take the article: «a minha carteira». With «telemóvel», use «o».",
+      "template": "Perdi ___ minha carteira e roubaram-me ___ telemóvel.",
+      "gaps": [
+        {
+          "answer": "a"
+        },
+        {
+          "answer": "o"
+        }
+      ],
+      "wordBank": [
+        "a",
+        "o",
+        "as",
+        "do"
+      ]
+    },
+    {
+      "id": "everyday-3-16",
+      "type": "translate_word",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "A very common full phrase is «Perdi a minha carteira». Learn «carteira» as the everyday word here.",
+      "direction": "toTarget",
+      "sentence": "I lost my **wallet** on the bus.",
+      "word": "wallet",
+      "answer": "carteira",
+      "options": [
+        "carteira",
+        "mala",
+        "chave",
+        "receita"
+      ]
+    },
+    {
+      "id": "everyday-3-17",
+      "type": "find_error",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «ir», Portuguese uses the contraction «ao»: «Vou ao médico». «No» is wrong here.",
+      "sentence": [
+        "Vou",
+        "no",
+        "médico",
+        "agora."
+      ],
+      "wrongIndex": 1,
+      "correction": "ao",
+      "options": [
+        "ao",
+        "na",
+        "do"
+      ]
+    },
+    {
+      "id": "everyday-3-18",
+      "type": "find_error",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "In Portugal, the normal everyday word is «telemóvel», not the Brazilian form «celular».",
+      "sentence": [
+        "Roubaram-me",
+        "o",
+        "celular."
+      ],
+      "wrongIndex": 2,
+      "correction": "telemóvel.",
+      "options": [
+        "telemóvel.",
+        "carteira.",
+        "passaporte."
+      ]
+    },
+    {
+      "id": "everyday-3-19",
+      "type": "about_me",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Answer about yourself.",
+      "explanation": "A simple way to answer is with «Estou com...» for symptoms, or another short health phrase you know.",
+      "question": "Está tudo bem?",
+      "sampleAnswer": "Não, hoje estou com tosse.",
+      "hints": [
+        "febre",
+        "dores",
+        "mal",
+        "sinto-me",
+        "cansado",
+        "cansada"
+      ]
+    },
+    {
+      "id": "everyday-3-20",
+      "type": "order_dialogue",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "At the pharmacy. Put the lines in order.",
+      "explanation": "The customer first explains the problem, then asks about the medicine. Learn the pharmacy questions as whole chunks.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Boa tarde. Em que posso ajudar?"
+        },
+        {
+          "speaker": "B",
+          "text": "Estou com tosse. Tem alguma coisa para a tosse?"
+        },
+        {
+          "speaker": "A",
+          "text": "Sim. Tome este xarope."
+        },
+        {
+          "speaker": "B",
+          "text": "Tomo isto quantas vezes por dia?"
+        },
+        {
+          "speaker": "A",
+          "text": "Duas vezes por dia."
+        }
+      ]
+    },
+    {
+      "id": "everyday-3-21",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At the pharmacy, ask the pharmacist politely if they have something for fever.",
+      "explanation": "At a pharmacy, «Tem alguma coisa para...?» is a very useful polite pattern. Learn this whole question as a chunk.",
+      "answer": [
+        "Tem",
+        "alguma",
+        "coisa",
+        "para",
+        "a",
+        "febre?"
+      ],
+      "distractors": [
+        "tenho",
+        "consulta",
+        "garganta"
+      ]
+    },
+    {
+      "id": "everyday-3-22",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At reception, say politely that you'd like to speak to the doctor.",
+      "explanation": "«Queria falar com...» is a polite fixed phrase for reception or staff. You do not need to analyse the grammar yet; learn it as one useful chunk.",
+      "answer": [
+        "Queria",
+        "falar",
+        "com",
+        "o",
+        "médico."
+      ],
+      "distractors": [
+        "quero",
+        "consulta",
+        "receita"
+      ],
+      "acceptedAnswers": [
+        "Eu queria falar com o médico."
+      ]
+    },
+    {
+      "id": "everyday-3-23",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "At the hotel, say that you lost your keys.",
+      "explanation": "European Portuguese uses the article with possessives: «as minhas chaves». So the full phrase is «Perdi as minhas chaves».",
+      "answer": [
+        "Perdi",
+        "as",
+        "minhas",
+        "chaves."
+      ],
+      "distractors": [
+        "mala",
+        "carteira",
+        "roubaram-me"
+      ],
+      "acceptedAnswers": [
+        "Eu perdi as minhas chaves."
+      ]
+    },
+    {
+      "id": "everyday-3-24",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "In an emergency, tell a passer-by: \"He can't breathe.\"",
+      "explanation": "This phrase describes a serious emergency clearly. In European Portuguese, the subject pronoun can also be dropped if the situation is clear.",
+      "answer": [
+        "Ele",
+        "não",
+        "consegue",
+        "respirar."
+      ],
+      "distractors": [
+        "andar",
+        "caiu",
+        "desmaiar"
+      ],
+      "acceptedAnswers": [
+        "Não consegue respirar."
+      ]
+    },
+    {
+      "id": "everyday-3-25",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Reporting a theft at the police station, you tell the officer you were robbed. Say it as a man: \"I was robbed.\"",
+      "explanation": "Learn «Fui assaltado» as a chunk for reporting a robbery; a woman says «Fui assaltada». You don't need to analyse the grammar yet.",
+      "answer": [
+        "Fui",
+        "assaltado."
+      ],
+      "distractors": [
+        "Sou",
+        "assaltada.",
+        "roubaram-me"
+      ],
+      "acceptedAnswers": [
+        "Eu fui assaltado."
+      ]
+    },
+    {
+      "id": "everyday-3-26",
+      "type": "question_for_answer",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "A local answers: «Sim, há uma ao pé do mercado.» Ask politely if there is a pharmacy near here.",
+      "explanation": "Use «Há...?» to ask if something exists. «Aqui perto» means near here.",
+      "givenAnswer": "Sim, há uma ao pé do mercado.",
+      "answer": [
+        "Há",
+        "uma",
+        "farmácia",
+        "aqui",
+        "perto?"
+      ],
+      "distractors": [
+        "centro",
+        "serviço",
+        "médico"
+      ],
+      "acceptedAnswers": [
+        "Há alguma farmácia aqui perto?"
+      ]
+    },
+    {
+      "id": "everyday-3-27",
+      "type": "question_for_answer",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "The pharmacist hands you a medicine. Check that you can buy it without a prescription with the short question \"Without a prescription?\"",
+      "explanation": "«Sem receita médica?» is a short fixed question you can use at the pharmacy. Learn it as one chunk.",
+      "givenAnswer": "Sim, não precisa de receita.",
+      "answer": [
+        "Sem",
+        "receita",
+        "médica?"
+      ],
+      "distractors": [
+        "com",
+        "consulta",
+        "urgente"
+      ]
+    },
+    {
+      "id": "everyday-3-28",
+      "type": "question_for_answer",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "The pharmacist says: «Tome um comprimido com água.» Ask how to take the medicine, not how often.",
+      "explanation": "To ask for instructions, use «Como é que tomo isto?». European Portuguese often uses «é que» in everyday questions.",
+      "givenAnswer": "Tome um comprimido com água.",
+      "answer": [
+        "Como",
+        "é",
+        "que",
+        "tomo",
+        "isto?"
+      ],
+      "distractors": [
+        "quantas",
+        "vezes",
+        "dia"
+      ],
+      "acceptedAnswers": [
+        "Como tomo isto?"
+      ]
+    },
+    {
+      "id": "everyday-3-29",
+      "type": "question_for_answer",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "The pharmacist answers: «Depois das refeições.» Ask whether you should take it before or after meals.",
+      "explanation": "This is a common fixed question about medicine timing. Learn «Antes ou depois das refeições?» as one useful chunk.",
+      "givenAnswer": "Depois das refeições.",
+      "answer": [
+        "Antes",
+        "ou",
+        "depois",
+        "das",
+        "refeições?"
+      ],
+      "distractors": [
+        "com",
+        "água",
+        "ontem"
+      ]
+    },
+    {
+      "id": "everyday-3-30",
+      "type": "fill_gaps",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "A nurse reassures you after a short pain. Fill the two gaps.",
+      "explanation": "«Não se preocupe» politely calms someone. «Já passou» says the pain or problem is over now.",
+      "template": "___ se preocupe. Já ___.",
+      "gaps": [
+        {
+          "answer": "Não"
+        },
+        {
+          "answer": "passou"
+        }
+      ],
+      "wordBank": [
+        "Não",
+        "passou",
+        "Tem",
+        "caiu"
+      ]
+    },
+    {
+      "id": "everyday-3-31",
+      "type": "fill_gaps",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "At the pharmacy: ask for something for headaches, then check you can buy it without a prescription.",
+      "explanation": "First ask for a remedy with «Tem alguma coisa para...?» Then you can check the prescription with «Sem receita médica?».",
+      "template": "___ alguma coisa para as dores de cabeça? ___ receita médica?",
+      "gaps": [
+        {
+          "answer": "Tem"
+        },
+        {
+          "answer": "Sem"
+        }
+      ],
+      "wordBank": [
+        "Tem",
+        "Sem",
+        "Tenho",
+        "Cem"
+      ]
+    },
+    {
+      "id": "everyday-3-32",
+      "type": "fill_gaps",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "During an emergency update, fill the two gaps.",
+      "explanation": "«Preciso de um médico» states the need clearly. «Já chamei uma ambulância» tells people what has already been done.",
+      "template": "Preciso de um ___. Já ___ uma ambulância.",
+      "gaps": [
+        {
+          "answer": "médico"
+        },
+        {
+          "answer": "chamei"
+        }
+      ],
+      "wordBank": [
+        "médico",
+        "chamei",
+        "consulta",
+        "liguei"
+      ]
+    },
+    {
+      "id": "everyday-3-33",
+      "type": "fill_gaps",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You have a headache and a sore throat. Fill the gaps in that order.",
+      "explanation": "After «dores de», add the body part. Here you combine two common health problems in one sentence.",
+      "template": "Tenho dores de ___ e de ___.",
+      "gaps": [
+        {
+          "answer": "cabeça"
+        },
+        {
+          "answer": "garganta"
+        }
+      ],
+      "wordBank": [
+        "cabeça",
+        "garganta",
+        "febre",
+        "consulta"
+      ]
+    },
+    {
+      "id": "everyday-3-34",
+      "type": "find_error",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong for European Portuguese. Tap it and choose the correction.",
+      "explanation": "After «pode», Portuguese uses the infinitive: «ajudar-me». Learn «Pode ajudar-me?» as a fixed polite chunk for asking a stranger or member of staff for help.",
+      "sentence": [
+        "A",
+        "senhora",
+        "pode",
+        "ajuda-me?"
+      ],
+      "wrongIndex": 3,
+      "correction": "ajudar-me",
+      "options": [
+        "ajudar-me",
+        "ajudo-me",
+        "me-ajudar"
+      ]
+    },
+    {
+      "id": "everyday-3-35",
+      "type": "find_error",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «precisar», use the preposition «de»: «Preciso de ajuda». «Em» does not fit here.",
+      "sentence": [
+        "Preciso",
+        "em",
+        "ajuda."
+      ],
+      "wrongIndex": 1,
+      "correction": "de",
+      "options": [
+        "de",
+        "com",
+        "para"
+      ]
+    },
+    {
+      "id": "everyday-3-36",
+      "type": "translate_word",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In «Já passou», «passou» means the pain or problem is gone now.",
+      "direction": "toTarget",
+      "sentence": "The pain has **gone** now.",
+      "word": "gone",
+      "answer": "passou",
+      "options": [
+        "passou",
+        "caiu",
+        "perdeu",
+        "falou"
+      ]
+    },
+    {
+      "id": "everyday-3-37",
+      "type": "translate_word",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Caiu» is the past form used in «O meu amigo caiu». Use it when someone falls down.",
+      "direction": "toTarget",
+      "sentence": "My friend **fell** in the street.",
+      "word": "fell",
+      "answer": "caiu",
+      "options": [
+        "caiu",
+        "desmaiou",
+        "perdeu",
+        "tomou"
+      ]
+    },
+    {
+      "id": "everyday-3-38",
+      "type": "about_me",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Answer about yourself.",
+      "explanation": "To mention an allergy, use «Sou alérgico/a a...». «A» joins the article: a + o = «ao pólen», a + a = «à penicilina», a + os = «aos gatos».",
+      "question": "És alérgico/a a alguma coisa?",
+      "sampleAnswer": "Sou alérgico ao pólen.",
+      "hints": [
+        "não",
+        "sim",
+        "à penicilina",
+        "aos gatos",
+        "ao marisco"
+      ]
+    },
+    {
+      "id": "everyday-3-39",
+      "type": "build_phrase",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You feel weak and want someone to come with you to the clinic. Ask politely: can you come with me?",
+      "explanation": "«Pode vir comigo?» is a useful request as a whole chunk. Use it when you want company or help.",
+      "answer": [
+        "Pode",
+        "vir",
+        "comigo?"
+      ],
+      "distractors": [
+        "trazer",
+        "agora",
+        "sozinho"
+      ]
+    },
+    {
+      "id": "everyday-3-40",
+      "type": "question_for_answer",
+      "topicId": "everyday-3",
+      "phraseSetId": "everyday-3",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "After a theft, ask a hotel receptionist politely to call the police.",
+      "explanation": "«Pode chamar...?» is a direct polite request to staff. Here the fixed object is «a polícia».",
+      "givenAnswer": "Sim, claro. Ligo já.",
+      "answer": [
+        "Pode",
+        "chamar",
+        "a",
+        "polícia?"
+      ],
+      "distractors": [
+        "bombeiros",
+        "ambulância",
+        "vir"
+      ],
+      "acceptedAnswers": [
+        "Pode chamar a polícia, por favor?"
+      ]
+    }
+  ]
+}

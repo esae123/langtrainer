@@ -1,0 +1,1378 @@
+{
+  "id": "everyday-2",
+  "title": "Everyday phrases 2 — shops, cafés and getting around",
+  "phrases": [
+    {
+      "target": "Quanto custa?",
+      "support": "How much does it cost?",
+      "register": "neutral",
+      "situation": "Asking the price of an item"
+    },
+    {
+      "target": "Quanto é?",
+      "support": "How much is it?",
+      "register": "neutral",
+      "situation": "Asking the total price or cost"
+    },
+    {
+      "target": "Aceita cartão?",
+      "support": "Do you accept card?",
+      "register": "formal",
+      "situation": "Asking about payment method in a shop or café"
+    },
+    {
+      "target": "Posso pagar com cartão?",
+      "support": "Can I pay with card?",
+      "register": "neutral",
+      "situation": "Paying at a counter"
+    },
+    {
+      "target": "Tem troco?",
+      "support": "Do you have change?",
+      "register": "formal",
+      "situation": "Paying with cash"
+    },
+    {
+      "target": "Fique com o troco.",
+      "support": "Keep the change.",
+      "register": "formal",
+      "situation": "Tipping or leaving small change"
+    },
+    {
+      "target": "Está incluído?",
+      "support": "Is it included?",
+      "register": "neutral",
+      "situation": "Asking if service or tax is included in the price"
+    },
+    {
+      "target": "A que horas fecha?",
+      "support": "What time do you close?",
+      "register": "formal",
+      "situation": "Asking about shop closing hours"
+    },
+    {
+      "target": "Tem isto noutro tamanho?",
+      "support": "Do you have this in another size?",
+      "register": "formal",
+      "situation": "Clothes shopping"
+    },
+    {
+      "target": "Só estou a ver, obrigado/a.",
+      "support": "I'm just looking, thank you.",
+      "register": "neutral",
+      "situation": "Browsing in a store"
+    },
+    {
+      "target": "Embrulha para oferta?",
+      "support": "Can you gift-wrap it?",
+      "register": "formal",
+      "situation": "Buying a present"
+    },
+    {
+      "target": "Queria um bilhete para Lisboa.",
+      "support": "I would like a ticket to Lisbon.",
+      "register": "neutral",
+      "situation": "Buying a transport ticket"
+    },
+    {
+      "target": "Este autocarro vai para a estação?",
+      "support": "Does this bus go to the station?",
+      "register": "neutral",
+      "situation": "Asking bus route information"
+    },
+    {
+      "target": "Qual é a próxima paragem?",
+      "support": "What is the next stop?",
+      "register": "neutral",
+      "situation": "Riding public transport"
+    },
+    {
+      "target": "Onde se compra o bilhete?",
+      "support": "Where do you buy the ticket?",
+      "register": "neutral",
+      "situation": "Asking where to buy tickets"
+    },
+    {
+      "target": "É ida e volta.",
+      "support": "It's a round trip.",
+      "register": "neutral",
+      "situation": "Specifying ticket type"
+    },
+    {
+      "target": "Falta muito?",
+      "support": "Is it much longer?",
+      "register": "neutral",
+      "situation": "Asking about remaining journey time"
+    },
+    {
+      "target": "É já a seguir.",
+      "support": "It's the next one / It's coming right up.",
+      "register": "neutral",
+      "situation": "Indicating the upcoming stop or location"
+    },
+    {
+      "target": "Estamos a caminho.",
+      "support": "We are on the way.",
+      "register": "neutral",
+      "situation": "In transit"
+    },
+    {
+      "target": "Deixe estar, eu pago.",
+      "support": "Leave it, I'll pay.",
+      "register": "formal",
+      "situation": "Offering to pay for someone"
+    },
+    {
+      "target": "Volte sempre!",
+      "support": "Come back anytime!",
+      "register": "formal",
+      "situation": "Shopkeeper saying goodbye"
+    },
+    {
+      "target": "Com todo o gosto.",
+      "support": "With pleasure.",
+      "register": "neutral",
+      "situation": "Polite response to thanks or a request"
+    },
+    {
+      "target": "Queria uma bica, por favor.",
+      "support": "I'd like an espresso, please.",
+      "register": "neutral",
+      "situation": "Ordering coffee in Lisbon"
+    },
+    {
+      "target": "É para levar.",
+      "support": "It's to go.",
+      "register": "neutral",
+      "situation": "Takeaway order"
+    },
+    {
+      "target": "É para comer aqui.",
+      "support": "It's to eat here.",
+      "register": "neutral",
+      "situation": "Dining in at a café"
+    },
+    {
+      "target": "Onde é a casa de banho?",
+      "support": "Where is the bathroom?",
+      "register": "neutral",
+      "situation": "Asking for facilities"
+    },
+    {
+      "target": "A conta, por favor.",
+      "support": "The bill, please.",
+      "register": "neutral",
+      "situation": "Asking for the bill at a café or restaurant"
+    },
+    {
+      "target": "Não se preocupe.",
+      "support": "Don't worry.",
+      "register": "formal",
+      "situation": "Reassuring someone"
+    },
+    {
+      "target": "Faça favor.",
+      "support": "Please / Here you go / Go ahead.",
+      "register": "formal",
+      "situation": "Offering service or calling the next customer"
+    },
+    {
+      "target": "Tem mesa para dois?",
+      "support": "Do you have a table for two?",
+      "register": "neutral",
+      "situation": "Arriving at a restaurant"
+    },
+    {
+      "target": "Posso ver a ementa?",
+      "support": "Can I see the menu?",
+      "register": "neutral",
+      "situation": "Asking for a menu"
+    },
+    {
+      "target": "Quanto tempo demora?",
+      "support": "How long does it take?",
+      "register": "neutral",
+      "situation": "Asking about duration or waiting time"
+    },
+    {
+      "target": "Pode ajudar-me, por favor?",
+      "support": "Can you help me, please?",
+      "register": "formal",
+      "situation": "Asking for help in a shop or station"
+    },
+    {
+      "target": "Tem este modelo em preto?",
+      "support": "Do you have this model in black?",
+      "register": "formal",
+      "situation": "Shopping for items in specific colors"
+    },
+    {
+      "target": "Posso experimentar?",
+      "support": "Can I try it on?",
+      "register": "neutral",
+      "situation": "Trying on clothing"
+    },
+    {
+      "target": "Onde são os provadores?",
+      "support": "Where are the fitting rooms?",
+      "register": "neutral",
+      "situation": "Looking for fitting rooms"
+    },
+    {
+      "target": "Fica-lhe muito bem.",
+      "support": "It looks very good on you.",
+      "register": "formal",
+      "situation": "Shop assistant complimenting an item"
+    },
+    {
+      "target": "Está em promoção.",
+      "support": "It's on sale.",
+      "register": "neutral",
+      "situation": "Shopping discount"
+    },
+    {
+      "target": "Vou levar este.",
+      "support": "I'll take this one.",
+      "register": "neutral",
+      "situation": "Deciding to buy an item"
+    },
+    {
+      "target": "Precisa de saco?",
+      "support": "Do you need a bag?",
+      "register": "formal",
+      "situation": "Cashier at checkout"
+    },
+    {
+      "target": "Quer fatura com número de contribuinte?",
+      "support": "Do you want an invoice with tax ID?",
+      "register": "formal",
+      "situation": "Cashier at checkout"
+    },
+    {
+      "target": "Só um momento, faz favor.",
+      "support": "Just a moment, please.",
+      "register": "formal",
+      "situation": "Asking someone to wait briefly"
+    },
+    {
+      "target": "Onde fica a paragem de autocarro?",
+      "support": "Where is the bus stop?",
+      "register": "neutral",
+      "situation": "Asking for directions to a bus stop"
+    },
+    {
+      "target": "A que horas sai o próximo comboio?",
+      "support": "What time does the next train leave?",
+      "register": "neutral",
+      "situation": "Train station inquiry"
+    },
+    {
+      "target": "É só ida.",
+      "support": "It's one-way.",
+      "register": "neutral",
+      "situation": "Buying a single ticket"
+    },
+    {
+      "target": "Tem desconto de estudante?",
+      "support": "Is there a student discount?",
+      "register": "neutral",
+      "situation": "Buying tickets or entry passes"
+    },
+    {
+      "target": "A linha três é ali.",
+      "support": "Platform three is over there.",
+      "register": "neutral",
+      "situation": "Station directions"
+    },
+    {
+      "target": "O comboio está atrasado.",
+      "support": "The train is delayed.",
+      "register": "neutral",
+      "situation": "Public transport delay"
+    },
+    {
+      "target": "Chegamos dentro de dez minutos.",
+      "support": "We arrive in ten minutes.",
+      "register": "neutral",
+      "situation": "Estimating arrival time"
+    },
+    {
+      "target": "Tenha um bom dia!",
+      "support": "Have a nice day!",
+      "register": "formal",
+      "situation": "Courteous farewell"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "everyday-2-01",
+      "type": "match_pairs",
+      "topicId": "everyday-2",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "Match each public transport phrase with its English meaning.",
+      "explanation": "«É ida e volta» means round trip, «É só ida» means one-way, and «paragem» is bus stop in European Portuguese.",
+      "pairs": [
+        {
+          "target": "É ida e volta.",
+          "support": "It's a round trip."
+        },
+        {
+          "target": "É só ida.",
+          "support": "It's one-way."
+        },
+        {
+          "target": "Qual é a próxima paragem?",
+          "support": "What is the next stop?"
+        },
+        {
+          "target": "O comboio está atrasado.",
+          "support": "The train is delayed."
+        }
+      ]
+    },
+    {
+      "id": "everyday-2-02",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "In a shop, ask the clerk formally if they accept card payment.",
+      "explanation": "Use 3rd-person singular form «Aceita» when addressing staff formally: «Aceita cartão?»",
+      "answer": [
+        "Aceita",
+        "cartão?"
+      ],
+      "distractors": [
+        "Aceitas",
+        "saco",
+        "dinheiro"
+      ],
+      "acceptedAnswers": [
+        "Aceitam cartão?",
+        "Posso pagar com cartão?"
+      ]
+    },
+    {
+      "id": "everyday-2-03",
+      "type": "question_for_answer",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "The seller answers: «Custa dez euros.» Ask how much it costs.",
+      "explanation": "«Quanto custa?» is the set phrase for 'How much does it cost?'. Learn it as a chunk.",
+      "givenAnswer": "Custa dez euros.",
+      "answer": [
+        "Quanto",
+        "custa?"
+      ],
+      "distractors": [
+        "Como",
+        "Onde",
+        "é"
+      ],
+      "acceptedAnswers": [
+        "Quanto é?"
+      ]
+    },
+    {
+      "id": "everyday-2-04",
+      "type": "fill_gaps",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ordering at a café in Lisbon. Fill in the gaps for ordering an espresso and specifying takeaway.",
+      "explanation": "In Lisbon, an espresso is called a «bica». «É para levar» means 'it's to go'.",
+      "template": "Queria uma ___, por favor. É para ___.",
+      "gaps": [
+        {
+          "answer": "bica"
+        },
+        {
+          "answer": "levar"
+        }
+      ],
+      "wordBank": [
+        "bica",
+        "levar",
+        "comer",
+        "sumo",
+        "chá"
+      ]
+    },
+    {
+      "id": "everyday-2-05",
+      "type": "order_dialogue",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "In a clothing shop. Put the lines in order.",
+      "explanation": "When you are browsing and don't need help yet, say «Só estou a ver, obrigado/a» (obrigado if you are a man, obrigada if you are a woman).",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Bom dia! Posso ajudar?"
+        },
+        {
+          "speaker": "B",
+          "text": "Bom dia. Só estou a ver, obrigado."
+        },
+        {
+          "speaker": "A",
+          "text": "Com certeza. Se precisar de alguma coisa, diga."
+        },
+        {
+          "speaker": "B",
+          "text": "Muito obrigado."
+        }
+      ]
+    },
+    {
+      "id": "everyday-2-06",
+      "type": "translate_word",
+      "topicId": "everyday-2",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the European Portuguese word for the bold word.",
+      "explanation": "In European Portuguese, 'bus' is «autocarro» («ônibus» is Brazilian usage).",
+      "direction": "toTarget",
+      "sentence": "Does this **bus** go to the station?",
+      "word": "bus",
+      "answer": "autocarro",
+      "options": [
+        "autocarro",
+        "comboio",
+        "carro",
+        "saco"
+      ]
+    },
+    {
+      "id": "everyday-2-07",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At a ticket counter, ask politely for a ticket to Lisbon: \"I'd like a ticket to Lisbon.\"",
+      "explanation": "Learn «Queria...» ('I'd like...') as a polite chunk for asking at counters and cafés. «Quero» is not wrong grammar, but it sounds blunt.",
+      "answer": [
+        "Queria",
+        "um",
+        "bilhete",
+        "para",
+        "Lisboa."
+      ],
+      "distractors": [
+        "Quero",
+        "saco",
+        "paragem",
+        "comboio"
+      ],
+      "acceptedAnswers": [
+        "Queria um bilhete para Lisboa, por favor."
+      ]
+    },
+    {
+      "id": "everyday-2-08",
+      "type": "question_for_answer",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "A passer-by answers: «Na bilheteira, ali à frente.» Ask where you buy the ticket.",
+      "explanation": "Learn «Onde se compra...?» as a chunk meaning 'Where do you (does one) buy...?'. «Passagem» is the Brazilian word; in Portugal it is «bilhete».",
+      "givenAnswer": "Na bilheteira, ali à frente.",
+      "answer": [
+        "Onde",
+        "se",
+        "compra",
+        "o",
+        "bilhete?"
+      ],
+      "distractors": [
+        "Como",
+        "quando",
+        "compram",
+        "passagem"
+      ],
+      "acceptedAnswers": [
+        "Onde é que se compra o bilhete?"
+      ]
+    },
+    {
+      "id": "everyday-2-09",
+      "type": "find_error",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong for European Portuguese. Tap it and select the correction.",
+      "explanation": "In European Portuguese, progressive actions use «estar a + infinitivo» («estou a falar»), never the gerund («falando»).",
+      "sentence": [
+        "Estou",
+        "falando",
+        "com",
+        "o",
+        "empregado."
+      ],
+      "wrongIndex": 1,
+      "correction": "a falar",
+      "options": [
+        "a falar",
+        "falar",
+        "falas",
+        "falado"
+      ]
+    },
+    {
+      "id": "everyday-2-10",
+      "type": "fill_gaps",
+      "topicId": "everyday-2",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At a restaurant. Fill in the gaps to ask for the bill and check if service is included.",
+      "explanation": "«A conta, por favor» asks for the bill. «Está incluído?» asks if service or tax is included.",
+      "template": "A ___, por favor. Está ___?",
+      "gaps": [
+        {
+          "answer": "conta"
+        },
+        {
+          "answer": "incluído"
+        }
+      ],
+      "wordBank": [
+        "conta",
+        "incluído",
+        "contas",
+        "incluídos",
+        "troco"
+      ]
+    },
+    {
+      "id": "everyday-2-11",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Tell a taxi driver or server to keep the change (formal).",
+      "explanation": "«Fique com o troco» uses the formal imperative form «fique» to politely leave small change.",
+      "answer": [
+        "Fique",
+        "com",
+        "o",
+        "troco."
+      ],
+      "distractors": [
+        "Fica",
+        "do",
+        "saco",
+        "conta"
+      ]
+    },
+    {
+      "id": "everyday-2-12",
+      "type": "question_for_answer",
+      "topicId": "everyday-2",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "A store clerk answers: «Fechamos às oito da noite.» Ask them (formal) what time they close.",
+      "explanation": "«A que horas fecha?» asks 'What time does it (the shop) close?'; «fecham» (you all / the shop staff) is also correct. The emphatic «é que» form is fine too.",
+      "givenAnswer": "Fechamos às oito da noite.",
+      "answer": [
+        "A",
+        "que",
+        "horas",
+        "fecha?"
+      ],
+      "distractors": [
+        "Quando",
+        "tempo",
+        "abrem?",
+        "é"
+      ],
+      "acceptedAnswers": [
+        "A que horas é que fecha?",
+        "A que horas fecham?",
+        "A que horas é que fecham?"
+      ]
+    },
+    {
+      "id": "everyday-2-13",
+      "type": "about_me",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Imagine you are at a café in Portugal. Order a drink or snack for yourself.",
+      "explanation": "Use «Queria... por favor» to order items at a counter or café.",
+      "question": "O que vai tomar?",
+      "sampleAnswer": "Queria uma bica e um pastel de nata, por favor.",
+      "hints": [
+        "café",
+        "sumo",
+        "laranja",
+        "água",
+        "com",
+        "gás"
+      ]
+    },
+    {
+      "id": "everyday-2-14",
+      "type": "translate_word",
+      "topicId": "everyday-2",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the European Portuguese translation for the word in bold.",
+      "explanation": "In European Portuguese, bathroom is «casa de banho» («banheiro» is Brazilian usage).",
+      "direction": "toTarget",
+      "sentence": "Where is the **bathroom**?",
+      "word": "bathroom",
+      "answer": "casa de banho",
+      "options": [
+        "casa de banho",
+        "banheiro",
+        "provador",
+        "estação"
+      ]
+    },
+    {
+      "id": "everyday-2-15",
+      "type": "fill_gaps",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "In a clothes store, ask the shop assistant (formally) if they have this item in another size.",
+      "explanation": "Use the formal «Tem» with shop staff. «Noutro» (em + outro) means 'in another', so it needs a masculine singular noun: «noutro tamanho».",
+      "template": "___ isto noutro ___?",
+      "gaps": [
+        {
+          "answer": "Tem"
+        },
+        {
+          "answer": "tamanho"
+        }
+      ],
+      "wordBank": [
+        "Tem",
+        "tamanho",
+        "Tens",
+        "cor",
+        "saco",
+        "tamanhos"
+      ]
+    },
+    {
+      "id": "everyday-2-16",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask the cashier if they can wrap the purchase as a gift.",
+      "explanation": "«Embrulha para oferta?» is the common chunk used in Portugal when asking for gift wrapping.",
+      "answer": [
+        "Embrulha",
+        "para",
+        "oferta?"
+      ],
+      "distractors": [
+        "Embrulho",
+        "por",
+        "prenda",
+        "cartão"
+      ],
+      "acceptedAnswers": [
+        "Pode embrulhar para oferta?"
+      ]
+    },
+    {
+      "id": "everyday-2-17",
+      "type": "find_error",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is grammatically wrong. Tap it and select the correction.",
+      "explanation": "«Estação» is a feminine noun («a estação»), so «para + a» becomes «para a estação».",
+      "sentence": [
+        "Este",
+        "autocarro",
+        "vai",
+        "para",
+        "o",
+        "estação?"
+      ],
+      "wrongIndex": 4,
+      "correction": "a",
+      "options": [
+        "a",
+        "na",
+        "da"
+      ]
+    },
+    {
+      "id": "everyday-2-18",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At the bus stop, ask the driver if this bus goes to the station.",
+      "explanation": "«Este autocarro vai para a estação?» asks about the route direction.",
+      "answer": [
+        "Este",
+        "autocarro",
+        "vai",
+        "para",
+        "a",
+        "estação?"
+      ],
+      "distractors": [
+        "comboio",
+        "vem",
+        "ao",
+        "do"
+      ],
+      "acceptedAnswers": [
+        "Este autocarro vai para a estação"
+      ]
+    },
+    {
+      "id": "everyday-2-19",
+      "type": "question_for_answer",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "A fellow passenger answers: «Falta pouco, é já a seguir.» Ask if it is much further.",
+      "explanation": "«Falta muito?» asks 'Is it much further?' or 'Are we almost there?'.",
+      "givenAnswer": "Falta pouco, é já a seguir.",
+      "answer": [
+        "Falta",
+        "muito?"
+      ],
+      "distractors": [
+        "Quanto",
+        "demora?",
+        "Onde"
+      ]
+    },
+    {
+      "id": "everyday-2-20",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At a café, your older neighbour (you call him «o senhor») reaches for his wallet. Tell him to leave it, you'll pay.",
+      "explanation": "«Deixe estar, eu pago» is a fixed phrase meaning 'Leave it, I'll pay'. Learn it as a chunk; «Deixe» is the formal form (with a friend: «Deixa estar»).",
+      "answer": [
+        "Deixe",
+        "estar,",
+        "eu",
+        "pago."
+      ],
+      "distractors": [
+        "Deixa",
+        "com",
+        "pagas",
+        "ficam"
+      ],
+      "acceptedAnswers": [
+        "Deixe estar, eu pago",
+        "Deixe estar, pago eu."
+      ]
+    },
+    {
+      "id": "everyday-2-21",
+      "type": "question_for_answer",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your friend answers: «Chegamos dentro de dez minutos.» Ask her how long it takes.",
+      "explanation": "«Quanto tempo demora?» is used to ask about duration or remaining travel time.",
+      "givenAnswer": "Chegamos dentro de dez minutos.",
+      "answer": [
+        "Quanto",
+        "tempo",
+        "demora?"
+      ],
+      "distractors": [
+        "Onde",
+        "fica?",
+        "Quando"
+      ],
+      "acceptedAnswers": [
+        "Quanto tempo é que demora?",
+        "Quanto tempo falta?"
+      ]
+    },
+    {
+      "id": "everyday-2-22",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask the waiter at a restaurant if they have a table for two: \"Do you have a table for two?\"",
+      "explanation": "«Tem mesa para dois?» is the standard polite formula when arriving at a restaurant in Portugal.",
+      "answer": [
+        "Tem",
+        "mesa",
+        "para",
+        "dois?"
+      ],
+      "distractors": [
+        "Tenho",
+        "cadeira",
+        "três"
+      ],
+      "acceptedAnswers": [
+        "Tem uma mesa para dois?"
+      ]
+    },
+    {
+      "id": "everyday-2-23",
+      "type": "fill_gaps",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You are shopping for clothes. Complete the request to try something on and find the fitting rooms.",
+      "explanation": "«Experimentar» means to try on clothes; after «Posso» use the infinitive. «Os provadores» (plural) are the fitting rooms.",
+      "template": "Posso ___? Onde são os ___?",
+      "gaps": [
+        {
+          "answer": "experimentar"
+        },
+        {
+          "answer": "provadores"
+        }
+      ],
+      "wordBank": [
+        "experimentar",
+        "provadores",
+        "experimento",
+        "provador"
+      ]
+    },
+    {
+      "id": "everyday-2-24",
+      "type": "order_dialogue",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "Ordering coffee to go in Lisbon. Put the lines in order.",
+      "explanation": "«Bica» is the Lisbon term for an espresso. «É para levar» means it's to go.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Queria uma bica, por favor."
+        },
+        {
+          "speaker": "B",
+          "text": "Com certeza. É para tomar aqui?"
+        },
+        {
+          "speaker": "A",
+          "text": "Não, é para levar. Quanto é?"
+        },
+        {
+          "speaker": "B",
+          "text": "É um euro, faça favor."
+        }
+      ]
+    },
+    {
+      "id": "everyday-2-25",
+      "type": "find_error",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the word that uses Brazilian Portuguese instead of European Portuguese.",
+      "explanation": "In European Portuguese, train is «comboio». «Trem» (like «metrô» and «bonde») is Brazilian usage.",
+      "sentence": [
+        "A",
+        "que",
+        "horas",
+        "sai",
+        "o",
+        "próximo",
+        "trem?"
+      ],
+      "wrongIndex": 6,
+      "correction": "comboio?",
+      "options": [
+        "comboio?",
+        "metrô?",
+        "bonde?"
+      ]
+    },
+    {
+      "id": "everyday-2-26",
+      "type": "translate_word",
+      "topicId": "everyday-2",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the European Portuguese word for the term in bold.",
+      "explanation": "In Portugal, a restaurant or café menu is «a ementa». «Cardápio» is Brazilian usage.",
+      "direction": "toTarget",
+      "sentence": "Can I see the **menu**, please?",
+      "word": "menu",
+      "answer": "ementa",
+      "options": [
+        "ementa",
+        "cardápio",
+        "conta",
+        "mesa"
+      ]
+    },
+    {
+      "id": "everyday-2-27",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You have chosen a jacket (o casaco). Tell the shop assistant: \"I'll take this one.\"",
+      "explanation": "«Vou levar este» is the natural way to say you'll buy an item. «Este» agrees with «o casaco» (masculine).",
+      "answer": [
+        "Vou",
+        "levar",
+        "este."
+      ],
+      "distractors": [
+        "levo",
+        "esta",
+        "leva"
+      ],
+      "acceptedAnswers": [
+        "Eu vou levar este.",
+        "Levo este."
+      ]
+    },
+    {
+      "id": "everyday-2-28",
+      "type": "about_me",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Answer the cashier when paying at checkout.",
+      "explanation": "In Portugal, cashiers usually ask if you want your tax identification number (NIF) on the invoice.",
+      "question": "Quer fatura com número de contribuinte?",
+      "sampleAnswer": "Não, obrigado, não preciso.",
+      "hints": [
+        "sim",
+        "por",
+        "favor",
+        "sem",
+        "número",
+        "saco"
+      ]
+    },
+    {
+      "id": "everyday-2-29",
+      "type": "question_for_answer",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You are on a bus and want to check the upcoming stop. Ask: \"What is the next stop?\"",
+      "explanation": "«Qual é a próxima paragem?» asks what stop is coming up on public transit.",
+      "givenAnswer": "É a Praça do Comércio.",
+      "answer": [
+        "Qual",
+        "é",
+        "a",
+        "próxima",
+        "paragem?"
+      ],
+      "distractors": [
+        "Onde",
+        "fica",
+        "esta"
+      ],
+      "acceptedAnswers": [
+        "Qual é a próxima paragem"
+      ]
+    },
+    {
+      "id": "everyday-2-30",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask the shop assistant if an item is on sale: \"Is it on sale?\"",
+      "explanation": "«Está em promoção?» asks if an item has a discount or is on sale.",
+      "answer": [
+        "Está",
+        "em",
+        "promoção?"
+      ],
+      "distractors": [
+        "É",
+        "na",
+        "desconto"
+      ],
+      "acceptedAnswers": [
+        "Isso está em promoção?",
+        "Isto está em promoção?"
+      ]
+    },
+    {
+      "id": "everyday-2-31",
+      "type": "fill_gaps",
+      "topicId": "everyday-2",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "At a train station window. Complete the clerk's question.",
+      "explanation": "«Só ida» means one-way ticket, while «ida e volta» means round-trip.",
+      "template": "— Queria um bilhete para o Porto. — É ___ ida ou ida e ___?",
+      "gaps": [
+        {
+          "answer": "só"
+        },
+        {
+          "answer": "volta"
+        }
+      ],
+      "wordBank": [
+        "só",
+        "volta",
+        "para",
+        "tudo"
+      ]
+    },
+    {
+      "id": "everyday-2-32",
+      "type": "translate_word",
+      "topicId": "everyday-2",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese word for the term in bold.",
+      "explanation": "Bus and tram stops in Portugal are called «paragem» (plural: «paragens»).",
+      "direction": "toTarget",
+      "sentence": "What is the next **stop** for this bus?",
+      "word": "stop",
+      "answer": "paragem",
+      "options": [
+        "paragem",
+        "estação",
+        "linha",
+        "autocarro"
+      ]
+    },
+    {
+      "id": "everyday-2-33",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask at the station desk: \"What time does the next train leave?\"",
+      "explanation": "«A que horas sai...» is the standard structure for asking when transport departs.",
+      "answer": [
+        "A",
+        "que",
+        "horas",
+        "sai",
+        "o",
+        "próximo",
+        "comboio?"
+      ],
+      "distractors": [
+        "vai",
+        "onde",
+        "chega",
+        "trem"
+      ],
+      "acceptedAnswers": [
+        "A que horas é que sai o próximo comboio?"
+      ]
+    },
+    {
+      "id": "everyday-2-34",
+      "type": "match_pairs",
+      "topicId": "everyday-2",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "Match each everyday phrase with its English meaning.",
+      "explanation": "Learn these common Portuguese store and travel expressions as full fixed chunks.",
+      "pairs": [
+        {
+          "target": "Precisa de saco?",
+          "support": "Do you need a bag?"
+        },
+        {
+          "target": "Com todo o gosto.",
+          "support": "With pleasure."
+        },
+        {
+          "target": "Estamos a caminho.",
+          "support": "We are on the way."
+        },
+        {
+          "target": "Não se preocupe.",
+          "support": "Don't worry."
+        }
+      ]
+    },
+    {
+      "id": "everyday-2-35",
+      "type": "question_for_answer",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "The clerk answers: «Sim, para estudantes é mais barato.» Ask if there is a student discount.",
+      "explanation": "«Tem desconto de estudante?» is how you ask for student discounts in Portugal.",
+      "givenAnswer": "Sim, para estudantes é mais barato.",
+      "answer": [
+        "Tem",
+        "desconto",
+        "de",
+        "estudante?"
+      ],
+      "distractors": [
+        "Tens",
+        "cartão",
+        "do",
+        "alunos"
+      ],
+      "acceptedAnswers": [
+        "Há desconto de estudante?",
+        "Existe desconto de estudante?"
+      ]
+    },
+    {
+      "id": "everyday-2-36",
+      "type": "find_error",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the Brazilian word in this question and pick the European Portuguese correction.",
+      "explanation": "In European Portuguese, a bus is «autocarro». «Ônibus» is Brazilian Portuguese.",
+      "sentence": [
+        "Onde",
+        "fica",
+        "a",
+        "paragem",
+        "de",
+        "ônibus?"
+      ],
+      "wrongIndex": 5,
+      "correction": "autocarro?",
+      "options": [
+        "autocarro?",
+        "comboio?",
+        "carro?"
+      ]
+    },
+    {
+      "id": "everyday-2-37",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask the shop clerk: \"Do you have this model in black?\"",
+      "explanation": "«em preto» means 'in black' when specifying colors of items in a shop.",
+      "answer": [
+        "Tem",
+        "este",
+        "modelo",
+        "em",
+        "preto?"
+      ],
+      "distractors": [
+        "há",
+        "isto",
+        "cor",
+        "branca"
+      ]
+    },
+    {
+      "id": "everyday-2-38",
+      "type": "fill_gaps",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Paying in a shop. Complete what the customer and the shop assistant say (formal).",
+      "explanation": "The customer says «Fique com o troco» (keep the change) and the assistant says «Volte sempre!» (come back anytime). Learn both as formal chunks; «Fica / Volta» are the informal tu forms.",
+      "template": "Cliente: «___ com o troco.» Empregado: «Muito obrigado! ___ sempre!»",
+      "gaps": [
+        {
+          "answer": "Fique"
+        },
+        {
+          "answer": "Volte"
+        }
+      ],
+      "wordBank": [
+        "Fique",
+        "Volte",
+        "Fica",
+        "Volta",
+        "Vai"
+      ]
+    },
+    {
+      "id": "everyday-2-39",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask a store assistant for help: \"Can you help me, please?\"",
+      "explanation": "«Pode ajudar-me, por favor?» is a polite, standard way to ask staff for assistance.",
+      "answer": [
+        "Pode",
+        "ajudar-me,",
+        "por",
+        "favor?"
+      ],
+      "distractors": [
+        "posso",
+        "ajuda",
+        "com"
+      ],
+      "acceptedAnswers": [
+        "Pode ajudar-me por favor?"
+      ]
+    },
+    {
+      "id": "everyday-2-40",
+      "type": "build_phrase",
+      "topicId": "everyday-2",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that the train is running late: \"The train is delayed.\"",
+      "explanation": "Use «estar atrasado» to express that transport or an event is delayed.",
+      "answer": [
+        "O",
+        "comboio",
+        "está",
+        "atrasado."
+      ],
+      "distractors": [
+        "trem",
+        "é",
+        "adiantado"
+      ],
+      "acceptedAnswers": [
+        "O comboio está atrasado"
+      ]
+    }
+  ]
+}

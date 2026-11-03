@@ -1,0 +1,1324 @@
+{
+  "id": "everyday-6",
+  "title": "Everyday phrases 6 — conversation, opinions and feelings",
+  "phrases": [
+    {
+      "target": "Concordo.",
+      "support": "I agree.",
+      "register": "neutral",
+      "situation": "Agreeing with a statement or plan."
+    },
+    {
+      "target": "Não concordo.",
+      "support": "I don't agree.",
+      "register": "neutral",
+      "situation": "Disagreeing politely."
+    },
+    {
+      "target": "Concordo contigo.",
+      "support": "I agree with you.",
+      "register": "informal",
+      "situation": "Agreeing with a friend."
+    },
+    {
+      "target": "Não concordo muito.",
+      "support": "I don't really agree.",
+      "register": "neutral",
+      "situation": "Softening a disagreement."
+    },
+    {
+      "target": "Tens razão.",
+      "support": "You're right.",
+      "register": "informal",
+      "situation": "Telling a friend they are right."
+    },
+    {
+      "target": "Tem razão.",
+      "support": "You're right.",
+      "register": "formal",
+      "situation": "Telling a stranger or staff member they are right."
+    },
+    {
+      "target": "Acho que sim.",
+      "support": "I think so.",
+      "register": "neutral",
+      "situation": "Saying yes, but not with full certainty."
+    },
+    {
+      "target": "Acho que não.",
+      "support": "I don't think so.",
+      "register": "neutral",
+      "situation": "Saying no, but softly."
+    },
+    {
+      "target": "Talvez.",
+      "support": "Maybe.",
+      "register": "neutral",
+      "situation": "Giving an uncertain answer."
+    },
+    {
+      "target": "Depende.",
+      "support": "It depends.",
+      "register": "neutral",
+      "situation": "When the answer changes with the situation."
+    },
+    {
+      "target": "Na minha opinião…",
+      "support": "In my opinion...",
+      "register": "neutral",
+      "situation": "Giving your personal view."
+    },
+    {
+      "target": "Para mim…",
+      "support": "For me...",
+      "register": "neutral",
+      "situation": "Giving your own point of view."
+    },
+    {
+      "target": "Parece-me bem.",
+      "support": "Sounds good to me.",
+      "register": "neutral",
+      "situation": "Reacting positively to a suggestion."
+    },
+    {
+      "target": "Não me parece.",
+      "support": "I don't think so.",
+      "register": "neutral",
+      "situation": "Doubting something politely."
+    },
+    {
+      "target": "Pois é.",
+      "support": "Yeah, that's true.",
+      "register": "neutral",
+      "situation": "Showing agreement or recognition."
+    },
+    {
+      "target": "Não sei bem.",
+      "support": "I'm not really sure.",
+      "register": "neutral",
+      "situation": "When you do not know how to answer clearly."
+    },
+    {
+      "target": "Como assim?",
+      "support": "What do you mean?",
+      "register": "informal",
+      "situation": "Asking for clarification in a short way."
+    },
+    {
+      "target": "O que queres dizer?",
+      "support": "What do you mean?",
+      "register": "informal",
+      "situation": "Asking a friend to explain."
+    },
+    {
+      "target": "O que quer dizer?",
+      "support": "What do you mean?",
+      "register": "formal",
+      "situation": "Asking a stranger or staff member to explain."
+    },
+    {
+      "target": "Podes repetir?",
+      "support": "Can you repeat that?",
+      "register": "informal",
+      "situation": "Asking a friend to say it again."
+    },
+    {
+      "target": "Pode repetir?",
+      "support": "Can you repeat that?",
+      "register": "formal",
+      "situation": "Asking a stranger or staff member to say it again."
+    },
+    {
+      "target": "Podes falar mais devagar?",
+      "support": "Can you speak more slowly?",
+      "register": "informal",
+      "situation": "Asking a friend to slow down."
+    },
+    {
+      "target": "Pode falar mais devagar?",
+      "support": "Can you speak more slowly?",
+      "register": "formal",
+      "situation": "Asking a stranger or staff member to slow down."
+    },
+    {
+      "target": "A sério?",
+      "support": "Really?",
+      "register": "neutral",
+      "situation": "Reacting with surprise."
+    },
+    {
+      "target": "Mesmo?",
+      "support": "Really?",
+      "register": "neutral",
+      "situation": "Reacting with surprise or doubt."
+    },
+    {
+      "target": "Não acredito!",
+      "support": "I can't believe it!",
+      "register": "neutral",
+      "situation": "Reacting with strong surprise."
+    },
+    {
+      "target": "Que giro!",
+      "support": "How nice! / How cute!",
+      "register": "neutral",
+      "situation": "Reacting warmly to something nice."
+    },
+    {
+      "target": "Que bom!",
+      "support": "That's great!",
+      "register": "neutral",
+      "situation": "Reacting happily to good news."
+    },
+    {
+      "target": "Ainda bem.",
+      "support": "That's good / What a relief.",
+      "register": "neutral",
+      "situation": "Reacting with relief."
+    },
+    {
+      "target": "Estou contente por ti.",
+      "support": "I'm happy for you.",
+      "register": "informal",
+      "situation": "Reacting to good news from a friend."
+    },
+    {
+      "target": "Fico contente por si.",
+      "support": "I'm happy for you.",
+      "register": "formal",
+      "situation": "Reacting politely to good news from someone you address formally."
+    },
+    {
+      "target": "Que pena!",
+      "support": "What a pity!",
+      "register": "neutral",
+      "situation": "Reacting to bad news or disappointment."
+    },
+    {
+      "target": "Que chatice!",
+      "support": "What a nuisance!",
+      "register": "neutral",
+      "situation": "Reacting to an annoying situation."
+    },
+    {
+      "target": "Que horror!",
+      "support": "How awful!",
+      "register": "neutral",
+      "situation": "Reacting to shocking or very bad news."
+    },
+    {
+      "target": "Coitado!",
+      "support": "Poor thing!",
+      "register": "neutral",
+      "situation": "Showing sympathy for a man or boy."
+    },
+    {
+      "target": "Coitada!",
+      "support": "Poor thing!",
+      "register": "neutral",
+      "situation": "Showing sympathy for a woman or girl."
+    },
+    {
+      "target": "Força!",
+      "support": "Come on! / You can do it!",
+      "register": "neutral",
+      "situation": "Encouraging someone."
+    },
+    {
+      "target": "Boa sorte!",
+      "support": "Good luck!",
+      "register": "neutral",
+      "situation": "Wishing someone luck."
+    },
+    {
+      "target": "Vai correr bem.",
+      "support": "It will go well.",
+      "register": "neutral",
+      "situation": "Reassuring someone before something important."
+    },
+    {
+      "target": "Não faz mal.",
+      "support": "It's okay. / No problem.",
+      "register": "neutral",
+      "situation": "Reassuring someone after a small mistake or problem."
+    },
+    {
+      "target": "Não faz diferença.",
+      "support": "It doesn't make a difference.",
+      "register": "neutral",
+      "situation": "Saying the result is the same either way."
+    },
+    {
+      "target": "Tanto faz.",
+      "support": "Either is fine.",
+      "register": "neutral",
+      "situation": "When both options are okay for you."
+    },
+    {
+      "target": "Sem problema.",
+      "support": "No problem.",
+      "register": "neutral",
+      "situation": "Reassuring someone in a casual way."
+    },
+    {
+      "target": "Estou a brincar.",
+      "support": "I'm joking.",
+      "register": "neutral",
+      "situation": "Saying that something was a joke."
+    },
+    {
+      "target": "Era brincadeira.",
+      "support": "I was joking.",
+      "register": "neutral",
+      "situation": "Clarifying that what you said was not serious."
+    },
+    {
+      "target": "Que fixe!",
+      "support": "Cool!",
+      "register": "informal",
+      "situation": "Reacting enthusiastically to good news."
+    },
+    {
+      "target": "Que alívio!",
+      "support": "What a relief!",
+      "register": "neutral",
+      "situation": "Reacting after worry or stress."
+    },
+    {
+      "target": "Isso mesmo.",
+      "support": "That's it. / Exactly.",
+      "register": "neutral",
+      "situation": "Confirming that someone has understood correctly."
+    },
+    {
+      "target": "Exato.",
+      "support": "Exactly.",
+      "register": "neutral",
+      "situation": "Confirming something briefly."
+    },
+    {
+      "target": "Percebo.",
+      "support": "I see.",
+      "register": "neutral",
+      "situation": "Showing that you understand."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "everyday-6-01",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your friend says: «Também prefiro este café.» Say: «I agree with you.»",
+      "explanation": "Use «concordar com» to agree with a person. With a friend, «contigo» makes the phrase natural.",
+      "answer": [
+        "Concordo",
+        "contigo."
+      ],
+      "distractors": [
+        "consigo",
+        "concordas",
+        "muito"
+      ]
+    },
+    {
+      "id": "everyday-6-02",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your friend says the metro is faster, and you think he is right. Say: «You're right.»",
+      "explanation": "For informal singular, European Portuguese uses «tu» forms: «tens razão».",
+      "answer": [
+        "Tens",
+        "razão."
+      ],
+      "distractors": [
+        "tem",
+        "certeza",
+        "tenho"
+      ],
+      "acceptedAnswers": [
+        "Tu tens razão."
+      ]
+    },
+    {
+      "id": "everyday-6-03",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "A friend asks if the film is good. You think so, but you are not 100% sure. Say: «I think so.»",
+      "explanation": "«Acho que sim» is a soft way to say yes when you are fairly sure but not completely certain.",
+      "answer": [
+        "Acho",
+        "que",
+        "sim."
+      ],
+      "distractors": [
+        "não",
+        "tenho",
+        "razão"
+      ],
+      "acceptedAnswers": [
+        "Eu acho que sim."
+      ]
+    },
+    {
+      "id": "everyday-6-04",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Two cafés are both fine for you. Say: «Either is fine.»",
+      "explanation": "«Tanto faz» is a fixed chunk for when both options are okay. Learn it whole.",
+      "answer": [
+        "Tanto",
+        "faz."
+      ],
+      "distractors": [
+        "depende",
+        "igual",
+        "mesmo"
+      ],
+      "acceptedAnswers": [
+        "Para mim, tanto faz."
+      ]
+    },
+    {
+      "id": "everyday-6-05",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your friend says sorry for being five minutes late. Reassure him: «It's okay.»",
+      "explanation": "«Não faz mal» is a common set phrase to reassure someone after a small problem or mistake.",
+      "answer": [
+        "Não",
+        "faz",
+        "mal."
+      ],
+      "distractors": [
+        "tenho",
+        "bem",
+        "pena"
+      ]
+    },
+    {
+      "id": "everyday-6-06",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your friend got the job. Say that you are happy for them.",
+      "explanation": "Use «por ti» to react positively to good news from a friend. Learn the whole phrase as a chunk.",
+      "answer": [
+        "Estou",
+        "contente",
+        "por",
+        "ti."
+      ],
+      "distractors": [
+        "mim",
+        "si",
+        "estás"
+      ],
+      "acceptedAnswers": [
+        "Fico contente por ti.",
+        "Eu estou contente por ti."
+      ]
+    },
+    {
+      "id": "everyday-6-07",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You said something silly and your friend looks shocked. Say: «I'm joking.»",
+      "explanation": "European Portuguese uses «estar a + infinitive»: «estou a brincar». Learn the whole phrase as a set expression.",
+      "answer": [
+        "Estou",
+        "a",
+        "brincar."
+      ],
+      "distractors": [
+        "brincando",
+        "sério",
+        "agora"
+      ],
+      "acceptedAnswers": [
+        "Eu estou a brincar."
+      ]
+    },
+    {
+      "id": "everyday-6-08",
+      "type": "question_for_answer",
+      "topicId": "everyday-6",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your friend says: «Quero dizer que hoje não posso.» Ask him what he means.",
+      "explanation": "To ask for clarification with a friend, use «O que queres dizer?». The version with «é que» is also common.",
+      "givenAnswer": "Quero dizer que hoje não posso.",
+      "answer": [
+        "O",
+        "que",
+        "queres",
+        "dizer?"
+      ],
+      "distractors": [
+        "quer",
+        "diz",
+        "podes",
+        "falar"
+      ],
+      "acceptedAnswers": [
+        "O que é que queres dizer?"
+      ]
+    },
+    {
+      "id": "everyday-6-09",
+      "type": "question_for_answer",
+      "topicId": "everyday-6",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your classmate says something confusing. Ask: «How do you mean?»",
+      "explanation": "«Como assim?» is a short fixed question when something sounds confusing or surprising.",
+      "givenAnswer": "Quero dizer que o autocarro já saiu.",
+      "answer": [
+        "Como",
+        "assim?"
+      ],
+      "distractors": [
+        "Quando",
+        "aqui",
+        "agora"
+      ]
+    },
+    {
+      "id": "everyday-6-10",
+      "type": "question_for_answer",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You did not hear the last sentence. Ask your friend to repeat it.",
+      "explanation": "«Podes repetir?» is the normal informal way to ask a friend to say it again.",
+      "givenAnswer": "Disse que o café fecha às seis.",
+      "answer": [
+        "Podes",
+        "repetir?"
+      ],
+      "distractors": [
+        "queres",
+        "dizer",
+        "posso"
+      ],
+      "acceptedAnswers": [
+        "Tu podes repetir?",
+        "Podes repetir, por favor?"
+      ]
+    },
+    {
+      "id": "everyday-6-11",
+      "type": "question_for_answer",
+      "topicId": "everyday-6",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "At reception, you do not understand well. Ask the receptionist (formal) to speak more slowly.",
+      "explanation": "With strangers or staff, use the formal 3rd-person form: «Pode falar mais devagar?»",
+      "givenAnswer": "Sim, posso.",
+      "answer": [
+        "Pode",
+        "falar",
+        "mais",
+        "devagar?"
+      ],
+      "distractors": [
+        "podes",
+        "menos",
+        "rápido",
+        "quer"
+      ],
+      "acceptedAnswers": [
+        "Pode falar mais devagar, por favor?",
+        "O senhor pode falar mais devagar?",
+        "A senhora pode falar mais devagar?"
+      ]
+    },
+    {
+      "id": "everyday-6-12",
+      "type": "fill_gaps",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Complete the mini-dialogue with two common conversation phrases.",
+      "explanation": "«Não sei bem» shows uncertainty, while «Depende» means the answer changes with the situation.",
+      "template": "— Vens connosco amanhã? — Não ___ bem. ___",
+      "gaps": [
+        {
+          "answer": "sei"
+        },
+        {
+          "answer": "Depende."
+        }
+      ],
+      "wordBank": [
+        "sei",
+        "Depende.",
+        "acho",
+        "Concordo."
+      ]
+    },
+    {
+      "id": "everyday-6-13",
+      "type": "fill_gaps",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Complete the reaction with the two fixed phrases.",
+      "explanation": "«A sério?» reacts with surprise, and «Não acredito!» shows stronger surprise. Learn both as chunks.",
+      "template": "— O Rui vai casar. — A ___? Não ___!",
+      "gaps": [
+        {
+          "answer": "sério"
+        },
+        {
+          "answer": "acredito"
+        }
+      ],
+      "wordBank": [
+        "sério",
+        "acredito",
+        "pena",
+        "repetir"
+      ]
+    },
+    {
+      "id": "everyday-6-14",
+      "type": "fill_gaps",
+      "topicId": "everyday-6",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Fill the two gaps in this short exchange.",
+      "explanation": "«Não faz mal» reassures someone after a small problem. «Ainda bem» shows relief after good news.",
+      "template": "— Desculpa o atraso! — Não ___ mal. Encontraste as chaves? — Sim, encontrei. — ___ bem!",
+      "gaps": [
+        {
+          "answer": "faz"
+        },
+        {
+          "answer": "Ainda"
+        }
+      ],
+      "wordBank": [
+        "Ainda",
+        "faz",
+        "sério",
+        "quero"
+      ]
+    },
+    {
+      "id": "everyday-6-15",
+      "type": "find_error",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With informal singular «tu», the verb is «tens»: «Tens razão». «Tem» is the 3rd-person form.",
+      "sentence": [
+        "Tu",
+        "tem",
+        "razão."
+      ],
+      "wrongIndex": 1,
+      "correction": "tens",
+      "options": [
+        "tens",
+        "tenho",
+        "temos"
+      ]
+    },
+    {
+      "id": "everyday-6-16",
+      "type": "find_error",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "To give your own opinion, use the first person: «não concordo». «Concordas» is the informal «you agree» form.",
+      "sentence": [
+        "Eu",
+        "não",
+        "concordas."
+      ],
+      "wrongIndex": 2,
+      "correction": "concordo",
+      "options": [
+        "concordo",
+        "concorda",
+        "concordamos"
+      ]
+    },
+    {
+      "id": "everyday-6-17",
+      "type": "translate_word",
+      "topicId": "everyday-6",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "Use «Depende.» when the answer changes from case to case. Learn it as a whole response.",
+      "direction": "toTarget",
+      "sentence": "It **depends** on the day.",
+      "word": "depends",
+      "answer": "depende",
+      "options": [
+        "depende",
+        "concordo",
+        "repete",
+        "acredito"
+      ]
+    },
+    {
+      "id": "everyday-6-18",
+      "type": "translate_word",
+      "topicId": "everyday-6",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "After «podes», the next verb stays in the infinitive: «repetir».",
+      "direction": "toTarget",
+      "sentence": "Can you **repeat** that?",
+      "word": "repeat",
+      "answer": "repetir",
+      "options": [
+        "repetir",
+        "falar",
+        "dizer",
+        "achar"
+      ]
+    },
+    {
+      "id": "everyday-6-19",
+      "type": "about_me",
+      "topicId": "everyday-6",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Answer about yourself.",
+      "explanation": "Short fixed phrases are very common here. You can combine encouragement with reassurance.",
+      "question": "O que costumas dizer a um amigo antes de um exame?",
+      "sampleAnswer": "Costumo dizer: Força! Vai correr bem.",
+      "hints": [
+        "amigo",
+        "nervoso",
+        "amanhã",
+        "teste",
+        "boa",
+        "sorte"
+      ]
+    },
+    {
+      "id": "everyday-6-20",
+      "type": "order_dialogue",
+      "topicId": "everyday-6",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "Good news from a friend. Put the dialogue in order.",
+      "explanation": "A natural reaction often goes from surprise («A sério?») to joy («Que bom!») and then a warm comment.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Sabes? Passei no exame de condução."
+        },
+        {
+          "speaker": "B",
+          "text": "A sério?"
+        },
+        {
+          "speaker": "A",
+          "text": "Sim, passei ontem."
+        },
+        {
+          "speaker": "B",
+          "text": "Que bom! Estou contente por ti."
+        },
+        {
+          "speaker": "A",
+          "text": "Obrigado!"
+        }
+      ]
+    },
+    {
+      "id": "everyday-6-21",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your friend says: «O concerto foi cancelado.» React with sympathy: «What a pity!»",
+      "explanation": "Use «Que pena!» for disappointing news. Learn it as a whole reaction.",
+      "answer": [
+        "Que",
+        "pena!"
+      ],
+      "distractors": [
+        "bom",
+        "giro",
+        "horror"
+      ]
+    },
+    {
+      "id": "everyday-6-22",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "A classmate worries because he sent you the file a bit late. Reassure him casually: «No problem.»",
+      "explanation": "«Sem problema.» is a short, casual way to say there is no problem. Use it as a fixed chunk.",
+      "answer": [
+        "Sem",
+        "problema."
+      ],
+      "distractors": [
+        "pena",
+        "diferença",
+        "brincadeira"
+      ]
+    },
+    {
+      "id": "everyday-6-23",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your friend says she got tickets for the festival. React enthusiastically, informally: «Cool!»",
+      "explanation": "«Que fixe!» is an informal reaction to good news. It is common in European Portuguese.",
+      "answer": [
+        "Que",
+        "fixe!"
+      ],
+      "distractors": [
+        "chatice",
+        "pena",
+        "horror"
+      ]
+    },
+    {
+      "id": "everyday-6-24",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your flatmate suggests meeting at seven. Say: «Sounds good to me.»",
+      "explanation": "Use «Parece-me bem.» to react positively to a suggestion. Learn the whole phrase as one chunk.",
+      "answer": [
+        "Parece-me",
+        "bem."
+      ],
+      "distractors": [
+        "acho",
+        "mal",
+        "tanto"
+      ]
+    },
+    {
+      "id": "everyday-6-25",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "A friend says: «Em Lisboa há muito trânsito.» Agree with the short reaction «Yeah, that's true.»",
+      "explanation": "«Pois é.» shows agreement or recognition. It often means “yes, that’s true”.",
+      "answer": [
+        "Pois",
+        "é."
+      ],
+      "distractors": [
+        "és",
+        "sou",
+        "bem"
+      ]
+    },
+    {
+      "id": "everyday-6-26",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "In a discussion about a film, you disagree, but softly. Say: «I don't really agree.»",
+      "explanation": "«Não concordo muito.» softens disagreement. It sounds less direct than a strong «Não concordo.»",
+      "answer": [
+        "Não",
+        "concordo",
+        "muito."
+      ],
+      "distractors": [
+        "acho",
+        "depende",
+        "pouco"
+      ]
+    },
+    {
+      "id": "everyday-6-27",
+      "type": "question_for_answer",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "At the pharmacy, the assistant explains the medicine very fast. Ask her politely to say it again.",
+      "explanation": "With strangers or staff, use the formal fixed phrase «Pode repetir?». It uses the 3rd-person form.",
+      "givenAnswer": "Claro, repito.",
+      "answer": [
+        "Pode",
+        "repetir?"
+      ],
+      "distractors": [
+        "falar",
+        "quer",
+        "devagar"
+      ],
+      "acceptedAnswers": [
+        "Pode repetir, por favor?"
+      ]
+    },
+    {
+      "id": "everyday-6-28",
+      "type": "question_for_answer",
+      "topicId": "everyday-6",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your friend is speaking too fast. Ask him informally to slow down.",
+      "explanation": "For a friend, use «podes». The full chunk is «Podes falar mais devagar?».",
+      "givenAnswer": "Sim, falo mais devagar.",
+      "answer": [
+        "Podes",
+        "falar",
+        "mais",
+        "devagar?"
+      ],
+      "distractors": [
+        "pode",
+        "dizer",
+        "depressa"
+      ],
+      "acceptedAnswers": [
+        "Tu podes falar mais devagar?"
+      ]
+    },
+    {
+      "id": "everyday-6-29",
+      "type": "question_for_answer",
+      "topicId": "everyday-6",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "A shop assistant says something unclear about today’s opening hours. Ask politely what she means.",
+      "explanation": "To ask for clarification formally, use «O que quer dizer?». A common alternative is with «é que».",
+      "givenAnswer": "Quero dizer que hoje fechamos mais cedo.",
+      "answer": [
+        "O",
+        "que",
+        "quer",
+        "dizer?"
+      ],
+      "distractors": [
+        "pode",
+        "falar",
+        "repetir"
+      ],
+      "acceptedAnswers": [
+        "O que é que quer dizer?"
+      ]
+    },
+    {
+      "id": "everyday-6-30",
+      "type": "build_phrase",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "An older neighbour tells you he finally sold his house. React politely and say you are happy for him.",
+      "explanation": "Use «Fico contente por si.» in formal situations; «por ti» is only for friends. Learn it as a whole expression.",
+      "answer": [
+        "Fico",
+        "contente",
+        "por",
+        "si."
+      ],
+      "distractors": [
+        "ti",
+        "para",
+        "consigo"
+      ],
+      "acceptedAnswers": [
+        "Estou contente por si."
+      ]
+    },
+    {
+      "id": "everyday-6-31",
+      "type": "fill_gaps",
+      "topicId": "everyday-6",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Complete the reaction to good news.",
+      "explanation": "Use «Que bom!» for happy news and «Ainda bem.» when there is also relief. Both are fixed reactions.",
+      "template": "— Passei no exame de condução. — ___ ___! ___ bem.",
+      "gaps": [
+        {
+          "answer": "Que"
+        },
+        {
+          "answer": "bom"
+        },
+        {
+          "answer": "Ainda"
+        }
+      ],
+      "wordBank": [
+        "Que",
+        "bom",
+        "Ainda",
+        "pena",
+        "horror",
+        "sem"
+      ]
+    },
+    {
+      "id": "everyday-6-32",
+      "type": "fill_gaps",
+      "topicId": "everyday-6",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Complete the short dialogue about traffic.",
+      "explanation": "«Acho que não.» is a soft negative answer. «Pois é.» shows agreement with the situation.",
+      "template": "— Achas que eles chegam cedo? — ___ que ___. — ___ é, há muito trânsito.",
+      "gaps": [
+        {
+          "answer": "Acho"
+        },
+        {
+          "answer": "não"
+        },
+        {
+          "answer": "Pois"
+        }
+      ],
+      "wordBank": [
+        "Acho",
+        "não",
+        "Pois",
+        "Talvez",
+        "sim",
+        "Que"
+      ]
+    },
+    {
+      "id": "everyday-6-33",
+      "type": "fill_gaps",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Complete the opinion phrase.",
+      "explanation": "«Na minha opinião…» introduces your personal view. Learn this opening as a chunk.",
+      "template": "— Vamos já? — ___ ___ opinião, é melhor esperar.",
+      "gaps": [
+        {
+          "answer": "Na"
+        },
+        {
+          "answer": "minha"
+        }
+      ],
+      "wordBank": [
+        "Na",
+        "minha",
+        "Para",
+        "com",
+        "bem"
+      ]
+    },
+    {
+      "id": "everyday-6-34",
+      "type": "fill_gaps",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Complete the answer when both options give the same result.",
+      "explanation": "«Não faz diferença.» means the result is the same either way. It is a fixed phrase.",
+      "template": "— Vamos de comboio ou de autocarro? — Não ___ ___.",
+      "gaps": [
+        {
+          "answer": "faz"
+        },
+        {
+          "answer": "diferença"
+        }
+      ],
+      "wordBank": [
+        "faz",
+        "diferença",
+        "sei",
+        "pena",
+        "corre"
+      ]
+    },
+    {
+      "id": "everyday-6-35",
+      "type": "find_error",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «a senhora», European Portuguese uses the 3rd-person form: «pode». «Podes» is informal singular.",
+      "sentence": [
+        "A",
+        "senhora",
+        "podes",
+        "repetir?"
+      ],
+      "wrongIndex": 2,
+      "correction": "pode",
+      "options": [
+        "pode",
+        "podem",
+        "posso"
+      ]
+    },
+    {
+      "id": "everyday-6-36",
+      "type": "find_error",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The phrase is «fico contente por si». After «contente», use «por» here, not «para».",
+      "sentence": [
+        "Fico",
+        "contente",
+        "para",
+        "si."
+      ],
+      "wrongIndex": 2,
+      "correction": "por",
+      "options": [
+        "por",
+        "de",
+        "com"
+      ]
+    },
+    {
+      "id": "everyday-6-37",
+      "type": "translate_word",
+      "topicId": "everyday-6",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "For «I agree», the Portuguese form is «concordo». It is the «eu» form.",
+      "direction": "toTarget",
+      "sentence": "I **agree** with the plan.",
+      "word": "agree",
+      "answer": "concordo",
+      "options": [
+        "concordo",
+        "concordas",
+        "acredito",
+        "depende"
+      ]
+    },
+    {
+      "id": "everyday-6-38",
+      "type": "translate_word",
+      "topicId": "everyday-6",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In the reaction «Que alívio!», the noun is «alívio». Learn the whole phrase as a chunk.",
+      "direction": "toTarget",
+      "sentence": "What a **relief** — the train is on time!",
+      "word": "relief",
+      "answer": "alívio",
+      "options": [
+        "alívio",
+        "pena",
+        "horror",
+        "sorte"
+      ]
+    },
+    {
+      "id": "everyday-6-39",
+      "type": "order_dialogue",
+      "topicId": "everyday-6",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "Put the mini-dialogue in order.",
+      "explanation": "«Boa sorte!» wishes someone luck. When they say they are nervous, «Força! Vai correr bem.» encourages and reassures them.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Amanhã tenho uma entrevista."
+        },
+        {
+          "speaker": "B",
+          "text": "Boa sorte!"
+        },
+        {
+          "speaker": "A",
+          "text": "Obrigado. Mas estou um bocadinho nervoso."
+        },
+        {
+          "speaker": "B",
+          "text": "Força! Vai correr bem."
+        }
+      ]
+    },
+    {
+      "id": "everyday-6-40",
+      "type": "about_me",
+      "topicId": "everyday-6",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Answer about yourself.",
+      "explanation": "Use «Isso mesmo.» to confirm that someone understood correctly. It is a fixed confirmation phrase.",
+      "question": "O que dizes quando alguém dá a resposta certa?",
+      "sampleAnswer": "Normalmente digo: Isso mesmo.",
+      "hints": [
+        "sim",
+        "correto",
+        "exato",
+        "quando",
+        "entende"
+      ]
+    }
+  ]
+}

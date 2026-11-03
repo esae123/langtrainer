@@ -1,0 +1,1315 @@
+{
+  "id": "everyday-7",
+  "title": "Everyday phrases 7 — home, neighbours and invitations",
+  "phrases": [
+    {
+      "target": "Entra, entra!",
+      "support": "Come in, come in!",
+      "register": "informal",
+      "situation": "Welcoming a friend or relative at the door."
+    },
+    {
+      "target": "Faz favor de entrar.",
+      "support": "Please come in.",
+      "register": "formal",
+      "situation": "Inviting an older neighbour or guest inside politely."
+    },
+    {
+      "target": "Sente-te em casa.",
+      "support": "Make yourself at home.",
+      "register": "informal",
+      "situation": "Helping a friend relax in your home."
+    },
+    {
+      "target": "Fica à vontade.",
+      "support": "Make yourself comfortable.",
+      "register": "informal",
+      "situation": "Telling a guest to relax and feel comfortable."
+    },
+    {
+      "target": "Fique à vontade.",
+      "support": "Make yourself comfortable.",
+      "register": "formal",
+      "situation": "Telling a guest politely to relax and feel comfortable."
+    },
+    {
+      "target": "Queres beber alguma coisa?",
+      "support": "Do you want something to drink?",
+      "register": "informal",
+      "situation": "Offering a drink to a friend at home."
+    },
+    {
+      "target": "Quer beber alguma coisa?",
+      "support": "Would you like something to drink?",
+      "register": "formal",
+      "situation": "Offering a drink to an older guest or neighbour."
+    },
+    {
+      "target": "Queres comer alguma coisa?",
+      "support": "Do you want something to eat?",
+      "register": "informal",
+      "situation": "Offering food to a friend who is visiting."
+    },
+    {
+      "target": "Quer provar um pouco?",
+      "support": "Would you like to try a little?",
+      "register": "formal",
+      "situation": "Offering some food to a guest politely."
+    },
+    {
+      "target": "Sirva-se.",
+      "support": "Help yourself.",
+      "register": "formal",
+      "situation": "Inviting a guest to take food or drink."
+    },
+    {
+      "target": "Mais um bocadinho?",
+      "support": "A little more?",
+      "register": "neutral",
+      "situation": "Offering someone a little more food."
+    },
+    {
+      "target": "Quer mais um bocadinho?",
+      "support": "Would you like a little more?",
+      "register": "formal",
+      "situation": "Offering an older guest a little more food."
+    },
+    {
+      "target": "Já estou satisfeito.",
+      "support": "I’ve had enough already.",
+      "register": "neutral",
+      "situation": "A man politely refuses more food."
+    },
+    {
+      "target": "Já estou satisfeita.",
+      "support": "I’ve had enough already.",
+      "register": "neutral",
+      "situation": "A woman politely refuses more food."
+    },
+    {
+      "target": "Estava ótimo!",
+      "support": "It was great!",
+      "register": "neutral",
+      "situation": "Praising the dinner (o jantar) or the visit — the adjective agrees with the thing, not the speaker."
+    },
+    {
+      "target": "Estava ótima!",
+      "support": "It was great!",
+      "register": "neutral",
+      "situation": "Praising a feminine noun such as a sopa or a comida."
+    },
+    {
+      "target": "Obrigado pelo convite.",
+      "support": "Thanks for the invitation.",
+      "register": "neutral",
+      "situation": "A man thanks the host when leaving or replying."
+    },
+    {
+      "target": "Obrigada pelo convite.",
+      "support": "Thanks for the invitation.",
+      "register": "neutral",
+      "situation": "A woman thanks the host when leaving or replying."
+    },
+    {
+      "target": "Aparece lá em casa.",
+      "support": "Come round to my place sometime.",
+      "register": "informal",
+      "situation": "Inviting a friend to visit another day."
+    },
+    {
+      "target": "Quando quiseres.",
+      "support": "Whenever you want.",
+      "register": "informal",
+      "situation": "Telling a friend they are welcome any time."
+    },
+    {
+      "target": "Infelizmente não posso.",
+      "support": "Unfortunately I can’t.",
+      "register": "neutral",
+      "situation": "Politely declining an invitation or request."
+    },
+    {
+      "target": "Fica para a próxima.",
+      "support": "Maybe next time.",
+      "register": "neutral",
+      "situation": "Softening a refusal and keeping the tone friendly."
+    },
+    {
+      "target": "Podes dar-me uma ajuda?",
+      "support": "Can you give me a hand?",
+      "register": "informal",
+      "situation": "Asking a friend or neighbour for help."
+    },
+    {
+      "target": "Pode dar-me uma ajuda?",
+      "support": "Can you give me a hand?",
+      "register": "formal",
+      "situation": "Asking an older person or stranger for help politely."
+    },
+    {
+      "target": "Importas-te de me ajudar?",
+      "support": "Do you mind helping me?",
+      "register": "informal",
+      "situation": "Asking a friend for a favour."
+    },
+    {
+      "target": "Importa-se de me ajudar?",
+      "support": "Do you mind helping me?",
+      "register": "formal",
+      "situation": "Asking politely for help from someone you do not know well."
+    },
+    {
+      "target": "Não te incomodes.",
+      "support": "Don’t trouble yourself.",
+      "register": "informal",
+      "situation": "Telling a friend not to bother."
+    },
+    {
+      "target": "Não se incomode.",
+      "support": "Don’t trouble yourself.",
+      "register": "formal",
+      "situation": "Telling someone politely not to bother."
+    },
+    {
+      "target": "Não é incómodo nenhum.",
+      "support": "It’s no trouble at all.",
+      "register": "neutral",
+      "situation": "Answering when someone apologises for asking a favour."
+    },
+    {
+      "target": "Desculpa o barulho.",
+      "support": "Sorry about the noise.",
+      "register": "informal",
+      "situation": "Apologising to a friend or neighbour for noise at home."
+    },
+    {
+      "target": "Desculpe o barulho.",
+      "support": "Sorry about the noise.",
+      "register": "formal",
+      "situation": "Apologising politely for noise to an older neighbour."
+    },
+    {
+      "target": "Tens um minuto?",
+      "support": "Do you have a minute?",
+      "register": "informal",
+      "situation": "Getting a friend’s attention before asking something."
+    },
+    {
+      "target": "Tem um minuto?",
+      "support": "Do you have a minute?",
+      "register": "formal",
+      "situation": "Getting an older neighbour’s attention politely."
+    },
+    {
+      "target": "Vemo-nos amanhã.",
+      "support": "See you tomorrow.",
+      "register": "neutral",
+      "situation": "Ending a visit when you will meet again the next day."
+    },
+    {
+      "target": "Até breve.",
+      "support": "See you soon.",
+      "register": "neutral",
+      "situation": "Saying goodbye when you expect to see the person again soon."
+    },
+    {
+      "target": "Manda cumprimentos à família.",
+      "support": "Give my regards to the family.",
+      "register": "informal",
+      "situation": "Sending greetings through a friend."
+    },
+    {
+      "target": "Mande cumprimentos à família.",
+      "support": "Give my regards to the family.",
+      "register": "formal",
+      "situation": "Sending greetings through an older person or polite contact."
+    },
+    {
+      "target": "Senta-te, por favor.",
+      "support": "Sit down, please.",
+      "register": "informal",
+      "situation": "Inviting a friend to sit."
+    },
+    {
+      "target": "Sente-se, por favor.",
+      "support": "Sit down, please.",
+      "register": "formal",
+      "situation": "Inviting a guest to sit politely."
+    },
+    {
+      "target": "Posso deixar os sapatos aqui?",
+      "support": "Can I leave my shoes here?",
+      "register": "neutral",
+      "situation": "Asking what to do with your shoes when visiting."
+    },
+    {
+      "target": "Podes abrir a janela?",
+      "support": "Can you open the window?",
+      "register": "informal",
+      "situation": "Asking a friend at home for a small favour."
+    },
+    {
+      "target": "Pode abrir a janela?",
+      "support": "Can you open the window?",
+      "register": "formal",
+      "situation": "Asking politely for a small favour."
+    },
+    {
+      "target": "Queres mais chá?",
+      "support": "Do you want more tea?",
+      "register": "informal",
+      "situation": "Offering another drink to a friend."
+    },
+    {
+      "target": "Quer mais café?",
+      "support": "Would you like more coffee?",
+      "register": "formal",
+      "situation": "Offering more coffee to an older guest."
+    },
+    {
+      "target": "Posso usar a casa de banho?",
+      "support": "May I use the bathroom?",
+      "register": "neutral",
+      "situation": "Asking this in someone’s home."
+    },
+    {
+      "target": "A porta está aberta.",
+      "support": "The door is open.",
+      "register": "neutral",
+      "situation": "Calling out so the visitor can come in."
+    },
+    {
+      "target": "Já vou!",
+      "support": "I’m coming!",
+      "register": "neutral",
+      "situation": "Shouting this when someone rings the bell or knocks."
+    },
+    {
+      "target": "Um café ou um chá?",
+      "support": "A coffee or a tea?",
+      "register": "neutral",
+      "situation": "Offering a simple choice of drinks."
+    },
+    {
+      "target": "Queres vir cá a casa?",
+      "support": "Do you want to come over to my place?",
+      "register": "informal",
+      "situation": "Inviting a friend to your home."
+    },
+    {
+      "target": "A casa é sua.",
+      "support": "Make yourself at home.",
+      "register": "formal",
+      "situation": "A polite host phrase for a guest."
+    }
+  ],
+  "exercises": [
+    {
+      "id": "everyday-7-01",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "A close friend arrives at your flat. Warmly say: “Come in, come in!”",
+      "explanation": "With a friend, use the informal command «entra». Learn «Entra, entra!» as one welcoming chunk.",
+      "answer": [
+        "Entra,",
+        "entra!"
+      ],
+      "distractors": [
+        "Senta-te.",
+        "Entre,",
+        "sirva-se"
+      ]
+    },
+    {
+      "id": "everyday-7-02",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "An older neighbour is at the door. Politely say: “Please come in.”",
+      "explanation": "«Faz favor de entrar» is a polite fixed phrase for inviting someone inside. Learn it whole.",
+      "answer": [
+        "Faz",
+        "favor",
+        "de",
+        "entrar."
+      ],
+      "distractors": [
+        "sente-se",
+        "fique",
+        "aberta"
+      ],
+      "acceptedAnswers": [
+        "Faça favor de entrar."
+      ]
+    },
+    {
+      "id": "everyday-7-03",
+      "type": "question_for_answer",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your female friend answers: «Sim, obrigada.» Ask her (informal) if she wants something to drink.",
+      "explanation": "For a friend, use the fixed host phrase «Queres beber alguma coisa?». It is a very common offer at home.",
+      "givenAnswer": "Sim, obrigada.",
+      "answer": [
+        "Queres",
+        "beber",
+        "alguma",
+        "coisa?"
+      ],
+      "distractors": [
+        "comer",
+        "trazer",
+        "agora"
+      ],
+      "acceptedAnswers": [
+        "Tu queres beber alguma coisa?"
+      ]
+    },
+    {
+      "id": "everyday-7-04",
+      "type": "question_for_answer",
+      "topicId": "everyday-7",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your older female guest answers: «Sim, um bocadinho, por favor.» Ask her (formal) if she wants a little more cake.",
+      "explanation": "To offer more food politely, use «Quer mais um bocadinho de…?». Here the noun in the prompt tells you it is cake.",
+      "givenAnswer": "Sim, um bocadinho, por favor.",
+      "answer": [
+        "Quer",
+        "mais",
+        "um",
+        "bocadinho",
+        "de",
+        "bolo?"
+      ],
+      "distractors": [
+        "chá",
+        "trazer",
+        "algum"
+      ],
+      "acceptedAnswers": [
+        "A senhora quer mais um bocadinho de bolo?"
+      ]
+    },
+    {
+      "id": "everyday-7-05",
+      "type": "fill_gaps",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "The guest is a woman. Fill the host’s offer and the guest’s polite refusal.",
+      "explanation": "«Mais um bocadinho?» is a common offer at the table. The guest is a woman, so she says «já estou satisfeita», not «satisfeito».",
+      "template": "— ___ um bocadinho de bolo?\n— Não, obrigada. Já estou ___.",
+      "gaps": [
+        {
+          "answer": "Mais"
+        },
+        {
+          "answer": "satisfeita"
+        }
+      ],
+      "wordBank": [
+        "Mais",
+        "satisfeita",
+        "satisfeito",
+        "Muito"
+      ]
+    },
+    {
+      "id": "everyday-7-06",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You loved the dinner (o jantar). Tell your host: “It was great!”",
+      "explanation": "The adjective agrees with the thing you praise, not with you: «o jantar» is masculine, so «Estava ótimo!». About «a sopa» you would say «Estava ótima!».",
+      "answer": [
+        "Estava",
+        "ótimo!"
+      ],
+      "distractors": [
+        "Era",
+        "ótima",
+        "satisfeito"
+      ]
+    },
+    {
+      "id": "everyday-7-07",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Thank your host for the invitation. The speaker’s gender is not important.",
+      "explanation": "The whole phrase is fixed; only «obrigado / obrigada» changes with the speaker. Both forms are accepted here.",
+      "answer": [
+        "Obrigado",
+        "pelo",
+        "convite."
+      ],
+      "acceptedAnswers": [
+        "Obrigada pelo convite."
+      ],
+      "distractors": [
+        "visita",
+        "pela",
+        "jantar"
+      ]
+    },
+    {
+      "id": "everyday-7-08",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Invite a friend to visit you another day. Say: “Come round to my place sometime.”",
+      "explanation": "«Aparece lá em casa» is an informal invitation you can learn as one chunk. It sounds friendly and natural in Portugal.",
+      "answer": [
+        "Aparece",
+        "lá",
+        "em",
+        "casa."
+      ],
+      "distractors": [
+        "venho",
+        "na",
+        "nossa"
+      ],
+      "acceptedAnswers": [
+        "Aparece cá em casa."
+      ]
+    },
+    {
+      "id": "everyday-7-09",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "A friend invites you out, but you cannot go. First say: “Unfortunately I can’t.”",
+      "explanation": "«Infelizmente não posso» is a useful polite refusal. You can add another sentence after it, but this chunk works on its own.",
+      "answer": [
+        "Infelizmente",
+        "não",
+        "posso."
+      ],
+      "distractors": [
+        "quero",
+        "talvez",
+        "podemos"
+      ]
+    },
+    {
+      "id": "everyday-7-10",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "After declining an invitation, soften it with: “Maybe next time.”",
+      "explanation": "«Fica para a próxima» is a fixed phrase that keeps the tone friendly after saying no.",
+      "answer": [
+        "Fica",
+        "para",
+        "a",
+        "próxima."
+      ],
+      "distractors": [
+        "hoje",
+        "próximo",
+        "vamos"
+      ],
+      "acceptedAnswers": [
+        "Fica para a próxima vez."
+      ]
+    },
+    {
+      "id": "everyday-7-11",
+      "type": "question_for_answer",
+      "topicId": "everyday-7",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your friend answers: «Claro, em que posso ajudar?» Ask them (informal) if they can give you a hand.",
+      "explanation": "«Podes dar-me uma ajuda?» is a very common informal way to ask for a small favour. Learn it as a whole expression.",
+      "givenAnswer": "Claro, em que posso ajudar?",
+      "answer": [
+        "Podes",
+        "dar-me",
+        "uma",
+        "ajuda?"
+      ],
+      "distractors": [
+        "dizer-me",
+        "minuto",
+        "favor"
+      ],
+      "acceptedAnswers": [
+        "Tu podes dar-me uma ajuda?"
+      ]
+    },
+    {
+      "id": "everyday-7-12",
+      "type": "question_for_answer",
+      "topicId": "everyday-7",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "An older neighbour answers: «Sim, diga.» Ask him (formal) if he has a minute.",
+      "explanation": "To get someone’s attention politely before a request, use «Tem um minuto?». You may also say «O senhor tem um minuto?».",
+      "givenAnswer": "Sim, diga.",
+      "answer": [
+        "Tem",
+        "um",
+        "minuto?"
+      ],
+      "acceptedAnswers": [
+        "O senhor tem um minuto?"
+      ],
+      "distractors": [
+        "tenho",
+        "hora",
+        "agora"
+      ]
+    },
+    {
+      "id": "everyday-7-13",
+      "type": "fill_gaps",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You need help with a heavy box. Fill the polite informal question.",
+      "explanation": "The useful chunk is «Importas-te de me ajudar?». Here the extra words say what you need help with.",
+      "template": "___-te de me ajudar com esta caixa?",
+      "gaps": [
+        {
+          "answer": "Importas"
+        }
+      ],
+      "wordBank": [
+        "Importas",
+        "Importa",
+        "Podes",
+        "Tenho"
+      ]
+    },
+    {
+      "id": "everyday-7-14",
+      "type": "find_error",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "You want to tell a friend «Don't trouble yourself.» One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «tu», the set phrase is «Não te incomodes.». Learn the whole chunk for saying “don’t bother”.",
+      "sentence": [
+        "Não",
+        "te",
+        "incomoda."
+      ],
+      "wrongIndex": 2,
+      "correction": "incomodes.",
+      "options": [
+        "incomodes.",
+        "incomodas.",
+        "incomodar."
+      ]
+    },
+    {
+      "id": "everyday-7-15",
+      "type": "find_error",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The natural fixed phrase is «Não é incómodo nenhum.». «Alguma» does not work here.",
+      "sentence": [
+        "Não",
+        "é",
+        "incómodo",
+        "alguma."
+      ],
+      "wrongIndex": 3,
+      "correction": "nenhum.",
+      "options": [
+        "nenhum.",
+        "muito.",
+        "pouco."
+      ]
+    },
+    {
+      "id": "everyday-7-16",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Someone rings your doorbell and you shout from inside: “I’m coming!”",
+      "explanation": "Portuguese often uses the short chunk «Já vou!» in this situation. It is the normal thing to call out from inside the house.",
+      "answer": [
+        "Já",
+        "vou!"
+      ],
+      "distractors": [
+        "venho",
+        "estou",
+        "aberta"
+      ]
+    },
+    {
+      "id": "everyday-7-17",
+      "type": "fill_gaps",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your friend next door is studying. Apologise informally for the noise.",
+      "explanation": "For a friend or someone your age, use «Desculpa o barulho». The phrase is best learned whole.",
+      "template": "___ o barulho, estamos a arrumar a sala.",
+      "gaps": [
+        {
+          "answer": "Desculpa"
+        }
+      ],
+      "wordBank": [
+        "Desculpa",
+        "Desculpe",
+        "Fica",
+        "Manda"
+      ]
+    },
+    {
+      "id": "everyday-7-18",
+      "type": "about_me",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Answer with a phrase you can really use.",
+      "explanation": "«Fica à vontade» is a very common host phrase. Learn it as one chunk for making a guest feel comfortable.",
+      "question": "Quando recebes um amigo em casa, o que dizes para ele ficar à vontade?",
+      "sampleAnswer": "Fica à vontade.",
+      "hints": [
+        "senta-te",
+        "sofá",
+        "relaxar",
+        "visita",
+        "café"
+      ]
+    },
+    {
+      "id": "everyday-7-19",
+      "type": "order_dialogue",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "A guest arrives at a home. Put the mini-dialogue in order.",
+      "explanation": "The guest comes in, asks about the shoes, sits down, and then the host offers a drink. Listen for the natural order of actions at home.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Boa tarde! A porta está aberta."
+        },
+        {
+          "speaker": "B",
+          "text": "Obrigada. Posso deixar os sapatos aqui?"
+        },
+        {
+          "speaker": "A",
+          "text": "Claro. Sente-se, por favor."
+        },
+        {
+          "speaker": "B",
+          "text": "Obrigada. Que casa tão gira!"
+        },
+        {
+          "speaker": "A",
+          "text": "Quer beber alguma coisa?"
+        }
+      ]
+    },
+    {
+      "id": "everyday-7-20",
+      "type": "translate_word",
+      "topicId": "everyday-7",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the words in bold.",
+      "explanation": "«Sirva-se» is a polite fixed phrase meaning “help yourself”. Learn it as a chunk, without analysing the grammar yet.",
+      "direction": "toTarget",
+      "sentence": "Please **help yourself** to some cake.",
+      "word": "help yourself",
+      "answer": "sirva-se",
+      "options": [
+        "sirva-se",
+        "serve-se",
+        "senta-se",
+        "fique-se"
+      ]
+    },
+    {
+      "id": "everyday-7-21",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "A friend arrives and stays standing in the hall. Tell them politely to sit down.",
+      "explanation": "Use the informal form with a friend. This is a common hosting phrase at home.",
+      "answer": [
+        "Senta-te",
+        "por",
+        "favor."
+      ],
+      "acceptedAnswers": [
+        "Senta-te, por favor."
+      ],
+      "distractors": [
+        "Sente-se",
+        "fica"
+      ]
+    },
+    {
+      "id": "everyday-7-22",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "An older neighbour comes in. Invite them to sit down politely.",
+      "explanation": "With an older guest, use the formal form. Learn this as a fixed polite phrase.",
+      "answer": [
+        "Sente-se",
+        "por",
+        "favor."
+      ],
+      "acceptedAnswers": [
+        "Sente-se, por favor."
+      ],
+      "distractors": [
+        "Senta-te",
+        "fique"
+      ]
+    },
+    {
+      "id": "everyday-7-23",
+      "type": "question_for_answer",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your older neighbour answers: «Um chá, se faz favor.» Ask politely, using the phrase from this set, whether she would like something to drink.",
+      "explanation": "For a polite offer, use the 3rd-person form «quer». The phrase is a useful whole chunk for hosting.",
+      "givenAnswer": "Um chá, se faz favor.",
+      "answer": [
+        "Quer",
+        "beber",
+        "alguma",
+        "coisa?"
+      ],
+      "distractors": [
+        "Queres",
+        "comer"
+      ],
+      "acceptedAnswers": [
+        "A senhora quer beber alguma coisa?"
+      ]
+    },
+    {
+      "id": "everyday-7-24",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your friend has just arrived at your home after work. Offer something to eat.",
+      "explanation": "This is the informal version because you are speaking to a friend. It offers food in a general way.",
+      "answer": [
+        "Queres",
+        "comer",
+        "alguma",
+        "coisa?"
+      ],
+      "distractors": [
+        "Quer",
+        "beber"
+      ]
+    },
+    {
+      "id": "everyday-7-25",
+      "type": "fill_gaps",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You are offering some food politely to an older guest. Complete the phrase.",
+      "explanation": "This is a useful polite table phrase. Learn the whole expression together.",
+      "template": "___ provar um ___?",
+      "gaps": [
+        {
+          "answer": "Quer"
+        },
+        {
+          "answer": "pouco"
+        }
+      ],
+      "wordBank": [
+        "Quer",
+        "pouco",
+        "Queres",
+        "mais",
+        "pouca"
+      ]
+    },
+    {
+      "id": "everyday-7-26",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your friend asks when they can come round another day. Say: 'Whenever you want.'",
+      "explanation": "This short phrase keeps the invitation open and friendly. Use it with someone you know well.",
+      "answer": [
+        "Quando",
+        "quiseres."
+      ],
+      "distractors": [
+        "quiser",
+        "amanhã"
+      ]
+    },
+    {
+      "id": "everyday-7-27",
+      "type": "question_for_answer",
+      "topicId": "everyday-7",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your friend answers: «Sim, posso passar aí no sábado.» Ask him, using the phrase from this set, if he wants to come over to your place.",
+      "explanation": "Use the informal question because you are speaking to a friend. The phrase «cá a casa» means to your home.",
+      "givenAnswer": "Sim, posso passar aí no sábado.",
+      "answer": [
+        "Queres",
+        "vir",
+        "cá",
+        "a",
+        "casa?"
+      ],
+      "distractors": [
+        "Quer",
+        "ir"
+      ]
+    },
+    {
+      "id": "everyday-7-28",
+      "type": "translate_word",
+      "topicId": "everyday-7",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In European Portuguese, «bathroom» is «casa de banho». This is the normal phrase to use in someone's home.",
+      "direction": "toTarget",
+      "sentence": "Can I use the **bathroom**?",
+      "word": "bathroom",
+      "answer": "casa de banho",
+      "options": [
+        "casa de banho",
+        "cozinha",
+        "janela",
+        "sala"
+      ]
+    },
+    {
+      "id": "everyday-7-29",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You are visiting someone's home and need the bathroom. Ask politely.",
+      "explanation": "This is the normal polite question in a home. In Portugal, use «casa de banho», not Brazilian «banheiro».",
+      "answer": [
+        "Posso",
+        "usar",
+        "a",
+        "casa",
+        "de",
+        "banho?"
+      ],
+      "distractors": [
+        "Podes",
+        "abrir",
+        "janela"
+      ],
+      "acceptedAnswers": [
+        "Posso ir à casa de banho?"
+      ]
+    },
+    {
+      "id": "everyday-7-30",
+      "type": "find_error",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "For the state of a door, Portuguese uses «estar»: «A porta está aberta.»",
+      "sentence": [
+        "A",
+        "porta",
+        "é",
+        "aberta."
+      ],
+      "wrongIndex": 2,
+      "correction": "está",
+      "options": [
+        "está",
+        "estou",
+        "tem"
+      ]
+    },
+    {
+      "id": "everyday-7-31",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Someone rings the bell, but the door is already unlocked. Call out: “The door is open.”",
+      "explanation": "Use «estar» for the state of the door. This phrase tells the visitor they can come in straight away.",
+      "answer": [
+        "A",
+        "porta",
+        "está",
+        "aberta."
+      ],
+      "distractors": [
+        "é",
+        "fechada"
+      ]
+    },
+    {
+      "id": "everyday-7-32",
+      "type": "question_for_answer",
+      "topicId": "everyday-7",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your host answers: «Sim, podes deixá-los aqui.» Ask, using the phrase from this set, if you can leave your shoes here.",
+      "explanation": "This is a practical question when you visit someone's home. Learn the full phrase as one chunk.",
+      "givenAnswer": "Sim, podes deixá-los aqui.",
+      "answer": [
+        "Posso",
+        "deixar",
+        "os",
+        "sapatos",
+        "aqui?"
+      ],
+      "distractors": [
+        "usar",
+        "janela"
+      ],
+      "acceptedAnswers": [
+        "Posso deixar aqui os sapatos?"
+      ]
+    },
+    {
+      "id": "everyday-7-33",
+      "type": "fill_gaps",
+      "topicId": "everyday-7",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You are offering a simple choice of drinks. Fill the two gaps.",
+      "explanation": "This is a very common host phrase. Use «ou» to offer a choice between two things.",
+      "template": "___ café ___ um chá?",
+      "gaps": [
+        {
+          "answer": "Um"
+        },
+        {
+          "answer": "ou"
+        }
+      ],
+      "wordBank": [
+        "Um",
+        "ou",
+        "Uma",
+        "e"
+      ]
+    },
+    {
+      "id": "everyday-7-34",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your friend has finished the first cup. Offer more tea.",
+      "explanation": "With a friend, use the informal form «queres». «Mais» adds the idea of another amount.",
+      "answer": [
+        "Queres",
+        "mais",
+        "chá?"
+      ],
+      "distractors": [
+        "Quer",
+        "café"
+      ]
+    },
+    {
+      "id": "everyday-7-35",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "An older guest has finished the first cup. Offer more coffee politely.",
+      "explanation": "Because the guest is older, use the formal form «quer». This is a short, natural hosting phrase.",
+      "answer": [
+        "Quer",
+        "mais",
+        "café?"
+      ],
+      "distractors": [
+        "Queres",
+        "chá"
+      ]
+    },
+    {
+      "id": "everyday-7-36",
+      "type": "find_error",
+      "topicId": "everyday-7",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "You want to tell an older neighbour «Don't trouble yourself.» One word is wrong. Tap it and choose the correction.",
+      "explanation": "With «o senhor / a senhora», the polite form is «Não se incomode.». «Incomodas» is a «tu» form. Learn it as a fixed phrase.",
+      "sentence": [
+        "Não",
+        "se",
+        "incomodas."
+      ],
+      "wrongIndex": 2,
+      "correction": "incomode.",
+      "options": [
+        "incomode.",
+        "incomodes.",
+        "ajude."
+      ]
+    },
+    {
+      "id": "everyday-7-37",
+      "type": "fill_gaps",
+      "topicId": "everyday-7",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You are hosting an older guest. Complete the polite phrase meaning 'Make yourself at home.'",
+      "explanation": "This is a formal host phrase. Learn «A casa é sua» as one chunk.",
+      "template": "A casa ___ ___.",
+      "gaps": [
+        {
+          "answer": "é"
+        },
+        {
+          "answer": "sua"
+        }
+      ],
+      "wordBank": [
+        "é",
+        "sua",
+        "está",
+        "nossa"
+      ]
+    },
+    {
+      "id": "everyday-7-38",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You are leaving your neighbour's flat and you will meet again tomorrow. Say: “We'll see each other tomorrow.”",
+      "explanation": "Use this fixed phrase when the next meeting is already tomorrow, not just sometime soon.",
+      "answer": [
+        "Vemo-nos",
+        "amanhã."
+      ],
+      "distractors": [
+        "breve",
+        "hoje"
+      ]
+    },
+    {
+      "id": "everyday-7-39",
+      "type": "build_phrase",
+      "topicId": "everyday-7",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your friend is going home after dinner. Ask them to give your regards to the family.",
+      "explanation": "With a friend, use the informal form «manda». «À família» uses the contraction «a + a = à».",
+      "answer": [
+        "Manda",
+        "cumprimentos",
+        "à",
+        "família."
+      ],
+      "distractors": [
+        "Mande",
+        "amanhã"
+      ]
+    },
+    {
+      "id": "everyday-7-40",
+      "type": "question_for_answer",
+      "topicId": "everyday-7",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your older neighbour answers: «Claro, já a abro.» Ask politely, using the phrase from this set, if they can open the window.",
+      "explanation": "For a polite small favour, use the formal form «pode». This is a useful home phrase to learn as a chunk.",
+      "givenAnswer": "Claro, já a abro.",
+      "answer": [
+        "Pode",
+        "abrir",
+        "a",
+        "janela?"
+      ],
+      "distractors": [
+        "Podes",
+        "porta"
+      ],
+      "acceptedAnswers": [
+        "O senhor pode abrir a janela?",
+        "A senhora pode abrir a janela?"
+      ]
+    }
+  ]
+}

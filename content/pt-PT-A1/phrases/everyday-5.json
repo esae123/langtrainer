@@ -1,0 +1,1325 @@
+{
+  "id": "everyday-5",
+  "title": "Everyday phrases 5 — work, phone and appointments",
+  "phrases": [
+    {
+      "target": "Estou?",
+      "support": "Hello?",
+      "register": "neutral",
+      "situation": "answering the phone"
+    },
+    {
+      "target": "Está lá?",
+      "support": "Are you there?",
+      "register": "neutral",
+      "situation": "checking if the other person is still on the line"
+    },
+    {
+      "target": "Quem fala?",
+      "support": "Who is speaking?",
+      "register": "neutral",
+      "situation": "asking who is speaking on the phone"
+    },
+    {
+      "target": "É da parte de quem?",
+      "support": "Who shall I say is calling?",
+      "register": "formal",
+      "situation": "a receptionist asking for the caller’s name"
+    },
+    {
+      "target": "Um momento, por favor.",
+      "support": "One moment, please.",
+      "register": "neutral",
+      "situation": "asking someone to wait on the phone"
+    },
+    {
+      "target": "Pode soletrar, por favor?",
+      "support": "Can you spell it, please?",
+      "register": "formal",
+      "situation": "when you need a name spelled on the phone"
+    },
+    {
+      "target": "Pode falar mais alto?",
+      "support": "Can you speak louder?",
+      "register": "neutral",
+      "situation": "when the other person is too quiet"
+    },
+    {
+      "target": "A ligação está má.",
+      "support": "The connection is bad.",
+      "register": "neutral",
+      "situation": "when the phone signal is poor"
+    },
+    {
+      "target": "Não estou a ouvir bem.",
+      "support": "I can’t hear very well.",
+      "register": "neutral",
+      "situation": "when the sound is unclear"
+    },
+    {
+      "target": "Posso deixar recado?",
+      "support": "Can I leave a message?",
+      "register": "neutral",
+      "situation": "asking if you can leave a message"
+    },
+    {
+      "target": "Quer deixar mensagem?",
+      "support": "Would you like to leave a message?",
+      "register": "formal",
+      "situation": "an assistant offering to take a message"
+    },
+    {
+      "target": "Ligo-lhe mais tarde.",
+      "support": "I’ll call you back later.",
+      "register": "formal",
+      "situation": "speaking to a client or stranger"
+    },
+    {
+      "target": "Ligo-te depois.",
+      "support": "I’ll call you later.",
+      "register": "informal",
+      "situation": "speaking to a friend or close colleague"
+    },
+    {
+      "target": "O senhor Silva está?",
+      "support": "Is Mr Silva there?",
+      "register": "formal",
+      "situation": "asking for someone on the phone"
+    },
+    {
+      "target": "A senhora Costa está?",
+      "support": "Is Mrs Costa there?",
+      "register": "formal",
+      "situation": "asking for someone on the phone"
+    },
+    {
+      "target": "Pode passar-me ao departamento comercial?",
+      "support": "Can you put me through to the sales department?",
+      "register": "formal",
+      "situation": "asking to be transferred on the phone"
+    },
+    {
+      "target": "Não pode atender de momento.",
+      "support": "He/She can’t take the call right now.",
+      "register": "formal",
+      "situation": "explaining that someone is unavailable"
+    },
+    {
+      "target": "Peço que lhe diga que liguei.",
+      "support": "Please tell him/her that I called.",
+      "register": "formal",
+      "situation": "leaving a message with reception"
+    },
+    {
+      "target": "Pode dizer-lhe que telefonei?",
+      "support": "Can you tell him/her that I called?",
+      "register": "formal",
+      "situation": "asking someone to pass on a message"
+    },
+    {
+      "target": "Pode pedir-lhe para me ligar?",
+      "support": "Can you ask him/her to call me?",
+      "register": "formal",
+      "situation": "asking someone to request a call back"
+    },
+    {
+      "target": "Podemos marcar uma reunião?",
+      "support": "Can we schedule a meeting?",
+      "register": "neutral",
+      "situation": "suggesting a meeting"
+    },
+    {
+      "target": "Dá-lhe jeito na terça?",
+      "support": "Would Tuesday suit you?",
+      "register": "formal",
+      "situation": "asking if Tuesday is convenient"
+    },
+    {
+      "target": "Dá-te jeito amanhã?",
+      "support": "Does tomorrow suit you?",
+      "register": "informal",
+      "situation": "asking a friend or close colleague about availability"
+    },
+    {
+      "target": "Que tal às três?",
+      "support": "How about at three?",
+      "register": "neutral",
+      "situation": "suggesting a time"
+    },
+    {
+      "target": "Às três está bem.",
+      "support": "Three is fine.",
+      "register": "neutral",
+      "situation": "accepting a proposed time"
+    },
+    {
+      "target": "Tenho de desmarcar.",
+      "support": "I have to cancel.",
+      "register": "neutral",
+      "situation": "cancelling an appointment or meeting"
+    },
+    {
+      "target": "Podemos adiar para amanhã?",
+      "support": "Can we postpone it until tomorrow?",
+      "register": "neutral",
+      "situation": "moving an appointment to the next day"
+    },
+    {
+      "target": "Fica para outro dia.",
+      "support": "Let’s leave it for another day.",
+      "register": "neutral",
+      "situation": "when you decide not to fix a new time now"
+    },
+    {
+      "target": "Fica combinado.",
+      "support": "It’s agreed.",
+      "register": "neutral",
+      "situation": "confirming an arrangement"
+    },
+    {
+      "target": "Combinado.",
+      "support": "Agreed.",
+      "register": "neutral",
+      "situation": "short agreement in speech or messages"
+    },
+    {
+      "target": "Confirmo a reunião de amanhã.",
+      "support": "I confirm tomorrow’s meeting.",
+      "register": "formal",
+      "situation": "confirming a meeting by email or message"
+    },
+    {
+      "target": "Envio-lhe o convite por e-mail.",
+      "support": "I’m sending you the invitation by email.",
+      "register": "formal",
+      "situation": "after arranging a meeting"
+    },
+    {
+      "target": "Estou atrasado.",
+      "support": "I’m late.",
+      "register": "neutral",
+      "situation": "a male speaker warning that he is late"
+    },
+    {
+      "target": "Estou atrasada.",
+      "support": "I’m late.",
+      "register": "neutral",
+      "situation": "a female speaker warning that she is late"
+    },
+    {
+      "target": "Estou a chegar.",
+      "support": "I’m almost there. / I’m on my way.",
+      "register": "neutral",
+      "situation": "telling someone you are almost there"
+    },
+    {
+      "target": "Vou já.",
+      "support": "I’m coming right away.",
+      "register": "neutral",
+      "situation": "replying when someone is waiting for you"
+    },
+    {
+      "target": "Já saí do escritório.",
+      "support": "I’ve already left the office.",
+      "register": "neutral",
+      "situation": "updating someone about where you are"
+    },
+    {
+      "target": "Chego daqui a dez minutos.",
+      "support": "I’ll arrive in ten minutes.",
+      "register": "neutral",
+      "situation": "giving an arrival time"
+    },
+    {
+      "target": "Bom trabalho!",
+      "support": "Have a good day at work!",
+      "register": "neutral",
+      "situation": "saying something nice to a colleague"
+    },
+    {
+      "target": "Bom fim de semana!",
+      "support": "Have a good weekend!",
+      "register": "neutral",
+      "situation": "speaking to colleagues on Friday"
+    },
+    {
+      "target": "Com os melhores cumprimentos",
+      "support": "Kind regards",
+      "register": "formal",
+      "situation": "formal email closing"
+    },
+    {
+      "target": "Atenciosamente",
+      "support": "Sincerely",
+      "register": "formal",
+      "situation": "formal email closing"
+    },
+    {
+      "target": "Fico a aguardar notícias.",
+      "support": "I look forward to hearing from you.",
+      "register": "formal",
+      "situation": "ending a formal email"
+    },
+    {
+      "target": "Em anexo envio o documento.",
+      "support": "Please find the document attached.",
+      "register": "formal",
+      "situation": "sending a file by email"
+    },
+    {
+      "target": "Em anexo envio a fatura.",
+      "support": "Please find the invoice attached.",
+      "register": "formal",
+      "situation": "sending an invoice by email"
+    },
+    {
+      "target": "Acuso a receção do seu e-mail.",
+      "support": "I acknowledge receipt of your email.",
+      "register": "formal",
+      "situation": "formal reply to an email"
+    },
+    {
+      "target": "Recebi o seu e-mail.",
+      "support": "I received your email.",
+      "register": "formal",
+      "situation": "confirming that an email arrived"
+    },
+    {
+      "target": "Aguardo a sua resposta.",
+      "support": "I await your reply.",
+      "register": "formal",
+      "situation": "ending a formal email"
+    },
+    {
+      "target": "Pode enviar-me o ficheiro?",
+      "support": "Can you send me the file?",
+      "register": "formal",
+      "situation": "asking a colleague or client for a file"
+    },
+    {
+      "target": "Pode mandar-me a morada?",
+      "support": "Can you send me the address?",
+      "register": "neutral",
+      "situation": "asking for an address by message or email"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "everyday-5-01",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "The sound is bad on the phone. Say that you can’t hear very well.",
+      "explanation": "«Não estou a ouvir bem» uses «estar a + infinitive» for what is happening right now. Learn it as a phone chunk.",
+      "answer": [
+        "Não",
+        "estou",
+        "a",
+        "ouvir",
+        "bem."
+      ],
+      "distractors": [
+        "está",
+        "falar",
+        "mal"
+      ],
+      "acceptedAnswers": [
+        "Não oiço bem.",
+        "Não ouço bem."
+      ]
+    },
+    {
+      "id": "everyday-5-02",
+      "type": "question_for_answer",
+      "topicId": "everyday-5",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You answer the phone and want to ask who is speaking. What do you ask?",
+      "explanation": "On the phone, the usual fixed question is «Quem fala?». Use it as one chunk.",
+      "givenAnswer": "Sou a Sofia, da receção.",
+      "answer": [
+        "Quem",
+        "fala?"
+      ],
+      "distractors": [
+        "Como",
+        "Onde",
+        "falas?"
+      ],
+      "acceptedAnswers": [
+        "Quem está a falar?",
+        "Quem é?"
+      ]
+    },
+    {
+      "id": "everyday-5-03",
+      "type": "fill_gaps",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At a reception desk on the phone. Complete the short exchange.",
+      "explanation": "These are standard phone chunks in formal situations. Learn them whole instead of analysing each word.",
+      "template": "— Boa tarde. Empresa Lima. ___\n— Sou o Rui Santos.\n— ___",
+      "gaps": [
+        {
+          "answer": "É da parte de quem?"
+        },
+        {
+          "answer": "Um momento, por favor."
+        }
+      ],
+      "wordBank": [
+        "É da parte de quem?",
+        "Um momento, por favor.",
+        "Posso deixar recado?",
+        "Ligo-lhe mais tarde.",
+        "Bom fim de semana!"
+      ]
+    },
+    {
+      "id": "everyday-5-04",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "On the phone, the other person is very quiet. Ask them to speak louder.",
+      "explanation": "Use this polite request when you can hear the other person but the volume is too low.",
+      "answer": [
+        "Pode",
+        "falar",
+        "mais",
+        "alto?"
+      ],
+      "distractors": [
+        "repetir",
+        "devagar",
+        "claro"
+      ]
+    },
+    {
+      "id": "everyday-5-05",
+      "type": "find_error",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Ligação» is feminine, so the adjective must agree: «má». «Mau» is the masculine form.",
+      "sentence": [
+        "A",
+        "ligação",
+        "está",
+        "mau",
+        "hoje."
+      ],
+      "wrongIndex": 3,
+      "correction": "má",
+      "options": [
+        "má",
+        "maus",
+        "mais"
+      ]
+    },
+    {
+      "id": "everyday-5-06",
+      "type": "question_for_answer",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You call an office, but the person you want is out. Ask politely if you can leave a message.",
+      "explanation": "For phone calls, «deixar recado» is a useful fixed chunk. You can use it as a whole phrase.",
+      "givenAnswer": "Sim, pode deixar mensagem.",
+      "answer": [
+        "Posso",
+        "deixar",
+        "recado?"
+      ],
+      "distractors": [
+        "Pode",
+        "ligar",
+        "agora?"
+      ],
+      "acceptedAnswers": [
+        "Posso deixar mensagem?"
+      ]
+    },
+    {
+      "id": "everyday-5-07",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You are speaking to a client. Say that you will call him back later.",
+      "explanation": "With a client or stranger, use the formal chunk «ligo-lhe». The pronoun comes after the verb in this kind of sentence.",
+      "answer": [
+        "Ligo-lhe",
+        "mais",
+        "tarde."
+      ],
+      "distractors": [
+        "Ligo-te",
+        "cedo",
+        "amanhã"
+      ]
+    },
+    {
+      "id": "everyday-5-08",
+      "type": "fill_gaps",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You are arranging a meeting with a client. Fill the two gaps.",
+      "explanation": "These two chunks are common in work messages: one to suggest a meeting, one to ask if a day is convenient.",
+      "template": "— ___ uma reunião?\n— Sim. ___ na terça?",
+      "gaps": [
+        {
+          "answer": "Podemos marcar"
+        },
+        {
+          "answer": "Dá-lhe jeito"
+        }
+      ],
+      "wordBank": [
+        "Podemos marcar",
+        "Dá-lhe jeito",
+        "Tenho de desmarcar",
+        "Que tal às três?"
+      ]
+    },
+    {
+      "id": "everyday-5-09",
+      "type": "question_for_answer",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You are talking to a client. Ask formally if Tuesday suits him.",
+      "explanation": "«Dar jeito» is a very common chunk for saying that a time is convenient for someone.",
+      "givenAnswer": "Na terça não posso, mas na quarta sim.",
+      "answer": [
+        "Dá-lhe",
+        "jeito",
+        "na",
+        "terça?"
+      ],
+      "distractors": [
+        "Podemos",
+        "mais",
+        "cedo?"
+      ],
+      "acceptedAnswers": [
+        "Dá-lhe jeito terça?"
+      ]
+    },
+    {
+      "id": "everyday-5-10",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Write a short work message saying that you have to cancel.",
+      "explanation": "Use «desmarcar» for cancelling an appointment or meeting. It is the normal word in this situation.",
+      "answer": [
+        "Tenho",
+        "de",
+        "desmarcar."
+      ],
+      "distractors": [
+        "quero",
+        "marcar",
+        "adiar"
+      ],
+      "acceptedAnswers": [
+        "Tenho que desmarcar."
+      ]
+    },
+    {
+      "id": "everyday-5-11",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask the other person: “Can we postpone it until tomorrow?”",
+      "explanation": "«Adiar para amanhã» means to postpone until tomorrow. Learn the whole chunk for changing plans.",
+      "answer": [
+        "Podemos",
+        "adiar",
+        "para",
+        "amanhã?"
+      ],
+      "distractors": [
+        "desmarcar",
+        "ontem",
+        "agora"
+      ]
+    },
+    {
+      "id": "everyday-5-12",
+      "type": "find_error",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Reunião» is feminine, so you say «uma reunião», not «um reunião».",
+      "sentence": [
+        "Podemos",
+        "marcar",
+        "um",
+        "reunião",
+        "amanhã?"
+      ],
+      "wrongIndex": 2,
+      "correction": "uma",
+      "options": [
+        "uma",
+        "uns",
+        "umas"
+      ]
+    },
+    {
+      "id": "everyday-5-13",
+      "type": "question_for_answer",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You are arranging a meeting time. Suggest 3 o'clock.",
+      "explanation": "«Que tal...?» is a simple and natural way to make a suggestion about time.",
+      "givenAnswer": "Sim, às três está bem.",
+      "answer": [
+        "Que",
+        "tal",
+        "às",
+        "três?"
+      ],
+      "distractors": [
+        "Quando",
+        "fica",
+        "amanhã?"
+      ]
+    },
+    {
+      "id": "everyday-5-14",
+      "type": "fill_gaps",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Two colleagues agree on a time. Fill the two gaps.",
+      "explanation": "«Às dez está bem» accepts the time, and «Fica combinado» confirms the plan. Learn both as fixed chunks.",
+      "template": "— Dá-te jeito amanhã às dez?\n— Sim, às dez ___ bem.\n— Ótimo. Fica ___.",
+      "gaps": [
+        {
+          "answer": "está"
+        },
+        {
+          "answer": "combinado"
+        }
+      ],
+      "wordBank": [
+        "está",
+        "combinado",
+        "é",
+        "adiar"
+      ]
+    },
+    {
+      "id": "everyday-5-15",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You are a woman texting a colleague. Say that you are late.",
+      "explanation": "Use «atrasada» for a female speaker. The masculine form is «atrasado».",
+      "answer": [
+        "Estou",
+        "atrasada."
+      ],
+      "distractors": [
+        "chegar",
+        "cedo",
+        "pronta"
+      ],
+      "acceptedAnswers": [
+        "Estou atrasada!"
+      ]
+    },
+    {
+      "id": "everyday-5-16",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your colleague is waiting in the meeting room. Say: I'm coming right away.",
+      "explanation": "«Vou já» is a very common short reply in Portuguese. Learn it as one fixed chunk.",
+      "answer": [
+        "Vou",
+        "já."
+      ],
+      "distractors": [
+        "venho",
+        "depois",
+        "vai"
+      ]
+    },
+    {
+      "id": "everyday-5-17",
+      "type": "about_me",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Answer about yourself.",
+      "explanation": "«Dá-te jeito amanhã?» (informal, «tu») asks if tomorrow suits you. Answer with «Sim» or «Não» plus a time, e.g. «Sim, de manhã.»",
+      "question": "Dá-te jeito amanhã?",
+      "sampleAnswer": "Sim, de manhã.",
+      "hints": [
+        "não",
+        "à tarde",
+        "às três",
+        "terça",
+        "quarta",
+        "talvez"
+      ]
+    },
+    {
+      "id": "everyday-5-18",
+      "type": "translate_word",
+      "topicId": "everyday-5",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "At work, «meeting» is «reunião». It is feminine: «uma reunião».",
+      "direction": "toTarget",
+      "sentence": "Can we schedule a **meeting** for tomorrow?",
+      "word": "meeting",
+      "answer": "reunião",
+      "options": [
+        "reunião",
+        "ligação",
+        "mensagem",
+        "morada"
+      ]
+    },
+    {
+      "id": "everyday-5-19",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Finish a formal work email by saying that you look forward to hearing from them.",
+      "explanation": "This is a formal email closing in European Portuguese. Learn it as a whole chunk rather than word by word.",
+      "answer": [
+        "Fico",
+        "a",
+        "aguardar",
+        "notícias."
+      ],
+      "distractors": [
+        "Espero",
+        "resposta",
+        "amanhã"
+      ],
+      "acceptedAnswers": [
+        "Aguardo a sua resposta."
+      ]
+    },
+    {
+      "id": "everyday-5-20",
+      "type": "order_dialogue",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "A client calls to move a meeting. Put the phone conversation in order.",
+      "explanation": "Work phone calls often go from the problem to a new proposal and end with a clear agreement.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Bom dia. Empresa Lima."
+        },
+        {
+          "speaker": "B",
+          "text": "Bom dia. Tenho de desmarcar a reunião de hoje."
+        },
+        {
+          "speaker": "A",
+          "text": "Sem problema. Podemos adiar para amanhã?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sim, às onze dá-me jeito."
+        },
+        {
+          "speaker": "A",
+          "text": "Ótimo. Fica combinado."
+        }
+      ]
+    },
+    {
+      "id": "everyday-5-21",
+      "type": "translate_word",
+      "topicId": "everyday-5",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese phone phrase.",
+      "explanation": "On the phone, European Portuguese often uses «Estou?» to answer. Learn it as a fixed chunk for this situation.",
+      "direction": "toTarget",
+      "sentence": "When you answer the phone, you say **Hello?**",
+      "word": "Hello?",
+      "answer": "Estou?",
+      "options": [
+        "Estou?",
+        "Quem fala?",
+        "Até já.",
+        "Um momento, por favor."
+      ]
+    },
+    {
+      "id": "everyday-5-22",
+      "type": "question_for_answer",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "A receptionist answers: «Sim, está. Um momento, por favor.» Ask formally if Mr Silva is there.",
+      "explanation": "For a stranger or in a professional call, use the formal phrase «O senhor ... está?».",
+      "givenAnswer": "Sim, está. Um momento, por favor.",
+      "answer": [
+        "O",
+        "senhor",
+        "Silva",
+        "está?"
+      ],
+      "distractors": [
+        "senhora",
+        "Costa",
+        "fala",
+        "atende?"
+      ],
+      "acceptedAnswers": [
+        "Está o senhor Silva?"
+      ]
+    },
+    {
+      "id": "everyday-5-23",
+      "type": "fill_gaps",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Fill the two gaps in this phone call with the natural formal phrases.",
+      "explanation": "These are common fixed phone chunks: one to offer taking a message, and one to ask for a call back.",
+      "template": "— A senhora Costa está?\n— Não pode atender de momento. ___\n— Sim. ___",
+      "gaps": [
+        {
+          "answer": "Quer deixar mensagem?"
+        },
+        {
+          "answer": "Pode pedir-lhe para me ligar?"
+        }
+      ],
+      "wordBank": [
+        "Quer deixar mensagem?",
+        "Pode pedir-lhe para me ligar?",
+        "Um momento, por favor.",
+        "Pode repetir, por favor?"
+      ]
+    },
+    {
+      "id": "everyday-5-24",
+      "type": "question_for_answer",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "The receptionist answers: «Sim, um momento.» Ask formally to be put through to the sales department.",
+      "explanation": "Use «Pode passar-me ao ...?» to ask for a transfer on the phone. Learn the whole chunk.",
+      "givenAnswer": "Sim, um momento.",
+      "answer": [
+        "Pode",
+        "passar-me",
+        "ao",
+        "departamento",
+        "comercial?"
+      ],
+      "distractors": [
+        "ligar",
+        "mensagem",
+        "terça",
+        "senhor"
+      ],
+      "acceptedAnswers": [
+        "Pode passar-me para o departamento comercial?",
+        "Pode passar-me o departamento comercial?"
+      ]
+    },
+    {
+      "id": "everyday-5-25",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You are texting a close colleague. Ask informally if tomorrow is convenient.",
+      "explanation": "With a friend or close colleague, use the informal phrase «Dá-te jeito...?» for availability.",
+      "answer": [
+        "Dá-te",
+        "jeito",
+        "amanhã?"
+      ],
+      "distractors": [
+        "Dá-lhe",
+        "terça",
+        "fica",
+        "três"
+      ]
+    },
+    {
+      "id": "everyday-5-26",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your colleague suggests 3:00. Say that three is fine.",
+      "explanation": "«Às três está bem.» is the natural way to accept a proposed time. It is best learned as a chunk.",
+      "answer": [
+        "Às",
+        "três",
+        "está",
+        "bem."
+      ],
+      "distractors": [
+        "amanhã",
+        "jeito",
+        "é",
+        "quatro"
+      ]
+    },
+    {
+      "id": "everyday-5-27",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "After fixing a meeting with a client, say that you will send the invitation by email.",
+      "explanation": "In formal Portuguese, «lhe» shows that you are speaking politely to the other person: «Envio-lhe...».",
+      "answer": [
+        "Envio-lhe",
+        "o",
+        "convite",
+        "por",
+        "e-mail."
+      ],
+      "distractors": [
+        "te",
+        "morada",
+        "ficheiro",
+        "para"
+      ]
+    },
+    {
+      "id": "everyday-5-28",
+      "type": "fill_gaps",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Complete this short formal email: say that the document is attached, then close with “Kind regards”.",
+      "explanation": "Email formulas like «Em anexo envio...» and «Com os melhores cumprimentos» are fixed chunks; learn them whole.",
+      "template": "Exmo. Senhor,\n___\n___\nJoana Reis",
+      "gaps": [
+        {
+          "answer": "Em anexo envio o documento."
+        },
+        {
+          "answer": "Com os melhores cumprimentos"
+        }
+      ],
+      "wordBank": [
+        "Em anexo envio o documento.",
+        "Com os melhores cumprimentos",
+        "Bom trabalho!",
+        "Recebi o seu e-mail."
+      ]
+    },
+    {
+      "id": "everyday-5-29",
+      "type": "find_error",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "After «Peço que...», Portuguese uses «diga». At A1, learn «Peço que lhe diga que liguei» as a fixed formal phone phrase.",
+      "sentence": [
+        "Peço",
+        "que",
+        "lhe",
+        "digo",
+        "que",
+        "liguei."
+      ],
+      "wrongIndex": 3,
+      "correction": "diga",
+      "options": [
+        "diga",
+        "diz",
+        "direi"
+      ]
+    },
+    {
+      "id": "everyday-5-30",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You are a man and you text a colleague to say you are late. What do you write?",
+      "explanation": "Use «Estou atrasado.» if the speaker is male. A female speaker says «Estou atrasada.»",
+      "answer": [
+        "Estou",
+        "atrasado."
+      ],
+      "distractors": [
+        "atrasada",
+        "chego",
+        "escritório"
+      ]
+    },
+    {
+      "id": "everyday-5-31",
+      "type": "fill_gaps",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Text a colleague: you have already left the office and will arrive in ten minutes.",
+      "explanation": "«Já saí» = I have already left; «chego daqui a dez minutos» = I’ll arrive in ten minutes. In Portugal, “in ten minutes” is «daqui a dez minutos».",
+      "template": "Já ___ do escritório e ___ daqui a dez minutos.",
+      "gaps": [
+        {
+          "answer": "saí"
+        },
+        {
+          "answer": "chego"
+        }
+      ],
+      "wordBank": [
+        "saí",
+        "chego",
+        "saiu",
+        "chegou"
+      ]
+    },
+    {
+      "id": "everyday-5-32",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Someone is waiting for you downstairs. Say that you are almost there (“I’m on my way”).",
+      "explanation": "European Portuguese uses «estar a + infinitive»: «Estou a chegar.»",
+      "answer": [
+        "Estou",
+        "a",
+        "chegar."
+      ],
+      "distractors": [
+        "vou",
+        "já",
+        "saí",
+        "minutos"
+      ],
+      "acceptedAnswers": [
+        "Estou a caminho."
+      ]
+    },
+    {
+      "id": "everyday-5-33",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "It is Friday afternoon at work. Say something nice to your colleagues.",
+      "explanation": "«Bom fim de semana!» is a fixed phrase you can use with colleagues on Friday.",
+      "answer": [
+        "Bom",
+        "fim",
+        "de",
+        "semana!"
+      ],
+      "distractors": [
+        "trabalho",
+        "reunião",
+        "documento",
+        "terça"
+      ]
+    },
+    {
+      "id": "everyday-5-34",
+      "type": "question_for_answer",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "The other person answers: «Sim, mando já.» Ask formally if they can send you the address.",
+      "explanation": "For this request, use the chunk «Pode mandar-me a morada?». It works well in messages and emails.",
+      "givenAnswer": "Sim, mando já.",
+      "answer": [
+        "Pode",
+        "mandar-me",
+        "a",
+        "morada?"
+      ],
+      "distractors": [
+        "ficheiro",
+        "mandar-lhe",
+        "documento",
+        "reunião"
+      ],
+      "acceptedAnswers": [
+        "Pode enviar-me a morada?"
+      ]
+    },
+    {
+      "id": "everyday-5-35",
+      "type": "about_me",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Answer with a natural short reply.",
+      "explanation": "When a new plan is agreed, «Fica combinado.» is a natural way to confirm it.",
+      "question": "Se a nova hora te dá jeito, o que respondes?",
+      "sampleAnswer": "Fica combinado.",
+      "hints": [
+        "às três",
+        "amanhã",
+        "sim",
+        "reunião",
+        "está bem"
+      ]
+    },
+    {
+      "id": "everyday-5-36",
+      "type": "translate_word",
+      "topicId": "everyday-5",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In «Bom fim de semana!», the expression for “weekend” is «fim de semana».",
+      "direction": "toTarget",
+      "sentence": "Have a good **weekend**!",
+      "word": "weekend",
+      "answer": "fim de semana",
+      "options": [
+        "fim de semana",
+        "trabalho",
+        "reunião",
+        "escritório"
+      ]
+    },
+    {
+      "id": "everyday-5-37",
+      "type": "find_error",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Ficheiro» is masculine in Portuguese, so you say «o ficheiro».",
+      "sentence": [
+        "Pode",
+        "enviar-me",
+        "a",
+        "ficheiro?"
+      ],
+      "wrongIndex": 2,
+      "correction": "o",
+      "options": [
+        "o",
+        "os",
+        "as"
+      ]
+    },
+    {
+      "id": "everyday-5-38",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "In a formal email, say that you are attaching the invoice.",
+      "explanation": "«Em anexo envio...» is a standard email formula in Portuguese. Learn it as a whole chunk.",
+      "answer": [
+        "Em",
+        "anexo",
+        "envio",
+        "a",
+        "fatura."
+      ],
+      "distractors": [
+        "o",
+        "documento",
+        "cumprimentos",
+        "recebi"
+      ]
+    },
+    {
+      "id": "everyday-5-39",
+      "type": "fill_gaps",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Complete this short formal reply: say you received their email, then that you await their reply.",
+      "explanation": "These are common formal email chunks: one confirms receipt, and the other asks politely for a reply.",
+      "template": "Boa tarde. ___ o seu e-mail. ___ a sua resposta.",
+      "gaps": [
+        {
+          "answer": "Recebi"
+        },
+        {
+          "answer": "Aguardo"
+        }
+      ],
+      "wordBank": [
+        "Recebi",
+        "Aguardo",
+        "Envio",
+        "Confirmo"
+      ]
+    },
+    {
+      "id": "everyday-5-40",
+      "type": "build_phrase",
+      "topicId": "everyday-5",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Write a formal message confirming tomorrow’s meeting.",
+      "explanation": "«Confirmo a reunião de amanhã.» is a standard professional phrase for confirming plans in writing.",
+      "answer": [
+        "Confirmo",
+        "a",
+        "reunião",
+        "de",
+        "amanhã."
+      ],
+      "distractors": [
+        "recebi",
+        "convite",
+        "morada",
+        "fim"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1432 @@
+{
+  "id": "everyday-4",
+  "title": "Everyday phrases 4 — travel, hotel and finding your way",
+  "phrases": [
+    {
+      "target": "Tenho uma reserva em nome de…",
+      "support": "I have a reservation under the name of…",
+      "register": "formal",
+      "situation": "at hotel reception when checking in"
+    },
+    {
+      "target": "Queria um quarto para duas noites.",
+      "support": "I’d like a room for two nights.",
+      "register": "formal",
+      "situation": "asking for a room at a hotel"
+    },
+    {
+      "target": "O pequeno-almoço está incluído?",
+      "support": "Is breakfast included?",
+      "register": "formal",
+      "situation": "asking about hotel services"
+    },
+    {
+      "target": "A que horas é o check-out?",
+      "support": "What time is check-out?",
+      "register": "formal",
+      "situation": "asking about hotel departure time"
+    },
+    {
+      "target": "Onde fica o elevador?",
+      "support": "Where is the lift?",
+      "register": "formal",
+      "situation": "asking for the lift in a hotel"
+    },
+    {
+      "target": "O quarto não está limpo.",
+      "support": "The room is not clean.",
+      "register": "formal",
+      "situation": "reporting a problem at a hotel"
+    },
+    {
+      "target": "O ar condicionado não funciona.",
+      "support": "The air conditioning doesn’t work.",
+      "register": "formal",
+      "situation": "reporting a problem in the room"
+    },
+    {
+      "target": "A internet não funciona no quarto.",
+      "support": "The internet doesn’t work in the room.",
+      "register": "formal",
+      "situation": "reporting a problem in the room"
+    },
+    {
+      "target": "Pode trocar-me de quarto?",
+      "support": "Can you move me to another room?",
+      "register": "formal",
+      "situation": "asking hotel staff to change your room"
+    },
+    {
+      "target": "Pode mandar alguém ao quarto?",
+      "support": "Can you send someone to the room?",
+      "register": "formal",
+      "situation": "asking hotel staff for help"
+    },
+    {
+      "target": "Preciso de mais toalhas.",
+      "support": "I need more towels.",
+      "register": "formal",
+      "situation": "asking hotel staff for something"
+    },
+    {
+      "target": "Pode acordar-me às sete?",
+      "support": "Can you wake me up at seven?",
+      "register": "formal",
+      "situation": "asking reception for a wake-up call"
+    },
+    {
+      "target": "Pode chamar-me um táxi?",
+      "support": "Can you call a taxi for me?",
+      "register": "formal",
+      "situation": "asking hotel staff for transport help"
+    },
+    {
+      "target": "Pode guardar a minha bagagem?",
+      "support": "Can you store my luggage?",
+      "register": "formal",
+      "situation": "asking hotel staff to keep your bags"
+    },
+    {
+      "target": "Quero fazer o check-out.",
+      "support": "I want to check out.",
+      "register": "formal",
+      "situation": "at reception when leaving the hotel"
+    },
+    {
+      "target": "Onde fica a estação de comboios?",
+      "support": "Where is the train station?",
+      "register": "neutral",
+      "situation": "asking for directions in town"
+    },
+    {
+      "target": "A que horas parte o próximo comboio?",
+      "support": "What time does the next train leave?",
+      "register": "formal",
+      "situation": "at the station asking about departures"
+    },
+    {
+      "target": "Em que linha é o comboio para Coimbra?",
+      "support": "Which platform/line is the train to Coimbra on?",
+      "register": "formal",
+      "situation": "at the station asking where the train is"
+    },
+    {
+      "target": "Perdi o comboio.",
+      "support": "I missed the train.",
+      "register": "neutral",
+      "situation": "explaining a travel problem"
+    },
+    {
+      "target": "O voo está atrasado.",
+      "support": "The flight is delayed.",
+      "register": "neutral",
+      "situation": "talking about a delay at the airport"
+    },
+    {
+      "target": "Onde é a porta de embarque?",
+      "support": "Where is the boarding gate?",
+      "register": "formal",
+      "situation": "at the airport asking where to go"
+    },
+    {
+      "target": "Onde é o balcão de check-in?",
+      "support": "Where is the check-in desk?",
+      "register": "formal",
+      "situation": "at the airport asking where to go"
+    },
+    {
+      "target": "Onde posso levantar a minha bagagem?",
+      "support": "Where can I collect my luggage?",
+      "register": "formal",
+      "situation": "at the airport after landing"
+    },
+    {
+      "target": "Esta mala é demasiado pesada.",
+      "support": "This suitcase is too heavy.",
+      "register": "neutral",
+      "situation": "talking about baggage"
+    },
+    {
+      "target": "Posso levar isto na bagagem de mão?",
+      "support": "Can I take this in hand luggage?",
+      "register": "formal",
+      "situation": "asking about airport rules"
+    },
+    {
+      "target": "Pode recomendar um restaurante aqui perto?",
+      "support": "Can you recommend a restaurant nearby?",
+      "register": "formal",
+      "situation": "asking a receptionist or local for a recommendation"
+    },
+    {
+      "target": "Como vou para o centro?",
+      "support": "How do I get to the centre?",
+      "register": "neutral",
+      "situation": "asking for directions"
+    },
+    {
+      "target": "Como vou para o museu?",
+      "support": "How do I get to the museum?",
+      "register": "neutral",
+      "situation": "asking for directions"
+    },
+    {
+      "target": "É longe daqui?",
+      "support": "Is it far from here?",
+      "register": "neutral",
+      "situation": "checking distance"
+    },
+    {
+      "target": "Dá para ir a pé?",
+      "support": "Can you get there on foot?",
+      "register": "neutral",
+      "situation": "asking if walking is possible"
+    },
+    {
+      "target": "Siga sempre em frente.",
+      "support": "Go straight ahead.",
+      "register": "neutral",
+      "situation": "giving directions"
+    },
+    {
+      "target": "Vire à esquerda.",
+      "support": "Turn left.",
+      "register": "neutral",
+      "situation": "giving directions"
+    },
+    {
+      "target": "Vire à direita.",
+      "support": "Turn right.",
+      "register": "neutral",
+      "situation": "giving directions"
+    },
+    {
+      "target": "Fica ao lado de…",
+      "support": "It’s next to…",
+      "register": "neutral",
+      "situation": "giving directions with a landmark"
+    },
+    {
+      "target": "Fica em frente de…",
+      "support": "It’s opposite…",
+      "register": "neutral",
+      "situation": "giving directions with a landmark"
+    },
+    {
+      "target": "Fica perto da estação.",
+      "support": "It’s near the station.",
+      "register": "neutral",
+      "situation": "giving location information"
+    },
+    {
+      "target": "Fica longe daqui.",
+      "support": "It’s far from here.",
+      "register": "neutral",
+      "situation": "giving location information"
+    },
+    {
+      "target": "Estou perdido/a.",
+      "support": "I’m lost.",
+      "register": "neutral",
+      "situation": "asking for help when you cannot find the way"
+    },
+    {
+      "target": "Pode mostrar-me no mapa?",
+      "support": "Can you show me on the map?",
+      "register": "formal",
+      "situation": "asking someone to point it out on a map"
+    },
+    {
+      "target": "Pode tirar-nos uma fotografia?",
+      "support": "Can you take a photo of us?",
+      "register": "formal",
+      "situation": "asking a passer-by for help"
+    },
+    {
+      "target": "Onde é a saída?",
+      "support": "Where is the exit?",
+      "register": "formal",
+      "situation": "at a station or airport looking for the way out"
+    },
+    {
+      "target": "Tem um mapa da cidade?",
+      "support": "Do you have a map of the town?",
+      "register": "formal",
+      "situation": "asking at reception or a tourist office"
+    },
+    {
+      "target": "Qual é a paragem certa?",
+      "support": "Which is the right stop?",
+      "register": "formal",
+      "situation": "on a bus or tram"
+    },
+    {
+      "target": "Tenho de fazer transbordo?",
+      "support": "Do I need to change?",
+      "register": "formal",
+      "situation": "asking about changing buses, trains or metro lines"
+    },
+    {
+      "target": "Este autocarro vai para o aeroporto?",
+      "support": "Does this bus go to the airport?",
+      "register": "formal",
+      "situation": "asking before getting on a bus"
+    },
+    {
+      "target": "É esta a linha certa?",
+      "support": "Is this the right platform?",
+      "register": "formal",
+      "situation": "checking at a station"
+    },
+    {
+      "target": "Que bilhete recomenda?",
+      "support": "Which ticket do you recommend?",
+      "register": "formal",
+      "situation": "asking staff which ticket is best"
+    },
+    {
+      "target": "Queria um bilhete de ida e volta para Faro.",
+      "support": "I’d like a return ticket to Faro.",
+      "register": "formal",
+      "situation": "buying a train or coach ticket"
+    },
+    {
+      "target": "Boa viagem!",
+      "support": "Have a good trip!",
+      "register": "neutral",
+      "situation": "saying goodbye to someone who is travelling"
+    },
+    {
+      "target": "Fiz boa viagem, obrigado/a.",
+      "support": "I had a good trip, thank you.",
+      "register": "neutral",
+      "situation": "answering when someone asks about your journey"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "everyday-4-01",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At hotel reception, say: “I have a reservation under the name Marta Silva.”",
+      "explanation": "Use the fixed hotel phrase «Tenho uma reserva em nome de…». You can also add «Eu», but Portuguese often leaves the subject out.",
+      "answer": [
+        "Tenho",
+        "uma",
+        "reserva",
+        "em",
+        "nome",
+        "de",
+        "Marta",
+        "Silva."
+      ],
+      "distractors": [
+        "quarto",
+        "para",
+        "senhor"
+      ],
+      "acceptedAnswers": [
+        "Eu tenho uma reserva em nome de Marta Silva."
+      ]
+    },
+    {
+      "id": "everyday-4-02",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At a hotel, ask politely for a room for two nights.",
+      "explanation": "«Queria…» is a very common polite chunk in Portugal for requests. Learn it as a whole phrase.",
+      "answer": [
+        "Queria",
+        "um",
+        "quarto",
+        "para",
+        "duas",
+        "noites."
+      ],
+      "distractors": [
+        "quero",
+        "três",
+        "semana"
+      ],
+      "acceptedAnswers": [
+        "Eu queria um quarto para duas noites.",
+        "Queria um quarto para duas noites, por favor."
+      ]
+    },
+    {
+      "id": "everyday-4-03",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "At reception, ask if breakfast is included.",
+      "explanation": "For hotel services, this fixed question is very common: «O pequeno-almoço está incluído?». Use «está», not «é».",
+      "answer": [
+        "O",
+        "pequeno-almoço",
+        "está",
+        "incluído?"
+      ],
+      "distractors": [
+        "é",
+        "jantar",
+        "limpo"
+      ]
+    },
+    {
+      "id": "everyday-4-04",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Call reception and report this room problem: the air conditioning does not work.",
+      "explanation": "This is a useful whole sentence for a problem in the room. The negative goes before the verb: «não funciona».",
+      "answer": [
+        "O",
+        "ar",
+        "condicionado",
+        "não",
+        "funciona."
+      ],
+      "distractors": [
+        "está",
+        "incluído",
+        "toalhas"
+      ]
+    },
+    {
+      "id": "everyday-4-05",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Your room has a problem. Ask hotel staff politely to move you to another room.",
+      "explanation": "Use the fixed request «Pode trocar-me de quarto?». Learn it as a chunk for hotel situations.",
+      "answer": [
+        "Pode",
+        "trocar-me",
+        "de",
+        "quarto?"
+      ],
+      "distractors": [
+        "guardar",
+        "bagagem",
+        "ao"
+      ],
+      "acceptedAnswers": [
+        "Pode mudar-me de quarto?",
+        "Pode-me trocar de quarto?"
+      ]
+    },
+    {
+      "id": "everyday-4-06",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask a receptionist politely to recommend a nearby restaurant.",
+      "explanation": "This polite question is very useful when travelling. «Aqui perto» means “near here”.",
+      "answer": [
+        "Pode",
+        "recomendar",
+        "um",
+        "restaurante",
+        "aqui",
+        "perto?"
+      ],
+      "distractors": [
+        "recomenda",
+        "táxi",
+        "longe"
+      ],
+      "acceptedAnswers": [
+        "Pode recomendar-me um restaurante aqui perto?"
+      ]
+    },
+    {
+      "id": "everyday-4-07",
+      "type": "question_for_answer",
+      "topicId": "everyday-4",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "The receptionist answers: «É no segundo andar.» Ask where the lift is.",
+      "explanation": "To ask for a location, use «Onde fica…?». This is the natural phrase for places inside a building.",
+      "givenAnswer": "É no segundo andar.",
+      "answer": [
+        "Onde",
+        "fica",
+        "o",
+        "elevador?"
+      ],
+      "distractors": [
+        "qual",
+        "parte",
+        "andar"
+      ],
+      "acceptedAnswers": [
+        "Onde é que fica o elevador?",
+        "Onde é o elevador?",
+        "Onde é que é o elevador?"
+      ]
+    },
+    {
+      "id": "everyday-4-08",
+      "type": "question_for_answer",
+      "topicId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "The receptionist answers: «É às onze.» Ask at what time check-out is.",
+      "explanation": "For times, use «A que horas…?». Here you are asking about the hotel’s departure time.",
+      "givenAnswer": "É às onze.",
+      "answer": [
+        "A",
+        "que",
+        "horas",
+        "é",
+        "o",
+        "check-out?"
+      ],
+      "distractors": [
+        "quando",
+        "fica",
+        "porta"
+      ],
+      "acceptedAnswers": [
+        "A que horas tenho de fazer o check-out?",
+        "A que horas é que é o check-out?"
+      ]
+    },
+    {
+      "id": "everyday-4-09",
+      "type": "question_for_answer",
+      "topicId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At the station, the clerk answers: «Na linha três.» Ask which line the train to Coimbra is on.",
+      "explanation": "Use «Em que linha…?» to ask about the line or platform. This is a fixed travel question worth learning as a whole.",
+      "givenAnswer": "Na linha três.",
+      "answer": [
+        "Em",
+        "que",
+        "linha",
+        "é",
+        "o",
+        "comboio",
+        "para",
+        "Coimbra?"
+      ],
+      "distractors": [
+        "porta",
+        "vou",
+        "próximo"
+      ],
+      "acceptedAnswers": [
+        "Em que linha parte o comboio para Coimbra?"
+      ]
+    },
+    {
+      "id": "everyday-4-10",
+      "type": "question_for_answer",
+      "topicId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At the airport, the staff member answers: «Na porta quinze.» Ask where the boarding gate is.",
+      "explanation": "At the airport, «porta de embarque» is the boarding gate. You can ask with «Onde é…?» or «Onde fica…?».",
+      "givenAnswer": "Na porta quinze.",
+      "answer": [
+        "Onde",
+        "é",
+        "a",
+        "porta",
+        "de",
+        "embarque?"
+      ],
+      "distractors": [
+        "linha",
+        "autocarro",
+        "qual"
+      ],
+      "acceptedAnswers": [
+        "Onde fica a porta de embarque?"
+      ]
+    },
+    {
+      "id": "everyday-4-11",
+      "type": "fill_gaps",
+      "topicId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You are speaking to reception. Fill the two gaps.",
+      "explanation": "Use the polite request chunk «Pode…?» with staff. In «trocar-me de quarto», the preposition is «de».",
+      "template": "O ar condicionado não funciona. ___ trocar-me ___ quarto?",
+      "gaps": [
+        {
+          "answer": "Pode"
+        },
+        {
+          "answer": "de"
+        }
+      ],
+      "wordBank": [
+        "Pode",
+        "de",
+        "guardar",
+        "ao"
+      ]
+    },
+    {
+      "id": "everyday-4-12",
+      "type": "fill_gaps",
+      "topicId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "A local is giving you directions. Fill the two gaps.",
+      "explanation": "These are contractions: «a + a = à» in «à esquerda» and «a + o = ao» in «ao lado».",
+      "template": "Siga sempre em frente e vire ___ esquerda. O museu fica ___ lado de um banco.",
+      "gaps": [
+        {
+          "answer": "à"
+        },
+        {
+          "answer": "ao"
+        }
+      ],
+      "wordBank": [
+        "à",
+        "ao",
+        "em",
+        "da"
+      ]
+    },
+    {
+      "id": "everyday-4-13",
+      "type": "fill_gaps",
+      "topicId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "At the station, fill the two gaps to ask about the train.",
+      "explanation": "Use «A que horas…?» for time and «em que linha» for the line or platform. These are common travel chunks.",
+      "template": "___ horas parte o próximo comboio? E ___ que linha é?",
+      "gaps": [
+        {
+          "answer": "A que"
+        },
+        {
+          "answer": "em"
+        }
+      ],
+      "wordBank": [
+        "A que",
+        "em",
+        "Como",
+        "do"
+      ]
+    },
+    {
+      "id": "everyday-4-14",
+      "type": "translate_word",
+      "topicId": "everyday-4",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "At the airport, «atrasado» means “delayed”. It is the usual word for a late flight.",
+      "direction": "toTarget",
+      "sentence": "The flight is **delayed**.",
+      "word": "delayed",
+      "answer": "atrasado",
+      "options": [
+        "atrasado",
+        "perdido",
+        "incluído",
+        "pesada"
+      ]
+    },
+    {
+      "id": "everyday-4-15",
+      "type": "translate_word",
+      "topicId": "everyday-4",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "In this phrase, the natural word is «fotografia». Learn «Pode tirar-nos uma fotografia?» as a useful whole chunk.",
+      "direction": "toTarget",
+      "sentence": "Can you take a **photo** of us?",
+      "word": "photo",
+      "answer": "fotografia",
+      "options": [
+        "fotografia",
+        "mapa",
+        "mala",
+        "porta"
+      ]
+    },
+    {
+      "id": "everyday-4-16",
+      "type": "find_error",
+      "topicId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Noite» is feminine, so “two” must be «duas»: «um quarto para duas noites». «Dois» goes with masculine nouns.",
+      "sentence": [
+        "Queria",
+        "um",
+        "quarto",
+        "para",
+        "dois",
+        "noites."
+      ],
+      "wrongIndex": 4,
+      "correction": "duas",
+      "options": [
+        "duas",
+        "dos",
+        "das"
+      ]
+    },
+    {
+      "id": "everyday-4-17",
+      "type": "find_error",
+      "topicId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "The natural fixed phrase is «aqui perto» for “near here”. «Próximo» is not the right word in this chunk.",
+      "sentence": [
+        "Pode",
+        "recomendar",
+        "um",
+        "restaurante",
+        "aqui",
+        "próximo?"
+      ],
+      "wrongIndex": 5,
+      "correction": "perto",
+      "options": [
+        "perto",
+        "longe",
+        "cedo"
+      ]
+    },
+    {
+      "id": "everyday-4-18",
+      "type": "about_me",
+      "topicId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Answer about yourself.",
+      "explanation": "To say how you travel somewhere, use «Vou de…». This is a simple way to talk about your transport.",
+      "question": "Como vais para o aeroporto?",
+      "sampleAnswer": "Vou de metro.",
+      "hints": [
+        "de táxi",
+        "de autocarro",
+        "comboio",
+        "a pé"
+      ]
+    },
+    {
+      "id": "everyday-4-19",
+      "type": "order_dialogue",
+      "topicId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "At hotel reception. Put the lines in order.",
+      "explanation": "At check-in, you normally give your reservation name first, then ask practical questions. Learn these service phrases as whole chunks.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Boa tarde. Tenho uma reserva em nome de Ana Costa."
+        },
+        {
+          "speaker": "B",
+          "text": "Um momento, por favor. Sim, para duas noites."
+        },
+        {
+          "speaker": "A",
+          "text": "O pequeno-almoço está incluído?"
+        },
+        {
+          "speaker": "B",
+          "text": "Sim, está incluído. O check-out é até às onze."
+        },
+        {
+          "speaker": "A",
+          "text": "Perfeito, obrigada."
+        }
+      ]
+    },
+    {
+      "id": "everyday-4-20",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Ask a passer-by politely to take a photo of you and your friend.",
+      "explanation": "Use «tirar uma fotografia» for taking a photo. «-nos» means “us”, so this is the natural phrase for two people.",
+      "answer": [
+        "Pode",
+        "tirar-nos",
+        "uma",
+        "fotografia?"
+      ],
+      "distractors": [
+        "mostrar-me",
+        "mapa",
+        "ao"
+      ],
+      "acceptedAnswers": [
+        "Pode tirar-nos uma foto?",
+        "Pode-nos tirar uma fotografia?"
+      ]
+    },
+    {
+      "id": "everyday-4-21",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At hotel reception, say formally that your room is not clean.",
+      "explanation": "Use «não está limpo» to report a problem right now. Learn the whole sentence as a useful hotel complaint.",
+      "answer": [
+        "O",
+        "quarto",
+        "não",
+        "está",
+        "limpo."
+      ],
+      "distractors": [
+        "funciona",
+        "toalhas",
+        "bagagem"
+      ]
+    },
+    {
+      "id": "everyday-4-22",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You are at a hotel. Ask staff formally to send someone to your room.",
+      "explanation": "With hotel staff, «Pode...?» is a polite request. Learn «mandar alguém ao quarto» as one chunk.",
+      "answer": [
+        "Pode",
+        "mandar",
+        "alguém",
+        "ao",
+        "quarto?"
+      ],
+      "distractors": [
+        "guardar",
+        "mapa",
+        "restaurante"
+      ]
+    },
+    {
+      "id": "everyday-4-23",
+      "type": "fill_gaps",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You need extra towels at the hotel. Fill the two gaps.",
+      "explanation": "After «precisar», Portuguese uses «de»: «preciso de». «Toalhas» is plural because you want more than one.",
+      "template": "No hotel: ___ de mais ___.",
+      "gaps": [
+        {
+          "answer": "Preciso"
+        },
+        {
+          "answer": "toalhas"
+        }
+      ],
+      "wordBank": [
+        "Preciso",
+        "toalhas",
+        "Tenho",
+        "quartos",
+        "bagagem"
+      ]
+    },
+    {
+      "id": "everyday-4-24",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At reception, ask formally if they can wake you up at seven o’clock.",
+      "explanation": "Learn «Pode acordar-me…?» as a polite request chunk: «-me» (me) goes after the verb. «Às sete» = at seven (a + as).",
+      "answer": [
+        "Pode",
+        "acordar-me",
+        "às",
+        "sete?"
+      ],
+      "distractors": [
+        "as",
+        "acordar",
+        "oito"
+      ],
+      "acceptedAnswers": [
+        "Pode-me acordar às sete?"
+      ]
+    },
+    {
+      "id": "everyday-4-25",
+      "type": "question_for_answer",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At the airport, ask staff formally where the check-in desk is.",
+      "explanation": "Ask for a place with «Onde é...?» or «Onde fica...?»; «balcão de check-in» is the fixed airport term.",
+      "givenAnswer": "É ali, ao fundo do hall.",
+      "answer": [
+        "Onde",
+        "é",
+        "o",
+        "balcão",
+        "de",
+        "check-in?"
+      ],
+      "distractors": [
+        "porta",
+        "embarque",
+        "linha"
+      ],
+      "acceptedAnswers": [
+        "Onde fica o balcão de check-in?"
+      ]
+    },
+    {
+      "id": "everyday-4-26",
+      "type": "question_for_answer",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You have landed. Ask formally where you can collect your luggage.",
+      "explanation": "«Posso» makes the question practical and polite. «Levantar a bagagem» is a common airport chunk in Portugal.",
+      "givenAnswer": "No tapete cinco, à direita.",
+      "answer": [
+        "Onde",
+        "posso",
+        "levantar",
+        "a",
+        "minha",
+        "bagagem?"
+      ],
+      "distractors": [
+        "fica",
+        "balcão",
+        "quarto"
+      ],
+      "acceptedAnswers": [
+        "Onde é que posso levantar a minha bagagem?"
+      ]
+    },
+    {
+      "id": "everyday-4-27",
+      "type": "translate_word",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the Portuguese for the word in bold.",
+      "explanation": "«Mala» is feminine, so the adjective is «pesada». Choose the form that agrees with the noun.",
+      "direction": "toTarget",
+      "sentence": "This suitcase is too **heavy**.",
+      "word": "heavy",
+      "answer": "pesada",
+      "options": [
+        "pesada",
+        "limpa",
+        "incluída",
+        "atrasada"
+      ]
+    },
+    {
+      "id": "everyday-4-28",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At airport security, ask formally if you can take this in hand luggage.",
+      "explanation": "Use «bagagem de mão» for hand luggage. Learn the whole question as a fixed airport phrase.",
+      "answer": [
+        "Posso",
+        "levar",
+        "isto",
+        "na",
+        "bagagem",
+        "de",
+        "mão?"
+      ],
+      "distractors": [
+        "quarto",
+        "comboio",
+        "pesada"
+      ]
+    },
+    {
+      "id": "everyday-4-29",
+      "type": "question_for_answer",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You point to a place on the map. Ask a local if it is possible to go there on foot.",
+      "explanation": "«Dá para...?» is a very common travel phrase meaning “is it possible to...?”. It is best learned as a chunk.",
+      "givenAnswer": "Sim, claro. Demora uns dez minutos.",
+      "answer": [
+        "Dá",
+        "para",
+        "ir",
+        "a",
+        "pé?"
+      ],
+      "distractors": [
+        "longe",
+        "centro",
+        "metro"
+      ]
+    },
+    {
+      "id": "everyday-4-30",
+      "type": "question_for_answer",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "On the metro, ask staff formally whether you need to change lines.",
+      "explanation": "«Fazer transbordo» means to change buses, trains or metro lines. Learn the whole question as a transport chunk.",
+      "givenAnswer": "Não, não precisa. É direto.",
+      "answer": [
+        "Tenho",
+        "de",
+        "fazer",
+        "transbordo?"
+      ],
+      "distractors": [
+        "linha",
+        "paragem",
+        "bilhete"
+      ],
+      "acceptedAnswers": [
+        "Tenho que fazer transbordo?",
+        "É preciso fazer transbordo?"
+      ]
+    },
+    {
+      "id": "everyday-4-31",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Before getting on, ask formally if this bus goes to the airport.",
+      "explanation": "With transport, use «vai para» to ask the destination. «Autocarro» is the European Portuguese word.",
+      "answer": [
+        "Este",
+        "autocarro",
+        "vai",
+        "para",
+        "o",
+        "aeroporto?"
+      ],
+      "distractors": [
+        "comboio",
+        "museu",
+        "centro"
+      ],
+      "acceptedAnswers": [
+        "Este autocarro vai ao aeroporto?"
+      ]
+    },
+    {
+      "id": "everyday-4-32",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At the station, check formally if this is the right platform.",
+      "explanation": "At Portuguese train stations the platform is called «linha» (feminine), so you say «a linha certa». Learn the question as a chunk.",
+      "answer": [
+        "É",
+        "esta",
+        "a",
+        "linha",
+        "certa?"
+      ],
+      "distractors": [
+        "este",
+        "certo?",
+        "comboio"
+      ],
+      "acceptedAnswers": [
+        "Esta é a linha certa?"
+      ]
+    },
+    {
+      "id": "everyday-4-33",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "At the ticket office, ask staff formally which ticket they recommend.",
+      "explanation": "This short question is polite and useful when there are several ticket options. Learn it as a whole chunk.",
+      "answer": [
+        "Que",
+        "bilhete",
+        "recomenda?"
+      ],
+      "distractors": [
+        "volta",
+        "linha",
+        "próximo"
+      ],
+      "acceptedAnswers": [
+        "Que bilhete me recomenda?"
+      ]
+    },
+    {
+      "id": "everyday-4-34",
+      "type": "build_phrase",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "At the station, say formally that you would like a return ticket to Faro.",
+      "explanation": "«Ida e volta» means a return ticket. «Queria...» is a polite way to ask for something in stations and shops.",
+      "answer": [
+        "Queria",
+        "um",
+        "bilhete",
+        "de",
+        "ida",
+        "e",
+        "volta",
+        "para",
+        "Faro."
+      ],
+      "distractors": [
+        "quarto",
+        "duas",
+        "museu"
+      ],
+      "acceptedAnswers": [
+        "Queria um bilhete de ida e volta para Faro, por favor."
+      ]
+    },
+    {
+      "id": "everyday-4-35",
+      "type": "fill_gaps",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "A local is giving you directions to the museum. Fill the three gaps.",
+      "explanation": "«Vire à direita» is the polite instruction “turn right” (learn it as a chunk) and «em frente de» means “opposite”.",
+      "template": "Para o museu, ___ à direita. Fica ___ frente ___ uma farmácia.",
+      "gaps": [
+        {
+          "answer": "Vire"
+        },
+        {
+          "answer": "em"
+        },
+        {
+          "answer": "de"
+        }
+      ],
+      "wordBank": [
+        "Vire",
+        "em",
+        "de",
+        "Viro",
+        "lado",
+        "perto"
+      ]
+    },
+    {
+      "id": "everyday-4-36",
+      "type": "fill_gaps",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "You are lost in town. Ask a local to show you on the map and whether it is far. Fill the two gaps.",
+      "explanation": "«Pode mostrar-me…?» is a polite request chunk (the «-me» means “me”), and «É longe daqui?» asks if it is far from here.",
+      "template": "Desculpe, não conheço a cidade. Pode ___ no mapa? É ___ daqui?",
+      "gaps": [
+        {
+          "answer": "mostrar-me"
+        },
+        {
+          "answer": "longe"
+        }
+      ],
+      "wordBank": [
+        "mostrar-me",
+        "longe",
+        "tirar-nos",
+        "lado"
+      ]
+    },
+    {
+      "id": "everyday-4-37",
+      "type": "find_error",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Estação» is feminine, so the article here is «a». The natural phrase is «Onde fica a estação de comboios?».",
+      "sentence": [
+        "Onde",
+        "fica",
+        "o",
+        "estação",
+        "de",
+        "comboios?"
+      ],
+      "wrongIndex": 2,
+      "correction": "a",
+      "options": [
+        "a",
+        "uma",
+        "esta"
+      ]
+    },
+    {
+      "id": "everyday-4-38",
+      "type": "find_error",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "One word is wrong. Tap it and choose the correction.",
+      "explanation": "«Mala» is feminine, so «pesada» must also be feminine. «Pesado» would go with a masculine noun.",
+      "sentence": [
+        "Esta",
+        "mala",
+        "é",
+        "demasiado",
+        "pesado."
+      ],
+      "wrongIndex": 4,
+      "correction": "pesada.",
+      "options": [
+        "pesada.",
+        "atrasada.",
+        "pesadas."
+      ]
+    },
+    {
+      "id": "everyday-4-39",
+      "type": "order_dialogue",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "At hotel reception when leaving. Put the dialogue in order.",
+      "explanation": "«Quero fazer o check-out» starts the exchange. The receptionist then asks for the key and finishes the stay.",
+      "lines": [
+        {
+          "speaker": "A",
+          "text": "Bom dia. Quero fazer o check-out."
+        },
+        {
+          "speaker": "B",
+          "text": "Claro. Tem a chave do quarto?"
+        },
+        {
+          "speaker": "A",
+          "text": "Sim, aqui está."
+        },
+        {
+          "speaker": "B",
+          "text": "Obrigado. Está tudo em ordem."
+        }
+      ]
+    },
+    {
+      "id": "everyday-4-40",
+      "type": "match_pairs",
+      "topicId": "everyday-4",
+      "phraseSetId": "everyday-4",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles"
+      ],
+      "prompt": "Match each travel phrase with its meaning.",
+      "explanation": "These are useful whole phrases for travel problems, directions and goodbyes. Match the Portuguese chunks to their English meanings.",
+      "pairs": [
+        {
+          "target": "Perdi o comboio.",
+          "support": "I missed the train."
+        },
+        {
+          "target": "Pode guardar a minha bagagem?",
+          "support": "Can you store my luggage?"
+        },
+        {
+          "target": "Fica perto da estação.",
+          "support": "It’s near the station."
+        },
+        {
+          "target": "Estou perdido/a.",
+          "support": "I’m lost."
+        },
+        {
+          "target": "Boa viagem!",
+          "support": "Have a good trip!"
+        },
+        {
+          "target": "Fiz boa viagem, obrigado/a.",
+          "support": "I had a good trip, thank you."
+        }
+      ]
+    }
+  ]
+}

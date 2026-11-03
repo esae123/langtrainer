@@ -1,0 +1,1687 @@
+{
+  "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+  "moduleId": "m1",
+  "title": "Coming and going, routes and access",
+  "kind": "vocabulary",
+  "context": "Phrasal verbs built with **go** and **head** are essential for describing journeys, routes, directional movements, and decision-making about travel and plans.\n\n### Movement, Routes & Directions\n- **go around**: follow a curve, bypass an obstacle, or (of food etc.) be enough for everyone. *We went around the roadblock using a side street.*\n- **go by**: pass near a place; (of time) pass; follow a rule or standard. *We watched the cycling tour go by from the balcony.*\n- **go off**: (of an alarm) ring; (of an event) happen as planned; (of a path) branch off. *My alarm didn't go off this morning.*\n- **head back**: start returning to where you came from. *It is getting dark, so let's head back to the lodge.*\n- **head for / head toward**: move in the direction of a specific location. *The storm clouds are heading toward the coast.*\n- **head into**: enter a specific area or town. *We were heading into the city center when traffic stopped.*\n- **go up / go down**: move to a higher or lower level; (of prices) increase or decrease; (go down, of a computer system) stop working; (go up to someone) approach them. *We went up the winding hill to enjoy the view.*\n\n### Departure & Return\n- **go away**: leave a place, take a trip for a period, or (of a pain or problem) disappear. *They are going away for a weekend in the mountains.*\n- **go back**: return to a previous place or date back in history. *I want to go back to Lisbon next spring.*\n- **go out**: leave the house to socialize; (of a fire or light) stop burning or shining. *Let's go out for dinner tonight.*\n- **go over**: walk across a space or visit someone nearby. *She went over to the window to open it.*\n\n### Progress, Action & Choices\n- **go after**: chase, pursue a difficult goal, or target a market. *She decided to go after her dream career.*\n- **go ahead**: proceed with a plan or give permission. *You have our permission to go ahead with the project.*\n- **go back on**: fail to keep a promise or agreement. *A reliable partner never goes back on their word.*\n- **go for / go in for**: go for = try to achieve or choose; have something going for you = have an advantage; go in for = like and regularly do an activity. *He goes in for marathon running on weekends.*\n- **go on**: continue an activity, happen, or start operating. *The meeting went on much longer than expected.*\n- **go overboard**: do something excessively. *Decorating is fine, but do not go overboard on expenses.*\n- **go through with**: carry out a difficult or contested plan. *Despite doubts, she went through with the purchase.*\n- **go under**: go bankrupt or collapse financially. *Without financial aid, the small publisher will go under.*\n- **go with**: match clothes, choose an option, or support an idea. *This navy blazer goes with almost everything.*\n\n### Watch out!\n- **head for** and **head toward** both mean traveling towards a destination, while **head back** means returning.\n- **go back on** always takes an object (a promise, a word, a pledge) and means breaking it.\n- **go off** can mean a path branching off, an alarm ringing, or an event going off smoothly.",
+  "keyItems": [
+    {
+      "target": "go after",
+      "support": "chase, pursue a difficult goal, or target a market"
+    },
+    {
+      "target": "go ahead",
+      "support": "proceed with an action or give permission"
+    },
+    {
+      "target": "go around",
+      "support": "bypass an obstacle, circulate, or be enough for everyone"
+    },
+    {
+      "target": "go away",
+      "support": "leave a place, travel for vacation, or disappear"
+    },
+    {
+      "target": "go back",
+      "support": "return to a place or date back to an era"
+    },
+    {
+      "target": "go back on",
+      "support": "fail to keep a promise or pledge"
+    },
+    {
+      "target": "go by",
+      "support": "pass near, elapse (time), or follow a standard"
+    },
+    {
+      "target": "go down",
+      "support": "descend, decrease, stop working (system), or set (sun)"
+    },
+    {
+      "target": "go for",
+      "support": "try to achieve, like a lot, or have in one's favor"
+    },
+    {
+      "target": "go in for",
+      "support": "enjoy and regularly participate in an activity"
+    },
+    {
+      "target": "go off",
+      "support": "ring/explode, stop operating, diverge, or succeed smoothly"
+    },
+    {
+      "target": "go on",
+      "support": "continue, happen, or start functioning"
+    },
+    {
+      "target": "go out",
+      "support": "leave home to socialize, or extinguish (fire/light)"
+    },
+    {
+      "target": "go over",
+      "support": "review carefully, walk across, or visit someone"
+    },
+    {
+      "target": "go overboard",
+      "support": "do something to an unnecessary excess"
+    },
+    {
+      "target": "go through with",
+      "support": "carry out a plan despite difficulty or opposition"
+    },
+    {
+      "target": "go under",
+      "support": "fail financially or go bankrupt"
+    },
+    {
+      "target": "go up",
+      "support": "ascend, increase in price, or approach someone"
+    },
+    {
+      "target": "go with",
+      "support": "match clothing, choose an option, or accompany"
+    },
+    {
+      "target": "head back",
+      "support": "start returning to where you came from"
+    },
+    {
+      "target": "head for",
+      "support": "move toward a destination or likely situation"
+    },
+    {
+      "target": "head into",
+      "support": "begin entering a specific area or district"
+    },
+    {
+      "target": "head toward",
+      "support": "travel in the direction of a location"
+    }
+  ],
+  "coverage": {
+    "items": [
+      {
+        "id": "go-after",
+        "phrase": "go after"
+      },
+      {
+        "id": "go-ahead",
+        "phrase": "go ahead"
+      },
+      {
+        "id": "go-around",
+        "phrase": "go around"
+      },
+      {
+        "id": "go-away",
+        "phrase": "go away"
+      },
+      {
+        "id": "go-back",
+        "phrase": "go back"
+      },
+      {
+        "id": "go-back-on",
+        "phrase": "go back on"
+      },
+      {
+        "id": "go-by",
+        "phrase": "go by"
+      },
+      {
+        "id": "go-down",
+        "phrase": "go down"
+      },
+      {
+        "id": "go-for",
+        "phrase": "go for"
+      },
+      {
+        "id": "go-in-for",
+        "phrase": "go in for"
+      },
+      {
+        "id": "go-off",
+        "phrase": "go off"
+      },
+      {
+        "id": "go-on",
+        "phrase": "go on"
+      },
+      {
+        "id": "go-out",
+        "phrase": "go out"
+      },
+      {
+        "id": "go-over",
+        "phrase": "go over"
+      },
+      {
+        "id": "go-overboard",
+        "phrase": "go overboard"
+      },
+      {
+        "id": "go-through-with",
+        "phrase": "go through with"
+      },
+      {
+        "id": "go-under",
+        "phrase": "go under"
+      },
+      {
+        "id": "go-up",
+        "phrase": "go up"
+      },
+      {
+        "id": "go-with",
+        "phrase": "go with"
+      },
+      {
+        "id": "head-back",
+        "phrase": "head back"
+      },
+      {
+        "id": "head-for",
+        "phrase": "head for"
+      },
+      {
+        "id": "head-into",
+        "phrase": "head into"
+      },
+      {
+        "id": "head-toward",
+        "phrase": "head toward"
+      }
+    ],
+    "minimumExercisesPerItem": 2,
+    "assignments": {
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-01": "go-after",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-24": "go-after",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-02": "go-ahead",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-25": "go-ahead",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-03": "go-around",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-26": "go-around",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-04": "go-away",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-27": "go-away",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-05": "go-back",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-28": "go-back",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-06": "go-back-on",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-29": "go-back-on",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-07": "go-by",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-30": "go-by",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-08": "go-down",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-31": "go-down",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-09": "go-for",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-32": "go-for",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-10": "go-in-for",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-33": "go-in-for",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-11": "go-off",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-34": "go-off",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-12": "go-on",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-35": "go-on",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-13": "go-out",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-36": "go-out",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-14": "go-over",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-37": "go-over",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-15": "go-overboard",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-38": "go-overboard",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-16": "go-through-with",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-39": "go-through-with",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-17": "go-under",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-40": "go-under",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-18": "go-up",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-41": "go-up",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-19": "go-with",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-42": "go-with",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-20": "head-back",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-43": "head-back",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-21": "head-for",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-44": "head-for",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-22": "head-into",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-45": "head-into",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-23": "head-toward",
+      "en-phrasal_verbs-m1-coming-and-going-routes-and-access-46": "head-toward"
+    }
+  },
+  "exercises": [
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-01",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Go after' means to chase, pursue, or try to catch someone.",
+      "direction": "toTarget",
+      "sentence": "The security guard decided to **chase** the shoplifter down the street.",
+      "word": "chase",
+      "answer": "go after",
+      "options": [
+        "go after",
+        "go around",
+        "go ahead",
+        "head back"
+      ],
+      "tags": [
+        "coverage:go-after"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-02",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about proceeding with the expansion plan.",
+      "explanation": "'Go ahead' means to proceed with a plan or action after considering it.",
+      "template": "The board voted to ___ ___ with the factory expansion plans.",
+      "gaps": [
+        {
+          "answer": "go"
+        },
+        {
+          "answer": "ahead"
+        }
+      ],
+      "wordBank": [
+        "go",
+        "ahead",
+        "after",
+        "back",
+        "under"
+      ],
+      "tags": [
+        "coverage:go-ahead"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-03",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that we had to make a detour to avoid the fallen tree (use a phrasal verb).",
+      "explanation": "'Go around' means to follow a curved or indirect path to bypass an obstacle.",
+      "answer": [
+        "We",
+        "had",
+        "to",
+        "go",
+        "around",
+        "the",
+        "fallen",
+        "tree."
+      ],
+      "distractors": [
+        "through",
+        "overboard",
+        "away"
+      ],
+      "acceptedAnswers": [
+        "We had to go round the fallen tree."
+      ],
+      "tags": [
+        "coverage:go-around"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-04",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about travelling for a holiday.",
+      "explanation": "'Go away' means to leave home and travel for a period of time.",
+      "template": "Our family likes to ___ ___ to the coast for two weeks.",
+      "gaps": [
+        {
+          "answer": "go"
+        },
+        {
+          "answer": "away"
+        }
+      ],
+      "wordBank": [
+        "go",
+        "away",
+        "ahead",
+        "under",
+        "after"
+      ],
+      "tags": [
+        "coverage:go-away"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-05",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Your colleague is visiting your city for a conference. Ask them when they will return home (use a phrasal verb).",
+      "explanation": "'Go back' means to return to a place where you were before.",
+      "givenAnswer": "Next Tuesday, right after the conference ends.",
+      "answer": [
+        "When",
+        "will",
+        "you",
+        "go",
+        "back",
+        "home?"
+      ],
+      "distractors": [
+        "ahead",
+        "under",
+        "away"
+      ],
+      "acceptedAnswers": [
+        "When are you going back home?",
+        "When do you go back home?",
+        "When will you go back?",
+        "When are you going back?"
+      ],
+      "tags": [
+        "coverage:go-back"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-06",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about someone refusing to break their promise.",
+      "explanation": "'Go back on' means to fail to keep a promise or agreement.",
+      "template": "An honest business leader will never ___ ___ ___ a formal pledge.",
+      "gaps": [
+        {
+          "answer": "go"
+        },
+        {
+          "answer": "back"
+        },
+        {
+          "answer": "on"
+        }
+      ],
+      "wordBank": [
+        "go",
+        "back",
+        "on",
+        "in",
+        "for",
+        "with"
+      ],
+      "tags": [
+        "coverage:go-back-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-07",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "When time 'goes by', it passes. Example: It is amazing how quickly the summer months go by.",
+      "direction": "toTarget",
+      "sentence": "It is amazing how quickly the summer months **pass** when we are busy with work.",
+      "word": "pass",
+      "answer": "go by",
+      "options": [
+        "go by",
+        "go under",
+        "go after",
+        "go ahead"
+      ],
+      "tags": [
+        "coverage:go-by"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-08",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about the bank server experiencing an outage.",
+      "explanation": "When a computer system or network 'goes down', it temporarily stops functioning.",
+      "template": "Customers could not withdraw cash when the banking system ___ ___ yesterday.",
+      "gaps": [
+        {
+          "answer": "went"
+        },
+        {
+          "answer": "down"
+        }
+      ],
+      "wordBank": [
+        "went",
+        "down",
+        "up",
+        "back",
+        "through"
+      ],
+      "tags": [
+        "coverage:go-down"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-09",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Go for' means to try to achieve or win an ambitious goal.",
+      "direction": "toTarget",
+      "sentence": "The sprinter trained hard to **try to achieve** the national championship record.",
+      "word": "try to achieve",
+      "answer": "go for",
+      "options": [
+        "go for",
+        "go under",
+        "go with",
+        "go by"
+      ],
+      "tags": [
+        "coverage:go-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-10",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about someone who does not enjoy team sports.",
+      "explanation": "'Go in for' means to enjoy and regularly participate in an activity or hobby.",
+      "template": "My brother does not ___ ___ ___ competitive team sports very much.",
+      "gaps": [
+        {
+          "answer": "go"
+        },
+        {
+          "answer": "in"
+        },
+        {
+          "answer": "for"
+        }
+      ],
+      "wordBank": [
+        "go",
+        "in",
+        "for",
+        "on",
+        "with",
+        "after"
+      ],
+      "tags": [
+        "coverage:go-in-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-11",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about an alarm sounding early in the morning.",
+      "explanation": "When an alarm 'goes off', it rings or makes a loud noise.",
+      "template": "I woke up instantly when the smoke alarm ___ ___ at dawn.",
+      "gaps": [
+        {
+          "answer": "went"
+        },
+        {
+          "answer": "off"
+        }
+      ],
+      "wordBank": [
+        "went",
+        "off",
+        "out",
+        "down",
+        "by"
+      ],
+      "tags": [
+        "coverage:go-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-12",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about continuing despite an interruption.",
+      "explanation": "'Go on' means to continue doing an activity or presentation.",
+      "template": "After the brief pause, the speaker decided to ___ ___ with her presentation.",
+      "gaps": [
+        {
+          "answer": "go"
+        },
+        {
+          "answer": "on"
+        }
+      ],
+      "wordBank": [
+        "go",
+        "on",
+        "off",
+        "back",
+        "by"
+      ],
+      "tags": [
+        "coverage:go-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-13",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Suggest that we leave home this evening to have dinner somewhere (use a phrasal verb).",
+      "explanation": "'Go out' means to leave home for leisure, socialising, or entertainment.",
+      "answer": [
+        "Let's",
+        "go",
+        "out",
+        "for",
+        "dinner",
+        "this",
+        "evening."
+      ],
+      "distractors": [
+        "under",
+        "down",
+        "ahead"
+      ],
+      "acceptedAnswers": [
+        "Let us go out for dinner this evening.",
+        "Let's go out to dinner this evening.",
+        "Let's go out for dinner tonight.",
+        "Let's go out to dinner tonight."
+      ],
+      "tags": [
+        "coverage:go-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-14",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about carefully reviewing a contract.",
+      "explanation": "'Go over' means to examine, inspect, or review written material thoroughly.",
+      "template": "Please take twenty minutes to ___ ___ the contract before signing.",
+      "gaps": [
+        {
+          "answer": "go"
+        },
+        {
+          "answer": "over"
+        }
+      ],
+      "wordBank": [
+        "go",
+        "over",
+        "ahead",
+        "under",
+        "off"
+      ],
+      "tags": [
+        "coverage:go-over"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-15",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Advise your friend that they should not overdo the party decorations (use a phrasal verb).",
+      "explanation": "'Go overboard' means to do something excessively or to an extreme degree.",
+      "answer": [
+        "You",
+        "shouldn't",
+        "go",
+        "overboard",
+        "with",
+        "the",
+        "party",
+        "decorations."
+      ],
+      "distractors": [
+        "away",
+        "ahead",
+        "under"
+      ],
+      "acceptedAnswers": [
+        "You should not go overboard with the party decorations.",
+        "You shouldn't go overboard on the party decorations.",
+        "You should not go overboard on the party decorations.",
+        "Don't go overboard with the party decorations.",
+        "Don't go overboard on the party decorations."
+      ],
+      "tags": [
+        "coverage:go-overboard"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-16",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about carrying out a difficult decision despite objections.",
+      "explanation": "'Go through with' means to complete a planned action despite difficulties or opposition.",
+      "template": "Despite fierce family opposition, she will ___ ___ ___ her career change.",
+      "gaps": [
+        {
+          "answer": "go"
+        },
+        {
+          "answer": "through"
+        },
+        {
+          "answer": "with"
+        }
+      ],
+      "wordBank": [
+        "go",
+        "through",
+        "with",
+        "in",
+        "for",
+        "by"
+      ],
+      "tags": [
+        "coverage:go-through-with"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-17",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Go under' means to fail financially or go out of business.",
+      "direction": "toTarget",
+      "sentence": "Many independent bookstores were afraid they would **go bankrupt** during the recession.",
+      "word": "go bankrupt",
+      "answer": "go under",
+      "options": [
+        "go under",
+        "go over",
+        "go ahead",
+        "head back"
+      ],
+      "tags": [
+        "coverage:go-under"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-18",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about rising public transit fares.",
+      "explanation": "When prices or costs 'go up', they increase.",
+      "template": "Commuters complained when subway ticket fares ___ ___ by ten percent.",
+      "gaps": [
+        {
+          "answer": "went"
+        },
+        {
+          "answer": "up"
+        }
+      ],
+      "wordBank": [
+        "went",
+        "up",
+        "down",
+        "under",
+        "through"
+      ],
+      "tags": [
+        "coverage:go-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-19",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "When clothing items 'go with' each other, they match and look attractive together.",
+      "direction": "toTarget",
+      "sentence": "I need to find a comfortable pair of shoes that will **match** this dark suit.",
+      "word": "match",
+      "answer": "go with",
+      "options": [
+        "go with",
+        "go for",
+        "go by",
+        "go after"
+      ],
+      "tags": [
+        "coverage:go-with"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-20",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "You are hiking with friends. Ask them when you should start returning (use a phrasal verb).",
+      "explanation": "'Head back' means to begin returning to where you started.",
+      "givenAnswer": "We should leave by four before dusk falls.",
+      "answer": [
+        "When",
+        "should",
+        "we",
+        "head",
+        "back?"
+      ],
+      "distractors": [
+        "ahead",
+        "under",
+        "around"
+      ],
+      "acceptedAnswers": [
+        "What time should we head back?",
+        "When should we start heading back?",
+        "When should we head back to camp?"
+      ],
+      "tags": [
+        "coverage:head-back"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-21",
+      "type": "question_for_answer",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Ask the driver which city they are travelling to (use a phrasal verb).",
+      "explanation": "'Head for' (= 'head toward') means to move in the direction of a destination. Example: Which city are you heading for?",
+      "givenAnswer": "To Bristol. My sister lives there.",
+      "answer": [
+        "Which",
+        "city",
+        "are",
+        "you",
+        "heading",
+        "for?"
+      ],
+      "distractors": [
+        "back",
+        "under",
+        "ahead"
+      ],
+      "acceptedAnswers": [
+        "What city are you heading for?",
+        "Which city are you headed for?",
+        "Which city are you heading toward?",
+        "Which city are you heading towards?",
+        "What city are you heading toward?",
+        "What city are you heading towards?"
+      ],
+      "tags": [
+        "coverage:head-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-22",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about commuters entering the city centre.",
+      "explanation": "'Head into' means to move into or begin entering a specific district or area.",
+      "template": "Morning traffic slows down as thousands of drivers ___ ___ the city centre.",
+      "gaps": [
+        {
+          "answer": "head"
+        },
+        {
+          "answer": "into"
+        }
+      ],
+      "wordBank": [
+        "head",
+        "into",
+        "under",
+        "up",
+        "after"
+      ],
+      "tags": [
+        "coverage:head-into"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-23",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about trail guides walking in the direction of a mountain pass.",
+      "explanation": "'Head toward' (or 'head for') means to travel in the direction of a place. 'Head at' is not used. Example: The trail guides started to head toward the pass.",
+      "sentence": [
+        "The",
+        "trail",
+        "guides",
+        "started",
+        "to",
+        "head",
+        "at",
+        "the",
+        "pass."
+      ],
+      "wrongIndex": 6,
+      "correction": "toward",
+      "options": [
+        "toward",
+        "back",
+        "under"
+      ],
+      "tags": [
+        "coverage:head-toward"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-24",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that Sofia decided to pursue an engineering degree (use a phrasal verb).",
+      "explanation": "'Go after' means to attempt to obtain or achieve something challenging.",
+      "answer": [
+        "Sofia",
+        "decided",
+        "to",
+        "go",
+        "after",
+        "an",
+        "engineering",
+        "degree."
+      ],
+      "distractors": [
+        "around",
+        "under",
+        "overboard"
+      ],
+      "acceptedAnswers": [
+        "Sofia decided to go for an engineering degree."
+      ],
+      "tags": [
+        "coverage:go-after"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-25",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Go ahead' means to proceed without delay or hesitation.",
+      "direction": "toTarget",
+      "sentence": "If you are ready to speak, please **proceed without hesitation**.",
+      "word": "proceed without hesitation",
+      "answer": "go ahead",
+      "options": [
+        "go ahead",
+        "go away",
+        "go back",
+        "go under"
+      ],
+      "tags": [
+        "coverage:go-ahead"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-26",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about whether there is sufficient food for guests.",
+      "explanation": "When there is 'enough to go around', there is sufficient quantity for each person in a group.",
+      "template": "Make smaller portions so that there is enough dessert to ___ ___.",
+      "gaps": [
+        {
+          "answer": "go"
+        },
+        {
+          "answer": "around"
+        }
+      ],
+      "wordBank": [
+        "go",
+        "around",
+        "by",
+        "off",
+        "back"
+      ],
+      "tags": [
+        "coverage:go-around"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-27",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "When an ache, symptom, or problem 'goes away', it disappears or fades.",
+      "direction": "toTarget",
+      "sentence": "The persistent headache should **disappear** after you rest quietly.",
+      "word": "disappear",
+      "answer": "go away",
+      "options": [
+        "go away",
+        "go on",
+        "go off",
+        "head back"
+      ],
+      "tags": [
+        "coverage:go-away"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-28",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about an ancient festival's origins.",
+      "explanation": "When a tradition or custom 'goes back' to a particular period, it originated at that time.",
+      "template": "This annual harvest festival ___ ___ to the sixteenth century.",
+      "gaps": [
+        {
+          "answer": "goes"
+        },
+        {
+          "answer": "back"
+        }
+      ],
+      "wordBank": [
+        "goes",
+        "back",
+        "by",
+        "down",
+        "off"
+      ],
+      "tags": [
+        "coverage:go-back"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-29",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about breaking a solemn promise.",
+      "explanation": "'Go back on' is the correct three-word phrasal verb meaning to break a promise or pledge.",
+      "sentence": [
+        "He",
+        "swore",
+        "never",
+        "to",
+        "go",
+        "down",
+        "on",
+        "his",
+        "word."
+      ],
+      "wrongIndex": 5,
+      "correction": "back",
+      "options": [
+        "back",
+        "ahead",
+        "away"
+      ],
+      "tags": [
+        "coverage:go-back-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-30",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that we always follow the official safety rules (use a phrasal verb).",
+      "explanation": "'Go by' means to follow rules, standards, or guidelines as a reference.",
+      "answer": [
+        "We",
+        "always",
+        "go",
+        "by",
+        "the",
+        "official",
+        "safety",
+        "rules."
+      ],
+      "distractors": [
+        "under",
+        "away",
+        "around"
+      ],
+      "acceptedAnswers": [
+        "We always go by the official safety regulations."
+      ],
+      "tags": [
+        "coverage:go-by"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-31",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "When the sun 'goes down', it sets below the horizon.",
+      "direction": "toTarget",
+      "sentence": "Temperatures drop rapidly after the sun begins to **set below the horizon**.",
+      "word": "set below the horizon",
+      "answer": "go down",
+      "options": [
+        "go down",
+        "go up",
+        "go out",
+        "head for"
+      ],
+      "tags": [
+        "coverage:go-down"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-32",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that she has ten years of experience that give her an advantage (use a phrasal verb).",
+      "explanation": "'Have something going for you' means having a distinctive advantage in your favor.",
+      "answer": [
+        "She",
+        "has",
+        "ten",
+        "years",
+        "of",
+        "experience",
+        "going",
+        "for",
+        "her."
+      ],
+      "distractors": [
+        "against",
+        "around",
+        "over"
+      ],
+      "acceptedAnswers": [
+        "She's got ten years of experience going for her.",
+        "She has got ten years of experience going for her."
+      ],
+      "tags": [
+        "coverage:go-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-33",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence about a hobby preference.",
+      "explanation": "'Go in for' means to like and do regularly. 'Go on for' means to last for a duration of time.",
+      "sentence": [
+        "She",
+        "does",
+        "not",
+        "go",
+        "on",
+        "for",
+        "gardening",
+        "much."
+      ],
+      "wrongIndex": 4,
+      "correction": "in",
+      "options": [
+        "in",
+        "by",
+        "down"
+      ],
+      "tags": [
+        "coverage:go-in-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-34",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "When an event 'goes off' without a hitch, it happens smoothly as planned.",
+      "direction": "toTarget",
+      "sentence": "The international conference managed to **happen smoothly** without any technical hitches.",
+      "word": "happen smoothly",
+      "answer": "go off",
+      "options": [
+        "go off",
+        "go under",
+        "go through with",
+        "go back on"
+      ],
+      "tags": [
+        "coverage:go-off"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-35",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Go on' means to happen or occur ('What is going on?').",
+      "direction": "toTarget",
+      "sentence": "Can someone please explain what strange things **are happening** in the lobby?",
+      "word": "are happening",
+      "answer": "are going on",
+      "options": [
+        "are going on",
+        "are going off",
+        "are going under",
+        "are heading back"
+      ],
+      "tags": [
+        "coverage:go-on"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-36",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about the campfire extinguishing during the night.",
+      "explanation": "When a fire or light 'goes out', it stops burning or producing light.",
+      "template": "Because nobody added logs, the campfire ___ ___ during the cold night.",
+      "gaps": [
+        {
+          "answer": "went"
+        },
+        {
+          "answer": "out"
+        }
+      ],
+      "wordBank": [
+        "went",
+        "out",
+        "off",
+        "down",
+        "away"
+      ],
+      "tags": [
+        "coverage:go-out"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-37",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 1,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Go over' means to walk or move across a room toward something.",
+      "direction": "toTarget",
+      "sentence": "The room was warm, so he decided to **walk across** to the window.",
+      "word": "walk across",
+      "answer": "go over",
+      "options": [
+        "go over",
+        "go under",
+        "go back",
+        "head back"
+      ],
+      "tags": [
+        "coverage:go-over"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-38",
+      "type": "find_error",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Find the error in the sentence warning against over-exercising.",
+      "explanation": "'Go overboard' means to overdo an activity excessively. 'Go overland' means traveling across land.",
+      "sentence": [
+        "Daily",
+        "exercise",
+        "is",
+        "healthy,",
+        "but",
+        "never",
+        "go",
+        "overland."
+      ],
+      "wrongIndex": 7,
+      "correction": "overboard",
+      "options": [
+        "overboard",
+        "ahead",
+        "around"
+      ],
+      "tags": [
+        "coverage:go-overboard"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-39",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Go through with' means to proceed and complete a difficult or daunting plan.",
+      "direction": "toTarget",
+      "sentence": "Did the company actually **carry out** the risky relocation plan?",
+      "word": "carry out",
+      "answer": "go through with",
+      "options": [
+        "go through with",
+        "go back on",
+        "go in for",
+        "go overboard"
+      ],
+      "tags": [
+        "coverage:go-through-with"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-40",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that the local bakery went bankrupt after five years (use a phrasal verb).",
+      "explanation": "'Go under' means to collapse financially or cease trading.",
+      "answer": [
+        "The",
+        "local",
+        "bakery",
+        "went",
+        "under",
+        "after",
+        "five",
+        "years."
+      ],
+      "distractors": [
+        "over",
+        "ahead",
+        "across"
+      ],
+      "tags": [
+        "coverage:go-under"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-41",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Tell a colleague not to hesitate to approach the director (refer to the director as 'her'; use a phrasal verb).",
+      "explanation": "'Go up to' someone means to approach them directly in person.",
+      "answer": [
+        "Don't",
+        "hesitate",
+        "to",
+        "go",
+        "up",
+        "to",
+        "her."
+      ],
+      "distractors": [
+        "under",
+        "overboard",
+        "away"
+      ],
+      "acceptedAnswers": [
+        "Do not hesitate to go up to her."
+      ],
+      "tags": [
+        "coverage:go-up"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-42",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that we decided to choose the first proposal (use a phrasal verb).",
+      "explanation": "'Go with' means to choose an option or support a recommendation.",
+      "answer": [
+        "We",
+        "decided",
+        "to",
+        "go",
+        "with",
+        "the",
+        "first",
+        "proposal."
+      ],
+      "distractors": [
+        "under",
+        "through",
+        "ahead"
+      ],
+      "acceptedAnswers": [
+        "We decided to go for the first proposal."
+      ],
+      "tags": [
+        "coverage:go-with"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-43",
+      "type": "fill_gaps",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters",
+        "typing"
+      ],
+      "prompt": "Complete the sentence about tourists returning to their hotel after a hike.",
+      "explanation": "'Head back' means to travel back or return toward a base location.",
+      "template": "After spending the whole afternoon hiking, they ___ ___ to their hotel.",
+      "gaps": [
+        {
+          "answer": "headed"
+        },
+        {
+          "answer": "back"
+        }
+      ],
+      "wordBank": [
+        "headed",
+        "back",
+        "into",
+        "toward",
+        "under"
+      ],
+      "tags": [
+        "coverage:head-back"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-44",
+      "type": "translate_word",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 2,
+      "allowedModes": [
+        "tiles",
+        "letters"
+      ],
+      "prompt": "Choose the correct phrasal verb for the bolded words.",
+      "explanation": "'Be heading for' a situation means it is becoming likely. Example: If you ignore safety rules, you are heading for serious trouble.",
+      "direction": "toTarget",
+      "sentence": "If you continue to ignore company safety rules, you are **on course for** serious trouble.",
+      "word": "on course for",
+      "answer": "heading for",
+      "options": [
+        "heading for",
+        "going under",
+        "heading back",
+        "going overboard"
+      ],
+      "tags": [
+        "coverage:head-for"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-45",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that we were entering the forest when it started raining (use a phrasal verb).",
+      "explanation": "'Head into' means to begin to enter a place or area. Example: We were heading into the forest when it started raining.",
+      "answer": [
+        "We",
+        "were",
+        "heading",
+        "into",
+        "the",
+        "forest",
+        "when",
+        "it",
+        "started",
+        "raining."
+      ],
+      "distractors": [
+        "back",
+        "under",
+        "after"
+      ],
+      "acceptedAnswers": [
+        "We were heading into the forest when it started to rain.",
+        "We were heading into the forest when it began raining.",
+        "We were heading into the forest when it began to rain."
+      ],
+      "tags": [
+        "coverage:head-into"
+      ]
+    },
+    {
+      "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-46",
+      "type": "build_phrase",
+      "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+      "difficulty": 3,
+      "allowedModes": [
+        "tiles",
+        "typing"
+      ],
+      "prompt": "Say that the escaped prisoners were moving in the direction of the border (use a phrasal verb).",
+      "explanation": "'Head toward' (= 'head for') means to move in the direction of a place. Example: The escaped prisoners were heading toward the border.",
+      "answer": [
+        "The",
+        "escaped",
+        "prisoners",
+        "were",
+        "heading",
+        "toward",
+        "the",
+        "border."
+      ],
+      "distractors": [
+        "back",
+        "under",
+        "into"
+      ],
+      "acceptedAnswers": [
+        "The escaped prisoners were heading towards the border.",
+        "The escaped prisoners were heading for the border.",
+        "The escaped prisoners were headed toward the border.",
+        "The escaped prisoners were headed towards the border.",
+        "The escaped prisoners were headed for the border."
+      ],
+      "tags": [
+        "coverage:head-toward"
+      ]
+    }
+  ]
+}

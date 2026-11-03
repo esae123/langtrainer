@@ -8344,6 +8344,3377 @@
               ]
             }
           ]
+        },
+        {
+          "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+          "moduleId": "m1",
+          "title": "Encounters, arrivals and unexpected events",
+          "kind": "vocabulary",
+          "context": "Phrasal verbs are central when describing unexpected encounters, arrivals, travel movements, and sudden occurrences.\n\n### Encounters & Arrivals\n- **bump into** (= run into): meet someone unexpectedly or accidentally hit something. *I bumped into an old classmate at the supermarket.*\n- **come across**: find or meet by chance; be understood or perceived in a certain way. *We came across a lovely little café in the old quarter.*\n- **come by**: obtain something rare, hard to get, or in a surprising way. *How did you come by such a rare antique coin?*\n- **come back**: return to a place; (of a team) recover and win; (of a fashion) become popular again. *Flared jeans have come back this year.*\n- **come in**: enter a room or arrive (train, plane). *The afternoon flight from Lisbon came in on schedule.*\n- **come over**: visit someone at their home, or move across a space towards someone. *Why don't you come over for dinner on Friday?*\n- **get in**: arrive in town or enter a vehicle. *Our train got in late because of the heavy snow.*\n\n### Movement & Transport\n- **get on / get off**: board or leave public transport (bus, train, plane); get off (work) = finish work; get on with = continue doing. *We got on at Central Station and got off three stops later.*\n- **get out**: leave a vehicle, building or other place; (of secret information) become known. *He got out of the taxi and ran into the terminal.*\n- **drop off**: take someone or something to a place and leave them there; (of sales, numbers) fall. *Can you drop me off near the library?*\n- **come through**: (of news, money, approval) arrive after waiting; keep a promise. *The official clearance finally came through today.*\n- **come down**: (of rain) fall heavily; (of a seller) lower the price. *It's really coming down outside.*\n\n### Unexpected Events & Situations\n- **come about**: happen as a result of events. *How did this surprising change of leadership come about?*\n- **come up**: arise unexpectedly or be mentioned. *I am sorry I cannot join you; an urgent issue has come up.*\n- **come down to**: depend essentially on a key point. *The decision comes down to budget and available time.*\n- **come off**: succeed as planned or become detached. *The surprise party came off brilliantly despite the rain.*\n- **come on**: (of a light or machine) start working; (of an illness) start to develop. *I can feel a cold coming on.*\n- **come out**: be published or released; (of the sun) appear. *Her new album comes out in May.*\n- **come to**: total (an amount); regain consciousness. *Lunch for four came to sixty euros.*\n- **come apart**: separate into pieces due to wear. *The vintage suitcase came apart at the seams.*\n- **float around**: circulate as a rumor or be somewhere nearby. *A rumor has been floating around about the merger.*\n- **go about**: approach or proceed with a task. *What is the best way to go about renewing my passport?*\n\n### Watch out!\n- **bump into** means to meet by accident; do not confuse with planned meetings.\n- **get on** and **get off** are used for buses, trains, and planes, whereas **get in** and **get out of** are used for cars and taxis.\n- **come to** can mean regain consciousness or total an amount of money.",
+          "keyItems": [
+            {
+              "target": "bump into",
+              "support": "meet unexpectedly or hit by accident"
+            },
+            {
+              "target": "come about",
+              "support": "happen as a result of events"
+            },
+            {
+              "target": "come across",
+              "support": "find or encounter by chance"
+            },
+            {
+              "target": "come apart",
+              "support": "separate into pieces due to poor condition"
+            },
+            {
+              "target": "come back",
+              "support": "return to a place, success, or popularity"
+            },
+            {
+              "target": "come by",
+              "support": "obtain something rare or surprising"
+            },
+            {
+              "target": "come down",
+              "support": "fall heavily (rain) or lower a price"
+            },
+            {
+              "target": "come down to",
+              "support": "depend essentially on a key point"
+            },
+            {
+              "target": "come in",
+              "support": "enter a room or arrive (train, plane)"
+            },
+            {
+              "target": "come off",
+              "support": "succeed as planned or become detached"
+            },
+            {
+              "target": "come on",
+              "support": "start operating, develop (illness), or encourage"
+            },
+            {
+              "target": "come out",
+              "support": "be published, appear (sun), or be revealed"
+            },
+            {
+              "target": "come over",
+              "support": "visit someone's home or move across a space"
+            },
+            {
+              "target": "come through",
+              "support": "receive official approval or deliver on a promise"
+            },
+            {
+              "target": "come to",
+              "support": "total an amount of money or regain consciousness"
+            },
+            {
+              "target": "come up",
+              "support": "arise unexpectedly or be mentioned in discussion"
+            },
+            {
+              "target": "drop off",
+              "support": "take someone to a destination or decline sharply"
+            },
+            {
+              "target": "float around",
+              "support": "circulate as a rumor or be somewhere nearby"
+            },
+            {
+              "target": "get in",
+              "support": "enter a vehicle or arrive at a destination"
+            },
+            {
+              "target": "get off",
+              "support": "disembark from public transit or finish work"
+            },
+            {
+              "target": "get on",
+              "support": "board public transport or continue with work"
+            },
+            {
+              "target": "get out",
+              "support": "leave an enclosed place or leak (news/secrets)"
+            },
+            {
+              "target": "go about",
+              "support": "approach or tackle a multi-step task"
+            }
+          ],
+          "coverage": {
+            "items": [
+              {
+                "id": "bump-into",
+                "phrase": "bump into"
+              },
+              {
+                "id": "come-about",
+                "phrase": "come about"
+              },
+              {
+                "id": "come-across",
+                "phrase": "come across"
+              },
+              {
+                "id": "come-apart",
+                "phrase": "come apart"
+              },
+              {
+                "id": "come-back",
+                "phrase": "come back"
+              },
+              {
+                "id": "come-by",
+                "phrase": "come by"
+              },
+              {
+                "id": "come-down",
+                "phrase": "come down"
+              },
+              {
+                "id": "come-down-to",
+                "phrase": "come down to"
+              },
+              {
+                "id": "come-in",
+                "phrase": "come in"
+              },
+              {
+                "id": "come-off",
+                "phrase": "come off"
+              },
+              {
+                "id": "come-on",
+                "phrase": "come on"
+              },
+              {
+                "id": "come-out",
+                "phrase": "come out"
+              },
+              {
+                "id": "come-over",
+                "phrase": "come over"
+              },
+              {
+                "id": "come-through",
+                "phrase": "come through"
+              },
+              {
+                "id": "come-to",
+                "phrase": "come to"
+              },
+              {
+                "id": "come-up",
+                "phrase": "come up"
+              },
+              {
+                "id": "drop-off",
+                "phrase": "drop off"
+              },
+              {
+                "id": "float-around",
+                "phrase": "float around"
+              },
+              {
+                "id": "get-in",
+                "phrase": "get in"
+              },
+              {
+                "id": "get-off",
+                "phrase": "get off"
+              },
+              {
+                "id": "get-on",
+                "phrase": "get on"
+              },
+              {
+                "id": "get-out",
+                "phrase": "get out"
+              },
+              {
+                "id": "go-about",
+                "phrase": "go about"
+              }
+            ],
+            "minimumExercisesPerItem": 2,
+            "assignments": {
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-01": "bump-into",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-24": "bump-into",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-02": "come-about",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-25": "come-about",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-03": "come-across",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-26": "come-across",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-04": "come-apart",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-27": "come-apart",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-05": "come-back",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-28": "come-back",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-06": "come-by",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-29": "come-by",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-07": "come-down",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-30": "come-down",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-08": "come-down-to",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-31": "come-down-to",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-09": "come-in",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-32": "come-in",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-10": "come-off",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-33": "come-off",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-11": "come-on",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-34": "come-on",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-12": "come-out",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-35": "come-out",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-13": "come-over",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-36": "come-over",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-14": "come-through",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-37": "come-through",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-15": "come-to",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-38": "come-to",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-16": "come-up",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-39": "come-up",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-17": "drop-off",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-40": "drop-off",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-18": "float-around",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-41": "float-around",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-19": "get-in",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-42": "get-in",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-20": "get-off",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-43": "get-off",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-21": "get-on",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-44": "get-on",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-22": "get-out",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-45": "get-out",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-23": "go-about",
+              "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-46": "go-about"
+            }
+          },
+          "exercises": [
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-01",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Bump into' (= 'run into') means to meet someone unexpectedly. Example: Guess who I bumped into at the airport this morning?",
+              "tags": [
+                "coverage:bump-into"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Guess who I **met by chance** at the airport this morning? My old professor!",
+              "word": "met by chance",
+              "answer": "bumped into",
+              "options": [
+                "bumped into",
+                "dropped off",
+                "got in",
+                "came over"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-02",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about how a dramatic change happened.",
+              "explanation": "'Come about' means to happen or take place, especially resulting from a sequence of events.",
+              "tags": [
+                "coverage:come-about"
+              ],
+              "type": "fill_gaps",
+              "template": "Nobody understood how such a dramatic change had ___ ___ so quickly.",
+              "gaps": [
+                {
+                  "answer": "come"
+                },
+                {
+                  "answer": "about"
+                }
+              ],
+              "wordBank": [
+                "come",
+                "about",
+                "across",
+                "by",
+                "down"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-03",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Come across' means to find or discover something by chance.",
+              "tags": [
+                "coverage:come-across"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "While sorting old books, we **found by chance** some rare family photographs.",
+              "word": "found by chance",
+              "answer": "came across",
+              "options": [
+                "came across",
+                "bumped into",
+                "came by",
+                "dropped off"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-04",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that the old box fell to pieces in my hands (use a phrasal verb).",
+              "explanation": "'Come apart' means to separate into pieces because an object is fragile, old, or poorly constructed.",
+              "tags": [
+                "coverage:come-apart"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "The",
+                "old",
+                "box",
+                "came",
+                "apart",
+                "in",
+                "my",
+                "hands."
+              ],
+              "distractors": [
+                "away",
+                "off",
+                "out"
+              ],
+              "acceptedAnswers": [
+                "The old box came apart in my hand."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-05",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about a sports team returning from behind to win.",
+              "explanation": "'Come back' means to return to success after trailing behind or facing hardship.",
+              "tags": [
+                "coverage:come-back"
+              ],
+              "type": "fill_gaps",
+              "template": "The underdog team was losing 2–0 but managed to ___ ___ and win in the final minutes.",
+              "gaps": [
+                {
+                  "answer": "come"
+                },
+                {
+                  "answer": "back"
+                }
+              ],
+              "wordBank": [
+                "come",
+                "back",
+                "across",
+                "off",
+                "up"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-06",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Ask your friend how they obtained that rare painting (use a phrasal verb).",
+              "explanation": "'Come by' means to acquire or obtain something that is rare, surprising, or difficult to find.",
+              "tags": [
+                "coverage:come-by"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "How",
+                "did",
+                "you",
+                "come",
+                "by",
+                "that",
+                "rare",
+                "painting?"
+              ],
+              "distractors": [
+                "about",
+                "off",
+                "along"
+              ],
+              "acceptedAnswers": [
+                "How did you come by this rare painting?"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-07",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about torrential rain outside.",
+              "explanation": "When rain or snow 'comes down', it is falling heavily.",
+              "tags": [
+                "coverage:come-down"
+              ],
+              "type": "fill_gaps",
+              "template": "We stayed indoors because the rain was really ___ ___.",
+              "gaps": [
+                {
+                  "answer": "coming"
+                },
+                {
+                  "answer": "down"
+                }
+              ],
+              "wordBank": [
+                "coming",
+                "down",
+                "off",
+                "through",
+                "out"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-08",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that, in the end, success depends on consistent daily practice (use a phrasal verb).",
+              "explanation": "'Come down to' means to depend on or be reduced to the single most important factor.",
+              "tags": [
+                "coverage:come-down-to"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "Success",
+                "comes",
+                "down",
+                "to",
+                "consistent",
+                "daily",
+                "practice."
+              ],
+              "distractors": [
+                "up",
+                "about",
+                "by"
+              ],
+              "acceptedAnswers": [
+                "In the end, success comes down to consistent daily practice.",
+                "Success really comes down to consistent daily practice.",
+                "Success comes down to daily consistent practice."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-09",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Come in' (similar: 'get in') means to arrive, especially for trains, buses, planes or ships. Example: What time will the express train come in?",
+              "tags": [
+                "coverage:come-in"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Do you know what time the express train will **arrive** tonight?",
+              "word": "arrive",
+              "answer": "come in",
+              "options": [
+                "come in",
+                "come out",
+                "get off",
+                "drop off"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-10",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence describing a plan that succeeded completely.",
+              "explanation": "'Come off' means to take place successfully or according to plan.",
+              "tags": [
+                "coverage:come-off"
+              ],
+              "type": "fill_gaps",
+              "template": "Everyone was relieved when the daring rescue mission ___ ___ without a hitch.",
+              "gaps": [
+                {
+                  "answer": "came"
+                },
+                {
+                  "answer": "off"
+                }
+              ],
+              "wordBank": [
+                "came",
+                "off",
+                "out",
+                "by",
+                "down"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-11",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about sensing an oncoming illness.",
+              "explanation": "'Come on' (usually continuous) describes an illness, headache, or pain starting to develop.",
+              "tags": [
+                "coverage:come-on"
+              ],
+              "type": "fill_gaps",
+              "template": "I took vitamin C because I felt a sore throat ___ ___ yesterday.",
+              "gaps": [
+                {
+                  "answer": "coming"
+                },
+                {
+                  "answer": "on"
+                }
+              ],
+              "wordBank": [
+                "coming",
+                "on",
+                "off",
+                "out",
+                "up"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-12",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Come out' means to be published, released, or made available to the public.",
+              "tags": [
+                "coverage:come-out"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "The author's highly anticipated second novel will **be published** next Tuesday.",
+              "word": "be published",
+              "answer": "come out",
+              "options": [
+                "come out",
+                "come in",
+                "come on",
+                "come through"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-13",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Ask your friend if they would like to visit you at your home this evening (use a phrasal verb).",
+              "explanation": "'Come over' means to visit someone at their house or apartment.",
+              "tags": [
+                "coverage:come-over"
+              ],
+              "type": "question_for_answer",
+              "givenAnswer": "I would love to, thank you!",
+              "answer": [
+                "Would",
+                "you",
+                "like",
+                "to",
+                "come",
+                "over",
+                "this",
+                "evening?"
+              ],
+              "distractors": [
+                "about",
+                "off",
+                "away"
+              ],
+              "acceptedAnswers": [
+                "Would you like to come over tonight?",
+                "Do you want to come over this evening?",
+                "Do you want to come over tonight?",
+                "Would you like to come round this evening?",
+                "Would you like to come around this evening?"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-14",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about finally receiving official mortgage approval.",
+              "explanation": "When official clearance, money, or permission 'comes through', it is received after waiting.",
+              "tags": [
+                "coverage:come-through"
+              ],
+              "type": "fill_gaps",
+              "template": "We signed the contract because the bank loan finally ___ ___ yesterday.",
+              "gaps": [
+                {
+                  "answer": "came"
+                },
+                {
+                  "answer": "through"
+                }
+              ],
+              "wordBank": [
+                "came",
+                "through",
+                "across",
+                "about",
+                "out"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-15",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Come to' means to total a specific monetary sum.",
+              "tags": [
+                "coverage:come-to"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "The entire restaurant bill for appetizers, mains, and dessert **totaled** ninety euros.",
+              "word": "totaled",
+              "answer": "came to",
+              "options": [
+                "came to",
+                "came in",
+                "got in",
+                "went about"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-16",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about an unexpected issue that prevented attendance.",
+              "explanation": "When an unexpected problem 'comes up', it arises suddenly and needs attention.",
+              "tags": [
+                "coverage:come-up"
+              ],
+              "type": "fill_gaps",
+              "template": "I cannot make lunch because an unexpected urgent matter has ___ ___ at work.",
+              "gaps": [
+                {
+                  "answer": "come"
+                },
+                {
+                  "answer": "up"
+                }
+              ],
+              "wordBank": [
+                "come",
+                "up",
+                "down",
+                "across",
+                "off"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-17",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Drop off' means to take someone or something to a place and leave them there. Example: Luis dropped off his laundry at the cleaners.",
+              "tags": [
+                "coverage:drop-off"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Luis **left** his laundry at the cleaners on his way to work.",
+              "word": "left",
+              "answer": "dropped off",
+              "options": [
+                "dropped off",
+                "picked up",
+                "came by",
+                "got off"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-18",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about an unconfirmed rumor spreading through the team.",
+              "explanation": "When rumors or ideas are 'floating around', they are being informally discussed in an organization.",
+              "tags": [
+                "coverage:float-around"
+              ],
+              "type": "fill_gaps",
+              "template": "There is an unconfirmed rumor ___ ___ the office regarding budget cuts.",
+              "gaps": [
+                {
+                  "answer": "floating"
+                },
+                {
+                  "answer": "around"
+                }
+              ],
+              "wordBank": [
+                "floating",
+                "around",
+                "coming",
+                "out",
+                "off"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-19",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Ask your colleague what time their flight arrives (use a phrasal verb).",
+              "explanation": "'Get in' means to arrive at a destination, particularly for flights or trains.",
+              "tags": [
+                "coverage:get-in"
+              ],
+              "type": "question_for_answer",
+              "givenAnswer": "It lands at quarter past eight.",
+              "answer": [
+                "What",
+                "time",
+                "does",
+                "your",
+                "flight",
+                "get",
+                "in?"
+              ],
+              "distractors": [
+                "off",
+                "out",
+                "away"
+              ],
+              "acceptedAnswers": [
+                "When does your flight get in?",
+                "What time does your flight come in?",
+                "When does your flight come in?"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-20",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Find the error in the sentence about leaving the commuter train.",
+              "explanation": "You 'get off' a train, bus, or plane. 'Get out' is used with 'of' for cars or enclosed rooms.",
+              "tags": [
+                "coverage:get-off"
+              ],
+              "type": "find_error",
+              "sentence": [
+                "We",
+                "need",
+                "to",
+                "get",
+                "out",
+                "the",
+                "train",
+                "here."
+              ],
+              "wrongIndex": 4,
+              "correction": "off",
+              "options": [
+                "off",
+                "in",
+                "down"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-21",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Politely tell passengers to board the train before the doors close (use a phrasal verb).",
+              "explanation": "'Get on' means to board public transit such as a train, metro, bus, or airplane.",
+              "tags": [
+                "coverage:get-on"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "Please",
+                "get",
+                "on",
+                "the",
+                "train",
+                "before",
+                "the",
+                "doors",
+                "close."
+              ],
+              "distractors": [
+                "in",
+                "off",
+                "out"
+              ],
+              "acceptedAnswers": [
+                "Get on the train before the doors close.",
+                "Please get on the train before the doors shut."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-22",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about confidential meeting details leaking to journalists.",
+              "explanation": "When confidential information 'gets out', it becomes known to unauthorized people.",
+              "tags": [
+                "coverage:get-out"
+              ],
+              "type": "fill_gaps",
+              "template": "We will face strict penalties if this confidential data ___ ___ to the press.",
+              "gaps": [
+                {
+                  "answer": "gets"
+                },
+                {
+                  "answer": "out"
+                }
+              ],
+              "wordBank": [
+                "gets",
+                "out",
+                "off",
+                "in",
+                "on"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-23",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that you don't know how to start the process of applying (use a phrasal verb).",
+              "explanation": "'Go about' means to begin or carry out the necessary steps to accomplish a task.",
+              "tags": [
+                "coverage:go-about"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "I",
+                "don't",
+                "know",
+                "how",
+                "to",
+                "go",
+                "about",
+                "applying."
+              ],
+              "distractors": [
+                "around",
+                "across",
+                "along"
+              ],
+              "acceptedAnswers": [
+                "I do not know how to go about applying."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-24",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that you accidentally hit the doorframe in the dark (use a phrasal verb).",
+              "explanation": "'Bump into' also means to physically collide with or hit an object accidentally.",
+              "tags": [
+                "coverage:bump-into"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "I",
+                "bumped",
+                "into",
+                "the",
+                "doorframe",
+                "in",
+                "the",
+                "dark."
+              ],
+              "distractors": [
+                "across",
+                "apart",
+                "by"
+              ],
+              "acceptedAnswers": [
+                "I bumped into the door frame in the dark.",
+                "I accidentally bumped into the doorframe in the dark.",
+                "I ran into the doorframe in the dark."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-25",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Find the error in the sentence explaining how the breakthrough occurred.",
+              "explanation": "'Come about' means to happen or take place. 'Come around' means to visit or change one's mind.",
+              "tags": [
+                "coverage:come-about"
+              ],
+              "type": "find_error",
+              "sentence": [
+                "Major",
+                "advances",
+                "in",
+                "medicine",
+                "have",
+                "come",
+                "around",
+                "recently."
+              ],
+              "wrongIndex": 6,
+              "correction": "about",
+              "options": [
+                "about",
+                "across",
+                "along"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-26",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about how a speaker was perceived by the audience.",
+              "explanation": "When something you say 'comes across' in a certain way, it is perceived or received that way by others.",
+              "tags": [
+                "coverage:come-across"
+              ],
+              "type": "fill_gaps",
+              "template": "His nervous opening remarks did not ___ ___ well with the listeners.",
+              "gaps": [
+                {
+                  "answer": "come"
+                },
+                {
+                  "answer": "across"
+                }
+              ],
+              "wordBank": [
+                "come",
+                "across",
+                "down",
+                "about",
+                "by"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-27",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Find the error in the sentence describing a delicate manuscript.",
+              "explanation": "'Come apart' means to separate into pieces or disintegrate. 'Come down' means to fall or descend.",
+              "tags": [
+                "coverage:come-apart"
+              ],
+              "type": "find_error",
+              "sentence": [
+                "Handle",
+                "this",
+                "delicate",
+                "manuscript",
+                "carefully;",
+                "it",
+                "is",
+                "coming",
+                "down."
+              ],
+              "wrongIndex": 8,
+              "correction": "apart",
+              "options": [
+                "apart",
+                "about",
+                "along"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-28",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "When a style or trend 'comes back', it becomes fashionable and popular again.",
+              "tags": [
+                "coverage:come-back"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Many retro fashion styles from the nineties **become popular again** every few decades.",
+              "word": "become popular again",
+              "answer": "come back",
+              "options": [
+                "come back",
+                "come out",
+                "come on",
+                "come through"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-29",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence explaining how scarce affordable flats are.",
+              "explanation": "'Come by' is commonly used to describe acquiring something difficult to get.",
+              "tags": [
+                "coverage:come-by"
+              ],
+              "type": "fill_gaps",
+              "template": "Affordable flats in the historic city center are very hard to ___ ___ nowadays.",
+              "gaps": [
+                {
+                  "answer": "come"
+                },
+                {
+                  "answer": "by"
+                }
+              ],
+              "wordBank": [
+                "come",
+                "by",
+                "about",
+                "off",
+                "to"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-30",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Come down' means to lower or reduce an asking price or demand.",
+              "tags": [
+                "coverage:come-down"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "The seller refused to **lower the asking price** even after prolonged negotiation.",
+              "word": "lower the asking price",
+              "answer": "come down",
+              "options": [
+                "come down",
+                "come off",
+                "drop off",
+                "come to"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-31",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence identifying the decisive factor in the hiring choice.",
+              "explanation": "'Come down to' expresses that the core issue or determining element is a specific point.",
+              "tags": [
+                "coverage:come-down-to"
+              ],
+              "type": "fill_gaps",
+              "template": "In the end, the final hiring decision will ___ ___ ___ relevant experience.",
+              "gaps": [
+                {
+                  "answer": "come"
+                },
+                {
+                  "answer": "down"
+                },
+                {
+                  "answer": "to"
+                }
+              ],
+              "wordBank": [
+                "come",
+                "down",
+                "to",
+                "up",
+                "with",
+                "about"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-32",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Welcome a colleague warmly into your workspace.",
+              "explanation": "'Come in' means to enter a room, building, or office.",
+              "tags": [
+                "coverage:come-in"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "Please",
+                "come",
+                "in",
+                "and",
+                "take",
+                "a",
+                "seat."
+              ],
+              "distractors": [
+                "out",
+                "off",
+                "away"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-33",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Find the error in the sentence about a label that became detached.",
+              "explanation": "'Come off' means to become detached from something. Example: The label came off when I washed the jar.",
+              "tags": [
+                "coverage:come-off"
+              ],
+              "type": "find_error",
+              "sentence": [
+                "The",
+                "label",
+                "came",
+                "across",
+                "when",
+                "I",
+                "washed",
+                "the",
+                "jar."
+              ],
+              "wrongIndex": 3,
+              "correction": "off",
+              "options": [
+                "off",
+                "about",
+                "by"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-34",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Come on' means to start functioning or operating, especially automatically.",
+              "tags": [
+                "coverage:come-on"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "The streetlamps automatically **start operating** as soon as dusk falls.",
+              "word": "start operating",
+              "answer": "come on",
+              "options": [
+                "come on",
+                "go off",
+                "come out",
+                "get in"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-35",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that the sun appeared after the morning storm (use a phrasal verb).",
+              "explanation": "When the sun 'comes out', clouds part and sunshine becomes visible.",
+              "tags": [
+                "coverage:come-out"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "The",
+                "sun",
+                "came",
+                "out",
+                "after",
+                "the",
+                "morning",
+                "storm."
+              ],
+              "distractors": [
+                "off",
+                "down",
+                "into"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-36",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about a colleague crossing the open-plan office.",
+              "explanation": "'Come over' means to move across a room or space toward where you are.",
+              "tags": [
+                "coverage:come-over"
+              ],
+              "type": "fill_gaps",
+              "template": "As soon as he noticed me across the office, he ___ ___ to my desk to say hello.",
+              "gaps": [
+                {
+                  "answer": "came"
+                },
+                {
+                  "answer": "over"
+                }
+              ],
+              "wordBank": [
+                "came",
+                "over",
+                "off",
+                "about",
+                "apart"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-37",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Come through' means to do what you promised. Example: Despite severe delays, our supplier came through and delivered on time.",
+              "tags": [
+                "coverage:come-through"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Despite severe delays, our supplier **kept its promise** and delivered our order on time.",
+              "word": "kept its promise",
+              "answer": "came through",
+              "options": [
+                "came through",
+                "came about",
+                "came down",
+                "got out"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-38",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that he slowly regained consciousness in the ambulance (use a phrasal verb).",
+              "explanation": "'Come to' means to regain consciousness after fainting or being injured.",
+              "tags": [
+                "coverage:come-to"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "He",
+                "slowly",
+                "came",
+                "to",
+                "in",
+                "the",
+                "ambulance."
+              ],
+              "distractors": [
+                "up",
+                "out",
+                "by"
+              ],
+              "acceptedAnswers": [
+                "He slowly came round in the ambulance.",
+                "He slowly came around in the ambulance."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-39",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your colleague tells you about the board meeting. Ask them why your proposal was mentioned there (use a phrasal verb).",
+              "explanation": "When a topic or name 'comes up', it is mentioned or introduced into discussion.",
+              "tags": [
+                "coverage:come-up"
+              ],
+              "type": "question_for_answer",
+              "givenAnswer": "The director was impressed by your proposal and wanted to highlight it.",
+              "answer": [
+                "Why",
+                "did",
+                "my",
+                "proposal",
+                "come",
+                "up?"
+              ],
+              "distractors": [
+                "down",
+                "about",
+                "off"
+              ],
+              "acceptedAnswers": [
+                "Why did my proposal come up at the meeting?",
+                "Why did my proposal come up in the meeting?",
+                "Why did my proposal come up during the meeting?"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-40",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that concert ticket sales fell sharply after Christmas (use a phrasal verb).",
+              "explanation": "'Drop off' means to decline sharply in sales, numbers, or activity.",
+              "tags": [
+                "coverage:drop-off"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "Concert",
+                "ticket",
+                "sales",
+                "dropped",
+                "off",
+                "sharply",
+                "after",
+                "Christmas."
+              ],
+              "distractors": [
+                "out",
+                "by",
+                "down"
+              ],
+              "acceptedAnswers": [
+                "Sales of concert tickets dropped off sharply after Christmas."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-41",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that the spare keys are somewhere here, but you don't know exactly where (use a phrasal verb).",
+              "explanation": "When an item is 'floating around', it is somewhere nearby, though you do not know the exact spot.",
+              "tags": [
+                "coverage:float-around"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "The",
+                "spare",
+                "keys",
+                "are",
+                "floating",
+                "around",
+                "here",
+                "somewhere."
+              ],
+              "distractors": [
+                "off",
+                "out",
+                "away"
+              ],
+              "acceptedAnswers": [
+                "The spare keys are floating around somewhere here.",
+                "The spare keys are floating about here somewhere."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-42",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Get in' means to enter an enclosed vehicle, such as a car, taxi, or boat.",
+              "tags": [
+                "coverage:get-in"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Hurry up and **enter the vehicle** before the heavy storm starts.",
+              "word": "enter the vehicle",
+              "answer": "get in",
+              "options": [
+                "get in",
+                "get off",
+                "get out",
+                "come down"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-43",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about finishing your work shift on Friday.",
+              "explanation": "'Get off' (or 'get off work') means to complete work and leave the workplace.",
+              "tags": [
+                "coverage:get-off"
+              ],
+              "type": "fill_gaps",
+              "template": "I normally ___ ___ work at five o'clock on Fridays.",
+              "gaps": [
+                {
+                  "answer": "get"
+                },
+                {
+                  "answer": "off"
+                }
+              ],
+              "wordBank": [
+                "get",
+                "off",
+                "out",
+                "in",
+                "on"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-44",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Get on with' means to continue or proceed with doing one's work.",
+              "tags": [
+                "coverage:get-on"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "We should stop chatting and **continue with** our work.",
+              "word": "continue with",
+              "answer": "get on with",
+              "options": [
+                "get on with",
+                "come down to",
+                "come across",
+                "get off"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-45",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that we smelled gas and quickly left the building (use a phrasal verb).",
+              "explanation": "'Get out (of)' means to leave or escape from a place. Example: We smelled gas and quickly got out of the building.",
+              "tags": [
+                "coverage:get-out"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "We",
+                "smelled",
+                "gas",
+                "and",
+                "quickly",
+                "got",
+                "out",
+                "of",
+                "the",
+                "building."
+              ],
+              "distractors": [
+                "off",
+                "in",
+                "on"
+              ],
+              "acceptedAnswers": [
+                "We smelt gas and quickly got out of the building.",
+                "We smelled gas and got out of the building quickly.",
+                "We smelt gas and got out of the building quickly."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events-46",
+              "topicId": "en-phrasal_verbs-m1-encounters-arrivals-and-unexpected-events",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your friend has decided to open a café. Ask her how she will tackle the steps of opening it (use a phrasal verb).",
+              "explanation": "'Go about' something means to do the steps needed to do it. Example: How will you go about opening the café?",
+              "tags": [
+                "coverage:go-about"
+              ],
+              "type": "question_for_answer",
+              "givenAnswer": "First I'll write a business plan, then I'll look for a small place to rent.",
+              "answer": [
+                "How",
+                "will",
+                "you",
+                "go",
+                "about",
+                "opening",
+                "the",
+                "café?"
+              ],
+              "distractors": [
+                "around",
+                "along",
+                "across"
+              ],
+              "acceptedAnswers": [
+                "How will you go about opening the cafe?",
+                "How are you going to go about opening the café?",
+                "How are you going to go about opening the cafe?",
+                "How will you go about opening it?",
+                "How are you going to go about it?"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+          "moduleId": "m1",
+          "title": "Coming and going, routes and access",
+          "kind": "vocabulary",
+          "context": "Phrasal verbs built with **go** and **head** are essential for describing journeys, routes, directional movements, and decision-making about travel and plans.\n\n### Movement, Routes & Directions\n- **go around**: follow a curve, bypass an obstacle, or (of food etc.) be enough for everyone. *We went around the roadblock using a side street.*\n- **go by**: pass near a place; (of time) pass; follow a rule or standard. *We watched the cycling tour go by from the balcony.*\n- **go off**: (of an alarm) ring; (of an event) happen as planned; (of a path) branch off. *My alarm didn't go off this morning.*\n- **head back**: start returning to where you came from. *It is getting dark, so let's head back to the lodge.*\n- **head for / head toward**: move in the direction of a specific location. *The storm clouds are heading toward the coast.*\n- **head into**: enter a specific area or town. *We were heading into the city center when traffic stopped.*\n- **go up / go down**: move to a higher or lower level; (of prices) increase or decrease; (go down, of a computer system) stop working; (go up to someone) approach them. *We went up the winding hill to enjoy the view.*\n\n### Departure & Return\n- **go away**: leave a place, take a trip for a period, or (of a pain or problem) disappear. *They are going away for a weekend in the mountains.*\n- **go back**: return to a previous place or date back in history. *I want to go back to Lisbon next spring.*\n- **go out**: leave the house to socialize; (of a fire or light) stop burning or shining. *Let's go out for dinner tonight.*\n- **go over**: walk across a space or visit someone nearby. *She went over to the window to open it.*\n\n### Progress, Action & Choices\n- **go after**: chase, pursue a difficult goal, or target a market. *She decided to go after her dream career.*\n- **go ahead**: proceed with a plan or give permission. *You have our permission to go ahead with the project.*\n- **go back on**: fail to keep a promise or agreement. *A reliable partner never goes back on their word.*\n- **go for / go in for**: go for = try to achieve or choose; have something going for you = have an advantage; go in for = like and regularly do an activity. *He goes in for marathon running on weekends.*\n- **go on**: continue an activity, happen, or start operating. *The meeting went on much longer than expected.*\n- **go overboard**: do something excessively. *Decorating is fine, but do not go overboard on expenses.*\n- **go through with**: carry out a difficult or contested plan. *Despite doubts, she went through with the purchase.*\n- **go under**: go bankrupt or collapse financially. *Without financial aid, the small publisher will go under.*\n- **go with**: match clothes, choose an option, or support an idea. *This navy blazer goes with almost everything.*\n\n### Watch out!\n- **head for** and **head toward** both mean traveling towards a destination, while **head back** means returning.\n- **go back on** always takes an object (a promise, a word, a pledge) and means breaking it.\n- **go off** can mean a path branching off, an alarm ringing, or an event going off smoothly.",
+          "keyItems": [
+            {
+              "target": "go after",
+              "support": "chase, pursue a difficult goal, or target a market"
+            },
+            {
+              "target": "go ahead",
+              "support": "proceed with an action or give permission"
+            },
+            {
+              "target": "go around",
+              "support": "bypass an obstacle, circulate, or be enough for everyone"
+            },
+            {
+              "target": "go away",
+              "support": "leave a place, travel for vacation, or disappear"
+            },
+            {
+              "target": "go back",
+              "support": "return to a place or date back to an era"
+            },
+            {
+              "target": "go back on",
+              "support": "fail to keep a promise or pledge"
+            },
+            {
+              "target": "go by",
+              "support": "pass near, elapse (time), or follow a standard"
+            },
+            {
+              "target": "go down",
+              "support": "descend, decrease, stop working (system), or set (sun)"
+            },
+            {
+              "target": "go for",
+              "support": "try to achieve, like a lot, or have in one's favor"
+            },
+            {
+              "target": "go in for",
+              "support": "enjoy and regularly participate in an activity"
+            },
+            {
+              "target": "go off",
+              "support": "ring/explode, stop operating, diverge, or succeed smoothly"
+            },
+            {
+              "target": "go on",
+              "support": "continue, happen, or start functioning"
+            },
+            {
+              "target": "go out",
+              "support": "leave home to socialize, or extinguish (fire/light)"
+            },
+            {
+              "target": "go over",
+              "support": "review carefully, walk across, or visit someone"
+            },
+            {
+              "target": "go overboard",
+              "support": "do something to an unnecessary excess"
+            },
+            {
+              "target": "go through with",
+              "support": "carry out a plan despite difficulty or opposition"
+            },
+            {
+              "target": "go under",
+              "support": "fail financially or go bankrupt"
+            },
+            {
+              "target": "go up",
+              "support": "ascend, increase in price, or approach someone"
+            },
+            {
+              "target": "go with",
+              "support": "match clothing, choose an option, or accompany"
+            },
+            {
+              "target": "head back",
+              "support": "start returning to where you came from"
+            },
+            {
+              "target": "head for",
+              "support": "move toward a destination or likely situation"
+            },
+            {
+              "target": "head into",
+              "support": "begin entering a specific area or district"
+            },
+            {
+              "target": "head toward",
+              "support": "travel in the direction of a location"
+            }
+          ],
+          "coverage": {
+            "items": [
+              {
+                "id": "go-after",
+                "phrase": "go after"
+              },
+              {
+                "id": "go-ahead",
+                "phrase": "go ahead"
+              },
+              {
+                "id": "go-around",
+                "phrase": "go around"
+              },
+              {
+                "id": "go-away",
+                "phrase": "go away"
+              },
+              {
+                "id": "go-back",
+                "phrase": "go back"
+              },
+              {
+                "id": "go-back-on",
+                "phrase": "go back on"
+              },
+              {
+                "id": "go-by",
+                "phrase": "go by"
+              },
+              {
+                "id": "go-down",
+                "phrase": "go down"
+              },
+              {
+                "id": "go-for",
+                "phrase": "go for"
+              },
+              {
+                "id": "go-in-for",
+                "phrase": "go in for"
+              },
+              {
+                "id": "go-off",
+                "phrase": "go off"
+              },
+              {
+                "id": "go-on",
+                "phrase": "go on"
+              },
+              {
+                "id": "go-out",
+                "phrase": "go out"
+              },
+              {
+                "id": "go-over",
+                "phrase": "go over"
+              },
+              {
+                "id": "go-overboard",
+                "phrase": "go overboard"
+              },
+              {
+                "id": "go-through-with",
+                "phrase": "go through with"
+              },
+              {
+                "id": "go-under",
+                "phrase": "go under"
+              },
+              {
+                "id": "go-up",
+                "phrase": "go up"
+              },
+              {
+                "id": "go-with",
+                "phrase": "go with"
+              },
+              {
+                "id": "head-back",
+                "phrase": "head back"
+              },
+              {
+                "id": "head-for",
+                "phrase": "head for"
+              },
+              {
+                "id": "head-into",
+                "phrase": "head into"
+              },
+              {
+                "id": "head-toward",
+                "phrase": "head toward"
+              }
+            ],
+            "minimumExercisesPerItem": 2,
+            "assignments": {
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-01": "go-after",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-24": "go-after",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-02": "go-ahead",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-25": "go-ahead",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-03": "go-around",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-26": "go-around",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-04": "go-away",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-27": "go-away",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-05": "go-back",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-28": "go-back",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-06": "go-back-on",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-29": "go-back-on",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-07": "go-by",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-30": "go-by",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-08": "go-down",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-31": "go-down",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-09": "go-for",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-32": "go-for",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-10": "go-in-for",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-33": "go-in-for",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-11": "go-off",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-34": "go-off",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-12": "go-on",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-35": "go-on",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-13": "go-out",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-36": "go-out",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-14": "go-over",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-37": "go-over",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-15": "go-overboard",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-38": "go-overboard",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-16": "go-through-with",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-39": "go-through-with",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-17": "go-under",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-40": "go-under",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-18": "go-up",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-41": "go-up",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-19": "go-with",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-42": "go-with",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-20": "head-back",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-43": "head-back",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-21": "head-for",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-44": "head-for",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-22": "head-into",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-45": "head-into",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-23": "head-toward",
+              "en-phrasal_verbs-m1-coming-and-going-routes-and-access-46": "head-toward"
+            }
+          },
+          "exercises": [
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-01",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Go after' means to chase, pursue, or try to catch someone.",
+              "tags": [
+                "coverage:go-after"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "The security guard decided to **chase** the shoplifter down the street.",
+              "word": "chase",
+              "answer": "go after",
+              "options": [
+                "go after",
+                "go around",
+                "go ahead",
+                "head back"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-02",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about proceeding with the expansion plan.",
+              "explanation": "'Go ahead' means to proceed with a plan or action after considering it.",
+              "tags": [
+                "coverage:go-ahead"
+              ],
+              "type": "fill_gaps",
+              "template": "The board voted to ___ ___ with the factory expansion plans.",
+              "gaps": [
+                {
+                  "answer": "go"
+                },
+                {
+                  "answer": "ahead"
+                }
+              ],
+              "wordBank": [
+                "go",
+                "ahead",
+                "after",
+                "back",
+                "under"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-03",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that we had to make a detour to avoid the fallen tree (use a phrasal verb).",
+              "explanation": "'Go around' means to follow a curved or indirect path to bypass an obstacle.",
+              "tags": [
+                "coverage:go-around"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "We",
+                "had",
+                "to",
+                "go",
+                "around",
+                "the",
+                "fallen",
+                "tree."
+              ],
+              "distractors": [
+                "through",
+                "overboard",
+                "away"
+              ],
+              "acceptedAnswers": [
+                "We had to go round the fallen tree."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-04",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about travelling for a holiday.",
+              "explanation": "'Go away' means to leave home and travel for a period of time.",
+              "tags": [
+                "coverage:go-away"
+              ],
+              "type": "fill_gaps",
+              "template": "Our family likes to ___ ___ to the coast for two weeks.",
+              "gaps": [
+                {
+                  "answer": "go"
+                },
+                {
+                  "answer": "away"
+                }
+              ],
+              "wordBank": [
+                "go",
+                "away",
+                "ahead",
+                "under",
+                "after"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-05",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Your colleague is visiting your city for a conference. Ask them when they will return home (use a phrasal verb).",
+              "explanation": "'Go back' means to return to a place where you were before.",
+              "tags": [
+                "coverage:go-back"
+              ],
+              "type": "question_for_answer",
+              "givenAnswer": "Next Tuesday, right after the conference ends.",
+              "answer": [
+                "When",
+                "will",
+                "you",
+                "go",
+                "back",
+                "home?"
+              ],
+              "distractors": [
+                "ahead",
+                "under",
+                "away"
+              ],
+              "acceptedAnswers": [
+                "When are you going back home?",
+                "When do you go back home?",
+                "When will you go back?",
+                "When are you going back?"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-06",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about someone refusing to break their promise.",
+              "explanation": "'Go back on' means to fail to keep a promise or agreement.",
+              "tags": [
+                "coverage:go-back-on"
+              ],
+              "type": "fill_gaps",
+              "template": "An honest business leader will never ___ ___ ___ a formal pledge.",
+              "gaps": [
+                {
+                  "answer": "go"
+                },
+                {
+                  "answer": "back"
+                },
+                {
+                  "answer": "on"
+                }
+              ],
+              "wordBank": [
+                "go",
+                "back",
+                "on",
+                "in",
+                "for",
+                "with"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-07",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "When time 'goes by', it passes. Example: It is amazing how quickly the summer months go by.",
+              "tags": [
+                "coverage:go-by"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "It is amazing how quickly the summer months **pass** when we are busy with work.",
+              "word": "pass",
+              "answer": "go by",
+              "options": [
+                "go by",
+                "go under",
+                "go after",
+                "go ahead"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-08",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about the bank server experiencing an outage.",
+              "explanation": "When a computer system or network 'goes down', it temporarily stops functioning.",
+              "tags": [
+                "coverage:go-down"
+              ],
+              "type": "fill_gaps",
+              "template": "Customers could not withdraw cash when the banking system ___ ___ yesterday.",
+              "gaps": [
+                {
+                  "answer": "went"
+                },
+                {
+                  "answer": "down"
+                }
+              ],
+              "wordBank": [
+                "went",
+                "down",
+                "up",
+                "back",
+                "through"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-09",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Go for' means to try to achieve or win an ambitious goal.",
+              "tags": [
+                "coverage:go-for"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "The sprinter trained hard to **try to achieve** the national championship record.",
+              "word": "try to achieve",
+              "answer": "go for",
+              "options": [
+                "go for",
+                "go under",
+                "go with",
+                "go by"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-10",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about someone who does not enjoy team sports.",
+              "explanation": "'Go in for' means to enjoy and regularly participate in an activity or hobby.",
+              "tags": [
+                "coverage:go-in-for"
+              ],
+              "type": "fill_gaps",
+              "template": "My brother does not ___ ___ ___ competitive team sports very much.",
+              "gaps": [
+                {
+                  "answer": "go"
+                },
+                {
+                  "answer": "in"
+                },
+                {
+                  "answer": "for"
+                }
+              ],
+              "wordBank": [
+                "go",
+                "in",
+                "for",
+                "on",
+                "with",
+                "after"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-11",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about an alarm sounding early in the morning.",
+              "explanation": "When an alarm 'goes off', it rings or makes a loud noise.",
+              "tags": [
+                "coverage:go-off"
+              ],
+              "type": "fill_gaps",
+              "template": "I woke up instantly when the smoke alarm ___ ___ at dawn.",
+              "gaps": [
+                {
+                  "answer": "went"
+                },
+                {
+                  "answer": "off"
+                }
+              ],
+              "wordBank": [
+                "went",
+                "off",
+                "out",
+                "down",
+                "by"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-12",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about continuing despite an interruption.",
+              "explanation": "'Go on' means to continue doing an activity or presentation.",
+              "tags": [
+                "coverage:go-on"
+              ],
+              "type": "fill_gaps",
+              "template": "After the brief pause, the speaker decided to ___ ___ with her presentation.",
+              "gaps": [
+                {
+                  "answer": "go"
+                },
+                {
+                  "answer": "on"
+                }
+              ],
+              "wordBank": [
+                "go",
+                "on",
+                "off",
+                "back",
+                "by"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-13",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Suggest that we leave home this evening to have dinner somewhere (use a phrasal verb).",
+              "explanation": "'Go out' means to leave home for leisure, socialising, or entertainment.",
+              "tags": [
+                "coverage:go-out"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "Let's",
+                "go",
+                "out",
+                "for",
+                "dinner",
+                "this",
+                "evening."
+              ],
+              "distractors": [
+                "under",
+                "down",
+                "ahead"
+              ],
+              "acceptedAnswers": [
+                "Let us go out for dinner this evening.",
+                "Let's go out to dinner this evening.",
+                "Let's go out for dinner tonight.",
+                "Let's go out to dinner tonight."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-14",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about carefully reviewing a contract.",
+              "explanation": "'Go over' means to examine, inspect, or review written material thoroughly.",
+              "tags": [
+                "coverage:go-over"
+              ],
+              "type": "fill_gaps",
+              "template": "Please take twenty minutes to ___ ___ the contract before signing.",
+              "gaps": [
+                {
+                  "answer": "go"
+                },
+                {
+                  "answer": "over"
+                }
+              ],
+              "wordBank": [
+                "go",
+                "over",
+                "ahead",
+                "under",
+                "off"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-15",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Advise your friend that they should not overdo the party decorations (use a phrasal verb).",
+              "explanation": "'Go overboard' means to do something excessively or to an extreme degree.",
+              "tags": [
+                "coverage:go-overboard"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "You",
+                "shouldn't",
+                "go",
+                "overboard",
+                "with",
+                "the",
+                "party",
+                "decorations."
+              ],
+              "distractors": [
+                "away",
+                "ahead",
+                "under"
+              ],
+              "acceptedAnswers": [
+                "You should not go overboard with the party decorations.",
+                "You shouldn't go overboard on the party decorations.",
+                "You should not go overboard on the party decorations.",
+                "Don't go overboard with the party decorations.",
+                "Don't go overboard on the party decorations."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-16",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about carrying out a difficult decision despite objections.",
+              "explanation": "'Go through with' means to complete a planned action despite difficulties or opposition.",
+              "tags": [
+                "coverage:go-through-with"
+              ],
+              "type": "fill_gaps",
+              "template": "Despite fierce family opposition, she will ___ ___ ___ her career change.",
+              "gaps": [
+                {
+                  "answer": "go"
+                },
+                {
+                  "answer": "through"
+                },
+                {
+                  "answer": "with"
+                }
+              ],
+              "wordBank": [
+                "go",
+                "through",
+                "with",
+                "in",
+                "for",
+                "by"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-17",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Go under' means to fail financially or go out of business.",
+              "tags": [
+                "coverage:go-under"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Many independent bookstores were afraid they would **go bankrupt** during the recession.",
+              "word": "go bankrupt",
+              "answer": "go under",
+              "options": [
+                "go under",
+                "go over",
+                "go ahead",
+                "head back"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-18",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about rising public transit fares.",
+              "explanation": "When prices or costs 'go up', they increase.",
+              "tags": [
+                "coverage:go-up"
+              ],
+              "type": "fill_gaps",
+              "template": "Commuters complained when subway ticket fares ___ ___ by ten percent.",
+              "gaps": [
+                {
+                  "answer": "went"
+                },
+                {
+                  "answer": "up"
+                }
+              ],
+              "wordBank": [
+                "went",
+                "up",
+                "down",
+                "under",
+                "through"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-19",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "When clothing items 'go with' each other, they match and look attractive together.",
+              "tags": [
+                "coverage:go-with"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "I need to find a comfortable pair of shoes that will **match** this dark suit.",
+              "word": "match",
+              "answer": "go with",
+              "options": [
+                "go with",
+                "go for",
+                "go by",
+                "go after"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-20",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "You are hiking with friends. Ask them when you should start returning (use a phrasal verb).",
+              "explanation": "'Head back' means to begin returning to where you started.",
+              "tags": [
+                "coverage:head-back"
+              ],
+              "type": "question_for_answer",
+              "givenAnswer": "We should leave by four before dusk falls.",
+              "answer": [
+                "When",
+                "should",
+                "we",
+                "head",
+                "back?"
+              ],
+              "distractors": [
+                "ahead",
+                "under",
+                "around"
+              ],
+              "acceptedAnswers": [
+                "What time should we head back?",
+                "When should we start heading back?",
+                "When should we head back to camp?"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-21",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Ask the driver which city they are travelling to (use a phrasal verb).",
+              "explanation": "'Head for' (= 'head toward') means to move in the direction of a destination. Example: Which city are you heading for?",
+              "tags": [
+                "coverage:head-for"
+              ],
+              "type": "question_for_answer",
+              "givenAnswer": "To Bristol. My sister lives there.",
+              "answer": [
+                "Which",
+                "city",
+                "are",
+                "you",
+                "heading",
+                "for?"
+              ],
+              "distractors": [
+                "back",
+                "under",
+                "ahead"
+              ],
+              "acceptedAnswers": [
+                "What city are you heading for?",
+                "Which city are you headed for?",
+                "Which city are you heading toward?",
+                "Which city are you heading towards?",
+                "What city are you heading toward?",
+                "What city are you heading towards?"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-22",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about commuters entering the city centre.",
+              "explanation": "'Head into' means to move into or begin entering a specific district or area.",
+              "tags": [
+                "coverage:head-into"
+              ],
+              "type": "fill_gaps",
+              "template": "Morning traffic slows down as thousands of drivers ___ ___ the city centre.",
+              "gaps": [
+                {
+                  "answer": "head"
+                },
+                {
+                  "answer": "into"
+                }
+              ],
+              "wordBank": [
+                "head",
+                "into",
+                "under",
+                "up",
+                "after"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-23",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Find the error in the sentence about trail guides walking in the direction of a mountain pass.",
+              "explanation": "'Head toward' (or 'head for') means to travel in the direction of a place. 'Head at' is not used. Example: The trail guides started to head toward the pass.",
+              "tags": [
+                "coverage:head-toward"
+              ],
+              "type": "find_error",
+              "sentence": [
+                "The",
+                "trail",
+                "guides",
+                "started",
+                "to",
+                "head",
+                "at",
+                "the",
+                "pass."
+              ],
+              "wrongIndex": 6,
+              "correction": "toward",
+              "options": [
+                "toward",
+                "back",
+                "under"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-24",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that Sofia decided to pursue an engineering degree (use a phrasal verb).",
+              "explanation": "'Go after' means to attempt to obtain or achieve something challenging.",
+              "tags": [
+                "coverage:go-after"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "Sofia",
+                "decided",
+                "to",
+                "go",
+                "after",
+                "an",
+                "engineering",
+                "degree."
+              ],
+              "distractors": [
+                "around",
+                "under",
+                "overboard"
+              ],
+              "acceptedAnswers": [
+                "Sofia decided to go for an engineering degree."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-25",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Go ahead' means to proceed without delay or hesitation.",
+              "tags": [
+                "coverage:go-ahead"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "If you are ready to speak, please **proceed without hesitation**.",
+              "word": "proceed without hesitation",
+              "answer": "go ahead",
+              "options": [
+                "go ahead",
+                "go away",
+                "go back",
+                "go under"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-26",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about whether there is sufficient food for guests.",
+              "explanation": "When there is 'enough to go around', there is sufficient quantity for each person in a group.",
+              "tags": [
+                "coverage:go-around"
+              ],
+              "type": "fill_gaps",
+              "template": "Make smaller portions so that there is enough dessert to ___ ___.",
+              "gaps": [
+                {
+                  "answer": "go"
+                },
+                {
+                  "answer": "around"
+                }
+              ],
+              "wordBank": [
+                "go",
+                "around",
+                "by",
+                "off",
+                "back"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-27",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "When an ache, symptom, or problem 'goes away', it disappears or fades.",
+              "tags": [
+                "coverage:go-away"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "The persistent headache should **disappear** after you rest quietly.",
+              "word": "disappear",
+              "answer": "go away",
+              "options": [
+                "go away",
+                "go on",
+                "go off",
+                "head back"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-28",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about an ancient festival's origins.",
+              "explanation": "When a tradition or custom 'goes back' to a particular period, it originated at that time.",
+              "tags": [
+                "coverage:go-back"
+              ],
+              "type": "fill_gaps",
+              "template": "This annual harvest festival ___ ___ to the sixteenth century.",
+              "gaps": [
+                {
+                  "answer": "goes"
+                },
+                {
+                  "answer": "back"
+                }
+              ],
+              "wordBank": [
+                "goes",
+                "back",
+                "by",
+                "down",
+                "off"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-29",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Find the error in the sentence about breaking a solemn promise.",
+              "explanation": "'Go back on' is the correct three-word phrasal verb meaning to break a promise or pledge.",
+              "tags": [
+                "coverage:go-back-on"
+              ],
+              "type": "find_error",
+              "sentence": [
+                "He",
+                "swore",
+                "never",
+                "to",
+                "go",
+                "down",
+                "on",
+                "his",
+                "word."
+              ],
+              "wrongIndex": 5,
+              "correction": "back",
+              "options": [
+                "back",
+                "ahead",
+                "away"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-30",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that we always follow the official safety rules (use a phrasal verb).",
+              "explanation": "'Go by' means to follow rules, standards, or guidelines as a reference.",
+              "tags": [
+                "coverage:go-by"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "We",
+                "always",
+                "go",
+                "by",
+                "the",
+                "official",
+                "safety",
+                "rules."
+              ],
+              "distractors": [
+                "under",
+                "away",
+                "around"
+              ],
+              "acceptedAnswers": [
+                "We always go by the official safety regulations."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-31",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "When the sun 'goes down', it sets below the horizon.",
+              "tags": [
+                "coverage:go-down"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Temperatures drop rapidly after the sun begins to **set below the horizon**.",
+              "word": "set below the horizon",
+              "answer": "go down",
+              "options": [
+                "go down",
+                "go up",
+                "go out",
+                "head for"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-32",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that she has ten years of experience that give her an advantage (use a phrasal verb).",
+              "explanation": "'Have something going for you' means having a distinctive advantage in your favor.",
+              "tags": [
+                "coverage:go-for"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "She",
+                "has",
+                "ten",
+                "years",
+                "of",
+                "experience",
+                "going",
+                "for",
+                "her."
+              ],
+              "distractors": [
+                "against",
+                "around",
+                "over"
+              ],
+              "acceptedAnswers": [
+                "She's got ten years of experience going for her.",
+                "She has got ten years of experience going for her."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-33",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Find the error in the sentence about a hobby preference.",
+              "explanation": "'Go in for' means to like and do regularly. 'Go on for' means to last for a duration of time.",
+              "tags": [
+                "coverage:go-in-for"
+              ],
+              "type": "find_error",
+              "sentence": [
+                "She",
+                "does",
+                "not",
+                "go",
+                "on",
+                "for",
+                "gardening",
+                "much."
+              ],
+              "wrongIndex": 4,
+              "correction": "in",
+              "options": [
+                "in",
+                "by",
+                "down"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-34",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "When an event 'goes off' without a hitch, it happens smoothly as planned.",
+              "tags": [
+                "coverage:go-off"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "The international conference managed to **happen smoothly** without any technical hitches.",
+              "word": "happen smoothly",
+              "answer": "go off",
+              "options": [
+                "go off",
+                "go under",
+                "go through with",
+                "go back on"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-35",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Go on' means to happen or occur ('What is going on?').",
+              "tags": [
+                "coverage:go-on"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Can someone please explain what strange things **are happening** in the lobby?",
+              "word": "are happening",
+              "answer": "are going on",
+              "options": [
+                "are going on",
+                "are going off",
+                "are going under",
+                "are heading back"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-36",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about the campfire extinguishing during the night.",
+              "explanation": "When a fire or light 'goes out', it stops burning or producing light.",
+              "tags": [
+                "coverage:go-out"
+              ],
+              "type": "fill_gaps",
+              "template": "Because nobody added logs, the campfire ___ ___ during the cold night.",
+              "gaps": [
+                {
+                  "answer": "went"
+                },
+                {
+                  "answer": "out"
+                }
+              ],
+              "wordBank": [
+                "went",
+                "out",
+                "off",
+                "down",
+                "away"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-37",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 1,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Go over' means to walk or move across a room toward something.",
+              "tags": [
+                "coverage:go-over"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "The room was warm, so he decided to **walk across** to the window.",
+              "word": "walk across",
+              "answer": "go over",
+              "options": [
+                "go over",
+                "go under",
+                "go back",
+                "head back"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-38",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Find the error in the sentence warning against over-exercising.",
+              "explanation": "'Go overboard' means to overdo an activity excessively. 'Go overland' means traveling across land.",
+              "tags": [
+                "coverage:go-overboard"
+              ],
+              "type": "find_error",
+              "sentence": [
+                "Daily",
+                "exercise",
+                "is",
+                "healthy,",
+                "but",
+                "never",
+                "go",
+                "overland."
+              ],
+              "wrongIndex": 7,
+              "correction": "overboard",
+              "options": [
+                "overboard",
+                "ahead",
+                "around"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-39",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Go through with' means to proceed and complete a difficult or daunting plan.",
+              "tags": [
+                "coverage:go-through-with"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "Did the company actually **carry out** the risky relocation plan?",
+              "word": "carry out",
+              "answer": "go through with",
+              "options": [
+                "go through with",
+                "go back on",
+                "go in for",
+                "go overboard"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-40",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that the local bakery went bankrupt after five years (use a phrasal verb).",
+              "explanation": "'Go under' means to collapse financially or cease trading.",
+              "tags": [
+                "coverage:go-under"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "The",
+                "local",
+                "bakery",
+                "went",
+                "under",
+                "after",
+                "five",
+                "years."
+              ],
+              "distractors": [
+                "over",
+                "ahead",
+                "across"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-41",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Tell a colleague not to hesitate to approach the director (refer to the director as 'her'; use a phrasal verb).",
+              "explanation": "'Go up to' someone means to approach them directly in person.",
+              "tags": [
+                "coverage:go-up"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "Don't",
+                "hesitate",
+                "to",
+                "go",
+                "up",
+                "to",
+                "her."
+              ],
+              "distractors": [
+                "under",
+                "overboard",
+                "away"
+              ],
+              "acceptedAnswers": [
+                "Do not hesitate to go up to her."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-42",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that we decided to choose the first proposal (use a phrasal verb).",
+              "explanation": "'Go with' means to choose an option or support a recommendation.",
+              "tags": [
+                "coverage:go-with"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "We",
+                "decided",
+                "to",
+                "go",
+                "with",
+                "the",
+                "first",
+                "proposal."
+              ],
+              "distractors": [
+                "under",
+                "through",
+                "ahead"
+              ],
+              "acceptedAnswers": [
+                "We decided to go for the first proposal."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-43",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters",
+                "typing"
+              ],
+              "prompt": "Complete the sentence about tourists returning to their hotel after a hike.",
+              "explanation": "'Head back' means to travel back or return toward a base location.",
+              "tags": [
+                "coverage:head-back"
+              ],
+              "type": "fill_gaps",
+              "template": "After spending the whole afternoon hiking, they ___ ___ to their hotel.",
+              "gaps": [
+                {
+                  "answer": "headed"
+                },
+                {
+                  "answer": "back"
+                }
+              ],
+              "wordBank": [
+                "headed",
+                "back",
+                "into",
+                "toward",
+                "under"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-44",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 2,
+              "allowedModes": [
+                "tiles",
+                "letters"
+              ],
+              "prompt": "Choose the correct phrasal verb for the bolded words.",
+              "explanation": "'Be heading for' a situation means it is becoming likely. Example: If you ignore safety rules, you are heading for serious trouble.",
+              "tags": [
+                "coverage:head-for"
+              ],
+              "type": "translate_word",
+              "direction": "toTarget",
+              "sentence": "If you continue to ignore company safety rules, you are **on course for** serious trouble.",
+              "word": "on course for",
+              "answer": "heading for",
+              "options": [
+                "heading for",
+                "going under",
+                "heading back",
+                "going overboard"
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-45",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that we were entering the forest when it started raining (use a phrasal verb).",
+              "explanation": "'Head into' means to begin to enter a place or area. Example: We were heading into the forest when it started raining.",
+              "tags": [
+                "coverage:head-into"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "We",
+                "were",
+                "heading",
+                "into",
+                "the",
+                "forest",
+                "when",
+                "it",
+                "started",
+                "raining."
+              ],
+              "distractors": [
+                "back",
+                "under",
+                "after"
+              ],
+              "acceptedAnswers": [
+                "We were heading into the forest when it started to rain.",
+                "We were heading into the forest when it began raining.",
+                "We were heading into the forest when it began to rain."
+              ]
+            },
+            {
+              "id": "en-phrasal_verbs-m1-coming-and-going-routes-and-access-46",
+              "topicId": "en-phrasal_verbs-m1-coming-and-going-routes-and-access",
+              "difficulty": 3,
+              "allowedModes": [
+                "tiles",
+                "typing"
+              ],
+              "prompt": "Say that the escaped prisoners were moving in the direction of the border (use a phrasal verb).",
+              "explanation": "'Head toward' (= 'head for') means to move in the direction of a place. Example: The escaped prisoners were heading toward the border.",
+              "tags": [
+                "coverage:head-toward"
+              ],
+              "type": "build_phrase",
+              "answer": [
+                "The",
+                "escaped",
+                "prisoners",
+                "were",
+                "heading",
+                "toward",
+                "the",
+                "border."
+              ],
+              "distractors": [
+                "back",
+                "under",
+                "into"
+              ],
+              "acceptedAnswers": [
+                "The escaped prisoners were heading towards the border.",
+                "The escaped prisoners were heading for the border.",
+                "The escaped prisoners were headed toward the border.",
+                "The escaped prisoners were headed towards the border.",
+                "The escaped prisoners were headed for the border."
+              ]
+            }
+          ]
         }
       ]
     }
